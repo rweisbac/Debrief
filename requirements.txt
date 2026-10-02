@@ -1,0 +1,5 @@
+anthropic>=1.11,<2
+pydantic>=2.7,<3
+streamlit>=1.38
+pytest>=8
+rapidfuzz>=3.9

@@ -1,0 +1,44 @@
+{
+  "status": "skipped",
+  "reason": "ANTHROPIC_API_KEY not set",
+  "model": "claude-sonnet-5-5",
+  "ran_at": "2026-10-02T01:20:08.123556+00:00",
+  "offline": {
+    "sdk_version": "1.11.0",
+    "parse_signature_params": [
+      "max_tokens",
+      "messages",
+      "model",
+      "diagnostics",
+      "metadata",
+      "output_config",
+      "output_format",
+      "service_tier",
+      "stop_sequences",
+      "system",
+      "thinking",
+      "tool_choice",
+      "tools",
+      "extra_headers",
+      "extra_query",
+      "extra_body",
+      "timeout"
+    ],
+    "request_top_level_keys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "output_config"
+    ],
+    "request_output_config_keys": [
+      "effort",
+      "format"
+    ],
+    "effort_and_format_in_same_output_config": true,
+    "parsed_with_thinking_block_first": true,
+    "mock_block_types": [
+      "thinking",
+      "text"
+    ]
+  }
+}
