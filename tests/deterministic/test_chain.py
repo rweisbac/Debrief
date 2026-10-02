@@ -78,3 +78,16 @@ def test_result_serializes(make_chain):
     import json
     result = run(make_chain(scripted_clean_run(FakeBackend())))
     json.dumps(result.to_dict())
+
+
+def test_regenerated_draft_needs_review_when_reverify_fails(make_chain):
+    fb = scripted_clean_run(FakeBackend())
+    fb.queues["VerifierReport"].clear()
+    better = recap_a(body="Hi Dana,\n\nThanks for today. Priya will build the partner policy by October 6.\n\nSam")
+    # first verify flags the recap; the re-verify of the rewrite returns unreadable output twice
+    fb.queue("VerifierReport", raw_body(failing_report("recap_email")), raw_body("not json"), raw_body("not json"))
+    fb.queue("RecapEmail", raw_body(better))
+    result = run(make_chain(fb))
+    recap = result.artifacts["recap_email"]
+    assert recap.regenerated and recap.needs_review
+    assert any("could not be re-checked" in f for f in recap.flagged)

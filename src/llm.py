@@ -79,9 +79,12 @@ class Backend(Protocol):
 class AnthropicBackend:
     """Live backend. Built lazily so replay mode never constructs a client."""
 
-    def __init__(self) -> None:
+    def __init__(self, transport=None, api_key: str | None = None, max_retries: int = 2) -> None:
+        """transport and api_key exist for offline tests (an httpx2 MockTransport); production passes neither.
+        max_retries covers SDK transport retries on 429, 5xx and connection errors only (D-14)."""
         self._client = None
         self._captured: dict[str, dict] = {}
+        self._transport, self._api_key, self._max_retries = transport, api_key, max_retries
 
     async def _hook(self, response) -> None:
         call_id = response.request.headers.get(CALL_ID_HEADER)
@@ -97,9 +100,10 @@ class AnthropicBackend:
             import anthropic
             import httpx2
 
+            kwargs = {"api_key": self._api_key} if self._api_key else {}
             self._client = anthropic.AsyncAnthropic(
-                timeout=600, max_retries=2,
-                http_client=httpx2.AsyncClient(event_hooks={"response": [self._hook]}))
+                timeout=600, max_retries=self._max_retries, **kwargs,
+                http_client=httpx2.AsyncClient(transport=self._transport, event_hooks={"response": [self._hook]}))
         return self._client
 
     async def send(self, request: dict, output_model: type[BaseModel]) -> tuple[dict, BaseModel | None, str]:

@@ -306,6 +306,11 @@ class Chain:
             result.checks += [dict(c.to_dict(), after_regeneration=True) for c in recheck]
             if rv.parsed:
                 result.verifier += [dict(v.model_dump(mode="json"), after_regeneration=True) for v in rv.parsed.verdicts]
+            if rv.parsed is None:
+                # The rewritten draft was never cleared by the verifier, so it cannot be one-tap approved.
+                still.setdefault(name, []).append(
+                    "[verifier] the rewritten draft could not be re-checked: "
+                    + (f"refused {rv.refusal}" if rv.refused else rv.parse_error or "no output"))
             if still.get(name):
                 state.needs_review = True
                 state.flagged = still[name]

@@ -451,6 +451,25 @@ def check_unsupported_claims(artifact: str, obj: BaseModel) -> CheckResult:
                        else "claims the call does not support: " + ", ".join(sorted(set(bad))), sorted(set(bad)))
 
 
+# Quoted text in drafts. The model writes the drafts, so any span it puts in quotation marks must be words
+# a person actually said (reviewer finding R13). Spans under 3 words ("ready") are ignored.
+QUOTE_RE = re.compile(r"[\"\u201c]([^\"\u201c\u201d]{3,300})[\"\u201d]")
+
+
+def check_quotes(artifact: str, obj: BaseModel, transcript: Transcript) -> CheckResult:
+    bad = []
+    for text in _strings(obj):
+        for m in QUOTE_RE.finditer(text):
+            span = m.group(1).strip()
+            if len(span.split()) < 3:
+                continue
+            if not any(transcript.resolve_evidence(u.id, span)[0] for u in transcript.utterances):
+                bad.append(span[:80])
+    return CheckResult("quotes_in_transcript", artifact, not bad, "high",
+                       "quoted text matches the transcript" if not bad
+                       else "quoted text not found in the transcript: " + "; ".join(bad), bad)
+
+
 def check_step_cap(a: Assessment) -> CheckResult:
     n = len(a.next_steps)
     return CheckResult("max_three_steps", "assessment", n <= 3, "high", f"{n} steps")
@@ -476,6 +495,8 @@ def run_artifact(artifact: str, obj: BaseModel, transcript: Transcript, crm: dic
                check_names(artifact, obj, transcript, crm)]
     if artifact in {"recap_email", "internal_summary"}:
         results.append(check_unsupported_claims(artifact, obj))
+    if artifact in {"recap_email", "internal_summary", "mutual_action_plan"}:
+        results.append(check_quotes(artifact, obj, transcript))
     if isinstance(obj, Assessment):
         results += [check_step_cap(obj), check_no_chase(obj)]
     if isinstance(obj, MutualActionPlan):

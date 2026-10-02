@@ -146,7 +146,7 @@ No metric target is ever shown as a result, and nothing here claims causation.
 - **Mocked:** Gong, Salesforce and Slack are file-backed adapters (`src/adapters.py`). The calendar invite is a stub. "Mark as sent" is a button, not an email integration. Customer replies are logged by hand in the demo.
 - **No live model output yet**, so prompts are unvalidated v1. The two demo cards are hand-written samples.
 - **The live API path is unverified:** `docs/API_NOTES.md` lists what was verified offline against the SDK and what still needs `make smoke`. That includes the mid-conversation system message used for caching (D-07).
-- **Deterministic checks are heuristics.** The stress test (`evals/stress_report.md`) catches 49 of 61 planted problems with 1 false alarm on 17 clean drafts. The 13 open gaps include:
+- **Deterministic checks are heuristics.** The stress test (`evals/stress_report.md`) catches 49 of 61 planted problems with 1 false alarm on 17 clean drafts. That leaves 13 open known-failure tests (12 missed problems plus 1 false alarm), including:
   - an invented name made of ordinary words;
   - some wordings of the superseded hourly sync;
   - generic padding steps;

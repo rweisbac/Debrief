@@ -4,7 +4,7 @@
    "type": "header",
    "text": {
     "type": "plain_text",
-    "text": "Debrief: Halvorsen Freight"
+    "text": "Debrief: Meridian Health Partners"
    }
   },
   {
@@ -12,7 +12,7 @@
    "elements": [
     {
      "type": "mrkdwn",
-     "text": "Synthetic data, fictional company. Sample card written by hand to show the layout. Not generated from the call. See the README to generate real debriefs."
+     "text": "Synthetic data, fictional company."
     }
    ]
   },
@@ -20,7 +20,7 @@
    "type": "section",
    "text": {
     "type": "mrkdwn",
-    "text": "*Ready to advance.* Technical fit is clear and the COO session is booked; one open item on partner access."
+    "text": "*Open technical gap.* Nested SSO claim is unresolved and the security committee meets October 9."
    }
   },
   {
@@ -31,7 +31,7 @@
    "block_id": "step_0",
    "text": {
     "type": "mrkdwn",
-    "text": "*Most important:* Send Elena a one page brief on late load detection and a realistic onboarding plan before Thursday"
+    "text": "*Most important:* Send Aisha the security packet with Raj copied: SOC 2, encryption whitepaper and a written SSO design"
    }
   },
   {
@@ -39,7 +39,7 @@
    "elements": [
     {
      "type": "mrkdwn",
-     "text": "Owner: Sam Lee | Due: 2026-10-06 | Rule: PB-03"
+     "text": "Owner: Jordan Pike | Due: 2026-10-06 | Rule: PB-09 | Use: RC-11"
     }
    ]
   },
@@ -47,7 +47,7 @@
    "type": "section",
    "text": {
     "type": "mrkdwn",
-    "text": "*Why this step:* Elena missed the demo and was burned by a slow project; reps usually walk in cold.\n> \"One thing for the Elena meeting. She is going to ask about time to value. She got burned on the last platform project, it took eight months to see anything.\"\n> Dana Ortiz, VP Data, at 45:36"
+    "text": "*Why this step:* Missing the committee date pushes the deal a month; reps tend to wait for the questionnaire.\n> \"Our vendor questionnaire, your SOC 2 report, the encryption details, and for anything touching identity, a written design. Which is the SSO thing again.\"\n> Aisha Karim, Director of Data Engineering, at 37:30"
    }
   },
   {
@@ -60,9 +60,9 @@
      "style": "primary",
      "text": {
       "type": "plain_text",
-      "text": "Open draft"
+      "text": "Open packet draft"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"action\": \"send_material\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 0, \"action\": \"support_customer_process\"}"
     },
     {
      "type": "button",
@@ -71,7 +71,7 @@
       "type": "plain_text",
       "text": "Already done"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"already_done\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 0, \"reason\": \"already_done\"}"
     },
     {
      "type": "button",
@@ -80,7 +80,7 @@
       "type": "plain_text",
       "text": "Waiting on customer"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"waiting_on_customer\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 0, \"reason\": \"waiting_on_customer\"}"
     },
     {
      "type": "button",
@@ -89,7 +89,7 @@
       "type": "plain_text",
       "text": "Not relevant"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"not_relevant\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 0, \"reason\": \"not_relevant\"}"
     },
     {
      "type": "button",
@@ -98,7 +98,7 @@
       "type": "plain_text",
       "text": "No time"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"no_time\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 0, \"reason\": \"no_time\"}"
     }
    ]
   },
@@ -107,7 +107,7 @@
    "block_id": "step_1",
    "text": {
     "type": "mrkdwn",
-    "text": "*Step 2:* Make sure Mikkel's hierarchy sample reaches Priya Monday so the partner policy is ready Tuesday"
+    "text": "*Step 2:* Get Leo a dated answer on native nested claims that he can show Raj"
    }
   },
   {
@@ -115,7 +115,7 @@
    "elements": [
     {
      "type": "mrkdwn",
-     "text": "Owner: Priya Raman | Due: 2026-10-06 | Rule: PB-04 | Use: RC-07"
+     "text": "Owner: Marcus Bell | Due: 2026-10-02 | Rule: PB-04 | Use: RC-09"
     }
    ]
   },
@@ -123,7 +123,7 @@
    "type": "section",
    "text": {
     "type": "mrkdwn",
-    "text": "*Why this step:* The open item depends on a customer file nobody tracks internally.\n> \"So that's the piece I'd want to validate rather than wave my hands at. If you can send me a sample of the partner hierarchy table, even fifty rows, I'll build the policy in the sandbox and show you it working. I can have that back to you by Tuesday the sixth.\"\n> Priya Raman, Solutions Consultant, at 36:08"
+    "text": "*Why this step:* Leo asked for a date, not a roadmap slide.\n> \"And if it's native nested claims coming soon, I need a date I can put in front of Raj. Not a roadmap slide.\"\n> Leo Brandt, Identity and Access Engineer, at 40:02"
    }
   },
   {
@@ -138,7 +138,7 @@
       "type": "plain_text",
       "text": "Send to SC"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"action\": \"route_to_sc\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 1, \"action\": \"route_to_sc\"}"
     },
     {
      "type": "button",
@@ -147,7 +147,7 @@
       "type": "plain_text",
       "text": "Already done"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"already_done\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 1, \"reason\": \"already_done\"}"
     },
     {
      "type": "button",
@@ -156,7 +156,7 @@
       "type": "plain_text",
       "text": "Waiting on customer"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"waiting_on_customer\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 1, \"reason\": \"waiting_on_customer\"}"
     },
     {
      "type": "button",
@@ -165,7 +165,7 @@
       "type": "plain_text",
       "text": "Not relevant"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"not_relevant\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 1, \"reason\": \"not_relevant\"}"
     },
     {
      "type": "button",
@@ -174,7 +174,7 @@
       "type": "plain_text",
       "text": "No time"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"no_time\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 1, \"reason\": \"no_time\"}"
     }
    ]
   },
@@ -183,7 +183,7 @@
    "block_id": "step_2",
    "text": {
     "type": "mrkdwn",
-    "text": "*Step 3:* Send Mikkel the continuous sync release note Priya promised"
+    "text": "*Step 3:* Send Nora the encryption whitepaper Marcus promised"
    }
   },
   {
@@ -191,7 +191,7 @@
    "elements": [
     {
      "type": "mrkdwn",
-     "text": "Owner: Priya Raman | Due: 2026-10-01 | Rule: PB-08 | Use: RC-12"
+     "text": "Owner: Marcus Bell | Due: 2026-10-02 | Rule: PB-08 | Use: RC-11"
     }
    ]
   },
@@ -199,7 +199,7 @@
    "type": "section",
    "text": {
     "type": "mrkdwn",
-    "text": "*Why this step:* Promised in passing while correcting the deck; not in the checklist.\n> \"Good catch, and I should correct that. Actually Sam, that changed with the August release. The warehouse connector does continuous sync now, about a minute end to end. Hourly batch was the old behavior. I'll send the release note.\"\n> Priya Raman, Solutions Consultant, at 26:09"
+    "text": "*Why this step:* Said in passing and missing from the checklist.\n> \"Not a dumb question. It sits in your dedicated tenant in a US region. Keys are managed by us by default, or by you if you want customer managed keys. And actually, I'll send you our encryption whitepaper, it covers the key hierarchy, the customer managed key option and the HSM setup, it's written for exactly this kind of question.\"\n> Marcus Bell, Solutions Consultant, at 33:39"
    }
   },
   {
@@ -214,7 +214,7 @@
       "type": "plain_text",
       "text": "Open draft"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"action\": \"send_material\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 2, \"action\": \"send_material\"}"
     },
     {
      "type": "button",
@@ -223,7 +223,7 @@
       "type": "plain_text",
       "text": "Already done"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"already_done\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 2, \"reason\": \"already_done\"}"
     },
     {
      "type": "button",
@@ -232,7 +232,7 @@
       "type": "plain_text",
       "text": "Waiting on customer"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"waiting_on_customer\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 2, \"reason\": \"waiting_on_customer\"}"
     },
     {
      "type": "button",
@@ -241,7 +241,7 @@
       "type": "plain_text",
       "text": "Not relevant"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"not_relevant\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 2, \"reason\": \"not_relevant\"}"
     },
     {
      "type": "button",
@@ -250,7 +250,7 @@
       "type": "plain_text",
       "text": "No time"
      },
-     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"no_time\"}"
+     "value": "{\"deal_id\": \"deal_b\", \"step\": 2, \"reason\": \"no_time\"}"
     }
    ]
   },
@@ -258,7 +258,7 @@
    "type": "section",
    "text": {
     "type": "mrkdwn",
-    "text": "*Open*\n- Row level access for partners with sub carriers (owner: Priya Raman)"
+    "text": "*Open*\n- Native nested claim support and a date (owner: Marcus Bell)"
    }
   },
   {
@@ -266,7 +266,7 @@
    "elements": [
     {
      "type": "mrkdwn",
-     "text": "Sample card: no cost"
+     "text": "Sample card: no cost | Needs review: recap email"
     }
    ]
   }

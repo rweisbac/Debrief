@@ -1,5 +1,5 @@
 {
- "debrief_id": "deal_b-d833e00a",
+ "debrief_id": "deal_b-b0c81fdb",
  "deal_id": "deal_b",
  "as_of": "2026-10-01",
  "mode": "live",
@@ -736,6 +736,14 @@
    "locations": []
   },
   {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
    "check": "evidence_resolves",
    "artifact": "internal_summary",
    "passed": true,
@@ -776,6 +784,14 @@
    "locations": []
   },
   {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
    "check": "evidence_resolves",
    "artifact": "mutual_action_plan",
    "passed": true,
@@ -805,6 +821,14 @@
    "passed": true,
    "severity": "high",
    "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
    "locations": []
   },
   {
@@ -857,7 +881,7 @@
  "prompt_versions": {
   "extract": "v1+shared-v1",
   "assess_and_recommend": "v1+shared-v1",
-  "draft_recap_email": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
   "draft_internal_summary": "v1+shared-v1",
   "draft_mutual_action_plan": "v1+shared-v1",
   "verify": "v1+shared-v1"
@@ -908,7 +932,7 @@
    "cache_creation_input_tokens": 0,
    "validator_errors": [],
    "keys": [
-    "d1e3cca54705e413e3ad85cb60849aebe3bddcd908ca2f388606a7d534ddbb3d"
+    "3e1e988fc11f7533db67cd3dde1b2abc3424917055f825b561b81f4faa8164a8"
    ]
   },
   {
@@ -917,7 +941,7 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 2,
+   "latency_ms": 1,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,
@@ -933,7 +957,7 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 2,
+   "latency_ms": 1,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,

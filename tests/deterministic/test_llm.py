@@ -190,7 +190,6 @@ def test_record_reuses_existing_fixture(client_factory, monkeypatch):
 
 def test_real_sdk_backend_request_shape(tmp_path):
     """The real AnthropicBackend over a mock transport: parse() is used, body has only allowed keys."""
-    import anthropic
     import httpx2
 
     from src.llm import AnthropicBackend
@@ -203,9 +202,7 @@ def test_real_sdk_backend_request_shape(tmp_path):
             return httpx2.Response(200, json=raw_body('{"subject": "cut', stop="max_tokens"))
         return httpx2.Response(200, json=raw_body(recap_a()))
 
-    b = AnthropicBackend()
-    b._client = anthropic.AsyncAnthropic(api_key="test", max_retries=0, http_client=httpx2.AsyncClient(
-        transport=httpx2.MockTransport(handler), event_hooks={"response": [b._hook]}))
+    b = AnthropicBackend(transport=httpx2.MockTransport(handler), api_key="test", max_retries=0)
     c = LLMClient(mode="live", backend=b, db_path=tmp_path / "t.sqlite3", redact=lambda s: s)
     res = call(c)
     assert res.ok and res.attempts == 2  # truncated JSON surfaced as max_tokens via the hook, then retried

@@ -1,5 +1,5 @@
 {
- "debrief_id": "deal_a-8393d2ea",
+ "debrief_id": "deal_a-312f5fd9",
  "deal_id": "deal_a",
  "as_of": "2026-09-30",
  "mode": "live",
@@ -827,6 +827,14 @@
    "locations": []
   },
   {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
    "check": "evidence_resolves",
    "artifact": "internal_summary",
    "passed": true,
@@ -867,6 +875,14 @@
    "locations": []
   },
   {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
    "check": "evidence_resolves",
    "artifact": "mutual_action_plan",
    "passed": true,
@@ -896,6 +912,14 @@
    "passed": true,
    "severity": "high",
    "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
    "locations": []
   },
   {
@@ -948,7 +972,7 @@
  "prompt_versions": {
   "extract": "v1+shared-v1",
   "assess_and_recommend": "v1+shared-v1",
-  "draft_recap_email": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
   "draft_internal_summary": "v1+shared-v1",
   "draft_mutual_action_plan": "v1+shared-v1",
   "verify": "v1+shared-v1"
@@ -960,7 +984,7 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 14,
+   "latency_ms": 7,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,
@@ -992,14 +1016,14 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 3,
+   "latency_ms": 2,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation_input_tokens": 0,
    "validator_errors": [],
    "keys": [
-    "dfda60e1510b6f0f484fdb0b83377e96c6c1ded272f6c60b8552ba75ce49ed9a"
+    "7bc246fd20313cae4456fdc47c7dee43d3cb4961e8302bc41d6522b295f0e341"
    ]
   },
   {
@@ -1024,7 +1048,7 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 2,
+   "latency_ms": 1,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,
@@ -1040,7 +1064,7 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 2,
+   "latency_ms": 1,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,

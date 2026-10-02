@@ -96,9 +96,32 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - Evidence of fix (eval or test, before and after): caught 31 of 61 before, 49 of 61 after; false alarms 7 of 17 before, 1 of 17 after; 24 GAP markers removed because the tests now pass. All earlier tests still pass (204 passed, 13 xfailed).
 - What I would do in production: the stricter checks are untested on real model output. Watch the verifier_flagged and rule_override_applied events for a rise in false alarms after the first recording, and loosen any check that fires on drafts a human approves unedited.
 
+## D-14: reviewer pass over the full diff, and what I changed
+- Step and prompt version: checkpoint 3, all code; draft_recap_email v1 to v2
+- What the AI produced: the code reviewed by the read-only reviewer subagent (.claude/agents/reviewer.md) against rules R1 to R22. It found 1 violation and 5 possible issues.
+- Why it was wrong:
+  - R1: a test built an SDK client itself.
+  - R18: a rewritten draft whose re-verify call failed could still be one-tap approved.
+  - R13: the recap prompt asked for the customer's words, and nothing checked quoted text in drafts.
+  - The README said 13 open gaps without explaining that this is 12 misses plus 1 false alarm.
+- What I changed:
+  - AnthropicBackend now takes an optional test transport and builds the client itself. No file outside src/llm.py and scripts/smoke_test.py constructs a client.
+  - A failed re-verify now marks the draft needs review, with a flag.
+  - A new check, quotes_in_transcript, runs on all drafts.
+  - draft_recap_email v2 drops quotation marks.
+  - README wording fixed.
+- Evidence of fix (eval or test, before and after): test_chain.py::test_regenerated_draft_needs_review_when_reverify_fails and test_rules_checks.py::test_quoted_text_must_be_in_transcript are new and pass. A grep for AsyncAnthropic outside src/llm.py and the smoke test finds nothing. 235 passed, 13 xfailed.
+- What I would do in production:
+  - Kept as is, with the reasons: SDK transport retries (max_retries=2, on 429, 5xx and connection errors). These are not model retries: no output was seen, so the "retry only on max_tokens or a validator" rule does not apply. They are not logged per attempt, because the SDK hides them; the latency shows them.
+  - Also kept: a reply that does not parse against the schema is treated as a failed validator (one retry with the parser error as feedback).
+  - The top_system fallback breaks the cache order and stays a documented fallback only (D-07).
+  - Still open: extraction validator failures after retry are recorded as errors but do not mark anything needs review. Today no extraction quote is shown in the UI.
+
 ## Prompt changes and why
 
-All prompts are at v1 (checkpoint 2). No changes yet: nothing has run against the model, so there is no evidence to change them on. Each future change gets a new v<N> file and an entry here naming the eval result that motivated it.
+All prompts started at v1 (checkpoint 2). Each change gets a new v<N> file and an entry here.
+
+- draft_recap_email v2 (checkpoint 3, D-14): asks for no quotation marks, so the model cannot put words in the customer's mouth. Exact quotes are rendered by the app from the transcript. Motivated by the reviewer finding, not by an eval result (no recording exists yet).
 
 ## Things I chose not to build and why
 

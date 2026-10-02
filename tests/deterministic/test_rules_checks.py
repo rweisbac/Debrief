@@ -142,3 +142,10 @@ def test_meddpicc_partial_eb_when_only_in_call():
     crm = dict(CRM_A, economic_buyer="")
     v = meddpicc.compute(extraction_a(), crm)
     assert v.economic_buyer.status.value == "partial"
+
+
+def test_quoted_text_must_be_in_transcript():
+    ok = recap_a(body='Hi Dana, as you said, "dispatch can swap drivers or call the consignee". Sam')
+    bad = recap_a(body='Hi Dana, as you said, "we will sign the contract this quarter". Sam')
+    assert "quotes_in_transcript" not in failed(checks.run_artifact("recap_email", ok, T_A, CRM_A, AS_OF))
+    assert "quotes_in_transcript" in failed(checks.run_artifact("recap_email", bad, T_A, CRM_A, AS_OF))
