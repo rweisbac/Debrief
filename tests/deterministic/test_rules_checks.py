@@ -108,7 +108,7 @@ def test_weekend_and_past_dates_caught():
 def test_invented_person_caught():
     bad = recap_a(body="Hi Dana, I spoke with Gregory Thornton about it. Sam")
     r = [c for c in checks.run_artifact("recap_email", bad, T_A, CRM_A, AS_OF) if c.check == "names_known"][0]
-    assert not r.passed and "Gregory Thornton" in r.locations
+    assert not r.passed and {"Gregory", "Thornton"} <= set(r.locations)
 
 
 def test_bad_evidence_caught():

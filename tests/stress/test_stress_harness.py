@@ -332,17 +332,14 @@ def test_g07_rounded_volume_in_draft_caught():
     assert "numbers_in_source" in failed_checks("recap_email", recap_a_with("4.7 billion", "5 billion"))
 
 
-@GAP("40,000 appears elsewhere in the call (U014 replay rate), so rounding the 38,000 peak to 40,000 passes")
 def test_g08_rounded_peak_in_draft_caught():
     assert "numbers_in_source" in failed_checks("recap_email", recap_a_with("38,000", "40,000"))
 
 
-@GAP("numbers written in words are invisible to numbers_in_source")
 def test_g09_number_in_words_caught():
     assert "numbers_in_source" in failed_checks("recap_email", recap_a_with("4.7 billion", "five billion"))
 
 
-@GAP("source corpus includes CRM timestamps (10:47:30), so a dropped decimal 4.7 to 47 billion passes")
 def test_g10_dropped_decimal_caught():
     assert "numbers_in_source" in failed_checks("recap_email", recap_a_with("4.7 billion", "47 billion"))
 
@@ -356,7 +353,6 @@ def test_g12_invented_common_word_name_caught():
     assert "names_known" in failed_checks("recap_email", recap_a_with("Priya will build", "Will Long will build"))
 
 
-@GAP("a lone invented first name outside a greeting is never checked")
 def test_g13_invented_single_first_name_caught():
     assert "names_known" in failed_checks("recap_email", recap_a_with("Priya will build", "Zbigniew will build"))
 
@@ -369,7 +365,6 @@ def test_g15_past_date_caught():
     assert "dates_future_business_days" in failed_checks("recap_email", recap_a_with("by October 6", "by September 28"))
 
 
-@GAP("relative dates like 'next Thursday' in draft text are not parsed or checked")
 def test_g16_relative_date_in_draft_caught():
     assert "dates_future_business_days" in failed_checks("recap_email",
                                                          recap_a_with("Thursday October 8 at", "next Thursday at"))
@@ -381,13 +376,11 @@ def test_g17_relative_date_in_due_by_caught_by_validator():
     assert any("not an ISO date" in e for e in S.validate_assessment(a))
 
 
-@GAP("a wrong but valid business date (Oct 9 instead of the agreed Oct 8) is never compared to the call")
 def test_g18_wrong_meeting_date_in_draft_caught():
     bad = recap_a_with("Thursday October 8 at", "Friday October 9 at")
     assert failed_checks("recap_email", bad) & {"dates_future_business_days", "numbers_in_source"}
 
 
-@GAP("score_grounding passes vacuously when no checks were recorded in the result")
 def test_g19_grounding_scorer_with_no_checks_caught():
     bad = recap_a_with("4.7 billion", "5 billion")
     result = build_result("deal_a", extraction_a(), assessment_a(), bad)
@@ -454,22 +447,18 @@ def test_s06_remind_them_caught():
     assert _chase_caught(_waiting_b("Gently remind them about the committee date"))
 
 
-@GAP("chase regex misses 'circle back ... see where the review stands'")
 def test_s07_circle_back_chase_caught():
     assert _chase_caught(_waiting_b("Circle back with Aisha to see where the review stands"))
 
 
-@GAP("chase regex only matches 'remind them' or 'remind the customer', not 'remind Aisha'")
 def test_s08_remind_named_person_caught():
     assert _chase_caught(_waiting_b("Gently remind Aisha about the committee date"))
 
 
-@GAP("'follow up with <person> on the ... status' is not matched; only 'follow up on the status' is")
 def test_s09_follow_up_with_person_caught():
     assert _chase_caught(_waiting_b("Follow up with Aisha on the security review status"))
 
 
-@GAP("a chase disguised as support (support_customer_process, 'offer to help ... asking whether') passes")
 def test_s10_chase_disguised_as_support_caught():
     assert _chase_caught(_waiting_b("Offer to help Aisha by asking whether the committee has reviewed the packet yet",
                                     "support_customer_process"))
@@ -561,7 +550,6 @@ def test_t5b_five_billion_in_draft_caught():
     assert not scoring.score_trap(trap("deal_a", "T5"), r)["passed"]
 
 
-@GAP("T5 relies on numbers_in_source for drafts, which accepts 40,000 because U014 says 40,000")
 def test_t5c_forty_thousand_in_draft_caught():
     r = build_result("deal_a", extraction_a(), assessment_a(), recap_a_with("38,000", "40,000"))
     assert not scoring.score_trap(trap("deal_a", "T5"), r)["passed"]
@@ -588,12 +576,10 @@ def test_t6c_circle_back_typed_other_caught():
     assert _t6("Circle back with Aisha to see where the review stands")
 
 
-@GAP("T6 passes any top step typed support_customer_process, and 'circle back' is not a forbidden phrase")
 def test_t6d_circle_back_typed_support_caught():
     assert _t6("Circle back with Aisha to see where the review stands", "support_customer_process")
 
 
-@GAP("T6 passes a chase that names Raj and October 9 because it contains the required terms")
 def test_t6e_chase_with_required_terms_caught():
     assert _t6("Ask Raj whether the October 9 committee has looked at us yet")
 
@@ -629,7 +615,6 @@ def test_x1d_moderate_signal_from_sort_of_caught():
     assert not scoring.score_adversarial(gold("deal_x"), build_result("deal_x", ex, assessment_x()))["passed"]
 
 
-@GAP("names_known never scans the extraction, so an invented economic buyer stakeholder passes X1")
 def test_x1e_invented_stakeholder_in_extraction_caught():
     ex = extraction_x()
     ex.stakeholders.append(S.Stakeholder(name="Marion Hale", title="CFO", present=False,
@@ -666,7 +651,6 @@ OVERCLAIM_BODY = recap_a().body.replace("Priya will build the partner hierarchy 
                                         "will build the partner hierarchy policy")
 
 
-@GAP("with no verifier verdicts, score_overclaim passes a recap promising something nobody committed to")
 def test_o1_uncommitted_promise_without_verifier_caught():
     r = build_result("deal_a", extraction_a(), assessment_a(), recap_a(OVERCLAIM_BODY), summary_a(), map_a())
     assert r["verifier"] == []
@@ -675,7 +659,6 @@ def test_o1_uncommitted_promise_without_verifier_caught():
     assert not out["passed"]
 
 
-@GAP("full offline chain: verifier output unparseable, overclaim recap still scores passed")
 def test_o2_uncommitted_promise_full_chain_verifier_failed_caught(tmp_path):
     fb = (FakeBackend().queue("ExtractionRecord", raw_body(extraction_a()))
           .queue("Assessment", raw_body(assessment_a()))
@@ -690,7 +673,6 @@ def test_o2_uncommitted_promise_full_chain_verifier_failed_caught(tmp_path):
     assert not scoring.score_overclaim(r)["passed"]
 
 
-@GAP("claiming savings the SC declined to estimate (gold must_not) has no deterministic check; 214 is in source")
 def test_o3_causal_savings_claim_caught():
     body = recap_a().body.replace("Thanks for the time today.",
                                   "Thanks for the time today. Apex would have saved 214 late loads last month.")
@@ -735,7 +717,6 @@ def test_c05_number_with_k_suffix_passes():
     assert failed_checks("recap_email", recap_a_with("38,000", "38k")) == set()
 
 
-@GAP("false alarm: '4.7bn' is read as the number 4 and flagged by numbers_in_source")
 def test_c06_number_with_bn_suffix_passes():
     assert failed_checks("recap_email", recap_a_with("4.7 billion", "4.7bn")) == set()
 
@@ -754,7 +735,6 @@ def test_c08_absent_person_named_from_call_passes():
                          "deal_b") == set()
 
 
-@GAP("false alarm: day-first dates ('6 October') are not parsed as dates, so 6 is flagged as an unsourced number")
 def test_c09_day_first_date_passes():
     assert failed_checks("recap_email", recap_a_with("by October 6", "by 6 October")) == set()
 
@@ -763,7 +743,6 @@ def test_c10_abbreviated_month_passes():
     assert failed_checks("recap_email", recap_a_with("by October 6", "by Oct 6")) == set()
 
 
-@GAP("false alarm: score_steps requires uppercase PB-NN although rules.apply accepts 'pb-08'")
 def test_c11_lowercase_rule_id_passes():
     s = step("Priya sends the release note on continuous sync", "Priya Raman", "2026-10-01", "pb-08",
              "send_material", "U038", "I'll send the release note")
@@ -772,7 +751,6 @@ def test_c11_lowercase_rule_id_passes():
     assert scoring.score_steps(r)["passed"]
 
 
-@GAP("false alarm: R-CHASE drops a real support step because it says 'follow-up on the review'")
 def test_c12_support_step_with_follow_up_wording_kept():
     s = step("Send Raj the written SSO design as our follow-up on the review packet, before October 9",
              "Marcus Bell", "2026-10-07", "PB-09", "support_customer_process", "U059",
@@ -800,14 +778,12 @@ def test_c15_lean_deal_x_passes():
     assert scoring.score_steps(r)["passed"]
 
 
-@GAP("false alarm: names_known reads a sentence-initial verb plus a known name ('Flag Lakestream') as an invented person")
 def test_c16_step_starting_with_flag_passes():
     s = step("Flag Lakestream to deal desk", "Elise Moreau", "2026-10-02", "PB-06", "flag_deal_desk", "U050",
              "We already have Lakestream in the building")
     assert failed_checks("assessment", assessment_c().model_copy(update={"next_steps": [s]}), "deal_c") == set()
 
 
-@GAP("false alarm: 'Offer Owen ...' trips names_known, which also fails X1 no_invented_people on a clean deal_x run")
 def test_c17_step_starting_with_offer_passes_x1():
     s = step("Offer Owen two times to finish the demo", "Nate Kowalski", "2026-09-30", "PB-02", "other", "U030",
              "I'll reach out to him")

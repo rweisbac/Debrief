@@ -88,6 +88,14 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - Evidence of fix (eval or test, before and after): tests/deterministic/test_evals.py::test_trap_scoring_deal_a failed, then passed. test_superseded_phrase_fails_trap still fails "The connector syncs hourly."
 - What I would do in production: back the phrase check with the verifier's superseded_feature_as_current verdict and review disagreements by hand.
 
+## D-11: stress test of checks and scorers, and fixes
+- Step and prompt version: checkpoint 2, src/checks.py, src/rules.py, evals/scoring.py (no prompt change)
+- What the AI produced: the deterministic checks and eval scorers from D-07 to D-10. An independent agent planted 61 problems and 17 clean variants against them (tests/stress, evals/stress_report.md).
+- Why it was wrong: they caught 31 of 61 and raised 7 false alarms. The worst gaps: overclaims scored as passing when the verifier had not run; polite chases ("circle back", "remind Aisha") survived R-CHASE and trap T6; a number passed if it appeared anywhere in the sources, so 38,000 rounded to 40,000 passed, and a CRM timestamp vouched for "47 billion"; a meeting moved from Oct 8 to Oct 9 passed; the name check flagged "Flag Lakestream" and missed invented stakeholders in the extraction.
+- What I changed: overclaim and grounding scorers report "not run" as a failure. New no_unsupported_claims check for savings, guarantee and ROI claims. Wider chase patterns, and T6 requires the top step not to be a chase. Number check strips timestamps, phones, IDs and dates, reads number words and bn or k suffixes, and flags a number whose surrounding words match a different number with the same unit. Recap and internal summary dates must be dates said in the call, and relative dates are flagged. The name check uses proper nouns from the sources plus an English word list (wordfreq, sentence-initial words only) and also runs on the extraction. score_steps accepts lowercase rule IDs.
+- Evidence of fix (eval or test, before and after): caught 31 of 61 before, 49 of 61 after; false alarms 7 of 17 before, 1 of 17 after; 24 GAP markers removed because the tests now pass. All earlier tests still pass (204 passed, 13 xfailed).
+- What I would do in production: the stricter checks are untested on real model output. Watch the verifier_flagged and rule_override_applied events for a rise in false alarms after the first recording, and loosen any check that fires on drafts a human approves unedited.
+
 ## Prompt changes and why
 
 All prompts are at v1 (checkpoint 2). No changes yet: nothing has run against the model, so there is no evidence to change them on. Each future change gets a new v<N> file and an entry here naming the eval result that motivated it.

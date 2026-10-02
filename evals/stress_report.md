@@ -1,5 +1,15 @@
 # Stress report: how far the offline checks and scorers can be trusted
 
+## After fixes (D-11)
+
+Re-run after fixing ranked gaps 1 to 4, the name check (7) and the related false alarms: caught 49 of 61 planted problems (was 31); 1 false alarm on 17 clean variants (was 7). Suite: 204 passed, 13 xfailed. Every fixed case is now a normal passing test; the 13 open gaps keep their GAP markers.
+
+Fixed: O1, O2, O3 (overclaims), S07 to S10, T6d, T6e (polite chasing), G08, G09, G10, T5c (number grounding), G16, G18 (dates), G13, X1e (names), G19 (vacuous grounding), C06, C09, C11, C12, C16, C17 (false alarms).
+
+Still open, by design or deferred: G12 (invented name made of ordinary words; code cannot tell "Will Long" from a sentence, so this stays with the verifier), G03 (negation inside a fuzzy match), S02 (generic padding step), T1b, T3b, X1d, Y1b, Y1c (scorers looser than gold), T4c to T4f and C03 (superseded feature wording).
+
+## Original run
+
 Summary: caught 31 of 61 planted problems; 7 false alarms on 17 clean variants.
 
 Method. Every case starts from a clean, hand-built output (tests/fakes.py for deal_a, and equivalent objects for deal_b, deal_c, deal_x and deal_y built in the harness from verbatim transcript excerpts). Each one plants a single problem. The harness then runs the deterministic checks (`checks.run_artifact` / `checks.run_all`), the rule overrides (`rules.apply`, `rules.enforce_map_agreed`), the schema validators (`validate_assessment`) and the eval scorers (`evals/scoring.py`), the same way `Chain.run` does offline. The model verifier never runs offline, so `verifier` is empty unless a case supplies verdicts. All cases are in tests/stress/test_stress_harness.py. A missed problem or a false alarm is an `xfail(strict=True)` with a `GAP:` reason, so a fix turns it into an XPASS failure and someone has to update the test.

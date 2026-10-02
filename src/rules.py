@@ -14,9 +14,25 @@ from src.schemas import (Assessment, DealStateEnum, ExtractionRecord, MapStatusE
                          ActionTypeEnum)
 from src.transcript import Transcript
 
-CHASE_RE = re.compile(
-    r"\b(check(ing)?[ -]in|follow(ing)?[ -]up (on|about) (the )?(status|progress|review|decision)|nudge|"
-    r"chase|chasing|ping|touch base|push(ing)? for|remind (them|the customer))\b", re.I)
+# Chasing = asking the customer about the status of their own process, or pushing for a meeting.
+# Supporting = sending something their process needs. Stress gaps S07 to S10: polite chases such as
+# "circle back", "remind Aisha", "follow up with Aisha on the status" and "asking whether the
+# committee has reviewed it yet" used to pass. "Follow-up on the review packet" with a deliverable
+# is support and must not match (stress case C12).
+CHASE_PATTERNS = [
+    r"\bcheck(?:ing)?[ -]in\b",
+    r"\bcircl(?:e|ing) back\b",
+    r"\btouch(?:ing)? base\b",
+    r"\bnudg(?:e|ing)\b", r"\bchas(?:e|ing)\b", r"\bping\b",
+    r"\bremind(?:er|ing)?\b",
+    r"\bpush(?:ing)? (?:for|them|her|him)\b",
+    r"\bfollow(?:ing)?[ -]?up (?:with \w+ )?(?:on|about) [\w ]{0,40}?\b(?:status|progress|decision|timeline|update)\b",
+    r"\b(?:see|ask|asking|find out|check|learn) (?:where|whether|if|how far)\b",
+    r"\bwhere (?:things|it|they|the [\w ]{1,30}) stands?\b",
+    r"\b(?:any|an|a status) update\b",
+    r"\b(?:has|have) (?:looked at|reviewed|decided)\b[\w ]{0,30}\byet\b",
+]
+CHASE_RE = re.compile("|".join(CHASE_PATTERNS), re.I)
 
 
 @dataclass

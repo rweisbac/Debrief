@@ -7,6 +7,8 @@ from __future__ import annotations
 
 import re
 
+from src.rules import is_chase
+
 SCORED_LISTS = {
     # gold key: (extraction key, match mode)
     "objections": ("objections", "utterance"),
@@ -134,11 +136,14 @@ def score_trap(trap: dict, result: dict) -> dict:
         steps = _steps(result)
         top = steps[0] if steps else {}
         top_text = (top.get("action", "") + " " + top.get("why", "")).lower()
-        sub["top_step_supports_process"] = bool(top) and (
+        # The type label or the right names are not enough on their own (stress gaps T6d, T6e):
+        # the top step must not itself be a chase.
+        sub["top_step_supports_process"] = bool(top) and not is_chase(top.get("action", ""), top.get("action_type", "")) and (
             top.get("action_type") in {"support_customer_process", "send_material"}
             or any(t.lower() in top_text for t in trap.get("required_terms", [])))
         step_text = " ".join(s["action"].lower() for s in steps)
-        sub["no_chase_phrase"] = not any(p in step_text for p in trap.get("forbidden_phrases", []))
+        sub["no_chase_phrase"] = (not any(p in step_text for p in trap.get("forbidden_phrases", []))
+                                  and not any(is_chase(s["action"], s.get("action_type", "")) for s in steps))
         passed = sub["top_step_supports_process"] and sub["no_chase_phrase"]
     else:
         raise ValueError(f"unknown trap check {check!r}")
@@ -192,21 +197,33 @@ def score_state(gold: dict, result: dict) -> dict:
 
 
 def score_grounding(result: dict) -> dict:
+    """A check that never ran is a failure, not a pass (stress gap G19)."""
     first = [c for c in result.get("checks", []) if not c.get("after_regeneration")]
     out = {}
-    for name in ("evidence_resolves", "numbers_in_source", "names_known", "dates_future_business_days"):
-        fails = [f'{c["artifact"]}: {c["detail"]}' for c in first if c["check"] == name and not c["passed"]]
+    for name in ("evidence_resolves", "numbers_in_source", "names_known", "dates_future_business_days",
+                 "no_unsupported_claims"):
+        ran = [c for c in first if c["check"] == name]
+        fails = [f'{c["artifact"]}: {c["detail"]}' for c in ran if not c["passed"]]
+        if not ran:
+            fails = ["not run: no result for this check"]
         out[name] = {"passed": not fails, "failures": fails}
     return out
 
 
 def score_overclaim(result: dict) -> dict:
+    """Uncommitted promises are only caught by the model verifier, so if the verifier did not run (or its
+    output could not be read) this is "not run", which counts as a failure (stress gaps O1, O2).
+    Deterministic savings, guarantee and ROI claims are caught by checks.no_unsupported_claims."""
     verdicts = [v for v in result.get("verifier", []) if v["check"] == "email_promises_uncommitted"
                 and v["artifact"] == "recap_email" and not v.get("after_regeneration")]
     fails = [v["target"] for v in verdicts if not v["passed"]]
+    claims = [c for c in result.get("checks", []) if c["check"] == "no_unsupported_claims"
+              and c["artifact"] == "recap_email" and not c.get("after_regeneration") and not c["passed"]]
+    fails += [", ".join(c["locations"]) for c in claims]
     final = (result.get("artifacts", {}).get("recap_email") or {})
-    return {"passed": not fails or (final.get("regenerated") and not final.get("needs_review")),
-            "first_draft_flags": fails, "verifier_ran": bool(verdicts),
+    fixed = bool(final.get("regenerated")) and not final.get("needs_review")
+    status = "not run" if not verdicts else ("pass" if not fails or fixed else "fail")
+    return {"passed": status == "pass", "status": status, "first_draft_flags": fails, "verifier_ran": bool(verdicts),
             "note": "verifier based; the verifier is itself a model and is not ground truth"}
 
 
@@ -220,7 +237,7 @@ def score_steps(result: dict) -> dict:
             problems.append(f"step {i} has no evidence")
         if not s.get("owner", "").strip():
             problems.append(f"step {i} has no owner")
-        if not re.match(r"^PB-\d{2}$", s.get("playbook_rule_id", "")):
+        if not re.match(r"^PB-\d{2}$", s.get("playbook_rule_id", "").strip().upper()):
             problems.append(f"step {i} rule id {s.get('playbook_rule_id')!r}")
     chase = [c for c in result.get("checks", []) if c["check"] == "no_chase_when_waiting" and not c["passed"]]
     if chase:
