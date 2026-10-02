@@ -2,7 +2,7 @@
   "status": "skipped",
   "reason": "ANTHROPIC_API_KEY not set",
   "model": "claude-sonnet-5-5",
-  "ran_at": "2026-10-02T01:20:08.123556+00:00",
+  "ran_at": "2026-10-02T01:59:29.614349+00:00",
   "offline": {
     "sdk_version": "1.11.0",
     "parse_signature_params": [

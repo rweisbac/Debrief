@@ -11,6 +11,8 @@ Source of truth for what `src/llm.py` sends. Raw results: `docs/smoke_results.js
 | (c) content block types returned | Pending live run | Offline mock only: `parse` reads JSON from the `text` block when a `thinking` block comes first |
 | (d) cache read on repeated stable prefix | Pending live run | Not measured. No savings claimed. |
 | (e) `temperature` rejected with 400 | Pending live run | Offline: `parse()` in SDK 1.11.0 has no `temperature`, `top_p` or `top_k` parameter at all |
+| (f) step rules as a mid-conversation `{"role": "system"}` message | Pending live run | Offline: SDK sends it unchanged. Fallback: `DEBRIEF_STEP_RULES_PLACEMENT=top_system` (D-07) |
+| parse() on truncated JSON | Verified offline | Raises pydantic ValidationError and hides stop_reason; llm.py reads the raw body via an httpx2 response hook (D-08) |
 
 "Offline" means verified against the installed SDK with a mock HTTP transport. It shows what the SDK sends, not what the API accepts.
 
@@ -36,8 +38,12 @@ Source of truth for what `src/llm.py` sends. Raw results: `docs/smoke_results.js
 client.messages.parse(
     model=DEBRIEF_MODEL,
     max_tokens=<per step>,
-    system=[{"type": "text", "text": <stable block>, "cache_control": {"type": "ephemeral"}}, <step rules>],
-    messages=[{"role": "user", "content": <transcript then data>}],
+    system=[{"type": "text", "text": <preamble + playbook + release cards + competitors>,
+             "cache_control": {"type": "ephemeral"}}],
+    messages=[
+        {"role": "user", "content": [<transcript + CRM, cache_control>, <step data>, <retry feedback if any>]},
+        {"role": "system", "content": <step rules from prompts/<step>/v<N>.md>},
+    ],
     output_format=<PydanticModel>,
     output_config={"effort": <per step>},
 )

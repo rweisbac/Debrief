@@ -1,0 +1,47 @@
+{
+ "deal_a": [
+  {
+   "deal": "deal_a",
+   "status": "not_run",
+   "reason": "replay fixture missing for step 'extract', key 96c415ae5ed170d3410e6f3881de0a3a57761e2372612aefcae368b8707975f0. Run with DEBRIEF_MODE=record (needs ANTHROPIC_API_KEY) to create it.",
+   "step": "extract",
+   "key": "96c415ae5ed170d3410e6f3881de0a3a57761e2372612aefcae368b8707975f0"
+  }
+ ],
+ "deal_b": [
+  {
+   "deal": "deal_b",
+   "status": "not_run",
+   "reason": "replay fixture missing for step 'extract', key c816c4ea5c1c5390c39e8b71e4b7e1981352d1ad80c5e955d6e82beb9336fbb5. Run with DEBRIEF_MODE=record (needs ANTHROPIC_API_KEY) to create it.",
+   "step": "extract",
+   "key": "c816c4ea5c1c5390c39e8b71e4b7e1981352d1ad80c5e955d6e82beb9336fbb5"
+  }
+ ],
+ "deal_c": [
+  {
+   "deal": "deal_c",
+   "status": "not_run",
+   "reason": "replay fixture missing for step 'extract', key 178ee516d36ae85229c9457b048d6ecc6531b696534665809d0fdd5645505662. Run with DEBRIEF_MODE=record (needs ANTHROPIC_API_KEY) to create it.",
+   "step": "extract",
+   "key": "178ee516d36ae85229c9457b048d6ecc6531b696534665809d0fdd5645505662"
+  }
+ ],
+ "deal_x": [
+  {
+   "deal": "deal_x",
+   "status": "not_run",
+   "reason": "replay fixture missing for step 'extract', key 32434fb8a54fa4fe70b5dcc8bd15659fed86bbb27d9f0941a2b8688b4919a2fb. Run with DEBRIEF_MODE=record (needs ANTHROPIC_API_KEY) to create it.",
+   "step": "extract",
+   "key": "32434fb8a54fa4fe70b5dcc8bd15659fed86bbb27d9f0941a2b8688b4919a2fb"
+  }
+ ],
+ "deal_y": [
+  {
+   "deal": "deal_y",
+   "status": "not_run",
+   "reason": "replay fixture missing for step 'extract', key eda6b82a1c7619fc47b87528f4e7842d58a64e0937b0cfb0723fdfce373cf31a. Run with DEBRIEF_MODE=record (needs ANTHROPIC_API_KEY) to create it.",
+   "step": "extract",
+   "key": "eda6b82a1c7619fc47b87528f4e7842d58a64e0937b0cfb0723fdfce373cf31a"
+  }
+ ]
+}

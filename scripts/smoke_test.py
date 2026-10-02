@@ -6,6 +6,7 @@ Checks:
   c. which content block types come back, in what order
   d. prompt caching on a stable prefix: observed cache_read_input_tokens on a repeat call
   e. negative probe: temperature sent through extra_body is rejected
+  f. step rules as a mid-conversation {"role": "system"} message after the user turn (llm.py layout)
   offline (always runs, no network): the request body the installed SDK builds for
   parse + effort, captured with a mock transport, and parsing when a thinking block precedes text
 
@@ -174,6 +175,11 @@ def main() -> int:
         run_probe("d2_cache_read", lambda: client.messages.parse(
             model=MODEL, max_tokens=2000, system=system_cached, messages=msgs, output_format=Probe,
             output_config={"effort": "low"})),
+        run_probe("f_mid_conversation_system", lambda: client.messages.parse(
+            model=MODEL, max_tokens=2000, system=system_cached, output_format=Probe,
+            output_config={"effort": "low"},
+            messages=[{"role": "user", "content": USER_TEXT},
+                      {"role": "system", "content": "Answer in under 15 words per field."}])),
         run_probe("e_temperature_rejected", lambda: client.messages.parse(
             model=MODEL, max_tokens=2000, messages=msgs, output_format=Probe,
             extra_body={"temperature": 0.2})),

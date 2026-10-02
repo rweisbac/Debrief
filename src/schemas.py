@@ -196,6 +196,7 @@ class CustomerDependency(_Model):
     summary: str
     owner: str
     due: str  # ISO date or empty string
+    blocks_progress: bool  # true when Apex cannot move the deal forward until this is done
     evidence: list[EvidenceRef]
 
 
@@ -315,6 +316,15 @@ class VerifierReport(_Model):
     verdicts: list[VerifierVerdict]
 
 
+class JudgeResult(_Model):
+    specific: bool
+    evidence_tied: bool
+    playbook_tied: bool
+    actionable_10_min: bool
+    non_obvious: bool
+    critique: str
+
+
 # Computed in code (no model call)
 
 class MeddpiccStatusEnum(str, Enum):
@@ -340,7 +350,8 @@ class MeddpiccView(_Model):
     competition: MeddpiccField
 
 
-LLM_OUTPUT_MODELS = [ExtractionRecord, Assessment, RecapEmail, InternalSummary, MutualActionPlan, VerifierReport]
+LLM_OUTPUT_MODELS = [ExtractionRecord, Assessment, RecapEmail, InternalSummary, MutualActionPlan, VerifierReport,
+                     JudgeResult]
 
 
 # Validators. Each returns a list of human readable errors; empty means valid.

@@ -56,9 +56,41 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - Evidence of fix (eval or test, before and after): tests/deterministic/test_transcript.py::test_evidence_fails failed on the changed number before the fix and passes after. Regression test tests/regressions/test_r01_fuzzy_number_drift.py.
 - What I would do in production: keep the exact number rule, and log the fuzzy score per evidence ref to see how often fuzzy matching is needed at all.
 
+## D-07: step rules sent as a mid-conversation system message (prompt layout conflict)
+- Step and prompt version: checkpoint 2, src/llm.py build_request, all steps v1
+- What the AI produced: the brief asks for two things that conflict under the API's render order (system, then messages): "schema and rules go in the system prompt" and "playbook, release cards, competitor notes, then transcript, then step instructions".
+- Why it was wrong: putting step rules in the top-level system prompt places them before the transcript. That changes the prefix per step, so the transcript cannot be cached across the 6 calls.
+- What I changed: top-level system holds only the stable reference (preamble, playbook, release cards, competitors) with cache_control. The user turn holds the transcript and CRM (cached) and then step data. The step rules follow as a {"role": "system"} message in messages, which the claude-api skill documents for Sonnet 5.5. A config switch, DEBRIEF_STEP_RULES_PLACEMENT=top_system, falls back to the plain layout.
+- Evidence of fix (eval or test, before and after): tests/deterministic/test_chain.py::test_cached_prefix_identical_across_steps, test_llm.py::test_step_rules_placement and test_real_sdk_backend_request_shape. Not live-verified: smoke probe (f) is pending a key. The output schema also changes per step and may invalidate the cache anyway; only measured cache_read_input_tokens will be reported.
+- What I would do in production: confirm with probe (f) and the measured cache reads, and keep whichever layout reads more cached tokens.
+
+## D-08: messages.parse hides stop_reason on truncated output
+- Step and prompt version: checkpoint 2, src/llm.py
+- What the AI produced: a first design that read stop_reason from the parse() result.
+- Why it was wrong: in SDK 1.11.0, parse() raises a pydantic ValidationError when the JSON is cut off at max_tokens. The response, with its stop_reason and usage, is lost, so the "retry once at 2x max_tokens" rule could never fire, and the tokens were never logged. with_raw_response has no parse().
+- What I changed: the HTTP client has a response hook that stores each raw body under a per-call header. parse() is still the only call. On a ValidationError the raw body supplies stop_reason and usage. The same raw body is what record mode saves as the fixture.
+- Evidence of fix (eval or test, before and after): test_llm.py::test_real_sdk_backend_request_shape drives the real SDK over a mock transport. A truncated first response is retried at 2x max_tokens and logged.
+- What I would do in production: ask for an SDK option that returns the message alongside the parse error, then drop the hook.
+
+## D-09: deterministic checks raised false alarms on clean drafts
+- Step and prompt version: checkpoint 2, src/checks.py
+- What the AI produced: a name check that flagged "Send Elena" as an unknown person (a sentence-initial verb), and a number check that read playbook IDs like PB-03 as the number 03.
+- Why it was wrong: every clean debrief would have been sent for regeneration, doubling cost and marking good drafts as needing review.
+- What I changed: ID and enum fields are skipped by the number check, and date fields are checked by the date check instead. The name check accepts a word that appears anywhere in the transcript or CRM (case-insensitive) or in the roster. This is a heuristic: an invented name made of common words can slip through, and the LLM verifier is the second line.
+- Evidence of fix (eval or test, before and after): tests/deterministic/test_rules_checks.py::test_clean_artifacts_pass failed, then passed. test_chain.py clean path is 6 calls. test_invented_person_caught and test_changed_number_caught still pass.
+- What I would do in production: track the false alarm rate per check from the verifier_flagged events, and tighten or retire any check above an agreed rate.
+
+## D-10: superseded feature eval was phrase-blind
+- Step and prompt version: checkpoint 2, evals/scoring.py trap T4
+- What the AI produced: a T4 check that failed any draft containing "hourly sync".
+- Why it was wrong: it failed a correct internal summary line, "Hourly sync: continuous sync now, resolved", which reports the correction rather than presenting hourly as current.
+- What I changed: the check is sentence-level. A sentence with an old-behavior phrase fails only if it does not also signal the change (continuous, no longer, used to, changed, and so on).
+- Evidence of fix (eval or test, before and after): tests/deterministic/test_evals.py::test_trap_scoring_deal_a failed, then passed. test_superseded_phrase_fails_trap still fails "The connector syncs hourly."
+- What I would do in production: back the phrase check with the verifier's superseded_feature_as_current verdict and review disagreements by hand.
+
 ## Prompt changes and why
 
-None yet. Prompts start at v1 in checkpoint 2.
+All prompts are at v1 (checkpoint 2). No changes yet: nothing has run against the model, so there is no evidence to change them on. Each future change gets a new v<N> file and an entry here naming the eval result that motivated it.
 
 ## Things I chose not to build and why
 
