@@ -1,0 +1,336 @@
+{
+  "deal_id": "deal_a",
+  "expected_deal_state": "ready_to_advance",
+  "accepted_deal_states": [
+    "ready_to_advance"
+  ],
+  "business_outcome": {
+    "stated": true,
+    "summary": "Catch a late load while dispatch can still reroute it, not the next morning.",
+    "evidence": [
+      {
+        "utterance_id": "U035",
+        "anchor": "dispatch can swap drivers or call the consignee"
+      },
+      {
+        "utterance_id": "U034",
+        "anchor": "the whole point is catching a late load while dispatch can still reroute it"
+      }
+    ]
+  },
+  "agreed_next_step": {
+    "exists": true,
+    "summary": "45 minute session with Elena Varga (COO) on the late load scenario and commercials",
+    "date": "2026-10-08",
+    "evidence": [
+      {
+        "utterance_id": "U071",
+        "anchor": "Thursday the eighth, 2pm Central"
+      },
+      {
+        "utterance_id": "U072",
+        "anchor": "Thursday October 8th, 2pm Central, forty five minutes"
+      }
+    ]
+  },
+  "objections": [
+    {
+      "id": "A-O1",
+      "summary": "Hourly connector freshness too slow for dispatch dashboards",
+      "status": "resolved",
+      "evidence": [
+        {
+          "utterance_id": "U009",
+          "anchor": "Hourly might be tight for us"
+        },
+        {
+          "utterance_id": "U040",
+          "anchor": "A minute is fine"
+        }
+      ]
+    },
+    {
+      "id": "A-O2",
+      "summary": "COO will question time to value after an 8 month past project",
+      "status": "open",
+      "evidence": [
+        {
+          "utterance_id": "U076",
+          "anchor": "She got burned on the last platform project"
+        }
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "A-C1",
+      "who": "Priya Raman",
+      "side": "apex",
+      "what": "Build row level policy for the partner hierarchy in the sandbox",
+      "by_when": "2026-10-06",
+      "evidence": [
+        {
+          "utterance_id": "U054",
+          "anchor": "I can have that back to you by Tuesday the sixth"
+        }
+      ]
+    },
+    {
+      "id": "A-C2",
+      "who": "Mikkel Strand",
+      "side": "customer",
+      "what": "Send sample of the partner hierarchy table",
+      "by_when": "2026-10-05",
+      "evidence": [
+        {
+          "utterance_id": "U055",
+          "anchor": "I can send that Monday"
+        },
+        {
+          "utterance_id": "U075",
+          "anchor": "I'll get the sample over Monday morning"
+        }
+      ]
+    },
+    {
+      "id": "A-C3",
+      "who": "Sam Lee",
+      "side": "apex",
+      "what": "Send invite to Dana and Elena for Oct 8",
+      "by_when": "2026-09-30",
+      "evidence": [
+        {
+          "utterance_id": "U072",
+          "anchor": "I'll send the invite to you and Elena right after this call"
+        }
+      ]
+    },
+    {
+      "id": "A-C4",
+      "who": "Sam Lee",
+      "side": "apex",
+      "what": "Send recap today",
+      "by_when": "2026-09-30",
+      "evidence": [
+        {
+          "utterance_id": "U079",
+          "anchor": "I'll send a recap today"
+        }
+      ]
+    },
+    {
+      "id": "A-C5",
+      "who": "Priya Raman",
+      "side": "apex",
+      "what": "Send the release note on continuous sync",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U038",
+          "anchor": "I'll send the release note"
+        }
+      ]
+    },
+    {
+      "id": "A-C6",
+      "who": "Sam Lee",
+      "side": "apex",
+      "what": "Bring a realistic onboarding plan to the Elena meeting",
+      "by_when": "2026-10-08",
+      "evidence": [
+        {
+          "utterance_id": "U077",
+          "anchor": "We'll come with a realistic onboarding plan"
+        }
+      ]
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "Dana Ortiz",
+      "present": true,
+      "role": "champion",
+      "evidence": [
+        {
+          "utterance_id": "U060",
+          "anchor": "I think I've seen what I needed to see"
+        }
+      ]
+    },
+    {
+      "name": "Mikkel Strand",
+      "present": true,
+      "role": "technical evaluator",
+      "evidence": [
+        {
+          "utterance_id": "U013",
+          "anchor": "4.7 billion events a month"
+        }
+      ]
+    },
+    {
+      "name": "Grace Oyelaran",
+      "present": true,
+      "role": "technical evaluator",
+      "evidence": [
+        {
+          "utterance_id": "U024",
+          "anchor": "dbt core, about three hundred models"
+        }
+      ]
+    },
+    {
+      "name": "Elena Varga",
+      "present": false,
+      "role": "economic buyer, COO, owns the budget line",
+      "evidence": [
+        {
+          "utterance_id": "U065",
+          "anchor": "Elena Varga signs off on anything in this range"
+        },
+        {
+          "utterance_id": "U066",
+          "anchor": "she owns the budget line for this"
+        }
+      ]
+    }
+  ],
+  "open_items": [
+    {
+      "id": "A-I1",
+      "summary": "Row level access for partner hierarchy with sub carriers",
+      "owner": "Priya Raman",
+      "minor": true,
+      "evidence": [
+        {
+          "utterance_id": "U052",
+          "anchor": "What I don't know yet is how your partner hierarchy works"
+        },
+        {
+          "utterance_id": "U061",
+          "anchor": "The partner hierarchy thing is the only open question"
+        }
+      ]
+    },
+    {
+      "id": "A-I2",
+      "summary": "Two dbt models use a macro that calls an external API at compile time; customer to refactor",
+      "owner": "Grace Oyelaran",
+      "minor": true,
+      "evidence": [
+        {
+          "utterance_id": "U027",
+          "anchor": "move that lookup into a seed table or a pre-hook"
+        },
+        {
+          "utterance_id": "U062",
+          "anchor": "The macro thing is on us"
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "value": "4.7 billion events a month",
+      "evidence": [
+        {
+          "utterance_id": "U013",
+          "anchor": "4.7 billion events a month"
+        }
+      ]
+    },
+    {
+      "value": "38,000 per second",
+      "evidence": [
+        {
+          "utterance_id": "U013",
+          "anchor": "38,000 per second"
+        }
+      ]
+    },
+    {
+      "value": "40,000 per second",
+      "evidence": [
+        {
+          "utterance_id": "U014",
+          "anchor": "40,000 per second"
+        }
+      ]
+    },
+    {
+      "value": "214 loads",
+      "evidence": [
+        {
+          "utterance_id": "U045",
+          "anchor": "the model flagged 214 loads"
+        }
+      ]
+    },
+    {
+      "value": "eleven minutes",
+      "evidence": [
+        {
+          "utterance_id": "U029",
+          "anchor": "Total run time was eleven minutes"
+        }
+      ]
+    }
+  ],
+  "competitors": [],
+  "contradictions": [],
+  "customer_dependencies": [],
+  "checklist_mismatches": [],
+  "relevant_release_cards": [
+    "RC-12",
+    "RC-07"
+  ],
+  "traps": [
+    {
+      "id": "T4",
+      "name": "Superseded feature",
+      "evidence": [
+        {
+          "utterance_id": "U008",
+          "anchor": "Today the warehouse connector syncs in hourly batches"
+        },
+        {
+          "utterance_id": "U038",
+          "anchor": "The warehouse connector does continuous sync now"
+        }
+      ],
+      "expected_behavior": "Any statement about connector freshness says continuous sync of about a minute, citing RC-12. Hourly batch is never presented as current.",
+      "check": "superseded_feature",
+      "forbidden_phrases": [
+        "hourly batch",
+        "syncs hourly",
+        "hourly sync"
+      ]
+    },
+    {
+      "id": "T5",
+      "name": "Exact number",
+      "evidence": [
+        {
+          "utterance_id": "U013",
+          "anchor": "4.7 billion events a month"
+        },
+        {
+          "utterance_id": "U013",
+          "anchor": "38,000 per second"
+        }
+      ],
+      "expected_behavior": "Volumes are copied exactly as 4.7 billion events a month and 38,000 per second. No rounding to 5 billion or 40,000 for the customer peak.",
+      "check": "exact_numbers",
+      "required_values": [
+        "4.7 billion",
+        "38,000"
+      ]
+    }
+  ],
+  "must_not": [
+    "Claim how many loads or dollars would have been saved (the SC declined to estimate at U045)",
+    "Say Elena Varga attended",
+    "Present hourly batch as current"
+  ],
+  "_note": "Synthetic data, fictional company. Hand labels for evals. Each anchor must appear in its utterance."
+}

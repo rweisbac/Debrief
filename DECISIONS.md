@@ -48,6 +48,14 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - Evidence of fix (eval or test, before and after): tests/deterministic/test_style.py failed with scripts/check_style.py:10, then passed. The hook exited 2 on a planted bad file in src/ and 0 on a clean edit.
 - What I would do in production: keep the check in CI and pre-commit.
 
+## D-06: fuzzy evidence match let a changed number through
+- Step and prompt version: checkpoint 1, src/transcript.py resolve_evidence (no prompt yet)
+- What the AI produced: evidence resolution exactly as specified: normalized substring, or rapidfuzz partial_ratio >= 95.
+- Why it was wrong: "5 billion events a month" scored above 95 against "4.7 billion events a month" because only one character differs. A misquoted number would have been rendered as grounded, which is exactly what trap T5 tests.
+- What I changed: a fuzzy match now also requires every number in the excerpt to appear exactly in the utterance. Substring matches are unchanged.
+- Evidence of fix (eval or test, before and after): tests/deterministic/test_transcript.py::test_evidence_fails failed on the changed number before the fix and passes after. Regression test tests/regressions/test_r01_fuzzy_number_drift.py.
+- What I would do in production: keep the exact number rule, and log the fuzzy score per evidence ref to see how often fuzzy matching is needed at all.
+
 ## Prompt changes and why
 
 None yet. Prompts start at v1 in checkpoint 2.

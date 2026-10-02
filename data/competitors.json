@@ -1,0 +1,23 @@
+{
+  "_note": "Synthetic data, fictional company. Competitors are invented.",
+  "competitors": [
+    {
+      "name": "Lakestream",
+      "positioning": "Strong for batch analytics, especially marketing data. Streaming needs a separate add on product.",
+      "their_pitch": "One vendor for everything you already run on Lakestream.",
+      "where_apex_wins": "Near real time workloads where freshness is the requirement, without stitching two products together.",
+      "watch_for": "Incumbent in another department. Expect 'why not extend what we have' from leadership.",
+      "proof_to_offer": "Compare on the customer's actual workload and freshness requirement. Do not make general claims about Lakestream.",
+      "release_cards": ["RC-10"]
+    },
+    {
+      "name": "Quarrylane",
+      "positioning": "Low cost ingestion tool.",
+      "their_pitch": "Cheapest way to land data.",
+      "where_apex_wins": "Governance, row level access and transformation in one place.",
+      "watch_for": "Price led evaluations.",
+      "proof_to_offer": "Total cost including the tools Quarrylane needs alongside it.",
+      "release_cards": ["RC-07"]
+    }
+  ]
+}

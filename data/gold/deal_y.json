@@ -1,0 +1,259 @@
+{
+  "deal_id": "deal_y",
+  "expected_deal_state": "waiting_on_customer",
+  "accepted_deal_states": [
+    "waiting_on_customer",
+    "open_technical_gap"
+  ],
+  "business_outcome": {
+    "stated": true,
+    "summary": "Scientists decide the next run the same afternoon, taking a week or more out of each screening campaign.",
+    "evidence": [
+      {
+        "utterance_id": "U004",
+        "anchor": "we think we could take a week or more out of each screening campaign"
+      }
+    ]
+  },
+  "agreed_next_step": {
+    "exists": false,
+    "summary": "none; champion will align internally first",
+    "date": "",
+    "evidence": [
+      {
+        "utterance_id": "U051",
+        "anchor": "Let me see where we land internally first"
+      }
+    ]
+  },
+  "objections": [
+    {
+      "id": "Y-O1",
+      "summary": "Data residency: EU only versus US acceptable for pseudonymized data",
+      "status": "open",
+      "evidence": [
+        {
+          "utterance_id": "U018",
+          "anchor": "Everything has to stay in the EU"
+        },
+        {
+          "utterance_id": "U023",
+          "anchor": "US hosting is fine for pseudonymized research data"
+        }
+      ]
+    },
+    {
+      "id": "Y-O2",
+      "summary": "Support access must stay in region",
+      "status": "partially_resolved",
+      "evidence": [
+        {
+          "utterance_id": "U020",
+          "anchor": "Including support access"
+        },
+        {
+          "utterance_id": "U021",
+          "anchor": "I'd want to confirm the exact wording with our compliance team"
+        }
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "Y-C1",
+      "who": "Marcus Bell",
+      "side": "apex",
+      "what": "Confirm EU only support access wording with compliance",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U021",
+          "anchor": "I'd want to confirm the exact wording with our compliance team"
+        }
+      ]
+    },
+    {
+      "id": "Y-C2",
+      "who": "Marcus Bell",
+      "side": "apex",
+      "what": "Add plate ID to the curve fit flag",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U010",
+          "anchor": "We can add the plate ID to the flag"
+        }
+      ]
+    },
+    {
+      "id": "Y-C3",
+      "who": "Camila Reyes",
+      "side": "customer",
+      "what": "Find the legal memo on US hosting for pseudonymized data",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U027",
+          "anchor": "I can find the memo"
+        },
+        {
+          "utterance_id": "U049",
+          "anchor": "I'll find it"
+        }
+      ]
+    },
+    {
+      "id": "Y-C4",
+      "who": "Sam Lee",
+      "side": "apex",
+      "what": "Send recap with the two hosting options and the standard DPA",
+      "by_when": "2026-09-30",
+      "evidence": [
+        {
+          "utterance_id": "U052",
+          "anchor": "I'll send a recap with what we covered and the two hosting options"
+        },
+        {
+          "utterance_id": "U041",
+          "anchor": "I can send it with the recap"
+        }
+      ]
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "Ingrid Solberg",
+      "present": true,
+      "role": "champion",
+      "evidence": [
+        {
+          "utterance_id": "U047",
+          "anchor": "I can take this to my VP"
+        }
+      ]
+    },
+    {
+      "name": "Victor Huang",
+      "present": true,
+      "role": "IT infrastructure director",
+      "evidence": [
+        {
+          "utterance_id": "U018",
+          "anchor": "That's non negotiable"
+        }
+      ]
+    },
+    {
+      "name": "Camila Reyes",
+      "present": true,
+      "role": "compliance manager",
+      "evidence": [
+        {
+          "utterance_id": "U023",
+          "anchor": "Legal reviewed this last year"
+        }
+      ]
+    },
+    {
+      "name": "Ingrid's VP (unnamed)",
+      "present": false,
+      "role": "approver after hosting is settled",
+      "evidence": [
+        {
+          "utterance_id": "U047",
+          "anchor": "I can take this to my VP"
+        }
+      ]
+    }
+  ],
+  "open_items": [
+    {
+      "id": "Y-I1",
+      "summary": "Single internal answer on hosting region",
+      "owner": "Ingrid Solberg",
+      "minor": false,
+      "evidence": [
+        {
+          "utterance_id": "U029",
+          "anchor": "it's worth getting a single answer"
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "value": "300 plates a day",
+      "evidence": [
+        {
+          "utterance_id": "U043",
+          "anchor": "We do about 300 plates a day"
+        }
+      ]
+    },
+    {
+      "value": "a week or more",
+      "evidence": [
+        {
+          "utterance_id": "U004",
+          "anchor": "a week or more"
+        }
+      ]
+    }
+  ],
+  "competitors": [],
+  "contradictions": [
+    {
+      "id": "Y-CT1",
+      "summary": "Victor says all Basel data must stay in the EU; Camila says legal cleared US hosting for pseudonymized data",
+      "evidence": [
+        {
+          "utterance_id": "U018",
+          "anchor": "Our Basel site data can't leave the EU, full stop"
+        },
+        {
+          "utterance_id": "U023",
+          "anchor": "US hosting is fine for pseudonymized research data"
+        },
+        {
+          "utterance_id": "U024",
+          "anchor": "That's not my understanding"
+        }
+      ]
+    }
+  ],
+  "customer_dependencies": [
+    {
+      "id": "Y-D1",
+      "summary": "Internal alignment on hosting; Camila to find the legal memo",
+      "owner": "Camila Reyes",
+      "due": "",
+      "evidence": [
+        {
+          "utterance_id": "U047",
+          "anchor": "If Victor and Camila are aligned, I can take this to my VP"
+        }
+      ]
+    }
+  ],
+  "checklist_mismatches": [],
+  "relevant_release_cards": [
+    "RC-14",
+    "RC-11"
+  ],
+  "traps": [],
+  "adversarial": {
+    "id": "Y1",
+    "expected_behavior": "Flag the contradiction between Victor and Camila with both utterance IDs. Recommend resolving it with the champion, Ingrid, for example by giving her both hosting options in writing to settle internally. Do not pick a side.",
+    "required_terms": [
+      "Victor",
+      "Camila",
+      "Ingrid"
+    ]
+  },
+  "must_not": [
+    "Assert that US hosting is acceptable",
+    "Assert that EU hosting is required",
+    "Chase a meeting Ingrid deferred"
+  ],
+  "_note": "Synthetic data, fictional company. Hand labels for evals. Each anchor must appear in its utterance."
+}

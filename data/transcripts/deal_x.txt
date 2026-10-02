@@ -1,0 +1,39 @@
+PARTICIPANTS
+Nate Kowalski | Account Executive | apex
+Priya Raman | Solutions Consultant | apex
+Owen Marsh | Data Architect | customer
+Lily Chen | Senior Analyst | customer
+---
+[01:35] Nate Kowalski: Hi Owen, hi Lily. Can you see my screen? It says presenting.
+[01:53] Owen Marsh: Not yet. Still loading.
+[02:02] Nate Kowalski: Let me try again. Priya, can you share instead?
+[02:17] Priya Raman: Sure, one second. How about now?
+[02:28] Lily Chen: Yes, we see it.
+[02:37] Nate Kowalski: Great. Sorry about that. So the plan today was the claims ingestion scenario Owen described.
+[02:58] Owen Marsh: Right. Quick warning, I have a conflict that just moved, so I might have to drop at twenty past.
+[03:23] Nate Kowalski: No problem, we'll go fast. Priya?
+[03:35] Priya Raman: So this is the claims file you sent, loaded into the sandbox. It's partitioned by state. Ingest ran in about six minutes. I didn't tune anything, this is the default setup, so there's probably room to make it faster once we know which columns you query most. The schema was inferred from the file, and I checked it by hand against the data dictionary you shared.
+[08:03] Owen Marsh: Okay.
+[08:10] Priya Raman: A couple of columns came in as text that I think should be numbers, the paid amount and the allowed amount. I left them as text for now so nothing got silently rounded. That's an easy change once you confirm.
+[12:12] Owen Marsh: Probably numbers.
+[12:19] Priya Raman: Here are the quality checks. Twelve rows failed the date format check, they're in this table.
+[12:41] Lily Chen: Is that the same twelve we see on our side?
+[12:56] Priya Raman: I'd guess so, but I'd want to compare against your list.
+[13:13] Lily Chen: I can send it.
+[13:22] Priya Raman: Thanks. And then this is the summary view you asked for, claims by line of business by week. You can filter by state up here, and each bar links down to the underlying claims, so if a number looks off you can see exactly which rows made it up. I also added a simple freshness indicator in the corner, so you can tell when the file last landed.
+[17:53] Owen Marsh: Mm hm.
+[18:01] Nate Kowalski: Owen, does this look like what you had in mind?
+[18:16] Owen Marsh: Sort of. I'd have to think about it.
+[18:30] Owen Marsh: Sorry, that's my conflict. I have to jump. Lily, can you stay?
+[18:47] Lily Chen: I can stay a couple minutes.
+[18:59] Owen Marsh: Thanks. Sorry all.
+[19:07] Nate Kowalski: No worries, Owen. Lily, anything you want to see while we have you?
+[19:26] Lily Chen: Not really. I mostly wanted to see the file loaded. I'll tell Owen what I saw.
+[19:48] Priya Raman: Do you want me to send the twelve failed rows over?
+[20:04] Lily Chen: Sure.
+[20:11] Nate Kowalski: Should we find another time with Owen to finish?
+[20:25] Lily Chen: You'd have to ask him. His calendar is a mess this month.
+[20:43] Nate Kowalski: Got it. I'll reach out to him. And Priya will send the failed rows and a short note on the two text columns, so Owen has something to look at when he's back.
+[21:22] Priya Raman: Yes, I'll send that today.
+[21:33] Lily Chen: Okay. Thanks.
+[21:40] Nate Kowalski: Thanks Lily.

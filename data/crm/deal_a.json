@@ -1,0 +1,96 @@
+{
+  "deal_id": "deal_a",
+  "account": "Halvorsen Freight",
+  "segment": "Enterprise",
+  "industry": "Logistics",
+  "acv_usd": 285000,
+  "stage": "Technical Validation",
+  "close_date": "2026-11-20",
+  "owner_ae": "Sam Lee",
+  "sc": "Priya Raman",
+  "pod": "Central-1",
+  "tv_entered_at": "2026-09-21T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Dana Ortiz",
+      "title": "VP Data",
+      "role": "champion",
+      "email": "dana.ortiz@halvorsen.example",
+      "phone": "+1 312 555 0141"
+    },
+    {
+      "name": "Mikkel Strand",
+      "title": "Data Platform Lead",
+      "role": "technical_evaluator",
+      "email": "mikkel.strand@halvorsen.example",
+      "phone": ""
+    },
+    {
+      "name": "Grace Oyelaran",
+      "title": "Analytics Engineering Manager",
+      "role": "technical_evaluator",
+      "email": "grace.oyelaran@halvorsen.example",
+      "phone": ""
+    },
+    {
+      "name": "Elena Varga",
+      "title": "Chief Operating Officer",
+      "role": "economic_buyer",
+      "email": "elena.varga@halvorsen.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Dana Ortiz",
+  "economic_buyer": "Elena Varga",
+  "discovery_notes": {
+    "stated_business_outcome": "Catch a late load while dispatch can still reroute it, instead of finding out the next morning. Detention fees and missed delivery windows are the top question from the COO.",
+    "pains": [
+      "Overnight batch finds late loads 18 hours after the fact",
+      "dbt run of about 40 minutes sometimes misses the morning ops meeting",
+      "Last vendor could not handle holiday peak volume"
+    ],
+    "detention_fees_last_fiscal_year_usd": 3400000,
+    "decision_process": "Dana recommends, Elena Varga approves the budget line."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Dana described late load detection as the core use case. Mikkel to send an anonymized telematics sample and three scenarios."
+    },
+    {
+      "date": "2026-09-21",
+      "type": "tv_kickoff",
+      "summary": "Agreed three TV scenarios: ingest at peak volume, run existing dbt models, late load detection."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-a-0930",
+    "scheduled_start": "2026-09-30T10:00:00-05:00",
+    "scheduled_end": "2026-09-30T11:00:00-05:00",
+    "actual_end": "2026-09-30T10:47:30-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-30T09:52:00-05:00",
+    "dated_next_step": {
+      "value": "2026-10-08 14:00 CT: 45 min session with Elena Varga (COO), late load scenario and commercials",
+      "filled_at": "2026-09-30T10:45:40-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "Elena Varga, COO",
+      "filled_at": "2026-09-30T10:44:10-05:00"
+    },
+    "business_outcome": {
+      "value": "Catch a late load while dispatch can still reroute it, instead of finding out the next morning.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-09-30T09:52:00-05:00"
+    },
+    "sc_commitment": {
+      "value": "Priya: row level policy for partner hierarchy, back by Tue Oct 6",
+      "filled_at": "2026-09-30T10:37:05-05:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company."
+}

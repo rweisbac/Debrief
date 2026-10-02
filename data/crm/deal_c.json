@@ -1,0 +1,89 @@
+{
+  "deal_id": "deal_c",
+  "account": "Corvid Retail Group",
+  "segment": "Enterprise",
+  "industry": "Retail",
+  "acv_usd": 310000,
+  "stage": "Technical Validation",
+  "close_date": "2026-11-30",
+  "owner_ae": "Elise Moreau",
+  "sc": "Tom Okafor",
+  "pod": "West-1",
+  "tv_entered_at": "2026-09-17T09:00:00-07:00",
+  "contacts": [
+    {
+      "name": "Ben Castillo",
+      "title": "Director of Business Intelligence",
+      "role": "champion",
+      "email": "ben.castillo@corvidretail.example",
+      "phone": "+1 206 555 0112"
+    },
+    {
+      "name": "Helen Wu",
+      "title": "Head of Data Engineering",
+      "role": "technical_decision_maker",
+      "email": "helen.wu@corvidretail.example",
+      "phone": ""
+    },
+    {
+      "name": "Raymond Ochoa",
+      "title": "Senior Data Engineer",
+      "role": "technical_evaluator",
+      "email": "raymond.ochoa@corvidretail.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Ben Castillo",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Store managers know by mid afternoon what to reorder, including ship from store orders, instead of finding out from an empty shelf the next morning.",
+    "pains": [
+      "Replenishment report lands at 6am and misses ship from store orders",
+      "SKU formats differ between POS and ecommerce"
+    ],
+    "decision_process": "Not confirmed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-10",
+      "type": "discovery",
+      "summary": "Ben owns the replenishment use case. Marketing uses Lakestream."
+    },
+    {
+      "date": "2026-09-17",
+      "type": "tv_kickoff",
+      "summary": "Scoped with Raymond: inventory feed, ecommerce merge, replenishment signal."
+    }
+  ],
+  "competitors": [
+    "Lakestream"
+  ],
+  "demo": {
+    "call_id": "gong-c-1001",
+    "scheduled_start": "2026-10-01T13:00:00-07:00",
+    "scheduled_end": "2026-10-01T14:00:00-07:00",
+    "actual_end": "2026-10-01T13:43:15-07:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T12:55:00-07:00",
+    "dated_next_step": {
+      "value": "2026-10-09: implementation planning session with Helen's team",
+      "filled_at": "2026-10-01T14:05:00-07:00"
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "Store managers know by mid afternoon what to reorder, including ship from store orders.",
+      "prefilled_from_discovery": true,
+      "edited": true,
+      "filled_at": "2026-10-01T12:56:00-07:00"
+    },
+    "sc_commitment": {
+      "value": "Tom: send SKU exceptions table to Raymond",
+      "filled_at": "2026-10-01T13:44:00-07:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company."
+}

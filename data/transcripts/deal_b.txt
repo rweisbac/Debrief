@@ -1,0 +1,87 @@
+PARTICIPANTS
+Jordan Pike | Account Executive | apex
+Marcus Bell | Solutions Consultant | apex
+Aisha Karim | Director of Data Engineering | customer
+Leo Brandt | Identity and Access Engineer | customer
+Nora Fitzgerald | Clinical Analytics Lead | customer
+---
+[00:03] Jordan Pike: Morning all. Thanks for making time, I know it's a heavy week with open enrollment.
+[00:14] Aisha Karim: Heavy is generous. Okay, we're all here except Raj. Raj Patel from security couldn't make it, he's buried in audit prep, but he'll be the one who reviews whatever we pick.
+[00:35] Jordan Pike: Understood. We'll make sure anything security related today is written down so he can review it.
+[00:46] Aisha Karim: Good. Leo is here for identity and Nora is here because she's the one who actually has to use the thing.
+[01:01] Nora Fitzgerald: Hi. Yes. I'm the end user, apparently.
+[01:08] Jordan Pike: The most important person on the call then. So the plan today: Marcus walks through the three validation items from the plan we agreed, which were the readmission reporting pipeline, single sign on, and data protection for PHI. Then we talk next steps. Sound right?
+[01:36] Aisha Karim: Yes. And honestly I'd do SSO first. That's the one I'm worried about.
+[01:46] Marcus Bell: Happy to flip it. Leo, can you remind me how your identity setup works? I've read the notes but I'd rather hear it from you.
+[03:48] Leo Brandt: Sure. So we don't use one of the big identity providers. We have our own, built about six years ago. It's an OIDC layer we wrote on top of our legacy directory. It issues standard tokens, mostly, but group membership doesn't come through the standard groups claim. It comes through a custom claim called mhp_roles, and that claim is nested. It's an object with the facility, the role, and a clearance level.
+[04:32] Marcus Bell: Okay. And no SCIM for provisioning?
+[04:38] Leo Brandt: No SCIM. We provision with a nightly job that writes to the target app's API, if the app has one.
+[04:52] Marcus Bell: So, honest answer. We support OIDC and SAML, and we support mapping custom claims to roles. That part I've done many times. What I have not personally done is map a nested claim like the one you're describing, where we'd need to read inside an object and pull out facility and role separately.
+[07:10] Leo Brandt: Right, that's where every vendor goes quiet.
+[07:17] Marcus Bell: I don't want to go quiet, I want to go find out. Let me show you what the claim mapping screen looks like today, and then I'll tell you what I'd need to check.
+[09:24] Leo Brandt: Okay.
+[09:28] Marcus Bell: So this is the identity settings page. You add your issuer URL, client ID, and then here under claim mapping, you pick a claim name and map values to Apex roles. Today this takes a flat claim. A string or a list of strings.
+[11:41] Leo Brandt: And mhp_roles is neither.
+[11:46] Marcus Bell: Right. So there are two paths. One, your OIDC layer emits an extra flat claim just for us, like a list of facility-role strings. Two, we support nested claims natively. I believe the second is on the roadmap but I need to confirm the timing with our identity team before I say anything else.
+[14:05] Leo Brandt: Option one is possible but it's a change to our token service, and any change to the token service goes through Raj's review too.
+[14:21] Aisha Karim: Which means it's slow.
+[14:26] Leo Brandt: It means it's six to eight weeks, minimum.
+[14:33] Jordan Pike: That's really helpful to know. Marcus, can we get a firm answer on native nested claims?
+[14:45] Marcus Bell: Yes. I'll take that to our identity team today.
+[14:53] Aisha Karim: Okay. Let's leave SSO there for now. I don't love it but at least it's an honest answer.
+[15:06] Nora Fitzgerald: Can we do the reporting piece? I have a care management meeting at ten thirty.
+[15:17] Marcus Bell: Absolutely. So Nora, this is the readmission risk pipeline. Today you said the report runs weekly, on Sundays, and care managers get a list on Monday.
+[17:20] Nora Fitzgerald: Right, and by Monday a third of the people on the list have already been readmitted, or discharged somewhere we can't reach them. The whole goal is daily. If a care manager gets the list the morning after discharge, they can call while the patient still remembers who we are.
+[17:51] Marcus Bell: So in the sandbox we loaded the de-identified extract Aisha's team sent. Discharges, claims, and the medication history feed. The pipeline runs incrementally, so instead of recomputing the whole population on Sunday, it updates risk scores for anyone with a new event. Last night's run took nine minutes.
+[20:07] Nora Fitzgerald: Nine minutes. The Sunday job takes most of the day.
+[20:15] Aisha Karim: To be fair the Sunday job also does a lot of things nobody asked for.
+[20:26] Nora Fitzgerald: That's true.
+[20:30] Marcus Bell: And here's the output view. Nora, this is the list a care manager would see, sorted by risk, filtered to their facility.
+[20:46] Nora Fitzgerald: Can they see why someone is high risk? My team won't trust a number with no reason.
+[20:58] Marcus Bell: Yes, each row has the top three drivers. This patient, for example, it's a recent discharge, three prior admissions, and a gap in medication fills.
+[23:00] Nora Fitzgerald: That's good. That's actually the thing we've asked for for two years.
+[23:10] Jordan Pike: How many care managers would be using this?
+[23:17] Nora Fitzgerald: About 140 across the three regions. Maybe more if it works.
+[23:26] Marcus Bell: And the filter by facility, by the way, is exactly where the SSO question comes back. If we can read facility from the token, the list filters itself. If we can't, someone has to maintain that mapping by hand.
+[25:37] Leo Brandt: Yeah. That's why the claim matters.
+[25:43] Aisha Karim: Before PHI, one thing on the pipeline. The claims feed lags. Some claims show up thirty, forty days after the visit. Does the risk score just get worse over time as claims trickle in, or does it go back and restate?
+[26:09] Marcus Bell: It restates. When a late claim arrives for a patient, their score is recomputed and the change is logged, so you can see the score moved and why.
+[28:13] Aisha Karim: And does the care manager see that it moved? Because if someone drops off the list overnight with no explanation, Nora's team will stop trusting it.
+[28:30] Marcus Bell: There's a change log on the row. Whether you want to push a notification when someone drops off the list, that's a design choice. I'd want to talk to Nora's team about it rather than guess.
+[30:39] Aisha Karim: Okay. Park that. It's not a blocker, it's a workflow question.
+[30:48] Nora Fitzgerald: It's a big workflow question for me, but yes, park it.
+[30:57] Jordan Pike: I'll note it as something to work through with your care management team.
+[31:07] Aisha Karim: Okay. Third item. PHI.
+[31:12] Marcus Bell: Sure. So all data is encrypted at rest and in transit. We sign BAAs, and I know your legal team already has our standard BAA from the last call.
+[33:17] Aisha Karim: They do. That part is fine.
+[33:23] Nora Fitzgerald: Can I ask a dumb question? Where does the data actually sit? Because my director is going to ask me and I won't know.
+[33:39] Marcus Bell: Not a dumb question. It sits in your dedicated tenant in a US region. Keys are managed by us by default, or by you if you want customer managed keys. And actually, I'll send you our encryption whitepaper, it covers the key hierarchy, the customer managed key option and the HSM setup, it's written for exactly this kind of question.
+[36:01] Nora Fitzgerald: That would help, thank you.
+[36:07] Leo Brandt: Customer managed keys, does that work with our key management service or does it have to be one of the cloud ones?
+[36:22] Marcus Bell: Today it's the major cloud key services. If you're running your own HSM on premises, I'd need to check.
+[36:36] Leo Brandt: We're on a cloud one for this. Fine.
+[36:43] Aisha Karim: Okay. So, look. I'll be direct about where we are. The reporting piece is exactly what Nora's team needs. I'm not worried about that. SSO is open. And realistically nothing moves until the vendor security review clears. That's Raj's committee, they meet October 9th. If we hand them a complete packet before then, we're on that agenda. If not, it's the November meeting.
+[37:21] Jordan Pike: What does a complete packet look like for Raj's committee?
+[37:30] Aisha Karim: Our vendor questionnaire, your SOC 2 report, the encryption details, and for anything touching identity, a written design. Which is the SSO thing again.
+[37:46] Leo Brandt: Raj is going to ask exactly this about the custom claims. He'll want the SSO design in writing before the committee, even if it's option one with our token change.
+[38:06] Jordan Pike: Who should we send the packet to, you or Raj directly?
+[38:15] Aisha Karim: Send it to me and copy Raj. He likes to see who it came from.
+[38:26] Jordan Pike: Got it. And the questionnaire, is that something you send us?
+[38:35] Aisha Karim: I'll have procurement send it. It's long. Sorry in advance.
+[38:43] Jordan Pike: No problem. Marcus has done a few of these.
+[38:51] Marcus Bell: Too many.
+[38:55] Nora Fitzgerald: Sorry, I have to drop for my meeting. This was really good. Can I get a copy of the demo recording for my team?
+[39:12] Jordan Pike: We'll check what we can share given it's your de-identified data. I'll come back to you on that.
+[39:24] Nora Fitzgerald: Thanks. Bye all.
+[39:29] Aisha Karim: Bye Nora.
+[39:33] Jordan Pike: Aisha, Leo, before we wrap, what would you want to see from us between now and the committee?
+[39:46] Aisha Karim: Honestly, the SSO answer. If the answer is option one, Leo needs to start the token change conversation now, because that's the long pole.
+[40:02] Leo Brandt: And if it's native nested claims coming soon, I need a date I can put in front of Raj. Not a roadmap slide.
+[40:18] Marcus Bell: Fair. I'll get you something you can actually put in front of him.
+[40:28] Jordan Pike: Should we put time on the calendar to walk through the answer?
+[40:38] Aisha Karim: Let's see what the answer is first. If it's simple, an email is fine. If it's complicated, we'll set something up.
+[40:52] Jordan Pike: Okay. And on the commercial side, is there anything you need from me before the committee?
+[41:04] Aisha Karim: Not before the committee. After, if it clears, then we'll talk pricing with finance.
+[41:15] Jordan Pike: Understood. Okay, I'll send a note today summarizing what we covered.
+[41:24] Aisha Karim: Thanks Jordan. Thanks Marcus. Good session.
+[41:30] Leo Brandt: Thanks.

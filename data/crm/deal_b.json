@@ -1,0 +1,94 @@
+{
+  "deal_id": "deal_b",
+  "account": "Meridian Health Partners",
+  "segment": "Enterprise",
+  "industry": "Healthcare",
+  "acv_usd": 420000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-15",
+  "owner_ae": "Jordan Pike",
+  "sc": "Marcus Bell",
+  "pod": "East-2",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Aisha Karim",
+      "title": "Director of Data Engineering",
+      "role": "champion",
+      "email": "aisha.karim@meridianhp.example",
+      "phone": "+1 617 555 0178"
+    },
+    {
+      "name": "Leo Brandt",
+      "title": "Identity and Access Engineer",
+      "role": "technical_evaluator",
+      "email": "leo.brandt@meridianhp.example",
+      "phone": ""
+    },
+    {
+      "name": "Nora Fitzgerald",
+      "title": "Clinical Analytics Lead",
+      "role": "user",
+      "email": "nora.fitzgerald@meridianhp.example",
+      "phone": ""
+    },
+    {
+      "name": "Raj Patel",
+      "title": "Security Architect",
+      "role": "security",
+      "email": "raj.patel@meridianhp.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Aisha Karim",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Move the readmission risk list from weekly to daily so care managers can call patients the morning after discharge.",
+    "pains": [
+      "Weekly Sunday job; by Monday a third of the list is stale",
+      "Care managers do not trust scores with no reason shown"
+    ],
+    "decision_process": "Vendor security review committee must approve before any pilot. Finance engaged after security clears."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-08",
+      "type": "discovery",
+      "summary": "Aisha owns the evaluation. Identity is home grown. Legal has the standard BAA."
+    },
+    {
+      "date": "2026-09-14",
+      "type": "tv_kickoff",
+      "summary": "Agreed TV items: readmission pipeline, SSO, PHI data protection."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-b-1001",
+    "scheduled_start": "2026-10-01T09:00:00-05:00",
+    "scheduled_end": "2026-10-01T10:00:00-05:00",
+    "actual_end": "2026-10-01T09:41:40-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T08:58:00-05:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "Raj Patel, security",
+      "filled_at": "2026-10-01T10:20:00-05:00"
+    },
+    "business_outcome": {
+      "value": "Move the readmission risk list from weekly to daily so care managers can call patients the morning after discharge.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-10-01T08:58:00-05:00"
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company."
+}

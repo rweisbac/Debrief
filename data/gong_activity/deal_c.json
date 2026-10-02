@@ -1,0 +1,9 @@
+{
+  "_note": "Synthetic data, fictional company. Shape mirrors what the Gong REST API returns for a call plus CRM activity.",
+  "deal_id": "deal_c",
+  "call_id": "gong-c-1001",
+  "started_at": "2026-10-01T13:00:00-07:00",
+  "ended_at": "2026-10-01T13:43:15-07:00",
+  "transcript_file": "data/transcripts/deal_c.txt",
+  "post_demo_activity": []
+}

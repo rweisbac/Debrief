@@ -1,0 +1,90 @@
+PARTICIPANTS
+Sam Lee | Account Executive | apex
+Priya Raman | Solutions Consultant | apex
+Dana Ortiz | VP Data | customer
+Mikkel Strand | Data Platform Lead | customer
+Grace Oyelaran | Analytics Engineering Manager | customer
+---
+[00:04] Sam Lee: Hey everyone, can you hear me okay? I think Grace is still joining.
+[00:15] Dana Ortiz: We can hear you. Grace is coming from the dock office, the wifi out there is a crime.
+[00:30] Sam Lee: Ha, no worries. How was the board offsite, Dana? Last time we spoke you were dreading it.
+[00:43] Dana Ortiz: It was fine. Long. Lots of slides about fuel costs. The good news is data got a full hour, which never happens.
+[01:00] Grace Oyelaran: Sorry, sorry, I'm here. I'm on my phone so if I drop just keep going.
+[01:13] Sam Lee: Welcome Grace. Okay, so quick agenda. Priya is going to run the technical validation against the three scenarios Mikkel sent over, we'll leave time for questions, and then I want to spend the last ten minutes on what happens next. Does that still work?
+[01:43] Dana Ortiz: Works. We have a hard stop at the hour though.
+[01:53] Sam Lee: Understood. And just to set context for Grace, who missed the discovery call. Today the warehouse connector syncs in hourly batches, so the late load alerting scenario would run off data that's up to an hour old. We'll show how that plays out.
+[02:22] Grace Oyelaran: Okay. Hourly might be tight for us but let's see.
+[02:32] Priya Raman: Great, let me share. Can everyone see a dark screen with the pipeline view?
+[02:44] Mikkel Strand: Yep.
+[02:47] Priya Raman: So this is a sandbox we loaded with the anonymized telematics sample Mikkel sent last week. About eleven days of pings from the trailer sensors plus the TMS order tables. Scenario one was ingest at your volume. Mikkel, can you remind me of the numbers you gave us, I want to make sure we sized it right.
+[05:23] Mikkel Strand: Sure. We're at about 4.7 billion events a month across the fleet right now, and peaks around 38,000 per second during the holiday surge. That's the number that broke our last vendor, honestly.
+[05:47] Priya Raman: Right, so we replayed the sample at 40,000 per second for twenty minutes, which is a bit over your peak. You can see the lag chart here. Ingest lag stayed under four seconds at p95 the whole time.
+[08:11] Mikkel Strand: What's the cluster size behind that?
+[08:17] Priya Raman: Medium tier, autoscaling on. It scaled out twice, there and there, and back down after. You'd pay for those minutes, not for a big cluster sitting idle.
+[10:34] Mikkel Strand: Okay. And if a partition falls behind, does it shed or does it queue?
+[10:46] Priya Raman: Queues. Nothing is dropped. You get an alert at a lag threshold you set, default is sixty seconds. I can show you the alert config later if you want.
+[13:04] Mikkel Strand: Later is fine. That's honestly the main thing I needed to see.
+[13:15] Dana Ortiz: Can I jump in. Mikkel, is that better or worse than what we see today in the current stack?
+[13:30] Mikkel Strand: Today we're batch loading every fifteen minutes and on a bad day it's forty-plus minutes behind. So, better. Much better.
+[13:46] Dana Ortiz: Okay. Keep going.
+[13:50] Priya Raman: Scenario two is the one Grace cares about, the transformation layer. You're on dbt today, right Grace?
+[14:04] Grace Oyelaran: Yeah, dbt core, about three hundred models, some of them older than I'd like to admit.
+[14:17] Priya Raman: So we pointed our runner at a copy of your repo. No rewrite. These are your models running as is. Two of them failed, and I want to be upfront about why.
+[16:37] Grace Oyelaran: Let me guess, the ones with the Jinja macros that Tom wrote.
+[16:48] Priya Raman: Exactly those. They call a custom macro that hits an external API inside the compile step. We don't allow network calls during compile for security reasons. The fix is to move that lookup into a seed table or a pre-hook. It's maybe a day of work for one engineer.
+[19:19] Grace Oyelaran: Honestly that macro should die anyway. Okay. That's fine.
+[19:27] Priya Raman: The other two hundred ninety eight ran. Total run time was eleven minutes versus, what did you say, around forty today?
+[19:44] Grace Oyelaran: Forty on a good night. Sometimes it doesn't finish before the morning ops meeting, which is its own fun.
+[19:59] Dana Ortiz: That's the meeting where I get yelled at, for the record.
+[20:09] Sam Lee: We'd like to make that meeting less exciting for you.
+[20:18] Dana Ortiz: Please.
+[20:22] Priya Raman: Okay, scenario three, and this is the one tied to the business case. Late load detection. Dana, you said in discovery that the whole point is catching a late load while dispatch can still reroute it, not finding out the next morning.
+[22:48] Dana Ortiz: Right. Detention fees and missed delivery windows are the number one thing the COO asks me about. If we know at hour two of a five hour run that a trailer is going to miss the window, dispatch can swap drivers or call the consignee. If we know the next morning it's just a report about money we already lost.
+[23:28] Priya Raman: So here's the late load model running on streaming data. The red rows are loads where predicted arrival is past the window. This one flagged at 1:12 into the run. In your historical data that load was flagged by the overnight batch eighteen hours later.
+[25:57] Mikkel Strand: Wait, but this is still going through the warehouse connector, right? Sam said that's hourly.
+[26:09] Priya Raman: Good catch, and I should correct that. Actually Sam, that changed with the August release. The warehouse connector does continuous sync now, about a minute end to end. Hourly batch was the old behavior. I'll send the release note.
+[28:33] Sam Lee: My mistake, I'm working off the old deck. Thanks Priya.
+[28:43] Grace Oyelaran: Okay, that changes my answer from earlier. Hourly was going to be a problem for the dispatch dashboards. A minute is fine.
+[29:00] Mikkel Strand: Is continuous sync the default or do we turn it on?
+[29:10] Priya Raman: It's a toggle per connection. Default for new connections is continuous. Existing customers had to opt in, but you'd be new.
+[29:26] Mikkel Strand: Got it.
+[29:30] Dana Ortiz: So in the real world, if this was running last month, how many of those loads would we have saved?
+[29:46] Priya Raman: I don't want to overclaim that. What I can say is that in the eleven day sample, the model flagged 214 loads that later missed their window, and the median flag time was about two hours before the window closed. Whether dispatch could have acted on each one is a question for your ops team, not for me.
+[32:22] Dana Ortiz: Fair. That's actually a more useful answer than a big number.
+[32:32] Sam Lee: And that's the kind of thing we'd want to measure together in the first ninety days.
+[32:45] Dana Ortiz: Mm.
+[32:49] Mikkel Strand: Can I ask about access control? This is the one thing I didn't see in the scenarios.
+[33:03] Priya Raman: Sure.
+[33:06] Mikkel Strand: We share some dashboards with carrier partners. Partner A should only ever see their own loads. We do that today with a pretty ugly view layer. Can you do row level by partner?
+[33:30] Priya Raman: Yes, row level policies are supported and you can key them on a partner ID column. What I don't know yet is how your partner hierarchy works. Some of your partners have sub carriers, right?
+[35:52] Mikkel Strand: Yeah. A few of the big ones broker out to smaller outfits and they want to see those loads too.
+[36:08] Priya Raman: So that's the piece I'd want to validate rather than wave my hands at. If you can send me a sample of the partner hierarchy table, even fifty rows, I'll build the policy in the sandbox and show you it working. I can have that back to you by Tuesday the sixth.
+[38:40] Mikkel Strand: I can send that Monday. It's a small table.
+[38:49] Priya Raman: Perfect.
+[38:53] Grace Oyelaran: Sorry, one more on the dbt thing. When the two macros fail, do we get the error in the run log or does it just skip them?
+[39:13] Priya Raman: Run log, with the model name and the compile error. And the downstream models that depend on them get marked as skipped, not silently stale.
+[41:28] Grace Oyelaran: Good. Silent staleness is what killed us with the last tool.
+[41:38] Dana Ortiz: Okay. I think I've seen what I needed to see. Mikkel, Grace, anything that would stop you?
+[41:52] Mikkel Strand: Not from the platform side. The partner hierarchy thing is the only open question for me, and that's more about us than them.
+[42:09] Grace Oyelaran: Same. The macro thing is on us. I'm good.
+[42:18] Sam Lee: That's great to hear. Can I talk about next steps then?
+[42:28] Dana Ortiz: Go ahead.
+[42:32] Sam Lee: So from our side, the technical piece looks like it's in good shape, with the one open item on partner hierarchy. The thing I want to make sure we don't skip is getting Elena in the room. Dana, you mentioned Elena Varga signs off on anything in this range, and she hasn't seen any of this yet.
+[43:11] Dana Ortiz: Right. Elena's the COO, and she owns the budget line for this. She's also the one who asks me about detention fees every Monday, so she'll care about scenario three more than anything.
+[43:35] Sam Lee: Would it make sense to do a thirty minute session with Elena where Priya shows only the late load piece, and we talk through the commercial side?
+[43:55] Dana Ortiz: Yes. Make it forty five, she always has questions. And keep it to scenario three, she will not care about dbt.
+[44:11] Grace Oyelaran: Rude, but true.
+[44:16] Sam Lee: Ha. Okay. Can we find a time now while we're all here? I'd rather not do the email back and forth.
+[44:32] Dana Ortiz: Let me look at her calendar, I have access. Thursday the eighth, 2pm Central, she's free until 3.
+[44:47] Sam Lee: Thursday October 8th, 2pm Central, forty five minutes. I'll send the invite to you and Elena right after this call. Priya, does that work for you?
+[45:06] Priya Raman: Works.
+[45:10] Sam Lee: And by then Priya will have the partner hierarchy policy built from Mikkel's sample, so if Elena asks about partner dashboards we can show it.
+[45:28] Mikkel Strand: I'll get the sample over Monday morning.
+[45:36] Dana Ortiz: One thing for the Elena meeting. She is going to ask about time to value. She got burned on the last platform project, it took eight months to see anything.
+[45:58] Sam Lee: Understood. We'll come with a realistic onboarding plan, not a glossy one.
+[46:08] Dana Ortiz: Good. Realistic is the right word.
+[46:15] Sam Lee: Last thing from me. I'll send a recap today with what we saw, the open item on the partner hierarchy, and the agenda for Thursday. If anything in it is wrong, just reply and fix it.
+[46:41] Dana Ortiz: Sounds good. Thanks both, this was the most useful vendor session we've had this quarter.
+[46:53] Priya Raman: Thanks everyone. Mikkel, watch for an email from me with where to drop the file.
+[47:06] Mikkel Strand: Will do.
+[47:10] Grace Oyelaran: Bye all, back to the dock.

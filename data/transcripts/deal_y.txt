@@ -1,0 +1,61 @@
+PARTICIPANTS
+Sam Lee | Account Executive | apex
+Marcus Bell | Solutions Consultant | apex
+Ingrid Solberg | Head of Research Data | customer
+Victor Huang | IT Infrastructure Director | customer
+Camila Reyes | Compliance Manager | customer
+---
+[00:03] Sam Lee: Good afternoon everyone, or good evening for you, Ingrid.
+[00:17] Ingrid Solberg: It's fine, I have coffee. Victor and Camila are both here.
+[00:32] Sam Lee: Great. So today Marcus is going to show the assay results pipeline, and we wanted to cover hosting and compliance, since that came up last time.
+[01:03] Ingrid Solberg: Yes. Let's start with the pipeline, then hosting. And just so everyone has the context, the reason we're doing this at all is cycle time. Right now a scientist runs a plate, waits a day for results, and only then decides what to run next. If they could decide the same afternoon, we think we could take a week or more out of each screening campaign. That's the whole business case my VP signed off on for this evaluation.
+[02:25] Sam Lee: That's helpful, thank you. We'll keep coming back to that.
+[02:40] Marcus Bell: Sure. So this is the sandbox with the plate reader exports Ingrid's team sent. Each run lands as a file, we parse it, attach the experiment metadata from your LIMS export, and the results show up in this table within about two minutes of the file landing.
+[06:34] Ingrid Solberg: Two minutes. Today my scientists wait until the next day because someone has to run a script by hand.
+[06:58] Marcus Bell: And here's the dashboard Ingrid's team sketched. Dose response curves by compound, flagged when the curve fit is poor.
+[07:21] Ingrid Solberg: That's very close to what we drew. The flag is important. Half the time a bad fit is a plate problem, not a compound problem.
+[07:51] Marcus Bell: We can add the plate ID to the flag so they can see if it's always the same plate.
+[08:14] Ingrid Solberg: Yes, please.
+[08:21] Marcus Bell: And the LIMS export, we're reading the nightly CSV for now. If you later want the metadata closer to real time, your LIMS has an API, but I wouldn't start there.
+[12:00] Ingrid Solberg: Agreed. The nightly file is fine, experiment metadata doesn't change during the day. Actually, sometimes it does, when someone fixes a typo in a compound ID. Does the result update if the metadata changes?
+[12:38] Marcus Bell: Yes. When the next export lands, results are rejoined and the change is logged. The old version is kept.
+[13:02] Ingrid Solberg: Good. Typos in compound IDs have caused us real problems.
+[13:17] Victor Huang: Can I ask about where this runs? Because that's going to decide everything for us.
+[13:36] Marcus Bell: Of course.
+[13:43] Victor Huang: Everything has to stay in the EU. That's non negotiable. Our Basel site data can't leave the EU, full stop. If this runs in a US region, it's a no.
+[14:17] Marcus Bell: Understood. We have an EU region in Frankfurt. Your tenant can be pinned there, including backups.
+[14:38] Victor Huang: Including support access? I don't want someone in another region looking at our data.
+[14:56] Marcus Bell: Support access can be restricted to EU staff, it's a setting at the tenant level. I'd want to confirm the exact wording with our compliance team before you rely on it.
+[18:35] Victor Huang: Please do.
+[18:42] Camila Reyes: Sorry, can I add something? Victor, I don't think that's quite right for this use case. This is pseudonymized assay data. Legal reviewed this last year, and US hosting is fine for pseudonymized research data. We already have two vendors hosting this kind of data in the US.
+[19:34] Victor Huang: That's not my understanding. My understanding is that anything from Basel stays in the EU.
+[19:54] Camila Reyes: For identified data, yes. This isn't identified data.
+[20:06] Victor Huang: I'd want to see that in writing.
+[20:18] Camila Reyes: I can find the memo.
+[20:28] Ingrid Solberg: Okay. Let's not solve that on this call.
+[20:41] Sam Lee: For what it's worth, we can support either. The EU region is available either way, so this doesn't block anything technically. It does affect how we'd set up the tenant from day one, so it's worth getting a single answer.
+[21:25] Ingrid Solberg: Agreed.
+[21:31] Marcus Bell: Shall I keep going on the pipeline?
+[21:42] Ingrid Solberg: Yes, please.
+[21:49] Marcus Bell: So the last piece is the audit trail. Every result row links back to the raw file, the parser version, and the curve fit settings. If someone changes the fit settings, the old results are kept and the new ones are versioned.
+[25:39] Camila Reyes: That's good. That's what our auditors ask about.
+[25:52] Victor Huang: And the audit log, is that stored in the same region as the data?
+[26:10] Marcus Bell: Yes, same region as the tenant.
+[26:21] Victor Huang: Okay. And encryption keys, are those per tenant?
+[26:34] Marcus Bell: Per tenant, and you can bring your own key through your cloud key service if you want to hold them yourselves.
+[26:59] Victor Huang: We'd probably want that. Our security team will ask.
+[27:13] Camila Reyes: They will. And we'll need a data processing agreement either way, regardless of region. That's standard for us.
+[27:36] Sam Lee: Understood. We have a standard DPA, I can send it with the recap so your legal team can start on it in parallel.
+[28:03] Camila Reyes: That would be good.
+[28:12] Ingrid Solberg: How many runs a day can this handle? We do about 300 plates a day on a busy day.
+[28:35] Marcus Bell: The sandbox handled a replay of a week of your files in under an hour. 300 plates a day is well within range.
+[29:03] Ingrid Solberg: Good.
+[29:09] Sam Lee: Ingrid, in terms of next steps, what would you need to move forward?
+[29:26] Ingrid Solberg: Honestly, the hosting question. If Victor and Camila are aligned, I can take this to my VP. If not, it stalls.
+[29:52] Victor Huang: I'm happy to be aligned once I see the memo.
+[30:07] Camila Reyes: I'll find it.
+[30:14] Sam Lee: Would it help if we joined a short call once you have the memo, to answer any hosting questions directly?
+[30:39] Ingrid Solberg: Maybe. Let me see where we land internally first.
+[30:53] Sam Lee: Understood. I'll send a recap with what we covered and the two hosting options.
+[31:11] Ingrid Solberg: Thanks Sam. Thanks Marcus.
+[31:20] Marcus Bell: Thanks everyone.

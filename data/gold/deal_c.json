@@ -1,0 +1,356 @@
+{
+  "deal_id": "deal_c",
+  "expected_deal_state": "competitive_risk",
+  "accepted_deal_states": [
+    "competitive_risk"
+  ],
+  "business_outcome": {
+    "stated": true,
+    "summary": "Store managers know by mid afternoon what to reorder, including ship from store orders.",
+    "evidence": [
+      {
+        "utterance_id": "U012",
+        "anchor": "a store manager knows by mid afternoon what to reorder"
+      },
+      {
+        "utterance_id": "U013",
+        "anchor": "it's already wrong because online orders that ship from store aren't in it"
+      }
+    ]
+  },
+  "agreed_next_step": {
+    "exists": false,
+    "summary": "none; customer said they will be in touch",
+    "date": "",
+    "evidence": [
+      {
+        "utterance_id": "U081",
+        "anchor": "We'll be in touch"
+      },
+      {
+        "utterance_id": "U083",
+        "anchor": "Let's just play it by ear"
+      }
+    ]
+  },
+  "objections": [
+    {
+      "id": "C-O1",
+      "summary": "Implementation effort and team capacity, raised politely as timing; real driver is a painful past migration",
+      "status": "open",
+      "evidence": [
+        {
+          "utterance_id": "U027",
+          "anchor": "I just wonder about timing"
+        },
+        {
+          "utterance_id": "U068",
+          "anchor": "The last platform migration took my team four months and I lost two engineers"
+        }
+      ]
+    },
+    {
+      "id": "C-O2",
+      "summary": "Why Apex over Lakestream, already used by marketing",
+      "status": "partially_resolved",
+      "evidence": [
+        {
+          "utterance_id": "U050",
+          "anchor": "why Apex over Lakestream"
+        },
+        {
+          "utterance_id": "U055",
+          "anchor": "comparing on the actual workload"
+        }
+      ]
+    },
+    {
+      "id": "C-O3",
+      "summary": "Projection may not handle seasonality with one week of history",
+      "status": "partially_resolved",
+      "evidence": [
+        {
+          "utterance_id": "U035",
+          "anchor": "Does the projection know about seasonality"
+        },
+        {
+          "utterance_id": "U036",
+          "anchor": "I'd want to see it on your history before I promise"
+        }
+      ]
+    },
+    {
+      "id": "C-O4",
+      "summary": "Needs a pricing range for leadership",
+      "status": "open",
+      "evidence": [
+        {
+          "utterance_id": "U045",
+          "anchor": "A range would help"
+        }
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "C-C1",
+      "who": "Elise Moreau",
+      "side": "apex",
+      "what": "Put together a pricing range",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U044",
+          "anchor": "I can put together a range"
+        }
+      ]
+    },
+    {
+      "id": "C-C2",
+      "who": "Elise Moreau",
+      "side": "apex",
+      "what": "Send recap today",
+      "by_when": "2026-10-01",
+      "evidence": [
+        {
+          "utterance_id": "U084",
+          "anchor": "I'll send a recap today"
+        }
+      ]
+    },
+    {
+      "id": "C-C3",
+      "who": "Tom Okafor",
+      "side": "apex",
+      "what": "Send the SKU exceptions table to Raymond",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U086",
+          "anchor": "I'll send over the exceptions table"
+        }
+      ]
+    },
+    {
+      "id": "C-C4",
+      "who": "Ben Castillo",
+      "side": "customer",
+      "what": "Take the Lakestream answer back to his boss",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U058",
+          "anchor": "I'll take that back"
+        }
+      ]
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "Ben Castillo",
+      "present": true,
+      "role": "champion, not the decision maker",
+      "evidence": [
+        {
+          "utterance_id": "U064",
+          "anchor": "it's not up to me"
+        }
+      ]
+    },
+    {
+      "name": "Helen Wu",
+      "present": true,
+      "role": "head of data engineering, owns the decision on team impact",
+      "evidence": [
+        {
+          "utterance_id": "U066",
+          "anchor": "I'd need to look at the full picture"
+        }
+      ]
+    },
+    {
+      "name": "Raymond Ochoa",
+      "present": true,
+      "role": "technical evaluator",
+      "evidence": [
+        {
+          "utterance_id": "U016",
+          "anchor": "How are you matching the SKUs"
+        }
+      ]
+    },
+    {
+      "name": "Farah",
+      "present": false,
+      "role": "CFO, approves anything over 250K (ACV is 310K)",
+      "evidence": [
+        {
+          "utterance_id": "U066",
+          "anchor": "anything over 250K goes to Farah anyway, our CFO"
+        }
+      ]
+    },
+    {
+      "name": "Ben's boss (unnamed)",
+      "present": false,
+      "role": "will ask why Apex over Lakestream and about price",
+      "evidence": [
+        {
+          "utterance_id": "U050",
+          "anchor": "My boss is going to ask me why Apex over Lakestream"
+        }
+      ]
+    }
+  ],
+  "open_items": [
+    {
+      "id": "C-I1",
+      "summary": "Realistic implementation plan with customer effort by role",
+      "owner": "Tom Okafor",
+      "minor": false,
+      "evidence": [
+        {
+          "utterance_id": "U072",
+          "anchor": "I don't want to give you a number of weeks off the top of my head"
+        }
+      ]
+    },
+    {
+      "id": "C-I2",
+      "summary": "Seasonality on real history with a backfill",
+      "owner": "Tom Okafor",
+      "minor": true,
+      "evidence": [
+        {
+          "utterance_id": "U036",
+          "anchor": "In production you'd backfill at least a year"
+        }
+      ]
+    },
+    {
+      "id": "C-I3",
+      "summary": "Teams alert for a real store",
+      "owner": "Tom Okafor",
+      "minor": true,
+      "evidence": [
+        {
+          "utterance_id": "U078",
+          "anchor": "I'd want to see the Teams alert set up for a real store"
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "value": "640 stores",
+      "evidence": [
+        {
+          "utterance_id": "U060",
+          "anchor": "You have about 640 stores"
+        }
+      ]
+    },
+    {
+      "value": "four percent",
+      "evidence": [
+        {
+          "utterance_id": "U017",
+          "anchor": "About four percent of rows didn't match"
+        }
+      ]
+    },
+    {
+      "value": "four months",
+      "evidence": [
+        {
+          "utterance_id": "U068",
+          "anchor": "took my team four months"
+        }
+      ]
+    },
+    {
+      "value": "250K",
+      "evidence": [
+        {
+          "utterance_id": "U066",
+          "anchor": "anything over 250K"
+        }
+      ]
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Lakestream",
+      "evidence": [
+        {
+          "utterance_id": "U050",
+          "anchor": "We already have Lakestream in the building"
+        },
+        {
+          "utterance_id": "U054",
+          "anchor": "one vendor instead of two"
+        }
+      ]
+    }
+  ],
+  "contradictions": [],
+  "customer_dependencies": [],
+  "checklist_mismatches": [
+    {
+      "field": "dated_next_step",
+      "summary": "Checklist logs an Oct 9 implementation session, but the customer deferred any next step",
+      "evidence": [
+        {
+          "utterance_id": "U081",
+          "anchor": "Let us digest this first"
+        },
+        {
+          "utterance_id": "U083",
+          "anchor": "Let's just play it by ear"
+        }
+      ]
+    }
+  ],
+  "relevant_release_cards": [
+    "RC-13",
+    "RC-10"
+  ],
+  "traps": [
+    {
+      "id": "T2",
+      "name": "Stakeholder mentioned once in passing",
+      "evidence": [
+        {
+          "utterance_id": "U066",
+          "anchor": "anything over 250K goes to Farah anyway, our CFO"
+        }
+      ],
+      "expected_behavior": "Farah (CFO) is extracted as an absent stakeholder who approves spend over 250K. ACV is 310K, so she is in the path. MEDDPICC economic buyer is partial, pointing to Farah.",
+      "check": "stakeholder_extracted",
+      "required_terms": [
+        "Farah"
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Ambiguous statement over read as a buying signal",
+      "evidence": [
+        {
+          "utterance_id": "U064",
+          "anchor": "if it were up to me we'd sign tomorrow"
+        }
+      ],
+      "expected_behavior": "Not treated as a strong buying signal. If listed, it is qualified by 'it's not up to me' and Helen's concerns. Deal state is not ready_to_advance.",
+      "check": "signal_not_overread",
+      "forbidden_deal_states": [
+        "ready_to_advance"
+      ]
+    }
+  ],
+  "must_not": [
+    "Give an implementation timeline in weeks",
+    "Claim Lakestream cannot do the workload",
+    "Treat the checklist Oct 9 session as agreed"
+  ],
+  "_note": "Synthetic data, fictional company. Hand labels for evals. Each anchor must appear in its utterance."
+}

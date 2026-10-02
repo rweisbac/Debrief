@@ -1,0 +1,394 @@
+{
+  "deal_id": "deal_b",
+  "expected_deal_state": "open_technical_gap",
+  "accepted_deal_states": [
+    "open_technical_gap",
+    "missing_stakeholder"
+  ],
+  "business_outcome": {
+    "stated": true,
+    "summary": "Daily readmission risk list so care managers call the morning after discharge.",
+    "evidence": [
+      {
+        "utterance_id": "U027",
+        "anchor": "The whole goal is daily"
+      },
+      {
+        "utterance_id": "U027",
+        "anchor": "they can call while the patient still remembers who we are"
+      }
+    ]
+  },
+  "agreed_next_step": {
+    "exists": false,
+    "summary": "none; customer will decide on a meeting after the SSO answer",
+    "date": "",
+    "evidence": [
+      {
+        "utterance_id": "U075",
+        "anchor": "Let's see what the answer is first"
+      }
+    ]
+  },
+  "objections": [
+    {
+      "id": "B-O1",
+      "summary": "SSO: custom identity provider sends groups in a nested custom claim; Apex maps flat claims only today",
+      "status": "open",
+      "evidence": [
+        {
+          "utterance_id": "U009",
+          "anchor": "that claim is nested"
+        },
+        {
+          "utterance_id": "U012",
+          "anchor": "What I have not personally done is map a nested claim"
+        },
+        {
+          "utterance_id": "U018",
+          "anchor": "I believe the second is on the roadmap"
+        }
+      ]
+    },
+    {
+      "id": "B-O2",
+      "summary": "Workaround needs a token service change through security review, six to eight weeks",
+      "status": "open",
+      "evidence": [
+        {
+          "utterance_id": "U019",
+          "anchor": "any change to the token service goes through Raj's review too"
+        },
+        {
+          "utterance_id": "U021",
+          "anchor": "six to eight weeks, minimum"
+        }
+      ]
+    },
+    {
+      "id": "B-O3",
+      "summary": "Where PHI sits and who holds keys",
+      "status": "partially_resolved",
+      "evidence": [
+        {
+          "utterance_id": "U050",
+          "anchor": "Where does the data actually sit"
+        },
+        {
+          "utterance_id": "U051",
+          "anchor": "It sits in your dedicated tenant in a US region"
+        }
+      ]
+    },
+    {
+      "id": "B-O4",
+      "summary": "Score restatements may drop patients off the list with no explanation",
+      "status": "partially_resolved",
+      "evidence": [
+        {
+          "utterance_id": "U042",
+          "anchor": "if someone drops off the list overnight with no explanation"
+        },
+        {
+          "utterance_id": "U044",
+          "anchor": "It's not a blocker, it's a workflow question"
+        }
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "B-C1",
+      "who": "Marcus Bell",
+      "side": "apex",
+      "what": "Send the encryption whitepaper",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U051",
+          "anchor": "I'll send you our encryption whitepaper"
+        }
+      ]
+    },
+    {
+      "id": "B-C2",
+      "who": "Marcus Bell",
+      "side": "apex",
+      "what": "Get a firm answer on native nested claim support from the identity team",
+      "by_when": "2026-10-01",
+      "evidence": [
+        {
+          "utterance_id": "U023",
+          "anchor": "I'll take that to our identity team today"
+        },
+        {
+          "utterance_id": "U073",
+          "anchor": "I'll get you something you can actually put in front of him"
+        }
+      ]
+    },
+    {
+      "id": "B-C3",
+      "who": "Jordan Pike",
+      "side": "apex",
+      "what": "Send a summary note today",
+      "by_when": "2026-10-01",
+      "evidence": [
+        {
+          "utterance_id": "U078",
+          "anchor": "I'll send a note today summarizing what we covered"
+        }
+      ]
+    },
+    {
+      "id": "B-C4",
+      "who": "Jordan Pike",
+      "side": "apex",
+      "what": "Check whether the demo recording can be shared with Nora",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U067",
+          "anchor": "I'll come back to you on that"
+        }
+      ]
+    },
+    {
+      "id": "B-C5",
+      "who": "Aisha Karim",
+      "side": "customer",
+      "what": "Have procurement send the vendor questionnaire",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U063",
+          "anchor": "I'll have procurement send it"
+        }
+      ]
+    },
+    {
+      "id": "B-C6",
+      "who": "Jordan Pike",
+      "side": "apex",
+      "what": "Write down anything security related for Raj to review",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U003",
+          "anchor": "anything security related today is written down"
+        }
+      ]
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "Aisha Karim",
+      "present": true,
+      "role": "champion",
+      "evidence": [
+        {
+          "utterance_id": "U056",
+          "anchor": "I'll be direct about where we are"
+        }
+      ]
+    },
+    {
+      "name": "Leo Brandt",
+      "present": true,
+      "role": "identity engineer",
+      "evidence": [
+        {
+          "utterance_id": "U009",
+          "anchor": "We have our own, built about six years ago"
+        }
+      ]
+    },
+    {
+      "name": "Nora Fitzgerald",
+      "present": true,
+      "role": "end user lead, left early",
+      "evidence": [
+        {
+          "utterance_id": "U066",
+          "anchor": "I have to drop for my meeting"
+        }
+      ]
+    },
+    {
+      "name": "Raj Patel",
+      "present": false,
+      "role": "security reviewer, runs the vendor security committee",
+      "evidence": [
+        {
+          "utterance_id": "U002",
+          "anchor": "he'll be the one who reviews whatever we pick"
+        },
+        {
+          "utterance_id": "U059",
+          "anchor": "He'll want the SSO design in writing before the committee"
+        }
+      ]
+    }
+  ],
+  "open_items": [
+    {
+      "id": "B-I1",
+      "summary": "Native nested claim support and a date",
+      "owner": "Marcus Bell",
+      "minor": false,
+      "evidence": [
+        {
+          "utterance_id": "U072",
+          "anchor": "I need a date I can put in front of Raj"
+        }
+      ]
+    },
+    {
+      "id": "B-I2",
+      "summary": "Written SSO design for the security committee",
+      "owner": "Marcus Bell",
+      "minor": false,
+      "evidence": [
+        {
+          "utterance_id": "U058",
+          "anchor": "for anything touching identity, a written design"
+        }
+      ]
+    },
+    {
+      "id": "B-I3",
+      "summary": "Whether to notify care managers when a patient drops off the list",
+      "owner": "Jordan Pike",
+      "minor": true,
+      "evidence": [
+        {
+          "utterance_id": "U046",
+          "anchor": "something to work through with your care management team"
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "value": "140",
+      "evidence": [
+        {
+          "utterance_id": "U037",
+          "anchor": "About 140 across the three regions"
+        }
+      ]
+    },
+    {
+      "value": "nine minutes",
+      "evidence": [
+        {
+          "utterance_id": "U028",
+          "anchor": "Last night's run took nine minutes"
+        }
+      ]
+    },
+    {
+      "value": "six to eight weeks",
+      "evidence": [
+        {
+          "utterance_id": "U021",
+          "anchor": "six to eight weeks"
+        }
+      ]
+    },
+    {
+      "value": "October 9th",
+      "evidence": [
+        {
+          "utterance_id": "U056",
+          "anchor": "they meet October 9th"
+        }
+      ]
+    }
+  ],
+  "competitors": [],
+  "contradictions": [],
+  "customer_dependencies": [
+    {
+      "id": "B-D1",
+      "summary": "Vendor security review committee must approve before anything moves",
+      "owner": "Raj Patel",
+      "due": "2026-10-09",
+      "evidence": [
+        {
+          "utterance_id": "U056",
+          "anchor": "nothing moves until the vendor security review clears"
+        },
+        {
+          "utterance_id": "U058",
+          "anchor": "Our vendor questionnaire, your SOC 2 report, the encryption details"
+        }
+      ]
+    }
+  ],
+  "checklist_mismatches": [
+    {
+      "field": "sc_commitment",
+      "summary": "Checklist SC commitment is blank but the SC committed to send the encryption whitepaper",
+      "evidence": [
+        {
+          "utterance_id": "U051",
+          "anchor": "I'll send you our encryption whitepaper"
+        }
+      ]
+    }
+  ],
+  "relevant_release_cards": [
+    "RC-09",
+    "RC-11"
+  ],
+  "traps": [
+    {
+      "id": "T1",
+      "name": "SC commitment nobody wrote down",
+      "evidence": [
+        {
+          "utterance_id": "U051",
+          "anchor": "I'll send you our encryption whitepaper"
+        }
+      ],
+      "expected_behavior": "Extraction lists the whitepaper commitment with owner Marcus Bell (SC). It is flagged as a checklist mismatch and appears in the recap and the MAP.",
+      "check": "commitment_extracted",
+      "required_terms": [
+        "whitepaper"
+      ]
+    },
+    {
+      "id": "T6",
+      "name": "Waiting on customer process",
+      "evidence": [
+        {
+          "utterance_id": "U056",
+          "anchor": "nothing moves until the vendor security review clears"
+        },
+        {
+          "utterance_id": "U058",
+          "anchor": "Our vendor questionnaire, your SOC 2 report"
+        }
+      ],
+      "expected_behavior": "The top step supports the security review: a complete packet (questionnaire, SOC 2, encryption whitepaper, written SSO design) to Aisha with Raj copied, before October 9. No step chases a meeting the customer deferred.",
+      "check": "supports_not_chases",
+      "required_terms": [
+        "Raj",
+        "October 9"
+      ],
+      "forbidden_phrases": [
+        "check in",
+        "checking in",
+        "follow up to schedule",
+        "push for a meeting"
+      ]
+    }
+  ],
+  "must_not": [
+    "Say nested claims are supported today",
+    "Say Raj Patel attended",
+    "Promise a date for nested claim support"
+  ],
+  "_note": "Synthetic data, fictional company. Hand labels for evals. Each anchor must appear in its utterance."
+}

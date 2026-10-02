@@ -1,0 +1,61 @@
+{
+  "_note": "Synthetic data, fictional company. Release cards for the fictional Apex platform.",
+  "cards": [
+    {
+      "id": "RC-07",
+      "title": "Row level policies with parent and child keys",
+      "released": "2026-06-10",
+      "summary": "Row level policies can key on a partner ID and include child partners through a mapping table. One level of parent and child is supported out of the box. Deeper hierarchies should be validated on customer data first.",
+      "use_when": "A customer shares dashboards with partners who should only see their own rows, including sub partners.",
+      "supersedes": ""
+    },
+    {
+      "id": "RC-09",
+      "title": "OIDC custom claim mapping",
+      "released": "2026-03-02",
+      "summary": "Map a custom OIDC claim to Apex roles. Supports flat claims only (a string or a list of strings). Nested object claims are in private preview with no announced general availability date. Confirm with the identity team before committing a date.",
+      "use_when": "A customer runs its own identity provider or sends groups in a non standard claim.",
+      "supersedes": ""
+    },
+    {
+      "id": "RC-10",
+      "title": "Streaming merge for inventory and orders",
+      "released": "2026-05-18",
+      "summary": "Merge point of sale and order streams into one model with a 5 minute refresh, without a separate streaming product. Projection to reorder point is computed per store in parallel.",
+      "use_when": "Retail or distribution customers need near real time on hand that includes open orders. Useful when a batch first vendor is the alternative.",
+      "supersedes": ""
+    },
+    {
+      "id": "RC-11",
+      "title": "Customer managed keys",
+      "released": "2025-11-20",
+      "summary": "Customers can hold their own encryption keys in a major cloud key management service. On premises HSMs are not supported. The encryption whitepaper covers the key hierarchy.",
+      "use_when": "Security or compliance asks who holds the keys.",
+      "supersedes": ""
+    },
+    {
+      "id": "RC-12",
+      "title": "Warehouse connector continuous sync",
+      "released": "2026-08-12",
+      "summary": "The warehouse connector now syncs continuously, about 1 minute end to end. Continuous sync is the default for new connections. Existing connections opt in per connection.",
+      "use_when": "Any freshness question about the warehouse connector.",
+      "supersedes": "Hourly batch sync for the warehouse connector (behavior before 2026-08-12)."
+    },
+    {
+      "id": "RC-13",
+      "title": "Guided onboarding program",
+      "released": "2026-07-01",
+      "summary": "A named Apex implementation engineer, a first use case plan with named owners on both sides, and an estimate of customer effort by role (hours per week). Built for lean data teams.",
+      "use_when": "A customer raises implementation effort, team capacity, or a painful past migration.",
+      "supersedes": ""
+    },
+    {
+      "id": "RC-14",
+      "title": "EU region with EU only support access",
+      "released": "2026-04-15",
+      "summary": "Tenants can be pinned to the Frankfurt region, including backups and audit logs. A tenant setting restricts support access to EU based staff. Contract wording should be confirmed with Apex compliance.",
+      "use_when": "Data residency or support access location comes up.",
+      "supersedes": ""
+    }
+  ]
+}

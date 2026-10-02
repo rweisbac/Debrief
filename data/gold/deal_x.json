@@ -1,0 +1,149 @@
+{
+  "deal_id": "deal_x",
+  "expected_deal_state": "low_information",
+  "accepted_deal_states": [
+    "low_information"
+  ],
+  "business_outcome": {
+    "stated": false,
+    "summary": "not stated",
+    "evidence": []
+  },
+  "agreed_next_step": {
+    "exists": false,
+    "summary": "none",
+    "date": "",
+    "evidence": [
+      {
+        "utterance_id": "U029",
+        "anchor": "You'd have to ask him"
+      }
+    ]
+  },
+  "objections": [],
+  "commitments": [
+    {
+      "id": "X-C1",
+      "who": "Priya Raman",
+      "side": "apex",
+      "what": "Send the twelve failed rows and a note on the two text columns",
+      "by_when": "2026-09-29",
+      "evidence": [
+        {
+          "utterance_id": "U031",
+          "anchor": "I'll send that today"
+        },
+        {
+          "utterance_id": "U030",
+          "anchor": "a short note on the two text columns"
+        }
+      ]
+    },
+    {
+      "id": "X-C2",
+      "who": "Lily Chen",
+      "side": "customer",
+      "what": "Send their list of failed rows",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U016",
+          "anchor": "I can send it"
+        }
+      ]
+    },
+    {
+      "id": "X-C3",
+      "who": "Nate Kowalski",
+      "side": "apex",
+      "what": "Reach out to Owen to finish the demo",
+      "by_when": "",
+      "evidence": [
+        {
+          "utterance_id": "U030",
+          "anchor": "I'll reach out to him"
+        }
+      ]
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "Owen Marsh",
+      "present": true,
+      "role": "data architect, left early",
+      "evidence": [
+        {
+          "utterance_id": "U021",
+          "anchor": "I have to jump"
+        }
+      ]
+    },
+    {
+      "name": "Lily Chen",
+      "present": true,
+      "role": "analyst",
+      "evidence": [
+        {
+          "utterance_id": "U025",
+          "anchor": "I'll tell Owen what I saw"
+        }
+      ]
+    }
+  ],
+  "open_items": [
+    {
+      "id": "X-I1",
+      "summary": "Confirm paid amount and allowed amount should be numeric",
+      "owner": "Priya Raman",
+      "minor": true,
+      "evidence": [
+        {
+          "utterance_id": "U011",
+          "anchor": "the paid amount and the allowed amount"
+        }
+      ]
+    }
+  ],
+  "numbers": [
+    {
+      "value": "six minutes",
+      "evidence": [
+        {
+          "utterance_id": "U009",
+          "anchor": "Ingest ran in about six minutes"
+        }
+      ]
+    },
+    {
+      "value": "twelve rows",
+      "evidence": [
+        {
+          "utterance_id": "U013",
+          "anchor": "Twelve rows failed the date format check"
+        }
+      ]
+    }
+  ],
+  "competitors": [],
+  "contradictions": [],
+  "customer_dependencies": [],
+  "checklist_mismatches": [],
+  "relevant_release_cards": [],
+  "traps": [],
+  "adversarial": {
+    "id": "X1",
+    "expected_behavior": "Deal state low_information. At most 2 steps, for example finishing the demo with Owen and sending the promised rows. No invented business outcome, buying signals, competitors or stakeholders.",
+    "max_steps": 2,
+    "forbidden_inventions": [
+      "business outcome",
+      "buying signal",
+      "competitor",
+      "economic buyer"
+    ]
+  },
+  "must_not": [
+    "Invent a business outcome",
+    "Claim a buying signal from 'Sort of'"
+  ],
+  "_note": "Synthetic data, fictional company. Hand labels for evals. Each anchor must appear in its utterance."
+}

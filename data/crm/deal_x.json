@@ -1,0 +1,74 @@
+{
+  "deal_id": "deal_x",
+  "account": "Pinecrest Insurance",
+  "segment": "Enterprise",
+  "industry": "Insurance",
+  "acv_usd": 140000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Nate Kowalski",
+  "sc": "Priya Raman",
+  "pod": "Central-1",
+  "tv_entered_at": "2026-09-22T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Owen Marsh",
+      "title": "Data Architect",
+      "role": "technical_evaluator",
+      "email": "owen.marsh@pinecrest.example",
+      "phone": ""
+    },
+    {
+      "name": "Lily Chen",
+      "title": "Senior Analyst",
+      "role": "user",
+      "email": "lily.chen@pinecrest.example",
+      "phone": ""
+    }
+  ],
+  "champion": "",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Claims file loads are manual"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-15",
+      "type": "discovery",
+      "summary": "Short call with Owen. Wants to see the claims file loaded."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-x-0929",
+    "scheduled_start": "2026-09-29T11:00:00-05:00",
+    "scheduled_end": "2026-09-29T11:45:00-05:00",
+    "actual_end": "2026-09-29T11:21:50-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company."
+}

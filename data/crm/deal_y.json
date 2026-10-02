@@ -1,0 +1,87 @@
+{
+  "deal_id": "deal_y",
+  "account": "Atlas Biologics",
+  "segment": "Enterprise",
+  "industry": "Life sciences",
+  "acv_usd": 230000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-10",
+  "owner_ae": "Sam Lee",
+  "sc": "Marcus Bell",
+  "pod": "East-2",
+  "tv_entered_at": "2026-09-18T09:00:00-04:00",
+  "contacts": [
+    {
+      "name": "Ingrid Solberg",
+      "title": "Head of Research Data",
+      "role": "champion",
+      "email": "ingrid.solberg@atlasbio.example",
+      "phone": "+41 61 555 0190"
+    },
+    {
+      "name": "Victor Huang",
+      "title": "IT Infrastructure Director",
+      "role": "technical_decision_maker",
+      "email": "victor.huang@atlasbio.example",
+      "phone": ""
+    },
+    {
+      "name": "Camila Reyes",
+      "title": "Compliance Manager",
+      "role": "compliance",
+      "email": "camila.reyes@atlasbio.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Ingrid Solberg",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Scientists see assay results the same afternoon and decide the next run the same day, taking time out of each screening campaign.",
+    "pains": [
+      "Results wait a day for a manual script",
+      "Bad curve fits are often plate problems"
+    ],
+    "decision_process": "Ingrid takes it to her VP once hosting is settled."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-11",
+      "type": "discovery",
+      "summary": "Hosting and compliance raised as the main question."
+    },
+    {
+      "date": "2026-09-18",
+      "type": "tv_kickoff",
+      "summary": "Scoped plate reader pipeline and dashboard."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-y-0930",
+    "scheduled_start": "2026-09-30T11:00:00-04:00",
+    "scheduled_end": "2026-09-30T12:00:00-04:00",
+    "actual_end": "2026-09-30T11:31:30-04:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-30T10:57:00-04:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "Camila Reyes, compliance",
+      "filled_at": "2026-09-30T11:25:00-04:00"
+    },
+    "business_outcome": {
+      "value": "Scientists see assay results the same afternoon and decide the next run the same day.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-09-30T10:57:00-04:00"
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company."
+}

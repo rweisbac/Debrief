@@ -1,0 +1,95 @@
+PARTICIPANTS
+Elise Moreau | Account Executive | apex
+Tom Okafor | Solutions Consultant | apex
+Ben Castillo | Director of Business Intelligence | customer
+Helen Wu | Head of Data Engineering | customer
+Raymond Ochoa | Senior Data Engineer | customer
+---
+[00:02] Elise Moreau: Hi everyone. Ben, I saw the photo from the store opening on LinkedIn, that line was around the block.
+[00:17] Ben Castillo: Ha, yes. Free tote bags. People will queue for anything free. Okay, Helen and Raymond are both on.
+[00:32] Helen Wu: Morning.
+[00:35] Raymond Ochoa: Hey.
+[00:39] Ben Castillo: Raymond is on a train, so if he sounds like he's in a tunnel, he is.
+[00:52] Raymond Ochoa: I'm in a tunnel. I'll be out in a minute. Go ahead without me for the intro.
+[01:06] Elise Moreau: No problem. Helen, I don't think we've met. I'm Elise, I look after the account on our side, and Tom is our solutions consultant who's been working with Raymond on the sandbox for the last couple of weeks.
+[01:33] Helen Wu: Nice to meet you. Raymond says good things, which is rare.
+[01:44] Raymond Ochoa: I'm out of the tunnel. I heard that.
+[01:52] Elise Moreau: Great. So today Tom is going to run the validation we scoped with Raymond: the store inventory feed, the merge with ecommerce orders, and the replenishment signal. Then I'd love to leave some time for questions, especially from Helen since this is your first session with us.
+[02:25] Helen Wu: Sure. I'll mostly listen.
+[02:30] Tom Okafor: Let me share. Okay. So Raymond sent us a week of point of sale extracts from twenty stores plus the ecommerce order table. Ben, in discovery you said the goal was that a store manager knows by mid afternoon what to reorder, instead of finding out from an empty shelf the next morning.
+[05:05] Ben Castillo: Exactly that. Right now the replenishment report lands at six the next morning and it's already wrong because online orders that ship from store aren't in it.
+[05:25] Tom Okafor: So here's the merged view. Store sales and ship from store orders in one model, updated every five minutes. This SKU, for example, shows on hand of twelve in the POS feed, but there are nine ship from store orders against it, so the real number is three.
+[07:57] Ben Castillo: Oh, that's the exact thing. That's the thing the store managers yell about.
+[08:08] Raymond Ochoa: How are you matching the SKUs? Our ecommerce catalog uses a different SKU format for about a third of the items.
+[08:25] Tom Okafor: We used the crosswalk table you sent. About four percent of rows didn't match, they're in this exceptions table. Most of them look like discontinued items.
+[10:43] Raymond Ochoa: Yeah that sounds right. Four percent is better than what we get today, honestly.
+[10:55] Tom Okafor: Okay, and then the replenishment signal. For each store and SKU we project when on hand hits the reorder point. Anything projected to hit it before the next truck shows up here, by mid afternoon.
+[13:18] Ben Castillo: This is great. Honestly this looks really, really good.
+[13:27] Helen Wu: Can I ask how this gets built in our environment? The demo is in your sandbox. What does it look like for my team to get here?
+[13:47] Tom Okafor: Sure. Connectors for the POS system and the ecommerce database, then the models, which we'd help build in the first weeks. The crosswalk would need an owner on your side.
+[16:08] Helen Wu: Mm. And how long did this sandbox take you?
+[16:16] Tom Okafor: About four days with Raymond's files.
+[16:23] Helen Wu: Right. Okay.
+[16:28] Elise Moreau: Helen, is there something specific you're worried about?
+[16:36] Helen Wu: No, no. It looks great. I just wonder about timing. We have a lot on our plate this half.
+[16:51] Elise Moreau: That's fair. What's on the plate?
+[16:58] Helen Wu: The usual. A few projects. It's fine.
+[17:06] Ben Castillo: Helen's team is carrying a lot.
+[17:12] Helen Wu: It's fine. Keep going, Tom.
+[17:19] Tom Okafor: Okay. So the last piece Raymond asked about was alerting. When a store is projected to stock out, the store manager gets a message in the tool they already use. We showed email and a Teams message.
+[19:44] Raymond Ochoa: Teams is what they live in. Email they ignore.
+[19:52] Tom Okafor: Teams then.
+[19:57] Raymond Ochoa: One more on the projection. It only has a week of history in the sandbox. Last holiday season our sell through was totally different from a normal week. Does the projection know about seasonality or does it just extrapolate from the last few days?
+[20:28] Tom Okafor: In the sandbox it extrapolates, because a week is all we had. In production you'd backfill at least a year, and the projection uses same week last year as one of the inputs. I'd want to see it on your history before I promise how well it handles peak.
+[23:00] Raymond Ochoa: How far back can you backfill? We have POS history going back about five years, but the first two years are in a different format.
+[23:19] Tom Okafor: As far back as you want, technically. Practically I'd start with two years in the current format and only touch the old format if the model actually needs it.
+[25:39] Raymond Ochoa: Okay, good. I don't want to touch the old format.
+[25:48] Helen Wu: Nobody wants to touch the old format.
+[25:56] Ben Castillo: Sorry, quick one before I forget. How does pricing work on this? Is it per store, per user, what?
+[26:11] Elise Moreau: It's based on compute and the number of connected sources, not per store and not per user. So adding the store managers as people who receive alerts doesn't change the price.
+[26:34] Ben Castillo: And compute is, what, like a monthly estimate?
+[26:42] Elise Moreau: We'd size it from the backfill and the five minute refresh. I don't want to throw a number out before Tom has looked at the full store count, but I can put together a range.
+[27:07] Ben Castillo: A range would help. My boss will ask that right after the Lakestream question.
+[27:19] Elise Moreau: Understood.
+[27:23] Raymond Ochoa: Sorry, going back. Can the alert go to the district manager too? Not just the store?
+[27:36] Tom Okafor: Yes, you can route by any field you have. District is in your store table so that's easy.
+[27:51] Raymond Ochoa: Nice.
+[27:54] Ben Castillo: Can I ask the obvious question? We already have Lakestream in the building. The marketing team uses it for campaign data. My boss is going to ask me why Apex over Lakestream. Why wouldn't we just extend what we have?
+[28:23] Elise Moreau: Totally fair question, and I'd rather you ask it now than have it come up after. Tom, do you want to take the technical side?
+[28:42] Tom Okafor: Sure. I'll be careful here because I don't know exactly how your marketing team has Lakestream set up. Generally, Lakestream is strong for batch analytics on marketing data. The thing you're asking for, five minute inventory merged with orders, is a streaming problem. In the setups we've seen, getting Lakestream to do that means adding a separate streaming product and stitching it together.
+[31:23] Raymond Ochoa: That's true of our setup. Marketing loads daily.
+[31:31] Ben Castillo: Okay. But they're going to say it's one vendor instead of two.
+[31:42] Elise Moreau: They might. And for some teams that's the right call. What we'd suggest is comparing on the actual workload. The replenishment signal needs to be fresh by mid afternoon, every day, across all stores. If Lakestream can show that on your data, great, you should know that.
+[32:15] Ben Castillo: That's a pretty confident thing to say.
+[32:22] Elise Moreau: We're confident on this workload. I wouldn't say that about every workload.
+[32:33] Ben Castillo: Okay. I'll take that back.
+[32:39] Raymond Ochoa: How many stores could this handle? The sandbox is twenty.
+[32:49] Tom Okafor: You have about 640 stores, right? We sized the projection for that. The merge runs per store in parallel, so it scales with store count, not with total data size. I'm comfortable with 640.
+[35:12] Raymond Ochoa: And the POS extracts, do we need to change how we send them?
+[35:23] Tom Okafor: No. We read the files where they land today. That was one of the things I wanted to keep out of your team's way.
+[35:41] Helen Wu: That's helpful.
+[35:46] Ben Castillo: So, honestly, if it were up to me we'd sign tomorrow. But it's not up to me, and Helen's team would be the ones running it.
+[36:05] Elise Moreau: Understood. Helen, what would the decision look like from your side?
+[36:15] Helen Wu: I'd need to look at the full picture. Who owns it, what it replaces, what it costs us in people, not just in license. And anything over 250K goes to Farah anyway, our CFO, so it would go through her at some point.
+[36:46] Elise Moreau: Of course.
+[36:50] Helen Wu: I'm not saying no. I just want to be careful. The last platform migration took my team four months and I lost two engineers at the end of it. I'm not doing that again in the middle of peak season.
+[37:18] Ben Castillo: That was a rough one.
+[37:25] Helen Wu: It was a really rough one.
+[37:32] Elise Moreau: That's really helpful context, thank you for saying it. Tom, can you say a bit about what implementation actually looks like on our side versus theirs?
+[37:51] Tom Okafor: Sure. For this scope, the connectors and the first models are things we'd do with your team, not hand to you. The crosswalk ownership is the main thing that stays with you. I don't want to give you a number of weeks off the top of my head, because I'd be guessing, and I think you've heard enough guesses.
+[40:30] Helen Wu: I have heard a lot of guesses.
+[40:37] Raymond Ochoa: For what it's worth, the sandbox took me maybe two hours to set up on our side. Mostly finding the files.
+[40:54] Helen Wu: The sandbox isn't production, Raymond.
+[41:00] Raymond Ochoa: No, I know. Just saying.
+[41:06] Ben Castillo: Okay. I think this was really useful. Helen, Raymond, anything else?
+[41:16] Raymond Ochoa: I'd want to see the Teams alert set up for a real store. Not urgent.
+[41:29] Helen Wu: Nothing else from me for now.
+[41:36] Elise Moreau: Okay. Should we talk about next steps? I'm thinking a session with Helen's team on the implementation plan, and maybe a conversation with Ben's boss about the Lakestream question.
+[41:57] Ben Castillo: Let us digest this first. There's a lot going on this month. We'll be in touch.
+[42:11] Elise Moreau: Of course. Is there a date you'd want us to check back in?
+[42:22] Ben Castillo: Let's just play it by ear. I'll reach out.
+[42:31] Elise Moreau: Sounds good. I'll send a recap today with what we covered.
+[42:41] Ben Castillo: Perfect. Thanks Tom, thanks Elise.
+[42:47] Tom Okafor: Thanks all. Raymond, I'll send over the exceptions table so you can look at those unmatched rows.
+[43:01] Raymond Ochoa: Cool.
+[43:05] Helen Wu: Thanks.
