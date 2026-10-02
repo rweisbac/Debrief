@@ -1,0 +1,1059 @@
+{
+ "debrief_id": "deal_a-8393d2ea",
+ "deal_id": "deal_a",
+ "as_of": "2026-09-30",
+ "mode": "live",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Catch a late load while dispatch can still reroute it, not the next morning",
+   "evidence": [
+    {
+     "utterance_id": "U035",
+     "excerpt": "dispatch can swap drivers or call the consignee"
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "45 minute session with Elena Varga on late load detection and commercials",
+   "date": "2026-10-08",
+   "evidence": [
+    {
+     "utterance_id": "U072",
+     "excerpt": "Thursday October 8th, 2pm Central, forty five minutes"
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Hourly connector sync too slow for dispatch dashboards",
+    "raised_by": "Grace Oyelaran",
+    "status": "resolved",
+    "answer_given": "The connector does continuous sync since the August release",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Hourly might be tight for us"
+     }
+    ]
+   },
+   {
+    "summary": "Elena will question time to value after a slow past project",
+    "raised_by": "Dana Ortiz",
+    "status": "open",
+    "answer_given": "Bring a realistic onboarding plan to the Elena session",
+    "evidence": [
+     {
+      "utterance_id": "U076",
+      "excerpt": "She got burned on the last platform project"
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Row level access for partners with sub carriers",
+    "owner": "Priya Raman",
+    "evidence": [
+     {
+      "utterance_id": "U052",
+      "excerpt": "What I don't know yet is how your partner hierarchy works"
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Existing dbt models run as is; two macros move to a seed table",
+    "evidence": [
+     {
+      "utterance_id": "U027",
+      "excerpt": "move that lookup into a seed table or a pre-hook"
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Priya Raman",
+    "side": "apex",
+    "what": "Build the partner hierarchy policy in the sandbox",
+    "by_when": "2026-10-06",
+    "evidence": [
+     {
+      "utterance_id": "U054",
+      "excerpt": "I can have that back to you by Tuesday the sixth"
+     }
+    ]
+   },
+   {
+    "who": "Mikkel Strand",
+    "side": "customer",
+    "what": "Send a sample of the partner hierarchy table",
+    "by_when": "2026-10-05",
+    "evidence": [
+     {
+      "utterance_id": "U055",
+      "excerpt": "I can send that Monday"
+     }
+    ]
+   },
+   {
+    "who": "Priya Raman",
+    "side": "apex",
+    "what": "Send the release note on continuous sync",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U038",
+      "excerpt": "I'll send the release note"
+     }
+    ]
+   },
+   {
+    "who": "Sam Lee",
+    "side": "apex",
+    "what": "Send the recap today",
+    "by_when": "2026-09-30",
+    "evidence": [
+     {
+      "utterance_id": "U079",
+      "excerpt": "I'll send a recap today"
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Dana Ortiz",
+    "title": "VP Data",
+    "present": true,
+    "why_they_matter": "champion",
+    "evidence": [
+     {
+      "utterance_id": "U060",
+      "excerpt": "I think I've seen what I needed to see"
+     }
+    ]
+   },
+   {
+    "name": "Mikkel Strand",
+    "title": "Data Platform Lead",
+    "present": true,
+    "why_they_matter": "platform owner",
+    "evidence": [
+     {
+      "utterance_id": "U061",
+      "excerpt": "Not from the platform side"
+     }
+    ]
+   },
+   {
+    "name": "Grace Oyelaran",
+    "title": "Analytics Engineering Manager",
+    "present": true,
+    "why_they_matter": "owns dbt models",
+    "evidence": [
+     {
+      "utterance_id": "U062",
+      "excerpt": "The macro thing is on us"
+     }
+    ]
+   },
+   {
+    "name": "Elena Varga",
+    "title": "Chief Operating Officer",
+    "present": false,
+    "why_they_matter": "owns the budget line",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "she owns the budget line for this"
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Dana called it the most useful vendor session this quarter",
+    "strength": "moderate",
+    "qualifier": "Champion, not the budget owner",
+    "evidence": [
+     {
+      "utterance_id": "U080",
+      "excerpt": "the most useful vendor session"
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Time to value is the COO's main concern",
+    "strength": "moderate",
+    "qualifier": "",
+    "evidence": [
+     {
+      "utterance_id": "U076",
+      "excerpt": "She is going to ask about time to value"
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "4.7 billion events a month",
+    "what_it_measures": "fleet events",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "4.7 billion events a month"
+     }
+    ]
+   },
+   {
+    "value": "38,000 per second",
+    "what_it_measures": "holiday peak",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "peaks around 38,000 per second"
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [],
+  "contradictions": [],
+  "corrections": [
+   {
+    "original_statement": "The warehouse connector syncs in hourly batches",
+    "corrected_statement": "The warehouse connector does continuous sync, about a minute end to end",
+    "evidence": [
+     {
+      "utterance_id": "U038",
+      "excerpt": "The warehouse connector does continuous sync now"
+     }
+    ]
+   }
+  ],
+  "checklist_mismatches": []
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Catch a late load while dispatch can still reroute it, not the next morning Numbers said: 4.7 billion events a month, 38,000 per second",
+   "evidence": [
+    {
+     "utterance_id": "U035",
+     "excerpt": "dispatch can swap drivers or call the consignee"
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "known",
+   "summary": "Elena Varga, owns the budget line",
+   "evidence": [
+    {
+     "utterance_id": "U066",
+     "excerpt": "she owns the budget line for this"
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "known",
+   "summary": "2 items validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U009",
+     "excerpt": "Hourly might be tight for us"
+    },
+    {
+     "utterance_id": "U027",
+     "excerpt": "move that lookup into a seed table or a pre-hook"
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "45 minute session with Elena Varga on late load detection and commercials",
+   "evidence": [
+    {
+     "utterance_id": "U072",
+     "excerpt": "Thursday October 8th, 2pm Central, forty five minutes"
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Catch a late load while dispatch can still reroute it, not the next morning",
+   "evidence": [
+    {
+     "utterance_id": "U035",
+     "excerpt": "dispatch can swap drivers or call the consignee"
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Dana Ortiz, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U060",
+     "excerpt": "I think I've seen what I needed to see"
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "ready_to_advance",
+  "deal_state_why": "Technical fit is clear and the COO session is booked; one open item on partner access.",
+  "next_steps": [
+   {
+    "action": "Send Elena a one page brief on late load detection and a realistic onboarding plan before Thursday",
+    "owner": "Sam Lee",
+    "due_by": "2026-10-06",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "send_material",
+    "why": "Elena missed the demo and was burned by a slow project; reps usually walk in cold.",
+    "evidence": [
+     {
+      "utterance_id": "U076",
+      "excerpt": "She got burned on the last platform project"
+     }
+    ]
+   },
+   {
+    "action": "Make sure Mikkel's hierarchy sample reaches Priya Monday so the partner policy is ready Tuesday",
+    "owner": "Priya Raman",
+    "due_by": "2026-10-06",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "RC-07",
+    "action_type": "route_to_sc",
+    "why": "The open item depends on a customer file nobody tracks internally.",
+    "evidence": [
+     {
+      "utterance_id": "U054",
+      "excerpt": "I can have that back to you by Tuesday the sixth"
+     }
+    ]
+   },
+   {
+    "action": "Send Mikkel the continuous sync release note Priya promised",
+    "owner": "Priya Raman",
+    "due_by": "2026-10-01",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "RC-12",
+    "action_type": "send_material",
+    "why": "Promised in passing while correcting the deck; not in the checklist.",
+    "evidence": [
+     {
+      "utterance_id": "U038",
+      "excerpt": "I'll send the release note"
+     }
+    ]
+   }
+  ],
+  "watch_items": []
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "ready_to_advance",
+    "deal_state_why": "Technical fit is clear and the COO session is booked; one open item on partner access.",
+    "next_steps": [
+     {
+      "action": "Send Elena a one page brief on late load detection and a realistic onboarding plan before Thursday",
+      "owner": "Sam Lee",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "Elena missed the demo and was burned by a slow project; reps usually walk in cold.",
+      "evidence": [
+       {
+        "utterance_id": "U076",
+        "excerpt": "She got burned on the last platform project"
+       }
+      ]
+     },
+     {
+      "action": "Make sure Mikkel's hierarchy sample reaches Priya Monday so the partner policy is ready Tuesday",
+      "owner": "Priya Raman",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-07",
+      "action_type": "route_to_sc",
+      "why": "The open item depends on a customer file nobody tracks internally.",
+      "evidence": [
+       {
+        "utterance_id": "U054",
+        "excerpt": "I can have that back to you by Tuesday the sixth"
+       }
+      ]
+     },
+     {
+      "action": "Send Mikkel the continuous sync release note Priya promised",
+      "owner": "Priya Raman",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-12",
+      "action_type": "send_material",
+      "why": "Promised in passing while correcting the deck; not in the checklist.",
+      "evidence": [
+       {
+        "utterance_id": "U038",
+        "excerpt": "I'll send the release note"
+       }
+      ]
+     }
+    ],
+    "watch_items": []
+   },
+   "original": {
+    "deal_state": "ready_to_advance",
+    "deal_state_why": "Technical fit is clear and the COO session is booked; one open item on partner access.",
+    "next_steps": [
+     {
+      "action": "Send Elena a one page brief on late load detection and a realistic onboarding plan before Thursday",
+      "owner": "Sam Lee",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "Elena missed the demo and was burned by a slow project; reps usually walk in cold.",
+      "evidence": [
+       {
+        "utterance_id": "U076",
+        "excerpt": "She got burned on the last platform project"
+       }
+      ]
+     },
+     {
+      "action": "Make sure Mikkel's hierarchy sample reaches Priya Monday so the partner policy is ready Tuesday",
+      "owner": "Priya Raman",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-07",
+      "action_type": "route_to_sc",
+      "why": "The open item depends on a customer file nobody tracks internally.",
+      "evidence": [
+       {
+        "utterance_id": "U054",
+        "excerpt": "I can have that back to you by Tuesday the sixth"
+       }
+      ]
+     },
+     {
+      "action": "Send Mikkel the continuous sync release note Priya promised",
+      "owner": "Priya Raman",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-12",
+      "action_type": "send_material",
+      "why": "Promised in passing while correcting the deck; not in the checklist.",
+      "evidence": [
+       {
+        "utterance_id": "U038",
+        "excerpt": "I'll send the release note"
+       }
+      ]
+     }
+    ],
+    "watch_items": []
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: late load detection validation and Thursday with Elena",
+    "body": "Hi Dana,\n\nThanks for the time today, and to Mikkel and Grace. A quick recap.\n\n- Ingest kept up at your volume of 4.7 billion events a month, with lag under four seconds at p95 when we replayed above your 38,000 per second peak.\n- Your dbt models ran without a rewrite. Two use a macro that calls an external API at compile time; Grace's team will move that lookup into a seed table.\n- The warehouse connector now uses continuous sync, about a minute end to end.\n\nOpen item: row level access for partners with sub carriers. Mikkel will send a sample of the hierarchy table on Monday, and Priya will show the policy working by Tuesday, October 6. Priya will also send the release note on continuous sync.\n\nWe are set for Thursday, October 8 at 2pm Central with Elena, focused on catching a late load while dispatch can still reroute it. We will bring a realistic onboarding plan.\n\nSam",
+    "customer_value_line": "Fresh data lets dispatch act on a late load while it can still be saved.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "4.7 billion events a month"
+     },
+     {
+      "utterance_id": "U072",
+      "excerpt": "Thursday October 8th, 2pm Central, forty five minutes"
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: late load detection validation and Thursday with Elena",
+    "body": "Hi Dana,\n\nThanks for the time today, and to Mikkel and Grace. A quick recap.\n\n- Ingest kept up at your volume of 4.7 billion events a month, with lag under four seconds at p95 when we replayed above your 38,000 per second peak.\n- Your dbt models ran without a rewrite. Two use a macro that calls an external API at compile time; Grace's team will move that lookup into a seed table.\n- The warehouse connector now uses continuous sync, about a minute end to end.\n\nOpen item: row level access for partners with sub carriers. Mikkel will send a sample of the hierarchy table on Monday, and Priya will show the policy working by Tuesday, October 6. Priya will also send the release note on continuous sync.\n\nWe are set for Thursday, October 8 at 2pm Central with Elena, focused on catching a late load while dispatch can still reroute it. We will bring a realistic onboarding plan.\n\nSam",
+    "customer_value_line": "Fresh data lets dispatch act on a late load while it can still be saved.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "4.7 billion events a month"
+     },
+     {
+      "utterance_id": "U072",
+      "excerpt": "Thursday October 8th, 2pm Central, forty five minutes"
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Ready to advance: champion clear, COO session booked for 2026-10-08",
+    "customer_value_line": "Catch a late load while dispatch can still reroute it.",
+    "what_we_validated": [
+     "Ingest at peak volume",
+     "Existing dbt models run as is",
+     "Late load detection on streaming data"
+    ],
+    "integration_patterns": [
+     "dbt models run as is; two macros move to a seed table"
+    ],
+    "objections_and_answers": [
+     "Hourly sync too slow: continuous sync since August (resolved)",
+     "Time to value for Elena: bring a realistic onboarding plan (open)"
+    ],
+    "open_items": [
+     "Partner hierarchy row level policy, Priya Raman"
+    ],
+    "commitments": [
+     "Priya Raman: partner policy by 2026-10-06",
+     "Mikkel Strand: hierarchy sample by 2026-10-05",
+     "Priya Raman: continuous sync release note"
+    ],
+    "stakeholders": [
+     "Dana Ortiz, champion, present",
+     "Elena Varga, COO, budget owner, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Elena was burned by a slow past project"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "she owns the budget line for this"
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Ready to advance: champion clear, COO session booked for 2026-10-08",
+    "customer_value_line": "Catch a late load while dispatch can still reroute it.",
+    "what_we_validated": [
+     "Ingest at peak volume",
+     "Existing dbt models run as is",
+     "Late load detection on streaming data"
+    ],
+    "integration_patterns": [
+     "dbt models run as is; two macros move to a seed table"
+    ],
+    "objections_and_answers": [
+     "Hourly sync too slow: continuous sync since August (resolved)",
+     "Time to value for Elena: bring a realistic onboarding plan (open)"
+    ],
+    "open_items": [
+     "Partner hierarchy row level policy, Priya Raman"
+    ],
+    "commitments": [
+     "Priya Raman: partner policy by 2026-10-06",
+     "Mikkel Strand: hierarchy sample by 2026-10-05",
+     "Priya Raman: continuous sync release note"
+    ],
+    "stakeholders": [
+     "Dana Ortiz, champion, present",
+     "Elena Varga, COO, budget owner, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Elena was burned by a slow past project"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "she owns the budget line for this"
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Catch a late load while dispatch can still reroute it.",
+    "rows": [
+     {
+      "milestone": "Partner hierarchy sample to Priya",
+      "customer_owner": "Mikkel Strand",
+      "apex_owner": "Priya Raman",
+      "target_date": "2026-10-05",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U055",
+        "excerpt": "I can send that Monday"
+       }
+      ]
+     },
+     {
+      "milestone": "Partner policy shown in sandbox",
+      "customer_owner": "Mikkel Strand",
+      "apex_owner": "Priya Raman",
+      "target_date": "2026-10-06",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U054",
+        "excerpt": "I can have that back to you by Tuesday the sixth"
+       }
+      ]
+     },
+     {
+      "milestone": "Late load session with Elena Varga",
+      "customer_owner": "Dana Ortiz",
+      "apex_owner": "Sam Lee",
+      "target_date": "2026-10-08",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "Thursday October 8th, 2pm Central, forty five minutes"
+       }
+      ]
+     },
+     {
+      "milestone": "Commercial proposal",
+      "customer_owner": "Elena Varga",
+      "apex_owner": "Sam Lee",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": []
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Catch a late load while dispatch can still reroute it.",
+    "rows": [
+     {
+      "milestone": "Partner hierarchy sample to Priya",
+      "customer_owner": "Mikkel Strand",
+      "apex_owner": "Priya Raman",
+      "target_date": "2026-10-05",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U055",
+        "excerpt": "I can send that Monday"
+       }
+      ]
+     },
+     {
+      "milestone": "Partner policy shown in sandbox",
+      "customer_owner": "Mikkel Strand",
+      "apex_owner": "Priya Raman",
+      "target_date": "2026-10-06",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U054",
+        "excerpt": "I can have that back to you by Tuesday the sixth"
+       }
+      ]
+     },
+     {
+      "milestone": "Late load session with Elena Varga",
+      "customer_owner": "Dana Ortiz",
+      "apex_owner": "Sam Lee",
+      "target_date": "2026-10-08",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "Thursday October 8th, 2pm Central, forty five minutes"
+       }
+      ]
+     },
+     {
+      "milestone": "Commercial proposal",
+      "customer_owner": "Elena Varga",
+      "apex_owner": "Sam Lee",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": []
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v1+shared-v1",
+  "assess_and_recommend": "v1+shared-v1",
+  "draft_recap_email": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 14,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "96c415ae5ed170d3410e6f3881de0a3a57761e2372612aefcae368b8707975f0"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "ad9a6a038cb72d05f140e8db58fea880fbf9cd3dccf9792caad31080b23b9c1c"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 3,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "dfda60e1510b6f0f484fdb0b83377e96c6c1ded272f6c60b8552ba75ce49ed9a"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 1,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "d574fe3c3bc8820d45fd90e8eb54f5ef9589713184b5887bef24ec7f852d68b3"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "0b944d78b5c187d687327ac366ff013ad7dd845b6ae655e1149baec5db887c9c"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "e2a998e314fd48f3fd4600f7a7efc7faa2411bd7429abc5bafe5ca65c991d426"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": null,
+ "latency_ms": null,
+ "source": "sample",
+ "sample_label": "Sample card written by hand to show the layout. Not generated from the call. See the README to generate real debriefs."
+}

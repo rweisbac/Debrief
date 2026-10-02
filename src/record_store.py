@@ -43,6 +43,34 @@ CREATE TABLE IF NOT EXISTS debriefs (
 )"""
 
 
+EVENTS_DDL = """
+CREATE TABLE IF NOT EXISTS events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ts TEXT NOT NULL,
+    name TEXT NOT NULL,
+    role TEXT NOT NULL,
+    deal_id TEXT NOT NULL,
+    prompt_version TEXT NOT NULL,
+    props TEXT NOT NULL
+)"""
+
+DEAL_STATUS_DDL = """
+CREATE TABLE IF NOT EXISTS deal_status (
+    deal_id TEXT PRIMARY KEY,
+    status TEXT NOT NULL,
+    updated_at TEXT NOT NULL
+)"""
+
+CHECKLIST_DDL = """
+CREATE TABLE IF NOT EXISTS checklist (
+    deal_id TEXT NOT NULL,
+    field TEXT NOT NULL,
+    value TEXT NOT NULL,
+    filled_at TEXT NOT NULL,
+    PRIMARY KEY (deal_id, field)
+)"""
+
+
 def connect(db_path: Path | None = None) -> sqlite3.Connection:
     path = Path(db_path or config.DB_PATH)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -50,6 +78,9 @@ def connect(db_path: Path | None = None) -> sqlite3.Connection:
     conn.row_factory = sqlite3.Row
     conn.execute(LLM_CALLS_DDL)
     conn.execute(DEBRIEFS_DDL)
+    conn.execute(EVENTS_DDL)
+    conn.execute(DEAL_STATUS_DDL)
+    conn.execute(CHECKLIST_DDL)
     return conn
 
 
@@ -86,3 +117,32 @@ def load_latest_debrief(deal_id: str, db_path: Path | None = None) -> dict | Non
         row = conn.execute("SELECT payload FROM debriefs WHERE deal_id = ? ORDER BY created_at DESC LIMIT 1",
                            (deal_id,)).fetchone()
         return json.loads(row["payload"]) if row else None
+
+
+def set_deal_status(deal_id: str, status: str, at: str, db_path: Path | None = None) -> None:
+    with connect(db_path) as conn:
+        conn.execute("INSERT OR REPLACE INTO deal_status VALUES (?, ?, ?)", (deal_id, status, at))
+
+
+def deal_status(deal_id: str, db_path: Path | None = None) -> str:
+    with connect(db_path) as conn:
+        row = conn.execute("SELECT status FROM deal_status WHERE deal_id = ?", (deal_id,)).fetchone()
+        return row["status"] if row else "open"
+
+
+def save_checklist_field(deal_id: str, field: str, value: str, filled_at: str, db_path: Path | None = None) -> None:
+    with connect(db_path) as conn:
+        conn.execute("INSERT OR REPLACE INTO checklist VALUES (?, ?, ?, ?)", (deal_id, field, value, filled_at))
+
+
+def load_checklist(deal_id: str, db_path: Path | None = None) -> dict[str, dict]:
+    with connect(db_path) as conn:
+        rows = conn.execute("SELECT field, value, filled_at FROM checklist WHERE deal_id = ?", (deal_id,))
+        return {r["field"]: {"value": r["value"], "filled_at": r["filled_at"]} for r in rows}
+
+
+def reset_demo_state(db_path: Path | None = None) -> None:
+    """Clear events, deal status and checklist entries. Model call logs and saved debriefs are kept."""
+    with connect(db_path) as conn:
+        for table in ("events", "deal_status", "checklist"):
+            conn.execute(f"DELETE FROM {table}")

@@ -1,4 +1,4 @@
-.PHONY: test smoke style record eval ablation candidates demo
+.PHONY: test smoke style record eval ablation candidates demo samples
 
 test:
 	python -m pytest -q
@@ -25,4 +25,10 @@ ablation:
 candidates:
 	python evals/make_candidates.py
 
-# demo target arrives in checkpoint 3.
+# Offline demo: replay mode plus hand-written sample cards (labeled in the app). Never calls the API.
+demo:
+	DEBRIEF_MODE=replay DEBRIEF_SAMPLES=1 streamlit run app.py --server.headless true
+
+# Rebuild the hand-written sample cards (fixtures/samples) through the real rules and checks.
+samples:
+	python scripts/build_samples.py

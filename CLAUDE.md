@@ -8,7 +8,7 @@ Python 3.11, anthropic SDK (1.x, uses httpx2), pydantic v2, Streamlit, SQLite, p
 ## Commands
 - `make test`: `pytest -q` (no API key needed)
 - `make eval`: `python evals/run_evals.py` in replay mode
-- `make demo`: `DEBRIEF_MODE=replay streamlit run app.py`
+- `make demo`: Streamlit in replay mode with labeled sample cards (`DEBRIEF_SAMPLES=1`); never calls the API
 - `make record`: run the chain on all transcripts with `DEBRIEF_MODE=record`
 - `python scripts/smoke_test.py`: live API probe, results in docs/API_NOTES.md
 

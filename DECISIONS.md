@@ -108,6 +108,30 @@ All prompts are at v1 (checkpoint 2). No changes yet: nothing has run against th
 - A differentiation battlecard engine. That is Phase 3. For now Debrief only flags competitor mentions and points the SC to a release card.
 - CS-side forecasting. The handoff brief is a Phase 2 preview built from TV evidence. Predicting time to first value would need post-sale data we do not have.
 
+## D-12: demo runs on hand-written sample cards until a recording exists
+- Step and prompt version: checkpoint 3, scripts/build_samples.py, app.py
+- What the AI produced: a choice between an empty demo (no API key, so no fixtures) and showing hand-written outputs.
+- Why it was wrong: an empty demo cannot show the flow, but hand-written outputs presented as model output would misrepresent the prototype.
+- What I changed: two hand-written sample debriefs (deal_a, deal_b) run through the real rules, MAP enforcement and checks via a scripted backend, and must pass every check. They are stored as source "sample" and every view, the Block Kit JSON and the card footer label them "Sample card written by hand to show the layout. Not generated from the call." The app prefers a real saved or replayed debrief whenever one exists.
+- Evidence of fix (eval or test, before and after): tests/app/test_app_walkthrough.py::test_sample_label_shown and test_cp3_units.py::test_samples_are_labeled_and_pass_checks.
+- What I would do in production: delete the samples after the first recording.
+
+## D-13: a test expectation was wrong, not the code
+- Step and prompt version: checkpoint 3, tests/deterministic/test_cp3_units.py
+- What the AI produced: a boundary test asserting that 20 of 66 non-actions with 20 events does not meet the 30% and 20 event rule.
+- Why it was wrong: 20 of 66 is 30.3% with exactly 20 events, so it meets both conditions. The code was right.
+- What I changed: the test now asserts the boundary case meets the rule, and adds explicit cases for exactly 30% and for 19 events.
+- Evidence of fix (eval or test, before and after): the test failed, then passed with metrics.diagnose unchanged.
+- What I would do in production: keep boundary tests next to every pre-declared decision rule.
+
 ## What breaks first
 
-To be filled in checkpoint 3, with the event signal for each.
+In likely order, with the event that shows it (also in the README):
+
+1. Checks flag good model drafts, because they were only tested on hand-written outputs (D-11). Signal: verifier_flagged and rule_override_applied per debrief, and flagged drafts approved unedited.
+2. Steps feel generic and get dismissed. Signal: step_dismissed with reason not_relevant above the agreed rate.
+3. Reps do not open the card in the channel it arrives in. Signal: card_ignored_24h.
+4. Nudges become noise. Signal: nudge_sent without nudge_acted_on.
+5. The SC stops confirming the record once novelty fades. Signal: record_confirmed_by_sc within 1 business day trending toward the 60% baseline.
+6. Upstream formats change (Gong transcript shape, CRM fields). Signal: parse errors and evidence_resolves failures.
+7. A model or SDK update changes behaviour. Signal: eval pass rates and the smoke test on every bump.

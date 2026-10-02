@@ -1,0 +1,968 @@
+{
+ "debrief_id": "deal_b-d833e00a",
+ "deal_id": "deal_b",
+ "as_of": "2026-10-01",
+ "mode": "live",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "A daily readmission list so care managers call while patients still remember them",
+   "evidence": [
+    {
+     "utterance_id": "U027",
+     "excerpt": "The whole goal is daily"
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "none; Aisha will decide on a meeting after the SSO answer",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U075",
+     "excerpt": "Let's see what the answer is first"
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "SSO: roles arrive in a nested custom claim; Apex maps flat claims today",
+    "raised_by": "Leo Brandt",
+    "status": "open",
+    "answer_given": "Marcus will get a firm answer on native nested claims from the identity team",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "What I have not personally done is map a nested claim"
+     }
+    ]
+   },
+   {
+    "summary": "Where PHI sits and who holds keys",
+    "raised_by": "Nora Fitzgerald",
+    "status": "partially_resolved",
+    "answer_given": "Dedicated tenant in a US region; customer managed keys available",
+    "evidence": [
+     {
+      "utterance_id": "U051",
+      "excerpt": "It sits in your dedicated tenant in a US region"
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Native nested claim support and a date",
+    "owner": "Marcus Bell",
+    "evidence": [
+     {
+      "utterance_id": "U072",
+      "excerpt": "I need a date I can put in front of Raj"
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Marcus Bell",
+    "side": "apex",
+    "what": "Send the encryption whitepaper",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U051",
+      "excerpt": "I'll send you our encryption whitepaper"
+     }
+    ]
+   },
+   {
+    "who": "Marcus Bell",
+    "side": "apex",
+    "what": "Get a firm answer on native nested claims",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U023",
+      "excerpt": "I'll take that to our identity team today"
+     }
+    ]
+   },
+   {
+    "who": "Aisha Karim",
+    "side": "customer",
+    "what": "Have procurement send the vendor questionnaire",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U063",
+      "excerpt": "I'll have procurement send it"
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Aisha Karim",
+    "title": "Director of Data Engineering",
+    "present": true,
+    "why_they_matter": "champion",
+    "evidence": [
+     {
+      "utterance_id": "U056",
+      "excerpt": "I'll be direct about where we are"
+     }
+    ]
+   },
+   {
+    "name": "Leo Brandt",
+    "title": "Identity and Access Engineer",
+    "present": true,
+    "why_they_matter": "owns the identity layer",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "We have our own, built about six years ago"
+     }
+    ]
+   },
+   {
+    "name": "Raj Patel",
+    "title": "Security Architect",
+    "present": false,
+    "why_they_matter": "runs the vendor security committee",
+    "evidence": [
+     {
+      "utterance_id": "U059",
+      "excerpt": "He'll want the SSO design in writing before the committee"
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [],
+  "risk_signals": [
+   {
+    "summary": "Token service change would take six to eight weeks",
+    "strength": "moderate",
+    "qualifier": "",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "six to eight weeks, minimum"
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "About 140",
+    "what_it_measures": "care managers",
+    "evidence": [
+     {
+      "utterance_id": "U037",
+      "excerpt": "About 140 across the three regions"
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Vendor security review committee must approve first",
+    "owner": "Raj Patel",
+    "due": "2026-10-09",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U056",
+      "excerpt": "nothing moves until the vendor security review clears"
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Marcus will send the encryption whitepaper",
+    "evidence": [
+     {
+      "utterance_id": "U051",
+      "excerpt": "I'll send you our encryption whitepaper"
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "A daily readmission list so care managers call while patients still remember them Numbers said: About 140",
+   "evidence": [
+    {
+     "utterance_id": "U027",
+     "excerpt": "The whole goal is daily"
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Vendor security review committee must approve first",
+   "evidence": [
+    {
+     "utterance_id": "U056",
+     "excerpt": "nothing moves until the vendor security review clears"
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "known",
+   "summary": "Vendor security review committee must approve first (due 2026-10-09)",
+   "evidence": [
+    {
+     "utterance_id": "U056",
+     "excerpt": "nothing moves until the vendor security review clears"
+    }
+   ]
+  },
+  "pain": {
+   "status": "known",
+   "summary": "A daily readmission list so care managers call while patients still remember them",
+   "evidence": [
+    {
+     "utterance_id": "U027",
+     "excerpt": "The whole goal is daily"
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Aisha Karim, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U056",
+     "excerpt": "I'll be direct about where we are"
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "open_technical_gap",
+  "deal_state_why": "Nested SSO claim is unresolved and the security committee meets October 9.",
+  "next_steps": [
+   {
+    "action": "Send Aisha the security packet with Raj copied: SOC 2, encryption whitepaper and a written SSO design",
+    "owner": "Jordan Pike",
+    "due_by": "2026-10-06",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "RC-11",
+    "action_type": "support_customer_process",
+    "why": "Missing the committee date pushes the deal a month; reps tend to wait for the questionnaire.",
+    "evidence": [
+     {
+      "utterance_id": "U058",
+      "excerpt": "Our vendor questionnaire, your SOC 2 report, the encryption details"
+     }
+    ]
+   },
+   {
+    "action": "Get Leo a dated answer on native nested claims that he can show Raj",
+    "owner": "Marcus Bell",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "RC-09",
+    "action_type": "route_to_sc",
+    "why": "Leo asked for a date, not a roadmap slide.",
+    "evidence": [
+     {
+      "utterance_id": "U072",
+      "excerpt": "I need a date I can put in front of Raj"
+     }
+    ]
+   },
+   {
+    "action": "Send Nora the encryption whitepaper Marcus promised",
+    "owner": "Marcus Bell",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "RC-11",
+    "action_type": "send_material",
+    "why": "Said in passing and missing from the checklist.",
+    "evidence": [
+     {
+      "utterance_id": "U051",
+      "excerpt": "I'll send you our encryption whitepaper"
+     }
+    ]
+   }
+  ],
+  "watch_items": []
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "open_technical_gap",
+    "deal_state_why": "Nested SSO claim is unresolved and the security committee meets October 9.",
+    "next_steps": [
+     {
+      "action": "Send Aisha the security packet with Raj copied: SOC 2, encryption whitepaper and a written SSO design",
+      "owner": "Jordan Pike",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "RC-11",
+      "action_type": "support_customer_process",
+      "why": "Missing the committee date pushes the deal a month; reps tend to wait for the questionnaire.",
+      "evidence": [
+       {
+        "utterance_id": "U058",
+        "excerpt": "Our vendor questionnaire, your SOC 2 report, the encryption details"
+       }
+      ]
+     },
+     {
+      "action": "Get Leo a dated answer on native nested claims that he can show Raj",
+      "owner": "Marcus Bell",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-09",
+      "action_type": "route_to_sc",
+      "why": "Leo asked for a date, not a roadmap slide.",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "I need a date I can put in front of Raj"
+       }
+      ]
+     },
+     {
+      "action": "Send Nora the encryption whitepaper Marcus promised",
+      "owner": "Marcus Bell",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-11",
+      "action_type": "send_material",
+      "why": "Said in passing and missing from the checklist.",
+      "evidence": [
+       {
+        "utterance_id": "U051",
+        "excerpt": "I'll send you our encryption whitepaper"
+       }
+      ]
+     }
+    ],
+    "watch_items": []
+   },
+   "original": {
+    "deal_state": "open_technical_gap",
+    "deal_state_why": "Nested SSO claim is unresolved and the security committee meets October 9.",
+    "next_steps": [
+     {
+      "action": "Send Aisha the security packet with Raj copied: SOC 2, encryption whitepaper and a written SSO design",
+      "owner": "Jordan Pike",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "RC-11",
+      "action_type": "support_customer_process",
+      "why": "Missing the committee date pushes the deal a month; reps tend to wait for the questionnaire.",
+      "evidence": [
+       {
+        "utterance_id": "U058",
+        "excerpt": "Our vendor questionnaire, your SOC 2 report, the encryption details"
+       }
+      ]
+     },
+     {
+      "action": "Get Leo a dated answer on native nested claims that he can show Raj",
+      "owner": "Marcus Bell",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-09",
+      "action_type": "route_to_sc",
+      "why": "Leo asked for a date, not a roadmap slide.",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "I need a date I can put in front of Raj"
+       }
+      ]
+     },
+     {
+      "action": "Send Nora the encryption whitepaper Marcus promised",
+      "owner": "Marcus Bell",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-11",
+      "action_type": "send_material",
+      "why": "Said in passing and missing from the checklist.",
+      "evidence": [
+       {
+        "utterance_id": "U051",
+        "excerpt": "I'll send you our encryption whitepaper"
+       }
+      ]
+     }
+    ],
+    "watch_items": []
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: readmission pipeline, SSO and PHI",
+    "body": "Hi Aisha,\n\nThanks for the session, and to Leo and Nora. A quick recap.\n\n- The readmission pipeline ran incrementally; last night's run took nine minutes, and each row shows its top three drivers.\n- SSO is open. Your identity layer sends roles in a nested claim, and today we map flat claims. Marcus is taking native nested claims to our identity team and will come back with a date Leo can show Raj.\n- Data sits in your dedicated tenant in a US region. Marcus will send our encryption whitepaper.\n\nFor the October 9 committee, we will send you the packet with Raj copied: our SOC 2 report, the encryption details and a written SSO design, plus your questionnaire once procurement sends it.\n\nJordan",
+    "customer_value_line": "A daily list means care managers call while patients still remember who we are.",
+    "evidence": [
+     {
+      "utterance_id": "U051",
+      "excerpt": "I'll send you our encryption whitepaper"
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: readmission pipeline, SSO and PHI",
+    "body": "Hi Aisha,\n\nThanks for the session, and to Leo and Nora. A quick recap.\n\n- The readmission pipeline ran incrementally; last night's run took nine minutes, and each row shows its top three drivers.\n- SSO is open. Your identity layer sends roles in a nested claim, and today we map flat claims. Marcus is taking native nested claims to our identity team and will come back with a date Leo can show Raj.\n- Data sits in your dedicated tenant in a US region. Marcus will send our encryption whitepaper.\n\nFor the October 9 committee, we will send you the packet with Raj copied: our SOC 2 report, the encryption details and a written SSO design, plus your questionnaire once procurement sends it.\n\nJordan",
+    "customer_value_line": "A daily list means care managers call while patients still remember who we are.",
+    "evidence": [
+     {
+      "utterance_id": "U051",
+      "excerpt": "I'll send you our encryption whitepaper"
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Open technical gap: nested SSO claim, security committee on 2026-10-09",
+    "customer_value_line": "A daily readmission list so care managers call the morning after discharge.",
+    "what_we_validated": [
+     "Incremental readmission pipeline",
+     "Top three drivers per patient"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [
+     "Nested SSO claim: Marcus to get a date from identity team (open)",
+     "PHI location and keys: US tenant, customer managed keys (partially resolved)"
+    ],
+    "open_items": [
+     "Native nested claim date, Marcus Bell"
+    ],
+    "commitments": [
+     "Marcus Bell: encryption whitepaper",
+     "Marcus Bell: nested claim answer",
+     "Aisha Karim: procurement sends questionnaire"
+    ],
+    "stakeholders": [
+     "Aisha Karim, champion, present",
+     "Raj Patel, security committee, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Token service change would take six to eight weeks"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U056",
+      "excerpt": "nothing moves until the vendor security review clears"
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Open technical gap: nested SSO claim, security committee on 2026-10-09",
+    "customer_value_line": "A daily readmission list so care managers call the morning after discharge.",
+    "what_we_validated": [
+     "Incremental readmission pipeline",
+     "Top three drivers per patient"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [
+     "Nested SSO claim: Marcus to get a date from identity team (open)",
+     "PHI location and keys: US tenant, customer managed keys (partially resolved)"
+    ],
+    "open_items": [
+     "Native nested claim date, Marcus Bell"
+    ],
+    "commitments": [
+     "Marcus Bell: encryption whitepaper",
+     "Marcus Bell: nested claim answer",
+     "Aisha Karim: procurement sends questionnaire"
+    ],
+    "stakeholders": [
+     "Aisha Karim, champion, present",
+     "Raj Patel, security committee, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Token service change would take six to eight weeks"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U056",
+      "excerpt": "nothing moves until the vendor security review clears"
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "A daily readmission list for care managers.",
+    "rows": [
+     {
+      "milestone": "Encryption whitepaper to Nora",
+      "customer_owner": "Nora Fitzgerald",
+      "apex_owner": "Marcus Bell",
+      "target_date": "",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U051",
+        "excerpt": "I'll send you our encryption whitepaper"
+       }
+      ]
+     },
+     {
+      "milestone": "Security packet to Aisha, Raj copied",
+      "customer_owner": "Aisha Karim",
+      "apex_owner": "Jordan Pike",
+      "target_date": "2026-10-06",
+      "status": "proposed",
+      "evidence": []
+     },
+     {
+      "milestone": "Vendor security committee",
+      "customer_owner": "Raj Patel",
+      "apex_owner": "",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U056",
+        "excerpt": "they meet October 9th"
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "A daily readmission list for care managers.",
+    "rows": [
+     {
+      "milestone": "Encryption whitepaper to Nora",
+      "customer_owner": "Nora Fitzgerald",
+      "apex_owner": "Marcus Bell",
+      "target_date": "",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U051",
+        "excerpt": "I'll send you our encryption whitepaper"
+       }
+      ]
+     },
+     {
+      "milestone": "Security packet to Aisha, Raj copied",
+      "customer_owner": "Aisha Karim",
+      "apex_owner": "Jordan Pike",
+      "target_date": "2026-10-06",
+      "status": "proposed",
+      "evidence": []
+     },
+     {
+      "milestone": "Vendor security committee",
+      "customer_owner": "Raj Patel",
+      "apex_owner": "",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U056",
+        "excerpt": "they meet October 9th"
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "all",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sample: no issues.",
+   "utterance_ids": []
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v1+shared-v1",
+  "assess_and_recommend": "v1+shared-v1",
+  "draft_recap_email": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 8,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "c816c4ea5c1c5390c39e8b71e4b7e1981352d1ad80c5e955d6e82beb9336fbb5"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "fe70f948e78c5a41032f4b633040cbac5c049ac93f4e03d4fb753d574193e025"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 1,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "d1e3cca54705e413e3ad85cb60849aebe3bddcd908ca2f388606a7d534ddbb3d"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "8e26f5311424b28ff28e57a8d3fa206088ca956c05766357691d68f90485c977"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "4ca1b3e30d21ac5b2f16c5506d9d922bcad355d701417975b39c860c73adfdc9"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 2,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "2cd03d82553b75e9b04aeaf6a4c82c65c735a04dc1bc740fe2b87f8defcfa1f2"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": null,
+ "latency_ms": null,
+ "source": "sample",
+ "sample_label": "Sample card written by hand to show the layout. Not generated from the call. See the README to generate real debriefs."
+}
