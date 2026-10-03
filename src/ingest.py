@@ -24,8 +24,8 @@ from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from src import service
-from src.adapters import VAR, CRMSource, FileCRMSource, FileGongSource, FileNotifier, GongSource, Notifier
+from src import blockkit, service
+from src.adapters import VAR, CRMSource, FileCRMSource, FileGongSource, GongSource, Notifier, make_notifier
 from src.chain import Chain, load_context
 from src.llm import LLMClient, ReplayMiss
 
@@ -54,7 +54,7 @@ def process_call(deal_id: str, *, gong: GongSource | None = None, crm_source: CR
     Status: done, skipped (not TV stage, or already processed), waiting (CRM or activity data not there yet),
     error (run failed; retried up to MAX_ATTEMPTS)."""
     gong, crm_source = gong or FileGongSource(), crm_source or FileCRMSource()
-    notifier = notifier or FileNotifier()
+    notifier = notifier or make_notifier()
     now = now or datetime.now(timezone.utc)
 
     def result(status: str, detail: str = "") -> dict:
@@ -93,13 +93,17 @@ def process_call(deal_id: str, *, gong: GongSource | None = None, crm_source: CR
         return result("error", "; ".join(errors)[:300])
 
     service.generate_card(deal_id, payload, now, prompt_version=json.dumps(payload["prompt_versions"], sort_keys=True))
-    notifier.send(crm["owner_ae"], "ae", deal_id, "card_ready", {
-        "text": f"Your debrief for {crm['account']} is ready. Review the next steps and drafts before anything is sent.",
-        "debrief_id": payload["debrief_id"], "at": now.isoformat()})
+    text = blockkit.summary_text(payload, crm)
+    ae_card = blockkit.card(payload, transcript, crm)
+    sc_card = blockkit.sc_card(payload, transcript, crm, service.sc_commitments(payload, crm, deal_id))
+    common = {"text": text, "debrief_id": payload["debrief_id"], "at": now.isoformat()}
+    sent = [notifier.send(crm["owner_ae"], "ae", deal_id, "card_ready", {**common, **ae_card}),
+            notifier.send(crm["sc"], "sc", deal_id, "card_ready", {**common, **sc_card})]
+    slack_errors = [m["slack"]["error"] for m in sent if m.get("slack") and not m["slack"]["ok"]]
     ledger[deal_id] = {"hash": digest, "status": "done", "attempts": attempts, "at": now.isoformat(),
                        "debrief_id": payload["debrief_id"]}
     _save_ledger(ledger_path, ledger)
-    return result("done", payload["debrief_id"])
+    return result("done", payload["debrief_id"] + (f" (Slack failed: {slack_errors[0]})" if slack_errors else ""))
 
 
 def scan_once(gong: FileGongSource | None = None, **kwargs) -> list[dict]:

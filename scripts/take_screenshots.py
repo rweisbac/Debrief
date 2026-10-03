@@ -1,6 +1,7 @@
 """Capture screenshots of the demo app for a walkthrough. Offline: replay mode, sample cards, scratch database.
 
 Run: python scripts/take_screenshots.py   (writes docs/screenshots/*.png)
+Sample cards by default. After make record, run DEBRIEF_SAMPLES=0 python scripts/take_screenshots.py to capture real debriefs from the replay cache.
 """
 from __future__ import annotations
 
@@ -49,7 +50,7 @@ def shot(page: Page, name: str) -> None:
 
 def main() -> int:
     scratch = Path(tempfile.mkdtemp())
-    env = {**os.environ, "DEBRIEF_MODE": "replay", "DEBRIEF_SAMPLES": "1", "DEBRIEF_DB": str(scratch / "shots.sqlite3")}
+    env = {**os.environ, "DEBRIEF_MODE": "replay", "DEBRIEF_SAMPLES": os.environ.get("DEBRIEF_SAMPLES", "1"), "DEBRIEF_DB": str(scratch / "shots.sqlite3")}
     server = subprocess.Popen([sys.executable, "-m", "streamlit", "run", "app.py", "--server.headless", "true",
                                "--server.port", str(PORT), "--browser.gatherUsageStats", "false"],
                               cwd=ROOT, env=env, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

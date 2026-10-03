@@ -37,13 +37,18 @@ def run(env, fb, deal="deal_new"):
     return ingest.process_call(deal, llm=env["make_llm"](fb), **env["kwargs"])
 
 
-def test_new_tv_transcript_makes_a_card_and_notifies_the_ae(env):
+def test_new_tv_transcript_makes_a_card_and_notifies_the_ae_and_sc(env):
     fb = scripted_clean_run(FakeBackend())
     r = run(env, fb)
     assert r["status"] == "done"
     assert len(fb.requests) == 6
     msgs = env["kwargs"]["notifier"].read_all()
-    assert [(m["role"], m["kind"], m["recipient"]) for m in msgs] == [("ae", "card_ready", env["crm"]["owner_ae"])]
+    assert [(m["role"], m["kind"], m["recipient"]) for m in msgs] == [
+        ("ae", "card_ready", env["crm"]["owner_ae"]), ("sc", "card_ready", env["crm"]["sc"])]
+    ae, sc = msgs
+    assert ae["payload"]["text"].startswith("Debrief ready for Halvorsen Freight. Most important:")
+    assert any(b["type"] == "actions" for b in ae["payload"]["blocks"])
+    assert sc["payload"]["blocks"][0]["text"]["text"].startswith("Your items:")
 
 
 def test_same_transcript_is_not_run_twice(env):
@@ -51,7 +56,7 @@ def test_same_transcript_is_not_run_twice(env):
     assert run(env, fb)["status"] == "done"
     again = run(env, FakeBackend())  # an empty backend would raise if the chain ran
     assert again["status"] == "skipped"
-    assert len(env["kwargs"]["notifier"].read_all()) == 1
+    assert len(env["kwargs"]["notifier"].read_all()) == 2
 
 
 def test_changed_transcript_runs_again(env):

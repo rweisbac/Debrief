@@ -82,3 +82,54 @@ def save(payload: dict, path: Path = ASSET) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=1) + "\n", encoding="utf-8")
     return path
+
+
+def summary_text(record: dict, crm: dict) -> str:
+    """One line for the Slack notification preview: the account and the most important step."""
+    a = (record["artifacts"].get("assessment") or {}).get("current") or {}
+    steps = a.get("next_steps", [])
+    top = f" Most important: {steps[0]['action']}" if steps else " No new steps from this call."
+    return f"Debrief ready for {crm['account']}.{top}"[:300]
+
+
+def sc_card(record: dict, transcript: Transcript, crm: dict, commitments: list[dict]) -> dict:
+    """Slack card for the SC: only what is theirs. Steps they own, promises they made, open technical items."""
+    a = (record["artifacts"].get("assessment") or {}).get("current") or {}
+    ex = record.get("extraction") or {}
+    sc = crm["sc"]
+    blocks: list[dict] = [{"type": "header", "text": {"type": "plain_text", "text": f"Your items: {crm['account']}"[:150]}}]
+    labels = ["Synthetic data, fictional company."]
+    if record.get("source") == "sample":
+        labels.append(record["sample_label"])
+    blocks.append({"type": "context", "elements": [_text(" ".join(labels))]})
+    mine = [s for s in a.get("next_steps", []) if s["owner"] == sc]
+    for s in mine:
+        meta = f"Due: {s['due_by'] or 'no date'} | Rule: {s['playbook_rule_id']}"
+        if s.get("release_card_id"):
+            meta += f" | Use: {s['release_card_id']}"
+        why = f"*Why:* {s['why']}"
+        if s.get("evidence"):
+            why += "\n" + quote_line(transcript, s["evidence"][0]["utterance_id"])
+        blocks += [{"type": "section", "text": _text(f"*To do:* {s['action']}")},
+                   {"type": "context", "elements": [_text(meta)]},
+                   {"type": "section", "text": _text(why)}]
+    open_commitments = [c for c in commitments if not c["done"]]
+    if open_commitments:
+        lines = "\n".join(f"- {c['what']} (due {c['due'] or 'no date'})" for c in open_commitments)
+        blocks += [{"type": "divider"}, {"type": "section", "text": _text("*You said you would*\n" + lines)}]
+    mine_open = [o for o in ex.get("open_technical_items", []) if o["owner"] == sc]
+    if mine_open:
+        blocks.append({"type": "section", "text": _text(
+            "*Open technical items*\n" + "\n".join(f"- {o['summary']}" for o in mine_open))})
+    if not (mine or open_commitments or mine_open):
+        blocks.append({"type": "section", "text": _text("Nothing new for you from this call.")})
+    return {"blocks": blocks}
+
+
+def slack_safe(payload: dict, app_url: str = "") -> list[dict]:
+    """Blocks for a plain posted message. Buttons need an interactivity endpoint that this demo does not run,
+    so they are dropped and replaced with a link to the app where the same actions work."""
+    blocks = [b for b in payload["blocks"] if b["type"] != "actions"]
+    if app_url:
+        blocks.append({"type": "section", "text": _text(f"<{app_url}|Open in Debrief> to act on or dismiss a step.")})
+    return blocks
