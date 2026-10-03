@@ -11,15 +11,17 @@ Python 3.11, anthropic SDK (1.x, uses httpx2), pydantic v2, Streamlit, SQLite, p
 - `make demo`: Streamlit in replay mode with labeled sample cards (`DEBRIEF_SAMPLES=1`); never calls the API
 - `make record`: run the chain on all transcripts with `DEBRIEF_MODE=record`
 - `python scripts/smoke_test.py`: live API probe, results in docs/API_NOTES.md
+- `make capture`: confirm card, Slack interactions endpoint and capture dashboard (FastAPI, replay, sample cards)
+- `python evals/reference.py coverage`: next steps against the best practice reference answers
 
 ## Env
-`DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (live, record, replay; default replay), `ANTHROPIC_API_KEY` (`DEBRIEF_API_KEY` is used as a fallback, set in `src/config.py`), `DEBRIEF_SLACK_BOT_TOKEN`, `DEBRIEF_SLACK_CHANNEL`, `DEBRIEF_SLACK_USERS`, `DEBRIEF_APP_URL` (optional Slack delivery, see README), `DEBRIEF_RERECORD=1` (record mode overwrites fixtures), `DEBRIEF_STEP_RULES_PLACEMENT` (see D-07).
+`DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (live, record, replay; default replay), `ANTHROPIC_API_KEY` (`DEBRIEF_API_KEY` is used as a fallback, set in `src/config.py`), `DEBRIEF_SLACK_BOT_TOKEN`, `DEBRIEF_SLACK_CHANNEL`, `DEBRIEF_SLACK_USERS`, `DEBRIEF_APP_URL` (optional Slack delivery, see README), `DEBRIEF_RERECORD=1` (record mode overwrites fixtures), `DEBRIEF_STEP_RULES_PLACEMENT` (see D-07), `DEBRIEF_BEST_PRACTICE=1` (playbook v2 and the research-based prompts, see D-17), `DEBRIEF_SLACK_SIGNING_SECRET` (Slack buttons).
 
 ## Hard rules for model calls
 1. All model calls go through `src/llm.py`. No `anthropic.Anthropic()` anywhere else (scripts/smoke_test.py is the only exception).
 2. Every structured step uses `client.messages.parse(output_format=<PydanticModel>)`.
 3. Never send temperature, top_p, top_k, assistant prefill, forced tool_choice, thinking budgets, or `thinking: disabled`.
-4. Effort per step: extract low, assess_and_recommend medium, draft low, verify medium.
+4. Effort per step: extract low, capture low, assess_and_recommend medium, draft low, verify medium, judge medium.
 5. Read response content blocks by type. Never index `content[0]`.
 6. `max_tokens` stop: retry once with 2x max_tokens. `refusal` stop: log, surface in UI, never retry.
 7. Retry only on max_tokens or a failed semantic validator. Max 1 retry, with the validator error appended as feedback.
