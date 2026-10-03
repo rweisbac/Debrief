@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "aa3514827ad81f77a99211c9103a388ed32b72297c56e8c1c040ce403afa57d8",
+ "recorded_at": "2026-10-03T19:16:09.821908+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cffqf56yMysEN234rPrw7",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Halvorsen Freight recap and Oct 8 session with Elena\",\"body\":\"Hi Dana, Mikkel and Grace,\\n\\nThanks for today. What we saw: ingest replayed at 40,000 per second for twenty minutes with lag under four seconds at p95, 298 of your dbt models ran in eleven minutes, and the late load model flagged loads on streaming data. The warehouse connector syncs continuously, about a minute end to end, not hourly as I said earlier. Priya will send the release note.\\n\\nOpen items:\\n- Mikkel sends a sample of the partner hierarchy table Monday morning. Priya will email where to drop it.\\n- Priya builds the partner row level policy from it and shows it working by Tuesday, October 6.\\n- Grace's team owns the fix for the two macro-related models.\\n\\nNext: Thursday, October 8, 2pm Central, 45 minutes with Elena, focused on the late load scenario and commercials. The invite is coming to Dana and Elena. We will bring a realistic onboarding plan.\\n\\nIf anything here is wrong, just reply.\\n\\nSam\",\"customer_value_line\":\"The late load model flagged a load at 1:12 into the run, where the overnight batch flagged it eighteen hours later, which is the catch while dispatch can still reroute it that Dana described.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Ingest lag stayed under four seconds at p95 the whole time.\"},{\"utterance_id\":\"U029\",\"excerpt\":\"Total run time was eleven minutes versus, what did you say, around forty today?\"},{\"utterance_id\":\"U038\",\"excerpt\":\"The warehouse connector does continuous sync now, about a minute end to end.\"},{\"utterance_id\":\"U036\",\"excerpt\":\"This one flagged at 1:12 into the run.\"},{\"utterance_id\":\"U035\",\"excerpt\":\"If we know at hour two of a five hour run that a trailer is going to miss the window, dispatch can swap drivers or call the consignee.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"I can have that back to you by Tuesday the sixth.\"},{\"utterance_id\":\"U075\",\"excerpt\":\"I'll get the sample over Monday morning.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"Thursday October 8th, 2pm Central, forty five minutes.\"},{\"utterance_id\":\"U077\",\"excerpt\":\"We'll come with a realistic onboarding plan, not a glossy one.\"},{\"utterance_id\":\"U081\",\"excerpt\":\"Mikkel, watch for an email from me with where to drop the file.\"},{\"utterance_id\":\"U062\",\"excerpt\":\"Same. The macro thing is on us. I'm good.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9585,
+   "cache_creation_input_tokens": 10458,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 10458,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 914,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

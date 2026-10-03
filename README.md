@@ -36,7 +36,7 @@ Python 3.11. `pip install -r requirements.txt`.
 
 Environment: `ANTHROPIC_API_KEY`, `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
 
-**Current status (be clear about this in a walkthrough).** Real model output was recorded on 2026-10-03 for all 5 synthetic deals (76 live calls on `claude-sonnet-5-5`, none refused). The app in replay mode shows those debriefs; `make demo` still shows the two hand-written sample cards, labeled as samples. Offline eval scores from `evals/results.md` (1 run per deal, replay, judge uncalibrated): deal state matches the gold label on 3 of 5 deals, grounding passes on 3 of 5, the overclaim check passes on 4 of 5, steps pass on 5 of 5, and all 6 trap checks and both adversarial checks pass. Failures are listed in `evals/results.md` and not fixed yet. The verifier ablation is in `evals/ablation.md`: with the verifier the planted errors caught were 5 of 5 for changed numbers (4 of 5 without), 5 of 5 for uncommitted promises (4 of 5 without), 5 of 5 for superseded features (0 of 5 without) and 5 of 5 for invented people (5 of 5 without). It raised 1 false alarm on 5 clean drafts (deal_c), none without. These are one-run, small-sample numbers on synthetic data, not a performance claim.
+**Current status (be clear about this in a walkthrough).** Real model output was recorded twice on 2026-10-03 for all 5 synthetic deals on `claude-sonnet-5-5` (76 live calls each time, none refused). Run 2 follows the fixes in DECISIONS D-15; run 1 is kept in `evals/history/`. The app in replay mode shows the recorded debriefs; `make demo` still shows the two hand-written sample cards, labeled as samples. Offline eval scores from `evals/results.md` (1 run per deal, judge uncalibrated), run 1 then run 2: deal state matches the gold label on 3 then 4 of 5 deals; the judge passes 1 of 13 then 4 of 11 next steps; commitment recall is 23 of 23 then 22 of 23; open item recall is 6 of 10 then 8 of 10. In run 2 no grounding problem reached a draft a rep could approve in one tap (deal_c's internal summary is blocked for review), deal_b's recap is blocked by a likely false alarm, and trap T6 on deal_b regressed. The verifier ablation (`evals/ablation.md`) catches 20 of 20 planted errors with the verifier and 14 of 20 without, with 0 false alarms on 5 clean drafts. These are one-run, small-sample numbers on synthetic data, not a performance claim.
 
 ### Automatic trigger
 
@@ -136,7 +136,7 @@ No metric target is ever shown as a result, and nothing here claims causation.
 
 ## Cost and latency
 
-Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run per deal, Sonnet 5.5, 7 calls per debrief (two extract calls, assess, three drafts, verify). Judge calls are excluded. Cost uses the rates in `src/config.py`; the cache write rate is still an assumption.
+Run 1, measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run per deal, Sonnet 5.5, 7 calls per debrief (two extract calls, assess, three drafts, verify). Judge calls are excluded. Cost uses the rates in `src/config.py`; the cache write rate is still an assumption.
 
 | Deal | Calls | Cost | Summed call latency | Cache read tokens |
 |---|---|---|---|---|
@@ -150,6 +150,19 @@ Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run pe
 - Latency per debrief: summed call time averages 118 s (83 to 153 s). If the three drafts run in parallel as designed, the critical path from the logged call times averages about 106 s (74 to 141 s). This is derived from per-call latency. End to end wall clock was not measured.
 - Cache: reads were observed, but small. Calls read only about 3.4k to 5.5k tokens each (the shared reference), while each call also wrote 6.7k to 11k new tokens, so the transcript prefix is not being reused across steps. deal_a read nothing; it was the first deal recorded. The cause is not established. Dollar savings from caching: not measured.
 - deal_c and deal_x have 9 and 8 calls because of one retry or regeneration each; the extra calls are in `llm_calls`.
+
+Run 2 (after D-15), same setup. More drafts are rewritten once under the stricter gates, so there are more calls per debrief.
+
+| Deal | Calls | Cost | Summed call latency | Cache read tokens |
+|---|---|---|---|---|
+| deal_a | 9 | $0.550 | 127 s | 21,737 |
+| deal_b | 9 | $0.423 | 111 s | 50,408 |
+| deal_c | 10 | $0.506 | 135 s | 61,548 |
+| deal_x | 9 | $0.199 | 56 s | 42,615 |
+| deal_y | 8 | $0.367 | 94 s | 37,982 |
+
+- Cost per debrief: mean $0.409, range $0.199 to $0.550. Total API spend for run 2, including judge and ablation calls, was $2.47 over 76 live calls.
+- Latency per debrief: summed call time averages 105 s (56 to 135 s). End to end wall clock was not measured.
 
 ## Production path
 

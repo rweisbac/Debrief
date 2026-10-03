@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "1a2d2c3a094eb60fab3155a2c518af2d55fd57f3cbfaa09f8c64e485dbdd2880",
+ "recorded_at": "2026-10-03T19:18:57.473291+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqsTirQSb5KfbxPeN5u",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Meridian Health Partners: recap of today's validation session\",\"body\":\"Hi Aisha, Leo and Nora,\\n\\nThanks for the time today. In the sandbox, the incremental readmission pipeline ran in nine minutes on the de-identified extract, and each row shows its top three drivers.\\n\\nOpen on our side:\\n- SSO: Marcus will take the nested mhp_roles claim question to our identity team today and get Leo something he can put in front of Raj. Apex maps flat claims today.\\n- Written SSO design for the committee.\\n- Encryption whitepaper to Nora.\\n- Jordan will check whether the demo recording can be shared and come back to Nora.\\n- Security packet to Aisha, copying Raj, ahead of the October 9th committee.\\n\\nOn your side: procurement sends the vendor questionnaire.\\n\\nWe noted the question of notifying care managers when someone drops off the list as one to work through with Nora's care management team.\\n\\nWe will hold off on a meeting until you have seen the SSO answer.\\n\\nJordan\",\"customer_value_line\":\"The incremental pipeline supports your goal of moving the readmission list from weekly to daily, so care managers can call patients the morning after discharge.\",\"evidence\":[{\"utterance_id\":\"U027\",\"excerpt\":\"The whole goal is daily. If a care manager gets the list the morning after discharge, they can call while the patient still remembers who we are.\"},{\"utterance_id\":\"U028\",\"excerpt\":\"Last night's run took nine minutes.\"},{\"utterance_id\":\"U034\",\"excerpt\":\"Yes, each row has the top three drivers.\"},{\"utterance_id\":\"U023\",\"excerpt\":\"Yes. I'll take that to our identity team today.\"},{\"utterance_id\":\"U073\",\"excerpt\":\"Fair. I'll get you something you can actually put in front of him.\"},{\"utterance_id\":\"U061\",\"excerpt\":\"Send it to me and copy Raj. He likes to see who it came from.\"},{\"utterance_id\":\"U051\",\"excerpt\":\"I'll send you our encryption whitepaper\"},{\"utterance_id\":\"U067\",\"excerpt\":\"We'll check what we can share given it's your de-identified data. I'll come back to you on that.\"},{\"utterance_id\":\"U046\",\"excerpt\":\"I'll note it as something to work through with your care management team.\"},{\"utterance_id\":\"U075\",\"excerpt\":\"Let's see what the answer is first. If it's simple, an email is fine. If it's complicated, we'll set something up.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 8990,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10107,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 834,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

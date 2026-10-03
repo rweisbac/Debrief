@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "cf7d3163f25ae809a2c450aada29910d053d03a495d0f4a5cfa1b16b7614edee",
+ "recorded_at": "2026-10-03T19:20:08.103722+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqxhEaUdyCZukyeGW4n",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Corvid replenishment validation\",\"body\":\"Hi Ben, Helen and Raymond,\\n\\nThanks for your time today. Here is a short recap.\\n\\nWhat we showed: store sales and ship from store orders merged in one model, refreshed every five minutes, with the replenishment signal and Teams alerts. About four percent of SKU rows did not match through your crosswalk table. Those are in an exceptions table.\\n\\nOpen items:\\n- Tom will send Raymond the exceptions table.\\n- I will put together a compute pricing range once Tom has looked at the full store count.\\n- Tom wants to test seasonality on your history before promising how it handles peak.\\n- The crosswalk needs an owner on your side.\\n\\nHelen, we heard your concern about team effort. We can share a short outline of how onboarding would work, with named owners and effort by role. Would that be useful?\\n\\nNo date was set for a next conversation. What would suit you?\\n\\nBest,\\nElise\",\"customer_value_line\":\"The merged view with ship from store orders is aimed at store managers knowing by mid afternoon what to reorder, instead of finding out from an empty shelf the next morning.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Store sales and ship from store orders in one model, updated every five minutes.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About four percent of rows didn't match, they're in this exceptions table.\"},{\"utterance_id\":\"U086\",\"excerpt\":\"Raymond, I'll send over the exceptions table so you can look at those unmatched rows.\"},{\"utterance_id\":\"U044\",\"excerpt\":\"I don't want to throw a number out before Tom has looked at the full store count, but I can put together a range.\"},{\"utterance_id\":\"U036\",\"excerpt\":\"I'd want to see it on your history before I promise how well it handles peak.\"},{\"utterance_id\":\"U068\",\"excerpt\":\"The last platform migration took my team four months and I lost two engineers at the end of it.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"the goal was that a store manager knows by mid afternoon what to reorder, instead of finding out from an empty shelf the next morning.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9891,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10301,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 730,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

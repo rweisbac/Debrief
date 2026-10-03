@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "78906a16da9f172b5af53fb0ee1983939b3c409e4930aa7dad415eaf412e8a4c",
+ "recorded_at": "2026-10-03T19:16:15.212145+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cffqf57E5W6a3SopV1NsT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Ready to advance: no platform blockers, dated 45 min session with COO Elena Varga on 2026-10-08 2pm CT; only technical open item is the partner hierarchy policy, due 2026-10-06.\",\"customer_value_line\":\"Dana's outcome in her words: with a flag at hour two of a five hour run, dispatch can swap drivers or call the consignee instead of learning the next morning; in the 11 day sample the model flagged 214 loads that later missed their window, median flag about two hours before the window closed.\",\"what_we_validated\":[\"Ingest: replay at 40,000 per second for twenty minutes (peak is about 38,000 per second), ingest lag under four seconds at p95, queues rather than drops, default lag alert 60 seconds\",\"dbt: about 300 models run as is; 298 ran in eleven minutes vs about forty today; 2 failed on a custom macro with an external API call at compile\",\"Late load detection on streaming data: one load flagged at 1:12 into the run vs 18 hours later by the overnight batch\",\"Warehouse connector continuous sync, about a minute end to end, default for new connections (RC-12)\"],\"integration_patterns\":[\"Telematics events ingested into Apex; warehouse connector on continuous sync (about a minute end to end) feeds the late load model and dispatch dashboards\",\"Existing dbt core models run as is on the Apex runner; failed models appear in the run log with model name and compile error, downstream models marked skipped\"],\"objections_and_answers\":[\"Grace: hourly sync might be tight for dispatch dashboards. Priya corrected: continuous sync, about a minute, per RC-12. Grace: a minute is fine. Resolved\",\"Dana: how many late loads would we have saved? Priya declined to overclaim and gave the sample figures; ops decides if dispatch could act. Dana called it more useful than a big number; her reply to the 90 day measurement idea was a muted 'Mm.' Partially resolved\",\"Time to value: Elena was burned on a prior project that took eight months to show anything. Sam promised a realistic onboarding plan. Open, no plan with named owners yet\"],\"open_items\":[\"Partner hierarchy row level policy (partners with sub carriers) needs validation on Mikkel's sample; owner Priya; depth of hierarchy unknown, RC-07 covers one parent and child level out of the box\",\"Grace to fix or retire the custom Jinja macro (seed table or pre-hook, about a day for one engineer); on customer, not blocking\",\"Onboarding plan for the Oct 8 session: proposed Guided onboarding outline (RC-13) with named owners and customer hours per week by role; owner Sam, route via Priya, due 2026-10-02\"],\"commitments\":[\"Mikkel: send partner hierarchy table sample (even fifty rows) Monday 2026-10-05\",\"Priya: build partner hierarchy policy in sandbox and show it working by Tue 2026-10-06\",\"Priya: send the connector release note (no date given; not logged in CRM)\",\"Priya: email Mikkel where to drop the file (no date given)\",\"Priya: show lag alert config later if Mikkel wants it (no date given)\",\"Sam: send Oct 8 invite to Dana and Elena right after the call, 2026-09-30\",\"Sam: send recap today 2026-09-30 with what was seen, open partner hierarchy item, and Thursday agenda\",\"Sam: bring a realistic onboarding plan to the Oct 8 session\"],\"stakeholders\":[\"Dana Ortiz, VP Data, champion, present\",\"Mikkel Strand, Data Platform Lead, technical evaluator, present\",\"Grace Oyelaran, Analytics Engineering Manager, technical evaluator, present\",\"Elena Varga, COO, economic buyer who owns the budget line, absent; cares about detention fees, scenario three, and time to value; keep session to scenario three per Dana\",\"Tom, wrote the failing macros, absent, title not stated\"],\"competitive_notes\":[],\"risks\":[\"Elena has not seen anything and her views are relayed only by Dana; commercials are planned for her first session\",\"Partner hierarchy not validated; depends on Mikkel's Monday sample and hierarchy depth is unknown\",\"Time to value concern: onboarding plan promised but not yet scoped with owners\",\"Sam's old deck still says hourly sync; replace before Oct 8\",\"Dana gave no saved loads figure to expect; mild risk\"],\"evidence\":[{\"utterance_id\":\"U035\",\"excerpt\":\"If we know at hour two of a five hour run that a trailer is going to miss the window, dispatch can swap drivers or call the consignee.\"},{\"utterance_id\":\"U038\",\"excerpt\":\"The warehouse connector does continuous sync now, about a minute end to end.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"I can have that back to you by Tuesday the sixth.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"Thursday October 8th, 2pm Central, forty five minutes.\"},{\"utterance_id\":\"U066\",\"excerpt\":\"Elena's the COO, and she owns the budget line for this.\"},{\"utterance_id\":\"U076\",\"excerpt\":\"She got burned on the last platform project, it took eight months to see anything.\"},{\"utterance_id\":\"U045\",\"excerpt\":\"in the eleven day sample, the model flagged 214 loads that later missed their window\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9460,
+   "cache_creation_input_tokens": 10909,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 10909,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1798,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

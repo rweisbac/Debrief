@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "06f36cecef04e83ec20f9240d22df0b39925f7774b262fc7d505c116ed7c3bf7",
+ "recorded_at": "2026-10-03T19:26:34.475011+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrSy47g5JP2r9dxruuD",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"As a reminder, the warehouse connector syncs in hourly batches.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"RC-12 (released 2026-08-12) says the warehouse connector now syncs continuously, about 1 minute end to end, so the hourly batch claim is outdated; the warehouse connector also never came up in the call.\",\"utterance_ids\":[]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"I will put together a compute pricing range once Tom has looked at the full store count.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Elise said she could put together a range after Tom looked at the full store count, and Ben asked for one, so this is a fair reflection of what was said (no date given, which the email does not invent).\",\"utterance_ids\":[\"U044\",\"U045\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"We can share a short outline of how onboarding would work, with named owners and effort by role. Would that be useful?\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Phrased as an offer and a question, not a commitment, so it does not promise anything nobody agreed to; it also fits PB-10 and RC-13.\",\"utterance_ids\":[\"U068\",\"U071\",\"U072\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Tom wants to test seasonality on your history before promising how it handles peak.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Matches Tom's own caveat that he wants to see it on their history before promising peak performance; no extra commitment is made.\",\"utterance_ids\":[\"U036\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence: U014, U017, U086, U044, U036, U068, U012 attached to the recap's claims\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt appears in its cited line and supports the recap statement it backs; the customer value line ties to the outcome Tom restated in U012, matching discovery and Ben's confirmation in U013.\",\"utterance_ids\":[\"U012\",\"U013\",\"U014\",\"U017\",\"U036\",\"U044\",\"U068\",\"U086\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"No date was set for a next conversation. What would suit you?\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"Asking an open question about a date after Ben deferred ('Let's just play it by ear') leans toward chasing a deferred meeting (PB-09), and the email does not state a concrete, customer-specific offer such as sending the cost range or an onboarding outline by a date.\",\"utterance_ids\":[\"U081\",\"U083\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Open items: Tom will send Raymond the exceptions table.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Tom said he would send the exceptions table to Raymond; the email states this accurately and adds no date, which is not stated in the call.\",\"utterance_ids\":[\"U086\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1321,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10671,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1033,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

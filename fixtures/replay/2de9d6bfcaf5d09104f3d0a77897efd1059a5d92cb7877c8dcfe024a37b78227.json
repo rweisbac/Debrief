@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "2de9d6bfcaf5d09104f3d0a77897efd1059a5d92cb7877c8dcfe024a37b78227",
+ "recorded_at": "2026-10-03T19:17:07.798511+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqiufZ9jPt6EPYYjb7s",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Ready to advance: no platform blockers, dated 45 min session with COO Elena Varga on Oct 8 2pm CT; only technical item open is the partner hierarchy policy.\",\"customer_value_line\":\"Dana's outcome in her words: if we know at hour two of a five hour run that a trailer will miss the window, dispatch can swap drivers or call the consignee; the late load model flagged one load at 1:12 into the run versus 18 hours later by overnight batch.\",\"what_we_validated\":[\"Ingest: replay at 40,000 per second for twenty minutes (customer peak is about 38,000 per second), lag under four seconds at p95, queues rather than drops, default alert threshold sixty seconds\",\"dbt core: 298 of about three hundred models ran as is in eleven minutes versus around forty today; two failed on a custom macro making an external API call at compile\",\"Late load detection on streaming data: in the eleven day sample the model flagged 214 loads that later missed their window, median flag about two hours before the window closed\",\"Warehouse connector continuous sync, about a minute end to end, default for new connections (RC-12); Grace said a minute is fine\"],\"integration_patterns\":[\"Telematics events ingested into Apex, warehouse connector on continuous sync feeding the late load model and dispatch dashboards\",\"Existing dbt core models run as is on the Apex runner\",\"Row level policies keyed on partner ID for carrier partner dashboards (hierarchy not yet validated)\"],\"objections_and_answers\":[\"Hourly sync too tight for dispatch dashboards (Grace): Priya corrected to continuous sync, about a minute; Grace said a minute is fine. Resolved\",\"How many late loads would we have saved (Dana): Priya declined to overclaim and gave the 214 flagged loads and median two hours; Dana called it more useful than a big number; Sam proposed measuring in the first ninety days, Dana replied only 'Mm'. Partially resolved\",\"Time to value for Elena, burned by an eight month project (Dana): Sam promised a realistic onboarding plan; no plan with named owners yet. Open\"],\"open_items\":[\"Partner hierarchy row level policy with sub carriers: needs Mikkel's sample table; Priya to build and show it (RC-07 supports one parent and child level, deeper needs validation on customer data)\",\"Fix or retire custom Jinja macro that makes an external API call at compile (seed table or pre-hook, maybe a day for one engineer): Grace, customer-owned\",\"Onboarding plan for the Oct 8 session: owner and customer effort by role not yet defined\"],\"commitments\":[\"Mikkel Strand: send partner hierarchy sample (even fifty rows) Monday morning (Oct 5)\",\"Priya Raman: build partner hierarchy policy in sandbox and show it working, by Tuesday Oct 6\",\"Priya Raman: send the warehouse connector release note, no date stated, not yet logged in CRM\",\"Priya Raman: email Mikkel where to drop the file, no date stated\",\"Priya Raman: show the lag alert config later if Mikkel wants it\",\"Sam Lee: send invite for Oct 8 to Dana and Elena right after the call, and send a recap today with what we saw, the partner hierarchy open item and the Thursday agenda\",\"Sam Lee: bring a realistic onboarding plan to the Oct 8 session\"],\"stakeholders\":[\"Dana Ortiz, VP Data, champion, present\",\"Mikkel Strand, Data Platform Lead, technical evaluator, present\",\"Grace Oyelaran, Analytics Engineering Manager, technical evaluator, present\",\"Elena Varga, COO, owns the budget line and signs off, absent; cares about detention fees, scenario three and time to value; Dana asked to keep the session to scenario three\",\"Tom, wrote the failing Jinja macros, absent, title not stated\"],\"competitive_notes\":[],\"risks\":[\"Elena has not seen the demo and her views are relayed by Dana; commercials are planned for her first session\",\"Time to value: her last platform project took eight months to show anything; onboarding plan only promised in general terms\",\"Partner hierarchy depth unknown and depends on Mikkel's sample arriving Monday\",\"Sam's old deck still says hourly sync; replace before Oct 8\",\"Dana's enthusiasm is not a decision\"],\"evidence\":[{\"utterance_id\":\"U035\",\"excerpt\":\"If we know at hour two of a five hour run that a trailer is going to miss the window, dispatch can swap drivers or call the consignee.\"},{\"utterance_id\":\"U036\",\"excerpt\":\"This one flagged at 1:12 into the run.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Ingest lag stayed under four seconds at p95 the whole time.\"},{\"utterance_id\":\"U029\",\"excerpt\":\"Total run time was eleven minutes versus, what did you say, around forty today?\"},{\"utterance_id\":\"U038\",\"excerpt\":\"The warehouse connector does continuous sync now, about a minute end to end.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"I can have that back to you by Tuesday the sixth.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"Thursday October 8th, 2pm Central, forty five minutes.\"},{\"utterance_id\":\"U066\",\"excerpt\":\"Elena's the COO, and she owns the budget line for this.\"},{\"utterance_id\":\"U076\",\"excerpt\":\"She got burned on the last platform project, it took eight months to see anything.\"},{\"utterance_id\":\"U077\",\"excerpt\":\"We'll come with a realistic onboarding plan, not a glossy one.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9575,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10909,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1882,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

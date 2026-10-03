@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "10f00583e05f6d0408cc8453b73a705a10ac7adbfced9b6407673c173bda012b",
+ "recorded_at": "2026-10-03T19:26:57.499898+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrUduFpPtqpmuuxubRu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence excerpts U009, U013, U011, U016, U030, U031 against the claims they support\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt is word for word from its line and supports the claim it is attached to (six minute ingest, twelve failed rows, text columns, Lily's offer to send, Priya's send today).\",\"utterance_ids\":[\"U009\",\"U013\",\"U011\",\"U016\",\"U030\",\"U031\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Owen, I'll reach out about finding a time to finish the demo.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Nate said 'I'll reach out to him' in U030 after proposing another time, so this is committed, though no date was given.\",\"utterance_ids\":[\"U028\",\"U030\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Priya will send the twelve failed rows and a short note on the two text columns today.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Priya committed in U031 to send the failed rows and the note today, matching the email.\",\"utterance_ids\":[\"U030\",\"U031\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Lily, thanks for offering to send your list so Priya can compare it against ours.\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"Lily said 'I can send it' in U016 but gave no date, and the email frames it as a committed task with no timing; it is also addressed to Owen as well as Lily, who is a loose commitment, so it should be worded as an offer without a deadline.\",\"utterance_ids\":[\"U014\",\"U015\",\"U016\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Owen, please confirm whether they should be numbers. / Does the summary view match what you had in mind?\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email does not claim any buying signal; it correctly leaves Owen's lukewarm 'Sort of. I'd have to think about it' as an open question.\",\"utterance_ids\":[\"U012\",\"U020\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Priya will send the twelve failed rows and a short note on the two text columns today.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Scope and timing match what Priya agreed to in U030 and U031 and nothing broader is promised.\",\"utterance_ids\":[\"U030\",\"U031\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"Owen, I'll reach out about finding a time to finish the demo.\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"The next step has no date and does not meet PB-02; the email also omits any ask for the business outcome (PB-07), the economic buyer or decision process, or a second contact path, leaving only a vague reach-out.\",\"utterance_ids\":[\"U028\",\"U029\",\"U030\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"We also showed claims by line of business by week, with a state filter and links down to the underlying rows. (freshness indicator not mentioned)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email makes no freshness or sync claims, so no superseded warehouse connector behavior is presented as current.\",\"utterance_ids\":[\"U017\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"customer_value_line: not stated\",\"passed\":true,\"severity\":\"low\",\"finding\":\"No customer outcome was stated in the call or CRM discovery notes, so 'not stated' is faithful and nothing is invented.\",\"utterance_ids\":[\"U007\",\"U020\",\"U025\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1118,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6355,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1247,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

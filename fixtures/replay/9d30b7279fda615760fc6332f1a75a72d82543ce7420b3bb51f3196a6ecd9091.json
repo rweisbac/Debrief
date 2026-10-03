@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "9d30b7279fda615760fc6332f1a75a72d82543ce7420b3bb51f3196a6ecd9091",
+ "recorded_at": "2026-10-03T19:22:00.040565+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cffr6rqGB2YGU7wvvE9Yf",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: Owen, the technical evaluator, left early after a lukewarm reaction, and no next meeting is dated.\",\"customer_value_line\":\"Business outcome not stated; discovery only noted manual claims file loads as a pain.\",\"what_we_validated\":[\"Claims file loaded into the sandbox, partitioned by state; default setup ingest ran in about six minutes\",\"Schema inferred from file and checked by hand against the customer's data dictionary\",\"Quality checks flagged twelve rows failing the date format check\",\"Summary view of claims by line of business by week shown, with state filter, drill-down to claims and a freshness indicator\"],\"integration_patterns\":[],\"objections_and_answers\":[\"Owen: summary view fits his need only 'sort of' and he has to think about it; no answer given yet; open\"],\"open_items\":[\"Paid amount and allowed amount columns still text; Owen said 'Probably numbers', not firmly confirmed; owner Priya Raman\",\"Whether Apex's twelve failed date rows match the customer's twelve is unconfirmed; needs Lily's list; owner Priya Raman\",\"Whether the summary view meets Owen's needs is unresolved\",\"No dated next meeting; Lily said Owen's calendar is a mess this month\"],\"commitments\":[\"Priya Raman: send the twelve failed rows and a short note on the two text columns, today (2026-09-29)\",\"Nate Kowalski: reach out to Owen about another time to finish; no date given\",\"Lily Chen: send her list of the twelve failed rows; no date given\",\"Lily Chen: tell Owen what she saw in the demo\"],\"stakeholders\":[\"Owen Marsh, Data Architect, technical evaluator, present but dropped early\",\"Lily Chen, Senior Analyst, user, present and stayed a couple of minutes\",\"Economic buyer and champion: not stated\"],\"competitive_notes\":[],\"risks\":[\"Technical evaluator gave a non-committal reaction and left without feedback\",\"Follow-up with Owen uncertain; no date agreed\",\"Only two customer contacts engaged, one a user with limited interest; no economic buyer, champion or decision process known\"],\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"Ingest ran in about six minutes.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Twelve rows failed the date format check, they're in this table.\"},{\"utterance_id\":\"U029\",\"excerpt\":\"You'd have to ask him. His calendar is a mess this month.\"},{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"},{\"utterance_id\":\"U025\",\"excerpt\":\"I mostly wanted to see the file loaded. I'll tell Owen what I saw.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4049,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6436,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 940,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

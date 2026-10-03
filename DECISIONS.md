@@ -123,6 +123,8 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 All prompts started at v1 (checkpoint 2). Each change gets a new v<N> file and an entry here.
 
 - draft_recap_email v2 (checkpoint 3, D-14): asks for no quotation marks, so the model cannot put words in the customer's mouth. Exact quotes are rendered by the app from the transcript. Motivated by the reviewer finding, not by an eval result (no recording exists yet).
+- assess_and_recommend v2 (D-15): each step is the 10 minute first move; routine post-demo steps do not qualify on their own. Motivated by run 1 judge results.
+- extract v3 (D-15): customer stakeholders only; open items cite the line where raised. Motivated by run 1 precision and open item recall.
 
 ## Things I chose not to build and why
 
@@ -155,6 +157,27 @@ All prompts started at v1 (checkpoint 2). Each change gets a new v<N> file and a
 - What I changed: the extraction is requested in two parts (`ExtractionPartA`, `ExtractionPartB`), run one after the other and merged in code into the same `ExtractionRecord`, so downstream steps are unchanged. Chain is now 7 calls per debrief. Prompts bumped to extract v2 and extract_b v1.
 - Evidence of fix (eval or test, before and after): before, 400 on the first live call (deal_a). After, both parts parsed with no validator errors on all 5 deals. tests/regressions/test_extraction_split.py keeps the merged schema out of the request path and the merge lossless. Cost: two extract calls at about $0.065 each on deal_a.
 - What I would do in production: run the live smoke test on every schema change, since only the live API enforces this limit.
+
+## D-15: first recorded run showed weak steps, a forced deal state and two approvable errors
+- Step and prompt version: assess_and_recommend v1 to v2, extract v2 to v3, src/rules.py R-WAIT, src/chain.py, src/checks.py, evals/scoring.py
+- What the AI produced: run 1 (2026-10-03, `evals/history/results_run1_2026-10-03.md`). The uncalibrated judge passed 1 of 13 next steps: 10 failed "doable in 10 minutes" and 8 failed "non-obvious". R-WAIT forced deal_b to waiting_on_customer although Apex still owed the written SSO design. On deal_c the verifier rated an uncommitted promise in the recap ("We will come back with a plan") medium, so the recap stayed one-tap approvable, and the rewritten internal summary kept 2026-10-09, a date nobody said, because the date check was medium. The eval table read "Needs review: none" next to grounding FAIL because the scorer only reads first drafts.
+- Why it was wrong: steps were whole deliverables (an onboarding plan, a pricing range) or routine moves (send the recap, flag the competitor). A deal is not waiting on the customer while Apex owes an open item. A promise nobody made in the call must never be one-tap approvable in the customer email.
+- What I changed:
+  - assess_and_recommend v2: each step is the 10 minute first move that starts the bigger deliverable; routine post-demo steps do not qualify on their own.
+  - extract v3: customer stakeholders only; open items cite the line where the question was raised.
+  - R-WAIT does not fire when an Apex participant owns an open technical item.
+  - email_promises_uncommitted on the recap blocks approval at any verifier severity.
+  - Dates not said in the call are high severity in the recap and internal summary.
+  - The eval table shows grounding for the first draft and the final draft (pass, blocked, or FAIL when a problem reaches an approvable draft). Run 1 results are kept in `evals/history/`.
+- Evidence of fix (eval or test, before and after): run 2, 1 run per deal, $2.47 over 76 live calls, none refused.
+  - Judge: 1 of 13 steps passed before, 4 of 11 after. Failing "10 minutes": 10 of 13 before, 5 of 11 after. Failing "non-obvious": 8 of 13 before, 4 of 11 after. The judge is uncalibrated and v2 was written after reading its critiques, so this can be teaching to the judge until hand labels exist.
+  - Deal state: 3 of 5 before, 4 of 5 after (deal_b now open_technical_gap; R-WAIT did not fire).
+  - Final grounding: no grounding failure reached an approvable draft on any deal; deal_c's internal summary is blocked for review.
+  - Open item recall 6 of 10 to 8 of 10; stakeholder precision 19 of 25 to 19 of 21.
+  - Regressions: commitment recall 23 of 23 to 22 of 23 (missed deal_b "write down anything security related for Raj"); objection recall 9 of 12 to 8 of 12; trap T6 on deal_b now fails because the top step is the SSO answer, not the security packet; deal_b's recap is now blocked by a likely false alarm (the verifier called the written SSO design uncommitted, but the customer asked for it in U058 and U059 and Marcus took it on in U073). Mean cost per debrief rose from $0.375 to $0.409.
+  - Ablation: false alarms on clean drafts 1 of 5 before, 0 of 5 after; planted errors caught with the verifier 20 of 20 both times.
+  - Tests: tests/regressions/test_r02_recorded_run_gates.py.
+- What I would do in production: run 3 or more runs per deal before reading any change, because one run per deal cannot separate a prompt effect from sampling noise. Hand-label the judge set before tuning prompts against it again. Track how often the recap promise gate blocks drafts a rep then sends unedited; that is the false alarm rate for this rule. Still open: deal_c's gold label says competitive_risk, but the prompt tells the model to use waiting_on_customer when a customer process has no date, and Ben deferred with no date. The label and the prompt disagree; the product owner should decide which is right rather than tuning the model to the label.
 
 ## What breaks first
 

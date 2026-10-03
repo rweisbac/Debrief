@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "4f3edd7d66155d40f92f83901c7724c427c1e0a1f689cebadeacedade826d729",
+ "recorded_at": "2026-10-03T19:18:15.995379+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqpUa7Knm2n8d9n1LDp",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Meridian recap: readmission pipeline, SSO and next steps\",\"body\":\"Hi Aisha, Leo and Nora,\\n\\nThanks for the time today. Here is where we landed.\\n\\nValidated: the readmission pipeline ran incrementally on your de-identified extract in nine minutes, with the top three drivers on each row and a change log when late claims restate a score.\\n\\nOpen:\\n- SSO: Apex maps flat claims today, and mhp_roles is nested. Marcus is taking the nested claim question to our identity team today and will get Leo something he can put in front of Raj.\\n- Drop-off notifications: I will work through this with Nora's care management team.\\n- Demo recording: I will check what we can share given the de-identified data and come back to Nora.\\n- Marcus will send Nora the encryption whitepaper.\\n\\nFor the October 9th committee, we will send the packet to Aisha, copying Raj. Aisha, thanks for having procurement send the questionnaire.\\n\\nOne note on customer managed keys: they run on major cloud key services, and on-premises HSMs are not supported.\\n\\nJordan\",\"customer_value_line\":\"The incremental pipeline is aimed at your goal of moving the readmission risk list from weekly to daily so care managers can call patients the morning after discharge.\",\"evidence\":[{\"utterance_id\":\"U027\",\"excerpt\":\"The whole goal is daily. If a care manager gets the list the morning after discharge, they can call while the patient still remembers who we are.\"},{\"utterance_id\":\"U028\",\"excerpt\":\"Last night's run took nine minutes.\"},{\"utterance_id\":\"U023\",\"excerpt\":\"Yes. I'll take that to our identity team today.\"},{\"utterance_id\":\"U073\",\"excerpt\":\"Fair. I'll get you something you can actually put in front of him.\"},{\"utterance_id\":\"U061\",\"excerpt\":\"Send it to me and copy Raj. He likes to see who it came from.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 8820,
+   "cache_creation_input_tokens": 6753,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6753,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 653,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

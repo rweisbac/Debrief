@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "75332063365bae386a6031d2cdf68921af96a892c8206b0c4530824f11f22279",
+ "recorded_at": "2026-10-03T19:20:02.823170+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqxHTb78rzzJJffaSPy",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Corvid replenishment validation, Oct 1\",\"body\":\"Hi Ben, Helen and Raymond,\\n\\nThanks for the time today. Here is what we covered.\\n\\nValidated in the sandbox: store sales and ship from store orders merged into one model refreshed every five minutes, a replenishment signal per store and SKU, and Teams alerts that can also route to district managers. About four percent of rows did not match through your SKU crosswalk; those sit in an exceptions table.\\n\\nOpen items:\\n- Tom will send the exceptions table to Raymond.\\n- I will put together a compute pricing range once Tom has looked at the full store count.\\n- Seasonality and peak handling still need testing on your history before we promise results.\\n- The crosswalk needs an owner on your side.\\n- Raymond would like to see a Teams alert for a real store.\\n\\nHelen, thank you for the candid context on your last migration. I will send a short outline of how we would work with your team, with named owners and effort by role, rather than a guess at weeks.\\n\\nBen, is there a point you would find useful for us to reconnect?\\n\\nElise\",\"customer_value_line\":\"The merged view addresses your goal that store managers know by mid afternoon what to reorder, including ship from store orders, instead of finding out from an empty shelf the next morning.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Store sales and ship from store orders in one model, updated every five minutes.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About four percent of rows didn't match, they're in this exceptions table.\"},{\"utterance_id\":\"U048\",\"excerpt\":\"Yes, you can route by any field you have. District is in your store table so that's easy.\"},{\"utterance_id\":\"U086\",\"excerpt\":\"Raymond, I'll send over the exceptions table so you can look at those unmatched rows.\"},{\"utterance_id\":\"U044\",\"excerpt\":\"I don't want to throw a number out before Tom has looked at the full store count, but I can put together a range.\"},{\"utterance_id\":\"U036\",\"excerpt\":\"I'd want to see it on your history before I promise how well it handles peak.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"The crosswalk would need an owner on your side.\"},{\"utterance_id\":\"U078\",\"excerpt\":\"I'd want to see the Teams alert set up for a real store. Not urgent.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"the goal was that a store manager knows by mid afternoon what to reorder, instead of finding out from an empty shelf the next morning.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9854,
+   "cache_creation_input_tokens": 6947,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6947,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 856,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

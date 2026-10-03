@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "c72c3cf40dd3ee2725dd3ff0c3dfbc00b3a26f424c5ec9a12388d70679b1ed10",
+ "recorded_at": "2026-10-03T19:26:48.882079+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrTZr8v3VBsLwctSTKW",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"evidence list (U014, U017, U086, U044, U036, U068, U012)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt is word for word from its cited line and supports the recap sentence it backs.\",\"utterance_ids\":[\"U014\",\"U017\",\"U086\",\"U044\",\"U036\",\"U068\",\"U012\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"I will put together a compute pricing range once Tom has looked at the full store count.\",\"passed\":false,\"severity\":\"low\",\"finding\":\"Elise said \\\"I can put together a range\\\" and then only \\\"Understood\\\" to Ben's request, with no date, so \\\"I will\\\" is firmer than what was said.\",\"utterance_ids\":[\"U044\",\"U045\",\"U046\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"I have also looped in Gregory Thornton from our side.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"Gregory Thornton appears nowhere in the transcript or CRM, so the email invents a person and an action nobody took or committed to.\",\"utterance_ids\":[]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Whole email tone and value line\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email claims no decision or intent to buy; it only restates the validated demo and the stated outcome.\",\"utterance_ids\":[\"U064\",\"U066\",\"U081\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"refreshed every five minutes\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The five minute refresh matches what Tom showed and RC-10, and no later line corrects it.\",\"utterance_ids\":[\"U014\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"No date was set for a next conversation. What would suit you?\",\"passed\":false,\"severity\":\"low\",\"finding\":\"This is a generic ask for a meeting that Ben deferred, and it offers nothing for Helen's process or a path to the Lakestream question, the CFO Farah, or Ben's boss.\",\"utterance_ids\":[\"U081\",\"U083\",\"U066\",\"U045\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1315,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10671,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1937,
+   "output_tokens_details": {
+    "thinking_tokens": 1194
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

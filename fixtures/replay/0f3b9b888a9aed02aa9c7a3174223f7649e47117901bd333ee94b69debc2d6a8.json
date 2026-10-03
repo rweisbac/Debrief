@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "0f3b9b888a9aed02aa9c7a3174223f7649e47117901bd333ee94b69debc2d6a8",
+ "recorded_at": "2026-10-03T19:26:26.313100+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrSD7RycgRbsMePB3dD",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"We will also include a free 90 day pilot with full support.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"No one mentioned a free 90 day pilot or full support anywhere in the call; this is an invented commercial commitment.\",\"utterance_ids\":[\"U042\",\"U044\",\"U080\",\"U084\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"We can share a short outline of how onboarding would work, with named owners and effort by role. Would that be useful?\",\"passed\":true,\"severity\":\"low\",\"finding\":\"This is phrased as an offer and a question, not a commitment, and is consistent with Tom describing implementation split and with RC-13 and PB-10.\",\"utterance_ids\":[\"U071\",\"U072\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence: Raymond, I'll send over the exceptions table so you can look at those unmatched rows. (U086)\",\"passed\":false,\"severity\":\"low\",\"finding\":\"The excerpt is not word for word: the line says 'Thanks all. Raymond, I'll send over...' and the excerpt drops the leading 'Thanks all.', though the quoted fragment itself is verbatim; the excerpt also carries no stitched text, so this is borderline but the text matches the span.\",\"utterance_ids\":[\"U086\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence: I'd want to see it on your history before I promise how well it handles peak. (U036)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The excerpt is a verbatim span of U036 and supports the open item that seasonality needs testing on customer history.\",\"utterance_ids\":[\"U036\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence: the goal was that a store manager knows by mid afternoon what to reorder... (U012)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The excerpt is verbatim from Tom's restatement of the goal and Ben confirmed it in U013, so it supports the customer value line.\",\"utterance_ids\":[\"U012\",\"U013\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"I will put together a compute pricing range once Tom has looked at the full store count.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Matches Elise's conditional statement in U044 and carries no date, so it is not firmer than what was said.\",\"utterance_ids\":[\"U044\",\"U045\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Thanks for your time today... Open items and value line framing\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email does not claim a decision or enthusiasm beyond the facts; it states no date was set and asks what would suit them.\",\"utterance_ids\":[\"U081\",\"U083\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"refreshed every five minutes\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The five minute refresh is current behavior for the merged model per Tom and RC-10; the RC-12 warehouse connector change is not referenced in the email.\",\"utterance_ids\":[\"U014\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"No date was set for a next conversation. What would suit you?\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"This is a generic check-in ask that does not offer anything specific to the absent CFO Farah, the Lakestream question Ben must take to his boss, or a sized onboarding deliverable, and PB-09 says to send what the process needs rather than chase.\",\"utterance_ids\":[\"U066\",\"U050\",\"U081\",\"U083\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Missing coverage: CFO Farah named as approver for anything over 250K is absent from the recap\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"Helen named Farah the CFO as approver over 250K in U066, and the CRM economic buyer is blank, but neither the recap nor its evidence records this.\",\"utterance_ids\":[\"U066\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1315,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10671,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1392,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}
