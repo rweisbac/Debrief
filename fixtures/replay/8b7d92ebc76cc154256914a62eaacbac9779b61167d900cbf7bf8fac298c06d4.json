@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "8b7d92ebc76cc154256914a62eaacbac9779b61167d900cbf7bf8fac298c06d4",
+ "recorded_at": "2026-10-03T18:25:01.559096+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmkVsRZdnPvPCovzwZT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Scientists decide the next run the same afternoon instead of waiting a day for results, taking a week or more out of each screening campaign.\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"If they could decide the same afternoon, we think we could take a week or more out of each screening campaign.\"}]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No dated next meeting or action agreed. Ingrid said maybe to a hosting call and wants to align internally first.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U051\",\"excerpt\":\"Maybe. Let me see where we land internally first.\"}]},\"objections\":[{\"summary\":\"Hosting location conflict: Victor says all data must stay in the EU, while Camila says US hosting is fine for pseudonymized research data per a legal memo. Victor wants the memo in writing.\",\"raised_by\":\"Victor Huang\",\"status\":\"open\",\"answer_given\":\"Marcus said the tenant can be pinned to Frankfurt including backups. Sam said Apex supports either option and a single answer is needed before tenant setup.\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"Everything has to stay in the EU. That's non negotiable.\"},{\"utterance_id\":\"U023\",\"excerpt\":\"US hosting is fine for pseudonymized research data.\"},{\"utterance_id\":\"U026\",\"excerpt\":\"I'd want to see that in writing.\"}]},{\"summary\":\"Support access: Victor does not want staff in another region viewing the data.\",\"raised_by\":\"Victor Huang\",\"status\":\"partially_resolved\",\"answer_given\":\"Support access can be restricted to EU staff via a tenant setting; Marcus wants to confirm the exact wording with Apex compliance.\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Including support access? I don't want someone in another region looking at our data.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Support access can be restricted to EU staff, it's a setting at the tenant level.\"}]}],\"open_technical_items\":[{\"summary\":\"Confirm exact wording on EU-only support access with Apex compliance before the customer relies on it.\",\"owner\":\"Marcus Bell\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'd want to confirm the exact wording with our compliance team before you rely on it.\"}]},{\"summary\":\"Resolve whether the tenant is set up in the EU or the US, pending Camila's legal memo and Victor's review.\",\"owner\":\"Camila Reyes\",\"evidence\":[{\"utterance_id\":\"U048\",\"excerpt\":\"I'm happy to be aligned once I see the memo.\"},{\"utterance_id\":\"U049\",\"excerpt\":\"I'll find it.\"}]}],\"integration_patterns\":[{\"summary\":\"Plate reader exports land as files, are parsed, and are joined with experiment metadata from the nightly LIMS CSV export. The LIMS API for closer to real time is a later option.\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"we're reading the nightly CSV for now.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"The nightly file is fine\"}]}],\"commitments\":[{\"who\":\"Sam Lee\",\"side\":\"apex\",\"what\":\"Send the standard DPA with the recap so customer legal can start in parallel.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U041\",\"excerpt\":\"We have a standard DPA, I can send it with the recap so your legal team can start on it in parallel.\"}]},{\"who\":\"Sam Lee\",\"side\":\"apex\",\"what\":\"Send a recap with what was covered and the two hosting options.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U052\",\"excerpt\":\"I'll send a recap with what we covered and the two hosting options.\"}]},{\"who\":\"Marcus Bell\",\"side\":\"apex\",\"what\":\"Add the plate ID to the poor-fit flag on the dashboard.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"We can add the plate ID to the flag so they can see if it's always the same plate.\"}]},{\"who\":\"Marcus Bell\",\"side\":\"apex\",\"what\":\"Confirm the EU-only support access wording with Apex compliance.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'd want to confirm the exact wording with our compliance team before you rely on it.\"}]},{\"who\":\"Camila Reyes\",\"side\":\"customer\",\"what\":\"Find the legal memo on US hosting of pseudonymized data and share it.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U027\",\"excerpt\":\"I can find the memo.\"},{\"utterance_id\":\"U049\",\"excerpt\":\"I'll find it.\"}]}],\"stakeholders\":[{\"name\":\"Ingrid Solberg\",\"title\":\"Head of Research Data\",\"present\":true,\"why_they_matter\":\"Champion; takes it to her VP if hosting is aligned\",\"evidence\":[{\"utterance_id\":\"U047\",\"excerpt\":\"If Victor and Camila are aligned, I can take this to my VP.\"}]},{\"name\":\"Victor Huang\",\"title\":\"IT Infrastructure Director\",\"present\":true,\"why_they_matter\":\"Hosting gatekeeper; wants EU residency and the memo in writing\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"If this runs in a US region, it's a no.\"}]},{\"name\":\"Camila Reyes\",\"title\":\"Compliance Manager\",\"present\":true,\"why_they_matter\":\"Compliance; holds the legal memo and requires a DPA\",\"evidence\":[{\"utterance_id\":\"U040\",\"excerpt\":\"we'll need a data processing agreement either way, regardless of region.\"}]},{\"name\":\"Ingrid's VP\",\"title\":\"VP (name not stated)\",\"present\":false,\"why_they_matter\":\"Signed off the business case; next approver after hosting is aligned\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"That's the whole business case my VP signed off on for this evaluation.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 488,
+   "cache_creation_input_tokens": 4481,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 4481,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 2016,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

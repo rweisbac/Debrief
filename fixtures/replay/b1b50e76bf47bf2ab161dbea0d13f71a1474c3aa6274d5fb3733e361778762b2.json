@@ -1,0 +1,39 @@
+{
+ "step": "judge",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b1b50e76bf47bf2ab161dbea0d13f71a1474c3aa6274d5fb3733e361778762b2",
+ "recorded_at": "2026-10-03T18:19:13.938118+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmKVE2gendMwtPhvjEG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"specific\":true,\"evidence_tied\":true,\"playbook_tied\":true,\"actionable_10_min\":false,\"non_obvious\":true,\"critique\":\"Ties well to U076-U077 (eight-month burn, 'realistic onboarding plan') and PB-10/RC-13 fit, but drafting a plan with named owners on both sides and effort by role takes well over 10 minutes and needs Apex implementation input and customer names, so it fails the 10-minute test.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 561,
+   "cache_creation_input_tokens": 10379,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 10379,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 157,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

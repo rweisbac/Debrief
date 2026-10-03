@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e5e00f963e3eeae7121f274511054e1d51c9047f1859eeac757e6d5685ca3302",
+ "recorded_at": "2026-10-03T18:18:23.152047+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmEqBg4QnTohjiYGTNs",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Ready to advance: dated 45 min session with COO Elena Varga set for 2026-10-08 14:00 CT, evaluators report no blockers, one technical item (partner hierarchy policy) open.\",\"customer_value_line\":\"Dana's outcome: catch a late load while dispatch can still reroute it, not the next morning; in the 11 day sample the model flagged 214 loads that later missed their window, median flag about two hours before the window closed, and the 1:12 example was flagged versus 18 hours later by overnight batch.\",\"what_we_validated\":[\"Ingest: replay at 40,000 per second for twenty minutes (peak is about 38,000 per second), lag under four seconds at p95, queues rather than drops, default lag alert sixty seconds\",\"dbt core, about three hundred models run as is: 298 ran in eleven minutes versus around forty today; two failed on a custom macro making an external API call at compile\",\"Late load model on streaming data flagged one load at 1:12 into the run; overnight batch flagged it eighteen hours later\",\"Warehouse connector continuous sync, about a minute end to end, default for new connections (RC-12)\",\"Failed models show in run log with name and compile error; downstream models marked skipped, not silently stale\"],\"integration_patterns\":[\"Telematics events (about 4.7 billion a month) into Apex streaming, late load model on the stream, warehouse connector with continuous sync for dispatch dashboards\",\"Existing dbt core project runs on Apex runner; the macro's external lookup moves to a seed table or pre-hook\",\"Row level policies keyed on partner ID for carrier partner dashboards; sub carrier hierarchy not yet validated\"],\"objections_and_answers\":[\"Grace: hourly sync might be tight. Priya corrected Sam: continuous sync about a minute since the August release. Grace: a minute is fine. Resolved\",\"Grace: two models failed on custom macro. Answer: move lookup to seed table or pre-hook, about a day for one engineer. Grace said the macro should die anyway and it is on them. Resolved\",\"Mikkel: row level access by partner including sub carriers. Answer: policies key on partner ID; Priya to build and show hierarchy policy from a sample. Partially resolved\",\"Dana: Elena was burned by a project that took eight months to show anything; she will ask about time to value. Sam promised a realistic onboarding plan. Open\",\"Dana asked how many loads would have been saved; Priya declined to claim a number, Dana said that was more useful. Open, Sam suggested measuring together in the first ninety days\"],\"open_items\":[\"Partner hierarchy row level policy built in sandbox and shown working: Priya, back by Tue Oct 6, depends on Mikkel's sample\",\"Partner hierarchy sample table: Mikkel, Monday morning (Oct 5)\",\"Lag alert config walkthrough offered for later, not shown: Priya, no date\",\"Macro fix or retirement: Grace/customer, no date\",\"Onboarding plan with time to value for Elena: Sam, for Oct 8; named owners and effort by role not yet committed\",\"Hierarchy depth unknown; RC-07 supports one parent and child level out of the box, deeper needs validation on customer data\"],\"commitments\":[\"Sam: send calendar invite for Oct 8 to Dana and Elena right after the call\",\"Sam: send recap today with what was seen, open partner hierarchy item and Thursday agenda\",\"Sam: bring a realistic onboarding plan to the Elena meeting (Oct 8)\",\"Priya: build partner hierarchy policy from Mikkel's sample, back by Tuesday the sixth\",\"Priya: send release note on connector continuous sync, no date, not logged in CRM\",\"Priya: email Mikkel where to drop the sample file, no date, not logged in CRM\",\"Priya: show only the late load scenario at the Elena session (Oct 8)\",\"Mikkel: send partner hierarchy sample Monday morning (Oct 5)\"],\"stakeholders\":[\"Dana Ortiz, VP Data, champion, present\",\"Mikkel Strand, Data Platform Lead, technical evaluator, present\",\"Grace Oyelaran, Analytics Engineering Manager, technical evaluator, present\",\"Elena Varga, COO, owns budget line and signs off, absent; cares about detention fees, scenario three and time to value\",\"Sam Lee, AE, and Priya Raman, SC, present (Apex)\"],\"competitive_notes\":[],\"risks\":[\"Elena has not seen anything; her view comes only through Dana and the commercial discussion is planned for her first session\",\"Time to value: prior platform project took eight months; no plan with named owners committed yet\",\"Partner hierarchy unvalidated and gated on Mikkel's Monday sample; depth unknown\",\"Dana's enthusiasm is not a decision; her response to the 90 day measurement idea was muted (weak signal)\",\"Two passing commitments by Priya (release note, file drop email) are not logged in CRM\"],\"evidence\":[{\"utterance_id\":\"U072\",\"excerpt\":\"Thursday October 8th, 2pm Central, forty five minutes.\"},{\"utterance_id\":\"U035\",\"excerpt\":\"Detention fees and missed delivery windows are the number one thing the COO asks me about.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Ingest lag stayed under four seconds at p95 the whole time.\"},{\"utterance_id\":\"U029\",\"excerpt\":\"Total run time was eleven minutes versus, what did you say, around forty today?\"},{\"utterance_id\":\"U038\",\"excerpt\":\"The warehouse connector does continuous sync now, about a minute end to end.\"},{\"utterance_id\":\"U040\",\"excerpt\":\"A minute is fine.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"I can have that back to you by Tuesday the sixth.\"},{\"utterance_id\":\"U075\",\"excerpt\":\"I'll get the sample over Monday morning.\"},{\"utterance_id\":\"U076\",\"excerpt\":\"She got burned on the last platform project, it took eight months to see anything.\"},{\"utterance_id\":\"U077\",\"excerpt\":\"We'll come with a realistic onboarding plan, not a glossy one.\"},{\"utterance_id\":\"U065\",\"excerpt\":\"The thing I want to make sure we don't skip is getting Elena in the room.\"},{\"utterance_id\":\"U081\",\"excerpt\":\"Mikkel, watch for an email from me with where to drop the file.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9857,
+   "cache_creation_input_tokens": 10909,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 10909,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 2144,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

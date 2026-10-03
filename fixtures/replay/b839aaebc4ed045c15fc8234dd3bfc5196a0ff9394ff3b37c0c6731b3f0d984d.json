@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b839aaebc4ed045c15fc8234dd3bfc5196a0ff9394ff3b37c0c6731b3f0d984d",
+ "recorded_at": "2026-10-03T18:23:45.643221+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmfCn7dw7fFB3KDRTW6",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Lily says she mostly wanted to see the file loaded, which the demo showed; weak interest in seeing more.\",\"strength\":\"weak\",\"qualifier\":\"Lily is a Senior Analyst (user), not the evaluator; she declined to see anything else and will only relay what she saw.\",\"evidence\":[{\"utterance_id\":\"U025\",\"excerpt\":\"I mostly wanted to see the file loaded. I'll tell Owen what I saw.\"}]}],\"risk_signals\":[{\"summary\":\"Technical evaluator gave a lukewarm response to the summary view and left early without feedback.\",\"strength\":\"strong\",\"qualifier\":\"Owen is the technical evaluator; he deferred judgment and left at about 18:30 of a call scheduled until 11:45.\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"}]},{\"summary\":\"Follow-up with Owen is uncertain; his calendar is crowded and Lily would not commit him to a time.\",\"strength\":\"moderate\",\"qualifier\":\"Nate said he would reach out; no date was agreed.\",\"evidence\":[{\"utterance_id\":\"U029\",\"excerpt\":\"You'd have to ask him. His calendar is a mess this month.\"}]},{\"summary\":\"Only two customer contacts engaged, one of whom dropped early and the other is a user with limited interest; no economic buyer or champion named.\",\"strength\":\"moderate\",\"qualifier\":\"Inferred from the call; no one mentioned who signs or a decision process.\",\"evidence\":[{\"utterance_id\":\"U022\",\"excerpt\":\"I can stay a couple minutes.\"}]}],\"exact_numbers\":[{\"value\":\"about six minutes\",\"what_it_measures\":\"Ingest time for the claims file in the sandbox with default setup\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Ingest ran in about six minutes.\"}]},{\"value\":\"Twelve rows\",\"what_it_measures\":\"Rows that failed the date format check\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Twelve rows failed the date format check, they're in this table.\"}]}],\"customer_dependencies\":[{\"summary\":\"Lily to send her list of failed rows so Priya can compare against the twelve Apex found.\",\"owner\":\"Lily Chen\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can send it.\"}]},{\"summary\":\"Owen to confirm whether the paid amount and allowed amount columns should be numbers, and to review the follow-up note.\",\"owner\":\"Owen Marsh\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"Probably numbers.\"}]}],\"contradictions\":[],\"corrections\":[],\"checklist_mismatches\":[{\"field\":\"sc_commitment\",\"logged_value\":\"\",\"transcript_says\":\"Priya committed to send the failed rows and a short note on the two text columns today.\",\"evidence\":[{\"utterance_id\":\"U030\",\"excerpt\":\"Priya will send the failed rows and a short note on the two text columns, so Owen has something to look at when he's back.\"},{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2631,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2631,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1102,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

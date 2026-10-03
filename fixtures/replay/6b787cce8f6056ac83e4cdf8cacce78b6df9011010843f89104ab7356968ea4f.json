@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6b787cce8f6056ac83e4cdf8cacce78b6df9011010843f89104ab7356968ea4f",
+ "recorded_at": "2026-10-03T18:18:13.848483+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmEpp7L5RAuqa8njYvM",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Halvorsen technical validation and Thursday Oct 8 session with Elena\",\"body\":\"Hi Dana, Mikkel, Grace,\\n\\nThanks for today. Here is what we saw and what is open.\\n\\nValidated: ingest replayed at 40,000 per second for twenty minutes, with lag under four seconds at p95. 298 of your dbt models ran as is in eleven minutes versus around forty today. The two that failed use a custom macro with an external API call at compile; Grace owns that fix. Late load detection ran on streaming data. The warehouse connector now syncs continuously, about a minute end to end, so my hourly comment was wrong.\\n\\nOpen: Mikkel will send the partner hierarchy sample table Monday morning. Priya will build the row level policy and show it by Tuesday the sixth. Priya will also send the connector release note and an email on where to drop the file.\\n\\nNext: Thursday October 8, 2pm Central, forty five minutes with Elena, focused on late load detection and commercials. I will send the invite today and bring a realistic onboarding plan.\\n\\nReply with any corrections.\\n\\nSam\",\"customer_value_line\":\"The late load model ran on streaming data, which supports Dana's goal of catching a late load while dispatch can still reroute it instead of finding out the next morning.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Ingest lag stayed under four seconds at p95 the whole time.\"},{\"utterance_id\":\"U029\",\"excerpt\":\"Total run time was eleven minutes versus, what did you say, around forty today?\"},{\"utterance_id\":\"U038\",\"excerpt\":\"The warehouse connector does continuous sync now, about a minute end to end.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"I can have that back to you by Tuesday the sixth.\"},{\"utterance_id\":\"U075\",\"excerpt\":\"I'll get the sample over Monday morning.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"Thursday October 8th, 2pm Central, forty five minutes.\"},{\"utterance_id\":\"U077\",\"excerpt\":\"We'll come with a realistic onboarding plan, not a glossy one.\"},{\"utterance_id\":\"U035\",\"excerpt\":\"If we know at hour two of a five hour run that a trailer is going to miss the window, dispatch can swap drivers or call the consignee.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9982,
+   "cache_creation_input_tokens": 10458,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 10458,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 799,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

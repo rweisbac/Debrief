@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "363e99438b9b7b2538c4f89698098ec1df996c809fd4d27da4454c42f2f318a2",
+ "recorded_at": "2026-10-03T18:23:38.226511+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmeewTYDC8VxrJdyiGB",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":false,\"summary\":\"not stated\",\"evidence\":[]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No customer-agreed dated next step. Nate offered to find another time with Owen; Lily said to ask him and that his calendar is a mess.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U029\",\"excerpt\":\"You'd have to ask him. His calendar is a mess this month.\"}]},\"objections\":[{\"summary\":\"Owen was lukewarm on whether the summary view matched what he had in mind; reason not given.\",\"raised_by\":\"Owen Marsh\",\"status\":\"open\",\"answer_given\":\"\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"}]}],\"open_technical_items\":[{\"summary\":\"Confirm whether the paid amount and allowed amount columns should be numbers instead of text; Apex left them as text pending confirmation.\",\"owner\":\"Owen Marsh\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"I left them as text for now so nothing got silently rounded. That's an easy change once you confirm.\"}]},{\"summary\":\"Compare the twelve rows that failed the date format check against the customer's own list of failures.\",\"owner\":\"Priya Raman\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"I'd guess so, but I'd want to compare against your list.\"}]}],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Priya Raman\",\"side\":\"apex\",\"what\":\"Send the twelve failed rows and a short note on the two text columns to Owen\",\"by_when\":\"2026-09-29\",\"evidence\":[{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"}]},{\"who\":\"Nate Kowalski\",\"side\":\"apex\",\"what\":\"Reach out to Owen to find another time to finish the demo\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U030\",\"excerpt\":\"Got it. I'll reach out to him.\"}]},{\"who\":\"Lily Chen\",\"side\":\"customer\",\"what\":\"Send her list of the failed rows to compare with Apex's twelve\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can send it.\"}]},{\"who\":\"Lily Chen\",\"side\":\"customer\",\"what\":\"Tell Owen what she saw in the demo\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U025\",\"excerpt\":\"I'll tell Owen what I saw.\"}]}],\"stakeholders\":[{\"name\":\"Owen Marsh\",\"title\":\"Data Architect\",\"present\":true,\"why_they_matter\":\"Technical evaluator; left early, lukewarm on the view\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"Sorry, that's my conflict. I have to jump. Lily, can you stay?\"}]},{\"name\":\"Lily Chen\",\"title\":\"Senior Analyst\",\"present\":true,\"why_they_matter\":\"User who stayed and will relay to Owen\",\"evidence\":[{\"utterance_id\":\"U025\",\"excerpt\":\"I'll tell Owen what I saw.\"}]},{\"name\":\"Nate Kowalski\",\"title\":\"Account Executive\",\"present\":true,\"why_they_matter\":\"Apex AE, owns follow-up with Owen\",\"evidence\":[{\"utterance_id\":\"U030\",\"excerpt\":\"Got it. I'll reach out to him.\"}]},{\"name\":\"Priya Raman\",\"title\":\"Solutions Consultant\",\"present\":true,\"why_they_matter\":\"Apex SC who ran the demo and owes the follow-up send\",\"evidence\":[{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 488,
+   "cache_creation_input_tokens": 2631,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2631,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1232,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}
