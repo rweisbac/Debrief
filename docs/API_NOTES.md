@@ -6,12 +6,12 @@ Source of truth for what `src/llm.py` sends. Raw results: `docs/smoke_results.js
 
 | Check | Status | Result |
 |---|---|---|
-| (a) `client.messages.parse(output_format=PydanticModel)` on `claude-sonnet-5-5` | Pending live run (no `ANTHROPIC_API_KEY` on 2026-10-02) | Offline: SDK 1.11.0 accepts it and fills `parsed_output` |
-| (b) `output_config={"effort": ...}` in the same call | Pending live run | Offline: SDK merges both into one request body, `output_config = {effort, format}` |
-| (c) content block types returned | Pending live run | Offline mock only: `parse` reads JSON from the `text` block when a `thinking` block comes first |
-| (d) cache read on repeated stable prefix | Pending live run | Not measured. No savings claimed. |
+| (a) `client.messages.parse(output_format=PydanticModel)` on `claude-sonnet-5-5` | Verified live | 76 calls on `claude-sonnet-5-5` parsed. One finding: a single large schema was rejected with 400 "compiled grammar is too large" (see D-14) |
+| (b) `output_config={"effort": ...}` in the same call | Verified live | accepted in the same call as `output_format` on every step |
+| (c) content block types returned | Verified live | across 76 recorded responses, 48 had only a `text` block and 28 had `thinking` then `text`. All 76 ended `end_turn` |
+| (d) cache read on repeated stable prefix | Verified live | Measured 2026-10-03: reads of about 3.4k to 5.5k tokens per call, zero on the first deal. See README, Cost and latency. No savings claimed |
 | (e) `temperature` rejected with 400 | Pending live run | Offline: `parse()` in SDK 1.11.0 has no `temperature`, `top_p` or `top_k` parameter at all |
-| (f) step rules as a mid-conversation `{"role": "system"}` message | Pending live run | Offline: SDK sends it unchanged. Fallback: `DEBRIEF_STEP_RULES_PLACEMENT=top_system` (D-07) |
+| (f) step rules as a mid-conversation `{"role": "system"}` message | Verified live | Accepted live 2026-10-03 under the default `mid_conversation_system` placement; no call used the `top_system` fallback. Whether the transcript prefix is cached across steps is not established (see D-07) |
 | parse() on truncated JSON | Verified offline | Raises pydantic ValidationError and hides stop_reason; llm.py reads the raw body via an httpx2 response hook (D-08) |
 
 "Offline" means verified against the installed SDK with a mock HTTP transport. It shows what the SDK sends, not what the API accepts.

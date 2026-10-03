@@ -33,7 +33,7 @@ Python 3.11. `pip install -r requirements.txt`.
 
 Environment: `ANTHROPIC_API_KEY`, `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
 
-**Current status (be clear about this in a walkthrough).** No API key was available while building, so no model output has been recorded yet. The demo runs on two hand-written sample cards (Halvorsen Freight and Meridian Health). These still go through the real rule and check code, and every screen labels them as samples. Eval scores, cost and latency do not exist yet and are not shown anywhere. After `make record`, the app shows real debriefs instead.
+**Current status (be clear about this in a walkthrough).** Real model output was recorded on 2026-10-03 for all 5 synthetic deals (76 live calls on `claude-sonnet-5-5`, none refused). The app in replay mode shows those debriefs; `make demo` still shows the two hand-written sample cards, labeled as samples. Offline eval scores from `evals/results.md` (1 run per deal, replay, judge uncalibrated): deal state matches the gold label on 3 of 5 deals, grounding passes on 3 of 5, the overclaim check passes on 4 of 5, steps pass on 5 of 5, and all 6 trap checks and both adversarial checks pass. Failures are listed in `evals/results.md` and not fixed yet. The verifier ablation is in `evals/ablation.md`: on the planted errors it caught more with the verifier than without, and it raised 1 false alarm on 5 clean drafts. These are one-run, small-sample numbers on synthetic data, not a performance claim. Not verified live: the temperature rejection probe (`python scripts/smoke_test.py` has not been run).
 
 ## Data flow
 
@@ -129,7 +129,20 @@ No metric target is ever shown as a result, and nothing here claims causation.
 
 ## Cost and latency
 
-**Not observed yet.** No live run has happened, so there is no measured cost per debrief, latency or cache hit rate. When there is, `llm_calls` will hold per-call tokens, cache reads, latency and cost; the card footer will show cost per debrief, and `evals/results.md` will list them per deal. Pricing constants are in `src/config.py` (Sonnet 5.5: $2 input and $10 output per million tokens; cache write assumed at 1.25x and to be verified).
+Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run per deal, Sonnet 5.5, 7 calls per debrief (two extract calls, assess, three drafts, verify). Judge calls are excluded. Cost uses the rates in `src/config.py`; the cache write rate is still an assumption.
+
+| Deal | Calls | Cost | Summed call latency | Cache read tokens |
+|---|---|---|---|---|
+| deal_a | 7 | $0.490 | 143 s | 0 |
+| deal_b | 7 | $0.359 | 108 s | 29,824 |
+| deal_c | 9 | $0.485 | 153 s | 51,247 |
+| deal_x | 8 | $0.220 | 83 s | 36,747 |
+| deal_y | 7 | $0.320 | 102 s | 29,824 |
+
+- Cost per debrief: mean $0.375, range $0.220 to $0.490. Total API spend for the whole recording session, including judge, ablation and two probe calls, was $2.58 over 76 live calls.
+- Latency per debrief: summed call time averages 118 s (83 to 153 s). If the three drafts run in parallel as designed, the critical path from the logged call times averages about 106 s (74 to 141 s). This is derived from per-call latency. End to end wall clock was not measured.
+- Cache: reads were observed, but small. Calls read only about 3.4k to 5.5k tokens each (the shared reference), while each call also wrote 6.7k to 11k new tokens, so the transcript prefix is not being reused across steps. deal_a read nothing; it was the first deal recorded. The cause is not established. Dollar savings from caching: not measured.
+- deal_c and deal_x have 9 and 8 calls because of one retry or regeneration each; the extra calls are in `llm_calls`.
 
 ## Production path
 
