@@ -69,7 +69,7 @@ flowchart LR
   S --> H[handoff.py: CS brief, Phase 2 preview]
 ```
 
-Six model calls per debrief on the normal path. All calls go through `src/llm.py`, which uses `client.messages.parse` with a pydantic schema, logs every call, and reads and writes the replay cache. Details: `docs/API_NOTES.md` and `DECISIONS.md`.
+Seven model calls per debrief on the normal path (two extract calls, assess, three drafts, verify). All calls go through `src/llm.py`, which uses `client.messages.parse` with a pydantic schema, logs every call, and reads and writes the replay cache. Details: `docs/API_NOTES.md` and `DECISIONS.md`.
 
 ## Diagnosis: why nothing happens after the demo
 
@@ -164,8 +164,8 @@ Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run pe
 ## Known limits and what is mocked
 
 - **Mocked:** Gong, Salesforce and Slack are file-backed adapters (`src/adapters.py`). The calendar invite is a stub. "Mark as sent" is a button, not an email integration. Customer replies are logged by hand in the demo.
-- **No live model output yet**, so prompts are unvalidated v1. The two demo cards are hand-written samples.
-- **The live API path is unverified:** `docs/API_NOTES.md` lists what was verified offline against the SDK and what still needs `make smoke`. That includes the mid-conversation system message used for caching (D-07).
+- **Recorded output is one run per deal.** The 5 debriefs were recorded once on 2026-10-03; prompts are early versions and `evals/results.md` lists the failing cases. The two `make demo` cards are still hand-written samples, labeled as such.
+- **Live API path:** the smoke probes and the recording run exercised it (see `docs/API_NOTES.md`). Cache behavior across steps is not fully understood (see Cost and latency).
 - **Deterministic checks are heuristics.** The stress test (`evals/stress_report.md`) catches 49 of 61 planted problems with 1 false alarm on 17 clean drafts. That leaves 13 open known-failure tests (12 missed problems plus 1 false alarm), including:
   - an invented name made of ordinary words;
   - some wordings of the superseded hourly sync;
