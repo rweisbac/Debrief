@@ -3,7 +3,7 @@
   {
    "deal": "deal_a",
    "status": "ran",
-   "debrief_id": "deal_a-e71c5ce5",
+   "debrief_id": "deal_a-eed772b7",
    "errors": [],
    "state": {
     "expected": "ready_to_advance",
@@ -230,7 +230,7 @@
   {
    "deal": "deal_b",
    "status": "ran",
-   "debrief_id": "deal_b-7c7fbada",
+   "debrief_id": "deal_b-c5a0b127",
    "errors": [],
    "state": {
     "expected": "open_technical_gap",
@@ -375,7 +375,7 @@
     }
    ],
    "cost_usd": 0.359396,
-   "latency_ms": 21,
+   "latency_ms": 14,
    "cache_read_tokens": 29824,
    "cache_write_tokens": 47271,
    "n_calls": 7,
@@ -495,7 +495,7 @@
   {
    "deal": "deal_c",
    "status": "ran",
-   "debrief_id": "deal_c-51332894",
+   "debrief_id": "deal_c-868c7e1f",
    "errors": [],
    "state": {
     "expected": "competitive_risk",
@@ -627,7 +627,7 @@
    "needs_review": [],
    "overrides": [],
    "cost_usd": 0.485496,
-   "latency_ms": 27,
+   "latency_ms": 16,
    "cache_read_tokens": 51247,
    "cache_write_tokens": 48629,
    "n_calls": 9,
@@ -762,7 +762,7 @@
   {
    "deal": "deal_x",
    "status": "ran",
-   "debrief_id": "deal_x-043b8645",
+   "debrief_id": "deal_x-e3b1656f",
    "errors": [],
    "state": {
     "expected": "low_information",
@@ -883,7 +883,7 @@
    "needs_review": [],
    "overrides": [],
    "cost_usd": 0.219719,
-   "latency_ms": 15,
+   "latency_ms": 17,
    "cache_read_tokens": 36747,
    "cache_write_tokens": 18417,
    "n_calls": 8,
@@ -966,7 +966,7 @@
   {
    "deal": "deal_y",
    "status": "ran",
-   "debrief_id": "deal_y-80d513e1",
+   "debrief_id": "deal_y-292e8d69",
    "errors": [],
    "state": {
     "expected": "waiting_on_customer",
@@ -1080,7 +1080,7 @@
    "needs_review": [],
    "overrides": [],
    "cost_usd": 0.319893,
-   "latency_ms": 17,
+   "latency_ms": 15,
    "cache_read_tokens": 29824,
    "cache_write_tokens": 31367,
    "n_calls": 7,
