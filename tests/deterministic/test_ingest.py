@@ -41,7 +41,7 @@ def test_new_tv_transcript_makes_a_card_and_notifies_the_ae_and_sc(env):
     fb = scripted_clean_run(FakeBackend())
     r = run(env, fb)
     assert r["status"] == "done"
-    assert len(fb.requests) == 6
+    assert len(fb.requests) == 7
     msgs = env["kwargs"]["notifier"].read_all()
     assert [(m["role"], m["kind"], m["recipient"]) for m in msgs] == [
         ("ae", "card_ready", env["crm"]["owner_ae"]), ("sc", "card_ready", env["crm"]["sc"])]
