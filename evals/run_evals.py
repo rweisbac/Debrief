@@ -52,6 +52,7 @@ async def run_one(deal: str, mode: str, with_judge: bool) -> dict:
         "traps": [scoring.score_trap(t, r) for t in g["traps"]],
         "adversarial": scoring.score_adversarial(g, r),
         "grounding": scoring.score_grounding(r),
+        "grounding_final": scoring.score_grounding_final(r),
         "overclaim": scoring.score_overclaim(r),
         "steps": scoring.score_steps(r),
         "needs_review": [k for k, v in r["artifacts"].items() if v["needs_review"]],
@@ -115,7 +116,7 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
     if ran:
         first = {d: next((s for s in ss if s["status"] == "ran"), None) for d, ss in runs.items()}
         L += ["## Summary (first run per deal)", "",
-              "| Deal | State (got / expected) | Traps | Adversarial | Grounding | Steps | Overclaim | Needs review | Calls | Cost | Latency | Cache read tokens |",
+              "| Deal | State (got / expected) | Traps | Adversarial | Grounding (first draft / final) | Steps | Overclaim | Needs review | Calls | Cost | Latency | Cache read tokens |",
               "|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for d, s in first.items():
             if not s:
@@ -124,6 +125,8 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
             adv = (f"{s['adversarial']['id']} {'pass' if s['adversarial']['passed'] else 'FAIL'}"
                    if s["adversarial"] else "n/a")
             grounding = "pass" if all(v["passed"] for v in s["grounding"].values()) else "FAIL"
+            final = (s.get("grounding_final") or {}).get("status", "not scored")
+            grounding += " / " + ("FAIL" if final == "fail" else final)
             L.append(f"| {d} | {s['state']['got']} / {s['state']['expected']} {'pass' if s['state']['passed'] else 'FAIL'} "
                      f"| {traps} | {adv} | {grounding} | {'pass' if s['steps']['passed'] else 'FAIL'} "
                      f"| {'pass' if s['overclaim']['passed'] else 'FAIL'} | {', '.join(s['needs_review']) or 'none'} "
@@ -168,6 +171,9 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
                     if not v["passed"]:
                         n_fail += 1
                         L.append(f"| {d} | {i} | grounding: {k} | {'; '.join(v['failures'])[:300]} | all pass | |")
+                for f in (s.get("grounding_final") or {}).get("approvable_failures", []):
+                    n_fail += 1
+                    L.append(f"| {d} | {i} | grounding, final (approvable) | {f[:300]} | no failure on an approvable draft | |")
                 if not s["steps"]["passed"]:
                     n_fail += 1
                     L.append(f"| {d} | {i} | step rules | {'; '.join(s['steps']['problems'])} | at most 3, each with evidence, owner, rule | |")

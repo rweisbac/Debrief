@@ -44,6 +44,7 @@ def test_low_information_forced_and_capped():
 
 def test_waiting_forced_and_chase_dropped():
     x = extraction_a()
+    x.open_technical_items = []  # Apex owes nothing, so the blocker forces waiting (D-15)
     x.customer_dependencies = [CustomerDependency(summary="Security review must finish", owner="Raj", due="",
                                                   blocks_progress=True, evidence=[ev("U054", "I can send that")])]
     steps = [step("Check in with Dana on the review", "Sam Lee", "", "PB-09", "other", "U054", "back to you by Tuesday"),

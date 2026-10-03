@@ -210,6 +210,29 @@ def score_grounding(result: dict) -> dict:
     return out
 
 
+def score_grounding_final(result: dict) -> dict:
+    """What the rep can approve. A check on a rewritten artifact uses the result after the rewrite. A failure on an
+    artifact marked needs review is "blocked" (the rep cannot one-tap approve it), not a pass. Status is pass,
+    blocked, or fail; fail means a grounding problem reached an approvable artifact."""
+    checks = result.get("checks", [])
+    rewritten = {c["artifact"] for c in checks if c.get("after_regeneration")}
+    final = [c for c in checks if bool(c.get("after_regeneration")) == (c["artifact"] in rewritten)]
+    arts = result.get("artifacts", {})
+    names = ("evidence_resolves", "numbers_in_source", "names_known", "dates_future_business_days",
+             "no_unsupported_claims")
+    approvable, blocked = [], []
+    for c in final:
+        # The extraction is not approved or sent, so it counts in the first draft column only.
+        if c["check"] in names and not c["passed"] and c["artifact"] != "extraction":
+            item = f'{c["artifact"]}: {c["check"]}: {c["detail"]}'
+            if (arts.get(c["artifact"]) or {}).get("needs_review"):
+                blocked.append(item)
+            else:
+                approvable.append(item)
+    status = "fail" if approvable else ("blocked" if blocked else "pass")
+    return {"status": status, "approvable_failures": approvable, "blocked_failures": blocked}
+
+
 def score_overclaim(result: dict) -> dict:
     """Uncommitted promises are only caught by the model verifier, so if the verifier did not run (or its
     output could not be read) this is "not run", which counts as a failure (stress gaps O1, O2).

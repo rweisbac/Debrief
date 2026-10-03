@@ -269,6 +269,12 @@ class Chain:
                               crm=ctx.crm, as_of=ctx.as_of)
 
     @staticmethod
+    def _always_blocking(v) -> bool:
+        """A promise nobody made in the call, in the email the customer reads, blocks approval whatever severity
+        the verifier gave it (deal_c rated one medium and it stayed one-tap approvable, D-15)."""
+        return v.artifact.value == "recap_email" and v.check.value == "email_promises_uncommitted"
+
+    @staticmethod
     def _high_failures(det: list[checks.CheckResult], report: VerifierReport | None) -> dict[str, list[str]]:
         failing: dict[str, list[str]] = {}
         for c in det:
@@ -276,7 +282,7 @@ class Chain:
                 failing.setdefault(c.artifact, []).append(f"[{c.check}] {c.detail}: {', '.join(c.locations)}")
         if report:
             for v in report.verdicts:
-                if not v.passed and v.severity.value == "high":
+                if not v.passed and (v.severity.value == "high" or Chain._always_blocking(v)):
                     failing.setdefault(v.artifact.value, []).append(
                         f"[{v.check.value}] {v.finding} (target: {v.target}; lines {', '.join(v.utterance_ids)})")
         return failing
