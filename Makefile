@@ -1,4 +1,4 @@
-.PHONY: test smoke style record eval ablation candidates demo samples watch serve screenshots
+.PHONY: test smoke style record eval ablation candidates demo samples watch serve screenshots capture
 
 test:
 	python -m pytest -q
@@ -43,3 +43,7 @@ serve:
 # Screenshots of the offline demo for walkthroughs (needs playwright).
 screenshots:
 	python scripts/take_screenshots.py
+
+# Post-demo confirm card, Slack interactions endpoint and capture dashboard (replay mode, samples on).
+capture:
+	DEBRIEF_MODE=replay DEBRIEF_SAMPLES=1 uvicorn src.web:app --reload

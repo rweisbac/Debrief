@@ -6,7 +6,7 @@ import pytest
 from src import config, ingest
 from src.adapters import DATA, FileCRMSource, FileGongSource, FileNotifier
 from src.llm import LLMClient
-from tests.fakes import FakeBackend, scripted_clean_run
+from tests.fakes import FakeBackend, capture_a, raw_body, scripted_clean_run
 
 
 @pytest.fixture
@@ -38,14 +38,17 @@ def run(env, fb, deal="deal_new"):
 
 
 def test_new_tv_transcript_makes_a_card_and_notifies_the_ae_and_sc(env):
-    fb = scripted_clean_run(FakeBackend())
+    fb = scripted_clean_run(FakeBackend()).queue("CaptureRecord", raw_body(capture_a()))
     r = run(env, fb)
     assert r["status"] == "done"
-    assert len(fb.requests) == 7
+    assert len(fb.requests) == 8  # 7 chain calls plus the capture call
     msgs = env["kwargs"]["notifier"].read_all()
     assert [(m["role"], m["kind"], m["recipient"]) for m in msgs] == [
-        ("ae", "card_ready", env["crm"]["owner_ae"]), ("sc", "card_ready", env["crm"]["sc"])]
-    ae, sc = msgs
+        ("ae", "capture_card", env["crm"]["owner_ae"]), ("ae", "card_ready", env["crm"]["owner_ae"]),
+        ("sc", "card_ready", env["crm"]["sc"])]
+    cap, ae, sc = msgs
+    assert any(b["type"] == "actions" and b.get("block_id") == "cap_submit" for b in cap["payload"]["blocks"])
+    assert ae["payload"]["confirm_url"].endswith("/capture/deal_new")
     assert ae["payload"]["text"].startswith("Debrief ready for Halvorsen Freight. Most important:")
     assert any(b["type"] == "actions" for b in ae["payload"]["blocks"])
     assert sc["payload"]["blocks"][0]["text"]["text"].startswith("Your items:")
@@ -56,7 +59,7 @@ def test_same_transcript_is_not_run_twice(env):
     assert run(env, fb)["status"] == "done"
     again = run(env, FakeBackend())  # an empty backend would raise if the chain ran
     assert again["status"] == "skipped"
-    assert len(env["kwargs"]["notifier"].read_all()) == 2
+    assert len(env["kwargs"]["notifier"].read_all()) == 2  # no capture reply scripted, so no confirm card
 
 
 def test_changed_transcript_runs_again(env):
@@ -126,3 +129,10 @@ def test_serve_refuses_to_start_without_a_secret(monkeypatch):
     monkeypatch.delenv("DEBRIEF_WEBHOOK_SECRET", raising=False)
     with pytest.raises(SystemExit):
         ingest.serve()
+
+
+def test_failed_capture_never_blocks_the_card(env):
+    r = run(env, scripted_clean_run(FakeBackend()))  # no capture reply scripted: the capture call fails
+    assert r["status"] == "done" and "confirm card not pre-filled" in r["detail"]
+    kinds = [m["kind"] for m in env["kwargs"]["notifier"].read_all()]
+    assert kinds == ["card_ready", "card_ready"]

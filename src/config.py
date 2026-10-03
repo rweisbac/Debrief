@@ -61,7 +61,18 @@ STEP_SETTINGS = {
     "draft_mutual_action_plan": {"effort": "low", "max_tokens": 8000},
     "verify": {"effort": "medium", "max_tokens": 12000},
     "judge": {"effort": "medium", "max_tokens": 4000},
+    "capture": {"effort": "low", "max_tokens": 8000},
 }
+
+# Post-demo capture routing (src/capture.py). A field at or above the threshold is confirmed by the agent and
+# collapsed; below it, the AE is asked. Judgment fields are always asked for each AE's first N confirms. A share of
+# auto-confirmed fields is shown anyway as a spot check, so the error rate among auto-confirmed fields is measured
+# rather than assumed.
+# Where the confirm page is served (src/web.py). The Slack card links here.
+PUBLIC_URL = os.environ.get("DEBRIEF_PUBLIC_URL", "http://localhost:8000").rstrip("/")
+CAPTURE_THRESHOLD = float(os.environ.get("DEBRIEF_CAPTURE_THRESHOLD", "0.90"))
+CAPTURE_JUDGMENT_WARMUP = int(os.environ.get("DEBRIEF_CAPTURE_WARMUP", "20"))
+CAPTURE_SPOT_CHECK_RATE = float(os.environ.get("DEBRIEF_CAPTURE_SPOT_CHECK", "0.10"))
 
 LOW_INFO_MIN_CUSTOMER_UTTERANCES = 8  # substantive = 8 or more words
 LOW_INFO_MAX_STEPS = 2

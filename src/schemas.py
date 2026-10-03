@@ -397,8 +397,85 @@ class MeddpiccView(_Model):
     competition: MeddpiccField
 
 
+# Post-demo capture ("confirm, don't write"). The agent pre-fills 4 fields of AE judgment; the AE confirms or
+# corrects. Confidence shown to the AE is computed in code (src/capture.py); model_confidence is one input.
+
+class BasisEnum(str, Enum):
+    stated = "stated"      # a customer said it in the call
+    inferred = "inferred"  # reasoned from the call or CRM, not said outright
+    none = "none"          # no basis; the value is empty
+
+
+class ChampionStatusEnum(str, Enum):
+    strong = "strong"
+    unclear = "unclear"
+    absent = "absent"
+
+
+class YesNoUnclearEnum(str, Enum):
+    yes = "yes"
+    no = "no"
+    unclear = "unclear"
+
+
+class TopRiskEnum(str, Enum):
+    budget = "budget"
+    timeline = "timeline"
+    competitor = "competitor"
+    security_review = "security_review"
+    integration = "integration"
+    no_urgency = "no_urgency"
+    other = "other"
+
+
+Basis = Annotated[BasisEnum, BeforeValidator(_lower)]
+ChampionStatus = Annotated[ChampionStatusEnum, BeforeValidator(_lower)]
+YesNoUnclear = Annotated[YesNoUnclearEnum, BeforeValidator(_lower)]
+TopRisk = Annotated[TopRiskEnum, BeforeValidator(_lower)]
+
+
+class CapturePriority(_Model):
+    value: str  # the buyer's real priority and the trigger for acting now, max 25 words, or empty
+    basis: Basis
+    model_confidence: float
+    evidence: list[EvidenceRef]
+
+
+class CaptureChampion(_Model):
+    value: ChampionStatus
+    champion_name: str  # the customer person acting as champion, or empty
+    economic_buyer_identified: YesNoUnclear
+    economic_buyer_name: str  # or empty
+    basis: Basis
+    model_confidence: float
+    evidence: list[EvidenceRef]
+
+
+class CaptureRisk(_Model):
+    value: TopRisk
+    note: str  # one line; required when value is other, else may be empty
+    basis: Basis
+    model_confidence: float
+    evidence: list[EvidenceRef]
+
+
+class CaptureNextStep(_Model):
+    value: str  # the next step the customer agreed to, or empty
+    date: str  # ISO date said in the call, or empty
+    basis: Basis
+    model_confidence: float
+    evidence: list[EvidenceRef]
+
+
+class CaptureRecord(_Model):
+    priority_why_now: CapturePriority
+    champion_status: CaptureChampion
+    top_risk: CaptureRisk
+    next_step: CaptureNextStep
+
+
 LLM_OUTPUT_MODELS = [ExtractionRecord, Assessment, RecapEmail, InternalSummary, MutualActionPlan, VerifierReport,
-                     JudgeResult]
+                     JudgeResult, CaptureRecord]
 
 
 # Validators. Each returns a list of human readable errors; empty means valid.
@@ -484,4 +561,25 @@ def validate_map(m: MutualActionPlan) -> list[str]:
             errors.append(f"MAP row {i} is marked agreed without evidence")
         if not is_iso_date_or_empty(r.target_date):
             errors.append(f"MAP row {i} target_date {r.target_date!r} is not an ISO date or empty")
+    return errors
+
+
+MAX_PRIORITY_WORDS = 25
+
+
+def validate_capture(c: CaptureRecord) -> list[str]:
+    errors = validate_evidence_excerpts(c)
+    fields = {"priority_why_now": c.priority_why_now, "champion_status": c.champion_status, "top_risk": c.top_risk,
+              "next_step": c.next_step}
+    for name, f in fields.items():
+        if not 0.0 <= f.model_confidence <= 1.0:
+            errors.append(f"{name}.model_confidence {f.model_confidence} is not between 0 and 1")
+        if f.basis == BasisEnum.stated and not f.evidence:
+            errors.append(f"{name} is stated but has no evidence")
+    if _words(c.priority_why_now.value) > MAX_PRIORITY_WORDS:
+        errors.append(f"priority_why_now has {_words(c.priority_why_now.value)} words, max {MAX_PRIORITY_WORDS}")
+    if c.top_risk.value == TopRiskEnum.other and not c.top_risk.note.strip():
+        errors.append("top_risk is other but note is empty")
+    if not is_iso_date_or_empty(c.next_step.date):
+        errors.append(f"next_step.date {c.next_step.date!r} is not an ISO date or empty")
     return errors

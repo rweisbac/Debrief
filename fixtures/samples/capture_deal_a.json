@@ -1,0 +1,60 @@
+{
+ "deal_id": "deal_a",
+ "record": {
+  "champion_status": {
+   "basis": "stated",
+   "champion_name": "Dana Ortiz",
+   "economic_buyer_identified": "yes",
+   "economic_buyer_name": "Elena Varga",
+   "evidence": [
+    {
+     "excerpt": "she owns the budget line for this",
+     "utterance_id": "U066"
+    },
+    {
+     "excerpt": "Let me look at her calendar, I have access",
+     "utterance_id": "U071"
+    }
+   ],
+   "model_confidence": 0.92,
+   "value": "strong"
+  },
+  "next_step": {
+   "basis": "stated",
+   "date": "2026-10-08",
+   "evidence": [
+    {
+     "excerpt": "Thursday October 8th, 2pm Central, forty five minutes",
+     "utterance_id": "U072"
+    }
+   ],
+   "model_confidence": 0.96,
+   "value": "45 minute session with Elena Varga on the late load scenario"
+  },
+  "priority_why_now": {
+   "basis": "stated",
+   "evidence": [
+    {
+     "excerpt": "Detention fees and missed delivery windows are the number one thing the COO asks me about",
+     "utterance_id": "U035"
+    }
+   ],
+   "model_confidence": 0.93,
+   "value": "Catch late loads while dispatch can still reroute; detention fees are the COO's top question"
+  },
+  "top_risk": {
+   "basis": "stated",
+   "evidence": [
+    {
+     "excerpt": "She got burned on the last platform project",
+     "utterance_id": "U076"
+    }
+   ],
+   "model_confidence": 0.8,
+   "note": "COO was burned by an 8 month project and will ask about time to value",
+   "value": "timeline"
+  }
+ },
+ "sample_label": "Sample written by hand to show the confirm card. Not generated from the call.",
+ "source": "sample"
+}

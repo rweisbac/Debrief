@@ -71,6 +71,56 @@ CREATE TABLE IF NOT EXISTS checklist (
 )"""
 
 
+# Post-demo capture. captures holds what the agent pre-filled; capture_sessions one AE confirm per card;
+# capture_labels one row per field, which is the labeled example for calibration (simulated=1 rows come from
+# scripts/seed_capture.py and are never shown as measured).
+CAPTURES_DDL = """
+CREATE TABLE IF NOT EXISTS captures (
+    capture_id TEXT PRIMARY KEY,
+    deal_id TEXT NOT NULL,
+    created_at TEXT NOT NULL,
+    source TEXT NOT NULL,
+    payload TEXT NOT NULL
+)"""
+
+CAPTURE_SESSIONS_DDL = """
+CREATE TABLE IF NOT EXISTS capture_sessions (
+    session_id TEXT PRIMARY KEY,
+    capture_id TEXT NOT NULL,
+    deal_id TEXT NOT NULL,
+    ae TEXT NOT NULL,
+    submitted_at TEXT NOT NULL,
+    seconds_to_complete REAL NOT NULL,
+    questions_shown INTEGER NOT NULL,
+    threshold REAL NOT NULL,
+    simulated INTEGER NOT NULL
+)"""
+
+CAPTURE_LABELS_DDL = """
+CREATE TABLE IF NOT EXISTS capture_labels (
+    session_id TEXT NOT NULL,
+    deal_id TEXT NOT NULL,
+    field TEXT NOT NULL,
+    agent_value TEXT NOT NULL,
+    confidence REAL NOT NULL,
+    auto_confirmed INTEGER NOT NULL,
+    ae_value TEXT NOT NULL,
+    was_corrected INTEGER NOT NULL,
+    simulated INTEGER NOT NULL,
+    PRIMARY KEY (session_id, field)
+)"""
+
+# Edits an AE made on a Slack capture card before pressing Confirm all, and where the card was posted.
+CAPTURE_DRAFTS_DDL = """
+CREATE TABLE IF NOT EXISTS capture_drafts (
+    capture_id TEXT PRIMARY KEY,
+    edits TEXT NOT NULL,
+    first_action_at REAL NOT NULL,
+    channel TEXT NOT NULL,
+    message_ts TEXT NOT NULL
+)"""
+
+
 def connect(db_path: Path | None = None) -> sqlite3.Connection:
     path = Path(db_path or config.DB_PATH)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -81,6 +131,10 @@ def connect(db_path: Path | None = None) -> sqlite3.Connection:
     conn.execute(EVENTS_DDL)
     conn.execute(DEAL_STATUS_DDL)
     conn.execute(CHECKLIST_DDL)
+    conn.execute(CAPTURES_DDL)
+    conn.execute(CAPTURE_SESSIONS_DDL)
+    conn.execute(CAPTURE_LABELS_DDL)
+    conn.execute(CAPTURE_DRAFTS_DDL)
     return conn
 
 
@@ -142,7 +196,11 @@ def load_checklist(deal_id: str, db_path: Path | None = None) -> dict[str, dict]
 
 
 def reset_demo_state(db_path: Path | None = None) -> None:
-    """Clear events, deal status and checklist entries. Model call logs and saved debriefs are kept."""
+    """Clear events, deal status, checklist entries and this session's capture confirms. Model call logs, saved
+    debriefs, saved captures and simulated capture labels are kept."""
     with connect(db_path) as conn:
         for table in ("events", "deal_status", "checklist"):
             conn.execute(f"DELETE FROM {table}")
+        conn.execute("DELETE FROM capture_sessions WHERE simulated = 0")
+        conn.execute("DELETE FROM capture_labels WHERE simulated = 0")
+        conn.execute("DELETE FROM capture_drafts")

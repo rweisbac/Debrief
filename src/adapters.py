@@ -84,6 +84,30 @@ class FileNotifier:
         return [json.loads(line) for line in self.outbox.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+class CRMWriter(Protocol):
+    def update_opportunity(self, deal_id: str, fields: dict, source: str) -> dict: ...
+
+
+class FileCRMWriter:
+    """Appends opportunity field updates to a JSONL file. Production path: Salesforce Hosted MCP or the REST API,
+    updating the opportunity's NextStep and custom fields. Only fields the AE confirmed are written."""
+
+    def __init__(self, path: Path = VAR / "crm_updates.jsonl"):
+        self.path = path
+
+    def update_opportunity(self, deal_id: str, fields: dict, source: str) -> dict:
+        row = {"at": datetime.now(timezone.utc).isoformat(), "deal_id": deal_id, "source": source, "fields": fields}
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with self.path.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(row) + "\n")
+        return row
+
+    def read_all(self) -> list[dict]:
+        if not self.path.exists():
+            return []
+        return [json.loads(line) for line in self.path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
 class SlackError(RuntimeError):
     pass
 
@@ -120,7 +144,8 @@ class SlackNotifier:
         text = payload["text"] if user else f"For {recipient} ({role.upper()}): {payload['text']}"
         body = {"channel": channel, "text": text}
         if "blocks" in payload:
-            body["blocks"] = blockkit.slack_safe(payload, self.app_url)
+            body["blocks"] = blockkit.slack_safe(payload, self.app_url,
+                                                 interactive=bool(os.environ.get("DEBRIEF_SLACK_SIGNING_SECRET")))
         reply = self._post(body)
         if not reply.get("ok"):
             raise SlackError(f"Slack rejected the message: {reply.get('error', 'unknown error')}")

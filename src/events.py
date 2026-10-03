@@ -15,6 +15,7 @@ EVENT_NAMES = {
     "draft_sent_unedited", "draft_rejected", "draft_marked_sent", "next_step_completed", "nudge_sent",
     "nudge_acted_on", "record_confirmed_by_sc", "handoff_brief_viewed", "outcome_reported",
     "customer_reply_received", "rule_override_applied", "verifier_flagged",
+    "capture_card_opened", "capture_confirmed", "capture_field_corrected",
 }
 DISMISS_REASONS = {"already_done": "Already done", "waiting_on_customer": "Waiting on customer",
                    "not_relevant": "Not relevant", "no_time": "No time"}
