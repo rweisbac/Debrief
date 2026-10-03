@@ -192,6 +192,7 @@ function renderPayoff(p, session) {
   el.classList.remove("hidden");
   if (!p.available) { el.innerHTML = `<div class="card"><p class="sub">${esc(p.reason)}</p></div>`; return; }
   let html = "";
+  if (p.refresh_note) html += `<p class="banner">${esc(p.refresh_note)}</p>`;
   if (p.sample_label) html += `<p class="banner">${esc(p.sample_label)}</p>`;
   html += `<div class="card"><h2>Next best steps</h2><p class="sub">${esc(p.deal_state.replaceAll("_", " "))}. ${esc(p.deal_state_why)}</p>`;
   for (const [i, s] of p.next_steps.entries()) {
@@ -213,6 +214,7 @@ function renderPayoff(p, session) {
     `<tr><th>${esc(k)}</th><td>${esc(v || "blank")}</td></tr>`).join("") + `</table></div></div>`;
   el.innerHTML = html;
   el.scrollIntoView({behavior: "smooth"});
+  if (p.refreshing) setTimeout(async () => renderPayoff(await (await fetch(`/api/payoff/${dealId}`)).json(), session), 60000);
 }
 
 setInterval(() => {

@@ -5,6 +5,7 @@ import json
 import re
 from functools import lru_cache
 
+from src import config
 from src.config import ROOT
 
 PROMPTS_DIR = ROOT / "prompts"
@@ -22,6 +23,8 @@ def load(step: str, version: int | None = None) -> tuple[str, str]:
     available = versions(step)
     if not available:
         raise FileNotFoundError(f"no prompt versions for step {step!r}")
+    if version is None:
+        version = config.PROMPT_PINS.get(step)
     n = version if version is not None else available[-1]
     if n not in available:
         raise FileNotFoundError(f"prompt {step}/v{n}.md does not exist")
@@ -36,7 +39,7 @@ def stable_reference() -> tuple[str, str]:
     so it is byte identical across calls and the prompt cache can hit.
     """
     shared, shared_v = load("shared")
-    playbook = (DATA / "playbook.md").read_text(encoding="utf-8").strip()
+    playbook = config.PLAYBOOK_FILE.read_text(encoding="utf-8").strip()
     cards = json.loads((DATA / "release_cards.json").read_text(encoding="utf-8"))["cards"]
     competitors = json.loads((DATA / "competitors.json").read_text(encoding="utf-8"))["competitors"]
     text = "\n\n".join([
@@ -49,7 +52,7 @@ def stable_reference() -> tuple[str, str]:
 
 
 def playbook_rule_ids() -> set[str]:
-    return set(re.findall(r"^## (PB-\d{2}):", (DATA / "playbook.md").read_text(encoding="utf-8"), flags=re.M))
+    return set(re.findall(r"^## (PB-\d{2}):", config.PLAYBOOK_FILE.read_text(encoding="utf-8"), flags=re.M))
 
 
 def release_card_ids() -> set[str]:

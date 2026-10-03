@@ -1,0 +1,177 @@
+{
+ "deal_id": "deal_x",
+ "deal_state": "low_information",
+ "steps": [
+  {
+   "kind": "must_have",
+   "text": "Send a short recap that resolves the two-column data type question (or names the SC and a date for it) and asks 1 direct question: what business result would make this project worth doing this year.",
+   "rules": [
+    "PB-04",
+    "PB-07",
+    "PB-16"
+   ],
+   "match": [
+    [
+     "outcome",
+     "business result",
+     "worth doing"
+    ]
+   ],
+   "owner": "Nate Kowalski",
+   "due_by": "2026-09-30",
+   "id": "X-R01"
+  },
+  {
+   "kind": "must_have",
+   "text": "Contact the data architect directly with a specific answer to what the architect seemed unsure about, and offer a short session focused only on that concern.",
+   "rules": [
+    "PB-05",
+    "PB-11"
+   ],
+   "match": [
+    [
+     "data architect",
+     "owen"
+    ],
+    [
+     "concern",
+     "sort of",
+     "unsure",
+     "summary view",
+     "session"
+    ]
+   ],
+   "owner": "Nate Kowalski",
+   "due_by": "2026-10-01",
+   "id": "X-R02"
+  },
+  {
+   "kind": "must_have",
+   "text": "Mark the deal at risk internally and hold back further SC investment until an outcome and a decision process are confirmed.",
+   "rules": [
+    "PB-16"
+   ],
+   "match": [
+    [
+     "at risk",
+     "hold back",
+     "requalify",
+     "re-qualify",
+     "pause sc"
+    ]
+   ],
+   "owner": "Nate Kowalski",
+   "due_by": "2026-10-01",
+   "id": "X-R03"
+  },
+  {
+   "kind": "optional",
+   "text": "Ask the champion who else would need to agree for this to move forward.",
+   "rules": [
+    "PB-05"
+   ],
+   "match": [
+    [
+     "who else"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R04"
+  },
+  {
+   "kind": "routine",
+   "text": "Send a recap within 24 hours.",
+   "rules": [
+    "PB-01"
+   ],
+   "match": [
+    [
+     "recap"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R05"
+  },
+  {
+   "kind": "routine",
+   "text": "Book an internal deal review.",
+   "rules": [],
+   "match": [
+    [
+     "deal review"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R06"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send a mutual action plan or a pricing proposal now.",
+   "rules": [],
+   "match": [
+    [
+     "mutual action plan",
+     "pricing proposal"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R07",
+   "example": "Send Owen a mutual action plan and pricing proposal"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send an ROI calculator filled with assumed numbers.",
+   "rules": [
+    "PB-07"
+   ],
+   "match": [
+    [
+     "roi"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R08",
+   "example": "Send an ROI calculator with assumed savings"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send a generic product deck or several chasers.",
+   "rules": [
+    "PB-09"
+   ],
+   "match": [
+    [
+     "generic",
+     "product deck"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R09",
+   "example": "Send the generic product deck"
+  },
+  {
+   "kind": "wrong",
+   "text": "Forecast the deal as committed.",
+   "rules": [],
+   "match": [
+    [
+     "forecast"
+    ],
+    [
+     "commit"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "X-R10",
+   "example": "Forecast the deal as commit for Q4"
+  }
+ ],
+ "_note": "Synthetic data, fictional company. Reference answers from docs/research/best_practice_findings.md section 5. Match terms are a keyword floor, not a semantic judge."
+}

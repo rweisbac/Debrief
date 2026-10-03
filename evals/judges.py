@@ -1,7 +1,11 @@
 """LLM judge for next step quality, with calibration against hand labels.
 
-Criteria (binary each): specific, evidence_tied, playbook_tied, actionable_10_min, non_obvious.
+Judge v1 criteria (binary each): specific, evidence_tied, playbook_tied, actionable_10_min, non_obvious.
 A step passes only if every criterion passes.
+
+Judge v2 (best practice profile, DEBRIEF_BEST_PRACTICE=1) uses the research rubric R1 to R8. A step is
+acceptable when R1, R2, R4, R5 and R6 pass, and strong when R3 and R7 also pass (research section 4). R8 is
+reported. v2 is checked against the research's reference answers (evals/reference.py) before it is trusted.
 
 Calibration protocol:
 - data/labels/candidates.csv has 30 candidate steps: 10 dev, 20 test, fixed split.
@@ -28,11 +32,26 @@ sys.path.insert(0, str(ROOT))
 from src import prompts  # noqa: E402
 from src.chain import load_context  # noqa: E402
 from src.llm import LLMClient  # noqa: E402
-from src.schemas import JudgeResult  # noqa: E402
+from src.schemas import JudgeResult, JudgeResultV2  # noqa: E402
 
 CANDIDATES = ROOT / "data" / "labels" / "candidates.csv"
 FREEZE = ROOT / "evals" / "judge_freeze.json"
-CRITERIA = ["specific", "evidence_tied", "playbook_tied", "actionable_10_min", "non_obvious"]
+CRITERIA_V1 = ["specific", "evidence_tied", "playbook_tied", "actionable_10_min", "non_obvious"]
+CRITERIA_V2 = ["r1_grounded", "r2_binding_constraint", "r3_buyer_enabling", "r4_owned_dated", "r5_honest_bounded",
+               "r6_respects_process", "r7_beyond_hygiene", "r8_feasible"]
+ACCEPTABLE_V2 = ["r1_grounded", "r2_binding_constraint", "r4_owned_dated", "r5_honest_bounded", "r6_respects_process"]
+STRONG_V2 = ACCEPTABLE_V2 + ["r3_buyer_enabling", "r7_beyond_hygiene"]
+
+
+def judge_version() -> str:
+    return prompts.load("judge")[1]
+
+
+def criteria() -> list[str]:
+    return CRITERIA_V2 if judge_version() != "v1" else CRITERIA_V1
+
+
+CRITERIA = CRITERIA_V1  # kept for callers that read v1 results
 
 
 def judge_prompt_hash() -> tuple[str, str]:
@@ -40,8 +59,15 @@ def judge_prompt_hash() -> tuple[str, str]:
     return version, hashlib.sha256(text.encode()).hexdigest()
 
 
-def overall(j: JudgeResult) -> bool:
-    return all(getattr(j, c) for c in CRITERIA)
+def overall(j) -> bool:
+    """v1: every criterion. v2: acceptable (R1, R2, R4, R5, R6)."""
+    if isinstance(j, JudgeResultV2):
+        return all(getattr(j, c) for c in ACCEPTABLE_V2)
+    return all(getattr(j, c) for c in CRITERIA_V1)
+
+
+def strong(j) -> bool:
+    return isinstance(j, JudgeResultV2) and all(getattr(j, c) for c in STRONG_V2)
 
 
 async def judge_step(llm: LLMClient, deal_id: str, step: dict, debrief_id: str):
@@ -55,7 +81,8 @@ async def judge_step(llm: LLMClient, deal_id: str, step: dict, debrief_id: str):
                                                        "release_card_id", "action_type", "why")},
                "cited_lines": quotes}
     block = {"type": "text", "text": "<step_to_judge>\n" + json.dumps(payload, indent=1, sort_keys=True) + "\n</step_to_judge>"}
-    return await llm.acall(step="judge", output_model=JudgeResult, step_rules=text, prompt_version=version,
+    model = JudgeResult if version == "v1" else JudgeResultV2
+    return await llm.acall(step="judge", output_model=model, step_rules=text, prompt_version=version,
                            user_blocks=[ctx.context_block(), block], debrief_id=debrief_id)
 
 
@@ -107,7 +134,7 @@ async def run_split(split: str, mode: str) -> dict:
         human, judge = r["label"].strip().lower() == "pass", overall(res.parsed)
         pairs.append((human, judge))
         details.append({"id": r["id"], "human": human, "judge": judge, "critique": res.parsed.critique,
-                        **{c: getattr(res.parsed, c) for c in CRITERIA}})
+                        **{c: getattr(res.parsed, c) for c in criteria()}})
     return {"split": split, **rates(pairs), "details": details}
 
 

@@ -1,0 +1,206 @@
+{
+ "deal_id": "deal_a",
+ "deal_state": "ready_to_advance",
+ "steps": [
+  {
+   "kind": "must_have",
+   "text": "SC delivers the row-level access design for the partner hierarchy by Tuesday Oct 6 as committed, and the AE confirms it in writing to the champion so it is closed before the COO session.",
+   "rules": [
+    "PB-04",
+    "PB-08"
+   ],
+   "match": [
+    [
+     "partner hierarchy",
+     "row level",
+     "row-level",
+     "partner policy"
+    ]
+   ],
+   "owner": "Priya Raman",
+   "due_by": "2026-10-06",
+   "id": "A-R01"
+  },
+  {
+   "kind": "must_have",
+   "text": "Build and send to the champion by Oct 7 a phased time-to-value plan for the COO that opens with the first measurable milestone for catching late loads, with named owners and customer hours by role, and explicitly contrasts it with an 8 month project.",
+   "rules": [
+    "PB-10"
+   ],
+   "match": [
+    [
+     "onboarding plan",
+     "time to value",
+     "time-to-value",
+     "phased plan",
+     "phased"
+    ]
+   ],
+   "owner": "Sam Lee",
+   "due_by": "2026-10-07",
+   "id": "A-R02"
+  },
+  {
+   "kind": "must_have",
+   "text": "Agree the Oct 8 agenda with the champion and bring a draft mutual action plan showing customer-owned steps (budget approval, security, procurement) for the COO to correct at the end of the session.",
+   "rules": [
+    "PB-12",
+    "PB-03"
+   ],
+   "match": [
+    [
+     "mutual action plan",
+     "action plan",
+     "close plan",
+     "agenda"
+    ]
+   ],
+   "owner": "Sam Lee",
+   "due_by": "2026-10-07",
+   "id": "A-R03"
+  },
+  {
+   "kind": "optional",
+   "text": "Offer a reference call with a logistics customer whose first milestone landed within the planned window.",
+   "rules": [
+    "PB-14"
+   ],
+   "match": [
+    [
+     "reference call",
+     "reference customer"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R04"
+  },
+  {
+   "kind": "optional",
+   "text": "Prepare a value range using only the champion's own numbers on late loads and reroute costs, with assumptions shown.",
+   "rules": [
+    "PB-07"
+   ],
+   "match": [
+    [
+     "value range",
+     "cost range"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R05"
+  },
+  {
+   "kind": "optional",
+   "text": "Confirm the technical win in writing against the success criteria agreed for the TV.",
+   "rules": [
+    "PB-13"
+   ],
+   "match": [
+    [
+     "technical win",
+     "success criteria"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R06"
+  },
+  {
+   "kind": "routine",
+   "text": "Send a recap within 24 hours.",
+   "rules": [
+    "PB-01"
+   ],
+   "match": [
+    [
+     "recap"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R07"
+  },
+  {
+   "kind": "routine",
+   "text": "Confirm the Oct 8 calendar invite.",
+   "rules": [
+    "PB-02"
+   ],
+   "match": [
+    [
+     "invite"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R08"
+  },
+  {
+   "kind": "routine",
+   "text": "Update CRM with the COO as economic buyer.",
+   "rules": [],
+   "match": [
+    [
+     "crm"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R09"
+  },
+  {
+   "kind": "wrong",
+   "text": "Promise a go-live date not backed by a scoped plan.",
+   "rules": [
+    "PB-10"
+   ],
+   "match": [
+    [
+     "go-live date",
+     "go live date",
+     "live by"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R10",
+   "example": "Tell Elena the platform will be live by January"
+  },
+  {
+   "kind": "wrong",
+   "text": "Lead the COO session with a feature demo or a generic ROI deck.",
+   "rules": [],
+   "match": [
+    [
+     "feature demo",
+     "roi deck"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R11",
+   "example": "Open the Elena session with a feature demo of all three scenarios"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send pricing to the champion before the COO session.",
+   "rules": [
+    "PB-03"
+   ],
+   "match": [
+    [
+     "send pricing",
+     "pricing to dana",
+     "price quote"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "A-R12",
+   "example": "Send pricing to Dana before Thursday"
+  }
+ ],
+ "_note": "Synthetic data, fictional company. Reference answers from docs/research/best_practice_findings.md section 5. Match terms are a keyword floor, not a semantic judge."
+}

@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import parse_qs
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import BackgroundTasks, FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
 from pydantic import BaseModel
 
@@ -98,7 +98,7 @@ class ConfirmBody(BaseModel):
 
 
 @app.post("/api/capture/{deal_id}/confirm")
-def confirm(deal_id: str, body: ConfirmBody) -> dict:
+def confirm(deal_id: str, body: ConfirmBody, background: BackgroundTasks) -> dict:
     crm = _deal(deal_id)
     cap = service.find_capture(body.capture_id)
     if not cap or cap["deal_id"] != deal_id:
@@ -107,7 +107,27 @@ def confirm(deal_id: str, body: ConfirmBody) -> dict:
     values = {f: {k: str(v)[:400] for k, v in (body.values.get(f) or {}).items() if k in allowed[f]}
               for f in capture.FIELDS if f in body.values}
     session = service.confirm_capture(cap, crm["owner_ae"], values, max(0.0, min(body.seconds, 3600.0)), "web")
-    return {"session": session, "payoff": payoff(deal_id, session["final"])}
+    refreshing = bool(session["corrected"]) and config.MODE != "replay"
+    if refreshing:  # steps and drafts are rebuilt with the AE's corrections; the page fetches /api/payoff again
+        background.add_task(service.refresh_with_confirmed, deal_id, session["final"])
+    out = payoff(deal_id, session["final"])
+    out["refreshing"] = refreshing
+    out["refresh_note"] = ("Updating the steps and recap with your corrections. They appear here in about a minute."
+                           if refreshing else
+                           "Steps and recap were drafted from the agent's values. With the live model connected, "
+                           "they are rebuilt from your corrections." if session["corrected"] else "")
+    return {"session": session, "payoff": out}
+
+
+@app.get("/api/payoff/{deal_id}")
+def payoff_now(deal_id: str) -> dict:
+    _deal(deal_id)
+    sess = None
+    cap, _ = service.load_capture(deal_id, allow_run=False)
+    if cap:
+        sess = capture.session_for(cap["capture_id"])
+    final = {l["field"]: json.loads(l["ae_value"]) for l in (sess or {}).get("labels", [])}
+    return payoff(deal_id, final)
 
 
 def payoff(deal_id: str, final: dict) -> dict:

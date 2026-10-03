@@ -372,6 +372,20 @@ class JudgeResult(_Model):
     critique: str
 
 
+class JudgeResultV2(_Model):
+    """Best practice rubric R1 to R8 (docs/research/best_practice_findings.md, section 4)."""
+    r1_grounded: bool
+    r2_binding_constraint: bool
+    r3_buyer_enabling: bool
+    r4_owned_dated: bool
+    r5_honest_bounded: bool
+    r6_respects_process: bool
+    r7_beyond_hygiene: bool
+    r8_feasible: bool
+    best_practice_rule: str  # PB-01 to PB-16, or "none"
+    critique: str
+
+
 # Computed in code (no model call)
 
 class MeddpiccStatusEnum(str, Enum):
@@ -475,7 +489,7 @@ class CaptureRecord(_Model):
 
 
 LLM_OUTPUT_MODELS = [ExtractionRecord, Assessment, RecapEmail, InternalSummary, MutualActionPlan, VerifierReport,
-                     JudgeResult, CaptureRecord]
+                     JudgeResult, JudgeResultV2, CaptureRecord]
 
 
 # Validators. Each returns a list of human readable errors; empty means valid.

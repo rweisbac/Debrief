@@ -74,7 +74,7 @@ async def run_one(deal: str, mode: str, with_judge: bool) -> dict:
                 scored["judge"].append({"step": i, "status": "error", "reason": jr.parse_error or "refused"})
             else:
                 scored["judge"].append({"step": i, "status": "ran", "passed": judges.overall(jr.parsed),
-                                        **jr.parsed.model_dump(mode="json")})
+                                        "strong": judges.strong(jr.parsed), **jr.parsed.model_dump(mode="json")})
     return scored
 
 
@@ -222,20 +222,24 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
 
         if with_judge:
             label = "calibrated" if judges.status()["calibrated"] else "uncalibrated"
+            crit = judges.criteria()
+            v2 = crit == judges.CRITERIA_V2
+            rule = ("Judge v2, research rubric R1 to R8: acceptable when R1, R2, R4, R5 and R6 pass; strong when R3 "
+                    "and R7 also pass." if v2 else "Binary per criterion; a step passes only if all pass.")
             L += [f"## Judge results ({label})", "",
-                  "Binary per criterion; a step passes only if all pass. Until hand labels exist and the judge is "
-                  "frozen and scored on the test split, treat these as uncalibrated opinions.", "",
-                  "| Deal | Step | Overall | specific | evidence_tied | playbook_tied | actionable_10_min | non_obvious | Critique |",
-                  "|---|---|---|---|---|---|---|---|---|"]
+                  rule + " Until the judge is checked against labels, treat these as uncalibrated opinions.", "",
+                  "| Deal | Step | Overall | " + " | ".join(crit) + " | Critique |",
+                  "|---|---|---|" + "---|" * len(crit) + "---|"]
             for d, s in first.items():
                 for j in (s or {}).get("judge", []):
                     if j["status"] != "ran":
-                        L.append(f"| {d} | {j['step']} | not run | | | | | | {j['reason'][:120]} |")
+                        L.append(f"| {d} | {j['step']} | not run | " + "| " * len(crit) + f"{j['reason'][:120]} |")
                         continue
                     yn = lambda b: "pass" if b else "fail"  # noqa: E731
-                    L.append(f"| {d} | {j['step']} | {yn(j['passed'])} | {yn(j['specific'])} | {yn(j['evidence_tied'])} "
-                             f"| {yn(j['playbook_tied'])} | {yn(j['actionable_10_min'])} | {yn(j['non_obvious'])} "
-                             f"| {j['critique']} |")
+                    overall = ("strong" if j.get("strong") else "acceptable" if j["passed"] else "fail") if v2 \
+                        else yn(j["passed"])
+                    L.append(f"| {d} | {j['step']} | {overall} | " + " | ".join(yn(j.get(c)) for c in crit)
+                             + f" | {j['critique']} |")
             L.append("")
 
     L += ["## Related", "", "- Verifier ablation: `evals/ablation.md` (`python evals/verifier_ablation.py`).",

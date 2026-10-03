@@ -68,6 +68,13 @@ STEP_SETTINGS = {
 # collapsed; below it, the AE is asked. Judgment fields are always asked for each AE's first N confirms. A share of
 # auto-confirmed fields is shown anyway as a spot check, so the error rate among auto-confirmed fields is measured
 # rather than assumed.
+# Best practice profile (DECISIONS D-17). On: playbook v2 from the research, next step prompt v3, recap v3 and judge
+# v2. Off: the versions the recorded fixtures were made with, so replay keeps working until a re-record.
+BEST_PRACTICE = os.environ.get("DEBRIEF_BEST_PRACTICE", "") == "1"
+PLAYBOOK_FILE = ROOT / "data" / ("playbook_v2.md" if BEST_PRACTICE else "playbook.md")
+PROMPT_PINS = {} if BEST_PRACTICE else {"assess_and_recommend": 2, "draft_recap_email": 2, "judge": 1}
+MAX_RECAP_WORDS = 120 if BEST_PRACTICE else 180
+
 # Where the confirm page is served (src/web.py). The Slack card links here.
 PUBLIC_URL = os.environ.get("DEBRIEF_PUBLIC_URL", "http://localhost:8000").rstrip("/")
 CAPTURE_THRESHOLD = float(os.environ.get("DEBRIEF_CAPTURE_THRESHOLD", "0.90"))

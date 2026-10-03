@@ -19,7 +19,7 @@ from datetime import date, datetime
 
 from pydantic import BaseModel
 
-from src import checks, meddpicc, prompts, rules
+from src import checks, config, meddpicc, prompts, rules
 from src.adapters import CRMSource, FileCRMSource, FileGongSource, GongSource
 from src.llm import CallResult, LLMClient
 from src.schemas import (Assessment, ExtractionPartA, ExtractionPartB, ExtractionRecord, InternalSummary,
@@ -32,7 +32,6 @@ DRAFT_STEPS = {
     "internal_summary": ("draft_internal_summary", InternalSummary),
     "mutual_action_plan": ("draft_mutual_action_plan", MutualActionPlan),
 }
-MAX_RECAP_WORDS = 180
 
 
 @dataclass
@@ -139,6 +138,11 @@ def _resolve_errors(obj: BaseModel, transcript: Transcript) -> list[str]:
 class Chain:
     def __init__(self, llm: LLMClient):
         self.llm = llm
+        self.confirmed: dict | None = None  # the AE's confirmed capture fields, when the chain reruns after a confirm
+
+    def _confirmed_block(self) -> list[dict]:
+        """Only present after an AE confirm, so runs before a confirm keep their recorded replay keys."""
+        return [_json_block("ae_confirmed_capture", self.confirmed)] if self.confirmed else []
 
     async def _call(self, result: DebriefResult, step: str, model: type[BaseModel], user_blocks: list[dict],
                     validator=None) -> CallResult:
@@ -190,7 +194,7 @@ class Chain:
             return errors
 
         blocks = [ctx.context_block(), _json_block("extraction", extraction),
-                  _json_block("meddpicc_gaps", {"unknown_after_tv_demo": gaps})]
+                  _json_block("meddpicc_gaps", {"unknown_after_tv_demo": gaps})] + self._confirmed_block()
         if findings:
             blocks.append(_json_block("reviewer_findings_to_fix", findings))
         return await self._call(result, "assess_and_recommend", Assessment, blocks, validator)
@@ -202,13 +206,14 @@ class Chain:
 
         def validator(obj: BaseModel) -> list[str]:
             errors = validate_evidence_excerpts(obj) + _resolve_errors(obj, ctx.transcript)
-            if isinstance(obj, RecapEmail) and len(obj.body.split()) > MAX_RECAP_WORDS:
-                errors.append(f"recap body has {len(obj.body.split())} words, max {MAX_RECAP_WORDS}")
+            if isinstance(obj, RecapEmail) and len(obj.body.split()) > config.MAX_RECAP_WORDS:
+                errors.append(f"recap body has {len(obj.body.split())} words, max {config.MAX_RECAP_WORDS}")
             if isinstance(obj, MutualActionPlan):
                 errors += validate_map(obj)
             return errors
 
-        blocks = [ctx.context_block(), _json_block("extraction", extraction), _json_block("assessment", assessment)]
+        blocks = ([ctx.context_block(), _json_block("extraction", extraction), _json_block("assessment", assessment)]
+                  + self._confirmed_block())
         if findings:
             blocks.append(_json_block("reviewer_findings_to_fix", findings))
         return await self._call(result, step, model, blocks, validator)
@@ -218,7 +223,10 @@ class Chain:
         blocks = [ctx.context_block()] + [_json_block(name, obj) for name, obj in artifacts.items() if obj is not None]
         return await self._call(result, "verify", VerifierReport, blocks)
 
-    async def run(self, ctx: DealContext) -> DebriefResult:
+    async def run(self, ctx: DealContext, confirmed: dict | None = None) -> DebriefResult:
+        """confirmed: the AE's confirmed capture fields. Given after a confirm with corrections, so the next steps
+        and drafts use the AE's judgment."""
+        self.confirmed = confirmed
         result = DebriefResult(debrief_id=f"{ctx.deal_id}-{uuid.uuid4().hex[:8]}", deal_id=ctx.deal_id,
                                as_of=ctx.as_of.isoformat(), mode=self.llm.mode, model=self.llm.model)
 

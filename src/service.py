@@ -255,3 +255,15 @@ def confirm_capture(cap: dict, ae: str, values: dict[str, dict], seconds: float,
     (crm_writer or FileCRMWriter()).update_opportunity(deal_id, capture.crm_fields(session["final"]),
                                                        source=f"debrief capture confirmed by {ae}")
     return session
+
+
+def refresh_with_confirmed(deal_id: str, final: dict, llm: LLMClient | None = None) -> dict | None:
+    """Rerun the debrief with the AE's confirmed fields, so steps and drafts reflect the correction. Live and record
+    modes only: replay has no recording for a correction the AE has not made yet."""
+    if (llm.mode if llm else config.MODE) == "replay":
+        return None
+    result = asyncio.run(Chain(llm or LLMClient()).run(load_context(deal_id), confirmed=final))
+    payload = result.to_dict()
+    payload["source"] = "auto"
+    record_store.save_debrief(result.debrief_id, deal_id, result.prompt_versions, payload)
+    return payload
