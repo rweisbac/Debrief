@@ -1,0 +1,52 @@
+{
+ "deal_id": "deal_i",
+ "bucket": "ambiguous",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "stockout",
+    "demand",
+    "warehouse",
+    "cost"
+   ]
+  ],
+  "ae_value": {
+   "value": "Disputed: fewer stockouts (Felix) against a lower warehouse bill (Imogen)"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "unclear"
+  ],
+  "economic_buyer_identified": [
+   "unclear"
+  ],
+  "ae_value": {
+   "value": "unclear",
+   "champion_name": "Felix Ward",
+   "economic_buyer_identified": "unclear",
+   "economic_buyer_name": ""
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "other",
+   "budget"
+  ],
+  "ae_value": {
+   "value": "other",
+   "note": "Felix and Imogen disagree on the priority; decision owner unclear since the reorg"
+  }
+ },
+ "next_step": {
+  "exists": false,
+  "date": "",
+  "must_mention": [],
+  "ae_value": {
+   "value": "",
+   "date": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

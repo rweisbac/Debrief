@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e5d1bbcde7da20120184b4d5689c1f125393d6efd48f993e45a037e89679c27b",
+ "recorded_at": "2026-10-03T19:20:10.432905+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqxHXKHDUzptn5TLzvK",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: Ben deferred next steps with no date, Helen's capacity concern and CFO approval over 250K are unresolved.\",\"customer_value_line\":\"Store managers know by mid afternoon what to reorder, including ship from store orders; the sandbox merged POS and ship from store orders every five minutes, and Ben said 'That's the exact thing' store managers yell about.\",\"what_we_validated\":[\"Store sales and ship from store orders merged in one model, updated every five minutes, in a sandbox of twenty stores\",\"Example SKU: on hand of twelve in POS, nine ship from store orders, real number three\",\"SKU crosswalk matched all but about four percent of rows; unmatched rows are in an exceptions table, mostly discontinued items\",\"Replenishment projection shows when on hand hits reorder point, per store and SKU\",\"Alerts to store managers in Teams, routable to district managers via the district field\",\"Tom said he is comfortable with about 640 stores; the merge runs per store in parallel\"],\"integration_patterns\":[\"Connectors to the POS system and the ecommerce database\",\"POS extracts read where they land today, no change to how the customer sends them\",\"Customer crosswalk table maps POS and ecommerce SKU formats; customer needs to own the crosswalk\",\"Backfill: start with two years of POS history in the current format, touch the old format only if the model needs it\",\"Teams alerts to store managers, routed by any field including district\"],\"objections_and_answers\":[\"Helen, timing and team capacity (last migration took four months and cost two engineers): Tom said connectors and first models are built with the customer team, crosswalk ownership stays with them, no week estimate given. Status: open\",\"Ben, why Apex over Lakestream (marketing uses it, loads daily): Tom said five minute inventory merged with orders is a streaming problem needing a separate product on Lakestream; Elise proposed comparing on the actual workload; Ben will take it back to his boss. Status: partially resolved\",\"Ben, how pricing works: Elise said it is based on compute and connected sources, not per store or user; range to follow after Tom looks at the full store count. Status: open\",\"Raymond, seasonality and peak: sandbox extrapolates from a week of history; Tom wants to test on the customer's history before promising peak performance. Status: open\"],\"open_items\":[\"Peak and seasonality performance on the customer's history, owner Tom Okafor, no date\",\"Review of unmatched SKU rows in the exceptions table, Raymond, after Tom sends it\",\"Customer owner for the SKU crosswalk not named\",\"Raymond wants to see the Teams alert set up for a real store, not urgent, Tom\",\"Compute pricing range not yet produced, Elise\",\"Implementation plan with owners and customer effort by role, not yet shared with Helen\",\"CRM logs a 2026-10-09 implementation session, but no date was agreed in the call\"],\"commitments\":[\"Tom Okafor: send the exceptions table to Raymond, no date given\",\"Elise Moreau: send a recap today (2026-10-01)\",\"Elise Moreau: put together a compute pricing range after Tom looks at the full store count, no date given\",\"Ben Castillo: take the Lakestream answer back to his boss, no date\",\"Ben Castillo: reach out when ready, no date given\"],\"stakeholders\":[\"Ben Castillo, Director of Business Intelligence, champion, present; would sign tomorrow but says it is not up to him\",\"Helen Wu, Head of Data Engineering, technical decision maker, present; her team would run it, cautious on capacity\",\"Raymond Ochoa, Senior Data Engineer, technical evaluator, present\",\"Farah, CFO, absent; anything over 250K goes to her; economic buyer field in CRM is blank\",\"Ben's boss, absent, title not stated; will ask about Lakestream and cost\"],\"competitive_notes\":[\"Lakestream is used by marketing for campaign data; Raymond confirmed marketing loads daily\",\"Ben expects his boss to say one vendor instead of two\",\"Elise offered to compare on the actual replenishment workload; Tom noted he does not know how marketing has Lakestream set up\",\"Flag Lakestream to deal desk; release card RC-10 applies\"],\"risks\":[\"No dated next step: Ben said 'We'll be in touch' and 'play it by ear'\",\"Helen's migration history and peak season concern, said by the person whose team would run it\",\"CFO approval needed above 250K (CRM ACV 310000) and Farah has not been engaged\",\"Lakestream incumbent in another department\",\"Pricing unsized and peak projection quality unproven\"],\"evidence\":[{\"utterance_id\":\"U081\",\"excerpt\":\"Let us digest this first. There's a lot going on this month. We'll be in touch.\"},{\"utterance_id\":\"U083\",\"excerpt\":\"Let's just play it by ear. I'll reach out.\"},{\"utterance_id\":\"U066\",\"excerpt\":\"anything over 250K goes to Farah anyway, our CFO, so it would go through her at some point.\"},{\"utterance_id\":\"U068\",\"excerpt\":\"The last platform migration took my team four months and I lost two engineers at the end of it.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Store sales and ship from store orders in one model, updated every five minutes.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About four percent of rows didn't match, they're in this exceptions table.\"},{\"utterance_id\":\"U036\",\"excerpt\":\"I'd want to see it on your history before I promise how well it handles peak.\"},{\"utterance_id\":\"U086\",\"excerpt\":\"Raymond, I'll send over the exceptions table so you can look at those unmatched rows.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"Okay. But they're going to say it's one vendor instead of two.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 9729,
+   "cache_creation_input_tokens": 6947,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6947,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1918,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

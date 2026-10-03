@@ -1,0 +1,53 @@
+{
+ "deal_id": "deal_c",
+ "bucket": "non_committal",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "reorder",
+    "replenish"
+   ],
+   [
+    "store"
+   ]
+  ],
+  "ae_value": {
+   "value": "Store managers know by mid afternoon what to reorder, including ship from store"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "unclear"
+  ],
+  "economic_buyer_identified": [
+   "yes",
+   "unclear"
+  ],
+  "ae_value": {
+   "value": "unclear",
+   "champion_name": "Ben Castillo",
+   "economic_buyer_identified": "yes",
+   "economic_buyer_name": "Farah"
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "competitor"
+  ],
+  "ae_value": {
+   "value": "competitor",
+   "note": "Marketing already uses Lakestream; Ben's boss will ask why not extend it"
+  }
+ },
+ "next_step": {
+  "exists": false,
+  "date": "",
+  "must_mention": [],
+  "ae_value": {
+   "value": "",
+   "date": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

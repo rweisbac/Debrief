@@ -1,0 +1,46 @@
+{
+ "deal_id": "deal_f",
+ "bucket": "non_committal",
+ "priority_why_now": {
+  "stated": false,
+  "must_mention": [],
+  "ae_value": {
+   "value": ""
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "absent",
+   "unclear"
+  ],
+  "economic_buyer_identified": [
+   "no",
+   "unclear"
+  ],
+  "ae_value": {
+   "value": "absent",
+   "champion_name": "",
+   "economic_buyer_identified": "no",
+   "economic_buyer_name": ""
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "no_urgency"
+  ],
+  "ae_value": {
+   "value": "no_urgency",
+   "note": "No goal or deadline; corporate asked them to look at options"
+  }
+ },
+ "next_step": {
+  "exists": false,
+  "date": "",
+  "must_mention": [],
+  "ae_value": {
+   "value": "",
+   "date": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

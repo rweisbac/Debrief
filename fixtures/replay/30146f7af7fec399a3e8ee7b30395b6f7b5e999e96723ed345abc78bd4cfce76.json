@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "30146f7af7fec399a3e8ee7b30395b6f7b5e999e96723ed345abc78bd4cfce76",
+ "recorded_at": "2026-10-03T19:21:29.967732+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cffr4ZipAbWhrULEGzFNh",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":false,\"summary\":\"not stated\",\"evidence\":[]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No dated next meeting agreed. Lily deferred to Owen, whose calendar is a mess this month; Nate said he will reach out to Owen.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U029\",\"excerpt\":\"You'd have to ask him. His calendar is a mess this month.\"},{\"utterance_id\":\"U030\",\"excerpt\":\"Got it. I'll reach out to him.\"}]},\"objections\":[{\"summary\":\"Owen was lukewarm on the summary view and non-committal, then left early. Whether it meets his needs is unclear.\",\"raised_by\":\"Owen Marsh\",\"status\":\"open\",\"answer_given\":\"\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"}]}],\"open_technical_items\":[{\"summary\":\"Paid amount and allowed amount columns are still text; Owen's \\\"Probably numbers\\\" is not a firm confirmation, and Priya will send a note on them.\",\"owner\":\"Priya Raman\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"A couple of columns came in as text that I think should be numbers, the paid amount and the allowed amount.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"Probably numbers.\"}]},{\"summary\":\"Whether the twelve rows failing the date format check match the twelve on the customer's side is unconfirmed; needs comparison with Lily's list.\",\"owner\":\"Priya Raman\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Is that the same twelve we see on our side?\"},{\"utterance_id\":\"U015\",\"excerpt\":\"I'd guess so, but I'd want to compare against your list.\"}]}],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Priya Raman\",\"side\":\"apex\",\"what\":\"Send the twelve failed rows and a short note on the two text columns (paid and allowed amount) to Owen\",\"by_when\":\"2026-09-29\",\"evidence\":[{\"utterance_id\":\"U030\",\"excerpt\":\"Priya will send the failed rows and a short note on the two text columns, so Owen has something to look at when he's back.\"},{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"}]},{\"who\":\"Nate Kowalski\",\"side\":\"apex\",\"what\":\"Reach out to Owen to find another time to finish the demo\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U030\",\"excerpt\":\"Got it. I'll reach out to him.\"}]},{\"who\":\"Lily Chen\",\"side\":\"customer\",\"what\":\"Send Priya her list of the twelve failed date-format rows to compare\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can send it.\"}]},{\"who\":\"Lily Chen\",\"side\":\"customer\",\"what\":\"Tell Owen what she saw in the demo\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U025\",\"excerpt\":\"I'll tell Owen what I saw.\"}]}],\"stakeholders\":[{\"name\":\"Owen Marsh\",\"title\":\"Data Architect\",\"present\":true,\"why_they_matter\":\"Technical evaluator; left early after lukewarm reaction\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"}]},{\"name\":\"Lily Chen\",\"title\":\"Senior Analyst\",\"present\":true,\"why_they_matter\":\"User who stayed and will relay what she saw to Owen\",\"evidence\":[{\"utterance_id\":\"U025\",\"excerpt\":\"I'll tell Owen what I saw.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2631,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2631,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1232,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

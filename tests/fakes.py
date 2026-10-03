@@ -178,3 +178,9 @@ def scripted_clean_run(fb: FakeBackend) -> FakeBackend:
               .queue("InternalSummary", raw_body(summary_a()))
               .queue("MutualActionPlan", raw_body(map_a()))
               .queue("VerifierReport", raw_body(clean_report())))
+
+
+def capture_a() -> S.CaptureRecord:
+    """Deal A capture, written by hand (the same one the sample card uses)."""
+    from scripts.build_capture_samples import deal_a
+    return deal_a()

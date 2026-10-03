@@ -340,7 +340,9 @@ def check_dates(artifact: str, obj: BaseModel, as_of: date, strictly_after: bool
                 bad.append(f"{shown} (not a date said in the call)")
         for m in RELATIVE_RE.finditer(text):
             bad.append(f"{m.group(0)} (relative date; write the actual date)")
-    return CheckResult("dates_future_business_days", artifact, not bad, "medium",
+    # High where dates must come from the call: a date nobody said misleads the rep or the customer (deal_c, D-15).
+    severity = "high" if artifact in DATES_FROM_CALL_ONLY else "medium"
+    return CheckResult("dates_future_business_days", artifact, not bad, severity,
                        "dates are future business days" if not bad else "bad dates: " + ", ".join(bad), bad)
 
 

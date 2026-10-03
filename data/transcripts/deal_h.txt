@@ -1,0 +1,25 @@
+PARTICIPANTS
+Elise Moreau | Account Executive | apex
+Tom Okafor | Solutions Consultant | apex
+Rajiv Menon | Head of Fraud Analytics | customer
+Clara Jensen | Data Platform Manager | customer
+---
+[00:03] Elise Moreau: Thanks Rajiv, thanks Clara. Tom has the card fraud scenario ready.
+[00:10] Rajiv Menon: Good. Chargebacks are up thirty percent this year, so I'm motivated.
+[00:18] Tom Okafor: We replayed three months of card transactions. The model scored each one in under two seconds and flagged the fraud ring your team found manually in August, eleven days earlier than your nightly batch did.
+[03:30] Rajiv Menon: Eleven days. That ring cost us a lot.
+[03:36] Clara Jensen: What about the core banking feed? It drops out a few times a week.
+[03:45] Tom Okafor: The pipeline buffers and catches up when the feed returns. In the replay it caught up within four minutes each time.
+[04:10] Clara Jensen: Okay. That's better than what we have.
+[04:16] Rajiv Menon: The goal is simple. Catch card fraud in minutes, not the next morning, before chargebacks go up again in the holiday season.
+[04:32] Elise Moreau: That's clear. What would the next step look like on your side?
+[04:38] Rajiv Menon: An architecture review with Clara's team. Wednesday the 14th?
+[04:44] Clara Jensen: Wednesday the 14th works for us.
+[04:48] Elise Moreau: Wednesday October 14th, architecture review. I'll send the invite.
+[04:55] Clara Jensen: Just so you know before you plan anything else. There's a spending freeze on new vendors until the new fiscal year in February. Even if the review goes well, nothing gets signed before then.
+[05:15] Rajiv Menon: I'd hoped we were exempt. Fraud usually is.
+[05:20] Clara Jensen: Not this time. The procurement committee was clear.
+[05:25] Elise Moreau: Who decides on exceptions?
+[05:29] Rajiv Menon: The procurement committee. I don't know who sits on it this year.
+[05:35] Tom Okafor: I'll send Clara the reference architecture before the review.
+[05:40] Rajiv Menon: Thanks. Let's keep going and figure out the freeze in parallel.

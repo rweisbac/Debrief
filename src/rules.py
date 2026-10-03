@@ -98,9 +98,13 @@ def apply(assessment: Assessment, extraction: ExtractionRecord, transcript: Tran
                                       "low information call, cut: " + "; ".join(s.action for s in cut)))
             a.next_steps = a.next_steps[:config.LOW_INFO_MAX_STEPS]
 
-    # R-WAIT: a customer-owned blocker with no date means we wait and support.
+    # R-WAIT: a customer-owned blocker with no date means we wait and support. Not when Apex still owes an
+    # open technical item: then the deal is not waiting on the customer (deal_b, D-15).
     blockers = [d for d in extraction.customer_dependencies if d.blocks_progress and not d.due]
-    if blockers and a.deal_state not in (DealStateEnum.waiting_on_customer, DealStateEnum.low_information):
+    apex_people = {p.name for p in transcript.participants if p.side == "apex"}
+    apex_owes = [i for i in extraction.open_technical_items if i.owner.strip() in apex_people]
+    if blockers and not apex_owes and a.deal_state not in (DealStateEnum.waiting_on_customer,
+                                                            DealStateEnum.low_information):
         overrides.append(Override("R-WAIT", "deal_state", a.deal_state.value, "waiting_on_customer",
                                   f"customer dependency with no date: {blockers[0].summary}"))
         a.deal_state = DealStateEnum.waiting_on_customer

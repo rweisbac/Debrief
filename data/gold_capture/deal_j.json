@@ -1,0 +1,54 @@
+{
+ "deal_id": "deal_j",
+ "bucket": "ambiguous",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "permit"
+   ],
+   [
+    "april",
+    "contact center"
+   ]
+  ],
+  "ae_value": {
+   "value": "Residents see permit status online before the contact center budget cut in April"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "unclear"
+  ],
+  "economic_buyer_identified": [
+   "no",
+   "unclear"
+  ],
+  "ae_value": {
+   "value": "unclear",
+   "champion_name": "Megan Doyle",
+   "economic_buyer_identified": "unclear",
+   "economic_buyer_name": ""
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "other",
+   "timeline"
+  ],
+  "ae_value": {
+   "value": "other",
+   "note": "Platform choice goes through the corporate IT architecture board"
+  }
+ },
+ "next_step": {
+  "exists": false,
+  "date": "",
+  "must_mention": [],
+  "ae_value": {
+   "value": "",
+   "date": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

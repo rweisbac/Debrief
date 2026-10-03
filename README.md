@@ -4,8 +4,8 @@
 
 Debrief covers the window right after an Enterprise technical validation (TV) demo at Apex, where today there is no playbook inside the workflow. It does three jobs:
 
-1. **Close the demo.** A four-line checklist the AE and SC fill before leaving the call: a dated next step the customer agreed, a named stakeholder to add, the customer's own business outcome, and anything the SC promised.
-2. **After the demo.** Reads the call transcript and CRM context and produces a call record, at most 3 ranked next steps, and drafts (recap email, internal summary, mutual action plan). Every quote shown is rendered by code from the transcript.
+1. **Confirm the demo (about 30 seconds, in Slack).** After the call, the agent pre-fills 4 pieces of AE judgment from the transcript: the buyer's priority and why now, champion and economic buyer, top risk, and next step with its date. The AE confirms or corrects them on a Slack card. The confirmed fields go to the CRM opportunity and make everything after them better. This replaces the old in-call checklist (D-16).
+2. **After the demo.** Reads the call transcript and CRM context and produces a call record, at most 3 ranked next steps tied to a best practice playbook rule, and drafts (recap email, internal summary, mutual action plan). Every quote shown is rendered by code from the transcript.
 3. **Over time.** Nudges on a business-hours clock, closes the loop back to the SC when a deal moves, and seeds a CS handoff brief from what was captured at TV.
 
 Humans approve everything. Nothing is sent to a customer automatically.
@@ -33,14 +33,52 @@ Python 3.11. `pip install -r requirements.txt`.
 | `make watch` | Polls for new transcripts and runs a debrief on each new technical validation call (`src/ingest.py`). | Yes, unless replay fixtures exist |
 | `make serve` | Webhook receiver for Gong automation rules: `POST /gong/webhook` with `{"deal_id": ...}` and header `X-Debrief-Secret`. Needs `DEBRIEF_WEBHOOK_SECRET`. | Same as above |
 | `make screenshots` | Captures `docs/screenshots/*.png` from the offline demo. | No |
+| `make capture` | The confirm card on the web, the Slack interactions endpoint and the capture dashboard (`uvicorn src.web:app`), replay mode with sample cards. | No |
+| `python scripts/seed_capture.py` | Runs the capture step on all 12 deals, scores it against `data/gold_capture` and fills the dashboard with simulated AE confirms (`--mode record` to record). | Only with `--mode record` |
+| `python evals/reference.py coverage` | Scores the tool's next steps against the best practice reference answers; writes `evals/reference_results.md`. | No |
 
-Environment: `ANTHROPIC_API_KEY`, `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
+Environment: `ANTHROPIC_API_KEY` (or `DEBRIEF_API_KEY`), `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`), `DEBRIEF_BEST_PRACTICE=1` (playbook v2, next steps v3, recap v3, judge v2; off until recorded, see D-17), `DEBRIEF_CAPTURE_THRESHOLD` (0.90), `DEBRIEF_CAPTURE_WARMUP` (20), `DEBRIEF_CAPTURE_SPOT_CHECK` (0.10), `DEBRIEF_PUBLIC_URL` (where the confirm page is served), `DEBRIEF_SLACK_SIGNING_SECRET` (turns on Slack buttons).
 
-**Current status (be clear about this in a walkthrough).** Real model output was recorded on 2026-10-03 for all 5 synthetic deals (76 live calls on `claude-sonnet-5-5`, none refused). The app in replay mode shows those debriefs; `make demo` still shows the two hand-written sample cards, labeled as samples. Offline eval scores from `evals/results.md` (1 run per deal, replay, judge uncalibrated): deal state matches the gold label on 3 of 5 deals, grounding passes on 3 of 5, the overclaim check passes on 4 of 5, steps pass on 5 of 5, and all 6 trap checks and both adversarial checks pass. Failures are listed in `evals/results.md` and not fixed yet. The verifier ablation is in `evals/ablation.md`: with the verifier the planted errors caught were 5 of 5 for changed numbers (4 of 5 without), 5 of 5 for uncommitted promises (4 of 5 without), 5 of 5 for superseded features (0 of 5 without) and 5 of 5 for invented people (5 of 5 without). It raised 1 false alarm on 5 clean drafts (deal_c), none without. These are one-run, small-sample numbers on synthetic data, not a performance claim.
+**Current status (be clear about this in a walkthrough).** Real model output was recorded twice on 2026-10-03 for all 5 synthetic deals on `claude-sonnet-5-5` (76 live calls each time, none refused). Run 2 follows the fixes in DECISIONS D-15; run 1 is kept in `evals/history/`. The app in replay mode shows the recorded debriefs; `make demo` still shows the two hand-written sample cards, labeled as samples. Offline eval scores from `evals/results.md` (1 run per deal, judge uncalibrated), run 1 then run 2: deal state matches the gold label on 3 then 4 of 5 deals; the judge passes 1 of 13 then 4 of 11 next steps; commitment recall is 23 of 23 then 22 of 23; open item recall is 6 of 10 then 8 of 10. In run 2 no grounding problem reached a draft a rep could approve in one tap (deal_c's internal summary is blocked for review), deal_b's recap is blocked by a likely false alarm, and trap T6 on deal_b regressed. The verifier ablation (`evals/ablation.md`) catches 20 of 20 planted errors with the verifier and 14 of 20 without, with 0 false alarms on 5 clean drafts. These are one-run, small-sample numbers on synthetic data, not a performance claim.
 
 ### Automatic trigger
 
-`src/ingest.py` runs the chain when a new TV transcript shows up, from either `watch` (polling) or `serve` (webhook). It skips calls whose CRM stage is not Technical Validation, skips a transcript it has already processed (hash ledger in `var/`), retries a failed run once, then stops. When a debrief is ready it posts an internal "card ready" message to the AE. It never sends anything to a customer. When a debrief is ready, the AE gets the full card (state, up to 3 steps, why with a transcript quote) and the SC gets only their own steps, promises and open technical items. Set `DEBRIEF_SLACK_BOT_TOKEN` (bot token with `chat:write`, plus `im:write` for DMs) to also post these to Slack. Post to one shared channel with `DEBRIEF_SLACK_CHANNEL`, or DM people by pointing `DEBRIEF_SLACK_USERS` at a JSON file like `{"Sam Lee": "U0123ABC"}`. `DEBRIEF_APP_URL` adds an "Open in Debrief" link. Posted messages have no buttons (they need an interactivity endpoint that is not built), so acting on or dismissing a step happens in the app. A Slack failure never blocks the debrief; the file outbox is always written. Block Kit previews: `assets/ae_card_blockkit_halvorsen.json` and `assets/sc_card_blockkit.json` (paste into Block Kit Builder). Mapping a real Gong call id to a CRM opportunity is not built; the payload carries `deal_id`.
+`src/ingest.py` runs the chain when a new TV transcript shows up, from either `watch` (polling) or `serve` (webhook). It skips calls whose CRM stage is not Technical Validation, skips a transcript it has already processed (hash ledger in `var/`), retries a failed run once, then stops. When a debrief is ready it posts an internal "card ready" message to the AE. It never sends anything to a customer. When a debrief is ready, the AE gets the full card (state, up to 3 steps, why with a transcript quote) and the SC gets only their own steps, promises and open technical items. Set `DEBRIEF_SLACK_BOT_TOKEN` (bot token with `chat:write`, plus `im:write` for DMs) to also post these to Slack. Post to one shared channel with `DEBRIEF_SLACK_CHANNEL`, or DM people by pointing `DEBRIEF_SLACK_USERS` at a JSON file like `{"Sam Lee": "U0123ABC"}`. `DEBRIEF_APP_URL` adds an "Open in Debrief" link. The AE gets the confirm card first, then the debrief card. With `DEBRIEF_SLACK_SIGNING_SECRET` set and the Slack app's interactivity request URL pointed at `{DEBRIEF_PUBLIC_URL}/slack/interactions` (served by `make capture`), every button and menu works in Slack: confirm fields, edit them in a modal, act on or dismiss a step. Without it, buttons are dropped and replaced by a link to the same card on the web. A Slack failure never blocks the debrief; the file outbox is always written. Block Kit previews: `assets/ae_card_blockkit_halvorsen.json` and `assets/sc_card_blockkit.json` (paste into Block Kit Builder). Mapping a real Gong call id to a CRM opportunity is not built; the payload carries `deal_id`.
+
+## Post-demo capture: confirm, don't write
+
+The goal is under 60 seconds of AE effort and fewer than 4 questions whenever the agent is confident.
+
+- **Pre-filled from the call.** One extra model call (`prompts/capture/v1.md`) on the same cached prefix as the debrief.
+- **Confidence is computed in code, not taken from the model.** The model's probability is capped by checkable signals:
+  - no basis in the call;
+  - a cited line that does not match the transcript;
+  - an inferred rather than stated value;
+  - the CRM disagreeing on the champion or economic buyer;
+  - a date nobody said, which is also never auto-confirmed.
+- **Routing.** Fields at or above 0.90 are confirmed by the agent and collapsed. Below that, the AE gets one-tap menus or an edit box. Champion and top risk are always asked for each AE's first 20 demos. 10% of confident fields are asked anyway as a spot check, so the error rate among auto-confirmed fields is measured, not assumed.
+- **Where it lives.** A Slack card with menus, edit modals and Confirm all, or the same card on the web (`/capture/<deal>`).
+- **After confirm.** The confirmed fields are written to the CRM opportunity (`NextStep` plus custom fields). The AE sees the next best steps, the recap draft for approval, and a stakeholder map with stances shown only when a line from the call supports them. Corrections rebuild the steps and drafts in live mode.
+- **Learning loop.** Every confirm is a labeled example. `/dashboard` shows per-field accuracy, calibration by confidence bucket, auto-confirm rate, questions per meeting, median time to confirm, and a threshold simulator. Measured and simulated data are kept apart.
+- **Status.** No capture output is recorded yet. The demo uses 2 hand-written sample captures (deal_a, deal_b), labeled as samples and scored by the real code.
+
+## Best practice behind the next steps
+
+`docs/research/best_practice_findings.md` holds the deep research on what works after a technical validation demo, with every claim graded. Its main finding: most stalled deals are lost to indecision and internal disagreement, not to a competitor. The strongest next steps help the buying group decide without the rep in the room.
+
+The research is built in four places, behind `DEBRIEF_BEST_PRACTICE=1` until a recording is approved (D-17):
+
+- **Playbook v2** (`data/playbook_v2.md`): 16 rules, each with its evidence, plus an explicit list of routine steps that never count on their own.
+- **Next steps v3:** steps ranked by the constraint that blocks the customer's next decision.
+- **Judge v2:** grades each step on the research rubric R1 to R8.
+- **Reference answers** (`data/reference_steps/`): the research's must-have, optional, routine and wrong steps for the 5 scenarios.
+
+Baseline with the recorded run 2, before the profile (`evals/reference_results.md`, keyword match):
+
+- 10 of 15 must-have steps covered;
+- 0 steps matching a wrong step;
+- 1 routine-only step;
+- deal state agrees with the research on 4 of 5 deals.
 
 ## Data flow
 
@@ -136,7 +174,7 @@ No metric target is ever shown as a result, and nothing here claims causation.
 
 ## Cost and latency
 
-Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run per deal, Sonnet 5.5, 7 calls per debrief (two extract calls, assess, three drafts, verify). Judge calls are excluded. Cost uses the rates in `src/config.py`; the cache write rate is still an assumption.
+Run 1, measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run per deal, Sonnet 5.5, 7 calls per debrief (two extract calls, assess, three drafts, verify). Judge calls are excluded. Cost uses the rates in `src/config.py`; the cache write rate is still an assumption.
 
 | Deal | Calls | Cost | Summed call latency | Cache read tokens |
 |---|---|---|---|---|
@@ -151,11 +189,25 @@ Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run pe
 - Cache: reads were observed, but small. Calls read only about 3.4k to 5.5k tokens each (the shared reference), while each call also wrote 6.7k to 11k new tokens, so the transcript prefix is not being reused across steps. deal_a read nothing; it was the first deal recorded. The cause is not established. Dollar savings from caching: not measured.
 - deal_c and deal_x have 9 and 8 calls because of one retry or regeneration each; the extra calls are in `llm_calls`.
 
+Run 2 (after D-15), same setup. More drafts are rewritten once under the stricter gates, so there are more calls per debrief.
+
+| Deal | Calls | Cost | Summed call latency | Cache read tokens |
+|---|---|---|---|---|
+| deal_a | 9 | $0.550 | 127 s | 21,737 |
+| deal_b | 9 | $0.423 | 111 s | 50,408 |
+| deal_c | 10 | $0.506 | 135 s | 61,548 |
+| deal_x | 9 | $0.199 | 56 s | 42,615 |
+| deal_y | 8 | $0.367 | 94 s | 37,982 |
+
+- Cost per debrief: mean $0.409, range $0.199 to $0.550. Total API spend for run 2, including judge and ablation calls, was $2.47 over 76 live calls.
+- Latency per debrief: summed call time averages 105 s (56 to 135 s). End to end wall clock was not measured.
+
 ## Production path
 
 - **Transcripts:** the Gong REST API for call metadata and raw transcripts. The Gong MCP server is read-only and does not return raw transcripts.
 - **CRM:** Salesforce Hosted MCP for opportunity, contacts and activity; checklist fields written back as opportunity fields.
-- **Delivery:** Slack MCP or a Bolt app posting the Block Kit card (`assets/ae_card_blockkit.json` shows the format), with interactive buttons calling back into the event log.
+- **Delivery:** a Slack app (bot token plus signing secret) posting the confirm card and the Block Kit debrief card, with its interactivity request URL on `/slack/interactions`. Built and tested here against a fake Slack API; it has not been connected to a real workspace.
+- **CRM write-back:** confirmed capture fields to the Salesforce opportunity (`NextStep` plus custom fields `Why_Now__c`, `Champion__c`, `Economic_Buyer__c`, `Top_Risk__c`, `Next_Step_Date__c`). File-backed here (`var/crm_updates.jsonl`).
 - **Consent:** inherited from the call recorder. If Gong did not record the call with consent, Debrief has no transcript.
 - **Retention:** keep transcripts and prompts for the Gong retention window or shorter. Keep structured records with the opportunity.
 - **Redaction:** PERSON, EMAIL_ADDRESS and PHONE_NUMBER are redacted from logged prompts and outputs when presidio is installed, never from what is sent to the model.
@@ -172,7 +224,8 @@ Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run pe
   - generic padding steps;
   - scorers that are looser than the gold labels for T1, T3, X1 and Y1.
 - **The LLM judge is uncalibrated** until `data/labels/candidates.csv` is labelled by hand and scored once on the test split.
-- **Synthetic data only:** 5 transcripts, written to contain specific traps.
+- **Synthetic data only:** 12 transcripts. The 5 debrief deals were written to contain specific traps; 7 shorter ones were added for the capture card, 3 per bucket (clear next step, non-committal, hidden blocker, ambiguous). Ground truth was written by the builder and needs an independent review.
+- **Not recorded yet:** capture output and the best practice profile. The owner asked to hold recording until best practice was drafted.
 - **Not built:** auto-sending, an agent framework, a battlecard engine and CS forecasting (see DECISIONS.md).
 
 ## Demo script: 8 minutes inside a 20 minute walkthrough

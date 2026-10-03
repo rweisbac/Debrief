@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slack card preview</title>
+<style>
+:root { --bg: #ffffff; --fg: #1d1c1d; --muted: #616061; --line: #e2e2e2; --link: #1264a3; --btn: #ffffff;
+  --btn-line: #c7c7c7; --primary: #007a5a; --quote: #dddddd; --side: #3f0e40; --side-fg: #cfc3cf;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #1a1d21; --fg: #d1d2d3; --muted: #9a9b9d; --line: #35373b; --link: #1d9bd1;
+    --btn: #1a1d21; --btn-line: #565856; --primary: #148567; --quote: #4b4c4f; --side: #19171d; --side-fg: #9a9b9d; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.46668 var(--font); display: flex; min-height: 100vh; }
+nav { width: 200px; background: var(--side); color: var(--side-fg); padding: 14px; font-size: 14px; flex-shrink: 0; }
+nav b { color: #fff; display: block; margin-bottom: 14px; }
+nav div { padding: 3px 6px; border-radius: 4px; }
+nav .on { background: #1164a3; color: #fff; }
+@media (max-width: 640px) { nav { display: none; } }
+main { flex: 1; padding: 16px 20px; max-width: 760px; }
+.chan { border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 14px; font-weight: 700; }
+.note { color: var(--muted); font-size: 12px; margin: 0 0 12px; }
+.msg { display: flex; gap: 10px; }
+.avatar { width: 36px; height: 36px; border-radius: 6px; background: #1264a3; color: #fff; display: grid; place-items: center;
+  font-weight: 700; flex-shrink: 0; }
+.who { font-weight: 900; }
+.app { font-size: 10px; background: #e8e8e8; color: #616061; padding: 1px 3px; border-radius: 2px; font-weight: 700; margin-left: 4px; }
+.time { color: var(--muted); font-size: 12px; margin-left: 6px; }
+.blocks { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.header { font-size: 18px; font-weight: 900; }
+.context { color: var(--muted); font-size: 13px; }
+.section { display: flex; gap: 12px; justify-content: space-between; align-items: flex-start; }
+.divider { border-top: 1px solid var(--line); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { border: 1px solid var(--btn-line); background: var(--btn); color: var(--fg); border-radius: 4px; padding: 3px 12px;
+  font: inherit; font-size: 14px; font-weight: 700; white-space: nowrap; }
+.btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.select { border: 1px solid var(--btn-line); border-radius: 4px; padding: 3px 28px 3px 10px; font-size: 14px; position: relative;
+  background: var(--btn); }
+.select::after { content: "\25BE"; position: absolute; right: 8px; color: var(--muted); }
+blockquote { margin: 2px 0; padding-left: 10px; border-left: 4px solid var(--quote); }
+</style>
+</head>
+<body>
+<nav><b>Apex</b><div># deals</div><div class="on" id="dm">Debrief</div><div># sales-central</div></nav>
+<main>
+  <div class="chan" id="chan">Debrief</div>
+  <p class="note">Preview: the Block Kit JSON Debrief posts to Slack, rendered in Slack's style. Synthetic data, fictional company.</p>
+  <div class="msg"><div class="avatar">D</div><div style="flex:1">
+    <div><span class="who">Debrief</span><span class="app">APP</span><span class="time" id="time">just now</span></div>
+    <div class="blocks" id="blocks"></div></div></div>
+</main>
+<script>
+const params = new URLSearchParams(location.search);
+const dealId = location.pathname.split("/").pop();
+const kind = params.get("kind") || "capture";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const EMOJI = {white_check_mark: "✅", large_orange_circle: "🟠", pencil2: "✏️"};
+function mrkdwn(t) {
+  return t.split("\n").map(line => {
+    let quote = line.startsWith("> ");
+    let s = esc(quote ? line.slice(2) : line)
+      .replace(/:([a-z0-9_]+):/g, (m, k) => EMOJI[k] || m)
+      .replace(/\*([^*]+)\*/g, "<b>$1</b>").replace(/(^|\s)_([^_]+)_/g, "$1<i>$2</i>")
+      .replace(/&lt;(https?:[^|]+)\|([^&]+)&gt;/g, '<a href="$1">$2</a>');
+    return quote ? `<blockquote>${s}</blockquote>` : s;
+  }).join("<br>").replace(/<\/blockquote><br><blockquote>/g, "<br>");
+}
+function element(e) {
+  if (e.type === "button") return `<span class="btn ${e.style === "primary" ? "primary" : ""}">${esc(e.text.text)}</span>`;
+  if (e.type === "static_select") return `<span class="select">${esc((e.initial_option || {text: e.placeholder}).text.text)}</span>`;
+  if (e.type === "mrkdwn" || e.type === "plain_text") return e.type === "mrkdwn" ? mrkdwn(e.text) : esc(e.text);
+  return "";
+}
+function block(b) {
+  if (b.type === "header") return `<div class="header">${esc(b.text.text)}</div>`;
+  if (b.type === "divider") return `<div class="divider"></div>`;
+  if (b.type === "context") return `<div class="context">${b.elements.map(element).join(" ")}</div>`;
+  if (b.type === "actions") return `<div class="actions">${b.elements.map(element).join("")}</div>`;
+  if (b.type === "section") return `<div class="section"><div>${mrkdwn(b.text.text)}</div>${b.accessory ? element(b.accessory) : ""}</div>`;
+  return "";
+}
+fetch(`/api/preview/slack/${dealId}?kind=${kind}`).then(r => r.json()).then(d => {
+  document.getElementById("blocks").innerHTML = d.blocks.map(block).join("");
+  document.getElementById("chan").textContent = "Debrief (direct message to " + d.ae + ")";
+  document.title = "Slack: " + d.account;
+});
+</script>
+</body>
+</html>

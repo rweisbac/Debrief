@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e75753b300bf3d0e48b04f458350329f6c8b79b9fc9d9f5d1177b46e35f754a4",
+ "recorded_at": "2026-10-03T19:18:23.944049+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffqpUa7Twu9hL3Fkspbh",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Open technical gap: nested mhp_roles claim is not supported today (flat claims only), and the October 9th security committee packet needs a written SSO design.\",\"customer_value_line\":\"Reporting piece fits the stated goal of moving the readmission risk list from weekly to daily so care managers can call the morning after discharge; Nora: \\\"The whole goal is daily.\\\"\",\"what_we_validated\":[\"Readmission pipeline runs incrementally on the de-identified extract; last night's run took nine minutes (Sunday job takes most of the day, per Nora).\",\"Output list sorted by risk, filtered by facility, with top three drivers per row; Nora said it is what they have asked for for two years.\",\"Late claims (thirty, forty days) restate the score, with the change logged in a change log on the row.\",\"BAA: customer legal already has the standard BAA; Aisha said that part is fine.\",\"Customer managed keys: Leo said they are on a cloud key service, which fits.\"],\"integration_patterns\":[\"Customer runs its own OIDC layer; group membership comes in a nested custom claim mhp_roles (facility, role, clearance level). Apex maps flat claims only today (string or list of strings), per RC-09; nested claims are in private preview with no announced GA date.\",\"No SCIM; customer provisions with a nightly job writing to the app's API.\",\"Option one: customer emits an extra flat claim; needs a token service change, Raj's review, six to eight weeks minimum.\",\"Facility filter on the list depends on reading facility from the token; otherwise the mapping is maintained by hand.\",\"Customer managed keys on a major cloud key service; on-prem HSMs are not supported per RC-11.\"],\"objections_and_answers\":[\"SSO worry (Aisha): nested mhp_roles vs flat-only mapping. Answer: two paths offered, flat claim or native nested; Marcus said he believed nested was on the roadmap but would confirm. RC-09 says private preview, no GA date. Status: open.\",\"Flat-claim workaround is slow (Leo): token service change goes through Raj, six to eight weeks minimum. No answer given. Status: open.\",\"Care managers losing trust if someone drops off the list overnight (Aisha): change log exists on the row; push notification is a design choice to discuss with Nora's team. Status: partially resolved, parked.\",\"Nothing moves until vendor security review clears (Aisha): committee meets October 9th; complete packet makes that agenda, otherwise November. Status: open.\"],\"open_items\":[\"Marcus: firm answer from identity team on native nested claims, with a date Leo can put in front of Raj (not a roadmap slide).\",\"Marcus: written SSO design for the security committee, needed even if the answer is option one.\",\"Jordan: complete security packet to Aisha, copy Raj, before October 9th (questionnaire, SOC 2, encryption details, SSO design).\",\"Procurement (via Aisha): send the vendor questionnaire to Apex; no date given.\",\"Jordan: whether the demo recording can be shared given de-identified data, then back to Nora.\",\"Jordan: drop-off notification question to work through with Nora's care management team.\",\"Correct in the packet: Marcus said the whitepaper covers the HSM setup, but RC-11 says on-prem HSMs are not supported.\",\"Dated next meeting: none agreed; Aisha wants the SSO answer first.\"],\"commitments\":[\"Marcus: take nested claim question to the identity team today (2026-10-01).\",\"Marcus: get Leo something he can put in front of Raj; no date stated.\",\"Marcus: send Nora the encryption whitepaper; no date stated.\",\"Jordan: send a recap note today (2026-10-01).\",\"Jordan: complete security packet in time for the October 9th committee.\",\"Jordan: come back to Nora on sharing the demo recording; no date stated.\",\"Jordan: work through the drop-off notification question with the care management team; no date stated.\",\"Aisha: have procurement send the vendor questionnaire; no date stated.\"],\"stakeholders\":[\"Aisha Karim, Director of Data Engineering: champion, present; owns evaluation and wants packet sent to her with Raj copied.\",\"Leo Brandt, Identity and Access Engineer: technical evaluator, present; owns any token service change.\",\"Nora Fitzgerald, Clinical Analytics Lead: end user, present; about 140 care managers; left early.\",\"Raj Patel, Security Architect: absent; his committee must approve before any pilot and he reviews token changes.\",\"Finance: unnamed, absent; pricing talk only after security clears.\",\"Economic buyer: not named.\"],\"competitive_notes\":[],\"risks\":[\"SSO: nested claim unsupported today, native timing unconfirmed, workaround is six to eight weeks minimum and needs Raj's review.\",\"Missing the October 9th packet pushes the review to the November meeting.\",\"Raj was absent and has seen nothing; he gates the decision.\",\"No dated next meeting and no economic buyer named; pricing only after committee.\",\"Drop-off notification is a workflow question Nora called big; parked, not a blocker per Aisha.\"],\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"It comes through a custom claim called mhp_roles, and that claim is nested.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Today this takes a flat claim. A string or a list of strings.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"It means it's six to eight weeks, minimum.\"},{\"utterance_id\":\"U027\",\"excerpt\":\"The whole goal is daily.\"},{\"utterance_id\":\"U056\",\"excerpt\":\"If we hand them a complete packet before then, we're on that agenda. If not, it's the November meeting.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"And if it's native nested claims coming soon, I need a date I can put in front of Raj. Not a roadmap slide.\"},{\"utterance_id\":\"U075\",\"excerpt\":\"Let's see what the answer is first. If it's simple, an email is fine. If it's complicated, we'll set something up.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"Today it's the major cloud key services. If you're running your own HSM on premises, I'd need to check.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 8695,
+   "cache_creation_input_tokens": 6753,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6753,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 2062,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

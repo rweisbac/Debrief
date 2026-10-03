@@ -1,0 +1,59 @@
+{
+ "deal_id": "deal_b",
+ "record": {
+  "champion_status": {
+   "basis": "inferred",
+   "champion_name": "Aisha Karim",
+   "economic_buyer_identified": "unclear",
+   "economic_buyer_name": "",
+   "evidence": [
+    {
+     "excerpt": "Send it to me and copy Raj",
+     "utterance_id": "U061"
+    },
+    {
+     "excerpt": "then we'll talk pricing with finance",
+     "utterance_id": "U077"
+    }
+   ],
+   "model_confidence": 0.65,
+   "value": "strong"
+  },
+  "next_step": {
+   "basis": "none",
+   "date": "",
+   "evidence": [],
+   "model_confidence": 0.0,
+   "value": ""
+  },
+  "priority_why_now": {
+   "basis": "stated",
+   "evidence": [
+    {
+     "excerpt": "by Monday a third of the people on the list have already been readmitted",
+     "utterance_id": "U027"
+    },
+    {
+     "excerpt": "The whole goal is daily",
+     "utterance_id": "U027"
+    }
+   ],
+   "model_confidence": 0.9,
+   "value": "A daily readmission risk list; with the weekly job, a third of patients are readmitted before outreach"
+  },
+  "top_risk": {
+   "basis": "stated",
+   "evidence": [
+    {
+     "excerpt": "nothing moves until the vendor security review clears",
+     "utterance_id": "U056"
+    }
+   ],
+   "model_confidence": 0.9,
+   "note": "Vendor security committee meets Oct 9 and needs a written SSO design",
+   "value": "security_review"
+  }
+ },
+ "sample_label": "Sample written by hand to show the confirm card. Not generated from the call.",
+ "source": "sample"
+}

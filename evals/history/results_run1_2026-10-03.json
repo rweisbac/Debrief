@@ -1,0 +1,1215 @@
+{
+ "deal_a": [
+  {
+   "deal": "deal_a",
+   "status": "ran",
+   "debrief_id": "deal_a-eed772b7",
+   "errors": [],
+   "state": {
+    "expected": "ready_to_advance",
+    "accepted": [
+     "ready_to_advance"
+    ],
+    "got": "ready_to_advance",
+    "passed": true
+   },
+   "extraction": {
+    "objections": {
+     "recall": [
+      2,
+      2
+     ],
+     "precision": [
+      2,
+      4
+     ],
+     "missed": [],
+     "extra": [
+      "Two dbt models failed because a custom macro makes an external API call during compile, which Apex does not allow.",
+      "Row level access for carrier partners with sub carriers was not covered in the scenarios; hierarchy handling is unvalidated."
+     ]
+    },
+    "commitments": {
+     "recall": [
+      6,
+      6
+     ],
+     "precision": [
+      6,
+      8
+     ],
+     "missed": [],
+     "extra": [
+      "Email Mikkel where to drop the sample file",
+      "Show only the late load scenario at the Elena session"
+     ]
+    },
+    "stakeholders": {
+     "recall": [
+      4,
+      4
+     ],
+     "precision": [
+      4,
+      6
+     ],
+     "missed": [],
+     "extra": [
+      "Sam Lee",
+      "Priya Raman"
+     ]
+    },
+    "open_items": {
+     "recall": [
+      0,
+      2
+     ],
+     "precision": [
+      0,
+      3
+     ],
+     "missed": [
+      "Row level access for partner hierarchy with sub carriers",
+      "Two dbt models use a macro that calls an external API at compile time; customer to refactor"
+     ],
+     "extra": [
+      "Validate the row level policy for the partner hierarchy (partners with sub carriers) in the sandbox using Mikkel's sample table.",
+      "Partner hierarchy sample table must arrive from the customer before the policy can be built.",
+      "Lag alert configuration walkthrough was offered for later and not shown."
+     ]
+    }
+   },
+   "traps": [
+    {
+     "id": "T4",
+     "name": "Superseded feature",
+     "passed": true,
+     "sub": {
+      "no_superseded_phrase": true,
+      "correction_extracted": true
+     },
+     "expected": "Any statement about connector freshness says continuous sync of about a minute, citing RC-12. Hourly batch is never presented as current."
+    },
+    {
+     "id": "T5",
+     "name": "Exact number",
+     "passed": true,
+     "sub": {
+      "extracted_exactly": true,
+      "drafts_numbers_grounded": true
+     },
+     "expected": "Volumes are copied exactly as 4.7 billion events a month and 38,000 per second. No rounding to 5 billion or 40,000 for the customer peak."
+    }
+   ],
+   "adversarial": null,
+   "grounding": {
+    "evidence_resolves": {
+     "passed": true,
+     "failures": []
+    },
+    "numbers_in_source": {
+     "passed": true,
+     "failures": []
+    },
+    "names_known": {
+     "passed": true,
+     "failures": []
+    },
+    "dates_future_business_days": {
+     "passed": true,
+     "failures": []
+    },
+    "no_unsupported_claims": {
+     "passed": true,
+     "failures": []
+    }
+   },
+   "overclaim": {
+    "passed": true,
+    "status": "pass",
+    "first_draft_flags": [],
+    "verifier_ran": true,
+    "note": "verifier based; the verifier is itself a model and is not ground truth"
+   },
+   "steps": {
+    "passed": true,
+    "problems": [],
+    "n_steps": 2
+   },
+   "needs_review": [],
+   "overrides": [],
+   "cost_usd": 0.489914,
+   "latency_ms": 15,
+   "cache_read_tokens": 0,
+   "cache_write_tokens": 79552,
+   "n_calls": 7,
+   "steps_output": {
+    "deal_state": "ready_to_advance",
+    "deal_state_why": "Dated 45 minute session with COO Elena Varga is set, evaluators report no blockers, and only the partner hierarchy policy is open, due Oct 6.",
+    "next_steps": [
+     {
+      "action": "Draft a guided onboarding plan for the Oct 8 Elena session with named owners on both sides and customer effort by role, without guessing a timeline.",
+      "owner": "Sam Lee",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-10",
+      "release_card_id": "RC-13",
+      "action_type": "send_material",
+      "why": "Sam promised only a 'realistic' plan; a typical AE skips named owners and effort by role, which Elena needs after an eight month project.",
+      "evidence": [
+       {
+        "utterance_id": "U076",
+        "excerpt": "She got burned on the last platform project, it took eight months to see anything."
+       },
+       {
+        "utterance_id": "U077",
+        "excerpt": "We'll come with a realistic onboarding plan, not a glossy one."
+       }
+      ]
+     },
+     {
+      "action": "Send the connector release note and the file-drop instructions to Mikkel, and log both as dated commitments next to the Oct 6 policy.",
+      "owner": "Priya Raman",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-12",
+      "action_type": "send_material",
+      "why": "Both were said in passing and the CRM logs only the Oct 6 policy. The Monday sample from Mikkel gates that date.",
+      "evidence": [
+       {
+        "utterance_id": "U038",
+        "excerpt": "I'll send the release note."
+       },
+       {
+        "utterance_id": "U081",
+        "excerpt": "Mikkel, watch for an email from me with where to drop the file."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Partner hierarchy depth is unknown. RC-07 supports one parent and child level out of the box; deeper hierarchies need validation on Mikkel's sample before Oct 8.",
+      "competitor": "",
+      "release_card_id": "RC-07",
+      "evidence": [
+       {
+        "utterance_id": "U053",
+        "excerpt": "A few of the big ones broker out to smaller outfits and they want to see those loads too."
+       }
+      ]
+     }
+    ]
+   },
+   "judge": [
+    {
+     "step": 1,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": true,
+     "critique": "Ties well to U076-U077 (eight-month burn, 'realistic onboarding plan') and PB-10/RC-13 fit, but drafting a plan with named owners on both sides and effort by role takes well over 10 minutes and needs Apex implementation input and customer names, so it fails the 10-minute test."
+    },
+    {
+     "step": 2,
+     "status": "ran",
+     "passed": true,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": true,
+     "non_obvious": true,
+     "critique": "Names Priya, Mikkel, the RC-12 release note, the file-drop email, and the Oct 6 policy. U038 and U081 are verbatim passing commitments, and PB-08 explicitly covers those said in passing. The CRM log does hold only the Oct 6 item, so the gap is real. It's a 10-minute task, and tying the Monday sample to the Oct 6 date adds some value, though a diligent SC might do it anyway."
+    }
+   ]
+  }
+ ],
+ "deal_b": [
+  {
+   "deal": "deal_b",
+   "status": "ran",
+   "debrief_id": "deal_b-c5a0b127",
+   "errors": [],
+   "state": {
+    "expected": "open_technical_gap",
+    "accepted": [
+     "open_technical_gap",
+     "missing_stakeholder"
+    ],
+    "got": "waiting_on_customer",
+    "passed": false
+   },
+   "extraction": {
+    "objections": {
+     "recall": [
+      2,
+      4
+     ],
+     "precision": [
+      2,
+      2
+     ],
+     "missed": [
+      "SSO: custom identity provider sends groups in a nested custom claim; Apex maps flat claims only today",
+      "Where PHI sits and who holds keys"
+     ],
+     "extra": []
+    },
+    "commitments": {
+     "recall": [
+      6,
+      6
+     ],
+     "precision": [
+      7,
+      8
+     ],
+     "missed": [],
+     "extra": [
+      "Send the complete security packet (questionnaire, SOC 2 report, encryption details, SSO design) to Aisha, copying Raj, in time for the October 9th committee."
+     ]
+    },
+    "stakeholders": {
+     "recall": [
+      4,
+      4
+     ],
+     "precision": [
+      4,
+      6
+     ],
+     "missed": [],
+     "extra": [
+      "Vendor security review committee",
+      "Finance"
+     ]
+    },
+    "open_items": {
+     "recall": [
+      2,
+      3
+     ],
+     "precision": [
+      2,
+      3
+     ],
+     "missed": [
+      "Written SSO design for the security committee"
+     ],
+     "extra": [
+      "Written SSO design for the security committee packet, even if it is option one with the token change."
+     ]
+    }
+   },
+   "traps": [
+    {
+     "id": "T1",
+     "name": "SC commitment nobody wrote down",
+     "passed": true,
+     "sub": {
+      "extracted": true,
+      "checklist_mismatch_flagged": true,
+      "in_recap": true,
+      "in_map": false
+     },
+     "expected": "Extraction lists the whitepaper commitment with owner Marcus Bell (SC). It is flagged as a checklist mismatch and appears in the recap and the MAP."
+    },
+    {
+     "id": "T6",
+     "name": "Waiting on customer process",
+     "passed": true,
+     "sub": {
+      "top_step_supports_process": true,
+      "no_chase_phrase": true
+     },
+     "expected": "The top step supports the security review: a complete packet (questionnaire, SOC 2, encryption whitepaper, written SSO design) to Aisha with Raj copied, before October 9. No step chases a meeting the customer deferred."
+    }
+   ],
+   "adversarial": null,
+   "grounding": {
+    "evidence_resolves": {
+     "passed": true,
+     "failures": []
+    },
+    "numbers_in_source": {
+     "passed": true,
+     "failures": []
+    },
+    "names_known": {
+     "passed": false,
+     "failures": [
+      "extraction: not found in transcript, CRM or reference: Workaround"
+     ]
+    },
+    "dates_future_business_days": {
+     "passed": true,
+     "failures": []
+    },
+    "no_unsupported_claims": {
+     "passed": true,
+     "failures": []
+    }
+   },
+   "overclaim": {
+    "passed": true,
+    "status": "pass",
+    "first_draft_flags": [],
+    "verifier_ran": true,
+    "note": "verifier based; the verifier is itself a model and is not ground truth"
+   },
+   "steps": {
+    "passed": true,
+    "problems": [],
+    "n_steps": 3
+   },
+   "needs_review": [],
+   "overrides": [
+    {
+     "rule_id": "R-WAIT",
+     "target": "deal_state",
+     "before": "open_technical_gap",
+     "after": "waiting_on_customer",
+     "reason": "customer dependency with no date: Procurement sends the vendor questionnaire to Apex"
+    }
+   ],
+   "cost_usd": 0.359396,
+   "latency_ms": 14,
+   "cache_read_tokens": 29824,
+   "cache_write_tokens": 47271,
+   "n_calls": 7,
+   "steps_output": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Nested mhp_roles claim isn't supported today, native timing is unconfirmed, and Raj's committee needs a written SSO design before October 9th.",
+    "next_steps": [
+     {
+      "action": "Marcus takes the nested-claim question to the identity team and writes up the SSO design, covering both the flat-claim path and native nested support, with a date or an explicit 'no date yet'.",
+      "owner": "Marcus Bell",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-09",
+      "action_type": "route_to_sc",
+      "why": "Leo needs a dated answer for Raj. RC-09 says nested claims are private preview with no GA date, which contradicts the 'roadmap' remark.",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "I need a date I can put in front of Raj. Not a roadmap slide."
+       }
+      ]
+     },
+     {
+      "action": "Send Aisha, copying Raj, the SOC 2 report, encryption details and SSO design as they become ready, and offer to complete the questionnaire the day procurement sends it.",
+      "owner": "Jordan Pike",
+      "due_by": "2026-10-07",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "RC-11",
+      "action_type": "support_customer_process",
+      "why": "A complete packet before October 9th keeps the deal off the November meeting. It is easy to wait for the questionnaire first.",
+      "evidence": [
+       {
+        "utterance_id": "U058",
+        "excerpt": "Our vendor questionnaire, your SOC 2 report, the encryption details, and for anything touching identity, a written design."
+       }
+      ]
+     },
+     {
+      "action": "Send the recap using Nora's daily-list outcome in her words. List the SSO items still open and say nested claims have no GA date, rather than repeating the roadmap remark.",
+      "owner": "Jordan Pike",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-07",
+      "release_card_id": "RC-09",
+      "action_type": "send_recap",
+      "why": "The recap goes out today by default, but it could repeat the roadmap claim and miss the stated outcome. Marcus's roadmap remark needs correcting.",
+      "evidence": [
+       {
+        "utterance_id": "U027",
+        "excerpt": "If a care manager gets the list the morning after discharge, they can call while the patient still remembers who we are."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Marcus said nested claims are believed to be on the roadmap. RC-09 says private preview with no GA date, so no date should be implied to Leo or Raj.",
+      "competitor": "",
+      "release_card_id": "RC-09",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I believe the second is on the roadmap but I need to confirm the timing with our identity team before I say anything else."
+       }
+      ]
+     },
+     {
+      "summary": "Missing the October 9th packet deadline pushes the deal to the November security committee meeting. Raj was absent and no economic buyer is named.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U056",
+        "excerpt": "If we hand them a complete packet before then, we're on that agenda. If not, it's the November meeting."
+       }
+      ]
+     }
+    ]
+   },
+   "judge": [
+    {
+     "step": 1,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": false,
+     "critique": "The step names Marcus, the nested-claim question, both SSO paths, a 2026-10-02 date, and cites U072 and PB-04 correctly, with RC-09 properly showing nested claims are private preview with no GA date. But writing the SSO design for Raj's packet is not a 10-minute task, and routing an open SC item with a date is the obvious move that Marcus already committed to in U023 and U073."
+    },
+    {
+     "step": 2,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": false,
+     "critique": "Names the real packet items, recipients (Aisha, copy Raj), and the October 9th committee, and U058 plus PB-09 fit; but the step bundles several deliverables (SOC 2, encryption details, SSO design that depends on Marcus's unresolved identity answer) so it can't be started in 10 minutes, and 'send the packet' is what an AE would do anyway, with the offer to fill in the questionnaire the only mildly new bit."
+    },
+    {
+     "step": 3,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": true,
+     "critique": "Names the recap, Nora's outcome, and the RC-09 correction (no GA date for nested claims), and U027 supports PB-07 well. But drafting a full recap with open SSO items and sending it by Oct 2 takes longer than 10 minutes, and the step leaves out the owners and dates PB-01 calls for, such as the Oct 9 committee packet."
+    }
+   ]
+  }
+ ],
+ "deal_c": [
+  {
+   "deal": "deal_c",
+   "status": "ran",
+   "debrief_id": "deal_c-868c7e1f",
+   "errors": [],
+   "state": {
+    "expected": "competitive_risk",
+    "accepted": [
+     "competitive_risk"
+    ],
+    "got": "waiting_on_customer",
+    "passed": false
+   },
+   "extraction": {
+    "objections": {
+     "recall": [
+      3,
+      4
+     ],
+     "precision": [
+      3,
+      3
+     ],
+     "missed": [
+      "Projection may not handle seasonality with one week of history"
+     ],
+     "extra": []
+    },
+    "commitments": {
+     "recall": [
+      4,
+      4
+     ],
+     "precision": [
+      4,
+      5
+     ],
+     "missed": [],
+     "extra": [
+      "Reach out when ready, after digesting the demo."
+     ]
+    },
+    "stakeholders": {
+     "recall": [
+      5,
+      5
+     ],
+     "precision": [
+      5,
+      5
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "open_items": {
+     "recall": [
+      3,
+      3
+     ],
+     "precision": [
+      3,
+      4
+     ],
+     "missed": [],
+     "extra": [
+      "About four percent of rows did not match in the SKU crosswalk; the exceptions table still needs review, mostly discontinued items."
+     ]
+    }
+   },
+   "traps": [
+    {
+     "id": "T2",
+     "name": "Stakeholder mentioned once in passing",
+     "passed": true,
+     "sub": {
+      "extracted_absent": true,
+      "meddpicc_eb_points_to_them": false
+     },
+     "expected": "Farah (CFO) is extracted as an absent stakeholder who approves spend over 250K. ACV is 310K, so she is in the path. MEDDPICC economic buyer is partial, pointing to Farah."
+    },
+    {
+     "id": "T3",
+     "name": "Ambiguous statement over read as a buying signal",
+     "passed": true,
+     "sub": {
+      "state_ok": true,
+      "not_strong_signal": true
+     },
+     "expected": "Not treated as a strong buying signal. If listed, it is qualified by 'it's not up to me' and Helen's concerns. Deal state is not ready_to_advance."
+    }
+   ],
+   "adversarial": null,
+   "grounding": {
+    "evidence_resolves": {
+     "passed": true,
+     "failures": []
+    },
+    "numbers_in_source": {
+     "passed": false,
+     "failures": [
+      "internal_summary: numbers not grounded: twelve nine (not in transcript or CRM)"
+     ]
+    },
+    "names_known": {
+     "passed": true,
+     "failures": []
+    },
+    "dates_future_business_days": {
+     "passed": false,
+     "failures": [
+      "internal_summary: bad dates: 2026-10-09 (not a date said in the call)"
+     ]
+    },
+    "no_unsupported_claims": {
+     "passed": true,
+     "failures": []
+    }
+   },
+   "overclaim": {
+    "passed": false,
+    "status": "fail",
+    "first_draft_flags": [
+     "Helen raised the effort for her team. We will come back with a plan that names owners and effort by role, not a guess at weeks."
+    ],
+    "verifier_ran": true,
+    "note": "verifier based; the verifier is itself a model and is not ground truth"
+   },
+   "steps": {
+    "passed": true,
+    "problems": [],
+    "n_steps": 3
+   },
+   "needs_review": [],
+   "overrides": [],
+   "cost_usd": 0.485496,
+   "latency_ms": 16,
+   "cache_read_tokens": 51247,
+   "cache_write_tokens": 48629,
+   "n_calls": 9,
+   "steps_output": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Ben deferred next steps with no date, Helen needs internal alignment and has migration worries, and CFO Farah has not been engaged.",
+    "next_steps": [
+     {
+      "action": "Draft a guided onboarding plan for Helen with a named Apex implementation engineer, owners on both sides, and customer effort by role in hours per week, with no timeline guess.",
+      "owner": "Tom Okafor",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-10",
+      "release_card_id": "RC-13",
+      "action_type": "send_material",
+      "why": "Helen voiced her worry as 'timing', so it is easy to miss that it is a migration scar. Tom declined to give weeks.",
+      "evidence": [
+       {
+        "utterance_id": "U068",
+        "excerpt": "The last platform migration took my team four months and I lost two engineers at the end of it."
+       }
+      ]
+     },
+     {
+      "action": "Send Ben a short pack for his boss and Farah: the pricing range sized on 640 stores and a workload-based Lakestream comparison, and record Farah as the CFO approver.",
+      "owner": "Elise Moreau",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "RC-10",
+      "action_type": "support_customer_process",
+      "why": "Farah was named in passing and is absent. Ben asked for a range, and the CRM still shows a dated step that was never agreed.",
+      "evidence": [
+       {
+        "utterance_id": "U066",
+        "excerpt": "anything over 250K goes to Farah anyway, our CFO, so it would go through her at some point."
+       },
+       {
+        "utterance_id": "U045",
+        "excerpt": "A range would help. My boss will ask that right after the Lakestream question."
+       }
+      ]
+     },
+     {
+      "action": "Flag the Lakestream mention to deal desk, noting the incumbent is marketing and the 'one vendor instead of two' pushback Ben expects.",
+      "owner": "Elise Moreau",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-06",
+      "release_card_id": "RC-10",
+      "action_type": "flag_deal_desk",
+      "why": "The competitor was handled well in the call, so the flag can slip. The rule requires it within 1 business day.",
+      "evidence": [
+       {
+        "utterance_id": "U054",
+        "excerpt": "But they're going to say it's one vendor instead of two."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Lakestream is the incumbent in marketing. Ben's boss is expected to ask why not extend it. Compare on the replenishment workload using the streaming merge card, not general claims.",
+      "competitor": "Lakestream",
+      "release_card_id": "RC-10",
+      "evidence": [
+       {
+        "utterance_id": "U050",
+        "excerpt": "We already have Lakestream in the building."
+       }
+      ]
+     },
+     {
+      "summary": "CFO approval looms: anything over 250K goes to Farah, who has not been engaged. The CRM economic buyer is blank.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U066",
+        "excerpt": "anything over 250K goes to Farah anyway, our CFO, so it would go through her at some point."
+       }
+      ]
+     },
+     {
+      "summary": "Ben deferred with no date and declined a check-in date. Support his internal process and do not chase.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U081",
+        "excerpt": "Let us digest this first. There's a lot going on this month. We'll be in touch."
+       }
+      ]
+     }
+    ]
+   },
+   "judge": [
+    {
+     "step": 1,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": true,
+     "critique": "Well grounded: U068 (four months, lost two engineers, peak season) supports PB-10 and RC-13, and the step reads Helen's 'timing' worry as a migration scar, which is non-obvious. But drafting a plan with a named engineer, owners on both sides and hours per week by role is not a 10 minute task, since Tom has to line up an engineer and effort estimates first; a 10 minute first move would be requesting the engineer name and sending Helen a short outline."
+    },
+    {
+     "step": 2,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": false,
+     "critique": "Specific and well grounded (Farah named in U066, range request in U045, PB-05 fits an absent stakeholder, RC-10 fits the Lakestream workload comparison), but building a pricing range sized on 640 stores plus a comparison pack cannot be done in 10 minutes since Elise said in U044 she needs Tom to review the full store count first, and sending Ben material for his boss is the obvious follow-up most AEs would do anyway."
+    },
+    {
+     "step": 3,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": true,
+     "non_obvious": false,
+     "critique": "The step is concrete (Elise, deal desk, Lakestream, due 2026-10-02) and PB-06 fits, with U054 backing the 'one vendor instead of two' pushback and RC-10 being the right card; it is a quick flag. But it is the baseline PB-06 action any AE would take after a competitor mention, and the 'why' admits it is only a slip risk, so it fails non_obvious."
+    }
+   ]
+  }
+ ],
+ "deal_x": [
+  {
+   "deal": "deal_x",
+   "status": "ran",
+   "debrief_id": "deal_x-e3b1656f",
+   "errors": [],
+   "state": {
+    "expected": "low_information",
+    "accepted": [
+     "low_information"
+    ],
+    "got": "low_information",
+    "passed": true
+   },
+   "extraction": {
+    "objections": {
+     "recall": [
+      0,
+      0
+     ],
+     "precision": [
+      0,
+      1
+     ],
+     "missed": [],
+     "extra": [
+      "Owen was lukewarm on whether the summary view matched what he had in mind; reason not given."
+     ]
+    },
+    "commitments": {
+     "recall": [
+      3,
+      3
+     ],
+     "precision": [
+      3,
+      4
+     ],
+     "missed": [],
+     "extra": [
+      "Tell Owen what she saw in the demo"
+     ]
+    },
+    "stakeholders": {
+     "recall": [
+      2,
+      2
+     ],
+     "precision": [
+      2,
+      4
+     ],
+     "missed": [],
+     "extra": [
+      "Nate Kowalski",
+      "Priya Raman"
+     ]
+    },
+    "open_items": {
+     "recall": [
+      1,
+      1
+     ],
+     "precision": [
+      1,
+      2
+     ],
+     "missed": [],
+     "extra": [
+      "Compare the twelve rows that failed the date format check against the customer's own list of failures."
+     ]
+    }
+   },
+   "traps": [],
+   "adversarial": {
+    "id": "X1",
+    "name": "Adversarial",
+    "passed": true,
+    "sub": {
+     "low_information": true,
+     "max_steps": true,
+     "no_invented_outcome": true,
+     "no_strong_signal": true,
+     "no_competitor": true,
+     "no_invented_people": true
+    },
+    "expected": "Deal state low_information. At most 2 steps, for example finishing the demo with Owen and sending the promised rows. No invented business outcome, buying signals, competitors or stakeholders."
+   },
+   "grounding": {
+    "evidence_resolves": {
+     "passed": true,
+     "failures": []
+    },
+    "numbers_in_source": {
+     "passed": true,
+     "failures": []
+    },
+    "names_known": {
+     "passed": true,
+     "failures": []
+    },
+    "dates_future_business_days": {
+     "passed": true,
+     "failures": []
+    },
+    "no_unsupported_claims": {
+     "passed": true,
+     "failures": []
+    }
+   },
+   "overclaim": {
+    "passed": true,
+    "status": "pass",
+    "first_draft_flags": [],
+    "verifier_ran": true,
+    "note": "verifier based; the verifier is itself a model and is not ground truth"
+   },
+   "steps": {
+    "passed": true,
+    "problems": [],
+    "n_steps": 2
+   },
+   "needs_review": [],
+   "overrides": [],
+   "cost_usd": 0.219719,
+   "latency_ms": 17,
+   "cache_read_tokens": 36747,
+   "cache_write_tokens": 18417,
+   "n_calls": 8,
+   "steps_output": {
+    "deal_state": "low_information",
+    "deal_state_why": "Owen's reaction was lukewarm and he left early; no outcome, economic buyer, or dated next step was stated.",
+    "next_steps": [
+     {
+      "action": "Send Owen a recap of what was validated, the open paid and allowed amount question, and who owns what, asking for his business outcome in his words and two meeting times.",
+      "owner": "Nate Kowalski",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-01",
+      "release_card_id": "",
+      "action_type": "send_recap",
+      "why": "Owen left before giving feedback and Lily only relays; a written recap gives him one place to react and state his outcome.",
+      "evidence": [
+       {
+        "utterance_id": "U030",
+        "excerpt": "Priya will send the failed rows and a short note on the two text columns, so Owen has something to look at when he's back."
+       }
+      ]
+     },
+     {
+      "action": "Log Priya's same-day send of the twelve failed rows and the text column note, then tell Owen and Lily it is done.",
+      "owner": "Priya Raman",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "route_to_sc",
+      "why": "Passing commitments get lost; closing it visibly gives Owen a concrete item to react to and keeps his confirmation on the text columns moving.",
+      "evidence": [
+       {
+        "utterance_id": "U031",
+        "excerpt": "Yes, I'll send that today."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Technical evaluator Owen was lukewarm on the summary view and left early without feedback; his real view is unknown.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Sort of. I'd have to think about it."
+       }
+      ]
+     }
+    ]
+   },
+   "judge": [
+    {
+     "step": 1,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": false,
+     "critique": "The step is specific (Owen, paid and allowed amount columns, outcome ask, two meeting times) and U030 plus PB-01 support it, but a recap with an outcome ask and meeting options takes longer than 10 minutes to draft well, and a post-demo recap is exactly what most AEs would send anyway."
+    },
+    {
+     "step": 2,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": true,
+     "non_obvious": false,
+     "critique": "The step is concrete (Priya, twelve failed rows, text-column note, owner and date) and U031 plus PB-08 support it, but logging a same-day send and confirming it is done is routine follow-through that any AE or SC would do unprompted, so it is not insightful; it also misses the real risk that Owen, who never confirmed the text columns and said only 'Sort of', is the one who needs the note."
+    }
+   ]
+  }
+ ],
+ "deal_y": [
+  {
+   "deal": "deal_y",
+   "status": "ran",
+   "debrief_id": "deal_y-292e8d69",
+   "errors": [],
+   "state": {
+    "expected": "waiting_on_customer",
+    "accepted": [
+     "waiting_on_customer",
+     "open_technical_gap"
+    ],
+    "got": "waiting_on_customer",
+    "passed": true
+   },
+   "extraction": {
+    "objections": {
+     "recall": [
+      2,
+      2
+     ],
+     "precision": [
+      2,
+      2
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "commitments": {
+     "recall": [
+      4,
+      4
+     ],
+     "precision": [
+      5,
+      5
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "stakeholders": {
+     "recall": [
+      4,
+      4
+     ],
+     "precision": [
+      4,
+      4
+     ],
+     "missed": [],
+     "extra": []
+    },
+    "open_items": {
+     "recall": [
+      0,
+      1
+     ],
+     "precision": [
+      0,
+      2
+     ],
+     "missed": [
+      "Single internal answer on hosting region"
+     ],
+     "extra": [
+      "Confirm exact wording on EU-only support access with Apex compliance before the customer relies on it.",
+      "Resolve whether the tenant is set up in the EU or the US, pending Camila's legal memo and Victor's review."
+     ]
+    }
+   },
+   "traps": [],
+   "adversarial": {
+    "id": "Y1",
+    "name": "Adversarial",
+    "passed": true,
+    "sub": {
+     "contradiction_flagged": true,
+     "resolve_with_champion": true
+    },
+    "expected": "Flag the contradiction between Victor and Camila with both utterance IDs. Recommend resolving it with the champion, Ingrid, for example by giving her both hosting options in writing to settle internally. Do not pick a side."
+   },
+   "grounding": {
+    "evidence_resolves": {
+     "passed": true,
+     "failures": []
+    },
+    "numbers_in_source": {
+     "passed": true,
+     "failures": []
+    },
+    "names_known": {
+     "passed": true,
+     "failures": []
+    },
+    "dates_future_business_days": {
+     "passed": true,
+     "failures": []
+    },
+    "no_unsupported_claims": {
+     "passed": true,
+     "failures": []
+    }
+   },
+   "overclaim": {
+    "passed": true,
+    "status": "pass",
+    "first_draft_flags": [],
+    "verifier_ran": true,
+    "note": "verifier based; the verifier is itself a model and is not ground truth"
+   },
+   "steps": {
+    "passed": true,
+    "problems": [],
+    "n_steps": 3
+   },
+   "needs_review": [],
+   "overrides": [],
+   "cost_usd": 0.319893,
+   "latency_ms": 15,
+   "cache_read_tokens": 29824,
+   "cache_write_tokens": 31367,
+   "n_calls": 7,
+   "steps_output": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Hosting conflict between Victor and Camila awaits Camila's memo; Ingrid deferred the joint call, with no dated next step and no VP named.",
+    "next_steps": [
+     {
+      "action": "Send Ingrid the recap with both hosting options laid out neutrally, her cycle-time outcome in her own words, and the standard DPA attached.",
+      "owner": "Sam Lee",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-01",
+      "release_card_id": "RC-14",
+      "action_type": "send_recap",
+      "why": "The recap must not pick a side between Victor and Camila, and the DPA lets their legal team start in parallel.",
+      "evidence": [
+       {
+        "utterance_id": "U052",
+        "excerpt": "I'll send a recap with what we covered and the two hosting options."
+       },
+       {
+        "utterance_id": "U041",
+        "excerpt": "I can send it with the recap so your legal team can start on it in parallel."
+       }
+      ]
+     },
+     {
+      "action": "Confirm the EU-only support access wording with Apex compliance, add the plate ID to the poor-fit flag, and log both with dates.",
+      "owner": "Marcus Bell",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-14",
+      "action_type": "route_to_sc",
+      "why": "Both commitments were made in passing with no date, and Victor said to confirm before they rely on it.",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'd want to confirm the exact wording with our compliance team before you rely on it."
+       },
+       {
+        "utterance_id": "U010",
+        "excerpt": "We can add the plate ID to the flag so they can see if it's always the same plate."
+       }
+      ]
+     },
+     {
+      "action": "Offer Ingrid a one-page hosting summary she can take to her VP, and ask her for the VP's name and what the VP needs to decide.",
+      "owner": "Sam Lee",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "RC-14",
+      "action_type": "resolve_with_champion",
+      "why": "The VP who signs off is unnamed and absent, and Ingrid defers the joint call, so give her material instead of a meeting request.",
+      "evidence": [
+       {
+        "utterance_id": "U047",
+        "excerpt": "If Victor and Camila are aligned, I can take this to my VP."
+       },
+       {
+        "utterance_id": "U051",
+        "excerpt": "Maybe. Let me see where we land internally first."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Victor says all Basel data stays in the EU, while Camila says US hosting is fine for pseudonymized data. It is unresolved until her memo is seen, and it gates the VP step.",
+      "competitor": "none",
+      "release_card_id": "RC-14",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "If this runs in a US region, it's a no."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "US hosting is fine for pseudonymized research data."
+       }
+      ]
+     },
+     {
+      "summary": "Customer security review of encryption keys is expected, and Victor likely wants bring-your-own-key. Have the encryption whitepaper ready.",
+      "competitor": "none",
+      "release_card_id": "RC-11",
+      "evidence": [
+       {
+        "utterance_id": "U039",
+        "excerpt": "We'd probably want that. Our security team will ask."
+       }
+      ]
+     }
+    ]
+   },
+   "judge": [
+    {
+     "step": 1,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": false,
+     "critique": "The step is concrete and well grounded: U052 and U041 are Sam's own promises, PB-01 fits a recap due within 24 hours (due 2026-10-01 is in time), and RC-14 matches the EU hosting discussion. But drafting a neutral two-option recap with a quoted outcome and attaching the DPA is more than 10 minutes of work, and sending a recap with a DPA is what any AE would do unprompted; the only non-obvious touch, staying neutral between Victor and Camila, is minor and the step misses the bigger gaps (no economic buyer named, no dated next meeting, compliance wording to confirm for Marcus)."
+    },
+    {
+     "step": 2,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": true,
+     "critique": "Names Marcus, both commitments (U021 EU-only support wording, U010 plate ID flag), RC-14 and PB-08 with a due date, and it correctly catches commitments made in passing; but it bundles a compliance confirmation that depends on Apex compliance's reply with a product change to the flag, so it can't be done in 10 minutes. It would be tighter as a 10-minute step to log both commitments with owner and date and send Apex compliance the wording question."
+    },
+    {
+     "step": 3,
+     "status": "ran",
+     "passed": false,
+     "specific": true,
+     "evidence_tied": true,
+     "playbook_tied": true,
+     "actionable_10_min": false,
+     "non_obvious": false,
+     "critique": "The step is concrete (one-page hosting summary for Ingrid's VP, plus asking for the VP's name) and the cited lines U047 and U051 support it, since the VP is the gate and Ingrid deferred the call. PB-05 fits as it gives the champion something to bring to an absent stakeholder, and RC-14 fits the EU hosting content. But it is not doable in 10 minutes: the summary needs hosting content, and the memo conflict between Victor and Camila is unresolved, so Sam cannot write a single hosting answer yet, and RC-14 says wording must be confirmed with compliance. It is also fairly obvious, since sending a summary plus asking for the VP's name is standard champion enablement."
+    }
+   ]
+  }
+ ]
+}

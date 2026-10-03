@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "2130d9c1e4c1cf8e1e4c4bd271a170887b71c66954e9cdc9df78b17ea21fd083",
+ "recorded_at": "2026-10-03T19:22:54.725922+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrAcC4Ek4vQPWtuE1kY",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: Victor and Camila disagree on EU-only hosting, Camila owes a memo, Ingrid deferred the joint call, and no dated next step exists.\",\"customer_value_line\":\"Ingrid said scientists deciding the next run the same afternoon instead of waiting a day could take \\\"a week or more out of each screening campaign\\\", the business case her VP signed off on for this evaluation.\",\"what_we_validated\":[\"Plate reader files parsed in the sandbox with results in the table within about two minutes of the file landing\",\"Dose response dashboard with poor curve fit flag is very close to what Ingrid's team drew\",\"Metadata changes (compound ID typo fixes) rejoin results on the next export; change is logged and old version kept\",\"Sandbox replayed a week of their files in under an hour; Marcus said 300 plates a day is well within range\",\"Audit trail links each result row to raw file, parser version and curve fit settings; Camila said it is what auditors ask about\",\"Audit log is stored in the same region as the tenant; encryption keys are per tenant with bring your own key option\"],\"integration_patterns\":[\"Plate reader exports land as files and are parsed in Apex\",\"Experiment metadata comes from the LIMS nightly CSV export; Ingrid agreed fine for now\",\"LIMS API for closer to real time metadata mentioned as a later option, not a starting point\"],\"objections_and_answers\":[\"Hosting location (Victor): Basel data must stay in the EU, US region is a no. Answer: tenant can be pinned to Frankfurt including backups; Sam said Apex supports either option. Camila says legal found US hosting fine for pseudonymized data. Open pending the memo.\",\"Support access location (Victor): Marcus said it can be restricted to EU staff via a tenant setting but wants to confirm exact wording with Apex compliance first. Partially resolved.\"],\"open_items\":[\"Hosting decision (EU-only vs US allowed): unresolved; affects tenant setup from day one; depends on Camila's memo\",\"Camila Reyes to find the legal memo on US hosting of pseudonymized data; no date\",\"Apex compliance wording on EU-only support access: Marcus Bell; no date\",\"Customer managed keys: Victor said they would probably want it, security team will ask; not confirmed as a requirement\",\"Ingrid's VP not named; no economic buyer recorded in CRM\",\"Dated next step: none; Ingrid said maybe to a joint hosting call after internal alignment\"],\"commitments\":[\"Sam Lee: send recap with what was covered and the two hosting options; no date stated\",\"Sam Lee: send standard DPA with the recap; no date stated\",\"Marcus Bell: add plate ID to the poor curve fit flag; no date stated\",\"Marcus Bell: confirm exact EU-only support access wording with Apex compliance; no date stated\",\"Camila Reyes (customer): find and share the legal memo; no date stated\"],\"stakeholders\":[\"Ingrid Solberg, Head of Research Data: champion, present; takes decision to her VP once hosting is settled\",\"Victor Huang, IT Infrastructure Director: technical decision maker, present; will align once he sees the memo\",\"Camila Reyes, Compliance Manager: present; holds the memo, needs a DPA\",\"Ingrid's VP (name not stated): absent; signed off the business case for the evaluation\"],\"competitive_notes\":[],\"risks\":[\"Hosting split between Victor and Camila gates Ingrid taking this to her VP; she said if not aligned it stalls\",\"Ingrid deferred the joint call; no dated next step\",\"Victor requires the memo in writing; not yet located\",\"No economic buyer named; decision runs through an unnamed VP\",\"CRM stakeholder_to_add lists Camila, who attended and is already a contact; the absent VP is the real gap\",\"Security review of keys and a DPA add process steps; timing not stated\"],\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"If they could decide the same afternoon, we think we could take a week or more out of each screening campaign.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"If this runs in a US region, it's a no.\"},{\"utterance_id\":\"U023\",\"excerpt\":\"US hosting is fine for pseudonymized research data.\"},{\"utterance_id\":\"U026\",\"excerpt\":\"I'd want to see that in writing.\"},{\"utterance_id\":\"U047\",\"excerpt\":\"If Victor and Camila are aligned, I can take this to my VP. If not, it stalls.\"},{\"utterance_id\":\"U051\",\"excerpt\":\"Maybe. Let me see where we land internally first.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'd want to confirm the exact wording with our compliance team before you rely on it.\"},{\"utterance_id\":\"U041\",\"excerpt\":\"We have a standard DPA, I can send it with the recap so your legal team can start on it in parallel.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 8827,
+   "cache_creation_input_tokens": 4481,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 4481,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1626,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

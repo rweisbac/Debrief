@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b2ad7f2b7f396b42cd03cb5df771c1a997bdee3c43ffc507f90a6d5e905a9851",
+ "recorded_at": "2026-10-03T19:25:32.251232+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrNG6QijPFF2ufYbz3N",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"We will also include a free 90 day pilot with full support.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"No pilot, free or otherwise, was offered or discussed; the customer said nothing moves until the security review clears and pricing comes after, so this is an invented commercial commitment.\",\"utterance_ids\":[\"U056\",\"U076\",\"U077\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Marcus is taking the nested claim question to our identity team today and will get Leo something he can put in front of Raj.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Matches Marcus's same-day commitment to the identity team and his promise of something Leo can put in front of Raj; no date is promised beyond today's escalation.\",\"utterance_ids\":[\"U023\",\"U072\",\"U073\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Drop-off notifications: I will work through this with Nora's care management team.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Jordan said he would note it as something to work through with the care management team, so the email reflects a stated commitment.\",\"utterance_ids\":[\"U046\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Validated: the readmission pipeline ran incrementally on your de-identified extract in nine minutes, with the top three drivers on each row and a change log when late claims restate a score.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Nine minutes, incremental run, top three drivers and the change log on restated scores are all stated by Marcus in the call.\",\"utterance_ids\":[\"U028\",\"U034\",\"U041\",\"U043\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"customer_value_line: The incremental pipeline is aimed at your goal of moving the readmission risk list from weekly to daily so care managers can call patients the morning after discharge.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"U027 supports this outcome in Nora's own words and the cited excerpt is verbatim.\",\"utterance_ids\":[\"U027\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"For the October 9th committee, we will send the packet to Aisha, copying Raj.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Aisha gave the October 9th committee date and asked for the packet to go to her with Raj copied.\",\"utterance_ids\":[\"U056\",\"U061\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Marcus will send Nora the encryption whitepaper.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Marcus offered to send the whitepaper and Nora accepted, so the commitment is accurately stated.\",\"utterance_ids\":[\"U051\",\"U052\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"One note on customer managed keys: they run on major cloud key services, and on-premises HSMs are not supported.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Consistent with RC-11 and Marcus's statement; Leo said they are on a cloud key service. Note that Marcus said he would check on-prem HSM, but the release card states it is not supported, so the email is the current behavior.\",\"utterance_ids\":[\"U054\",\"U055\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Aisha, thanks for having procurement send the questionnaire.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Aisha said she would have procurement send the questionnaire, so the thanks reflects a customer commitment.\",\"utterance_ids\":[\"U063\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"Open items list omits SC commitments and dated owners for the packet\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"The recap lists the packet recipient but gives no owner or date for the SOC 2, encryption details and written SSO design due before October 9th, which PB-01 and PB-04 call for.\",\"utterance_ids\":[\"U056\",\"U058\",\"U059\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1218,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10477,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1378,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

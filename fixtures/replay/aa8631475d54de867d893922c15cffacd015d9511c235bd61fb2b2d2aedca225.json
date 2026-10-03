@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "aa8631475d54de867d893922c15cffacd015d9511c235bd61fb2b2d2aedca225",
+ "recorded_at": "2026-10-03T19:24:45.361046+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrJc7pavPQnMQ4UJwDm",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"I have also looped in Gregory Thornton from our side.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"Gregory Thornton appears nowhere in the transcript or CRM, so the line invents a person and an action that nobody committed to in the call.\",\"utterance_ids\":[\"U079\",\"U081\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Open items, next meeting, and onboarding plan lines\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The sample drop Monday, the Oct 6 policy, the Oct 8 invite, the release note, the onboarding plan and the macro ownership were each committed to in the call.\",\"utterance_ids\":[\"U038\",\"U054\",\"U062\",\"U072\",\"U075\",\"U077\",\"U081\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Priya builds the partner row level policy from it and shows it working by Tuesday, October 6.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Priya offered to build the policy in the sandbox and have it back by Tuesday the sixth, which is what the email says, and it depends on the sample arriving Monday.\",\"utterance_ids\":[\"U054\",\"U055\",\"U075\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"The warehouse connector syncs continuously, about a minute end to end, not hourly as I said earlier.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email states the current continuous-sync behavior from RC-12 and Priya's correction, and labels hourly as the old behavior.\",\"utterance_ids\":[\"U038\",\"U042\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence list and customer_value_line\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The excerpts support the ingest lag, dbt run time, continuous sync, 1:12 flag time, dates and macro ownership, and the value line uses the stated outcome of catching a late load while dispatch can still act.\",\"utterance_ids\":[\"U014\",\"U029\",\"U035\",\"U036\",\"U038\",\"U054\",\"U062\",\"U072\",\"U075\",\"U077\",\"U081\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Recap body\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email makes no claim of decision or approval and lists only validated results and open items.\",\"utterance_ids\":[\"U060\",\"U080\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1538,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10828,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1771,
+   "output_tokens_details": {
+    "thinking_tokens": 938
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "49cba8a724e3b868db13fa668b6c84a2ba26dce07eb87d02e29ff84a32de17e7",
+ "recorded_at": "2026-10-03T19:22:08.632834+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cffr7LSw5yQbLN2BjTKmg",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"internal_summary\",\"target\":\"evidence list (U020, U009, U013, U029, U031, U025)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt is word for word from its cited line and supports the point it is used for.\",\"utterance_ids\":[\"U020\",\"U009\",\"U013\",\"U029\",\"U031\",\"U025\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"internal_summary\",\"target\":\"commitments list (Priya today; Nate reach out, no date; Lily send list, no date; Lily tell Owen)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each commitment matches what was said, and the missing dates for Nate and Lily are flagged rather than invented.\",\"utterance_ids\":[\"U016\",\"U025\",\"U030\",\"U031\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"internal_summary\",\"target\":\"deal_state_line: Low information, Owen left early after a lukewarm reaction, no next meeting dated\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary reads Owen's 'Sort of. I'd have to think about it.' as lukewarm, not positive, and does not treat Lily's mild interest as a decision.\",\"utterance_ids\":[\"U020\",\"U025\",\"U029\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"internal_summary\",\"target\":\"what_we_validated: summary view with freshness indicator, default ingest\",\"passed\":true,\"severity\":\"low\",\"finding\":\"No superseded behavior is presented as current. Nothing is claimed about warehouse connector sync, and the freshness indicator is described only as shown in the demo.\",\"utterance_ids\":[\"U009\",\"U017\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1583,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6355,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1189,
+   "output_tokens_details": {
+    "thinking_tokens": 624
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

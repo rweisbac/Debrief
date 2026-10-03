@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "568acff265e5d8a81f8f8ff85090b6c073d50774d53c69e9d3471db6f04b1ef7",
+ "recorded_at": "2026-10-03T19:22:49.762156+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrAcJFrSzNp4hhWb1di",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Atlas Biologics: recap of today's assay pipeline demo\",\"body\":\"Hi Ingrid, Victor and Camila,\\n\\nThanks for your time today. Here is what we covered.\\n\\nShown: plate reader files parsed with LIMS metadata, with results in the table within about two minutes of a file landing. The dashboard flags poor curve fits, and every result links back to the raw file, parser version and fit settings. Our sandbox replayed a week of your files in under an hour against your 300 plates a day on a busy day.\\n\\nOpen on hosting: Victor wants EU only, while Camila believes US hosting is fine for pseudonymized data. Camila is finding the memo. We can support either, and the DPA is attached for your legal team.\\n\\nFrom Apex: Marcus will add the plate ID to the curve fit flag and confirm the EU only support access wording with our compliance team. We have not set dates for these yet.\\n\\nIf a short hosting call would help once the memo is in hand, tell us what works for you.\\n\\nBest,\\nSam\",\"customer_value_line\":\"Results in about two minutes supports Ingrid's goal of scientists deciding the next run the same afternoon, which she believes could take a week or more out of each screening campaign.\",\"evidence\":[{\"utterance_id\":\"U006\",\"excerpt\":\"the results show up in this table within about two minutes of the file landing.\"},{\"utterance_id\":\"U044\",\"excerpt\":\"The sandbox handled a replay of a week of your files in under an hour.\"},{\"utterance_id\":\"U043\",\"excerpt\":\"We do about 300 plates a day on a busy day.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"we think we could take a week or more out of each screening campaign.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"We can add the plate ID to the flag so they can see if it's always the same plate.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'd want to confirm the exact wording with our compliance team before you rely on it.\"},{\"utterance_id\":\"U027\",\"excerpt\":\"I can find the memo.\"},{\"utterance_id\":\"U041\",\"excerpt\":\"We have a standard DPA, I can send it with the recap so your legal team can start on it in parallel.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 8952,
+   "cache_creation_input_tokens": 4481,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 4481,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 741,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirm the demo</title>
+<style>
+:root {
+  --bg: #f4f4f6; --card: #ffffff; --fg: #1d1c1d; --muted: #616061; --line: #dddddf;
+  --accent: #1264a3; --ok: #007a5a; --warn: #b65f00; --warn-bg: #fff4e5; --ok-bg: #e9f6f1;
+  --chip: #f0f0f2; --chip-on: #1264a3; --chip-on-fg: #ffffff; --sample: #fff8db;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121016; --card: #1a1d21; --fg: #e8e8e8; --muted: #a8a8aa; --line: #34363a;
+    --accent: #4aa3df; --ok: #2bac76; --warn: #f2a33a; --warn-bg: #2b2215; --ok-bg: #16281f;
+    --chip: #26292e; --chip-on: #4aa3df; --chip-on-fg: #0b0b0c; --sample: #2a2614;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.45 var(--font); padding: 16px; }
+main { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+.app { display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 13px; }
+.app b { color: var(--fg); }
+.logo { width: 36px; height: 36px; border-radius: 6px; background: var(--accent); color: #fff; display: grid;
+  place-items: center; font-weight: 700; }
+h1 { font-size: 18px; margin: 4px 0 2px; }
+.sub { color: var(--muted); font-size: 13px; margin: 0; }
+.banner { background: var(--sample); border-radius: 6px; padding: 8px 10px; font-size: 13px; }
+.row { border-top: 1px solid var(--line); padding: 12px 0; }
+.row:first-of-type { border-top: 0; }
+.head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.label { font-weight: 700; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+.badge.auto { background: var(--ok-bg); color: var(--ok); }
+.badge.ask { background: var(--warn-bg); color: var(--warn); }
+.value { margin: 4px 0; }
+.reason { color: var(--muted); font-size: 13px; }
+button.link { background: none; border: 0; color: var(--accent); padding: 0; cursor: pointer; font: inherit; font-size: 13px; }
+.editor { display: none; margin-top: 8px; gap: 8px; flex-direction: column; }
+.row.open .editor { display: flex; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--chip); color: var(--fg); border-radius: 14px; padding: 5px 12px;
+  cursor: pointer; font: inherit; font-size: 13px; }
+.chip[aria-pressed="true"] { background: var(--chip-on); border-color: var(--chip-on); color: var(--chip-on-fg); }
+.sublabel { font-size: 12px; color: var(--muted); margin-top: 2px; }
+input[type=text], input[type=date], textarea { width: 100%; padding: 8px; border: 1px solid var(--line);
+  border-radius: 6px; background: var(--card); color: var(--fg); font: inherit; }
+textarea { min-height: 64px; resize: vertical; }
+blockquote { margin: 6px 0 0; padding: 6px 10px; border-left: 3px solid var(--line); color: var(--muted); font-size: 13px; }
+.quotes { display: none; }
+.row.show-quotes .quotes { display: block; }
+.actions { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.primary { background: var(--ok); color: #fff; border: 0; border-radius: 6px; padding: 10px 18px; font: inherit;
+  font-weight: 700; cursor: pointer; }
+.primary:disabled { opacity: .5; cursor: default; }
+.timer { color: var(--muted); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 6px 4px; border-top: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; }
+.step { border-top: 1px solid var(--line); padding: 10px 0; }
+.step:first-of-type { border-top: 0; }
+.meta { color: var(--muted); font-size: 12px; }
+h2 { font-size: 15px; margin: 0 0 8px; }
+.flag { color: var(--warn); font-size: 13px; }
+.hidden { display: none; }
+.scroll { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+  <div class="app"><div class="logo">D</div><div><b>Debrief</b> <span id="appsub">APP</span></div></div>
+  <section class="card" id="card">
+    <p class="sub">Loading the card...</p>
+  </section>
+  <section id="payoff" class="hidden"></section>
+  <p class="sub">Synthetic data, fictional company. Nothing here is sent to a customer; you approve every draft.</p>
+</main>
+<script>
+const dealId = location.pathname.split("/").pop();
+const state = { card: null, values: {}, edited: new Set(), started: performance.now() };
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+
+function display(field, v) {
+  const lbl = (key, val) => ((state.card.options[key] || []).find(o => o.value === val) || {}).label || val;
+  if (field === "priority_why_now") return v.value || "Not stated in the call";
+  if (field === "champion_status") {
+    let c = lbl("champion_status.value", v.value) + (v.champion_name ? ": " + v.champion_name : "");
+    let eb = "Economic buyer named: " + lbl("champion_status.economic_buyer_identified", v.economic_buyer_identified);
+    return c + ". " + eb + (v.economic_buyer_name ? " (" + v.economic_buyer_name + ")" : "");
+  }
+  if (field === "top_risk") return lbl("top_risk.value", v.value) + (v.note ? ": " + v.note : "");
+  if (field === "next_step") return v.value ? v.value + (v.date ? " (" + v.date + ")" : ", no date") : "No next step agreed in the call";
+  return "";
+}
+
+function chips(field, part, current) {
+  const opts = state.card.options[field + "." + part];
+  return `<div class="chips" role="group">` + opts.map(o =>
+    `<button type="button" class="chip" data-field="${field}" data-part="${part}" data-value="${o.value}"
+      aria-pressed="${o.value === current}">${esc(o.label)}</button>`).join("") + `</div>`;
+}
+function text(field, part, current, placeholder, area) {
+  return area
+    ? `<textarea data-field="${field}" data-part="${part}" placeholder="${esc(placeholder)}">${esc(current)}</textarea>`
+    : `<input type="${part === "date" ? "date" : "text"}" data-field="${field}" data-part="${part}" value="${esc(current)}" placeholder="${esc(placeholder)}">`;
+}
+function editor(f) {
+  const v = state.values[f.field];
+  if (f.field === "priority_why_now") return text(f.field, "value", v.value, "The buyer's priority and why now", true);
+  if (f.field === "champion_status") return chips(f.field, "value", v.value) + text(f.field, "champion_name", v.champion_name, "Champion name")
+    + `<div class="sublabel">Economic buyer named?</div>` + chips(f.field, "economic_buyer_identified", v.economic_buyer_identified)
+    + text(f.field, "economic_buyer_name", v.economic_buyer_name, "Economic buyer name");
+  if (f.field === "top_risk") return chips(f.field, "value", v.value) + text(f.field, "note", v.note, "One line on the risk");
+  if (f.field === "next_step") return text(f.field, "value", v.value, "Next step the customer agreed to") + text(f.field, "date", v.date, "");
+  return "";
+}
+
+function render() {
+  const c = state.card;
+  let html = `<h1>Confirm the demo: ${esc(c.account)}</h1>
+    <p class="sub">Meeting ${esc(c.meeting_date)} with ${esc(c.ae)}. Pre-filled from the call. ${esc(c.ask_summary)}</p>`;
+  if (c.sample_label) html += `<p class="banner">${esc(c.sample_label)}</p>`;
+  for (const f of c.fields) {
+    const v = state.values[f.field];
+    const ask = f.mode === "ask";
+    const edited = state.edited.has(f.field);
+    const badge = edited ? `<span class="badge ask">Edited</span>`
+      : ask ? `<span class="badge ask">Needs your call</span>`
+      : `<span class="badge auto">Confirmed by agent, ${f.confidence_label} ${Math.round(f.confidence * 100)}%</span>`;
+    const quotes = f.quotes.map(q => `<blockquote>"${esc(q.text)}"<br>${esc(q.speaker)}, ${esc(q.title)}, at ${esc(q.timestamp)}</blockquote>`).join("");
+    html += `<div class="row ${ask ? "open" : ""}" id="row-${f.field}">
+      <div class="head"><span class="label">${esc(f.label)}</span>${badge}</div>
+      <div class="value" id="val-${f.field}">${esc(display(f.field, v))}</div>
+      <div class="reason">${esc(f.reason)}${ask && f.confidence > 0 ? ` (${f.confidence_label} ${Math.round(f.confidence * 100)}%)` : ""}
+        ${quotes ? ` <button class="link" data-quotes="${f.field}">Why</button>` : ""}
+        ${!ask ? ` <button class="link" data-edit="${f.field}">Edit</button>` : ""}</div>
+      <div class="quotes">${quotes}<div class="sublabel">${esc(f.signals.join(". "))}</div></div>
+      <div class="editor">${editor(f)}</div>
+    </div>`;
+  }
+  html += `<div class="actions"><span class="timer" id="timer"></span>
+    <button class="primary" id="confirm">${c.confirmed ? "Confirm again" : "Confirm all"}</button></div>`;
+  document.getElementById("card").innerHTML = html;
+}
+
+function setValue(field, part, value) {
+  state.values[field][part] = value;
+  state.edited.add(field);
+  document.getElementById("val-" + field).textContent = display(field, state.values[field]);
+  const badge = document.querySelector(`#row-${field} .badge`);
+  badge.className = "badge ask"; badge.textContent = "Edited";
+}
+
+document.addEventListener("click", e => {
+  const t = e.target;
+  if (t.dataset.part && t.classList.contains("chip")) {
+    t.parentElement.querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b === t));
+    setValue(t.dataset.field, t.dataset.part, t.dataset.value);
+  } else if (t.dataset.edit) {
+    document.getElementById("row-" + t.dataset.edit).classList.add("open");
+  } else if (t.dataset.quotes) {
+    document.getElementById("row-" + t.dataset.quotes).classList.toggle("show-quotes");
+  } else if (t.id === "confirm") {
+    submit();
+  }
+});
+document.addEventListener("input", e => {
+  const t = e.target;
+  if (t.dataset.field && t.dataset.part) setValue(t.dataset.field, t.dataset.part, t.value);
+});
+
+async function submit() {
+  const btn = document.getElementById("confirm");
+  btn.disabled = true;
+  const seconds = Math.round((performance.now() - state.started) / 100) / 10;
+  const values = {};
+  for (const f of state.edited) values[f] = state.values[f];
+  const r = await fetch(`/api/capture/${dealId}/confirm`, {method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({capture_id: state.card.capture_id, values, seconds})});
+  const out = await r.json();
+  if (!r.ok) { btn.disabled = false; alert(out.detail || "Could not save"); return; }
+  document.getElementById("timer").textContent = `Confirmed in ${seconds} seconds. ${out.session.corrected.length} corrected. Saved to CRM.`;
+  renderPayoff(out.payoff, out.session);
+}
+
+function renderPayoff(p, session) {
+  const el = document.getElementById("payoff");
+  el.classList.remove("hidden");
+  if (!p.available) { el.innerHTML = `<div class="card"><p class="sub">${esc(p.reason)}</p></div>`; return; }
+  let html = "";
+  if (p.refresh_note) html += `<p class="banner">${esc(p.refresh_note)}</p>`;
+  if (p.sample_label) html += `<p class="banner">${esc(p.sample_label)}</p>`;
+  html += `<div class="card"><h2>Next best steps</h2><p class="sub"><b>${esc(p.deal_state_label)}.</b> ${esc(p.deal_state_why)}</p>`;
+  for (const [i, s] of p.next_steps.entries()) {
+    html += `<div class="step"><b>${i === 0 ? "Most important" : "Step " + (i + 1)}:</b> ${esc(s.action)}
+      <div class="meta">Owner: ${esc(s.owner)} | Due: ${esc(s.due_by || "no date")} | Playbook ${esc(s.playbook_rule_id)}${s.release_card_id ? " | Use " + esc(s.release_card_id) : ""}</div>
+      <div class="reason">${esc(s.why)}</div>
+      ${s.quote ? `<blockquote>"${esc(s.quote.text)}"<br>${esc(s.quote.speaker)}, at ${esc(s.quote.timestamp)}</blockquote>` : ""}</div>`;
+  }
+  html += `</div><div class="card"><h2>Recap email draft</h2>
+    ${p.recap.needs_review ? `<p class="flag">Needs review before sending: ${esc(p.recap.flagged.join("; "))}</p>` : ""}
+    <input type="text" value="${esc(p.recap.subject)}" aria-label="Subject">
+    <textarea style="min-height:220px;margin-top:8px" aria-label="Email">${esc(p.recap.body)}</textarea>
+    <div class="actions" style="margin-top:8px"><span class="meta">Nothing is sent from here. Copy it into your email after review.</span>
+    <button class="primary" ${p.recap.needs_review ? "disabled" : ""} onclick="navigator.clipboard && navigator.clipboard.writeText(this.closest('.card').querySelector('textarea').value)">Approve and copy</button></div></div>`;
+  html += `<div class="card"><h2>Stakeholder map</h2><div class="scroll"><table><tr><th>Name</th><th>Role</th><th>In the call</th><th>Stance</th><th>Next touch</th></tr>`
+    + p.stakeholders.map(s => `<tr><td>${esc(s.name)}</td><td>${esc(s.role)}</td><td>${s.present ? "Yes" : "No"}</td><td>${esc(s.stance)}</td><td>${esc(s.next_touch)}</td></tr>`).join("")
+    + `</table></div><p class="meta">Stance is supportive only for the confirmed champion and concerned only for someone with an open concern from the call. Everyone else is unknown.</p></div>`;
+  html += `<div class="card"><h2>Written to CRM</h2><div class="scroll"><table>` + Object.entries(p.crm_written).map(([k, v]) =>
+    `<tr><th>${esc(k)}</th><td>${esc(v || "blank")}</td></tr>`).join("") + `</table></div></div>`;
+  el.innerHTML = html;
+  el.querySelectorAll("textarea").forEach(t => { t.style.height = (t.scrollHeight + 4) + "px"; });
+  el.scrollIntoView({behavior: "smooth"});
+  if (p.refreshing) setTimeout(async () => renderPayoff(await (await fetch(`/api/payoff/${dealId}`)).json(), session), 60000);
+}
+
+setInterval(() => {
+  const t = document.getElementById("timer");
+  if (t && !document.getElementById("confirm").disabled) t.textContent = Math.round((performance.now() - state.started) / 1000) + " s";
+}, 1000);
+
+fetch(`/api/capture/${dealId}`).then(async r => {
+  const data = await r.json();
+  if (!r.ok) { document.getElementById("card").innerHTML = `<p class="sub">${esc(data.detail)}</p>`; return; }
+  state.card = data;
+  for (const f of data.fields) state.values[f.field] = {...f.values};
+  document.title = "Confirm: " + data.account;
+  state.started = performance.now();
+  render();
+});
+</script>
+</body>
+</html>

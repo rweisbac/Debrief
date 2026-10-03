@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "cad3a0a6b28a551393c26e49ee5a6a2aa8dbe124fe44e835c21a5ae53df5da4b",
+ "recorded_at": "2026-10-03T19:24:21.961684+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrGv3WeZJA5KX5ziuAY",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"We will also include a free 90 day pilot with full support.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"No one offered a free pilot or full support in the call; the only 90 day mention was Sam saying they would want to measure together in the first ninety days, so this invents a commercial commitment.\",\"utterance_ids\":[\"U047\",\"U077\",\"U079\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"298 of your dbt models ran in eleven minutes; ingest lag under four seconds at p95; late load flagged at 1:12 vs eighteen hours later\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The figures match the cited lines exactly, the excerpts are verbatim, and the open-item owners and dates are supported by U054, U075, U081 and U062.\",\"utterance_ids\":[\"U014\",\"U029\",\"U036\",\"U054\",\"U075\",\"U081\",\"U062\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Priya builds the partner row level policy from it and shows it working by Tuesday, October 6.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The Oct 6 date, the dependency on Mikkel's sample, and the realistic onboarding plan all match what Priya, Mikkel and Sam said.\",\"utterance_ids\":[\"U054\",\"U055\",\"U075\",\"U077\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"The warehouse connector syncs continuously, about a minute end to end, not hourly as I said earlier.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email states the corrected continuous sync behavior, consistent with U038 and RC-12, and does not present the hourly batch as current.\",\"utterance_ids\":[\"U038\",\"U042\",\"U008\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Recap framing of customer reactions\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email does not claim a decision or approval from the customer; it reports only what was shown and the agreed next meeting.\",\"utterance_ids\":[\"U060\",\"U080\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"Open items and Next section\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The steps are specific to this customer: partner hierarchy sample, Priya's policy build, the Oct 8 session with Elena focused on the late load scenario, and the onboarding plan.\",\"utterance_ids\":[\"U054\",\"U072\",\"U077\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1538,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10828,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1691,
+   "output_tokens_details": {
+    "thinking_tokens": 836
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

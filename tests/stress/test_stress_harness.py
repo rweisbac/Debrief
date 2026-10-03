@@ -662,14 +662,18 @@ def test_o1_uncommitted_promise_without_verifier_caught():
 def test_o2_uncommitted_promise_full_chain_verifier_failed_caught(tmp_path):
     fb = (FakeBackend().queue("ExtractionRecord", raw_body(extraction_a()))
           .queue("Assessment", raw_body(assessment_a()))
-          .queue("RecapEmail", raw_body(recap_a(OVERCLAIM_BODY)))
+          # Second recap: "by next week" is a relative date, which is high severity in the recap since D-15,
+          # so the chain rewrites the recap once.
+          .queue("RecapEmail", raw_body(recap_a(OVERCLAIM_BODY)), raw_body(recap_a(OVERCLAIM_BODY)))
           .queue("InternalSummary", raw_body(summary_a()))
           .queue("MutualActionPlan", raw_body(map_a()))
-          .queue("VerifierReport", raw_body(None), raw_body(None)))
+          # Verify and re-verify both fail, each after its one retry.
+          .queue("VerifierReport", *[raw_body(None)] * 4))
     llm = LLMClient(mode="live", backend=fb, db_path=tmp_path / "t.sqlite3", replay_dir=tmp_path / "rp",
                     redact=lambda s: s)
     r = asyncio.run(Chain(llm).run(load_context("deal_a"))).to_dict()
     assert any("verifier failed" in e for e in r["errors"])
+    assert r["artifacts"]["recap_email"]["needs_review"]
     assert not scoring.score_overclaim(r)["passed"]
 
 

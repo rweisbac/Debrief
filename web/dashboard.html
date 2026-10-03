@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capture metrics</title>
+<style>
+:root {
+  --bg: #f4f4f6; --card: #ffffff; --fg: #1d1c1d; --muted: #616061; --line: #dddddf; --accent: #1264a3;
+  --bar: #1264a3; --sample: #fff8db; --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121016; --card: #1a1d21; --fg: #e8e8e8; --muted: #a8a8aa; --line: #34363a; --accent: #4aa3df;
+    --bar: #4aa3df; --sample: #2a2614;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.45 var(--font); padding: 16px; }
+main { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+h1 { font-size: 20px; margin: 0; }
+h2 { font-size: 15px; margin: 0 0 8px; }
+.sub { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
+.banner { background: var(--sample); border-radius: 6px; padding: 8px 10px; font-size: 13px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.tile .n { font-size: 26px; font-weight: 700; }
+.tile .l { color: var(--muted); font-size: 13px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 6px 4px; border-top: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.bars { display: flex; align-items: flex-end; gap: 3px; height: 60px; }
+.bars span { flex: 1; background: var(--bar); min-height: 2px; border-radius: 2px 2px 0 0; }
+.toggle button { border: 1px solid var(--line); background: var(--card); color: var(--fg); padding: 6px 12px;
+  border-radius: 6px; font: inherit; cursor: pointer; }
+.toggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+input[type=range] { width: 100%; }
+.scroll { overflow-x: auto; }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <div><h1>Post-demo capture: is the agent right, and how much does it ask?</h1>
+    <p class="sub">Accuracy means the AE did not correct the field. For fields confirmed by the agent this is an upper bound, because a collapsed field is rarely reopened; spot-checked fields are the honest sample.</p></div>
+  <div class="toggle" role="group"><button id="m" aria-pressed="true">Measured (this session)</button>
+    <button id="s" aria-pressed="false">Simulated AE responses</button></div>
+  <p class="banner hidden" id="simnote">Simulated AE responses: a script accepts values that match the hand-written ground truth and corrects the rest. Not results.</p>
+  <section class="tiles" id="tiles"></section>
+  <section class="card"><h2>Accuracy by field</h2><div class="scroll"><table id="fields"></table></div></section>
+  <section class="card"><h2>Calibration: when the agent says it is this sure, how often is it right?</h2>
+    <div class="scroll"><table id="calib"></table></div></section>
+  <section class="card"><h2>Questions shown per meeting, in order</h2><div class="bars" id="trend"></div>
+    <p class="sub">The target is a trend from 4 toward 1 or 2 as the agent earns trust. Judgment fields are always asked for each AE's first <span id="warm"></span> demos.</p></section>
+  <section class="card"><h2>Threshold simulator</h2>
+    <label for="thr">Auto-confirm at or above <b id="thrv"></b></label>
+    <input type="range" id="thr" min="0.5" max="1" step="0.01">
+    <div class="tiles" id="sim" style="margin-top:8px"></div>
+    <p class="sub">Recomputed from stored labels. A lower threshold asks fewer questions and lets more errors through.</p></section>
+</main>
+<script>
+let data = null, simulated = false;
+const pct = x => x === null || x === undefined ? "n/a" : Math.round(x * 100) + "%";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const labels = {priority_why_now: "Priority and why now", champion_status: "Champion and economic buyer", top_risk: "Top risk", next_step: "Next step"};
+const tile = (n, l) => `<div class="card tile"><div class="n">${n}</div><div class="l">${l}</div></div>`;
+
+function render() {
+  const m = simulated ? data.simulated : data.measured;
+  document.getElementById("simnote").classList.toggle("hidden", !simulated);
+  document.getElementById("tiles").innerHTML =
+    tile(m.sessions, "Confirms") + tile(pct(m.auto_confirm_rate), "Fields confirmed by the agent") +
+    tile(m.avg_questions_per_meeting ?? "n/a", "Questions per meeting (of 4)") +
+    tile(m.median_seconds_to_complete === null ? "n/a" : m.median_seconds_to_complete + " s", "Median time to confirm");
+  document.getElementById("fields").innerHTML = "<tr><th>Field</th><th>Confirms</th><th>Not corrected</th></tr>" +
+    Object.entries(m.per_field_accuracy).map(([k, v]) => `<tr><td>${labels[k]}</td><td>${v.n}</td><td>${pct(v.accuracy)}</td></tr>`).join("");
+  document.getElementById("calib").innerHTML = "<tr><th>Agent confidence</th><th>Fields</th><th>Not corrected</th></tr>" +
+    m.calibration.map(b => `<tr><td>${esc(b.bucket)}</td><td>${b.n}</td><td>${pct(b.accuracy)}</td></tr>`).join("");
+  const max = Math.max(4, ...m.questions_trend);
+  document.getElementById("trend").innerHTML = m.questions_trend.map(q => `<span title="${q} questions" style="height:${q / max * 100}%"></span>`).join("")
+    || `<p class="sub">No confirms yet.</p>`;
+  simulate();
+}
+
+async function simulate() {
+  const t = document.getElementById("thr").value;
+  document.getElementById("thrv").textContent = Math.round(t * 100) + "%";
+  const r = await (await fetch(`/api/simulate?threshold=${t}&simulated=${simulated}`)).json();
+  document.getElementById("sim").innerHTML = tile(pct(r.auto_confirm_rate), "Fields auto-confirmed") +
+    tile(pct(r.error_rate_among_auto), "Errors among auto-confirmed") + tile(r.questions_per_meeting ?? "n/a", "Questions per meeting");
+}
+
+document.getElementById("thr").addEventListener("input", simulate);
+for (const [id, val] of [["m", false], ["s", true]]) document.getElementById(id).addEventListener("click", () => {
+  simulated = val;
+  document.getElementById("m").setAttribute("aria-pressed", !val);
+  document.getElementById("s").setAttribute("aria-pressed", val);
+  render();
+});
+fetch("/metrics").then(r => r.json()).then(d => {
+  data = d;
+  document.getElementById("thr").value = d.threshold;
+  document.getElementById("warm").textContent = d.warmup;
+  render();
+});
+</script>
+</body>
+</html>

@@ -18,6 +18,24 @@
   },
   {
    "type": "section",
+   "block_id": "confirm",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Confirm 4 things about this call.* Pre-filled from the transcript; most take one tap."
+   },
+   "accessory": {
+    "type": "button",
+    "action_id": "open_confirm",
+    "style": "primary",
+    "text": {
+     "type": "plain_text",
+     "text": "Confirm"
+    },
+    "url": "http://localhost:8000/capture/deal_b"
+   }
+  },
+  {
+   "type": "section",
    "text": {
     "type": "mrkdwn",
     "text": "*Open technical gap.* Nested SSO claim is unresolved and the security committee meets October 9."

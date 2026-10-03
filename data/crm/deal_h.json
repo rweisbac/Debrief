@@ -1,0 +1,74 @@
+{
+ "deal_id": "deal_h",
+ "account": "Marlow Retail Bank",
+ "segment": "Enterprise",
+ "industry": "Financial services",
+ "acv_usd": 340000,
+ "stage": "Technical Validation",
+ "close_date": "2026-12-18",
+ "owner_ae": "Elise Moreau",
+ "sc": "Tom Okafor",
+ "pod": "West-1",
+ "tv_entered_at": "2026-09-21T09:00:00-05:00",
+ "contacts": [
+  {
+   "name": "Rajiv Menon",
+   "title": "Head of Fraud Analytics",
+   "role": "champion",
+   "email": "rajiv.menon@marlow.example",
+   "phone": ""
+  },
+  {
+   "name": "Clara Jensen",
+   "title": "Data Platform Manager",
+   "role": "technical_evaluator",
+   "email": "clara.jensen@marlow.example",
+   "phone": ""
+  }
+ ],
+ "champion": "Rajiv Menon",
+ "economic_buyer": "",
+ "discovery_notes": {
+  "stated_business_outcome": "Catch card fraud in minutes, not the next morning.",
+  "pains": [
+   "Chargebacks up thirty percent"
+  ],
+  "decision_process": "Procurement committee approves new vendors."
+ },
+ "prior_call_notes": [
+  {
+   "date": "2026-09-14",
+   "type": "discovery",
+   "summary": "Discovery call. Agreed scenarios for the technical validation."
+  }
+ ],
+ "competitors": [],
+ "demo": {
+  "call_id": "gong-h-1001",
+  "scheduled_start": "2026-10-01T15:00:00-05:00",
+  "scheduled_end": "2026-10-01T16:00:00-05:00",
+  "actual_end": "2026-10-01T15:06:00-05:00"
+ },
+ "close_the_demo": {
+  "started_at": "",
+  "dated_next_step": {
+   "value": "",
+   "filled_at": ""
+  },
+  "stakeholder_to_add": {
+   "value": "",
+   "filled_at": ""
+  },
+  "business_outcome": {
+   "value": "Catch card fraud in minutes, not the next morning.",
+   "prefilled_from_discovery": true,
+   "edited": false,
+   "filled_at": ""
+  },
+  "sc_commitment": {
+   "value": "",
+   "filled_at": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Added for the post-demo capture prototype."
+}

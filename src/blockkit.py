@@ -7,7 +7,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from src.config import ROOT
+from src.config import PUBLIC_URL, ROOT
 from src.events import DISMISS_REASONS
 from src.transcript import Transcript
 
@@ -41,6 +41,7 @@ def card(record: dict, transcript: Transcript, crm: dict) -> dict:
     if record.get("source") == "sample":
         labels.append(record["sample_label"])
     blocks.append({"type": "context", "elements": [_text(" ".join(labels))]})
+    blocks.append(confirm_block(record["deal_id"]))
     state = STATE_LABELS.get(a.get("deal_state", ""), a.get("deal_state", "unknown"))
     blocks.append({"type": "section", "text": _text(f"*{state}.* {a.get('deal_state_why', '')}")})
     blocks.append({"type": "divider"})
@@ -76,6 +77,19 @@ def card(record: dict, transcript: Transcript, crm: dict) -> dict:
         footer += " | Needs review: " + ", ".join(k.replace("_", " ") for k in review)
     blocks.append({"type": "context", "elements": [_text(footer)]})
     return {"blocks": blocks}
+
+
+def confirm_url(deal_id: str) -> str:
+    return f"{PUBLIC_URL}/capture/{deal_id}"
+
+
+def confirm_block(deal_id: str) -> dict:
+    """Link to the confirm card. A real interactive Slack card needs a Slack app with a public request URL;
+    the prototype links to a page that looks like the card."""
+    return {"type": "section", "block_id": "confirm",
+            "text": _text("*Confirm 4 things about this call.* Pre-filled from the transcript; most take one tap."),
+            "accessory": {"type": "button", "action_id": "open_confirm", "style": "primary",
+                          "text": {"type": "plain_text", "text": "Confirm"}, "url": confirm_url(deal_id)}}
 
 
 def save(payload: dict, path: Path = ASSET) -> Path:
@@ -126,10 +140,152 @@ def sc_card(record: dict, transcript: Transcript, crm: dict, commitments: list[d
     return {"blocks": blocks}
 
 
-def slack_safe(payload: dict, app_url: str = "") -> list[dict]:
-    """Blocks for a plain posted message. Buttons need an interactivity endpoint that this demo does not run,
-    so they are dropped and replaced with a link to the app where the same actions work."""
+def slack_safe(payload: dict, app_url: str = "", interactive: bool = False) -> list[dict]:
+    """Blocks for a posted message. With interactivity configured (src/web.py serves /slack/interactions and
+    DEBRIEF_SLACK_SIGNING_SECRET is set) buttons and menus are kept. Without it they would do nothing, so they
+    are dropped and replaced with a link to the app where the same actions work."""
+    if interactive:
+        return payload["blocks"]
     blocks = [b for b in payload["blocks"] if b["type"] != "actions"]
     if app_url:
         blocks.append({"type": "section", "text": _text(f"<{app_url}|Open in Debrief> to act on or dismiss a step.")})
     return blocks
+
+
+# Post-demo capture card ("confirm, don't write")
+
+def _option(key: str, value: str) -> dict:
+    from src.capture import option_label
+    return {"text": {"type": "plain_text", "text": option_label(key, value)}, "value": value}
+
+
+def _select(capture_id: str, field: str, part: str, current: str) -> dict:
+    from src.capture import ENUM_OPTIONS
+    key = f"{field}.{part}"
+    sel = {"type": "static_select", "action_id": f"cap_sel|{capture_id}|{field}|{part}",
+           "placeholder": {"type": "plain_text", "text": "Choose"},
+           "options": [_option(key, v) for v, _ in ENUM_OPTIONS[key]]}
+    if current:
+        sel["initial_option"] = _option(key, current)
+    return sel
+
+
+def ask_summary(asked: int) -> str:
+    if asked == 0:
+        return "All 4 confirmed by the agent; check them and tap Confirm all."
+    if asked == 4:
+        return "All 4 need your call this time."
+    return f"{asked} of 4 need your call; the agent confirmed the rest."
+
+
+def capture_card(cap: dict, routing: dict, crm: dict, values: dict | None = None) -> dict:
+    """Interactive Slack card. Fields the agent is sure of are one line with a check; fields that need the AE get
+    tap-to-select menus (enums) or an Edit button (text, opens a modal). One Confirm all button submits.
+    values overrides the agent values with the AE's pending edits."""
+    from src.capture import FIELDS, confidence_label, display
+    values = values or {}
+    cid = cap["capture_id"]
+    asked = [f for f in FIELDS if routing[f]["mode"] == "ask"]
+    blocks: list[dict] = [
+        {"type": "header", "text": {"type": "plain_text", "text": f"Confirm the demo: {crm['account']}"[:150]}},
+        {"type": "context", "elements": [_text(
+            "Pre-filled from the call. " + ask_summary(len(asked)) + " About 30 seconds."
+            + (f" _{cap['sample_label']}_" if cap.get("sample_label") else ""))]},
+    ]
+    for f in FIELDS:
+        s = cap["scored"][f]
+        v = {**s["values"], **(values.get(f) or {})}
+        edited = bool(values.get(f))
+        if routing[f]["mode"] == "auto" and not edited:
+            blocks.append({"type": "section", "block_id": f"cap_{f}",
+                           "text": _text(f":white_check_mark: *{s['label']}:* {display(f, v)}"),
+                           "accessory": {"type": "button", "action_id": f"cap_edit|{cid}|{f}",
+                                         "text": {"type": "plain_text", "text": "Edit"}}})
+            blocks.append({"type": "context", "elements": [_text(
+                f"Confirmed by agent ({confidence_label(s['confidence'])}, {round(s['confidence'] * 100)}%)")]})
+            continue
+        flag = ":pencil2: *Edited.*" if edited else ":large_orange_circle: *Needs your call.*"
+        blocks.append({"type": "section", "block_id": f"cap_{f}",
+                       "text": _text(f"{flag} *{s['label']}:* {display(f, v)}"),
+                       "accessory": {"type": "button", "action_id": f"cap_edit|{cid}|{f}",
+                                     "text": {"type": "plain_text", "text": "Edit"}}})
+        if f == "champion_status":
+            blocks.append({"type": "actions", "block_id": f"cap_sel_{f}", "elements": [
+                _select(cid, f, "value", v.get("value", "")),
+                _select(cid, f, "economic_buyer_identified", v.get("economic_buyer_identified", ""))]})
+        elif f == "top_risk":
+            blocks.append({"type": "actions", "block_id": f"cap_sel_{f}",
+                           "elements": [_select(cid, f, "value", v.get("value", ""))]})
+        why = routing[f]["reason"]
+        if s["quotes"]:
+            q = s["quotes"][0]
+            text = q["text"] if len(q["text"]) <= 220 else q["text"][:217].rsplit(" ", 1)[0] + "..."
+            why += f"\n> \"{text}\"\n> {q['speaker']}, at {q['timestamp']}"
+        blocks.append({"type": "context", "elements": [_text(why)]})
+    blocks.append({"type": "actions", "block_id": "cap_submit", "elements": [
+        {"type": "button", "action_id": f"cap_confirm|{cid}", "style": "primary",
+         "text": {"type": "plain_text", "text": "Confirm all"}, "value": cid},
+        {"type": "button", "action_id": f"cap_web|{cid}", "text": {"type": "plain_text", "text": "Open full card"},
+         "url": confirm_url(cap["deal_id"])}]})
+    return {"blocks": blocks, "text": f"Confirm 4 things about the {crm['account']} demo"}
+
+
+def capture_done_card(cap: dict, crm: dict, session: dict, record: dict | None) -> dict:
+    """What replaces the capture card after Confirm all: the confirmed values, then the payoff."""
+    from src.capture import FIELDS, LABELS, display
+    lines = [f"*{LABELS[f]}:* {display(f, session['final'][f])}" + (" _(you corrected this)_"
+                                                                     if f in session["corrected"] else "")
+             for f in FIELDS]
+    blocks = [{"type": "header", "text": {"type": "plain_text", "text": f"Confirmed: {crm['account']}"[:150]}},
+              {"type": "section", "text": _text("\n".join(lines))},
+              {"type": "context", "elements": [_text("Saved to the opportunity in CRM. Nothing was sent to the customer.")]}]
+    a = ((record or {}).get("artifacts", {}).get("assessment") or {}).get("current") or {}
+    if a.get("next_steps"):
+        top = a["next_steps"][0]
+        blocks += [{"type": "divider"},
+                   {"type": "section", "text": _text(f"*Next best step:* {top['action']}\n"
+                                                     f"Owner: {top['owner']} | Due: {top['due_by'] or 'no date'} | "
+                                                     f"Rule: {top['playbook_rule_id']}")}]
+    blocks.append({"type": "actions", "elements": [
+        {"type": "button", "action_id": f"cap_web|{cap['capture_id']}", "style": "primary",
+         "text": {"type": "plain_text", "text": "Review recap and steps"}, "url": confirm_url(cap["deal_id"])}]})
+    return {"blocks": blocks, "text": f"Confirmed: {crm['account']}"}
+
+
+def capture_edit_modal(cap: dict, field: str, values: dict) -> dict:
+    """Slack modal for editing one field. private_metadata carries the capture and field."""
+    from src.capture import LABELS
+    v = {**cap["scored"][field]["values"], **(values.get(field) or {})}
+    blocks = []
+
+    def text_input(part: str, label: str, multiline: bool = False) -> dict:
+        el = {"type": "plain_text_input", "action_id": part, "multiline": multiline}
+        if v.get(part):
+            el["initial_value"] = v[part]
+        return {"type": "input", "block_id": part, "optional": True, "label": {"type": "plain_text", "text": label},
+                "element": el}
+
+    def select_input(part: str, label: str) -> dict:
+        sel = _select(cap["capture_id"], field, part, v.get(part, ""))
+        sel["action_id"] = part
+        return {"type": "input", "block_id": part, "label": {"type": "plain_text", "text": label}, "element": sel}
+
+    if field == "priority_why_now":
+        blocks.append(text_input("value", "Priority and why now (25 words max)", True))
+    elif field == "champion_status":
+        blocks += [select_input("value", "Champion"), text_input("champion_name", "Champion name"),
+                   select_input("economic_buyer_identified", "Economic buyer named?"),
+                   text_input("economic_buyer_name", "Economic buyer name")]
+    elif field == "top_risk":
+        blocks += [select_input("value", "Top risk"), text_input("note", "One line on the risk")]
+    elif field == "next_step":
+        date_el = {"type": "datepicker", "action_id": "date"}
+        if v.get("date"):
+            date_el["initial_date"] = v["date"]
+        blocks += [text_input("value", "Next step the customer agreed to"),
+                   {"type": "input", "block_id": "date", "optional": True,
+                    "label": {"type": "plain_text", "text": "Date"}, "element": date_el}]
+    return {"type": "modal", "callback_id": "cap_edit",
+            "private_metadata": json.dumps({"capture_id": cap["capture_id"], "field": field}),
+            "title": {"type": "plain_text", "text": LABELS[field][:24]},
+            "submit": {"type": "plain_text", "text": "Save"}, "blocks": blocks}

@@ -93,17 +93,34 @@ def process_call(deal_id: str, *, gong: GongSource | None = None, crm_source: CR
         return result("error", "; ".join(errors)[:300])
 
     service.generate_card(deal_id, payload, now, prompt_version=json.dumps(payload["prompt_versions"], sort_keys=True))
+    # Pre-fill the confirm card. A failed capture never blocks the debrief card; the AE can still open it.
+    capture_note, cap = "", None
+    try:
+        cap = service.build_capture(deal_id, payload, llm, "auto", gong, crm_source)
+        if not cap:
+            capture_note = " (confirm card not pre-filled: capture call failed)"
+    except ReplayMiss as e:
+        capture_note = f" (confirm card not pre-filled: {e.step} not recorded)"
+    except Exception as e:  # keep the watcher alive
+        capture_note = f" (confirm card not pre-filled: {type(e).__name__})"
     text = blockkit.summary_text(payload, crm)
     ae_card = blockkit.card(payload, transcript, crm)
     sc_card = blockkit.sc_card(payload, transcript, crm, service.sc_commitments(payload, crm, deal_id))
-    common = {"text": text, "debrief_id": payload["debrief_id"], "at": now.isoformat()}
-    sent = [notifier.send(crm["owner_ae"], "ae", deal_id, "card_ready", {**common, **ae_card}),
+    common = {"text": text, "debrief_id": payload["debrief_id"], "at": now.isoformat(),
+              "confirm_url": blockkit.confirm_url(deal_id)}
+    sent = []
+    if cap:  # the confirm card goes first: 30 seconds of the AE's judgment makes everything after it better
+        card = blockkit.capture_card(cap, service.card_routing(cap, crm["owner_ae"]), crm)
+        sent.append(notifier.send(crm["owner_ae"], "ae", deal_id, "capture_card",
+                                  {**common, "text": card["text"], "blocks": card["blocks"]}))
+    sent += [notifier.send(crm["owner_ae"], "ae", deal_id, "card_ready", {**common, **ae_card}),
             notifier.send(crm["sc"], "sc", deal_id, "card_ready", {**common, **sc_card})]
     slack_errors = [m["slack"]["error"] for m in sent if m.get("slack") and not m["slack"]["ok"]]
     ledger[deal_id] = {"hash": digest, "status": "done", "attempts": attempts, "at": now.isoformat(),
                        "debrief_id": payload["debrief_id"]}
     _save_ledger(ledger_path, ledger)
-    return result("done", payload["debrief_id"] + (f" (Slack failed: {slack_errors[0]})" if slack_errors else ""))
+    return result("done", payload["debrief_id"] + capture_note
+                  + (f" (Slack failed: {slack_errors[0]})" if slack_errors else ""))
 
 
 def scan_once(gong: FileGongSource | None = None, **kwargs) -> list[dict]:

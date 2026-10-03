@@ -1,0 +1,24 @@
+PARTICIPANTS
+Jordan Pike | Account Executive | apex
+Marcus Bell | Solutions Consultant | apex
+Hannah Brooks | VP Revenue Management | customer
+Diego Santos | BI Manager | customer
+---
+[00:02] Jordan Pike: Hi Hannah, hi Diego. Today Marcus will run the pricing scenario on your booking data.
+[00:12] Hannah Brooks: Great. Diego, you'll want to watch the pace curves.
+[00:20] Marcus Bell: We loaded twelve months of reservations for your three downtown properties. The model now reprices daily from booking pace, instead of the weekly batch you run today.
+[03:05] Diego Santos: What happens when the property system throttles the API? It does that on busy nights.
+[03:18] Marcus Bell: Good question, and it's the one thing I'd call open. We saw throttling twice in the replay. The connector backs off and retries, but on your busiest night it lagged about forty minutes. I want to test it against your live rate limits before I call it solved.
+[04:02] Diego Santos: That's fair. Our property system vendor is slow to raise limits.
+[04:10] Hannah Brooks: Let me say why I care. Two new hotels open downtown in the spring. If we keep repricing weekly, they will undercut us midweek and we won't see it until the Monday report.
+[04:44] Jordan Pike: So daily pricing from booking pace, before the new hotels open in spring.
+[04:51] Hannah Brooks: Yes. And I own the budget for this, so you don't need to go around me.
+[05:00] Jordan Pike: Understood. What would you like as the next step?
+[05:06] Hannah Brooks: A pilot on two properties. Can we start Monday October 12th?
+[05:14] Marcus Bell: We can. I need API access to the property system by the Friday before.
+[05:22] Hannah Brooks: Diego, can you send the access request this Friday?
+[05:27] Diego Santos: I'll send it Friday morning.
+[05:31] Jordan Pike: Then pilot kickoff Monday October 12th on two properties, access request from Diego Friday. I'll send the invite today.
+[05:44] Hannah Brooks: Perfect. Marcus, test the throttling during the pilot, not after.
+[05:51] Marcus Bell: Agreed. I'll put the rate limit test in week one.
+[05:58] Hannah Brooks: Thanks. Good session.

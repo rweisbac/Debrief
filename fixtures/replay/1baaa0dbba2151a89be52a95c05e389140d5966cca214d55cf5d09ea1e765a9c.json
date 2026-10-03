@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "1baaa0dbba2151a89be52a95c05e389140d5966cca214d55cf5d09ea1e765a9c",
+ "recorded_at": "2026-10-03T19:27:14.646366+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrW1xKybXsTnDaHf8L5",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"We will also include a free 90 day pilot with full support.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"Nobody mentioned a pilot, free terms, or support anywhere in the call; this is an invented commercial commitment that would mislead the customer.\",\"utterance_ids\":[\"U030\",\"U031\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence: Ingest ran in about six minutes; twelve rows failed; paid and allowed amounts came in as text; Lily I can send it; Priya will send failed rows\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt matches its line and supports the corresponding recap statement; Lily's offer to send her list is supported by U016.\",\"utterance_ids\":[\"U009\",\"U013\",\"U011\",\"U016\",\"U030\",\"U031\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Priya will send the twelve failed rows and a short note on the two text columns today.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Matches Nate's U030 commitment and Priya's U031 'I'll send that today'; Nate's 'I'll reach out' is stated as reaching out about a time, not a scheduled meeting.\",\"utterance_ids\":[\"U030\",\"U031\",\"U028\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Lily, thanks for offering to send your list so Priya can compare it against ours.\",\"passed\":false,\"severity\":\"low\",\"finding\":\"Lily said 'I can send it' but gave no date, and the email presents it as an offer with no date, which is acceptable; however the line also implies Lily's list is a confirmed deliverable and no due date was heard.\",\"utterance_ids\":[\"U016\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Owen, I'll reach out about finding a time to finish the demo. Does the summary view match what you had in mind?\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email does not claim any buying signal; it correctly leaves open Owen's lukewarm 'Sort of. I'd have to think about it.'\",\"utterance_ids\":[\"U020\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"Freshness and feature claims in the recap\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email makes no claim about connector freshness or other release-card features; it mentions only the default-setup ingest and views shown.\",\"utterance_ids\":[\"U009\",\"U017\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"Owen, I'll reach out about finding a time to finish the demo.\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"The follow-up is a generic 'reach out' with no proposed date, which fails PB-02's dated next meeting; Lily said Owen's calendar is a mess, so offering specific slots was needed.\",\"utterance_ids\":[\"U028\",\"U029\",\"U030\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1140,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6355,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1014,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

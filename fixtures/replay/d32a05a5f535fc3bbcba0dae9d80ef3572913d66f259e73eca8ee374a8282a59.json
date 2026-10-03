@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "d32a05a5f535fc3bbcba0dae9d80ef3572913d66f259e73eca8ee374a8282a59",
+ "recorded_at": "2026-10-03T19:27:36.290729+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrXN9o3igMB2AdsnrZF",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "CAQS/BEKEAgSGAI4AUIIdGhpbmtpbmcSDG13E2DQ2DQkLgDvshoMpQ9CA4mVWzk5qhNBIjD+/53ShxLKVXehaiUtKx96g2t8bME6mRA/K+yMLt/TeM/wBJa8zv138kULc5/nxrUqmRG5nV2b54vU1guC0sLnEVyzhczAvgKUSilITc3sx7zns8EdlNL5Ph7kYS/FmOjnDYuHJyoe5R44tOiwpf9NK1aFRquAxHQEUnlTm5LmVLnWHvWjKzYclt9TGd8PTW6Ofu4LL6D9B7rA6x5gQ1kke2/eVT8xz517f8ggv/Xx8BDo+OjfiWKdS6J28SJ0TR0YYtTKjsImp0r9acLhhjrEs+2//Vq23PvlB+z0CWyB1XLr35lJMeuw6+bipxpxxdMqk9gmKec2cd4T6sjPotUvdz+WCgT9xPI4Tkf+c1fSIL9vqdk8IhwoTco8++Yzz9D/ctvLfBgew/q7+arL5NZmVpwpCyXrn3drqRinQwnIN8h8bQAYDjPI5Bdl228UVNi/qGkztYWpojLYzB6Z4Yth1y4josf1CQxQGRVBqC4L1ayJudkXDwG/4qfiXtGmRxbUSss0xlKst+NU5gd6QwgqKhK6Z5lLLmR5seZwv4HYAqZvIyif0q/MTpY1b947AmIe4lDBZu/hsW3Kytu9raECWS3a256pa8B1VoLC6vOtzCJWgpZnA7AIljz4P8T8wr9mt0W7DlBBrUGmUOUW92J4rU8VNG76EQSq7/36eGvPpC/a1V/G6agzyWozUZliTybbSumrQT+leOybRedfU+2TPge3yuZ3BWLE/9f7KjvpvOBTfEVycKpb0LZcQzETfIRDqQfHoVvIdIg6OE67vTxseYjdO5hnWVGZB4zXY0TxsIjenmOwcxjeO+FXTa1+LRFATLTx/Ol6iLfVJ9PIO7LJY7WcEWvG7zzmYjlTovl32FW19Gt2Mxyxr/qB7GxZJ26Gp9bZd65DBeGGiiTMgI7EnKi9NTIGdzOJkXild79upRati09nWzzz8F8ckbeynM32juucuptOb5Yf8vqH0UmzSF517G4KP3QxayukNFXu4fWoupCGpJF/A2aV1zKY4uNecpgpxorWwM6s3ZLI9Xmkz2DZL3ff2p6QOUT0SDBXvsIlcsMR9MCtc+KraUicmV6+fkVxCx0nlkAi9IBOZ9FFje1a9HUph9lO8p4oI2VdyvL3LubDTNavCZGboj2UF2UHubWTQpUC9DtA02KueopWfyR4jFxRlW0ZyhU2xOGMlcyNIHKwggZqKE7iIzUoRwy9svyuLFkL4C393sGQGu6NzB5IaGfUyz+FgHIFl5A7cyIO3aNHCnMRw/dVS3jznSs1LTzMcUVwFJKO3kSJ3w2K/SuuDuo9d152M4IzxcZrEaAJgrgGfauXcee4UmgDd73sR8W4M+PPYtUYplqQDapIIEGGrV5O/sHevgEpvhOHhup2vDLIWrQ6Mw6cu29KOp+MwPjiGK3JO8kwshe7rUMuJu7Fx2RH0QFBBphWoR0rETm6hHdk80S7qBDUwF09vM6LoqJ8243KzjvDNgugTfG5q4MEIKESRKFAIiu2OLDsF0E5y57iZ8FomheXNwUggxc9aAHBnVccyIFxFa+YWvMCzZKTBaFIO6TVHRCQ82bviyAq32aDGxj6VQWVvYEF9O78nZZBsPmRKOjNIkiPschh9GfDjoGywLoky1Y2IvTLY/wsEuHGL4dISq/BGCuTdaQu6Ni/bwawjUJ6D9UvwAH3R44sPAb6t1jVqLnqc698qJWpFYt5cgE2AI7NHwA68YchHDng+XVoAOBVJOTsY5KGh/1pHkiI2EYVxJsBnqBj3d49QKduali3NLTGR5w5DSKzogeDhbVEHT5QJDRMBRBRfFnx/Vit3UqXte0QUS/q+RKhxkNywbgKyLsXPnWLXgTK8VROZi+MOOOAzZXA/UCNjn0OamiKKAI3zmw8Euqp9o/57Ddx2F3ABcCCKyTucEgURfv8y51Th8HF2rCsK1Kqa/X468tj63U/fzmZcdyctmOXnbDTg9yt9CnHheCDw5qARgrx20HNdQA5eOcMGWDr1eTqedhSGkmEdtryyBens/lmjyfynLsoOnD2WATdT1uu/sHb3XwOhU0BaeTNKvI1LXxX9T3+oD7Hy8/1HtsXHaFllytpfgrBPSEy8i85iH5ZXzI7H+piHRLtI5J6S8zRsrH2Qi45aweMHCwCrX/5onb7VCJTD2kFoc+5aouhWOlQ23hbL2L569PomS3TUkxNSdaFGGJUiz5hqALndZJYOknfLeXvlgc/+tst39M0OtLTaIugbKuRK6T1S18mstWpfahF/vG6iZFFSvEBubjcidf/rcWBZLmismJQ///+f0Atvbn+RMxTqyn+X+x2GGrKX272dM+j0iqJFJlCfZCxKcaQtklvgo+efnNrfVj7YMNbTBVn3I4QcvdU9Q9gjY4PXH2D7925Z5+yeeLbcRDZSbAD7o0x6v5ja0LjxAQIUAfM/aZX4CRAy/63HJg3uTEO1JzJmZ6vow9vkuCIVp7Ee8GLdr1liaqUcpZmdRijIoTCmvOIg8aleyVzup/9xLQHV+SlDC+YrlET9np4F97A/1ugvx4lpgJ2HcrbkKBAdmrde/9l+xWUpoKU6ItZo7oiKmjP8hOnQwvjFprJiCf5sBiDwsoif/jQvvqzUq0Ml9zA4Uzu4KFTqQ/9aBXi9VKJHKWmZ3UeO/DT3gLMjb+MTy56es+m6pAo20F38XKYVbmC9jxpNSUfgZktaXphDKjPr5p5ZGAqn0Jsf8DcvXRQKf01d8mFdzQlzCT/zkeG1V5payAQv+oEFGUrZ7D4vNxAPf6PYqjuksr1cqHSGYHw/NlX23dUhiZT5y6e+ek7o+TJR6GiCD8LxpHPqJCvGXUsvE8zyyazQHhcGkWcNw5zdoGmIvrG3LTGNiIBSMGkM/gQLad6Qrn8ITOlJ9Ec8/4tcqMHnPHX7PPA7dRdtBAEFcBbAGwmTPyzQowLALT/clgmVSCllNVynS7uTuxnQPBjurA8dPwUSCjyIdTKrCFHFEXoHZg/WwKu5pY6/hgB"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"I have also looped in Gregory Thornton from our side.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"No Gregory Thornton appears anywhere in the transcript or CRM, so the email invents a person and an action nobody took or committed to.\",\"utterance_ids\":[\"U030\",\"U031\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Priya will send the twelve failed rows and a short note on the two text columns today. / Owen, I'll reach out about finding a time to finish the demo.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Both commitments were made in the call: Nate said he would reach out to Owen, and Priya said she would send the rows and note today.\",\"utterance_ids\":[\"U030\",\"U031\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence: six minute ingest, twelve failed date rows, text columns, Lily's offer to send her list, Priya's send commitment\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each cited excerpt is verbatim from its line and supports the matching statement in the email.\",\"utterance_ids\":[\"U009\",\"U011\",\"U013\",\"U016\",\"U030\",\"U031\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Lily, thanks for offering to send your list so Priya can compare it against ours.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Lily said 'I can send it' with no date, and the email states it as an offer rather than a firm commitment.\",\"utterance_ids\":[\"U015\",\"U016\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"recap_email\",\"target\":\"Does the summary view match what you had in mind?\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email claims no buying signal; it re-asks a question Owen only answered with 'Sort of. I'd have to think about it.'\",\"utterance_ids\":[\"U019\",\"U020\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"Ingest ran in about six minutes... freshness indicator not claimed\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email makes no warehouse connector or other product-behavior claim that a release card supersedes.\",\"utterance_ids\":[\"U009\",\"U017\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1140,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6355,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1422,
+   "output_tokens_details": {
+    "thinking_tokens": 637
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

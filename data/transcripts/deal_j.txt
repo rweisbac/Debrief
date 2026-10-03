@@ -1,0 +1,26 @@
+PARTICIPANTS
+Sam Lee | Account Executive | apex
+Priya Raman | Solutions Consultant | apex
+Megan Doyle | Head of Digital Services | customer
+Arun Patel | Data Analyst | customer
+---
+[00:03] Sam Lee: Hi Megan, hi Arun. Priya will show the permit status scenario.
+[00:09] Megan Doyle: Lovely. Arun built our current reports, so he'll have questions.
+[00:15] Priya Raman: We loaded a year of permit applications. Residents can see their permit status online, updated every hour, instead of calling the contact center.
+[02:50] Megan Doyle: This is exactly what we need. Honestly, it's brilliant.
+[02:56] Arun Patel: How does it handle the old case system? The exports have duplicate case numbers.
+[03:06] Priya Raman: We found about two percent duplicates and merged them on address and date. I'd like you to check twenty of them before we rely on that rule.
+[03:22] Arun Patel: I can check them next week.
+[03:27] Megan Doyle: The reason this matters is that the contact center budget gets cut in April. Permit calls are a third of their volume.
+[03:40] Sam Lee: So residents get permit status online before the contact center cut in April.
+[03:46] Megan Doyle: Yes. Although I should say, platform choices aren't really mine. They go through the corporate IT architecture board.
+[03:58] Sam Lee: When does the board meet?
+[04:02] Megan Doyle: Monthly, I think. I'm not sure who's on it now.
+[04:08] Sam Lee: Who would sign off on the budget?
+[04:12] Megan Doyle: Probably the director of IT, or maybe finance. It changed last year.
+[04:20] Sam Lee: Could we set up a follow up to look at the duplicates and plan for the board?
+[04:26] Megan Doyle: Maybe Thursday the 8th? I'll need to check and confirm.
+[04:32] Arun Patel: Thursday is tricky for me.
+[04:35] Megan Doyle: Then I'll get back to you with a time.
+[04:39] Priya Raman: I'll send the list of twenty merged cases to Arun.
+[04:44] Megan Doyle: Wonderful. Really impressive work.

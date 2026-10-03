@@ -1,0 +1,217 @@
+{
+ "deal_id": "deal_c",
+ "deal_state": "competitive_risk",
+ "steps": [
+  {
+   "kind": "must_have",
+   "text": "Give the champion, within 2 business days, a 1-page brief for the champion's boss comparing extending Lakestream against adopting Apex on Corvid's own workloads, including where Lakestream is good enough, plus the pricing range the champion asked for with its assumptions stated.",
+   "rules": [
+    "PB-06",
+    "PB-05"
+   ],
+   "match": [
+    [
+     "lakestream"
+    ],
+    [
+     "brief",
+     "comparison",
+     "compare",
+     "pack",
+     "one page",
+     "1 page",
+     "1-page",
+     "one-page"
+    ]
+   ],
+   "owner": "Elise Moreau",
+   "due_by": "2026-10-05",
+   "id": "C-R01"
+  },
+  {
+   "kind": "must_have",
+   "text": "Offer the head of data engineering a phased implementation plan that names the painful past migration, shows engineering hours by role, keeps the first phase small and includes explicit exit points.",
+   "rules": [
+    "PB-10",
+    "PB-14"
+   ],
+   "match": [
+    [
+     "implementation",
+     "onboarding",
+     "migration",
+     "phased"
+    ],
+    [
+     "plan",
+     "hours",
+     "phase",
+     "outline"
+    ]
+   ],
+   "owner": "Tom Okafor",
+   "due_by": "2026-10-07",
+   "id": "C-R02"
+  },
+  {
+   "kind": "must_have",
+   "text": "Respect the deferral by not asking for a meeting, and close the recap with 1 question about how CFO approval works for purchases over 250K and a check-in date the champion can accept or change.",
+   "rules": [
+    "PB-11",
+    "PB-03"
+   ],
+   "match": [
+    [
+     "farah",
+     "cfo"
+    ]
+   ],
+   "owner": "Elise Moreau",
+   "due_by": "2026-10-02",
+   "id": "C-R03"
+  },
+  {
+   "kind": "optional",
+   "text": "Offer a peer reference: a data engineering lead at a customer who migrated with a small team.",
+   "rules": [
+    "PB-14"
+   ],
+   "match": [
+    [
+     "reference"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R04"
+  },
+  {
+   "kind": "optional",
+   "text": "Flag Lakestream to deal desk within 1 business day (internal).",
+   "rules": [
+    "PB-06"
+   ],
+   "match": [
+    [
+     "deal desk"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R05"
+  },
+  {
+   "kind": "routine",
+   "text": "Send a recap within 24 hours.",
+   "rules": [
+    "PB-01"
+   ],
+   "match": [
+    [
+     "recap"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R06"
+  },
+  {
+   "kind": "routine",
+   "text": "Log the competitor in CRM.",
+   "rules": [],
+   "match": [
+    [
+     "crm"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R07"
+  },
+  {
+   "kind": "wrong",
+   "text": "Push for a meeting next week after the customer deferred.",
+   "rules": [
+    "PB-11"
+   ],
+   "match": [
+    [
+     "book a meeting",
+     "schedule a meeting",
+     "lock in",
+     "push for a meeting"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R08",
+   "example": "Push for a meeting with Ben next week"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send just-checking-in messages.",
+   "rules": [
+    "PB-09"
+   ],
+   "match": [
+    [
+     "checking in",
+     "check in on"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R09",
+   "example": "Send Ben a note checking in on where things stand"
+  },
+  {
+   "kind": "wrong",
+   "text": "Disparage Lakestream or claim general superiority.",
+   "rules": [
+    "PB-06"
+   ],
+   "match": [
+    [
+     "better than lakestream",
+     "superior to lakestream"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R10",
+   "example": "Explain why Apex is superior to Lakestream"
+  },
+  {
+   "kind": "wrong",
+   "text": "Offer a discount to create urgency.",
+   "rules": [],
+   "match": [
+    [
+     "discount"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R11",
+   "example": "Offer a discount if they sign this quarter"
+  },
+  {
+   "kind": "wrong",
+   "text": "Estimate implementation in weeks without scoping.",
+   "rules": [
+    "PB-10"
+   ],
+   "match": [
+    [
+     "weeks to implement",
+     "implementation in weeks"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "C-R12",
+   "example": "Tell Helen it will take six weeks to implement"
+  }
+ ],
+ "_note": "Synthetic data, fictional company. Reference answers from docs/research/best_practice_findings.md section 5. Match terms are a keyword floor, not a semantic judge."
+}

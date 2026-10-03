@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "2a5db33ce34e805cf32074970758d9a2046fe8c01334d99840da7ca869f30a2c",
+ "recorded_at": "2026-10-03T19:25:52.335581+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrPkgPwKDhHskXDey2g",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"customer_value_line and evidence quotes U027, U028, U023, U073, U061\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The cited excerpts match the claims: U027 supports the daily goal, U028 the nine minute run, U023 and U073 Marcus's SSO commitments, and U061 the packet routing to Aisha with Raj copied.\",\"utterance_ids\":[\"U027\",\"U028\",\"U023\",\"U073\",\"U061\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"I have also looped in Gregory Thornton from our side.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"Nobody named or mentioned Gregory Thornton in the call, so this line invents a person and an action that was never committed.\",\"utterance_ids\":[\"U001\",\"U078\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"For the October 9th committee, we will send the packet to Aisha, copying Raj.\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"Aisha said to send the packet to her and copy Raj, but nobody on the Apex side committed to sending it by a date; the email also omits the SOC 2 report, encryption details, and the written SSO design that the packet needs and does not give an owner or date.\",\"utterance_ids\":[\"U056\",\"U058\",\"U059\",\"U061\",\"U062\",\"U064\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Marcus is taking the nested claim question to our identity team today and will get Leo something he can put in front of Raj.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Marcus said he would take it to the identity team today and would get Leo something he can put in front of Raj, so the promise matches the call.\",\"utterance_ids\":[\"U023\",\"U073\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Drop-off notifications: I will work through this with Nora's care management team.\",\"passed\":false,\"severity\":\"low\",\"finding\":\"Jordan said he would note it as something to work through with the care management team, which is softer than a commitment to do the work, and no date was given.\",\"utterance_ids\":[\"U043\",\"U046\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Marcus will send Nora the encryption whitepaper.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Marcus offered to send the whitepaper and Nora accepted, so the commitment is accurately stated, though the email gives no date.\",\"utterance_ids\":[\"U051\",\"U052\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"One note on customer managed keys: they run on major cloud key services, and on-premises HSMs are not supported.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"This matches RC-11 and Marcus's statement that today it is the major cloud key services; no superseded behavior is presented as current.\",\"utterance_ids\":[\"U054\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Validated: ... with the top three drivers on each row and a change log when late claims restate a score.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Marcus stated each row shows the top three drivers and a change log records restated scores, so the validated claims are supported.\",\"utterance_ids\":[\"U034\",\"U041\",\"U043\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"Open items list and recap structure\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"The recap does not tie the work to the October 9th committee deadline with dated owners, omits the 6 to 8 week token change effect on timing, and gives no due date for the identity team answer beyond today, so the open items read as an undated list rather than a plan.\",\"utterance_ids\":[\"U021\",\"U056\",\"U059\",\"U071\",\"U072\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1218,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10477,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1289,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

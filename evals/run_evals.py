@@ -52,6 +52,7 @@ async def run_one(deal: str, mode: str, with_judge: bool) -> dict:
         "traps": [scoring.score_trap(t, r) for t in g["traps"]],
         "adversarial": scoring.score_adversarial(g, r),
         "grounding": scoring.score_grounding(r),
+        "grounding_final": scoring.score_grounding_final(r),
         "overclaim": scoring.score_overclaim(r),
         "steps": scoring.score_steps(r),
         "needs_review": [k for k, v in r["artifacts"].items() if v["needs_review"]],
@@ -73,7 +74,7 @@ async def run_one(deal: str, mode: str, with_judge: bool) -> dict:
                 scored["judge"].append({"step": i, "status": "error", "reason": jr.parse_error or "refused"})
             else:
                 scored["judge"].append({"step": i, "status": "ran", "passed": judges.overall(jr.parsed),
-                                        **jr.parsed.model_dump(mode="json")})
+                                        "strong": judges.strong(jr.parsed), **jr.parsed.model_dump(mode="json")})
     return scored
 
 
@@ -115,7 +116,7 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
     if ran:
         first = {d: next((s for s in ss if s["status"] == "ran"), None) for d, ss in runs.items()}
         L += ["## Summary (first run per deal)", "",
-              "| Deal | State (got / expected) | Traps | Adversarial | Grounding | Steps | Overclaim | Needs review | Calls | Cost | Latency | Cache read tokens |",
+              "| Deal | State (got / expected) | Traps | Adversarial | Grounding (first draft / final) | Steps | Overclaim | Needs review | Calls | Cost | Latency | Cache read tokens |",
               "|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for d, s in first.items():
             if not s:
@@ -124,6 +125,8 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
             adv = (f"{s['adversarial']['id']} {'pass' if s['adversarial']['passed'] else 'FAIL'}"
                    if s["adversarial"] else "n/a")
             grounding = "pass" if all(v["passed"] for v in s["grounding"].values()) else "FAIL"
+            final = (s.get("grounding_final") or {}).get("status", "not scored")
+            grounding += " / " + ("FAIL" if final == "fail" else final)
             L.append(f"| {d} | {s['state']['got']} / {s['state']['expected']} {'pass' if s['state']['passed'] else 'FAIL'} "
                      f"| {traps} | {adv} | {grounding} | {'pass' if s['steps']['passed'] else 'FAIL'} "
                      f"| {'pass' if s['overclaim']['passed'] else 'FAIL'} | {', '.join(s['needs_review']) or 'none'} "
@@ -168,6 +171,9 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
                     if not v["passed"]:
                         n_fail += 1
                         L.append(f"| {d} | {i} | grounding: {k} | {'; '.join(v['failures'])[:300]} | all pass | |")
+                for f in (s.get("grounding_final") or {}).get("approvable_failures", []):
+                    n_fail += 1
+                    L.append(f"| {d} | {i} | grounding, final (approvable) | {f[:300]} | no failure on an approvable draft | |")
                 if not s["steps"]["passed"]:
                     n_fail += 1
                     L.append(f"| {d} | {i} | step rules | {'; '.join(s['steps']['problems'])} | at most 3, each with evidence, owner, rule | |")
@@ -216,20 +222,24 @@ def write_report(runs: dict[str, list[dict]], mode: str, n_runs: int, with_judge
 
         if with_judge:
             label = "calibrated" if judges.status()["calibrated"] else "uncalibrated"
+            crit = judges.criteria()
+            v2 = crit == judges.CRITERIA_V2
+            rule = ("Judge v2, research rubric R1 to R8: acceptable when R1, R2, R4, R5 and R6 pass; strong when R3 "
+                    "and R7 also pass." if v2 else "Binary per criterion; a step passes only if all pass.")
             L += [f"## Judge results ({label})", "",
-                  "Binary per criterion; a step passes only if all pass. Until hand labels exist and the judge is "
-                  "frozen and scored on the test split, treat these as uncalibrated opinions.", "",
-                  "| Deal | Step | Overall | specific | evidence_tied | playbook_tied | actionable_10_min | non_obvious | Critique |",
-                  "|---|---|---|---|---|---|---|---|---|"]
+                  rule + " Until the judge is checked against labels, treat these as uncalibrated opinions.", "",
+                  "| Deal | Step | Overall | " + " | ".join(crit) + " | Critique |",
+                  "|---|---|---|" + "---|" * len(crit) + "---|"]
             for d, s in first.items():
                 for j in (s or {}).get("judge", []):
                     if j["status"] != "ran":
-                        L.append(f"| {d} | {j['step']} | not run | | | | | | {j['reason'][:120]} |")
+                        L.append(f"| {d} | {j['step']} | not run | " + "| " * len(crit) + f"{j['reason'][:120]} |")
                         continue
                     yn = lambda b: "pass" if b else "fail"  # noqa: E731
-                    L.append(f"| {d} | {j['step']} | {yn(j['passed'])} | {yn(j['specific'])} | {yn(j['evidence_tied'])} "
-                             f"| {yn(j['playbook_tied'])} | {yn(j['actionable_10_min'])} | {yn(j['non_obvious'])} "
-                             f"| {j['critique']} |")
+                    overall = ("strong" if j.get("strong") else "acceptable" if j["passed"] else "fail") if v2 \
+                        else yn(j["passed"])
+                    L.append(f"| {d} | {j['step']} | {overall} | " + " | ".join(yn(j.get(c)) for c in crit)
+                             + f" | {j['critique']} |")
             L.append("")
 
     L += ["## Related", "", "- Verifier ablation: `evals/ablation.md` (`python evals/verifier_ablation.py`).",

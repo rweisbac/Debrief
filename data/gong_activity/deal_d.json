@@ -1,0 +1,9 @@
+{
+  "_note": "Synthetic data, fictional company.",
+  "deal_id": "deal_d",
+  "call_id": "gong-d-0928",
+  "started_at": "2026-09-28T09:00:00-07:00",
+  "ended_at": "2026-09-28T09:48:00-07:00",
+  "transcript_file": "data/transcripts/deal_d.txt",
+  "post_demo_activity": []
+}

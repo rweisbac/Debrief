@@ -1,0 +1,152 @@
+{
+ "deal_id": "deal_y",
+ "deal_state": "waiting_on_customer",
+ "steps": [
+  {
+   "kind": "must_have",
+   "text": "Send IT and compliance the same neutral hosting brief (EU-only against US hosting: what data is stored where, subprocessors and the contractual terms available), and offer an Apex privacy or legal subject matter expert to speak with compliance, without writing a legal opinion for the customer.",
+   "rules": [
+    "PB-15",
+    "PB-09"
+   ],
+   "match": [
+    [
+     "hosting"
+    ],
+    [
+     "both",
+     "neutral",
+     "same",
+     "side-by-side",
+     "side by side",
+     "victor and camila",
+     "it and compliance"
+    ]
+   ],
+   "owner": "Sam Lee",
+   "due_by": "2026-10-02",
+   "id": "Y-R01"
+  },
+  {
+   "kind": "must_have",
+   "text": "Ask the champion for the VP's name and role, and draft a 1-page business case for the VP built on the stated outcome.",
+   "rules": [
+    "PB-05",
+    "PB-07",
+    "PB-03"
+   ],
+   "match": [
+    [
+     "vp"
+    ]
+   ],
+   "owner": "Sam Lee",
+   "due_by": "2026-10-05",
+   "id": "Y-R02"
+  },
+  {
+   "kind": "must_have",
+   "text": "Propose a dated joint session with IT, compliance and the Apex subject matter expert to settle the hosting question, offering a date the champion can accept or change.",
+   "rules": [
+    "PB-02",
+    "PB-15"
+   ],
+   "match": [
+    [
+     "joint",
+     "session",
+     "meeting"
+    ],
+    [
+     "compliance",
+     "camila",
+     "victor"
+    ]
+   ],
+   "owner": "Sam Lee",
+   "due_by": "2026-10-06",
+   "id": "Y-R03"
+  },
+  {
+   "kind": "optional",
+   "text": "Draft a mutual action plan showing hosting decision, legal review and VP approval as customer-owned steps.",
+   "rules": [
+    "PB-12"
+   ],
+   "match": [
+    [
+     "mutual action plan",
+     "action plan"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "Y-R04"
+  },
+  {
+   "kind": "routine",
+   "text": "Send a recap within 24 hours.",
+   "rules": [
+    "PB-01"
+   ],
+   "match": [
+    [
+     "recap"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "Y-R05"
+  },
+  {
+   "kind": "wrong",
+   "text": "Tell the customer that US hosting is fine for their compliance needs, or write the legal memo yourself.",
+   "rules": [
+    "PB-15"
+   ],
+   "match": [
+    [
+     "us hosting is fine",
+     "write the legal memo"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "Y-R06",
+   "example": "Tell Victor US hosting is fine for pseudonymized data"
+  },
+  {
+   "kind": "wrong",
+   "text": "Inflate the time saving beyond a week or more per campaign.",
+   "rules": [
+    "PB-07"
+   ],
+   "match": [
+    [
+     "two weeks per",
+     "weeks per campaign"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "Y-R07",
+   "example": "Say Apex saves two weeks per campaign"
+  },
+  {
+   "kind": "wrong",
+   "text": "Go around the champion to reach the VP before hosting is settled.",
+   "rules": [],
+   "match": [
+    [
+     "go around",
+     "contact the vp directly"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "Y-R08",
+   "example": "Contact the VP directly to speed things up"
+  }
+ ],
+ "_note": "Synthetic data, fictional company. Reference answers from docs/research/best_practice_findings.md section 5. Match terms are a keyword floor, not a semantic judge."
+}

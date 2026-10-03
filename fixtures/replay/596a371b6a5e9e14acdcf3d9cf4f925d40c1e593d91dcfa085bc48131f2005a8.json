@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "596a371b6a5e9e14acdcf3d9cf4f925d40c1e593d91dcfa085bc48131f2005a8",
+ "recorded_at": "2026-10-03T19:25:42.747915+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffrNynexSxjbygWzrb5U",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"superseded_feature_as_current\",\"artifact\":\"recap_email\",\"target\":\"As a reminder, the warehouse connector syncs in hourly batches.\",\"passed\":false,\"severity\":\"high\",\"finding\":\"RC-12 (2026-08-12) supersedes hourly batch sync; the connector now syncs continuously in about 1 minute, and the warehouse connector was never discussed in the call, so the line is both outdated and unsupported.\",\"utterance_ids\":[]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Marcus is taking the nested claim question to our identity team today and will get Leo something he can put in front of Raj.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Marcus committed to take it to the identity team today and to get Leo something he can put in front of Raj, so this matches the call.\",\"utterance_ids\":[\"U023\",\"U073\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Marcus will send Nora the encryption whitepaper.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Marcus said he would send Nora the encryption whitepaper in the call.\",\"utterance_ids\":[\"U051\",\"U052\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"For the October 9th committee, we will send the packet to Aisha, copying Raj.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Jordan asked who to send the packet to, Aisha said send it to her and copy Raj, and Jordan acknowledged.\",\"utterance_ids\":[\"U060\",\"U061\",\"U062\"]},{\"check\":\"email_promises_uncommitted\",\"artifact\":\"recap_email\",\"target\":\"Drop-off notifications: I will work through this with Nora's care management team.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Jordan said he would note it as something to work through with the care management team, so the email matches.\",\"utterance_ids\":[\"U046\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"Marcus is taking the nested claim question to our identity team today and will get Leo something he can put in front of Raj.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The email gives no date or roadmap claim beyond what Marcus said, and does not promise native nested claim support.\",\"utterance_ids\":[\"U018\",\"U023\",\"U073\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"recap_email\",\"target\":\"One note on customer managed keys: they run on major cloud key services, and on-premises HSMs are not supported.\",\"passed\":false,\"severity\":\"medium\",\"finding\":\"Marcus said only that an on-premises HSM would need checking, while RC-11 says on-prem HSMs are not supported; the email states a firm position Marcus did not take, and also conflicts with his earlier mention of an HSM setup in the whitepaper, so it should be reconciled before sending.\",\"utterance_ids\":[\"U051\",\"U054\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"customer_value_line: The incremental pipeline is aimed at your goal of moving the readmission risk list from weekly to daily so care managers can call patients the morning after discharge.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Nora's words in U027 state the daily goal and morning-after-discharge calls, and the line matches the stated outcome and the nine-minute run in U028.\",\"utterance_ids\":[\"U027\",\"U028\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Validated: the readmission pipeline ran incrementally on your de-identified extract in nine minutes, with the top three drivers on each row and a change log when late claims restate a score.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Nine-minute run, top three drivers, restatement and the row change log were all stated by Marcus in the call.\",\"utterance_ids\":[\"U028\",\"U034\",\"U041\",\"U043\"]},{\"check\":\"quote_supports_claim\",\"artifact\":\"recap_email\",\"target\":\"Evidence U023, U073 and U061 attached to commitments\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt is word for word from its line and supports the commitment or instruction it is attached to.\",\"utterance_ids\":[\"U023\",\"U073\",\"U061\"]},{\"check\":\"generic_step\",\"artifact\":\"recap_email\",\"target\":\"Demo recording: I will check what we can share given the de-identified data and come back to Nora.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Tied to Nora's request and the de-identified data constraint, with Jordan's commitment in the call.\",\"utterance_ids\":[\"U066\",\"U067\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1224,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 10477,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1534,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

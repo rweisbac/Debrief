@@ -1,0 +1,74 @@
+{
+ "deal_id": "deal_f",
+ "account": "Ferro Manufacturing",
+ "segment": "Enterprise",
+ "industry": "Manufacturing",
+ "acv_usd": 120000,
+ "stage": "Technical Validation",
+ "close_date": "2026-12-18",
+ "owner_ae": "Nate Kowalski",
+ "sc": "Priya Raman",
+ "pod": "Central-1",
+ "tv_entered_at": "2026-09-21T09:00:00-05:00",
+ "contacts": [
+  {
+   "name": "Greg Lindqvist",
+   "title": "IT Manager",
+   "role": "technical_evaluator",
+   "email": "greg.lindqvist@ferro.example",
+   "phone": ""
+  },
+  {
+   "name": "Alicia Moreno",
+   "title": "Plant Systems Analyst",
+   "role": "user",
+   "email": "alicia.moreno@ferro.example",
+   "phone": ""
+  }
+ ],
+ "champion": "",
+ "economic_buyer": "",
+ "discovery_notes": {
+  "stated_business_outcome": "",
+  "pains": [
+   "Maintenance planned from spreadsheets"
+  ],
+  "decision_process": "Not discussed."
+ },
+ "prior_call_notes": [
+  {
+   "date": "2026-09-14",
+   "type": "discovery",
+   "summary": "Discovery call. Agreed scenarios for the technical validation."
+  }
+ ],
+ "competitors": [],
+ "demo": {
+  "call_id": "gong-f-0930",
+  "scheduled_start": "2026-09-30T13:00:00-05:00",
+  "scheduled_end": "2026-09-30T14:00:00-05:00",
+  "actual_end": "2026-09-30T13:05:00-05:00"
+ },
+ "close_the_demo": {
+  "started_at": "",
+  "dated_next_step": {
+   "value": "",
+   "filled_at": ""
+  },
+  "stakeholder_to_add": {
+   "value": "",
+   "filled_at": ""
+  },
+  "business_outcome": {
+   "value": "",
+   "prefilled_from_discovery": true,
+   "edited": false,
+   "filled_at": ""
+  },
+  "sc_commitment": {
+   "value": "",
+   "filled_at": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Added for the post-demo capture prototype."
+}

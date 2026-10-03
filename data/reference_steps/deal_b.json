@@ -1,0 +1,199 @@
+{
+ "deal_id": "deal_b",
+ "deal_state": "open_technical_gap",
+ "steps": [
+  {
+   "kind": "must_have",
+   "text": "Deliver to the champion by Oct 7 the complete security packet (questionnaire, SOC 2 report, encryption details and a written SSO design) so the committee can review it before Oct 9.",
+   "rules": [
+    "PB-09"
+   ],
+   "match": [
+    [
+     "packet",
+     "questionnaire",
+     "soc 2"
+    ]
+   ],
+   "owner": "Jordan Pike",
+   "due_by": "2026-10-07",
+   "id": "B-R01"
+  },
+  {
+   "kind": "must_have",
+   "text": "In the SSO design, state plainly that nested claims are not supported and have no GA date, and describe the flat-claims workaround, the customer token change it needs and its 6 to 8 week internal security review.",
+   "rules": [
+    "PB-04"
+   ],
+   "match": [
+    [
+     "sso",
+     "nested",
+     "claim"
+    ],
+    [
+     "workaround",
+     "token",
+     "not supported",
+     "flat claim",
+     "no ga",
+     "no general availability",
+     "no date"
+    ]
+   ],
+   "owner": "Marcus Bell",
+   "due_by": "2026-10-07",
+   "id": "B-R02"
+  },
+  {
+   "kind": "must_have",
+   "text": "Offer the champion a named SC or security subject matter expert for any questions from the security reviewer before Oct 9, and propose a dated debrief after the committee that the champion can accept or change.",
+   "rules": [
+    "PB-05",
+    "PB-02"
+   ],
+   "match": [
+    [
+     "subject matter",
+     "sme",
+     "security expert",
+     "debrief after",
+     "after the committee"
+    ]
+   ],
+   "owner": "Jordan Pike",
+   "due_by": "2026-10-08",
+   "id": "B-R03"
+  },
+  {
+   "kind": "optional",
+   "text": "Route the nested-claims requirement to product management and tell the customer when there is a written position, without promising a date.",
+   "rules": [
+    "PB-08"
+   ],
+   "match": [
+    [
+     "product management",
+     "product team"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R04"
+  },
+  {
+   "kind": "optional",
+   "text": "Draft a mutual action plan that puts the 6 to 8 week token-change review on the timeline so commercial dates are realistic.",
+   "rules": [
+    "PB-12"
+   ],
+   "match": [
+    [
+     "mutual action plan",
+     "action plan"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R05"
+  },
+  {
+   "kind": "routine",
+   "text": "Send a recap of the call.",
+   "rules": [
+    "PB-01"
+   ],
+   "match": [
+    [
+     "recap"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R06"
+  },
+  {
+   "kind": "routine",
+   "text": "Log the SSO gap in CRM.",
+   "rules": [],
+   "match": [
+    [
+     "crm"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R07"
+  },
+  {
+   "kind": "wrong",
+   "text": "Give or imply a release date for nested claims.",
+   "rules": [
+    "PB-04"
+   ],
+   "match": [
+    [
+     "nested"
+    ],
+    [
+     "coming soon",
+     "next quarter",
+     "will ship",
+     "by q"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R08",
+   "example": "Tell Leo nested claims are coming soon"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send checking-in emails before Oct 9.",
+   "rules": [
+    "PB-09"
+   ],
+   "match": [
+    [
+     "checking in",
+     "check in on"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R09",
+   "example": "Email Aisha on Monday, checking in on the committee"
+  },
+  {
+   "kind": "wrong",
+   "text": "Send a generic security whitepaper instead of the specific packet.",
+   "rules": [],
+   "match": [
+    [
+     "generic"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R10",
+   "example": "Send a generic security overview"
+  },
+  {
+   "kind": "wrong",
+   "text": "Push for a commercial meeting before security approval.",
+   "rules": [],
+   "match": [
+    [
+     "pricing meeting",
+     "commercial meeting",
+     "talk pricing"
+    ]
+   ],
+   "owner": "",
+   "due_by": "",
+   "id": "B-R11",
+   "example": "Set up a commercial meeting with finance this month"
+  }
+ ],
+ "_note": "Synthetic data, fictional company. Reference answers from docs/research/best_practice_findings.md section 5. Match terms are a keyword floor, not a semantic judge."
+}
