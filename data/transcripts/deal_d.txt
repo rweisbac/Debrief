@@ -1,0 +1,25 @@
+PARTICIPANTS
+Elise Moreau | Account Executive | apex
+Tom Okafor | Solutions Consultant | apex
+Omar Haddad | Director of Grid Analytics | customer
+Paula Nguyen | Data Engineering Lead | customer
+---
+[00:03] Elise Moreau: Morning Omar, morning Paula. Thanks for making the time.
+[00:10] Omar Haddad: Happy to. Paula has the meter data questions, I have the business ones.
+[00:21] Tom Okafor: Then let me start with the overload model on the feeder sample you sent. We replayed six weeks of smart meter readings, about 1.2 million meters, and the model flagged transformers trending toward overload four to six days ahead.
+[03:40] Paula Nguyen: How long did the load from our historian take?
+[03:52] Tom Okafor: About forty minutes for the six weeks, then it runs incrementally every fifteen minutes. Your historian export worked as is.
+[06:15] Paula Nguyen: Good. That was my main worry. Our last pilot needed us to rebuild every export.
+[06:30] Omar Haddad: Here's why this matters now. The regulator wants our outage reduction plan in the January filing, and last summer we lost forty one transformers in the heat wave. If we can show we see overloads days ahead, that's the plan.
+[07:24] Elise Moreau: So the goal is catching overloads before the summer peak, and the January filing is the deadline.
+[07:33] Omar Haddad: Exactly.
+[07:36] Paula Nguyen: One question. Can the alerts go into our work order system, or only email?
+[07:47] Tom Okafor: Both. There's a connector for your work order system. I'll send you the field mapping by Friday.
+[08:05] Omar Haddad: The honest risk is money. This wasn't in this year's budget. Ruth Calder, our CFO, would need to approve an exception, and she will want to see the cost against the transformer losses.
+[08:40] Elise Moreau: Would it help to put that in front of Ruth directly?
+[08:46] Omar Haddad: Yes. I'll set it up. Let me look. Ruth has Wednesday October 7th at 10am Pacific. Thirty minutes. I'll send her the invite myself and copy you.
+[09:12] Elise Moreau: Wednesday October 7th at 10, thirty minutes. We'll bring the overload results and a cost range, using your transformer numbers only.
+[09:30] Omar Haddad: Good. Keep it short, she likes one page.
+[09:36] Paula Nguyen: And send me the mapping Friday so I can check it before Ruth asks.
+[09:44] Tom Okafor: Will do.
+[09:47] Omar Haddad: Thanks both. This is the first tool that worked on our data without a rebuild.

@@ -1,0 +1,57 @@
+{
+ "deal_id": "deal_a",
+ "bucket": "clear_next_step",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "late load"
+   ],
+   [
+    "dispatch",
+    "reroute"
+   ]
+  ],
+  "ae_value": {
+   "value": "Catch late loads while dispatch can still reroute; detention fees are the COO's top question"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "strong"
+  ],
+  "economic_buyer_identified": [
+   "yes"
+  ],
+  "ae_value": {
+   "value": "strong",
+   "champion_name": "Dana Ortiz",
+   "economic_buyer_identified": "yes",
+   "economic_buyer_name": "Elena Varga"
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "timeline"
+  ],
+  "ae_value": {
+   "value": "timeline",
+   "note": "COO burned by an 8 month project; will ask about time to value"
+  }
+ },
+ "next_step": {
+  "exists": true,
+  "date": "2026-10-08",
+  "must_mention": [
+   [
+    "Elena",
+    "COO"
+   ]
+  ],
+  "ae_value": {
+   "value": "45 minute session with Elena Varga on the late load scenario",
+   "date": "2026-10-08"
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

@@ -1,0 +1,74 @@
+{
+ "deal_id": "deal_j",
+ "account": "Thornbury Council",
+ "segment": "Enterprise",
+ "industry": "Public sector",
+ "acv_usd": 150000,
+ "stage": "Technical Validation",
+ "close_date": "2026-12-18",
+ "owner_ae": "Sam Lee",
+ "sc": "Priya Raman",
+ "pod": "Central-1",
+ "tv_entered_at": "2026-09-21T09:00:00+01:00",
+ "contacts": [
+  {
+   "name": "Megan Doyle",
+   "title": "Head of Digital Services",
+   "role": "champion",
+   "email": "megan.doyle@thornbury.example",
+   "phone": ""
+  },
+  {
+   "name": "Arun Patel",
+   "title": "Data Analyst",
+   "role": "user",
+   "email": "arun.patel@thornbury.example",
+   "phone": ""
+  }
+ ],
+ "champion": "Megan Doyle",
+ "economic_buyer": "",
+ "discovery_notes": {
+  "stated_business_outcome": "Residents see permit status online.",
+  "pains": [
+   "Permit calls are a third of contact center volume"
+  ],
+  "decision_process": "Not clear."
+ },
+ "prior_call_notes": [
+  {
+   "date": "2026-09-14",
+   "type": "discovery",
+   "summary": "Discovery call. Agreed scenarios for the technical validation."
+  }
+ ],
+ "competitors": [],
+ "demo": {
+  "call_id": "gong-j-1002",
+  "scheduled_start": "2026-10-02T14:00:00+01:00",
+  "scheduled_end": "2026-10-02T15:00:00+01:00",
+  "actual_end": "2026-10-02T14:05:00+01:00"
+ },
+ "close_the_demo": {
+  "started_at": "",
+  "dated_next_step": {
+   "value": "",
+   "filled_at": ""
+  },
+  "stakeholder_to_add": {
+   "value": "",
+   "filled_at": ""
+  },
+  "business_outcome": {
+   "value": "Residents see permit status online.",
+   "prefilled_from_discovery": true,
+   "edited": false,
+   "filled_at": ""
+  },
+  "sc_commitment": {
+   "value": "",
+   "filled_at": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Added for the post-demo capture prototype."
+}

@@ -1,0 +1,26 @@
+PARTICIPANTS
+Sam Lee | Account Executive | apex
+Priya Raman | Solutions Consultant | apex
+Nadia Petrov | Head of Audience Data | customer
+Leon Fisher | Platform Engineer | customer
+---
+[00:05] Sam Lee: Hi Nadia, hi Leon. Priya will show the churn model on your subscriber sample.
+[00:12] Nadia Petrov: Great, I've been looking forward to this.
+[00:17] Priya Raman: We scored eighteen months of anonymized subscriber activity. The model ranks subscribers by churn risk sixty days before renewal, with the top reasons for each one.
+[03:12] Nadia Petrov: Sixty days is what we need. Renewal season is January, and last January we lost eleven percent of digital subscribers.
+[03:30] Sam Lee: So the goal is reaching at-risk subscribers before the January renewals.
+[03:37] Nadia Petrov: Yes. My CMO, Victoria Hale, signs off on this, and she's been asking for it since last year.
+[03:50] Leon Fisher: How does it get the activity data? We stream events to our warehouse.
+[04:02] Priya Raman: It reads straight from the warehouse. No copy of the raw events leaves your account.
+[04:15] Leon Fisher: Good. The ranking matched what our retention team sees, by the way.
+[04:22] Nadia Petrov: I want to move quickly. What's next?
+[04:27] Sam Lee: A technical deep dive with Leon's team on the warehouse setup, then a session with Victoria.
+[04:36] Nadia Petrov: Let's do the deep dive Tuesday the 13th. Leon, does that work?
+[04:42] Leon Fisher: Tuesday the 13th works. One thing though. Anything that touches subscriber data goes through vendor risk review. The last vendor took seven weeks, and our security lead wasn't on this call.
+[05:05] Nadia Petrov: Right. I forgot about that. Seven weeks would push us past January.
+[05:13] Sam Lee: Who runs the vendor risk review?
+[05:17] Leon Fisher: Kofi Mensah, our security lead. He'll want your security questionnaire answers before anything else.
+[05:28] Priya Raman: I'll send our completed questionnaire and the data flow diagram to Leon by Monday.
+[05:35] Leon Fisher: Send it to Kofi too, he'll start without waiting for us.
+[05:40] Sam Lee: We will. Deep dive Tuesday October 13th, questionnaire to Leon and Kofi by Monday.
+[05:49] Nadia Petrov: Thanks. Let's not lose January.

@@ -1,0 +1,27 @@
+PARTICIPANTS
+Jordan Pike | Account Executive | apex
+Marcus Bell | Solutions Consultant | apex
+Felix Ward | Supply Chain Director | customer
+Imogen Clarke | Finance Analytics Lead | customer
+---
+[00:04] Jordan Pike: Hi Felix, hi Imogen. Marcus will show the demand sensing scenario.
+[00:11] Felix Ward: Good. This is the part I care about.
+[00:16] Marcus Bell: We streamed four weeks of point of sale data from your top two retailers. The model updates the demand forecast every hour instead of weekly, and it caught the heat wave spike in beverages two days early.
+[03:20] Felix Ward: Two days early is the whole point. We ran out of sparkling water in July.
+[03:28] Imogen Clarke: Can I push back a little? Our priority this year is cutting the warehouse bill. I'm not sure we need hourly anything.
+[03:41] Felix Ward: The stockouts cost more than the warehouse.
+[03:46] Imogen Clarke: Maybe. We haven't measured that.
+[03:50] Jordan Pike: It sounds like there are two goals on the table. Fewer stockouts, and a lower warehouse cost.
+[03:58] Felix Ward: Mine is stockouts.
+[04:01] Imogen Clarke: And mine is cost. I'd want to see what this does to the warehouse bill before anything else.
+[04:10] Marcus Bell: We can show both on the same data. The forecast also reduces safety stock, which is part of the warehouse bill.
+[04:22] Imogen Clarke: Then show me that number.
+[04:25] Jordan Pike: Who makes the final call?
+[04:28] Felix Ward: Simon Dunn, our COO.
+[04:31] Imogen Clarke: Actually, since the reorg it's the CFO's call for anything over a hundred thousand. I'm not sure Simon decides this anymore.
+[04:42] Felix Ward: Hm. I'd have to check.
+[04:45] Jordan Pike: What would be a good next step?
+[04:49] Felix Ward: Let's regroup next week, once Imogen and I have talked.
+[04:55] Imogen Clarke: Next week sometime. No promises on the day.
+[05:00] Marcus Bell: I'll send the safety stock estimate from the four weeks of data.
+[05:05] Felix Ward: Thanks. Good demo.

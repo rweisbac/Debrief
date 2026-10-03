@@ -1,0 +1,54 @@
+{
+ "deal_id": "deal_b",
+ "bucket": "hidden_blocker",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "daily"
+   ],
+   [
+    "readmi",
+    "risk list"
+   ]
+  ],
+  "ae_value": {
+   "value": "A daily readmission risk list; the weekly job misses a third of patients"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "strong",
+   "unclear"
+  ],
+  "economic_buyer_identified": [
+   "unclear",
+   "no"
+  ],
+  "ae_value": {
+   "value": "strong",
+   "champion_name": "Aisha Karim",
+   "economic_buyer_identified": "unclear",
+   "economic_buyer_name": ""
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "security_review"
+  ],
+  "ae_value": {
+   "value": "security_review",
+   "note": "Vendor security committee Oct 9 needs a written SSO design"
+  }
+ },
+ "next_step": {
+  "exists": false,
+  "date": "",
+  "must_mention": [],
+  "ae_value": {
+   "value": "",
+   "date": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

@@ -1,0 +1,60 @@
+{
+ "deal_id": "deal_d",
+ "bucket": "clear_next_step",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "overload",
+    "transformer"
+   ],
+   [
+    "summer",
+    "january",
+    "filing",
+    "regulator"
+   ]
+  ],
+  "ae_value": {
+   "value": "See transformer overloads days ahead; the regulator wants the plan in the January filing"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "strong"
+  ],
+  "economic_buyer_identified": [
+   "yes"
+  ],
+  "ae_value": {
+   "value": "strong",
+   "champion_name": "Omar Haddad",
+   "economic_buyer_identified": "yes",
+   "economic_buyer_name": "Ruth Calder"
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "budget"
+  ],
+  "ae_value": {
+   "value": "budget",
+   "note": "Not in this year's budget; the CFO must approve an exception"
+  }
+ },
+ "next_step": {
+  "exists": true,
+  "date": "2026-10-07",
+  "must_mention": [
+   [
+    "Ruth",
+    "CFO"
+   ]
+  ],
+  "ae_value": {
+   "value": "30 minute session with Ruth Calder, CFO, on overload results and cost",
+   "date": "2026-10-07"
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

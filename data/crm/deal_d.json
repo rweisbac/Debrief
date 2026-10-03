@@ -1,0 +1,81 @@
+{
+ "deal_id": "deal_d",
+ "account": "Brightwater Utilities",
+ "segment": "Enterprise",
+ "industry": "Energy",
+ "acv_usd": 260000,
+ "stage": "Technical Validation",
+ "close_date": "2026-12-18",
+ "owner_ae": "Elise Moreau",
+ "sc": "Tom Okafor",
+ "pod": "West-1",
+ "tv_entered_at": "2026-09-21T09:00:00-07:00",
+ "contacts": [
+  {
+   "name": "Omar Haddad",
+   "title": "Director of Grid Analytics",
+   "role": "champion",
+   "email": "omar.haddad@brightwater.example",
+   "phone": ""
+  },
+  {
+   "name": "Paula Nguyen",
+   "title": "Data Engineering Lead",
+   "role": "technical_evaluator",
+   "email": "paula.nguyen@brightwater.example",
+   "phone": ""
+  },
+  {
+   "name": "Ruth Calder",
+   "title": "Chief Financial Officer",
+   "role": "economic_buyer",
+   "email": "ruth.calder@brightwater.example",
+   "phone": ""
+  }
+ ],
+ "champion": "Omar Haddad",
+ "economic_buyer": "Ruth Calder",
+ "discovery_notes": {
+  "stated_business_outcome": "See transformer overloads days ahead of the summer peak.",
+  "pains": [
+   "Lost transformers in last summer heat wave"
+  ],
+  "decision_process": "Omar recommends; CFO approves budget exceptions."
+ },
+ "prior_call_notes": [
+  {
+   "date": "2026-09-14",
+   "type": "discovery",
+   "summary": "Discovery call. Agreed scenarios for the technical validation."
+  }
+ ],
+ "competitors": [],
+ "demo": {
+  "call_id": "gong-d-0928",
+  "scheduled_start": "2026-09-28T09:00:00-07:00",
+  "scheduled_end": "2026-09-28T10:00:00-07:00",
+  "actual_end": "2026-09-28T09:48:00-07:00"
+ },
+ "close_the_demo": {
+  "started_at": "",
+  "dated_next_step": {
+   "value": "",
+   "filled_at": ""
+  },
+  "stakeholder_to_add": {
+   "value": "",
+   "filled_at": ""
+  },
+  "business_outcome": {
+   "value": "See transformer overloads days ahead of the summer peak.",
+   "prefilled_from_discovery": true,
+   "edited": false,
+   "filled_at": ""
+  },
+  "sc_commitment": {
+   "value": "",
+   "filled_at": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Added for the post-demo capture prototype."
+}

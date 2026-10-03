@@ -1,0 +1,55 @@
+{
+ "deal_id": "deal_y",
+ "bucket": "ambiguous",
+ "priority_why_now": {
+  "stated": true,
+  "must_mention": [
+   [
+    "same afternoon",
+    "next run"
+   ],
+   [
+    "week"
+   ]
+  ],
+  "ae_value": {
+   "value": "Scientists decide the next run the same afternoon, taking a week or more out of each campaign"
+  }
+ },
+ "champion_status": {
+  "accepted": [
+   "strong",
+   "unclear"
+  ],
+  "economic_buyer_identified": [
+   "unclear",
+   "no"
+  ],
+  "ae_value": {
+   "value": "strong",
+   "champion_name": "Ingrid Solberg",
+   "economic_buyer_identified": "unclear",
+   "economic_buyer_name": ""
+  }
+ },
+ "top_risk": {
+  "accepted": [
+   "security_review",
+   "other"
+  ],
+  "ae_value": {
+   "value": "security_review",
+   "note": "IT and compliance disagree on EU versus US hosting"
+  }
+ },
+ "next_step": {
+  "exists": false,
+  "date": "",
+  "must_mention": [],
+  "ae_value": {
+   "value": "",
+   "date": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Hand labels for the capture fields, written by the builder; needs an independent review."
+}

@@ -5,7 +5,7 @@ from src.adapters import FileCRMSource, FileGongSource, FileNotifier
 
 def test_crm_and_gong_round_trip():
     crm, gong = FileCRMSource(), FileGongSource()
-    assert crm.list_deals() == ["deal_a", "deal_b", "deal_c", "deal_x", "deal_y"]
+    assert crm.list_deals()[:3] == ["deal_a", "deal_b", "deal_c"] and len(crm.list_deals()) == 12
     deal = crm.deal("deal_a")
     assert deal["account"] == "Halvorsen Freight"
     assert gong.transcript("deal_a").utterances[0].id == "U001"

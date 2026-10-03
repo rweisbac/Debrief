@@ -1,0 +1,88 @@
+{
+ "deal_id": "deal_g",
+ "account": "Quill Media",
+ "segment": "Enterprise",
+ "industry": "Media",
+ "acv_usd": 210000,
+ "stage": "Technical Validation",
+ "close_date": "2026-12-18",
+ "owner_ae": "Sam Lee",
+ "sc": "Priya Raman",
+ "pod": "Central-1",
+ "tv_entered_at": "2026-09-21T09:00:00-04:00",
+ "contacts": [
+  {
+   "name": "Nadia Petrov",
+   "title": "Head of Audience Data",
+   "role": "champion",
+   "email": "nadia.petrov@quill.example",
+   "phone": ""
+  },
+  {
+   "name": "Leon Fisher",
+   "title": "Platform Engineer",
+   "role": "technical_evaluator",
+   "email": "leon.fisher@quill.example",
+   "phone": ""
+  },
+  {
+   "name": "Victoria Hale",
+   "title": "Chief Marketing Officer",
+   "role": "economic_buyer",
+   "email": "victoria.hale@quill.example",
+   "phone": ""
+  },
+  {
+   "name": "Kofi Mensah",
+   "title": "Security Lead",
+   "role": "other",
+   "email": "kofi.mensah@quill.example",
+   "phone": ""
+  }
+ ],
+ "champion": "Nadia Petrov",
+ "economic_buyer": "Victoria Hale",
+ "discovery_notes": {
+  "stated_business_outcome": "Reach at-risk subscribers before January renewals.",
+  "pains": [
+   "Lost eleven percent of digital subscribers last January"
+  ],
+  "decision_process": "Nadia recommends; CMO signs."
+ },
+ "prior_call_notes": [
+  {
+   "date": "2026-09-14",
+   "type": "discovery",
+   "summary": "Discovery call. Agreed scenarios for the technical validation."
+  }
+ ],
+ "competitors": [],
+ "demo": {
+  "call_id": "gong-g-1001",
+  "scheduled_start": "2026-10-01T11:00:00-04:00",
+  "scheduled_end": "2026-10-01T12:00:00-04:00",
+  "actual_end": "2026-10-01T11:06:00-04:00"
+ },
+ "close_the_demo": {
+  "started_at": "",
+  "dated_next_step": {
+   "value": "",
+   "filled_at": ""
+  },
+  "stakeholder_to_add": {
+   "value": "",
+   "filled_at": ""
+  },
+  "business_outcome": {
+   "value": "Reach at-risk subscribers before January renewals.",
+   "prefilled_from_discovery": true,
+   "edited": false,
+   "filled_at": ""
+  },
+  "sc_commitment": {
+   "value": "",
+   "filled_at": ""
+  }
+ },
+ "_note": "Synthetic data, fictional company. Added for the post-demo capture prototype."
+}

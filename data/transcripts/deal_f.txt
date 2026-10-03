@@ -1,0 +1,28 @@
+PARTICIPANTS
+Nate Kowalski | Account Executive | apex
+Priya Raman | Solutions Consultant | apex
+Greg Lindqvist | IT Manager | customer
+Alicia Moreno | Plant Systems Analyst | customer
+---
+[00:04] Nate Kowalski: Thanks for joining, Greg and Alicia. Priya will walk through the sensor pipeline on your plant sample.
+[00:13] Greg Lindqvist: Sure. We have about half an hour.
+[00:18] Priya Raman: We loaded two weeks of vibration and temperature readings from line four. The dashboard shows each machine's readings next to its maintenance history.
+[02:40] Alicia Moreno: That's nice. Can it show line two as well? Line two has the older controllers.
+[02:51] Priya Raman: It can, if we get a sample from those controllers. The older ones export a different format, so I'd want to test one file first.
+[03:20] Alicia Moreno: I could probably find one.
+[03:24] Nate Kowalski: Greg, what would make this worth doing for the plant?
+[03:31] Greg Lindqvist: Honestly, better visibility is always good. I'm not sure we have a specific number in mind.
+[03:44] Nate Kowalski: Is there an event or deadline driving the evaluation?
+[03:50] Greg Lindqvist: Not really. Corporate asked us to look at a few options this year.
+[04:02] Priya Raman: How do maintenance planners work today?
+[04:07] Alicia Moreno: Mostly spreadsheets and walking the floor.
+[04:15] Greg Lindqvist: It works, mostly.
+[04:20] Nate Kowalski: Who else would be involved in a decision like this?
+[04:26] Greg Lindqvist: Hard to say. Probably the plant manager, maybe corporate. We haven't gotten that far.
+[04:38] Nate Kowalski: Would it help to set up a session with the plant manager?
+[04:44] Greg Lindqvist: Maybe later. We have a lot on our plate this quarter. Let us take it back to the team and we'll circle up internally.
+[04:57] Nate Kowalski: Of course. Is there a date that would work to reconnect?
+[05:03] Greg Lindqvist: I'd rather not commit to a date right now. We'll reach out.
+[05:10] Priya Raman: I'll send the line two file format notes in case Alicia finds a sample.
+[05:16] Alicia Moreno: Okay, thanks.
+[05:19] Greg Lindqvist: This was very interesting. Thanks for your time.
