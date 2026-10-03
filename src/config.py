@@ -17,6 +17,15 @@ REPLAY_DIR = ROOT / "fixtures" / "replay"
 # (for example the verifier ablation after the evals) does not overwrite earlier recordings.
 RERECORD = os.environ.get("DEBRIEF_RERECORD", "") == "1"
 
+
+def api_key() -> str | None:
+    """DEBRIEF_API_KEY first, then ANTHROPIC_API_KEY.
+
+    Cloud environments may keep ANTHROPIC_API_KEY out of the session, so the key can be stored
+    under DEBRIEF_API_KEY instead. Read at call time so tests can set either one.
+    """
+    return os.environ.get("DEBRIEF_API_KEY") or os.environ.get("ANTHROPIC_API_KEY") or None
+
 # USD per million tokens. Source: claude-api skill model table, cached 2026-09-25.
 # Cache write rate assumes the standard 1.25x of input for the 5 minute TTL. Verify before quoting.
 PRICING_USD_PER_MTOK = {

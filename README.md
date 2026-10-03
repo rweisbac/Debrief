@@ -31,7 +31,7 @@ Python 3.11. `pip install -r requirements.txt`.
 | `make record` | Calls the API once per step and saves replay fixtures for all 5 transcripts, plus judge and ablation calls. | Yes |
 | `make smoke` | Live API probe; results go to `docs/API_NOTES.md`. | Yes |
 
-Environment: `ANTHROPIC_API_KEY`, `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
+Environment: `ANTHROPIC_API_KEY` (or `DEBRIEF_API_KEY`, which wins if both are set), `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
 
 **Current status (be clear about this in a walkthrough).** No API key was available while building, so no model output has been recorded yet. The demo runs on two hand-written sample cards (Halvorsen Freight and Meridian Health). These still go through the real rule and check code, and every screen labels them as samples. Eval scores, cost and latency do not exist yet and are not shown anywhere. After `make record`, the app shows real debriefs instead.
 

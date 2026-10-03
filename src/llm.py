@@ -39,7 +39,7 @@ LOG_TEXT_LIMIT = 20000
 class ReplayMiss(RuntimeError):
     def __init__(self, step: str, key: str):
         super().__init__(f"replay fixture missing for step {step!r}, key {key}. "
-                         f"Run with DEBRIEF_MODE=record (needs ANTHROPIC_API_KEY) to create it.")
+                         f"Run with DEBRIEF_MODE=record (needs DEBRIEF_API_KEY or ANTHROPIC_API_KEY) to create it.")
         self.step, self.key = step, key
 
 
@@ -100,7 +100,8 @@ class AnthropicBackend:
             import anthropic
             import httpx2
 
-            kwargs = {"api_key": self._api_key} if self._api_key else {}
+            key = self._api_key or config.api_key()
+            kwargs = {"api_key": key} if key else {}
             self._client = anthropic.AsyncAnthropic(
                 timeout=600, max_retries=self._max_retries, **kwargs,
                 http_client=httpx2.AsyncClient(transport=self._transport, event_hooks={"response": [self._hook]}))

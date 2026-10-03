@@ -28,7 +28,7 @@ sys.path.insert(0, str(ROOT))
 
 from pydantic import BaseModel  # noqa: E402
 
-from src.config import MODEL, cost_usd  # noqa: E402
+from src.config import MODEL, api_key, cost_usd  # noqa: E402
 
 OUT = ROOT / "docs" / "smoke_results.json"
 
@@ -147,16 +147,16 @@ def main() -> int:
     print(f"offline: sdk={offline['sdk_version']} effort+format merged="
           f"{offline['effort_and_format_in_same_output_config']} "
           f"parse ok with thinking first={offline['parsed_with_thinking_block_first']}")
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        result = {"status": "skipped", "reason": "ANTHROPIC_API_KEY not set", "model": MODEL,
+    if not api_key():
+        result = {"status": "skipped", "reason": "DEBRIEF_API_KEY and ANTHROPIC_API_KEY not set", "model": MODEL,
                   "ran_at": datetime.now(timezone.utc).isoformat(), "offline": offline}
         OUT.write_text(json.dumps(result, indent=2) + "\n")
-        print("SKIPPED: no ANTHROPIC_API_KEY. Nothing verified. Results file marks status=skipped.")
+        print("SKIPPED: no DEBRIEF_API_KEY or ANTHROPIC_API_KEY. Nothing verified. Results file marks status=skipped.")
         return 0
 
     import anthropic
 
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(api_key=api_key())
     msgs = [{"role": "user", "content": USER_TEXT}]
     system_cached = [{"type": "text", "text": STABLE_PREFIX, "cache_control": {"type": "ephemeral"}}]
 
