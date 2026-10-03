@@ -30,10 +30,17 @@ Python 3.11. `pip install -r requirements.txt`.
 | `make eval` | Scores replay fixtures against gold labels; writes `evals/results.md` and `evals/ablation.md`. Missing fixtures are reported as not run. | No |
 | `make record` | Calls the API once per step and saves replay fixtures for all 5 transcripts, plus judge and ablation calls. | Yes |
 | `make smoke` | Live API probe; results go to `docs/API_NOTES.md`. | Yes |
+| `make watch` | Polls for new transcripts and runs a debrief on each new technical validation call (`src/ingest.py`). | Yes, unless replay fixtures exist |
+| `make serve` | Webhook receiver for Gong automation rules: `POST /gong/webhook` with `{"deal_id": ...}` and header `X-Debrief-Secret`. Needs `DEBRIEF_WEBHOOK_SECRET`. | Same as above |
+| `make screenshots` | Captures `docs/screenshots/*.png` from the offline demo. | No |
 
 Environment: `ANTHROPIC_API_KEY`, `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
 
 **Current status (be clear about this in a walkthrough).** No API key was available while building, so no model output has been recorded yet. The demo runs on two hand-written sample cards (Halvorsen Freight and Meridian Health). These still go through the real rule and check code, and every screen labels them as samples. Eval scores, cost and latency do not exist yet and are not shown anywhere. After `make record`, the app shows real debriefs instead.
+
+### Automatic trigger
+
+`src/ingest.py` runs the chain when a new TV transcript shows up, from either `watch` (polling) or `serve` (webhook). It skips calls whose CRM stage is not Technical Validation, skips a transcript it has already processed (hash ledger in `var/`), retries a failed run once, then stops. When a debrief is ready it posts an internal "card ready" message to the AE. It never sends anything to a customer. Mapping a real Gong call id to a CRM opportunity is not built; the payload carries `deal_id`.
 
 ## Data flow
 

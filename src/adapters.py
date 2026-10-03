@@ -23,6 +23,7 @@ VAR = ROOT / "var"
 class GongSource(Protocol):
     def transcript(self, deal_id: str) -> Transcript: ...
     def activity(self, deal_id: str) -> dict: ...
+    def list_calls(self) -> list[str]: ...
 
 
 class CRMSource(Protocol):
@@ -43,6 +44,9 @@ class FileGongSource:
 
     def activity(self, deal_id: str) -> dict:
         return json.loads((self.data_dir / "gong_activity" / f"{deal_id}.json").read_text(encoding="utf-8"))
+
+    def list_calls(self) -> list[str]:
+        return sorted(p.stem for p in (self.data_dir / "transcripts").glob("*.txt"))
 
 
 class FileCRMSource:
