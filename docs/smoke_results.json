@@ -2,7 +2,7 @@
   "status": "ran",
   "model": "claude-sonnet-5-5",
   "sdk_version": "1.11.0",
-  "ran_at": "2026-10-03T17:56:59.422004+00:00",
+  "ran_at": "2026-10-03T17:58:48.924457+00:00",
   "offline": {
     "sdk_version": "1.11.0",
     "parse_signature_params": [
@@ -45,172 +45,173 @@
     {
       "probe": "a_parse_output_format",
       "ok": true,
-      "latency_ms": 3604,
+      "latency_ms": 2420,
       "model": "claude-sonnet-5-5",
       "stop_reason": "end_turn",
       "stop_details": null,
       "content_blocks": [
         {
           "type": "text",
-          "chars": 302
+          "chars": 278
         }
       ],
       "parsed_output_type": "Probe",
       "parsed_output": {
-        "deal_state": "Blocked pending security sign-off: custom identity provider SSO requirement unconfirmed",
-        "next_step": "Sales engineer confirms custom IdP SSO support and shares security documentation with Dana",
-        "why": "Security won't approve without SSO compatibility, so verifying it unblocks sign-off."
+        "deal_state": "Early-stage; blocked on security sign-off pending custom IdP SSO support",
+        "next_step": "SC confirms custom identity provider SSO compatibility and sends Dana Ortiz a written answer",
+        "why": "Security approval hinges on SSO, and only a vague follow-up was promised."
       },
       "usage": {
         "input_tokens": 406,
-        "output_tokens": 109,
+        "output_tokens": 105,
         "cache_read_input_tokens": 0,
         "cache_creation_input_tokens": 0
       },
-      "cost_usd": 0.001902
+      "cost_usd": 0.001862
     },
     {
       "probe": "b_parse_with_effort_low",
       "ok": true,
-      "latency_ms": 2598,
+      "latency_ms": 2245,
       "model": "claude-sonnet-5-5",
       "stop_reason": "end_turn",
       "stop_details": null,
       "content_blocks": [
         {
           "type": "text",
-          "chars": 269
+          "chars": 259
         }
       ],
       "parsed_output_type": "Probe",
       "parsed_output": {
-        "deal_state": "Active; blocked pending security sign-off, contingent on custom IdP SSO support.",
-        "next_step": "SC confirms custom identity provider SSO compatibility and sends Dana a written answer.",
-        "why": "Security approval hinges on SSO; unresolved, the deal stalls."
+        "deal_state": "Active, blocked on security sign-off pending custom IdP SSO support confirmation.",
+        "next_step": "SC confirms custom IdP SSO compatibility and sends Dana written details.",
+        "why": "Security approval depends on SSO; unresolved, it stalls the deal."
       },
       "usage": {
         "input_tokens": 406,
-        "output_tokens": 102,
+        "output_tokens": 99,
         "cache_read_input_tokens": 0,
         "cache_creation_input_tokens": 0
       },
-      "cost_usd": 0.001832
+      "cost_usd": 0.001802
     },
     {
       "probe": "b2_parse_with_effort_medium",
       "ok": true,
-      "latency_ms": 2113,
+      "latency_ms": 2527,
       "model": "claude-sonnet-5-5",
       "stop_reason": "end_turn",
       "stop_details": null,
       "content_blocks": [
         {
           "type": "text",
-          "chars": 230
+          "chars": 333
         }
       ],
       "parsed_output_type": "Probe",
       "parsed_output": {
-        "deal_state": "Blocked pending security sign-off; custom IdP SSO support is unconfirmed.",
-        "next_step": "Sales engineer confirms custom IdP SSO compatibility and sends Dana a written answer.",
-        "why": "Security approval hinges on it."
+        "deal_state": "Active but blocked: security sign-off depends on custom IdP SSO support, which is unconfirmed.",
+        "next_step": "Have the SC confirm SSO compatibility with Dana's custom identity provider and share a dated written answer.",
+        "why": "Security approval gates the deal, so an unresolved SSO requirement could stall or kill it."
       },
       "usage": {
         "input_tokens": 406,
-        "output_tokens": 92,
+        "output_tokens": 120,
         "cache_read_input_tokens": 0,
         "cache_creation_input_tokens": 0
       },
-      "cost_usd": 0.001732
+      "cost_usd": 0.002012
     },
     {
       "probe": "d1_cache_write",
       "ok": true,
-      "latency_ms": 2346,
+      "latency_ms": 2482,
       "model": "claude-sonnet-5-5",
       "stop_reason": "end_turn",
       "stop_details": null,
       "content_blocks": [
         {
           "type": "text",
-          "chars": 413
+          "chars": 445
         }
       ],
       "parsed_output_type": "Probe",
       "parsed_output": {
-        "deal_state": "Technical validation stalled: SSO with custom identity provider is an open blocker; no dated next step or economic buyer confirmed.",
-        "next_step": "Sam Lee assigns the SSO custom IdP question to the SC with a due date and confirms a dated follow-up with Dana Ortiz.",
-        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and recap tied to the customer's outcome."
+        "deal_state": "Technical validation stalled: SSO with custom identity provider is open, security sign-off pending, no dated next step or economic buyer named.",
+        "next_step": "Sam Lee assigns SSO item to the SC with a due date and confirms a dated follow-up with Dana Ortiz, naming the economic buyer.",
+        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and recap tied to Dana's outcome; none are confirmed."
       },
       "usage": {
         "input_tokens": 124,
-        "output_tokens": 151,
-        "cache_read_input_tokens": 0,
-        "cache_creation_input_tokens": 10019
+        "output_tokens": 162,
+        "cache_read_input_tokens": 10019,
+        "cache_creation_input_tokens": 0
       },
-      "cost_usd": 0.026805
+      "cost_usd": 0.003872
     },
     {
       "probe": "d2_cache_read",
       "ok": true,
-      "latency_ms": 3422,
+      "latency_ms": 2066,
       "model": "claude-sonnet-5-5",
       "stop_reason": "end_turn",
       "stop_details": null,
       "content_blocks": [
         {
           "type": "text",
-          "chars": 396
+          "chars": 409
         }
       ],
       "parsed_output_type": "Probe",
       "parsed_output": {
-        "deal_state": "Technical validation stalled on SSO with custom IdP; security sign-off pending, no dated next step or economic buyer confirmed.",
-        "next_step": "Sam Lee assigns SC the custom IdP SSO question with a due date and confirms a dated follow-up with Dana Ortiz.",
-        "why": "Playbook requires dated next step, named economic buyer, SC-routed items with due dates; SSO blocks security approval."
+        "deal_state": "Technical validation stalled: SSO with custom identity provider is an open blocker for security sign-off; no dated next step or economic buyer.",
+        "next_step": "Sam assigns SC the custom IdP SSO question with a due date and confirms a dated follow-up with Dana.",
+        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and recap tied to outcome; none confirmed."
       },
       "usage": {
         "input_tokens": 124,
-        "output_tokens": 149,
+        "output_tokens": 145,
         "cache_read_input_tokens": 10019,
         "cache_creation_input_tokens": 0
       },
-      "cost_usd": 0.003742
+      "cost_usd": 0.003702
     },
     {
       "probe": "f_mid_conversation_system",
       "ok": true,
-      "latency_ms": 2049,
+      "latency_ms": 2035,
       "model": "claude-sonnet-5-5",
       "stop_reason": "end_turn",
       "stop_details": null,
       "content_blocks": [
         {
           "type": "text",
-          "chars": 356
+          "chars": 350
         }
       ],
       "parsed_output_type": "Probe",
       "parsed_output": {
-        "deal_state": "Technical validation stalled on SSO with custom IdP; security sign-off pending; no date or economic buyer confirmed.",
-        "next_step": "Sam assigns SC the custom IdP SSO question with a due date and books a dated follow-up.",
-        "why": "Playbook requires dated next step, named economic buyer, SC-routed items with due dates, tied to Dana's outcome."
+        "deal_state": "Stalled on technical validation; SSO with custom identity provider unresolved, blocking security sign-off.",
+        "next_step": "Sam routes the SSO item to the SC with a due date and confirms a dated next step.",
+        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and outcome-tied recap; none confirmed."
       },
       "usage": {
         "input_tokens": 137,
-        "output_tokens": 133,
+        "output_tokens": 125,
         "cache_read_input_tokens": 10019,
         "cache_creation_input_tokens": 0
       },
-      "cost_usd": 0.003608
+      "cost_usd": 0.003528
     },
     {
       "probe": "e_temperature_rejected",
       "ok": false,
       "error_type": "BadRequestError",
       "status_code": 400,
-      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CffjdL9bWUWeDzHKouomP'}",
-      "latency_ms": 168
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CffjmQENuyfSmKREg3t2C'}",
+      "latency_ms": 158,
+      "expected_rejection": true
     }
   ]
 }

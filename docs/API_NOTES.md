@@ -6,12 +6,12 @@ Source of truth for what `src/llm.py` sends. Raw results: `docs/smoke_results.js
 
 | Check | Status | Result |
 |---|---|---|
-| (a) `client.messages.parse(output_format=PydanticModel)` on `claude-sonnet-5-5` | Pending live run (no `ANTHROPIC_API_KEY` on 2026-10-02) | Offline: SDK 1.11.0 accepts it and fills `parsed_output` |
-| (b) `output_config={"effort": ...}` in the same call | Pending live run | Offline: SDK merges both into one request body, `output_config = {effort, format}` |
-| (c) content block types returned | Pending live run | Offline mock only: `parse` reads JSON from the `text` block when a `thinking` block comes first |
-| (d) cache read on repeated stable prefix | Pending live run | Not measured. No savings claimed. |
-| (e) `temperature` rejected with 400 | Pending live run | Offline: `parse()` in SDK 1.11.0 has no `temperature`, `top_p` or `top_k` parameter at all |
-| (f) step rules as a mid-conversation `{"role": "system"}` message | Pending live run | Offline: SDK sends it unchanged. Fallback: `DEBRIEF_STEP_RULES_PLACEMENT=top_system` (D-07) |
+| (a) `client.messages.parse(output_format=PydanticModel)` on `claude-sonnet-5-5` | Verified live 2026-10-03 | `end_turn`, `parsed_output` filled. Offline: SDK 1.11.0 accepts it |
+| (b) `output_config={"effort": ...}` in the same call | Verified live 2026-10-03 | `low` and `medium` both accepted. Offline: SDK merges both into one `output_config = {effort, format}` |
+| (c) content block types returned | Verified live 2026-10-03 (partial) | Only `text` blocks came back on every probe, no `thinking` block was observed. Reading by type is still required |
+| (d) cache read on repeated stable prefix | Verified live 2026-10-03 | First run: d1 wrote 10,019 tokens, d2 read 10,019. Rerun within the cache window: d1 already read 10,019 |
+| (e) `temperature` rejected with 400 | Verified live 2026-10-03 | 400 `invalid_request_error`: "`temperature` is deprecated for this model." |
+| (f) step rules as a mid-conversation `{"role": "system"}` message | Verified live 2026-10-03 | Accepted, `end_turn`, cache read held at 10,019 tokens. `top_system` fallback not needed (D-07) |
 | parse() on truncated JSON | Verified offline | Raises pydantic ValidationError and hides stop_reason; llm.py reads the raw body via an httpx2 response hook (D-08) |
 
 "Offline" means verified against the installed SDK with a mock HTTP transport. It shows what the SDK sends, not what the API accepts.
@@ -53,8 +53,8 @@ Never sent: `temperature`, `top_p`, `top_k`, `thinking`, assistant prefill, `too
 
 ## Fill in after the live run
 
-- Observed block types per probe:
-- Effort accepted (low, medium):
-- Temperature probe status code and message:
-- cache_creation_input_tokens on d1, cache_read_input_tokens on d2:
-- Latency per probe:
+- Observed block types per probe: `text` only.
+- Effort accepted (low, medium): yes, both.
+- Temperature probe status code and message: 400, "`temperature` is deprecated for this model."
+- cache_creation_input_tokens on d1, cache_read_input_tokens on d2: 10,019 and 10,019 on the first run.
+- Latency per probe: about 2.0 to 3.6 seconds, see docs/smoke_results.json.
