@@ -46,6 +46,7 @@ if STEP_RULES_PLACEMENT not in {"mid_conversation_system", "top_system"}:
 # Effort and max_tokens per step. max_tokens covers thinking plus output.
 STEP_SETTINGS = {
     "extract": {"effort": "low", "max_tokens": 16000},
+    "extract_b": {"effort": "low", "max_tokens": 16000},
     "assess_and_recommend": {"effort": "medium", "max_tokens": 12000},
     "draft_recap_email": {"effort": "low", "max_tokens": 8000},
     "draft_internal_summary": {"effort": "low", "max_tokens": 8000},

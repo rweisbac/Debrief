@@ -1,5 +1,5 @@
 {
- "debrief_id": "deal_b-b0c81fdb",
+ "debrief_id": "deal_b-f1b8a27f",
  "deal_id": "deal_b",
  "as_of": "2026-10-01",
  "mode": "live",
@@ -879,7 +879,8 @@
   }
  ],
  "prompt_versions": {
-  "extract": "v1+shared-v1",
+  "extract": "v2+shared-v1",
+  "extract_b": "v1+shared-v1",
   "assess_and_recommend": "v1+shared-v1",
   "draft_recap_email": "v2+shared-v1",
   "draft_internal_summary": "v1+shared-v1",
@@ -893,14 +894,30 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 8,
+   "latency_ms": 5,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,
    "cache_creation_input_tokens": 0,
    "validator_errors": [],
    "keys": [
-    "c816c4ea5c1c5390c39e8b71e4b7e1981352d1ad80c5e955d6e82beb9336fbb5"
+    "b1870a22af734591585888c82ab92da384dfe0a7e0f0b7c4a21bb94a77a32acf"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.0,
+   "latency_ms": 3,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "222ab3ec7d9fcad8ccf7d2e309db94c837e1fb8573e5b357347a68d04f299b73"
    ]
   },
   {
@@ -973,7 +990,7 @@
    "stop_reason": "end_turn",
    "refused": false,
    "cost_usd": 0.0,
-   "latency_ms": 2,
+   "latency_ms": 1,
    "input_tokens": 0,
    "output_tokens": 0,
    "cache_read_input_tokens": 0,

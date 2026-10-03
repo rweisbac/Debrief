@@ -20,11 +20,11 @@ def run(chain):
     return asyncio.run(chain.run(load_context("deal_a")))
 
 
-def test_clean_path_is_six_calls(make_chain):
+def test_clean_path_is_seven_calls(make_chain):
     fb = scripted_clean_run(FakeBackend())
     result = run(make_chain(fb))
-    assert len(fb.requests) == 6
-    assert [c["step"] for c in result.calls][:2] == ["extract", "assess_and_recommend"]
+    assert len(fb.requests) == 7
+    assert [c["step"] for c in result.calls][:3] == ["extract", "extract_b", "assess_and_recommend"]
     assert not any(a.needs_review for a in result.artifacts.values())
     assert result.errors == []
     assert result.cost_usd > 0
@@ -51,7 +51,7 @@ def test_high_failure_regenerates_once_and_keeps_original(make_chain):
     assert recap.regenerated and not recap.needs_review
     assert recap.original != recap.current
     assert fb.count("RecapEmail") == 2 and fb.count("VerifierReport") == 2
-    retry_blocks = fb.requests[[n for n, _ in fb.requests].index("RecapEmail", 3)][1]["messages"][0]["content"]
+    retry_blocks = fb.requests[[n for n, _ in fb.requests].index("RecapEmail", 4)][1]["messages"][0]["content"]
     assert "reviewer_findings_to_fix" in retry_blocks[-1]["text"]
 
 

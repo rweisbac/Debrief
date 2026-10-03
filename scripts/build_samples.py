@@ -38,7 +38,10 @@ class SampleBackend:
     """Returns the hand-written object for each output model, in order. Offline only."""
 
     def __init__(self, outputs: dict[str, list[BaseModel]]):
-        self.queues = defaultdict(deque, {k: deque(v) for k, v in outputs.items()})
+        self.queues = defaultdict(deque, {k: deque(v) for k, v in outputs.items() if k != "ExtractionRecord"})
+        for x in outputs.get("ExtractionRecord", []):  # the chain asks for the extraction in two parts
+            self.queues["ExtractionPartA"].append(x.part_a())
+            self.queues["ExtractionPartB"].append(x.part_b())
 
     async def send(self, request, output_model):
         q = self.queues[output_model.__name__]

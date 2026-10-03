@@ -28,6 +28,15 @@ def raw_body(obj: BaseModel | str | None, stop: str = "end_turn", usage: dict | 
                                "cache_creation_input_tokens": 0}}
 
 
+def _text(raw: dict) -> str:
+    return "".join(b.get("text", "") for b in raw["content"] if b["type"] == "text")
+
+
+def _with_text(raw: dict, text: str) -> dict:
+    content = [dict(b, text=text) if b["type"] == "text" else b for b in raw["content"]]
+    return dict(raw, content=content)
+
+
 class FakeBackend:
     """Returns queued raw bodies per output model name. Records every request it receives."""
 
@@ -36,6 +45,12 @@ class FakeBackend:
         self.requests: list[tuple[str, dict]] = []
 
     def queue(self, model_name: str, *bodies: dict) -> "FakeBackend":
+        if model_name == "ExtractionRecord":  # the chain asks for the extraction in two parts
+            for body in bodies:
+                rec = S.ExtractionRecord.model_validate_json(_text(body))
+                self.queues["ExtractionPartA"].append(_with_text(body, rec.part_a().model_dump_json()))
+                self.queues["ExtractionPartB"].append(_with_text(body, rec.part_b().model_dump_json()))
+            return self
         self.queues[model_name].extend(bodies)
         return self
 
