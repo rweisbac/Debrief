@@ -1,0 +1,39 @@
+{
+ "step": "draft_mutual_action_plan",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a1ad219184a1855a9fa740549da33af8c2b8e002fec0bf5eb4a44713c52dda57",
+ "recorded_at": "2026-10-03T18:20:13.195613+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmPaEGqT52SZnuep1yK",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"customer_value_line\":\"Move the readmission risk list from weekly to daily so care managers can call patients the morning after discharge, while the patient still remembers who they are.\",\"rows\":[{\"milestone\":\"Apex identity team answer on native nested OIDC claims, with a date or an explicit 'no date yet' (RC-09: nested claims are in private preview with no announced GA date)\",\"customer_owner\":\"Leo Brandt\",\"apex_owner\":\"Marcus Bell\",\"target_date\":\"2026-10-02\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U023\",\"excerpt\":\"I'll take that to our identity team today.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"I need a date I can put in front of Raj. Not a roadmap slide.\"}]},{\"milestone\":\"Written SSO design for the security committee packet, covering the flat-claim option and native nested claims\",\"customer_owner\":\"Leo Brandt\",\"apex_owner\":\"Marcus Bell\",\"target_date\":\"2026-10-07\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U059\",\"excerpt\":\"He'll want the SSO design in writing before the committee, even if it's option one with our token change.\"}]},{\"milestone\":\"Procurement sends the vendor questionnaire to Apex\",\"customer_owner\":\"Aisha Karim\",\"apex_owner\":\"Jordan Pike\",\"target_date\":\"\",\"status\":\"agreed\",\"evidence\":[{\"utterance_id\":\"U063\",\"excerpt\":\"I'll have procurement send it. It's long. Sorry in advance.\"}]},{\"milestone\":\"Complete security packet (questionnaire, SOC 2 report, encryption details, SSO design) sent to Aisha, copying Raj, to make the October 9th committee agenda\",\"customer_owner\":\"Aisha Karim\",\"apex_owner\":\"Jordan Pike\",\"target_date\":\"2026-10-09\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U056\",\"excerpt\":\"If we hand them a complete packet before then, we're on that agenda. If not, it's the November meeting.\"},{\"utterance_id\":\"U061\",\"excerpt\":\"Send it to me and copy Raj.\"}]},{\"milestone\":\"Vendor security review committee decision before any pilot\",\"customer_owner\":\"Raj Patel\",\"apex_owner\":\"Jordan Pike\",\"target_date\":\"2026-10-09\",\"status\":\"agreed\",\"evidence\":[{\"utterance_id\":\"U056\",\"excerpt\":\"That's Raj's committee, they meet October 9th.\"}]},{\"milestone\":\"Pricing discussion with finance, only after the committee clears\",\"customer_owner\":\"Aisha Karim\",\"apex_owner\":\"Jordan Pike\",\"target_date\":\"\",\"status\":\"agreed\",\"evidence\":[{\"utterance_id\":\"U077\",\"excerpt\":\"After, if it clears, then we'll talk pricing with finance.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7960,
+   "cache_creation_input_tokens": 6753,
+   "cache_read_input_tokens": 3677,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6753,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 948,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

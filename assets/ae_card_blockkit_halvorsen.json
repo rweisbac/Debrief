@@ -1,0 +1,274 @@
+{
+ "blocks": [
+  {
+   "type": "header",
+   "text": {
+    "type": "plain_text",
+    "text": "Debrief: Halvorsen Freight"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Synthetic data, fictional company. Sample card written by hand to show the layout. Not generated from the call. See the README to generate real debriefs."
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Ready to advance.* Technical fit is clear and the COO session is booked; one open item on partner access."
+   }
+  },
+  {
+   "type": "divider"
+  },
+  {
+   "type": "section",
+   "block_id": "step_0",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Most important:* Send Elena a one page brief on late load detection and a realistic onboarding plan before Thursday"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Owner: Sam Lee | Due: 2026-10-06 | Rule: PB-03"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Why this step:* Elena missed the demo and was burned by a slow project; reps usually walk in cold.\n> \"One thing for the Elena meeting. She is going to ask about time to value. She got burned on the last platform project, it took eight months to see anything.\"\n> Dana Ortiz, VP Data, at 45:36"
+   }
+  },
+  {
+   "type": "actions",
+   "block_id": "actions_0",
+   "elements": [
+    {
+     "type": "button",
+     "action_id": "act_0",
+     "style": "primary",
+     "text": {
+      "type": "plain_text",
+      "text": "Open draft"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"action\": \"send_material\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_0_already_done",
+     "text": {
+      "type": "plain_text",
+      "text": "Already done"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"already_done\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_0_waiting_on_customer",
+     "text": {
+      "type": "plain_text",
+      "text": "Waiting on customer"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"waiting_on_customer\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_0_not_relevant",
+     "text": {
+      "type": "plain_text",
+      "text": "Not relevant"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"not_relevant\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_0_no_time",
+     "text": {
+      "type": "plain_text",
+      "text": "No time"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 0, \"reason\": \"no_time\"}"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "block_id": "step_1",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Step 2:* Make sure Mikkel's hierarchy sample reaches Priya Monday so the partner policy is ready Tuesday"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Owner: Priya Raman | Due: 2026-10-06 | Rule: PB-04 | Use: RC-07"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Why this step:* The open item depends on a customer file nobody tracks internally.\n> \"So that's the piece I'd want to validate rather than wave my hands at. If you can send me a sample of the partner hierarchy table, even fifty rows, I'll build the policy in the sandbox and show you it working. I can have that back to you by Tuesday the sixth.\"\n> Priya Raman, Solutions Consultant, at 36:08"
+   }
+  },
+  {
+   "type": "actions",
+   "block_id": "actions_1",
+   "elements": [
+    {
+     "type": "button",
+     "action_id": "act_1",
+     "style": "primary",
+     "text": {
+      "type": "plain_text",
+      "text": "Send to SC"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"action\": \"route_to_sc\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_1_already_done",
+     "text": {
+      "type": "plain_text",
+      "text": "Already done"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"already_done\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_1_waiting_on_customer",
+     "text": {
+      "type": "plain_text",
+      "text": "Waiting on customer"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"waiting_on_customer\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_1_not_relevant",
+     "text": {
+      "type": "plain_text",
+      "text": "Not relevant"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"not_relevant\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_1_no_time",
+     "text": {
+      "type": "plain_text",
+      "text": "No time"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 1, \"reason\": \"no_time\"}"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "block_id": "step_2",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Step 3:* Send Mikkel the continuous sync release note Priya promised"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Owner: Priya Raman | Due: 2026-10-01 | Rule: PB-08 | Use: RC-12"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Why this step:* Promised in passing while correcting the deck; not in the checklist.\n> \"Good catch, and I should correct that. Actually Sam, that changed with the August release. The warehouse connector does continuous sync now, about a minute end to end. Hourly batch was the old behavior. I'll send the release note.\"\n> Priya Raman, Solutions Consultant, at 26:09"
+   }
+  },
+  {
+   "type": "actions",
+   "block_id": "actions_2",
+   "elements": [
+    {
+     "type": "button",
+     "action_id": "act_2",
+     "style": "primary",
+     "text": {
+      "type": "plain_text",
+      "text": "Open draft"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"action\": \"send_material\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_2_already_done",
+     "text": {
+      "type": "plain_text",
+      "text": "Already done"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"already_done\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_2_waiting_on_customer",
+     "text": {
+      "type": "plain_text",
+      "text": "Waiting on customer"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"waiting_on_customer\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_2_not_relevant",
+     "text": {
+      "type": "plain_text",
+      "text": "Not relevant"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"not_relevant\"}"
+    },
+    {
+     "type": "button",
+     "action_id": "dismiss_2_no_time",
+     "text": {
+      "type": "plain_text",
+      "text": "No time"
+     },
+     "value": "{\"deal_id\": \"deal_a\", \"step\": 2, \"reason\": \"no_time\"}"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Open*\n- Row level access for partners with sub carriers (owner: Priya Raman)"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Sample card: no cost"
+    }
+   ]
+  }
+ ]
+}

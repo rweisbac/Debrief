@@ -15,6 +15,7 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - What I changed: added offline checks against the installed SDK (1.11.0) using a mock transport. They confirm the SDK sends `output_config = {effort, format}` in one request and parses JSON when a thinking block comes first. docs/API_NOTES.md marks every API-level claim as "pending live run".
 - Evidence of fix (eval or test, before and after): docs/smoke_results.json, status "skipped", offline section all true.
 - What I would do in production: run the smoke test in CI on every SDK or model bump, and block deploys when a probe changes.
+- Update 2026-10-03: the live smoke test has since been run, and the recording run exercised the same calls in the full chain. Results are in docs/API_NOTES.md. Still open: running the smoke test in CI.
 
 ## D-02: refusal fallbacks left off (skill vs prompt conflict)
 - Step and prompt version: checkpoint 0, src/llm.py design
@@ -61,7 +62,7 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - What the AI produced: the brief asks for two things that conflict under the API's render order (system, then messages): "schema and rules go in the system prompt" and "playbook, release cards, competitor notes, then transcript, then step instructions".
 - Why it was wrong: putting step rules in the top-level system prompt places them before the transcript. That changes the prefix per step, so the transcript cannot be cached across the 6 calls.
 - What I changed: top-level system holds only the stable reference (preamble, playbook, release cards, competitors) with cache_control. The user turn holds the transcript and CRM (cached) and then step data. The step rules follow as a {"role": "system"} message in messages, which the claude-api skill documents for Sonnet 5.5. A config switch, DEBRIEF_STEP_RULES_PLACEMENT=top_system, falls back to the plain layout.
-- Evidence of fix (eval or test, before and after): tests/deterministic/test_chain.py::test_cached_prefix_identical_across_steps, test_llm.py::test_step_rules_placement and test_real_sdk_backend_request_shape. Not live-verified: smoke probe (f) is pending a key. The output schema also changes per step and may invalidate the cache anyway; only measured cache_read_input_tokens will be reported.
+- Evidence of fix (eval or test, before and after): tests/deterministic/test_chain.py::test_cached_prefix_identical_across_steps, test_llm.py::test_step_rules_placement and test_real_sdk_backend_request_shape. Update 2026-10-03: the default placement was accepted live on all 76 calls, so the fallback was not needed. The output schema also changes per step and may invalidate the cache anyway; only measured cache_read_input_tokens will be reported. Measured: calls read about 3.4k to 5.5k tokens (zero on the first deal) while writing 6.7k to 11k new tokens, so the transcript prefix is not shown to be reused across steps. Cause not established.
 - What I would do in production: confirm with probe (f) and the measured cache reads, and keep whichever layout reads more cached tokens.
 
 ## D-08: messages.parse hides stop_reason on truncated output
@@ -146,6 +147,14 @@ All prompts started at v1 (checkpoint 2). Each change gets a new v<N> file and a
 - What I changed: the test now asserts the boundary case meets the rule, and adds explicit cases for exactly 30% and for 19 events.
 - Evidence of fix (eval or test, before and after): the test failed, then passed with metrics.diagnose unchanged.
 - What I would do in production: keep boundary tests next to every pre-declared decision rule.
+
+## D-14: one extraction schema was too large for the API grammar
+- Step and prompt version: extract v1, then extract v2 and extract_b v1
+- What the AI produced: a single `ExtractionRecord` output schema with 15 fields and 13 nested evidence lists, sent in one call. It passed all offline tests.
+- Why it was wrong: the first live call failed with 400 "The compiled grammar is too large". Offline tests use a fake backend and cannot see the API's schema limit.
+- What I changed: the extraction is requested in two parts (`ExtractionPartA`, `ExtractionPartB`), run one after the other and merged in code into the same `ExtractionRecord`, so downstream steps are unchanged. Chain is now 7 calls per debrief. Prompts bumped to extract v2 and extract_b v1.
+- Evidence of fix (eval or test, before and after): before, 400 on the first live call (deal_a). After, both parts parsed with no validator errors on all 5 deals. tests/regressions/test_extraction_split.py keeps the merged schema out of the request path and the merge lossless. Cost: two extract calls at about $0.065 each on deal_a.
+- What I would do in production: run the live smoke test on every schema change, since only the live API enforces this limit.
 
 ## What breaks first
 

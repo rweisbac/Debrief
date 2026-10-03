@@ -14,6 +14,7 @@ def app(tmp_path, monkeypatch):
     monkeypatch.setattr(adapters, "VAR", tmp_path)
     monkeypatch.setattr(adapters.FileNotifier.__init__, "__defaults__", (tmp_path / "outbox.jsonl",))
     import src.config as config
+    monkeypatch.setattr(config, "MODE", "live")  # skip replay of recorded debriefs; these tests drive the samples
     monkeypatch.setattr(config, "DB_PATH", tmp_path / "app.sqlite3")
     at = AppTest.from_file(str(config.ROOT / "app.py"), default_timeout=60)
     at.run()

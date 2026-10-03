@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "766e88f067fcf464d913dcb046f0fad3309328aff3aa599e9c114a48f7d9d578",
+ "recorded_at": "2026-10-03T18:24:12.134344+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmhBexU1eT8Wig2Y4Xq",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: Owen (technical evaluator) was lukewarm and left at about 18:30; no business outcome, economic buyer, champion or dated next step stated.\",\"customer_value_line\":\"Not stated. No business outcome was voiced on the call; CRM discovery notes only list manual claims file loads as a pain.\",\"what_we_validated\":[\"Claims file loaded into sandbox, partitioned by state; ingest ran in about six minutes on default setup, untuned\",\"Schema inferred and checked by hand against the customer's data dictionary\",\"Twelve rows failed the date format check; shown in a table\",\"Summary view of claims by line of business by week, with state filter, drill-down to rows and a freshness indicator shown; Owen said 'Sort of. I'd have to think about it.'\"],\"integration_patterns\":[],\"objections_and_answers\":[\"Owen: summary view only 'Sort of' what he had in mind; no reason given, no answer given, status open\"],\"open_items\":[\"Owen to confirm whether paid amount and allowed amount should be numbers; left as text for now (said 'Probably numbers.')\",\"Lily to send her list of failed rows; Priya to compare against Apex's twelve (no date)\",\"Owen's feedback on the summary view not given\",\"No dated next meeting; Lily said Owen's calendar is a mess this month\"],\"commitments\":[\"Priya Raman: send the twelve failed rows and a short note on the two text columns to Owen, today (2026-09-29)\",\"Nate Kowalski: reach out to Owen to find another time to finish; no date given\",\"Lily Chen: send her list of failed rows; no date given\",\"Lily Chen: tell Owen what she saw\"],\"stakeholders\":[\"Owen Marsh, Data Architect, technical evaluator, present until about 18:30\",\"Lily Chen, Senior Analyst, user, present; stayed a couple of minutes and will relay to Owen\",\"Economic buyer: not named\",\"Champion: not identified\"],\"competitive_notes\":[],\"risks\":[\"Evaluator left early with only a lukewarm reaction; his real view is unknown\",\"Follow-up with Owen is uncertain and no date was agreed (PB-02)\",\"Only two customer contacts, one a user with limited interest; no economic buyer or champion (PB-03, PB-05)\",\"No business outcome stated, so the recap cannot tie to one (PB-07)\"],\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"},{\"utterance_id\":\"U029\",\"excerpt\":\"You'd have to ask him. His calendar is a mess this month.\"},{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"Ingest ran in about six minutes.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Twelve rows failed the date format check, they're in this table.\"},{\"utterance_id\":\"U025\",\"excerpt\":\"I mostly wanted to see the file loaded. I'll tell Owen what I saw.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 3955,
+   "cache_creation_input_tokens": 2631,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2631,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1013,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

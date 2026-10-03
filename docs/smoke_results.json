@@ -1,8 +1,8 @@
 {
-  "status": "skipped",
-  "reason": "ANTHROPIC_API_KEY not set",
+  "status": "ran",
   "model": "claude-sonnet-5-5",
-  "ran_at": "2026-10-02T01:59:29.614349+00:00",
+  "sdk_version": "1.11.0",
+  "ran_at": "2026-10-03T17:58:48.924457+00:00",
   "offline": {
     "sdk_version": "1.11.0",
     "parse_signature_params": [
@@ -40,5 +40,178 @@
       "thinking",
       "text"
     ]
-  }
+  },
+  "probes": [
+    {
+      "probe": "a_parse_output_format",
+      "ok": true,
+      "latency_ms": 2420,
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "stop_details": null,
+      "content_blocks": [
+        {
+          "type": "text",
+          "chars": 278
+        }
+      ],
+      "parsed_output_type": "Probe",
+      "parsed_output": {
+        "deal_state": "Early-stage; blocked on security sign-off pending custom IdP SSO support",
+        "next_step": "SC confirms custom identity provider SSO compatibility and sends Dana Ortiz a written answer",
+        "why": "Security approval hinges on SSO, and only a vague follow-up was promised."
+      },
+      "usage": {
+        "input_tokens": 406,
+        "output_tokens": 105,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "cost_usd": 0.001862
+    },
+    {
+      "probe": "b_parse_with_effort_low",
+      "ok": true,
+      "latency_ms": 2245,
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "stop_details": null,
+      "content_blocks": [
+        {
+          "type": "text",
+          "chars": 259
+        }
+      ],
+      "parsed_output_type": "Probe",
+      "parsed_output": {
+        "deal_state": "Active, blocked on security sign-off pending custom IdP SSO support confirmation.",
+        "next_step": "SC confirms custom IdP SSO compatibility and sends Dana written details.",
+        "why": "Security approval depends on SSO; unresolved, it stalls the deal."
+      },
+      "usage": {
+        "input_tokens": 406,
+        "output_tokens": 99,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "cost_usd": 0.001802
+    },
+    {
+      "probe": "b2_parse_with_effort_medium",
+      "ok": true,
+      "latency_ms": 2527,
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "stop_details": null,
+      "content_blocks": [
+        {
+          "type": "text",
+          "chars": 333
+        }
+      ],
+      "parsed_output_type": "Probe",
+      "parsed_output": {
+        "deal_state": "Active but blocked: security sign-off depends on custom IdP SSO support, which is unconfirmed.",
+        "next_step": "Have the SC confirm SSO compatibility with Dana's custom identity provider and share a dated written answer.",
+        "why": "Security approval gates the deal, so an unresolved SSO requirement could stall or kill it."
+      },
+      "usage": {
+        "input_tokens": 406,
+        "output_tokens": 120,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "cost_usd": 0.002012
+    },
+    {
+      "probe": "d1_cache_write",
+      "ok": true,
+      "latency_ms": 2482,
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "stop_details": null,
+      "content_blocks": [
+        {
+          "type": "text",
+          "chars": 445
+        }
+      ],
+      "parsed_output_type": "Probe",
+      "parsed_output": {
+        "deal_state": "Technical validation stalled: SSO with custom identity provider is open, security sign-off pending, no dated next step or economic buyer named.",
+        "next_step": "Sam Lee assigns SSO item to the SC with a due date and confirms a dated follow-up with Dana Ortiz, naming the economic buyer.",
+        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and recap tied to Dana's outcome; none are confirmed."
+      },
+      "usage": {
+        "input_tokens": 124,
+        "output_tokens": 162,
+        "cache_read_input_tokens": 10019,
+        "cache_creation_input_tokens": 0
+      },
+      "cost_usd": 0.003872
+    },
+    {
+      "probe": "d2_cache_read",
+      "ok": true,
+      "latency_ms": 2066,
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "stop_details": null,
+      "content_blocks": [
+        {
+          "type": "text",
+          "chars": 409
+        }
+      ],
+      "parsed_output_type": "Probe",
+      "parsed_output": {
+        "deal_state": "Technical validation stalled: SSO with custom identity provider is an open blocker for security sign-off; no dated next step or economic buyer.",
+        "next_step": "Sam assigns SC the custom IdP SSO question with a due date and confirms a dated follow-up with Dana.",
+        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and recap tied to outcome; none confirmed."
+      },
+      "usage": {
+        "input_tokens": 124,
+        "output_tokens": 145,
+        "cache_read_input_tokens": 10019,
+        "cache_creation_input_tokens": 0
+      },
+      "cost_usd": 0.003702
+    },
+    {
+      "probe": "f_mid_conversation_system",
+      "ok": true,
+      "latency_ms": 2035,
+      "model": "claude-sonnet-5-5",
+      "stop_reason": "end_turn",
+      "stop_details": null,
+      "content_blocks": [
+        {
+          "type": "text",
+          "chars": 350
+        }
+      ],
+      "parsed_output_type": "Probe",
+      "parsed_output": {
+        "deal_state": "Stalled on technical validation; SSO with custom identity provider unresolved, blocking security sign-off.",
+        "next_step": "Sam routes the SSO item to the SC with a due date and confirms a dated next step.",
+        "why": "Playbook requires dated next step, named economic buyer, SC routing with due date, and outcome-tied recap; none confirmed."
+      },
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 125,
+        "cache_read_input_tokens": 10019,
+        "cache_creation_input_tokens": 0
+      },
+      "cost_usd": 0.003528
+    },
+    {
+      "probe": "e_temperature_rejected",
+      "ok": false,
+      "error_type": "BadRequestError",
+      "status_code": 400,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': '`temperature` is deprecated for this model.'}, 'request_id': 'req_011CffjmQENuyfSmKREg3t2C'}",
+      "latency_ms": 158,
+      "expected_rejection": true
+    }
+  ]
 }

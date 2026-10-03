@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "85b839a6cff2f86d87bd5fa7ea3e50c4fb08359286b110853c1074387893ce0c",
+ "recorded_at": "2026-10-03T18:20:17.984843+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmPaXNQkZyBfgeQufut",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: the security review gates everything and the SSO nested-claim gap is unresolved. Committee meets October 9th, otherwise the November meeting.\",\"customer_value_line\":\"Nora: \\\"If a care manager gets the list the morning after discharge, they can call while the patient still remembers who we are.\\\" Sandbox pipeline run took nine minutes vs a Sunday job that takes most of the day.\",\"what_we_validated\":[\"Readmission risk pipeline: incremental run on the de-identified extract took nine minutes (U028)\",\"Output view sorted by risk, filtered by facility, with top three drivers per row (U034)\",\"Late claims restate the score and the change is logged on the row (U041, U043)\",\"PHI: encryption at rest and in transit, BAA is with their legal and fine (U048, U049)\",\"Customer managed keys work with major cloud key services; Meridian is on a cloud one (U054, U055)\"],\"integration_patterns\":[\"Home-grown OIDC layer on a legacy directory; no SCIM; nightly job provisions via the target app's API\",\"Group membership arrives in a nested custom claim, mhp_roles (facility, role, clearance level)\",\"Apex takes flat claims only today (string or list of strings), per RC-09; nested claims are private preview with no GA date\",\"Option one: Meridian token service emits an extra flat claim. Needs a token service change, six to eight weeks minimum, and Raj's review\",\"Option two: native nested claims, no date. Facility from the token drives the list filter; otherwise the mapping is maintained by hand\"],\"objections_and_answers\":[\"SSO nested claim: not supported today. Marcus offered the flat-claim workaround and said he would confirm native timing with the identity team. Open\",\"Drop-off visibility: a patient dropping off the list overnight with no explanation would erode trust. Change log exists on the row; notification is a design choice to discuss with Nora's team. Parked, partially resolved\",\"Marcus said native nested claims are believed to be on the roadmap. RC-09 says private preview with no GA date, so no date should be implied\"],\"open_items\":[\"Marcus: firm answer and date on native nested claims from the identity team (said he would take it today)\",\"Marcus: written SSO design for the committee packet, even if option one\",\"Jordan: notification when someone drops off the list, to work through with Nora's care management team\",\"Aisha/procurement: send the vendor questionnaire; no date given\",\"Jordan: whether the demo recording can be shared with Nora, given de-identified data\",\"Dated next meeting: not agreed. Aisha will decide after the SSO answer\"],\"commitments\":[\"Marcus: take the nested claims question to the identity team today (2026-10-01)\",\"Marcus: get Leo something he can put in front of Raj; no date stated\",\"Marcus: send Nora the encryption whitepaper; no date stated. It also mentions an HSM setup, but RC-11 says on-premises HSMs are not supported, so check before sending\",\"Jordan: send a summary note today (2026-10-01)\",\"Jordan: write down security-related items so Raj can review them; no date stated\",\"Jordan: send the packet (SOC 2, encryption details, SSO design, questionnaire) to Aisha, copying Raj, before October 9th\",\"Jordan: come back to Nora on the demo recording; no date stated\"],\"stakeholders\":[\"Aisha Karim, Director of Data Engineering: champion, owns the evaluation, present\",\"Leo Brandt, Identity and Access Engineer: technical evaluator, present\",\"Nora Fitzgerald, Clinical Analytics Lead: end user, present\",\"Raj Patel, Security Architect: reviews the choice and his committee must approve, absent\",\"Finance: pricing talks after security clears, absent, no contact named\",\"Economic buyer: not stated\"],\"competitive_notes\":[],\"risks\":[\"Nested mhp_roles claim unsupported today and no native date; Leo wants a date, not a roadmap slide\",\"Flat-claim workaround takes six to eight weeks minimum and needs Raj's review\",\"Missing the October 9th packet deadline pushes review to the November meeting\",\"Raj was absent and has seen nothing; the questionnaire depends on procurement\",\"No dated next meeting and no economic buyer named\",\"Pricing only after the committee clears, with no finance contact named\"],\"evidence\":[{\"utterance_id\":\"U027\",\"excerpt\":\"If a care manager gets the list the morning after discharge, they can call while the patient still remembers who we are.\"},{\"utterance_id\":\"U028\",\"excerpt\":\"Last night's run took nine minutes.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"It comes through a custom claim called mhp_roles, and that claim is nested.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"It means it's six to eight weeks, minimum.\"},{\"utterance_id\":\"U056\",\"excerpt\":\"If we hand them a complete packet before then, we're on that agenda. If not, it's the November meeting.\"},{\"utterance_id\":\"U072\",\"excerpt\":\"I need a date I can put in front of Raj. Not a roadmap slide.\"},{\"utterance_id\":\"U075\",\"excerpt\":\"Let's see what the answer is first. If it's simple, an email is fine. If it's complicated, we'll set something up.\"},{\"utterance_id\":\"U054\",\"excerpt\":\"Today it's the major cloud key services. If you're running your own HSM on premises, I'd need to check.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7972,
+   "cache_creation_input_tokens": 6753,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6753,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1802,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

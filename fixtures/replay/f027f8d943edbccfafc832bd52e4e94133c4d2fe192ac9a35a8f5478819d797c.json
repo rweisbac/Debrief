@@ -1,0 +1,39 @@
+{
+ "step": "judge",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f027f8d943edbccfafc832bd52e4e94133c4d2fe192ac9a35a8f5478819d797c",
+ "recorded_at": "2026-10-03T18:24:47.057702+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011Cffmk7bDRKMJVwusaBeS8",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"specific\":true,\"evidence_tied\":true,\"playbook_tied\":true,\"actionable_10_min\":false,\"non_obvious\":false,\"critique\":\"The step is specific (Owen, paid and allowed amount columns, outcome ask, two meeting times) and U030 plus PB-01 support it, but a recap with an outcome ask and meeting options takes longer than 10 minutes to draft well, and a post-demo recap is exactly what most AEs would send anyway.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 504,
+   "cache_creation_input_tokens": 2631,
+   "cache_read_input_tokens": 3275,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2631,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 157,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

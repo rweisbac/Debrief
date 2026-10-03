@@ -218,7 +218,31 @@ class ChecklistMismatch(_Model):
     evidence: list[EvidenceRef]
 
 
+class ExtractionPartA(_Model):
+    """First half of the extraction. Sent as its own output schema so the compiled grammar stays small."""
+    business_outcome: BusinessOutcome
+    agreed_next_step: AgreedNextStep
+    objections: list[Objection]
+    open_technical_items: list[OpenItem]
+    integration_patterns: list[IntegrationPattern]
+    commitments: list[Commitment]
+    stakeholders: list[Stakeholder]
+
+
+class ExtractionPartB(_Model):
+    """Second half of the extraction."""
+    competitor_mentions: list[CompetitorMention]
+    buying_signals: list[Signal]
+    risk_signals: list[Signal]
+    exact_numbers: list[ExactNumber]
+    customer_dependencies: list[CustomerDependency]
+    contradictions: list[Contradiction]
+    corrections: list[Correction]
+    checklist_mismatches: list[ChecklistMismatch]
+
+
 class ExtractionRecord(_Model):
+    """The merged extraction. Never sent to the API (too large a grammar); built from the two parts."""
     business_outcome: BusinessOutcome
     agreed_next_step: AgreedNextStep
     objections: list[Objection]
@@ -234,6 +258,29 @@ class ExtractionRecord(_Model):
     contradictions: list[Contradiction]
     corrections: list[Correction]
     checklist_mismatches: list[ChecklistMismatch]
+
+    @classmethod
+    def from_parts(cls, a: ExtractionPartA, b: ExtractionPartB) -> "ExtractionRecord":
+        return cls(**{n: getattr(a, n) for n in ExtractionPartA.model_fields},
+                   **{n: getattr(b, n) for n in ExtractionPartB.model_fields})
+
+    def part_a(self) -> ExtractionPartA:
+        return ExtractionPartA(**{n: getattr(self, n) for n in ExtractionPartA.model_fields})
+
+    def part_b(self) -> ExtractionPartB:
+        return ExtractionPartB(**{n: getattr(self, n) for n in ExtractionPartB.model_fields})
+
+
+def empty_part_a() -> ExtractionPartA:
+    return ExtractionPartA(business_outcome=BusinessOutcome(stated=False, summary="", evidence=[]),
+                           agreed_next_step=AgreedNextStep(exists=False, summary="", date="", evidence=[]),
+                           objections=[], open_technical_items=[], integration_patterns=[], commitments=[],
+                           stakeholders=[])
+
+
+def empty_part_b() -> ExtractionPartB:
+    return ExtractionPartB(competitor_mentions=[], buying_signals=[], risk_signals=[], exact_numbers=[],
+                           customer_dependencies=[], contradictions=[], corrections=[], checklist_mismatches=[])
 
 
 # Stage B: assess and recommend

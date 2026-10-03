@@ -6,6 +6,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+def apply_api_key_alias(env=os.environ) -> None:
+    """Treat DEBRIEF_API_KEY as ANTHROPIC_API_KEY. An explicit ANTHROPIC_API_KEY wins."""
+    if not env.get("ANTHROPIC_API_KEY") and env.get("DEBRIEF_API_KEY"):
+        env["ANTHROPIC_API_KEY"] = env["DEBRIEF_API_KEY"]
+
+
+apply_api_key_alias()
+
 MODEL = os.environ.get("DEBRIEF_MODEL", "claude-sonnet-5-5")
 MODE = os.environ.get("DEBRIEF_MODE", "replay")  # live, record, replay
 if MODE not in {"live", "record", "replay"}:
@@ -46,6 +54,7 @@ if STEP_RULES_PLACEMENT not in {"mid_conversation_system", "top_system"}:
 # Effort and max_tokens per step. max_tokens covers thinking plus output.
 STEP_SETTINGS = {
     "extract": {"effort": "low", "max_tokens": 16000},
+    "extract_b": {"effort": "low", "max_tokens": 16000},
     "assess_and_recommend": {"effort": "medium", "max_tokens": 12000},
     "draft_recap_email": {"effort": "low", "max_tokens": 8000},
     "draft_internal_summary": {"effort": "low", "max_tokens": 8000},

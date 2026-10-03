@@ -1,6 +1,6 @@
-"""The debrief chain: 4 stages, 6 model calls on the normal path.
+"""The debrief chain: 4 stages, 7 model calls on the normal path.
 
-A. extract                 1 call   -> ExtractionRecord
+A. extract, extract_b       2 calls  -> ExtractionPartA, ExtractionPartB, merged into ExtractionRecord
    (code) MEDDPICC view and gaps
 B. assess_and_recommend    1 call   -> Assessment, then deterministic overrides (rules.py)
 C. drafts                  3 calls in parallel -> RecapEmail, InternalSummary, MutualActionPlan
@@ -11,6 +11,7 @@ D. verify                  deterministic checks, then 1 skeptical verifier call.
 from __future__ import annotations
 
 import asyncio
+import copy
 import json
 import uuid
 from dataclasses import dataclass, field
@@ -21,8 +22,8 @@ from pydantic import BaseModel
 from src import checks, meddpicc, prompts, rules
 from src.adapters import CRMSource, FileCRMSource, FileGongSource, GongSource
 from src.llm import CallResult, LLMClient
-from src.schemas import (Assessment, ExtractionRecord, InternalSummary, MutualActionPlan, RecapEmail,
-                         VerifierReport, validate_assessment, validate_evidence_excerpts, validate_extraction,
+from src.schemas import (Assessment, ExtractionPartA, ExtractionPartB, ExtractionRecord, InternalSummary,
+                         MutualActionPlan, RecapEmail, VerifierReport, empty_part_a, empty_part_b, validate_assessment, validate_evidence_excerpts, validate_extraction,
                          validate_map)
 from src.transcript import Transcript
 
@@ -153,11 +154,26 @@ class Chain:
                              "validator_errors": res.validator_errors, "keys": res.keys})
         return res
 
-    # Stage A
+    # Stage A. Two calls (A then B, so the second reads the cached prefix); merged in code.
     async def extract(self, ctx: DealContext, result: DebriefResult) -> CallResult:
-        def validator(rec: ExtractionRecord) -> list[str]:
-            return validate_extraction(rec) + _resolve_errors(rec, ctx.transcript)
-        return await self._call(result, "extract", ExtractionRecord, [ctx.context_block()], validator)
+        def validator_a(part: ExtractionPartA) -> list[str]:
+            rec = ExtractionRecord.from_parts(part, empty_part_b())
+            return validate_extraction(rec) + _resolve_errors(part, ctx.transcript)
+
+        def validator_b(part: ExtractionPartB) -> list[str]:
+            rec = ExtractionRecord.from_parts(empty_part_a(), part)
+            return validate_extraction(rec) + _resolve_errors(part, ctx.transcript)
+
+        a = await self._call(result, "extract", ExtractionPartA, [ctx.context_block()], validator_a)
+        if a.parsed is None:
+            return a
+        b = await self._call(result, "extract_b", ExtractionPartB, [ctx.context_block()], validator_b)
+        if b.parsed is None:
+            return b
+        merged = copy.copy(b)
+        merged.parsed = ExtractionRecord.from_parts(a.parsed, b.parsed)
+        merged.validator_errors = list(a.validator_errors) + list(b.validator_errors)
+        return merged
 
     # Stage B
     async def assess(self, ctx: DealContext, result: DebriefResult, extraction: ExtractionRecord,

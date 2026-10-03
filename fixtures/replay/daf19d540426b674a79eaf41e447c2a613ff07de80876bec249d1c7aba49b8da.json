@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "daf19d540426b674a79eaf41e447c2a613ff07de80876bec249d1c7aba49b8da",
+ "recorded_at": "2026-10-03T18:24:09.871622+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmhBN6GEPdzPwsMWpBH",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: claims file demo and next steps\",\"body\":\"Hi Owen and Lily,\\n\\nThanks for making time today, and sorry about the screen share hiccup. Owen, sorry we lost you early. Here is where things stand.\\n\\nShown: your claims file loaded into the sandbox, partitioned by state, with ingest in about six minutes on the default setup. Schema was checked against your data dictionary. Twelve rows failed the date format check.\\n\\nOpen:\\n- Owen: please confirm whether paid amount and allowed amount should be numbers. They are text for now.\\n- Lily: you offered to send your list of failed rows so Priya can compare it with our twelve.\\n- Owen: we would value your view on whether the summary view is what you had in mind.\\n\\nPriya is sending the twelve failed rows and a short note on the two text columns today.\\n\\nOwen, what would you like to see from this evaluation, in your words? And could you share a couple of times to finish the walkthrough? I will reach out separately.\\n\\nNate\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Ingest ran in about six minutes.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Twelve rows failed the date format check, they're in this table.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"I left them as text for now so nothing got silently rounded. That's an easy change once you confirm.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"I can send it.\"},{\"utterance_id\":\"U031\",\"excerpt\":\"Yes, I'll send that today.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Sort of. I'd have to think about it.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4080,
+   "cache_creation_input_tokens": 2631,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2631,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 571,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -187,14 +187,18 @@ def main() -> int:
 
     result = {"status": "ran", "model": MODEL, "sdk_version": anthropic.__version__,
               "ran_at": datetime.now(timezone.utc).isoformat(), "offline": offline, "probes": probes}
-    OUT.write_text(json.dumps(result, indent=2) + "\n")
-
     for p in probes:
-        if p["ok"]:
+        if p["probe"] == "e_temperature_rejected":
+            # Negative probe: a 400 is the pass condition, a 200 means the API accepted temperature.
+            p["expected_rejection"] = p["status_code"] == 400
+            verdict = "ok (rejected as expected)" if p["expected_rejection"] else "UNEXPECTED (not a 400)"
+            print(f"{p['probe']}: {verdict} {p['status_code']} {p.get('error', '')[:200]}")
+        elif p["ok"]:
             print(f"{p['probe']}: ok stop={p['stop_reason']} blocks={[b['type'] for b in p['content_blocks']]} "
                   f"parsed={p['parsed_output_type']} usage={p['usage']} {p['latency_ms']}ms")
         else:
             print(f"{p['probe']}: FAILED {p['status_code']} {p['error_type']}: {p['error'][:200]}")
+    OUT.write_text(json.dumps(result, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)}")
     return 0
 

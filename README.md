@@ -30,10 +30,17 @@ Python 3.11. `pip install -r requirements.txt`.
 | `make eval` | Scores replay fixtures against gold labels; writes `evals/results.md` and `evals/ablation.md`. Missing fixtures are reported as not run. | No |
 | `make record` | Calls the API once per step and saves replay fixtures for all 5 transcripts, plus judge and ablation calls. | Yes |
 | `make smoke` | Live API probe; results go to `docs/API_NOTES.md`. | Yes |
+| `make watch` | Polls for new transcripts and runs a debrief on each new technical validation call (`src/ingest.py`). | Yes, unless replay fixtures exist |
+| `make serve` | Webhook receiver for Gong automation rules: `POST /gong/webhook` with `{"deal_id": ...}` and header `X-Debrief-Secret`. Needs `DEBRIEF_WEBHOOK_SECRET`. | Same as above |
+| `make screenshots` | Captures `docs/screenshots/*.png` from the offline demo. | No |
 
 Environment: `ANTHROPIC_API_KEY`, `DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (`live`, `record`, `replay`; default `replay`).
 
-**Current status (be clear about this in a walkthrough).** No API key was available while building, so no model output has been recorded yet. The demo runs on two hand-written sample cards (Halvorsen Freight and Meridian Health). These still go through the real rule and check code, and every screen labels them as samples. Eval scores, cost and latency do not exist yet and are not shown anywhere. After `make record`, the app shows real debriefs instead.
+**Current status (be clear about this in a walkthrough).** Real model output was recorded on 2026-10-03 for all 5 synthetic deals (76 live calls on `claude-sonnet-5-5`, none refused). The app in replay mode shows those debriefs; `make demo` still shows the two hand-written sample cards, labeled as samples. Offline eval scores from `evals/results.md` (1 run per deal, replay, judge uncalibrated): deal state matches the gold label on 3 of 5 deals, grounding passes on 3 of 5, the overclaim check passes on 4 of 5, steps pass on 5 of 5, and all 6 trap checks and both adversarial checks pass. Failures are listed in `evals/results.md` and not fixed yet. The verifier ablation is in `evals/ablation.md`: with the verifier the planted errors caught were 5 of 5 for changed numbers (4 of 5 without), 5 of 5 for uncommitted promises (4 of 5 without), 5 of 5 for superseded features (0 of 5 without) and 5 of 5 for invented people (5 of 5 without). It raised 1 false alarm on 5 clean drafts (deal_c), none without. These are one-run, small-sample numbers on synthetic data, not a performance claim.
+
+### Automatic trigger
+
+`src/ingest.py` runs the chain when a new TV transcript shows up, from either `watch` (polling) or `serve` (webhook). It skips calls whose CRM stage is not Technical Validation, skips a transcript it has already processed (hash ledger in `var/`), retries a failed run once, then stops. When a debrief is ready it posts an internal "card ready" message to the AE. It never sends anything to a customer. When a debrief is ready, the AE gets the full card (state, up to 3 steps, why with a transcript quote) and the SC gets only their own steps, promises and open technical items. Set `DEBRIEF_SLACK_BOT_TOKEN` (bot token with `chat:write`, plus `im:write` for DMs) to also post these to Slack. Post to one shared channel with `DEBRIEF_SLACK_CHANNEL`, or DM people by pointing `DEBRIEF_SLACK_USERS` at a JSON file like `{"Sam Lee": "U0123ABC"}`. `DEBRIEF_APP_URL` adds an "Open in Debrief" link. Posted messages have no buttons (they need an interactivity endpoint that is not built), so acting on or dismissing a step happens in the app. A Slack failure never blocks the debrief; the file outbox is always written. Block Kit previews: `assets/ae_card_blockkit_halvorsen.json` and `assets/sc_card_blockkit.json` (paste into Block Kit Builder). Mapping a real Gong call id to a CRM opportunity is not built; the payload carries `deal_id`.
 
 ## Data flow
 
@@ -62,7 +69,7 @@ flowchart LR
   S --> H[handoff.py: CS brief, Phase 2 preview]
 ```
 
-Six model calls per debrief on the normal path. All calls go through `src/llm.py`, which uses `client.messages.parse` with a pydantic schema, logs every call, and reads and writes the replay cache. Details: `docs/API_NOTES.md` and `DECISIONS.md`.
+Seven model calls per debrief on the normal path (two extract calls, assess, three drafts, verify). All calls go through `src/llm.py`, which uses `client.messages.parse` with a pydantic schema, logs every call, and reads and writes the replay cache. Details: `docs/API_NOTES.md` and `DECISIONS.md`.
 
 ## Diagnosis: why nothing happens after the demo
 
@@ -129,7 +136,20 @@ No metric target is ever shown as a result, and nothing here claims causation.
 
 ## Cost and latency
 
-**Not observed yet.** No live run has happened, so there is no measured cost per debrief, latency or cache hit rate. When there is, `llm_calls` will hold per-call tokens, cache reads, latency and cost; the card footer will show cost per debrief, and `evals/results.md` will list them per deal. Pricing constants are in `src/config.py` (Sonnet 5.5: $2 input and $10 output per million tokens; cache write assumed at 1.25x and to be verified).
+Measured from the `llm_calls` table on the recording run of 2026-10-03, 1 run per deal, Sonnet 5.5, 7 calls per debrief (two extract calls, assess, three drafts, verify). Judge calls are excluded. Cost uses the rates in `src/config.py`; the cache write rate is still an assumption.
+
+| Deal | Calls | Cost | Summed call latency | Cache read tokens |
+|---|---|---|---|---|
+| deal_a | 7 | $0.490 | 143 s | 0 |
+| deal_b | 7 | $0.359 | 108 s | 29,824 |
+| deal_c | 9 | $0.485 | 153 s | 51,247 |
+| deal_x | 8 | $0.220 | 83 s | 36,747 |
+| deal_y | 7 | $0.320 | 102 s | 29,824 |
+
+- Cost per debrief: mean $0.375, range $0.220 to $0.490. Total API spend for the whole recording session, including judge, ablation and two probe calls, was $2.58 over 76 live calls.
+- Latency per debrief: summed call time averages 118 s (83 to 153 s). If the three drafts run in parallel as designed, the critical path from the logged call times averages about 106 s (74 to 141 s). This is derived from per-call latency. End to end wall clock was not measured.
+- Cache: reads were observed, but small. Calls read only about 3.4k to 5.5k tokens each (the shared reference), while each call also wrote 6.7k to 11k new tokens, so the transcript prefix is not being reused across steps. deal_a read nothing; it was the first deal recorded. The cause is not established. Dollar savings from caching: not measured.
+- deal_c and deal_x have 9 and 8 calls because of one retry or regeneration each; the extra calls are in `llm_calls`.
 
 ## Production path
 
@@ -144,8 +164,8 @@ No metric target is ever shown as a result, and nothing here claims causation.
 ## Known limits and what is mocked
 
 - **Mocked:** Gong, Salesforce and Slack are file-backed adapters (`src/adapters.py`). The calendar invite is a stub. "Mark as sent" is a button, not an email integration. Customer replies are logged by hand in the demo.
-- **No live model output yet**, so prompts are unvalidated v1. The two demo cards are hand-written samples.
-- **The live API path is unverified:** `docs/API_NOTES.md` lists what was verified offline against the SDK and what still needs `make smoke`. That includes the mid-conversation system message used for caching (D-07).
+- **Recorded output is one run per deal.** The 5 debriefs were recorded once on 2026-10-03; prompts are early versions and `evals/results.md` lists the failing cases. The two `make demo` cards are still hand-written samples, labeled as such.
+- **Live API path:** the smoke probes and the recording run exercised it (see `docs/API_NOTES.md`). Cache behavior across steps is not fully understood (see Cost and latency).
 - **Deterministic checks are heuristics.** The stress test (`evals/stress_report.md`) catches 49 of 61 planted problems with 1 false alarm on 17 clean drafts. That leaves 13 open known-failure tests (12 missed problems plus 1 false alarm), including:
   - an invented name made of ordinary words;
   - some wordings of the superseded hourly sync;

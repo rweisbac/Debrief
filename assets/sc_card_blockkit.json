@@ -1,0 +1,83 @@
+{
+ "blocks": [
+  {
+   "type": "header",
+   "text": {
+    "type": "plain_text",
+    "text": "Your items: Halvorsen Freight"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Synthetic data, fictional company. Sample card written by hand to show the layout. Not generated from the call. See the README to generate real debriefs."
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*To do:* Make sure Mikkel's hierarchy sample reaches Priya Monday so the partner policy is ready Tuesday"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Due: 2026-10-06 | Rule: PB-04 | Use: RC-07"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Why:* The open item depends on a customer file nobody tracks internally.\n> \"So that's the piece I'd want to validate rather than wave my hands at. If you can send me a sample of the partner hierarchy table, even fifty rows, I'll build the policy in the sandbox and show you it working. I can have that back to you by Tuesday the sixth.\"\n> Priya Raman, Solutions Consultant, at 36:08"
+   }
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*To do:* Send Mikkel the continuous sync release note Priya promised"
+   }
+  },
+  {
+   "type": "context",
+   "elements": [
+    {
+     "type": "mrkdwn",
+     "text": "Due: 2026-10-01 | Rule: PB-08 | Use: RC-12"
+    }
+   ]
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Why:* Promised in passing while correcting the deck; not in the checklist.\n> \"Good catch, and I should correct that. Actually Sam, that changed with the August release. The warehouse connector does continuous sync now, about a minute end to end. Hourly batch was the old behavior. I'll send the release note.\"\n> Priya Raman, Solutions Consultant, at 26:09"
+   }
+  },
+  {
+   "type": "divider"
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*You said you would*\n- Build the partner hierarchy policy in the sandbox (due 2026-10-06)\n- Send the release note on continuous sync (due no date)"
+   }
+  },
+  {
+   "type": "section",
+   "text": {
+    "type": "mrkdwn",
+    "text": "*Open technical items*\n- Row level access for partners with sub carriers"
+   }
+  }
+ ]
+}

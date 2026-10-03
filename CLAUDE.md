@@ -13,7 +13,7 @@ Python 3.11, anthropic SDK (1.x, uses httpx2), pydantic v2, Streamlit, SQLite, p
 - `python scripts/smoke_test.py`: live API probe, results in docs/API_NOTES.md
 
 ## Env
-`DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (live, record, replay; default replay), `ANTHROPIC_API_KEY`, `DEBRIEF_RERECORD=1` (record mode overwrites fixtures), `DEBRIEF_STEP_RULES_PLACEMENT` (see D-07).
+`DEBRIEF_MODEL` (default `claude-sonnet-5-5`), `DEBRIEF_MODE` (live, record, replay; default replay), `ANTHROPIC_API_KEY` (`DEBRIEF_API_KEY` is used as a fallback, set in `src/config.py`), `DEBRIEF_SLACK_BOT_TOKEN`, `DEBRIEF_SLACK_CHANNEL`, `DEBRIEF_SLACK_USERS`, `DEBRIEF_APP_URL` (optional Slack delivery, see README), `DEBRIEF_RERECORD=1` (record mode overwrites fixtures), `DEBRIEF_STEP_RULES_PLACEMENT` (see D-07).
 
 ## Hard rules for model calls
 1. All model calls go through `src/llm.py`. No `anthropic.Anthropic()` anywhere else (scripts/smoke_test.py is the only exception).

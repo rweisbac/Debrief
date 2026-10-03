@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "222ab3ec7d9fcad8ccf7d2e309db94c837e1fb8573e5b357347a68d04f299b73",
+ "recorded_at": "2026-10-03T18:19:47.415867+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CffmM5UaLmaHs99vDsE6D",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Reporting pipeline meets the need; daily list with drivers is something the team has asked for for two years\",\"strength\":\"strong\",\"qualifier\":\"Said by the end user and the champion; reporting is not the blocker, security review is\",\"evidence\":[{\"utterance_id\":\"U035\",\"excerpt\":\"That's actually the thing we've asked for for two years.\"},{\"utterance_id\":\"U056\",\"excerpt\":\"The reporting piece is exactly what Nora's team needs. I'm not worried about that.\"}]},{\"summary\":\"Potential expansion beyond 140 care managers if it works\",\"strength\":\"weak\",\"qualifier\":\"Said casually by the user, not a commitment\",\"evidence\":[{\"utterance_id\":\"U037\",\"excerpt\":\"About 140 across the three regions. Maybe more if it works.\"}]},{\"summary\":\"Champion will discuss pricing with finance after the committee clears\",\"strength\":\"moderate\",\"qualifier\":\"Conditional on security clearing; no finance contact named\",\"evidence\":[{\"utterance_id\":\"U077\",\"excerpt\":\"After, if it clears, then we'll talk pricing with finance.\"}]}],\"risk_signals\":[{\"summary\":\"Nested mhp_roles claim is not supported today; flat claims only. Native support timing unconfirmed\",\"strength\":\"strong\",\"qualifier\":\"SSO is the champion's top worry; Marcus has not confirmed a date\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"And mhp_roles is neither.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I believe the second is on the roadmap but I need to confirm the timing\"}]},{\"summary\":\"Workaround of a flat claim needs a token service change that takes six to eight weeks minimum and goes through Raj's review\",\"strength\":\"strong\",\"qualifier\":\"Stated by the identity engineer\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"It means it's six to eight weeks, minimum.\"}]},{\"summary\":\"Vendor security review gates everything; missing the October 9th packet deadline pushes to the November meeting\",\"strength\":\"strong\",\"qualifier\":\"Raj, who reviews, was absent and has not seen anything\",\"evidence\":[{\"utterance_id\":\"U056\",\"excerpt\":\"nothing moves until the vendor security review clears. That's Raj's committee, they meet October 9th.\"}]},{\"summary\":\"Customer declined to book a dated follow-up; will decide after seeing the SSO answer\",\"strength\":\"moderate\",\"qualifier\":\"Reasonable, but no dated next meeting\",\"evidence\":[{\"utterance_id\":\"U075\",\"excerpt\":\"Let's see what the answer is first. If it's simple, an email is fine.\"}]},{\"summary\":\"Open workflow question on notifying care managers when someone drops off the list; user calls it big\",\"strength\":\"weak\",\"qualifier\":\"Champion said it is not a blocker; parked\",\"evidence\":[{\"utterance_id\":\"U045\",\"excerpt\":\"It's a big workflow question for me, but yes, park it.\"}]}],\"exact_numbers\":[{\"value\":\"nine minutes\",\"what_it_measures\":\"Sandbox incremental pipeline run time on the de-identified extract\",\"evidence\":[{\"utterance_id\":\"U028\",\"excerpt\":\"Last night's run took nine minutes.\"}]},{\"value\":\"140\",\"what_it_measures\":\"Approximate care managers across the three regions\",\"evidence\":[{\"utterance_id\":\"U037\",\"excerpt\":\"About 140 across the three regions.\"}]},{\"value\":\"six to eight weeks, minimum\",\"what_it_measures\":\"Time for a change to the customer token service\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"It means it's six to eight weeks, minimum.\"}]},{\"value\":\"October 9th\",\"what_it_measures\":\"Date of the vendor security review committee meeting\",\"evidence\":[{\"utterance_id\":\"U056\",\"excerpt\":\"That's Raj's committee, they meet October 9th.\"}]},{\"value\":\"thirty, forty days\",\"what_it_measures\":\"Claims feed lag after the visit\",\"evidence\":[{\"utterance_id\":\"U040\",\"excerpt\":\"Some claims show up thirty, forty days after the visit.\"}]}],\"customer_dependencies\":[{\"summary\":\"Vendor security review committee approval before any pilot; complete packet needed to make the October 9th agenda\",\"owner\":\"Raj Patel's security committee, via Aisha Karim\",\"due\":\"2026-10-09\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U056\",\"excerpt\":\"If we hand them a complete packet before then, we're on that agenda. If not, it's the November meeting.\"}]},{\"summary\":\"Procurement sends the vendor questionnaire to Apex\",\"owner\":\"Aisha Karim / procurement\",\"due\":\"\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U063\",\"excerpt\":\"I'll have procurement send it. It's long.\"}]},{\"summary\":\"Leo must start the token change conversation if option one is chosen; change needs Raj's review\",\"owner\":\"Leo Brandt\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U071\",\"excerpt\":\"If the answer is option one, Leo needs to start the token change conversation now\"}]}],\"contradictions\":[],\"corrections\":[{\"original_statement\":\"Marcus said native nested claim support is believed to be on the roadmap\",\"corrected_statement\":\"Per RC-09, nested object claims are in private preview with no announced general availability date; only flat claims are supported today\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I believe the second is on the roadmap but I need to confirm the timing\"}]}],\"checklist_mismatches\":[{\"field\":\"dated_next_step\",\"logged_value\":\"blank\",\"transcript_says\":\"No dated meeting; Aisha will decide after the SSO answer. Packet due before the October 9th committee, and Jordan said he would send a recap note today\",\"evidence\":[{\"utterance_id\":\"U075\",\"excerpt\":\"Let's see what the answer is first. If it's simple, an email is fine.\"},{\"utterance_id\":\"U078\",\"excerpt\":\"I'll send a note today summarizing what we covered.\"}]},{\"field\":\"sc_commitment\",\"logged_value\":\"blank\",\"transcript_says\":\"Marcus committed to take the nested claim question to the identity team today and to get a usable answer for Leo\",\"evidence\":[{\"utterance_id\":\"U023\",\"excerpt\":\"I'll take that to our identity team today.\"},{\"utterance_id\":\"U073\",\"excerpt\":\"I'll get you something you can actually put in front of him.\"}]},{\"field\":\"stakeholder_to_add\",\"logged_value\":\"Raj Patel, security\",\"transcript_says\":\"Raj is confirmed as the reviewer, and he is already a CRM contact; the committee reviews everything and finance comes later with no name given\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"he'll be the one who reviews whatever we pick.\"},{\"utterance_id\":\"U077\",\"excerpt\":\"then we'll talk pricing with finance.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 6753,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6753,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 2363,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}
