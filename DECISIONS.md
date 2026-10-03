@@ -15,7 +15,7 @@ Debrief, a post-demo playbook for Enterprise technical validation (TV) demos at 
 - What I changed: added offline checks against the installed SDK (1.11.0) using a mock transport. They confirm the SDK sends `output_config = {effort, format}` in one request and parses JSON when a thinking block comes first. docs/API_NOTES.md marks every API-level claim as "pending live run".
 - Evidence of fix (eval or test, before and after): docs/smoke_results.json, status "skipped", offline section all true.
 - What I would do in production: run the smoke test in CI on every SDK or model bump, and block deploys when a probe changes.
-- Open item, updated 2026-10-03: the recording run exercised probes (a), (b), (c), (d) and (f) live (see docs/API_NOTES.md). The temperature rejection probe (e) and `python scripts/smoke_test.py` itself have not been run.
+- Update 2026-10-03: the live smoke test has since been run, and the recording run exercised the same calls in the full chain. Results are in docs/API_NOTES.md. Still open: running the smoke test in CI.
 
 ## D-02: refusal fallbacks left off (skill vs prompt conflict)
 - Step and prompt version: checkpoint 0, src/llm.py design

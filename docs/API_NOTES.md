@@ -6,12 +6,12 @@ Source of truth for what `src/llm.py` sends. Raw results: `docs/smoke_results.js
 
 | Check | Status | Result |
 |---|---|---|
-| (a) `client.messages.parse(output_format=PydanticModel)` on `claude-sonnet-5-5` | Verified live | 76 calls on `claude-sonnet-5-5` parsed. One finding: a single large schema was rejected with 400 "compiled grammar is too large" (see D-14) |
-| (b) `output_config={"effort": ...}` in the same call | Verified live | accepted in the same call as `output_format` on every step |
-| (c) content block types returned | Verified live | across 76 recorded responses, 48 had only a `text` block and 28 had `thinking` then `text`. All 76 ended `end_turn` |
-| (d) cache read on repeated stable prefix | Verified live | Measured 2026-10-03: reads of about 3.4k to 5.5k tokens per call, zero on the first deal. See README, Cost and latency. No savings claimed |
-| (e) `temperature` rejected with 400 | Pending live run | Offline: `parse()` in SDK 1.11.0 has no `temperature`, `top_p` or `top_k` parameter at all |
-| (f) step rules as a mid-conversation `{"role": "system"}` message | Verified live | Accepted live 2026-10-03 under the default `mid_conversation_system` placement; no call used the `top_system` fallback. Whether the transcript prefix is cached across steps is not established (see D-07) |
+| (a) `client.messages.parse(output_format=PydanticModel)` on `claude-sonnet-5-5` | Verified live 2026-10-03 | `end_turn`, `parsed_output` filled. The recording run parsed all 76 live calls. One finding: a single large schema was rejected with 400 "compiled grammar is too large" (D-14) |
+| (b) `output_config={"effort": ...}` in the same call | Verified live 2026-10-03 | `low` and `medium` both accepted, and every recorded step used it in the same call as `output_format` |
+| (c) content block types returned | Verified live 2026-10-03 | The smoke probes returned only `text` blocks. Across the 76 recorded responses, 48 had only `text` and 28 had `thinking` then `text`. Reading by type is required |
+| (d) cache read on repeated stable prefix | Verified live 2026-10-03 | Smoke probe: d1 wrote 10,019 tokens, d2 read 10,019. In the full chain, calls read only about 3.4k to 5.5k tokens (zero on the first deal) while writing 6.7k to 11k new tokens, so the transcript prefix is not shown to be reused across steps. Cause not established. No dollar savings claimed |
+| (e) `temperature` rejected with 400 | Verified live 2026-10-03 | 400 `invalid_request_error`: "`temperature` is deprecated for this model." |
+| (f) step rules as a mid-conversation `{"role": "system"}` message | Verified live 2026-10-03 | Accepted, `end_turn`. All 76 recorded calls used the default placement; `top_system` fallback not needed (D-07) |
 | parse() on truncated JSON | Verified offline | Raises pydantic ValidationError and hides stop_reason; llm.py reads the raw body via an httpx2 response hook (D-08) |
 
 "Offline" means verified against the installed SDK with a mock HTTP transport. It shows what the SDK sends, not what the API accepts.
@@ -53,8 +53,8 @@ Never sent: `temperature`, `top_p`, `top_k`, `thinking`, assistant prefill, `too
 
 ## Fill in after the live run
 
-- Observed block types per probe:
-- Effort accepted (low, medium):
-- Temperature probe status code and message:
-- cache_creation_input_tokens on d1, cache_read_input_tokens on d2:
-- Latency per probe:
+- Observed block types per probe: `text` only.
+- Effort accepted (low, medium): yes, both.
+- Temperature probe status code and message: 400, "`temperature` is deprecated for this model."
+- cache_creation_input_tokens on d1, cache_read_input_tokens on d2: 10,019 and 10,019 on the first run.
+- Latency per probe: about 2.0 to 3.6 seconds, see docs/smoke_results.json.

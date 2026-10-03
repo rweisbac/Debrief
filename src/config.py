@@ -6,6 +6,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
+def apply_api_key_alias(env=os.environ) -> None:
+    """Treat DEBRIEF_API_KEY as ANTHROPIC_API_KEY. An explicit ANTHROPIC_API_KEY wins."""
+    if not env.get("ANTHROPIC_API_KEY") and env.get("DEBRIEF_API_KEY"):
+        env["ANTHROPIC_API_KEY"] = env["DEBRIEF_API_KEY"]
+
+
+apply_api_key_alias()
+
 MODEL = os.environ.get("DEBRIEF_MODEL", "claude-sonnet-5-5")
 MODE = os.environ.get("DEBRIEF_MODE", "replay")  # live, record, replay
 if MODE not in {"live", "record", "replay"}:

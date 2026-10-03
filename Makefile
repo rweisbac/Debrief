@@ -1,4 +1,4 @@
-.PHONY: test smoke style record eval ablation candidates demo samples
+.PHONY: test smoke style record eval ablation candidates demo samples watch serve screenshots
 
 test:
 	python -m pytest -q
@@ -32,3 +32,14 @@ demo:
 # Rebuild the hand-written sample cards (fixtures/samples) through the real rules and checks.
 samples:
 	python scripts/build_samples.py
+
+# Automatic trigger: debrief each new TV transcript (see src/ingest.py). watch polls; serve is the webhook receiver.
+watch:
+	python -m src.ingest watch
+
+serve:
+	python -m src.ingest serve
+
+# Screenshots of the offline demo for walkthroughs (needs playwright).
+screenshots:
+	python scripts/take_screenshots.py
