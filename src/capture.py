@@ -113,7 +113,7 @@ def score(record: CaptureRecord, transcript: Transcript, crm: dict, as_of: date)
         resolved = [e for e in f.evidence if transcript.resolve_evidence(e.utterance_id, e.excerpt)[0]]
         if f.basis == BasisEnum.none:
             conf = 0.0
-            signals.append("No basis in the call")
+            signals.append("Not found in the call; add it if there is one")
         else:
             if not f.evidence:
                 cap(CAP_NO_EVIDENCE, "No line from the call cited")
@@ -309,6 +309,10 @@ def simulate_threshold(threshold: float, simulated: bool = False, db_path: Path 
 
 # Stakeholder map (code only, no model call)
 
+# An absent person gets a brief only when they are part of the decision (signs, approves, reviews, owns budget).
+DECISION_RE = re.compile(r"\b(sign|approv|budget|econom|decid|decision|review|security|cfo|coo|ceo|cto|cio|vp|"
+                         r"vice president|director|head of|chief|committee|boss|procurement|legal|finance)", re.I)
+
 def stakeholder_map(extraction: dict, crm: dict, final: dict[str, dict]) -> list[dict]:
     """One row per customer stakeholder from the call record. Stance is supportive only for the confirmed
     champion, concerned only for someone who raised a concern that is still open, and unknown otherwise:
@@ -325,7 +329,7 @@ def stakeholder_map(extraction: dict, crm: dict, final: dict[str, dict]) -> list
         name = s["name"]
         evidence = (s.get("evidence") or [{}])[0].get("utterance_id", "")
         if champ_name and _names_match(name, champ_name):
-            stance, touch = "supportive", "Send the recap written so they can forward it unedited (BP-03)"
+            stance, touch = "supportive", "Send the recap written so they can forward it unedited (PB-01)"
         elif name in open_by:
             stance = "concerned"
             touch = f"Answer their open concern in writing: {open_by[name]['summary']}"
@@ -333,10 +337,13 @@ def stakeholder_map(extraction: dict, crm: dict, final: dict[str, dict]) -> list
         else:
             stance, touch = "unknown", "Include on the recap"
         if not s.get("present", True):
+            matters = DECISION_RE.search(f"{s.get('title', '')} {s.get('why_they_matter', '')}")
             if eb_name and _names_match(name, eb_name):
-                touch = "Brief through the champion before any commercials: outcome, risk, time to value (BP-05)"
+                touch = "Brief through the champion before any commercials: outcome, risk, time to value (PB-03)"
+            elif matters:
+                touch = "Give the champion a 1 page brief that answers this person's likely question (PB-05)"
             else:
-                touch = "Give the champion a 1 page brief that answers this person's likely question (BP-04)"
+                touch = "No action: mentioned in passing, not part of the decision"
         rows.append({"name": name, "role": s.get("title") or s.get("why_they_matter", ""),
                      "present": bool(s.get("present", True)), "stance": stance, "next_touch": touch,
                      "evidence_utterance_id": evidence})

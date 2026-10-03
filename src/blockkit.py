@@ -170,6 +170,14 @@ def _select(capture_id: str, field: str, part: str, current: str) -> dict:
     return sel
 
 
+def ask_summary(asked: int) -> str:
+    if asked == 0:
+        return "All 4 confirmed by the agent; check them and tap Confirm all."
+    if asked == 4:
+        return "All 4 need your call this time."
+    return f"{asked} of 4 need your call; the agent confirmed the rest."
+
+
 def capture_card(cap: dict, routing: dict, crm: dict, values: dict | None = None) -> dict:
     """Interactive Slack card. Fields the agent is sure of are one line with a check; fields that need the AE get
     tap-to-select menus (enums) or an Edit button (text, opens a modal). One Confirm all button submits.
@@ -181,8 +189,8 @@ def capture_card(cap: dict, routing: dict, crm: dict, values: dict | None = None
     blocks: list[dict] = [
         {"type": "header", "text": {"type": "plain_text", "text": f"Confirm the demo: {crm['account']}"[:150]}},
         {"type": "context", "elements": [_text(
-            f"Pre-filled from the call. {len(asked)} of 4 need you; the rest are confirmed by the agent. "
-            "About 30 seconds." + (f" _{cap['sample_label']}_" if cap.get("sample_label") else ""))]},
+            "Pre-filled from the call. " + ask_summary(len(asked)) + " About 30 seconds."
+            + (f" _{cap['sample_label']}_" if cap.get("sample_label") else ""))]},
     ]
     for f in FIELDS:
         s = cap["scored"][f]
@@ -211,7 +219,8 @@ def capture_card(cap: dict, routing: dict, crm: dict, values: dict | None = None
         why = routing[f]["reason"]
         if s["quotes"]:
             q = s["quotes"][0]
-            why += f"\n> \"{q['text'][:220]}\"\n> {q['speaker']}, at {q['timestamp']}"
+            text = q["text"] if len(q["text"]) <= 220 else q["text"][:217].rsplit(" ", 1)[0] + "..."
+            why += f"\n> \"{text}\"\n> {q['speaker']}, at {q['timestamp']}"
         blocks.append({"type": "context", "elements": [_text(why)]})
     blocks.append({"type": "actions", "block_id": "cap_submit", "elements": [
         {"type": "button", "action_id": f"cap_confirm|{cid}", "style": "primary",

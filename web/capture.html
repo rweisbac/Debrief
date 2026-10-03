@@ -120,9 +120,8 @@ function editor(f) {
 
 function render() {
   const c = state.card;
-  const asked = c.fields.filter(f => f.mode === "ask").length;
   let html = `<h1>Confirm the demo: ${esc(c.account)}</h1>
-    <p class="sub">Meeting ${esc(c.meeting_date)} with ${esc(c.ae)}. Pre-filled from the call: ${asked} of 4 need you, the rest are confirmed by the agent.</p>`;
+    <p class="sub">Meeting ${esc(c.meeting_date)} with ${esc(c.ae)}. Pre-filled from the call. ${esc(c.ask_summary)}</p>`;
   if (c.sample_label) html += `<p class="banner">${esc(c.sample_label)}</p>`;
   for (const f of c.fields) {
     const v = state.values[f.field];
@@ -194,7 +193,7 @@ function renderPayoff(p, session) {
   let html = "";
   if (p.refresh_note) html += `<p class="banner">${esc(p.refresh_note)}</p>`;
   if (p.sample_label) html += `<p class="banner">${esc(p.sample_label)}</p>`;
-  html += `<div class="card"><h2>Next best steps</h2><p class="sub">${esc(p.deal_state.replaceAll("_", " "))}. ${esc(p.deal_state_why)}</p>`;
+  html += `<div class="card"><h2>Next best steps</h2><p class="sub"><b>${esc(p.deal_state_label)}.</b> ${esc(p.deal_state_why)}</p>`;
   for (const [i, s] of p.next_steps.entries()) {
     html += `<div class="step"><b>${i === 0 ? "Most important" : "Step " + (i + 1)}:</b> ${esc(s.action)}
       <div class="meta">Owner: ${esc(s.owner)} | Due: ${esc(s.due_by || "no date")} | Playbook ${esc(s.playbook_rule_id)}${s.release_card_id ? " | Use " + esc(s.release_card_id) : ""}</div>
@@ -213,6 +212,7 @@ function renderPayoff(p, session) {
   html += `<div class="card"><h2>Written to CRM</h2><div class="scroll"><table>` + Object.entries(p.crm_written).map(([k, v]) =>
     `<tr><th>${esc(k)}</th><td>${esc(v || "blank")}</td></tr>`).join("") + `</table></div></div>`;
   el.innerHTML = html;
+  el.querySelectorAll("textarea").forEach(t => { t.style.height = (t.scrollHeight + 4) + "px"; });
   el.scrollIntoView({behavior: "smooth"});
   if (p.refreshing) setTimeout(async () => renderPayoff(await (await fetch(`/api/payoff/${dealId}`)).json(), session), 60000);
 }

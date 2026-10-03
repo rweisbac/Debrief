@@ -56,7 +56,10 @@ def test_confirm_stores_labels_writes_crm_and_returns_payoff(client, tmp_path):
     assert pay["available"] and pay["next_steps"] and pay["recap"]["body"]
     names = {s["name"]: s for s in pay["stakeholders"]}
     assert names["Dana Ortiz"]["stance"] == "supportive"
-    assert names["Elena Varga"]["present"] is False and "BP-05" in names["Elena Varga"]["next_touch"]
+    assert names["Elena Varga"]["present"] is False and "PB-03" in names["Elena Varga"]["next_touch"]
+    for n, row in names.items():  # someone mentioned in passing (the macro author) gets no brief
+        if not row["present"] and n != "Elena Varga":
+            assert row["next_touch"].startswith("No action"), n
     m = client.get("/metrics").json()
     assert m["measured"]["sessions"] == 1 and m["simulated"]["sessions"] == 0
 

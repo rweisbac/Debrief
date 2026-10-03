@@ -88,6 +88,8 @@ def capture_card(deal_id: str) -> dict:
                    for f in capture.FIELDS],
         "options": {k: [{"value": v, "label": l} for v, l in opts] for k, opts in capture.ENUM_OPTIONS.items()},
         "confirmed": bool(session),
+        "ask_summary": __import__("src.blockkit", fromlist=["ask_summary"]).ask_summary(
+            sum(1 for f in capture.FIELDS if routing[f]["mode"] == "ask")),
     }
 
 
@@ -147,6 +149,8 @@ def payoff(deal_id: str, final: dict) -> dict:
     return {
         "available": True, "source": source, "sample_label": record.get("sample_label", ""),
         "deal_state": a.get("deal_state", ""), "deal_state_why": a.get("deal_state_why", ""),
+        "deal_state_label": __import__("src.blockkit", fromlist=["STATE_LABELS"]).STATE_LABELS.get(
+            a.get("deal_state", ""), a.get("deal_state", "")),
         "next_steps": steps,
         "recap": {"subject": (recap.get("current") or {}).get("subject", ""),
                   "body": (recap.get("current") or {}).get("body", ""),
@@ -185,6 +189,41 @@ def meetings(body: MeetingBody) -> dict:
                                    ledger_path=base / "ledger.json")
     except Exception as e:  # bad transcript format or missing CRM keys; report, do not crash the server
         raise HTTPException(422, f"{type(e).__name__}: {e}"[:300])
+
+
+# Slack preview: renders the exact Block Kit JSON the app posts, in Slack's style, for demos and screenshots
+
+@app.get("/preview/slack/{deal_id}")
+def slack_preview_page(deal_id: str) -> FileResponse:
+    _deal(deal_id)
+    return FileResponse(WEB / "slack_preview.html")
+
+
+@app.get("/api/preview/slack/{deal_id}")
+def slack_preview(deal_id: str, kind: str = "capture") -> dict:
+    from src import blockkit
+    from src.transcript import load_transcript
+    crm = _deal(deal_id)
+    if kind == "capture":
+        cap, _ = service.load_capture(deal_id)
+        if not cap:
+            raise HTTPException(404, "no capture for this deal")
+        session = capture.session_for(cap["capture_id"])
+        if session:
+            final = {l["field"]: json.loads(l["ae_value"]) for l in session["labels"]}
+            corrected = [l["field"] for l in session["labels"] if l["was_corrected"]]
+            record, _ = service.load_debrief(deal_id)
+            card = blockkit.capture_done_card(cap, crm, {"final": final, "corrected": corrected}, record)
+        else:
+            card = blockkit.capture_card(cap, service.card_routing(cap, crm["owner_ae"]), crm)
+    elif kind == "debrief":
+        record, _ = service.load_debrief(deal_id)
+        if not record:
+            raise HTTPException(404, "no debrief for this deal")
+        card = blockkit.card(record, load_transcript(deal_id), crm)
+    else:
+        raise HTTPException(400, "kind is capture or debrief")
+    return {"account": crm["account"], "ae": crm["owner_ae"], "blocks": card["blocks"]}
 
 
 # Metrics
