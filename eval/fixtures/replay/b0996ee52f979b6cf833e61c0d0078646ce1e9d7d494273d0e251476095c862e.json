@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b0996ee52f979b6cf833e61c0d0078646ce1e9d7d494273d0e251476095c862e",
+ "recorded_at": "2026-10-04T00:34:43.117901+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFx5EBkpon44Tip7fAF",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Pinehurst Hotels Europe: recap of today's technical validation\",\"body\":\"Hi Charlotte, Matteo and Ivy,\\n\\nThank you for your time today. Here is where we landed.\\n\\nShown today: Frankfurt hosting with backups and audit logs, a tenant setting that restricts support access to EU based staff, and guest profile unification across your three booking systems, which merged 2.1 million records into 1.4 million profiles. Low confidence matches go to a review queue where your team approves or splits them.\\n\\nOpen on keys: you can hold your own keys in a major cloud key service, but on premises HSMs are not supported. Matteo will check with the group security office whether policy allows a cloud key service for guest data.\\n\\nFrom Elena: the encryption whitepaper with the key hierarchy today, and the exact support access contract wording by Wednesday, October 7th.\\n\\nIf it would help the group security office, we are glad to join a call with them. Is there a date that works on your side for the next conversation?\\n\\nBest,\\nSean\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"The tenant can be pinned to the Frankfurt region, including backups and audit logs.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"Matching merged 2.1 million records into 1.4 million profiles.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Low confidence matches go to a review queue. Your team approves or splits them.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"You can hold your keys in a major cloud key service. On premises HSMs are not supported.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send it today.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4987,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5549,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 680,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

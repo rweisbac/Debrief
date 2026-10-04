@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "2e6bce3b953317a997fdf4d2a061f39c62553b44c8083362c392ebf691cfebb6",
+ "recorded_at": "2026-10-04T00:33:17.315042+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFqTJ2q48gAAb6tRbbL",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Liam wants analysts to have fresh fraud features; today features are an hour stale.\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"}]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"Liam said \\\"Let's talk next week\\\" but no specific date or meeting was set.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"Let's talk next week.\"}]},\"objections\":[{\"summary\":\"Helen requires three year minimum terms and quarterly in arrears payment, no annual up front.\",\"raised_by\":\"Helen Brooks\",\"status\":\"open\",\"answer_given\":\"Nora said she would check with deal desk.\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"I'll need to check that with our deal desk.\"}]},{\"summary\":\"Helen needs a cost comparison against building in house before anything is signed this year; engineering lead thinks they can build it in six months.\",\"raised_by\":\"Helen Brooks\",\"status\":\"open\",\"answer_given\":\"Liam said they can't build it; no comparison was offered.\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"nothing gets signed this year without a cost comparison against building it ourselves.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Maybe not. But I need the comparison.\"}]}],\"open_technical_items\":[{\"summary\":\"Whether case export supports the customer's custom fields; Ravi unsure and needs to test on their case tool after receiving the field list.\",\"owner\":\"Ravi Shah\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Does case export support our custom fields?\"},{\"utterance_id\":\"U010\",\"excerpt\":\"I believe so, but I'd want to test it on your case tool.\"}]}],\"integration_patterns\":[{\"summary\":\"Card transaction stream feeds fraud features into the customer's scoring model, with case export to their case tool.\",\"evidence\":[{\"utterance_id\":\"U007\",\"excerpt\":\"Here are the fraud features feeding your scoring model, and the case export to your case tool.\"}]}],\"commitments\":[{\"who\":\"Zara Ahmed\",\"side\":\"customer\",\"what\":\"Send the case tool custom field list\",\"by_when\":\"2026-10-03\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"Sure, I'll send it tomorrow.\"}]},{\"who\":\"Ravi Shah\",\"side\":\"apex\",\"what\":\"Test custom fields in case export once Zara sends the list\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"I'll test the custom fields once Zara sends the list.\"}]},{\"who\":\"Nora Quinn\",\"side\":\"apex\",\"what\":\"Check Helen's contract terms (three year minimum, quarterly in arrears) with deal desk\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"I'll need to check that with our deal desk.\"}]}],\"stakeholders\":[{\"name\":\"Liam O'Connor\",\"title\":\"Fraud Analytics Lead\",\"present\":true,\"why_they_matter\":\"Champion; owns fraud analytics need\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"}]},{\"name\":\"Zara Ahmed\",\"title\":\"Data Engineer\",\"present\":true,\"why_they_matter\":\"Technical evaluator\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Does case export support our custom fields?\"}]},{\"name\":\"Helen Brooks\",\"title\":\"CFO\",\"present\":true,\"why_they_matter\":\"Sets commercial terms and requires cost comparison before signing\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"nothing gets signed this year without a cost comparison against building it ourselves.\"}]},{\"name\":\"Engineering lead (unnamed)\",\"title\":\"Engineering lead\",\"present\":false,\"why_they_matter\":\"Believes they can build this in six months; build option rival\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Our engineering lead thinks they can build this in six months.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2180,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2180,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1470,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

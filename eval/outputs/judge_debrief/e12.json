@@ -1,0 +1,395 @@
+{
+ "deal_id": "e12",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Signature depends on board technology committee approval or an exception Neil is unsure he can get; the board meets in November with no date set.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Neil said he is not certain and gave end of month only with an exception, otherwise after the November meeting."
+  },
+  {
+   "claim": "Neil's end of month signature is conditional on the board, so the recap and order form alone do not help him get approval.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Conditionality is stated; the inference about the order form is reasonable."
+  },
+  {
+   "claim": "Rosa committed to set up the mid term endorsements demo and send a recording by Tuesday, October 6th.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rosa stated the task and the exact date."
+  },
+  {
+   "claim": "The CRM sc_commitment field is empty.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "The CRM shows an empty sc_commitment value."
+  },
+  {
+   "claim": "CRM shows signature by Oct 30, but Neil said signature depends on a board exception, otherwise after the November meeting.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM dated_next_step is Signature by Oct 30; Neil's conditional statement is in U016."
+  },
+  {
+   "claim": "The demo covered the policy pricing model, the claims dashboard and the governance setup.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U001",
+    "U004",
+    "U007",
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "All three areas were announced and shown."
+  },
+  {
+   "claim": "Rating factors are versioned.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rosa said rating factors are versioned."
+  },
+  {
+   "claim": "The new and current models can run side by side for any date range.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rosa said both can run side by side for any date range."
+  },
+  {
+   "claim": "The claims dashboard shows loss ratio by line and by region.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated by Rosa."
+  },
+  {
+   "claim": "Only the pricing committee role can change rating factors, and every change is logged.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated by Rosa."
+  },
+  {
+   "claim": "Mid term endorsements were not in the demo; Amira needs to see how the model handles them.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Amira said it was not in the demo and Rosa agreed."
+  },
+  {
+   "claim": "Neil mentioned the board's technology committee may need to review the purchase and that the board meets in November.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Amira raised the committee; Neil confirmed technically and said the board meets in November."
+  },
+  {
+   "claim": "Victor is sending the order form and a recap today.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Victor said he would send both today."
+  },
+  {
+   "claim": "Amira said the loss ratio report is monthly today and daily would change how they reprice.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct paraphrase of Amira."
+  },
+  {
+   "claim": "The pricing model was shown on the customer's policy extract.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rosa said it was shown on their policy extract."
+  },
+  {
+   "claim": "The claims dashboard is refreshed daily.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rosa said refreshed daily."
+  },
+  {
+   "claim": "Neil said the governance setup is what the regulator asks about.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Neil said that is what the regulator asks about."
+  },
+  {
+   "claim": "Amira said purchases over 300 thousand went through the board's technology committee last year.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct paraphrase of Amira."
+  },
+  {
+   "claim": "Neil said end of month signature only if he gets an exception, otherwise after the November meeting.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Conditional timing is accurately captured."
+  },
+  {
+   "claim": "No Apex answer was given to the board approval objection; status open.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U015",
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Apex only asked and offered the order form; no answer on board path."
+  },
+  {
+   "claim": "What the board technology committee needs and whether an exception is possible is not stated, and no owner is named.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Transcript gives no details or owner."
+  },
+  {
+   "claim": "No dated next meeting was agreed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No meeting was scheduled in the transcript."
+  },
+  {
+   "claim": "Neil Patterson is the Chief Data Officer, champion, present; he said he would sign by end of month, then made it conditional.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM shows champion and CDO; U002 and U016 show the statements."
+  },
+  {
+   "claim": "Amira Saleh is the Analytics Manager and technical evaluator, who raised the board requirement and the endorsements gap.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM and transcript confirm role and both points."
+  },
+  {
+   "claim": "The board technology committee is absent, approves purchases over 300 thousand, and meets in November.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated by Amira and Neil."
+  },
+  {
+   "claim": "The actuaries are absent and will want to compare the model to the current one.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Amira said actuaries will want to compare."
+  },
+  {
+   "claim": "The mid term endorsements gap stays open until the recording is delivered.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Follows from the open request and Rosa's pending commitment."
+  },
+  {
+   "claim": "No customer step was agreed beyond the order form request.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U012",
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Only Neil's order form request appears as a customer-driven step."
+  },
+  {
+   "claim": "Apex sets up the mid term endorsements demo and sends Amira the recording by 2026-10-06, agreed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018",
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rosa committed to that date and Amira acknowledged."
+  },
+  {
+   "claim": "Apex sends the order form and a recap to Neil on 2026-10-01, agreed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U012",
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Neil asked for the order form and Victor said he'd send today, Oct 1."
+  },
+  {
+   "claim": "Victor should confirm with Neil whether the committee must approve, what it needs, and whether an exception is possible; no date, proposed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Marked proposed; follows from Neil's unclear board path."
+  },
+  {
+   "claim": "Board technology committee approval or an exception is needed before signing, proposed with no date.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Marked proposed; matches Neil's conditions for signing."
+  },
+  {
+   "claim": "Actuaries compare the pricing model to the current model side by side, with Amira and Rosa as owners; no date, proposed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Marked proposed; owners are inferred but consistent with the exchange."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.061713
+}

@@ -4,7 +4,7 @@ Every [CONFIRM] in the interview files and every objection with weak evidence. H
 
 ## Blocking before the panel
 
-1. **Eval numbers for the 15 new transcripts are missing.** Every `[CONFIRM: eval]` in `objections.md` and `answers.md` is empty because the API key returned 400 "credit balance is too low" on every call. Accuracy (objection 4) currently rests only on the repo's 5 dev-set deals. Fix: run `eval/run.py` and `eval/score.py` once the key has credit.
+1. **The commitment comparison rests on a post hoc hand review.** The scored judge count went against Debrief, 23 to 17 [eval] `eval/results.md`. The reading that only 6 of Debrief's flags are real, against 16 for the baseline, is 1 reviewer's classification after seeing results [eval] `eval/hand_review.md`. If a panelist pushes, lead with the scored tie and the scored loss, then explain the classification. Fix before relying on it: have a second person label the 40 flags blind.
 2. **Your GTM years and roles (objection 8).** The posting asks for 6+ years in GTM [external] F1. Nothing in the repo covers your background. Fill it in your own words.
 3. **Why you are leaving a Director role (objection 12).** Entirely yours to write. Keep employer details out.
 4. **How much you built versus the AI coding tool (objection 8 follow-up).** DECISIONS.md is framed as "where the AI output was wrong" [repo]. Expect this question; have a clear, honest split ready.
@@ -22,6 +22,14 @@ The network policy in this session blocked every external URL, so none of F1 to 
 11. **F8 Braze customer and ARR figures.** Not used in the answers. If you use them, check against the press release.
 12. **F10 hallucination benchmarks.** Used only to say benchmarks disagree; low risk.
 
+## Eval claims to state carefully
+
+- **Keyword recall and flagging saturated** at 100% or near it for both systems [eval] `eval/results.md`. Do not cite them as evidence Debrief is better.
+- **The judge is 1 uncalibrated call** from the same model family as both systems [repo] `eval/prompts/claim_judge_v1.md`.
+- **Same author wrote the transcripts, gold labels and both prompts.** The baseline prompt was fixed before results, but it is still 1 person's generic prompt [repo] `eval/prompts/baseline_v1.md`.
+- **Debrief ran with the default profile** (best practice off), the same configuration as the recorded runs [repo] `src/config.py`.
+- **Wall clock was measured with 4 cases running at once**, so per-case times include contention [repo] `eval/run.py`.
+
 ## Repo claims to state carefully
 
 13. **Gong MCP server is read-only and returns no raw transcripts** [repo] `README.md`. Written by the builder; may have changed. Confirm before saying it.
@@ -38,7 +46,7 @@ The network policy in this session blocked every external URL, so none of F1 to 
 | 2 | 8. Consultant vs builder | GTM tenure not in the repo; AI-assisted build needs a clear story |
 | 3 | 2. Is the problem real | No user research; only external, partly secondary data |
 | 4 | 9. Braze's own agent products | Secondary source only; products not used |
-| 5 | 4. Accuracy | New eval not yet run; dev-set numbers only |
+| 5 | 4. Accuracy | Supported claims tie at 93%; the commitment advantage is post hoc; keyword metrics saturated |
 | 6 | 3. Why not Gong | Gong's features unverified and untested |
 | 7 | 5. Adoption | Design only; no user has touched it |
 | 8 | 11. First 90 days | Plan is a hypothesis by nature |

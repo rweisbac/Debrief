@@ -1,0 +1,300 @@
+{
+ "deal_id": "e13",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Dedicated-cluster latency has not been measured.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Mateo said he has not measured it on a dedicated cluster."
+  },
+  {
+   "claim": "On the shared sandbox, the 99th percentile end to end latency was 3.8 seconds.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Mateo stated 3.8 seconds at the 99th percentile."
+  },
+  {
+   "claim": "On the shared sandbox, median end to end latency was 1.4 seconds.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated in U003."
+  },
+  {
+   "claim": "The crane telemetry sample ran at about 15 thousand events a second at peak.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated in U003."
+  },
+  {
+   "claim": "Crane operators need data in under 2 seconds.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Henrik said it and CRM records it as the outcome."
+  },
+  {
+   "claim": "Henrik said the 99th percentile is the problem and 3.8 seconds is too slow for operators.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct from U004."
+  },
+  {
+   "claim": "Mateo agreed the 99th percentile is an issue and the sandbox is a shared cluster.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Mateo said 'Agreed' and described the shared cluster."
+  },
+  {
+   "claim": "Mateo expects lower latency on a dedicated cluster but gave no number.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "He said he'd expect it lower, unmeasured, and would not give a number."
+  },
+  {
+   "claim": "Mateo will run the same test on a dedicated cluster and send results by Thursday, October 8th.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U006",
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Mateo committed with that date; Oct 8, 2026 is a Thursday."
+  },
+  {
+   "claim": "Henrik said the dedicated-cluster result decides it for them.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Henrik said 'That decides it for us.'"
+  },
+  {
+   "claim": "Henrik's 'decides it for us' is champion enthusiasm, not a purchase decision.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No decision or buyer was stated; the CRM has no economic buyer."
+  },
+  {
+   "claim": "Berth schedule model shows berth conflicts 72 hours ahead from vessel arrival estimates.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated in U009."
+  },
+  {
+   "claim": "Berth conflicts raise an alert to the duty manager.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated in U013."
+  },
+  {
+   "claim": "Henrik gave little reaction to the berth model or alerting.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "He only said 'Fine. Latency is the real question.'"
+  },
+  {
+   "claim": "Vessel estimates come from a port community system over an old message format.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Yuki described this in U010."
+  },
+  {
+   "claim": "Mateo has not seen the vessel message format, so Apex's ability to read it is unconfirmed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Mateo said he hasn't seen the format."
+  },
+  {
+   "claim": "Yuki will send a sample file of the message format today.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Yuki said 'I'll send one today.' Demo day is Oct 2."
+  },
+  {
+   "claim": "Review of dedicated results is set for Monday, October 12th, 9 am customer time.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U015",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Henrik gave that date and time; CRM also shows Oct 12."
+  },
+  {
+   "claim": "Olivia will send the invite for the October 12 review.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Olivia said 'Booked. I'll send the invite.'"
+  },
+  {
+   "claim": "No economic buyer or decision process has been named.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM economic_buyer is empty and decision process is 'Not discussed'; the transcript names none."
+  },
+  {
+   "claim": "Technical validation began September 14, 2026.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM tv_entered_at is 2026-09-14."
+  },
+  {
+   "claim": "The latency pass bar has not been confirmed in writing; Henrik only said under 2 seconds is needed.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U002",
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "No explicit pass criterion was stated beyond under 2 seconds and the 99th percentile complaint."
+  },
+  {
+   "claim": "Henrik Larsen is the champion and Yuki Tanaka is the technical evaluator, both present.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U001",
+    "U002",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM roles; both spoke on the call."
+  },
+  {
+   "claim": "If the dedicated cluster misses under 2 seconds at the 99th percentile, Henrik's deciding factor turns against Apex.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U004",
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Follows from the p99 complaint and 'decides it for us'; stated as conditional."
+  },
+  {
+   "claim": "The sandbox median met the under 2 second need but the 99th percentile did not, so the outcome is not yet shown.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002",
+    "U003",
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "1.4s median and 3.8s p99 against under 2s; flagged as not yet shown."
+  },
+  {
+   "claim": "Ask Henrik who signs off and whether that person can join the October 12 review, owned by Olivia, due 2026-10-05.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "A proposed action; the date is the system's own and marked proposed, not attributed to the customer."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.051387
+}

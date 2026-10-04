@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "22514a2f3390b1bc81951a9c04d444ca4649df67b4fca832c57f1c053217178e",
+ "recorded_at": "2026-10-04T00:34:44.627304+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFwrLXprLzFMqBXcHZ8",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: technical demo went well per champion, but CFO set commercial conditions (three year minimum, quarterly in arrears, build-versus-buy cost comparison) and no dated next meeting exists.\",\"customer_value_line\":\"Liam said \\\"Today features are an hour stale\\\" and that the demo is what his analysts need; the CRM outcome 'within seconds' was prefilled from discovery and was not said in this call.\",\"what_we_validated\":[\"Card transaction sample streamed at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds (U003)\",\"Stream backlog behavior: events queue and catch up in order, nothing dropped; sandbox 10 minute outage caught up in about 90 seconds (U005)\",\"Fraud features feeding the scoring model and case export to the case tool were shown (U007)\",\"Liam said he thinks they are in good shape technically; this is the champion's opinion only (U012)\"],\"integration_patterns\":[\"Card transaction stream feeds fraud features into the customer's scoring model, with case export to their case tool (U007)\"],\"objections_and_answers\":[\"Helen: three year terms minimum, no annual up front, quarterly in arrears only. Answer: Nora to check with deal desk. Status: open (U013, U014)\",\"Helen: no signature this year without a cost comparison against building in house; engineering lead thinks they can build in six months. Liam said 'They can't'; Helen still needs the comparison. Status: open, no answer given (U015, U016, U017)\"],\"open_items\":[\"Whether case export supports the customer's custom fields: Ravi believes so but must test on their case tool; blocked on Zara's field list (U009, U010)\",\"Next step is vague: Liam said 'Let's talk next week' with no date, time or agenda; needs a dated meeting (U021)\",\"Economic buyer: Helen Brooks is the CFO in CRM, but CRM economic buyer field is blank and nobody in the call said who signs; confirm\",\"Build-versus-buy cost comparison for Helen: owner and date not set\"],\"commitments\":[\"Zara Ahmed: send the case tool custom field list 'tomorrow' (said Friday 2026-10-02, so Saturday 2026-10-03; confirm a business day date such as Monday 2026-10-05) (U011)\",\"Ravi Shah: test custom fields once Zara sends the list; no date stated, log one (U020)\",\"Nora Quinn: check Helen's contract terms with deal desk; no date stated, log one (U014)\"],\"stakeholders\":[\"Liam O'Connor, Fraud Analytics Lead: champion, present\",\"Zara Ahmed, Data Engineer: technical evaluator, present\",\"Helen Brooks, CFO: sets terms and requires cost comparison, joined late and left early\",\"Engineering lead (unnamed): believes they can build this in six months, absent\"],\"competitive_notes\":[\"No named competitor. In-house build is the rival option, raised by Helen (U015)\"],\"risks\":[\"CFO conditions: three year minimum, quarterly in arrears only, and no signature this year without a build-versus-buy comparison; CRM close date is 2026-12-18 (U013, U015, U017)\",\"Champion and CFO disagree on whether in-house build is feasible; absent engineering lead holds the six month view (U015, U016)\",\"No dated next meeting; 'next week' is not a next step (U021)\",\"Custom field export untested (U010)\"],\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Also, nothing gets signed this year without a cost comparison against building it ourselves.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"I believe so, but I'd want to test it on your case tool.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Thanks. Let's talk next week.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Sure, I'll send it tomorrow.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5305,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5985,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1406,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

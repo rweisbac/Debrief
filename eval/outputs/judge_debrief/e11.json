@@ -1,0 +1,265 @@
+{
+ "deal_id": "e11",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Deal state is waiting on customer; provost approves and owns budget but was absent.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elise said provost owns budget and approves; the provost was not on the call and meeting deferred."
+  },
+  {
+   "claim": "Elise deferred a meeting with the provost.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elise answered 'Eventually, sure. She's very busy this term.'"
+  },
+  {
+   "claim": "No dated next step or business outcome was stated.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No date or outcome appears in the transcript; CRM stated outcome is empty."
+  },
+  {
+   "claim": "Paula to send Elise a provost-ready summary of the first generation retention cut by 2026-10-01.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Paula never committed to this; the date was never said. It is a proposed action, though presented without that flag."
+  },
+  {
+   "claim": "Provost asks for the first generation retention cut.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Kevin said it is the cut the provost always asks for."
+  },
+  {
+   "claim": "Paula to offer a committee-ready summary and ask when the technology committee meets, by 2026-10-02.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "No such commitment or date was stated in the call."
+  },
+  {
+   "claim": "Nobody knows when the technology committee meets.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Elise was not sure and Kevin did not know the date."
+  },
+  {
+   "claim": "Sam will send the retention dashboard screenshots.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam said he would send them so Elise can share them."
+  },
+  {
+   "claim": "Sam to send the screenshots by 2026-10-01 and add an access-controls view for the privacy officer.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Sam gave no date and never offered an access-controls view; this is a proposed addition."
+  },
+  {
+   "claim": "The technology committee meets about once a semester and could land after the 2026-12-18 close date.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Kevin said he thinks they meet once a semester; close date is in CRM; timing risk is an inference."
+  },
+  {
+   "claim": "Sam showed enrollment and course data from the customer extract joined by student ID.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam described exactly this."
+  },
+  {
+   "claim": "Sam showed first year retention by college and by program.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam said the dashboard shows first year retention by college and program."
+  },
+  {
+   "claim": "Advisors see only their own students and deans see their college.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam stated this directly."
+  },
+  {
+   "claim": "Kevin asked about filtering by first generation students and Sam confirmed any student table attribute can be a filter.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Kevin asked and Sam answered yes."
+  },
+  {
+   "claim": "No date was set for Sam's screenshots during the call.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Sam gave no date."
+  },
+  {
+   "claim": "Elise said the privacy officer will want to see the access controls.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elise said this after the access controls were shown."
+  },
+  {
+   "claim": "Business outcome was not stated; CRM lists the pain as manual retention reporting.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM stated outcome is empty and pain is manual retention reporting."
+  },
+  {
+   "claim": "Elise gave 'We'll figure it out' on the committee meeting date, with no owner or date.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Elise said it in passing; the output notes there is no owner or date."
+  },
+  {
+   "claim": "Dr. Abernathy is Provost, owns budget and must approve.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elise said the provost owns the budget, Dr. Abernathy, and would have to approve."
+  },
+  {
+   "claim": "The technology committee is part of the decision.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elise mentioned a technology committee in the decision context."
+  },
+  {
+   "claim": "Champion enthusiasm is not a decision; she gave no date or commitment after it.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U015",
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elise said she would champion it but deferred the provost and gave no dates."
+  },
+  {
+   "claim": "The privacy officer is not named or engaged.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Privacy officer is mentioned only generically; no name given."
+  },
+  {
+   "claim": "Mutual action plan: Elise is the customer owner for the provost meeting and Paula the Apex owner.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [
+    "U014",
+    "U015"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Elise only said 'Eventually, sure'; no owners were assigned. It is marked proposed."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.033083
+}

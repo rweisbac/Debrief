@@ -183,6 +183,7 @@ def write(results: dict) -> None:
          f"- Generated: {results['generated']}. Model: claude-sonnet-5-5. 1 run per case. 15 hand-written transcripts, gold labels written before any run.",
          f"- Ran: Debrief {d['ran']} of 15, baseline {b['ran']} of 15. Judged: Debrief {d['judged']}, baseline {b['judged']}.",
          "- The claim judge is a single uncalibrated model call per output (`eval/prompts/claim_judge_v1.md`), blind to which system wrote it, same model family as both systems.",
+         "- A post hoc hand review of every judge flag and every Debrief block is in `eval/hand_review.md`. It changes no number here.",
          "", "## Headline", "",
          "| Metric | Debrief | Baseline |", "|---|---|---|",
          f"| (a) Claims the judge marks supported | {pct(d['supported'], d['claims'])} | {pct(b['supported'], b['claims'])} |",

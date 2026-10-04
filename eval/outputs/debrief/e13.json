@@ -1,0 +1,1699 @@
+{
+ "debrief_id": "e13-eb7bef0f",
+ "deal_id": "e13",
+ "as_of": "2026-10-02",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Crane operators need data in under 2 seconds; the 99th percentile latency is the main concern.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "Crane operators need data in under 2 seconds."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "Review of the dedicated cluster latency results, with Henrik Larsen agreeing to the time. Olivia will send the invite.",
+   "date": "2026-10-12",
+   "evidence": [
+    {
+     "utterance_id": "U016",
+     "excerpt": "Yes. Monday, October 12th, 9 am our time."
+    },
+    {
+     "utterance_id": "U017",
+     "excerpt": "Booked. I'll send the invite."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "The 99th percentile latency of 3.8 seconds in the sandbox is too slow for crane operators.",
+    "raised_by": "Henrik Larsen",
+    "status": "partially_resolved",
+    "answer_given": "Mateo said the sandbox is a shared cluster and he expects lower on a dedicated cluster, but has not measured it and gave no number. He committed to run the test.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "On a dedicated cluster I'd expect it to be lower, but I haven't measured it, so I won't give you a number."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Latency (median and 99th percentile) on a dedicated cluster is not yet measured. Henrik said the result decides it for them.",
+    "owner": "Mateo Ruiz",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "Can you measure it on dedicated?"
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     }
+    ]
+   },
+   {
+    "summary": "Whether Apex can read the vessel estimate message format from the port community system is unknown; Mateo has not seen the format and needs a sample file.",
+    "owner": "Mateo Ruiz",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Our vessel estimates come from a port community system over an old message format. Can you read it?"
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "I haven't seen that format. Can you send a sample file?"
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Vessel arrival estimates come from a port community system over an old message format; whether Apex can read it is not yet confirmed, pending a sample file.",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Our vessel estimates come from a port community system over an old message format."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Mateo Ruiz",
+    "side": "apex",
+    "what": "Run the same latency test on a dedicated cluster and send the results to the customer.",
+    "by_when": "2026-10-08",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+     }
+    ]
+   },
+   {
+    "who": "Yuki Tanaka",
+    "side": "customer",
+    "what": "Send a sample file of the vessel estimate message format.",
+    "by_when": "2026-10-02",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     }
+    ]
+   },
+   {
+    "who": "Olivia Grant",
+    "side": "apex",
+    "what": "Send the calendar invite for the October 12 results review.",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "Booked. I'll send the invite."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Henrik Larsen",
+    "title": "Head of Terminal Operations Technology",
+    "present": true,
+    "why_they_matter": "Champion; set the latency bar and said the dedicated result decides it",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     }
+    ]
+   },
+   {
+    "name": "Yuki Tanaka",
+    "title": "Systems Integration Lead",
+    "present": true,
+    "why_they_matter": "Technical evaluator; owns the vessel message format sample",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "Can you measure it on dedicated?"
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Henrik says the dedicated cluster latency result decides it for them, tying a clear evaluation criterion to a dated Apex deliverable.",
+    "strength": "moderate",
+    "qualifier": "Conditional on the dedicated-cluster result, which Mateo has not measured yet. Henrik is the champion, not the economic buyer.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     }
+    ]
+   },
+   {
+    "summary": "Henrik agreed to a dated review of the dedicated-cluster results on Monday, October 12th at 9 am.",
+    "strength": "moderate",
+    "qualifier": "Meeting is conditional on latency results; no economic buyer or decision process named.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     }
+    ]
+   },
+   {
+    "summary": "Yuki, the technical evaluator, is engaged and will send a sample file of the port community system message format today.",
+    "strength": "weak",
+    "qualifier": "Technical engagement only; Apex has not confirmed it can read the format.",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "The 99th percentile latency of 3.8 seconds misses the under 2 second requirement; Henrik calls it the problem and too slow for operators.",
+    "strength": "strong",
+    "qualifier": "Measured on a shared sandbox cluster; the dedicated result is unmeasured.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+     }
+    ]
+   },
+   {
+    "summary": "Apex has not confirmed it can read the customer's old vessel-estimate message format from the port community system.",
+    "strength": "moderate",
+    "qualifier": "Depends on the sample file Yuki said he would send today.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "I haven't seen that format. Can you send a sample file?"
+     }
+    ]
+   },
+   {
+    "summary": "Henrik treats latency as the only real question, so the other demoed areas (berth model, alerting) drew little reaction.",
+    "strength": "weak",
+    "qualifier": "Brief reply; may only mean latency is the priority.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Fine. Latency is the real question."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "15 thousand events a second",
+    "what_it_measures": "Peak event rate of the crane telemetry sample",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "about 15 thousand events a second at peak"
+     }
+    ]
+   },
+   {
+    "value": "1.4 seconds",
+    "what_it_measures": "Median end to end latency in the shared sandbox",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "the median end to end latency was 1.4 seconds"
+     }
+    ]
+   },
+   {
+    "value": "3.8 seconds",
+    "what_it_measures": "99th percentile latency in the shared sandbox",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "The 99th percentile was 3.8 seconds."
+     }
+    ]
+   },
+   {
+    "value": "under 2 seconds",
+    "what_it_measures": "Customer's latency requirement for crane operators",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "Crane operators need data in under 2 seconds."
+     }
+    ]
+   },
+   {
+    "value": "72 hours",
+    "what_it_measures": "How far ahead the berth schedule model shows berth conflicts",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "shows berth conflicts 72 hours ahead"
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Yuki to send a sample file of the port community system vessel estimate message format so Apex can check whether it can be read.",
+    "owner": "Yuki Tanaka",
+    "due": "2026-10-02",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "No economic buyer or other stakeholder was named in the call; the field is blank and the transcript does not support filling it.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     }
+    ]
+   },
+   {
+    "field": "dated_next_step",
+    "logged_value": "Results review Oct 12",
+    "transcript_says": "The review was agreed for Monday, October 12th at 9 am customer time, consistent with the log. The CRM entry was filled at 08:09:30, before the review was agreed at 08:50 and 08:56 in the call, so timing differs but content matches.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "Booked. I'll send the invite."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "Dedicated cluster latency test by Oct 8",
+    "transcript_says": "Mateo committed to run the same test on a dedicated cluster and send results by Thursday, October 8th. The log omits that Mateo will send the results to the customer. He also needs a log entry for the sample-file review, which he asked for.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Crane operators need data in under 2 seconds; the 99th percentile latency is the main concern. Numbers said: 15 thousand events a second, 1.4 seconds, 3.8 seconds",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "Crane operators need data in under 2 seconds."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_criteria": {
+   "status": "partial",
+   "summary": "1 item validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U010",
+     "excerpt": "Our vessel estimates come from a port community system over an old message format."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Review of the dedicated cluster latency results, with Henrik Larsen agreeing to the time. Olivia will send the invite.",
+   "evidence": [
+    {
+     "utterance_id": "U016",
+     "excerpt": "Yes. Monday, October 12th, 9 am our time."
+    },
+    {
+     "utterance_id": "U017",
+     "excerpt": "Booked. I'll send the invite."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Crane operators need data in under 2 seconds; the 99th percentile latency is the main concern.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "Crane operators need data in under 2 seconds."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Henrik Larsen, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "Good. That decides it for us."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "open_technical_gap",
+  "deal_state_why": "Dedicated-cluster latency is unmeasured; sandbox 99th percentile was 3.8 seconds against the under 2 seconds need, and Henrik says the result decides it.",
+  "next_steps": [
+   {
+    "action": "Ask Henrik to confirm the pass bar in writing, such as 99th percentile under 2 seconds at about 15 thousand events a second, before Mateo runs the dedicated test.",
+    "owner": "Mateo Ruiz",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "Henrik called the 99th percentile the problem but also said the result decides it; an unstated bar invites a dispute over a passing median.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     }
+    ]
+   },
+   {
+    "action": "Ask Henrik who signs off on this purchase and whether that person can join the October 12 results review.",
+    "owner": "Olivia Grant",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "No economic buyer is named and TV began September 14. With a champion-led review booked, the gap is easy to overlook.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     }
+    ]
+   },
+   {
+    "action": "Tell Yuki that Mateo will confirm whether Apex can read the port community system message format by October 8, alongside the latency results.",
+    "owner": "Mateo Ruiz",
+    "due_by": "2026-10-08",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "",
+    "action_type": "route_to_sc",
+    "why": "Mateo asked for the sample file but gave no date for an answer, and the CRM log omits this item.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "I haven't seen that format. Can you send a sample file?"
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "If the dedicated cluster still misses under 2 seconds at the 99th percentile, Henrik's stated deciding factor turns against Apex, and no economic buyer is known.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "low_information",
+    "deal_state_why": "Dedicated-cluster latency is unmeasured; sandbox 99th percentile was 3.8 seconds against the under 2 seconds need, and Henrik says the result decides it.",
+    "next_steps": [
+     {
+      "action": "Ask Henrik to confirm the pass bar in writing, such as 99th percentile under 2 seconds at about 15 thousand events a second, before Mateo runs the dedicated test.",
+      "owner": "Mateo Ruiz",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Henrik called the 99th percentile the problem but also said the result decides it; an unstated bar invites a dispute over a passing median.",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "Good. That decides it for us."
+       }
+      ]
+     },
+     {
+      "action": "Ask Henrik who signs off on this purchase and whether that person can join the October 12 results review.",
+      "owner": "Olivia Grant",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "No economic buyer is named and TV began September 14. With a champion-led review booked, the gap is easy to overlook.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Yes. Monday, October 12th, 9 am our time."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "If the dedicated cluster still misses under 2 seconds at the 99th percentile, Henrik's stated deciding factor turns against Apex, and no economic buyer is known.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "Good. That decides it for us."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "low_information",
+    "deal_state_why": "Dedicated-cluster latency is unmeasured; sandbox 99th percentile was 3.8 seconds against the under 2 seconds need, and Henrik says the result decides it.",
+    "next_steps": [
+     {
+      "action": "Ask Henrik to confirm the pass bar in writing, such as 99th percentile under 2 seconds at about 15 thousand events a second, before Mateo runs the dedicated test.",
+      "owner": "Mateo Ruiz",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Henrik called the 99th percentile the problem but also said the result decides it; an unstated bar invites a dispute over a passing median.",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "Good. That decides it for us."
+       }
+      ]
+     },
+     {
+      "action": "Ask Henrik who signs off on this purchase and whether that person can join the October 12 results review.",
+      "owner": "Olivia Grant",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "No economic buyer is named and TV began September 14. With a champion-led review booked, the gap is easy to overlook.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Yes. Monday, October 12th, 9 am our time."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "If the dedicated cluster still misses under 2 seconds at the 99th percentile, Henrik's stated deciding factor turns against Apex, and no economic buyer is known.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "Good. That decides it for us."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: crane telemetry demo and next steps",
+    "body": "Hi Henrik and Yuki,\n\nThanks for your time today. Here is where we landed.\n\nWhat we saw: on the shared sandbox, crane telemetry at about 15 thousand events a second at peak had a median end to end latency of 1.4 seconds and a 99th percentile of 3.8 seconds. Henrik, we agree the 99th percentile is the issue for operators.\n\nOpen items:\n- Mateo will run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\n- Yuki will send a sample file of the port community system vessel message format today. Mateo has not seen that format yet, so we cannot confirm we can read it until he reviews it.\n\nNext meeting: Monday, October 12th, 9 am your time, to review the dedicated cluster results. I will send the invite.\n\nPlease tell us if anything here is off.\n\nOlivia",
+    "customer_value_line": "The dedicated cluster test is meant to show whether crane operators can get data in under 2 seconds, which is the outcome you described.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "Crane operators need data in under 2 seconds."
+     },
+     {
+      "utterance_id": "U003",
+      "excerpt": "The 99th percentile was 3.8 seconds."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "I haven't seen that format. Can you send a sample file?"
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Booked. I'll send the invite."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: crane telemetry demo and next steps",
+    "body": "Hi Henrik and Yuki,\n\nThanks for your time today. Here is where we landed.\n\nWhat we saw: on the shared sandbox, crane telemetry at about 15 thousand events a second at peak had a median end to end latency of 1.4 seconds and a 99th percentile of 3.8 seconds. Henrik, we agree the 99th percentile is the issue for operators.\n\nOpen items:\n- Mateo will run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\n- Yuki will send a sample file of the port community system vessel message format today. Mateo has not seen that format yet, so we cannot confirm we can read it until he reviews it.\n\nNext meeting: Monday, October 12th, 9 am your time, to review the dedicated cluster results. I will send the invite.\n\nPlease tell us if anything here is off.\n\nOlivia",
+    "customer_value_line": "The dedicated cluster test is meant to show whether crane operators can get data in under 2 seconds, which is the outcome you described.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "Crane operators need data in under 2 seconds."
+     },
+     {
+      "utterance_id": "U003",
+      "excerpt": "The 99th percentile was 3.8 seconds."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "I haven't seen that format. Can you send a sample file?"
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Booked. I'll send the invite."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Low information: dedicated-cluster latency is unmeasured, and Henrik said that result decides it for them.",
+    "customer_value_line": "Henrik's stated outcome is that crane operators need data in under 2 seconds; the sandbox median was 1.4 seconds but the 99th percentile was 3.8 seconds, so the outcome is not yet shown.",
+    "what_we_validated": [
+     "Sandbox crane telemetry sample at about 15 thousand events a second at peak: median end to end latency 1.4 seconds, 99th percentile 3.8 seconds (shared cluster).",
+     "Berth schedule model shown, surfacing berth conflicts 72 hours ahead; alerting to the duty manager shown. Henrik gave little reaction to either (U014)."
+    ],
+    "integration_patterns": [
+     "Vessel arrival estimates come from a port community system over an old message format. Mateo has not seen the format; whether Apex can read it is unconfirmed pending Yuki's sample file."
+    ],
+    "objections_and_answers": [
+     "Henrik: the 99th percentile of 3.8 seconds is too slow for operators. Mateo: the sandbox is a shared cluster and he expects lower on dedicated, but has not measured it and gave no number. Status: partially resolved, pending the dedicated test."
+    ],
+    "open_items": [
+     "Dedicated cluster latency (median and 99th percentile) not yet measured. Owner: Mateo Ruiz.",
+     "Can Apex read the port community system message format? Needs Yuki's sample file. Owner: Mateo Ruiz.",
+     "Pass bar not confirmed in writing (for example 99th percentile under 2 seconds); Henrik only said the 99th percentile is the problem and under 2 seconds is needed.",
+     "Economic buyer and decision process not stated."
+    ],
+    "commitments": [
+     "Mateo Ruiz: run the same test on a dedicated cluster and send the results to the customer by Thursday, October 8th.",
+     "Yuki Tanaka: send a sample file of the vessel estimate message format today (October 2).",
+     "Olivia Grant: send the invite for the Monday, October 12th, 9 am customer time review of the dedicated results."
+    ],
+    "stakeholders": [
+     "Henrik Larsen, Head of Terminal Operations Technology: champion, present.",
+     "Yuki Tanaka, Systems Integration Lead: technical evaluator, present.",
+     "Economic buyer: not named."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "If the dedicated cluster still misses the under 2 second need at the 99th percentile, Henrik's deciding factor turns against Apex.",
+     "Format support for the old vessel message is unconfirmed.",
+     "No economic buyer is known and TV began 2026-09-14; Henrik's \"decides it for us\" is enthusiasm from the champion, not a decision."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "Crane operators need data in under 2 seconds."
+     },
+     {
+      "utterance_id": "U003",
+      "excerpt": "The 99th percentile was 3.8 seconds."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "On a dedicated cluster I'd expect it to be lower, but I haven't measured it, so I won't give you a number."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "Yes. I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "Our vessel estimates come from a port community system over an old message format. Can you read it?"
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Low information: dedicated-cluster latency is unmeasured, and the shared sandbox 99th percentile of 3.8 seconds misses the under 2 seconds need.",
+    "customer_value_line": "Henrik Larsen stated the outcome as crane operators needing data in under 2 seconds, and he said the dedicated cluster result decides it for them.",
+    "what_we_validated": [
+     "Sandbox median end to end latency was 1.4 seconds on the crane telemetry sample at about 15 thousand events a second at peak.",
+     "Berth schedule model shown; it takes vessel arrival estimates and shows berth conflicts 72 hours ahead.",
+     "Alerting shown; berth conflicts raise an alert to the duty manager."
+    ],
+    "integration_patterns": [
+     "Vessel arrival estimates come from a port community system over an old message format; Apex has not seen the format and it is not confirmed readable, pending a sample file from Yuki."
+    ],
+    "objections_and_answers": [
+     "Henrik: the 99th percentile of 3.8 seconds is too slow for operators. Mateo: the sandbox is a shared cluster and he expects lower on dedicated but has not measured it and gave no number. Status: partially resolved, pending the dedicated test."
+    ],
+    "open_items": [
+     "Dedicated cluster latency (median and 99th percentile) not yet measured. Owner: Mateo Ruiz.",
+     "Whether Apex can read the port community system message format is unknown. Owner: Mateo Ruiz, depends on Yuki's sample file.",
+     "Pass bar for the dedicated test was not stated beyond under 2 seconds; the 99th percentile was called the problem. Not confirmed with Henrik.",
+     "Economic buyer and decision process not named or discussed."
+    ],
+    "commitments": [
+     "Mateo Ruiz: run the same test on a dedicated cluster and send the results to the customer by Thursday, October 8th.",
+     "Yuki Tanaka: send a sample file of the vessel estimate message format today, October 2nd.",
+     "Olivia Grant: send the invite for the review on Monday, October 12th, 9 am customer time; no send date stated."
+    ],
+    "stakeholders": [
+     "Henrik Larsen, Head of Terminal Operations Technology, champion, present.",
+     "Yuki Tanaka, Systems Integration Lead, technical evaluator, present; owns the sample file.",
+     "Economic buyer: not named."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "If the dedicated cluster still misses under 2 seconds at the 99th percentile, Henrik's stated deciding factor turns against Apex.",
+     "Message format readability is unconfirmed until the sample file arrives.",
+     "No economic buyer is known, and TV began September 14.",
+     "Henrik's reply to the berth model and alerting was brief (\"Fine. Latency is the real question.\"), so little reaction to those areas."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "Crane operators need data in under 2 seconds."
+     },
+     {
+      "utterance_id": "U003",
+      "excerpt": "The 99th percentile was 3.8 seconds."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "On a dedicated cluster I'd expect it to be lower, but I haven't measured it, so I won't give you a number."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Good. That decides it for us."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "Our vessel estimates come from a port community system over an old message format."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send one today."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Yes. Monday, October 12th, 9 am our time."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: 2 seconds is (the call says 3.8 seconds is in this context): 2 seconds is (the call says 3.8 seconds is in this context)",
+    "[dates_future_business_days] bad dates: 2026-09-14 (not after 2026-10-02): 2026-09-14 (not after 2026-10-02)"
+   ],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: 2 seconds the (the call says 1.4 seconds the in this context): 2 seconds the (the call says 1.4 seconds the in this context)",
+    "[dates_future_business_days] bad dates: September 14 (not after 2026-10-02): September 14 (not after 2026-10-02)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Confirm that crane operators get data in under 2 seconds, in Henrik's words: \"Crane operators need data in under 2 seconds.\"",
+    "rows": [
+     {
+      "milestone": "Send a sample file of the port community system vessel estimate message format",
+      "customer_owner": "Yuki Tanaka",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "2026-10-02",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "I haven't seen that format. Can you send a sample file?"
+       },
+       {
+        "utterance_id": "U012",
+        "excerpt": "I'll send one today."
+       }
+      ]
+     },
+     {
+      "milestone": "Run the same latency test on a dedicated cluster and send the results to the customer",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "2026-10-08",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U006",
+        "excerpt": "Can you measure it on dedicated?"
+       },
+       {
+        "utterance_id": "U007",
+        "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "Good. That decides it for us."
+       }
+      ]
+     },
+     {
+      "milestone": "Review the dedicated cluster latency results (Monday, 9 am customer time); Olivia sends the invite",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Olivia Grant",
+      "target_date": "2026-10-12",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Yes. Monday, October 12th, 9 am our time."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Booked. I'll send the invite."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm in writing the latency pass bar (for example the 99th percentile) before the dedicated test is run",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+       }
+      ]
+     },
+     {
+      "milestone": "Tell the customer whether Apex can read the vessel estimate message format, once the sample file arrives",
+      "customer_owner": "Yuki Tanaka",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U010",
+        "excerpt": "Our vessel estimates come from a port community system over an old message format. Can you read it?"
+       }
+      ]
+     },
+     {
+      "milestone": "Name who signs off on this purchase and whether they can join the October 12 review",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Olivia Grant",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Yes. Monday, October 12th, 9 am our time."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Confirm that crane operators get data in under 2 seconds, in Henrik's words: \"Crane operators need data in under 2 seconds.\"",
+    "rows": [
+     {
+      "milestone": "Send a sample file of the port community system vessel estimate message format",
+      "customer_owner": "Yuki Tanaka",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "2026-10-02",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "I haven't seen that format. Can you send a sample file?"
+       },
+       {
+        "utterance_id": "U012",
+        "excerpt": "I'll send one today."
+       }
+      ]
+     },
+     {
+      "milestone": "Run the same latency test on a dedicated cluster and send the results to the customer",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "2026-10-08",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U006",
+        "excerpt": "Can you measure it on dedicated?"
+       },
+       {
+        "utterance_id": "U007",
+        "excerpt": "I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "Good. That decides it for us."
+       }
+      ]
+     },
+     {
+      "milestone": "Review the dedicated cluster latency results (Monday, 9 am customer time); Olivia sends the invite",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Olivia Grant",
+      "target_date": "2026-10-12",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Yes. Monday, October 12th, 9 am our time."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Booked. I'll send the invite."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm in writing the latency pass bar (for example the 99th percentile) before the dedicated test is run",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "The 99th percentile is the problem. 3.8 seconds is too slow for operators."
+       }
+      ]
+     },
+     {
+      "milestone": "Tell the customer whether Apex can read the vessel estimate message format, once the sample file arrives",
+      "customer_owner": "Yuki Tanaka",
+      "apex_owner": "Mateo Ruiz",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U010",
+        "excerpt": "Our vessel estimates come from a port community system over an old message format. Can you read it?"
+       }
+      ]
+     },
+     {
+      "milestone": "Name who signs off on this purchase and whether they can join the October 12 review",
+      "customer_owner": "Henrik Larsen",
+      "apex_owner": "Olivia Grant",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Yes. Monday, October 12th, 9 am our time."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "open_technical_gap",
+   "after": "low_information",
+   "reason": "only 4 substantive customer utterances"
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "next_steps",
+   "before": "3",
+   "after": "2",
+   "reason": "low information call, cut: Tell Yuki that Mateo will confirm whether Apex can read the port community system message format by October 8, alongside the latency results."
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "medium",
+   "detail": "bad dates: September 14 (not after 2026-10-02)",
+   "locations": [
+    "September 14 (not after 2026-10-02)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: 2 seconds the (the call says 1.4 seconds the in this context)",
+   "locations": [
+    "2 seconds the (the call says 1.4 seconds the in this context)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: September 14 (not after 2026-10-02)",
+   "locations": [
+    "September 14 (not after 2026-10-02)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: 2 seconds is (the call says 3.8 seconds is in this context)",
+   "locations": [
+    "2 seconds is (the call says 3.8 seconds is in this context)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-09-14 (not after 2026-10-02)",
+   "locations": [
+    "2026-09-14 (not after 2026-10-02)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Henrik to confirm the pass bar in writing... (U004, U008)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U004 names the 99th percentile as the problem and U008 says the result decides it, so both quotes support the step.",
+   "utterance_ids": [
+    "U004",
+    "U008"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Henrik who signs off... (U016)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U016 supports the booked October 12 review the step relies on, and the missing economic buyer is a gap confirmed by the CRM, so no claim is mis-cited.",
+   "utterance_ids": [
+    "U016"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state_why and watch item on 'That decides it for us'",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats U008 as a risk tied to the unmeasured dedicated result, not as a positive buying signal.",
+   "utterance_ids": [
+    "U008",
+    "U005"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this deal's 99th percentile ambiguity and to the unnamed economic buyer, with owners and dates.",
+   "utterance_ids": [
+    "U004",
+    "U008"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Open items and next meeting",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every promise in the email (dedicated results by October 8, Yuki's sample file today, the October 12 meeting, the invite) was committed in the call, and the email says the format cannot be confirmed yet.",
+   "utterance_ids": [
+    "U007",
+    "U012",
+    "U016",
+    "U017"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Mateo will run the same test on a dedicated cluster and send you the results by Thursday, October 8th",
+   "passed": true,
+   "severity": "low",
+   "finding": "The wording and date match U007, and the email gives no latency number for the dedicated cluster.",
+   "utterance_ids": [
+    "U005",
+    "U007"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "customer_value_line about under 2 seconds",
+   "passed": true,
+   "severity": "low",
+   "finding": "Henrik stated the under 2 seconds outcome in U002, so the line uses his own words and invents nothing.",
+   "utterance_ids": [
+    "U002"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments list",
+   "passed": true,
+   "severity": "low",
+   "finding": "The three commitments match U007, U012 and U017, and the missing send date for the invite is flagged.",
+   "utterance_ids": [
+    "U007",
+    "U012",
+    "U017"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "he said the dedicated cluster result decides it for them",
+   "passed": true,
+   "severity": "low",
+   "finding": "This reports U008 accurately and keeps it alongside the unmeasured result and the 99th percentile objection instead of treating it as a win.",
+   "utterance_ids": [
+    "U004",
+    "U008"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "risks and validated items",
+   "passed": true,
+   "severity": "low",
+   "finding": "The brief reaction to the berth model and alerting is supported by U014, and the validated items are limited to what was shown.",
+   "utterance_ids": [
+    "U003",
+    "U009",
+    "U013",
+    "U014"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "rows marked agreed",
+   "passed": true,
+   "severity": "low",
+   "finding": "Only the sample file, the dedicated test and the review are marked agreed, matching U007, U012, U016 and U017, and the other rows are marked proposed.",
+   "utterance_ids": [
+    "U007",
+    "U012",
+    "U016",
+    "U017"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "Name who signs off... and Confirm in writing the latency pass bar",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both proposed rows are tied to this deal's open pass-bar and economic buyer gaps and do not read as boilerplate.",
+   "utterance_ids": [
+    "U004",
+    "U016"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "all artifacts",
+   "passed": true,
+   "severity": "low",
+   "finding": "No release card applies to this call, no feature claim was corrected, and none of the artifacts presents a superseded feature as current.",
+   "utterance_ids": [
+    "U005",
+    "U011"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "evidence list (U002, U003, U004, U005, U007, U008, U010, U016) and the 'little reaction' claim citing U014",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is a verbatim substring of its cited line and supports the claim it is attached to, and U014 ('Fine. Latency is the real question.') supports the 'little reaction' reading.",
+   "utterance_ids": [
+    "U002",
+    "U003",
+    "U004",
+    "U005",
+    "U007",
+    "U008",
+    "U010",
+    "U016",
+    "U014"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments list: Mateo dedicated test by Thursday, October 8th; Yuki sample file today; Olivia invite for Monday, October 12th, 9 am",
+   "passed": true,
+   "severity": "low",
+   "finding": "All three commitments match the spoken owners, dates and times, and the weekdays are correct for 2026.",
+   "utterance_ids": [
+    "U007",
+    "U012",
+    "U016",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Henrik's \"decides it for us\" is enthusiasm from the champion, not a decision; deal state 'Low information'",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary correctly treats the champion's remark as conditional on the dedicated test result rather than a decision, and notes that no economic buyer is named.",
+   "utterance_ids": [
+    "U008",
+    "U016"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021276,
+   "latency_ms": 8171,
+   "input_tokens": 532,
+   "output_tokens": 1406,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "e564470b9c9ae3e9756bd2648882437a13ca7a73c56bed36709e14aa969b9149"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025009,
+   "latency_ms": 10760,
+   "input_tokens": 398,
+   "output_tokens": 1804,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "479ddccf0dc634c84f23a3530697768cf20e9567112337eaac39205b2325160a"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.037487,
+   "latency_ms": 15260,
+   "input_tokens": 4977,
+   "output_tokens": 2161,
+   "cache_read_input_tokens": 4292,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "833b758b22d2df9de423584df127eebb2a9312ba5cc9461b6e9aa287bf4f284d"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022526,
+   "latency_ms": 4556,
+   "input_tokens": 5165,
+   "output_tokens": 646,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "dba0457adfad860a441d49a2369939c799d9c051e76465baa3a63f57acf1fdd2"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028906,
+   "latency_ms": 8511,
+   "input_tokens": 5040,
+   "output_tokens": 1300,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "550755c7f45bf141d266e81a94b4e95c0ae3df665f672f3161bf372e0c7dd448"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.032826,
+   "latency_ms": 10843,
+   "input_tokens": 5028,
+   "output_tokens": 1697,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "a303e227659fcd4f28762df56b75349be35f01e522f518052fb21c3a558bdb47"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.048918,
+   "latency_ms": 23665,
+   "input_tokens": 4789,
+   "output_tokens": 3353,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2026,
+   "validator_errors": [],
+   "keys": [
+    "00b88b0192760bd186d0ced3aa89f312d34aa7246656fea4626b3b4c836c5605"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024286,
+   "latency_ms": 8081,
+   "input_tokens": 5190,
+   "output_tokens": 1274,
+   "cache_read_input_tokens": 5831,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "b1f6979a748a54f0953d07f5ce9af0e29cff4a3a29436fe764a875881b317700"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.016946,
+   "latency_ms": 9016,
+   "input_tokens": 1933,
+   "output_tokens": 1193,
+   "cache_read_input_tokens": 5750,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "fdcd2452048348e8e3e1e3e76ada152a8dac61e9f933a7638a05108f0bf09a0e"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.25818,
+ "latency_ms": 98863,
+ "wall_clock_s": 85.8,
+ "status": "ran"
+}

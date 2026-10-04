@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "030fefb0552478ac468976ac681dd11177fd5004a3b5537b94b8cb2dd2e6a14d",
+ "recorded_at": "2026-10-04T00:33:54.379500+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFtFxVTVAvK3jprxsbG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: Matteo must ask the group security office whether policy allows a cloud key service for guest data; no date given.\",\"customer_value_line\":\"Business outcome not stated; discovery pain was guest records split across three booking systems, but the customer did not state an outcome in the call.\",\"what_we_validated\":[\"EU residency: tenant pinned to Frankfurt including backups and audit logs, plus a tenant setting restricting support access to EU based staff.\",\"Guest profile unification: 2.1 million records from three booking systems merged into 1.4 million profiles.\",\"Low confidence matches go to a review queue where the customer team approves or splits them.\"],\"integration_patterns\":[\"Three booking systems unified into a single guest profile set (demo data).\"],\"objections_and_answers\":[\"Support access contract wording: Matteo needs it; Elena will confirm exact wording with compliance and send by Oct 7. Partially resolved.\",\"Own keys: customer wants to hold its own keys and uses an on premises HSM for payment data; Elena said keys must be in a major cloud key service and on premises HSMs are not supported. Open, Matteo unsure policy allows it.\",\"Bad merges: Ivy asked how uncertain merges are reviewed; answered with the review queue. Ivy reacted positively.\"],\"open_items\":[\"Whether policy allows a cloud key service for guest data. Owner Matteo Bianchi via group security office, no date.\",\"Contract wording on EU only support access. Owner Elena Varga, due Oct 7.\",\"No dated next meeting agreed.\",\"Economic buyer not named.\"],\"commitments\":[\"Elena Varga: confirm support access wording with Apex compliance and send by Wednesday, October 7th.\",\"Elena Varga: send the encryption whitepaper with the key hierarchy today (Oct 1).\",\"Matteo Bianchi: ask group security office about cloud key service policy, no date given.\"],\"stakeholders\":[\"Charlotte Dubois, Director of Guest Data: champion, present. Said they can move if Matteo is comfortable on keys.\",\"Matteo Bianchi, Security and Compliance Manager: gatekeeper on keys and support access, present.\",\"Ivy Chen, CRM Analyst: technical evaluator, present.\",\"Group security office: decides on key policy, absent, timeline outside Matteo's control.\",\"Economic buyer: not stated.\"],\"competitive_notes\":[],\"risks\":[\"On premises HSM for payment data is not supported by Apex and the cloud key service may not be allowed by policy; this could block the deal.\",\"Decision sits with the group security office with no timeline.\",\"No dated next step and no economic buyer named.\"],\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"We use an on premises HSM today for payment data.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"You can hold your keys in a major cloud key service. On premises HSMs are not supported.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"This is strong. If Matteo is comfortable on keys, we can move.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I need to ask our group security office. I don't control their timeline.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send it today.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"Matching merged 2.1 million records into 1.4 million profiles.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4745,
+   "cache_creation_input_tokens": 2195,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2195,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1218,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

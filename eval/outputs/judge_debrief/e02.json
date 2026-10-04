@@ -1,0 +1,334 @@
+{
+ "deal_id": "e02",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Deal is waiting on the customer: Gregor deferred the next meeting to quarter close and will ping Ben.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Gregor said maybe week after next depending on quarter close, declined a hold, and said he would ping Ben."
+  },
+  {
+   "claim": "Data dictionary timing is vague.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Gregor said hard to say, sometime next week maybe."
+  },
+  {
+   "claim": "Stored procedure lineage remains unconfirmed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U006",
+    "U007",
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Sofia would not promise coverage; Tamsin said most procedures are dynamic."
+  },
+  {
+   "claim": "Sofia will send Tamsin a write-up of the stored procedure question.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sofia said she would write up the stored procedure question."
+  },
+  {
+   "claim": "Sofia's stored procedure write-up is due 2026-09-30.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U024"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "No date was stated for the write-up; the due date was invented."
+  },
+  {
+   "claim": "Sofia promised the parser run with no timing.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Sofia said she would see if she could, with no promises."
+  },
+  {
+   "claim": "The data dictionary is spread across a few wikis.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Gregor said it is spread across a few wikis."
+  },
+  {
+   "claim": "No economic buyer has been named.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM economic_buyer is empty and nobody named who signs."
+  },
+  {
+   "claim": "Tamsin's manager is a possible path to the buyer, mentioned in passing.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Tamsin mentioned her manager only as approver for early procurement; buyer role is inference."
+  },
+  {
+   "claim": "Gregor declined a calendar hold for the next meeting.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U021",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Gregor said not yet and would ping Ben."
+  },
+  {
+   "claim": "Apex showed column level lineage on the loan book model.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sofia demoed column level lineage for the loan book model."
+  },
+  {
+   "claim": "Apex showed a masking policy on borrower name and national ID, visible to steward role only.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sofia described analysts seeing masked values unless they have the steward role."
+  },
+  {
+   "claim": "The warehouse connector syncs continuously, about a minute end to end.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sofia stated this, matching release card RC-12."
+  },
+  {
+   "claim": "Gregor said their current tool is hourly at best.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote of Gregor."
+  },
+  {
+   "claim": "Gregor said masking policies today are roughly the same, but in three places instead of one.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct paraphrase of Gregor."
+  },
+  {
+   "claim": "Lineage was Tamsin's main interest.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tamsin said so."
+  },
+  {
+   "claim": "Tamsin said most stored procedures are dynamic.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct statement."
+  },
+  {
+   "claim": "Sofia will try to run a couple of Calder's stored procedures through the parser, with no timing promised.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Matches Sofia's hedged offer and no promises on timing."
+  },
+  {
+   "claim": "Apex's parser team is stretched.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sofia said so."
+  },
+  {
+   "claim": "Gregor will try to find the data dictionary so Apex can scope the full model.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Gregor said he'd try to dig it up, timing uncertain."
+  },
+  {
+   "claim": "Ben offered that if a partial export is easier, Apex will size the request.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Nobody offered this in the call; it was invented in the recap."
+  },
+  {
+   "claim": "No next meeting is set; Gregor will ping Ben once quarter close is clearer.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Gregor floated week after next conditionally and said he'd ping."
+  },
+  {
+   "claim": "Tamsin may loop in procurement early, pending her manager's approval.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Tamsin said she might and would have to ask her manager."
+  },
+  {
+   "claim": "Ben will send a recap today, 2026-09-29.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U023"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ben said he'd send a recap today; the demo is dated 2026-09-29."
+  },
+  {
+   "claim": "Tamsin will look at Sofia's write-up when it arrives.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U025"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tamsin said she'd look at it when it comes."
+  },
+  {
+   "claim": "Business outcome was not stated; discovery noted only governance spread across three tools.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM stated_business_outcome is empty and the pain is governance across three tools."
+  },
+  {
+   "claim": "There are only two customer contacts and Tamsin's replies were flat.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U009",
+    "U025"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM lists two contacts; Tamsin replied only 'Okay' twice."
+  },
+  {
+   "claim": "CRM dated_next_step says reconnect week after next, but the transcript shows no agreed date.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM value exists; Gregor's week-after-next was conditional and a hold was declined."
+  },
+  {
+   "claim": "The data dictionary gates scoping of the full model.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Gregor said it was needed to scope the full model."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.073156
+}

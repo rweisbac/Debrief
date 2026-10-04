@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "609346c7d5692685130c9d7b0c2222b8b1d7a480f46422c54899416577caed37",
+ "recorded_at": "2026-10-04T00:33:52.245873+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFt4TSXKU7nKc2q3dhQ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: technical fit looks good to the champion, but the CFO set contract terms and a build-versus-buy cost comparison before any signature this year, and no dated next step exists.\",\"customer_value_line\":\"Liam said features are an hour stale today and that the demo is what his analysts need; no seconds target was stated in the call (the CRM outcome was prefilled from discovery and unedited).\",\"what_we_validated\":[\"Card transaction sample streamed at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds\",\"Stream backlog: events queue and catch up in order, nothing dropped; sandbox 10 minute outage caught up in about 90 seconds\",\"Fraud features feeding the customer's scoring model and case export to their case tool were shown\",\"Liam: \\\"I think we're in good shape technically\\\" (champion opinion only)\"],\"integration_patterns\":[\"Card transaction stream feeds fraud features into the customer's scoring model\",\"Case export to the customer's case tool; custom field support not yet verified\"],\"objections_and_answers\":[\"Helen: three year terms minimum, no annual up front, quarterly in arrears only. Answer: Nora to check with deal desk. Open\",\"Helen: no signing this year without a cost comparison against building it ourselves; engineering lead thinks they can build in six months. Liam said they can't; Helen still wants the comparison. No comparison offered yet. Open\"],\"open_items\":[\"Case export support for custom fields: Ravi to test on their case tool once Zara sends the field list; no due date stated\",\"Next step: Liam said \\\"Let's talk next week\\\"; no date, time or agenda set\",\"Deal desk answer on three year minimum and quarterly in arrears: Nora, no date stated\",\"Build versus buy cost comparison for Helen: no owner or date agreed in the call\",\"Economic buyer: Helen is the CFO per CRM, but the CRM economic buyer field is empty and no touchpoint is planned\"],\"commitments\":[\"Zara Ahmed (customer): send case tool custom field list tomorrow (2026-10-03)\",\"Ravi Shah (Apex): test custom fields once Zara sends the list; no date stated\",\"Nora Quinn (Apex): check Helen's terms with deal desk; no date stated\"],\"stakeholders\":[\"Liam O'Connor, Fraud Analytics Lead, champion, present\",\"Zara Ahmed, Data Engineer, technical evaluator, present\",\"Helen Brooks, CFO, joined for the last minutes, set commercial terms and the cost comparison condition\",\"Engineering lead (unnamed), absent, believes they can build this in six months\"],\"competitive_notes\":[\"In-house build is the rival option; no named vendor competitor was mentioned\"],\"risks\":[\"CFO will not sign this year without a cost comparison; close date is 2026-12-18\",\"Contract terms (three year minimum, quarterly in arrears only) need deal desk input\",\"Next step is vague with no date set\",\"Custom field export is unverified and depends on Zara's list\",\"Absent engineering lead holds the build view and Liam's dismissal does not settle it\"],\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"Features like spend velocity per card update in under 5 seconds.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"In the sandbox test a 10 minute outage caught up in about 90 seconds.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Also, nothing gets signed this year without a cost comparison against building it ourselves.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Maybe not. But I need the comparison.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll test the custom fields once Zara sends the list.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Thanks. Let's talk next week.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5168,
+   "cache_creation_input_tokens": 2180,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2180,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1373,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

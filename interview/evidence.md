@@ -87,6 +87,8 @@ LLM judgment:
 - Stress test of deterministic checks: 49 of 61 planted problems caught, 1 false alarm on 17 clean drafts. [eval] `evals/stress_report.md`, DECISIONS D-11
 - Next steps against best practice reference answers (keyword match): 10 of 15 must-have steps covered, 0 wrong steps. [eval] `evals/reference_results.md`
 - Cost per debrief, run 2: mean $0.409, range $0.199 to $0.550. Summed call latency mean 105 s. End to end wall clock not measured. [repo] `README.md` "Cost and latency"
+- New eval, 15 hard-case transcripts, Debrief vs a plain Claude call, 1 run each, 2026-10-04: claims judged supported 414 of 443 (93%) vs 529 of 567 (93%); gold risk recall 29 of 29 for both; judge-flagged overstated commitments 23 vs 17; uncertain items flagged 23 of 23 vs 22 of 23; cost $4.80 vs $0.58 for all 15. [eval] `eval/results.md`
+- Hand review of those flags (post hoc, 1 reviewer): 6 of Debrief's 23 flags are real overstatements, against 16 of the baseline's 17; Debrief blocked all 4 recaps with uncommitted promises; R-LOWINFO overrode the deal state on 6 of 15; 6 of 14 blocks were false alarms. [eval] `eval/hand_review.md`
 - Test suite on this audit: 337 passed, 13 expected failures (known gaps), 0 failed. [repo] `python -m pytest -q`, run 2026-10-04
 
 ## Known limitations (stated in the repo)

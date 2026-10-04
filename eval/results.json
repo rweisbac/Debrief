@@ -1,233 +1,2030 @@
 {
- "generated": "2026-10-04 00:14 UTC",
+ "generated": "2026-10-04 00:46 UTC",
  "rows": [
   {
    "case": "e01",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [],
+   "judge": {
+    "claims": 36,
+    "supported": 33,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Hannah and Devon will attend the Oct 6 meeting.",
+     "Decision and paper process should be identified after the CFO meeting, with Maya and Hannah as owners."
+    ],
+    "unsupported_list": [
+     "Hannah and Devon will attend the Oct 6 meeting.",
+     "The Oct 6 meeting depends on Apex delivering business case numbers by Oct 2.",
+     "Decision and paper process should be identified after the CFO meeting, with Maya and Hannah as owners."
+    ],
+    "flagged_uncertain": 7
+   },
+   "cost_usd": 0.365542,
+   "words": 926,
+   "evidence_ok": 60,
+   "evidence_total": 60,
+   "errors": [],
+   "needs_review": [],
+   "deal_state": "ready_to_advance"
   },
   {
    "case": "e01",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [],
+   "judge": {
+    "claims": 30,
+    "supported": 29,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [
+     "Priscilla has no stated concerns yet and will presumably focus on cost and ROI."
+    ],
+    "flagged_uncertain": 6
+   },
+   "cost_usd": 0.041872,
+   "words": 1055
   },
   {
    "case": "e02",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "ambiguous_commitments"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [
+    "H4"
+   ],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U3",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 29,
+    "supported": 26,
+    "overstated_commitments": 3,
+    "overstated_list": [
+     "Sofia's stored procedure write-up is due 2026-09-30.",
+     "Sofia promised the parser run with no timing.",
+     "Ben offered that if a partial export is easier, Apex will size the request."
+    ],
+    "unsupported_list": [
+     "Sofia's stored procedure write-up is due 2026-09-30.",
+     "Sofia promised the parser run with no timing.",
+     "Ben offered that if a partial export is easier, Apex will size the request."
+    ],
+    "flagged_uncertain": 8
+   },
+   "cost_usd": 0.373886,
+   "words": 974,
+   "evidence_ok": 62,
+   "evidence_total": 62,
+   "errors": [],
+   "needs_review": [
+    "recap_email",
+    "internal_summary"
+   ],
+   "deal_state": "waiting_on_customer"
   },
   {
    "case": "e02",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "ambiguous_commitments"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U3",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 34,
+    "supported": 29,
+    "overstated_commitments": 4,
+    "overstated_list": [
+     "Sofia will send the stored procedure note today or tomorrow.",
+     "The reconnect is aimed for the week of October 12.",
+     "Sofia will work on the parser test once samples arrive.",
+     "Ben offered to set up a short session for others on the customer side to see lineage or policy."
+    ],
+    "unsupported_list": [
+     "Sofia will send the stored procedure note today or tomorrow.",
+     "The reconnect is aimed for the week of October 12.",
+     "Sofia will work on the parser test once samples arrive.",
+     "Sofia asked what she needs from Tamsin, including sanitized samples of a couple of procedures.",
+     "Ben offered to set up a short session for others on the customer side to see lineage or policy."
+    ],
+    "flagged_uncertain": 9
+   },
+   "cost_usd": 0.041444,
+   "words": 1303
   },
   {
    "case": "e03",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "contradictory_statements"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    },
+    {
+     "id": "C4",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U3",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 33,
+    "supported": 32,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [
+     "Mutual action plan: Frank Delacroix to name who signs and Leah to set a dated next meeting, no date."
+    ],
+    "flagged_uncertain": 9
+   },
+   "cost_usd": 0.337975,
+   "words": 948,
+   "evidence_ok": 84,
+   "evidence_total": 84,
+   "errors": [],
+   "needs_review": [
+    "recap_email"
+   ],
+   "deal_state": "open_technical_gap"
   },
   {
    "case": "e03",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "contradictory_statements"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    },
+    {
+     "id": "C4",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [
+    "H1"
+   ],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U3",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 43,
+    "supported": 38,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Email says Apex will confirm how it would set up real-time for dispatch and daily refresh for IT reporting."
+    ],
+    "unsupported_list": [
+     "Ingrid said Legal 'cleared' telematics data last year.",
+     "Real-time for dispatch versus daily refresh for IT reporting may affect packaging or seat types.",
+     "The email says pricing will be sent by a date Leah is to confirm.",
+     "Email says Apex will confirm how it would set up real-time for dispatch and daily refresh for IT reporting.",
+     "The email proposes a 30-minute call on a proposed date to review the residency answer and pricing."
+    ],
+    "flagged_uncertain": 9
+   },
+   "cost_usd": 0.037192,
+   "words": 1093
   },
   {
    "case": "e04",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 23,
+    "supported": 23,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [],
+    "flagged_uncertain": 4
+   },
+   "cost_usd": 0.329399,
+   "words": 938,
+   "evidence_ok": 57,
+   "evidence_total": 57,
+   "errors": [],
+   "needs_review": [
+    "recap_email"
+   ],
+   "deal_state": "low_information"
   },
   {
    "case": "e04",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 42,
+    "supported": 37,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Email states Simone, we'll send a one-page summary on audit logging and unblinded access that you can forward."
+    ],
+    "unsupported_list": [
+     "Email states Simone, we'll send a one-page summary on audit logging and unblinded access that you can forward.",
+     "The email offers a 15\u201320 minute walkthrough with Okafor if she has time.",
+     "Theo will come back with an estimate within [X] business days of receiving the dictionary.",
+     "The email proposes a data dictionary date such as Fri, Oct 9.",
+     "The email proposes a 20-minute check-in on a proposed date."
+    ],
+    "flagged_uncertain": 7
+   },
+   "cost_usd": 0.035596,
+   "words": 1063
   },
   {
    "case": "e05",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "long_rambling_call",
+    "objection_buried"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    },
+    {
+     "id": "C4",
+     "found": true
+    },
+    {
+     "id": "C5",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 38,
+    "supported": 35,
+    "overstated_commitments": 3,
+    "overstated_list": [
+     "Nia should send Doug a one-paragraph consent-flag note by 2026-10-02 for his privacy team to review.",
+     "Ryan should email Doug by 2026-10-05 asking what outcome Ann cares about and whether Ann signs.",
+     "The mutual action plan lists Nia as Apex owner of Karen's segment list and of the privacy team decision."
+    ],
+    "unsupported_list": [
+     "Nia should send Doug a one-paragraph consent-flag note by 2026-10-02 for his privacy team to review.",
+     "Ryan should email Doug by 2026-10-05 asking what outcome Ann cares about and whether Ann signs.",
+     "The mutual action plan lists Nia as Apex owner of Karen's segment list and of the privacy team decision."
+    ],
+    "flagged_uncertain": 7
+   },
+   "cost_usd": 0.405904,
+   "words": 1062,
+   "evidence_ok": 86,
+   "evidence_total": 86,
+   "errors": [],
+   "needs_review": [],
+   "deal_state": "waiting_on_customer"
   },
   {
    "case": "e05",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "long_rambling_call",
+    "objection_buried"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    },
+    {
+     "id": "C4",
+     "found": true
+    },
+    {
+     "id": "C5",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": false
+    }
+   ],
+   "judge": {
+    "claims": 46,
+    "supported": 45,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Email states Nia can walk the privacy team through how the consent filter works."
+    ],
+    "unsupported_list": [
+     "Email states Nia can walk the privacy team through how the consent filter works."
+    ],
+    "flagged_uncertain": 4
+   },
+   "cost_usd": 0.046654,
+   "words": 1265
   },
   {
    "case": "e06",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "objection_buried"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 28,
+    "supported": 26,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Jonas should ask Apex compliance for written Frankfurt wording by 2026-10-05.",
+     "The mutual action plan lists written EU confirmation due 2026-10-05 as proposed, owned by Jonas."
+    ],
+    "unsupported_list": [
+     "Jonas should ask Apex compliance for written Frankfurt wording by 2026-10-05.",
+     "The mutual action plan lists written EU confirmation due 2026-10-05 as proposed, owned by Jonas."
+    ],
+    "flagged_uncertain": 5
+   },
+   "cost_usd": 0.35352,
+   "words": 1031,
+   "evidence_ok": 82,
+   "evidence_total": 82,
+   "errors": [],
+   "needs_review": [
+    "recap_email",
+    "internal_summary"
+   ],
+   "deal_state": "waiting_on_customer"
   },
   {
    "case": "e06",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "objection_buried"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 36,
+    "supported": 36,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [],
+    "flagged_uncertain": 7
+   },
+   "cost_usd": 0.041304,
+   "words": 1252
   },
   {
    "case": "e07",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+   ],
+   "commitments_total": 4,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [],
+   "judge": {
+    "claims": 21,
+    "supported": 20,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Apex will send the written recap by 2026-10-02."
+    ],
+    "unsupported_list": [
+     "Apex will send the written recap by 2026-10-02."
+    ],
+    "flagged_uncertain": 3
+   },
+   "cost_usd": 0.347665,
+   "words": 842,
+   "evidence_ok": 56,
+   "evidence_total": 56,
+   "errors": [],
+   "needs_review": [],
+   "deal_state": "ready_to_advance"
   },
   {
    "case": "e07",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3",
+    "M4"
+   ],
+   "commitments_total": 4,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [],
+   "judge": {
+    "claims": 44,
+    "supported": 42,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Apex owns returning the completed questionnaire as part of the full package by Oct 14.",
+     "Email: Apex will return the questionnaire ahead of Oct 14."
+    ],
+    "unsupported_list": [
+     "Apex owns returning the completed questionnaire as part of the full package by Oct 14.",
+     "Email: Apex will return the questionnaire ahead of Oct 14."
+    ],
+    "flagged_uncertain": 7
+   },
+   "cost_usd": 0.045538,
+   "words": 1180
   },
   {
    "case": "e08",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 37,
+    "supported": 35,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Isaac should ask Rachel who in leadership decides on a second platform, due 2026-10-02",
+     "Lena should send Tobias a list of what the cost comparison needs, due 2026-10-01"
+    ],
+    "unsupported_list": [
+     "The CRM logs the Lena commitment without a date",
+     "Name who approves a second platform and share a cost outline for that person, proposed with Rachel as customer owner"
+    ],
+    "flagged_uncertain": 5
+   },
+   "cost_usd": 0.319884,
+   "words": 978,
+   "evidence_ok": 63,
+   "evidence_total": 63,
+   "errors": [],
+   "needs_review": [
+    "assessment",
+    "internal_summary"
+   ],
+   "deal_state": "competitive_risk"
   },
   {
    "case": "e08",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 32,
+    "supported": 31,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [
+     "Lena demonstrated the cost comparison approach in the demo."
+    ],
+    "flagged_uncertain": 2
+   },
+   "cost_usd": 0.036472,
+   "words": 941
   },
   {
    "case": "e09",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [],
+   "commitments_found": [
+    "M1"
+   ],
+   "commitments_total": 1,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 19,
+    "supported": 16,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Kofi's load summary should be logged with a send date of 2026-09-30.",
+     "Hugo is to identify who in operations owns meter data loads and decisions."
+    ],
+    "unsupported_list": [
+     "Kofi's load summary should be logged with a send date of 2026-09-30.",
+     "The mutual action plan has Kofi sending the load summary to Hugo on 2026-09-30.",
+     "Hugo is to identify who in operations owns meter data loads and decisions."
+    ],
+    "flagged_uncertain": 5
+   },
+   "cost_usd": 0.180869,
+   "words": 553,
+   "evidence_ok": 28,
+   "evidence_total": 28,
+   "errors": [],
+   "needs_review": [],
+   "deal_state": "low_information"
   },
   {
    "case": "e09",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [],
+   "commitments_found": [
+    "M1"
+   ],
+   "commitments_total": 1,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 34,
+    "supported": 33,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Kofi sends the load summary and Mia sends the follow-up email today."
+    ],
+    "unsupported_list": [
+     "Kofi sends the load summary and Mia sends the follow-up email today."
+    ],
+    "flagged_uncertain": 2
+   },
+   "cost_usd": 0.02775,
+   "words": 879
   },
   {
    "case": "e10",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "ambiguous_commitments"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [
+    "H2"
+   ],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 36,
+    "supported": 33,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Ana will ask the identity team in writing for a GA date and preview access, due 2026-10-06.",
+     "Derek will confirm with Fatima that next quarter and preview are unconfirmed by 2026-10-05."
+    ],
+    "unsupported_list": [
+     "Ana will ask the identity team in writing for a GA date and preview access, due 2026-10-06.",
+     "Derek will confirm with Fatima that next quarter and preview are unconfirmed by 2026-10-05.",
+     "The nested claims date comes from the identity team."
+    ],
+    "flagged_uncertain": 6
+   },
+   "cost_usd": 0.307486,
+   "words": 865,
+   "evidence_ok": 76,
+   "evidence_total": 76,
+   "errors": [],
+   "needs_review": [],
+   "deal_state": "low_information"
   },
   {
    "case": "e10",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "ambiguous_commitments"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 30,
+    "supported": 25,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Fatima committed to take the design and date to the architecture board at the Nov 3 meeting.",
+     "The email says Apex is also checking with product on preview program access and will include what it learns."
+    ],
+    "unsupported_list": [
+     "Colin was happy with the pipeline result.",
+     "The Nov 3 board is the only checkpoint before the Dec 18 close, and the next board is likely early December.",
+     "Fatima committed to take the design and date to the architecture board at the Nov 3 meeting.",
+     "The email says Apex is also checking with product on preview program access and will include what it learns.",
+     "The email offers to walk through the SSO design with Fatima before she submits it."
+    ],
+    "flagged_uncertain": 7
+   },
+   "cost_usd": 0.047724,
+   "words": 1324
   },
   {
    "case": "e11",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1"
+   ],
+   "commitments_total": 1,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 23,
+    "supported": 19,
+    "overstated_commitments": 4,
+    "overstated_list": [
+     "Paula to send Elise a provost-ready summary of the first generation retention cut by 2026-10-01.",
+     "Paula to offer a committee-ready summary and ask when the technology committee meets, by 2026-10-02.",
+     "Sam to send the screenshots by 2026-10-01 and add an access-controls view for the privacy officer.",
+     "Mutual action plan: Elise is the customer owner for the provost meeting and Paula the Apex owner."
+    ],
+    "unsupported_list": [
+     "Paula to send Elise a provost-ready summary of the first generation retention cut by 2026-10-01.",
+     "Paula to offer a committee-ready summary and ask when the technology committee meets, by 2026-10-02.",
+     "Sam to send the screenshots by 2026-10-01 and add an access-controls view for the privacy officer.",
+     "Mutual action plan: Elise is the customer owner for the provost meeting and Paula the Apex owner."
+    ],
+    "flagged_uncertain": 5
+   },
+   "cost_usd": 0.323696,
+   "words": 842,
+   "evidence_ok": 55,
+   "evidence_total": 55,
+   "errors": [],
+   "needs_review": [
+    "internal_summary",
+    "mutual_action_plan"
+   ],
+   "deal_state": "waiting_on_customer"
   },
   {
    "case": "e11",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1"
+   ],
+   "commitments_total": 1,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 30,
+    "supported": 26,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Dr. Martin plans to circulate the dashboard screenshots widely.",
+     "Sam can walk the privacy officer through advisor and dean-level permissions and how student data is handled."
+    ],
+    "unsupported_list": [
+     "Kevin confirmed that any attribute in the student table can be used as a filter.",
+     "The enrollment model Paula mentioned at the start isn't explicitly shown in the transcript.",
+     "Dr. Martin plans to circulate the dashboard screenshots widely.",
+     "Sam can walk the privacy officer through advisor and dean-level permissions and how student data is handled."
+    ],
+    "flagged_uncertain": 4
+   },
+   "cost_usd": 0.03108,
+   "words": 1032
   },
   {
    "case": "e12",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "contradictory_statements",
+    "ambiguous_commitments"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 33,
+    "supported": 33,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [],
+    "flagged_uncertain": 8
+   },
+   "cost_usd": 0.295877,
+   "words": 823,
+   "evidence_ok": 64,
+   "evidence_total": 64,
+   "errors": [],
+   "needs_review": [
+    "internal_summary"
+   ],
+   "deal_state": "low_information"
   },
   {
    "case": "e12",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "contradictory_statements",
+    "ambiguous_commitments"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 40,
+    "supported": 38,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Rosa will send the recording to Neil as well as Amira."
+    ],
+    "unsupported_list": [
+     "Sending the order form before approval is mapped can create false momentum and invite discount or terms pressure.",
+     "Rosa will send the recording to Neil as well as Amira."
+    ],
+    "flagged_uncertain": 9
+   },
+   "cost_usd": 0.03507,
+   "words": 1030
   },
   {
    "case": "e13",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 26,
+    "supported": 26,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [],
+    "flagged_uncertain": 8
+   },
+   "cost_usd": 0.25818,
+   "words": 894,
+   "evidence_ok": 59,
+   "evidence_total": 59,
+   "errors": [],
+   "needs_review": [
+    "internal_summary"
+   ],
+   "deal_state": "low_information"
   },
   {
    "case": "e13",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 43,
+    "supported": 41,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "In the follow-up email, Mateo will confirm whether Apex can read the legacy format once the sample file arrives."
+    ],
+    "unsupported_list": [
+     "Mateo and Yuki asked in the call for pass criteria to be confirmed (percentile, threshold, event rate) before the test.",
+     "In the follow-up email, Mateo will confirm whether Apex can read the legacy format once the sample file arrives."
+    ],
+    "flagged_uncertain": 6
+   },
+   "cost_usd": 0.037768,
+   "words": 1120
   },
   {
    "case": "e14",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 26,
+    "supported": 26,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [],
+    "flagged_uncertain": 5
+   },
+   "cost_usd": 0.300336,
+   "words": 912,
+   "evidence_ok": 59,
+   "evidence_total": 59,
+   "errors": [],
+   "needs_review": [],
+   "deal_state": "waiting_on_customer"
   },
   {
    "case": "e14",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2"
+   ],
+   "commitments_total": 2,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 41,
+    "supported": 39,
+    "overstated_commitments": 1,
+    "overstated_list": [
+     "Email says Elena can join a session with the security office to walk through the key hierarchy."
+    ],
+    "unsupported_list": [
+     "The email proposes a 20-minute check-in the week of October 12.",
+     "Email says Elena can join a session with the security office to walk through the key hierarchy."
+    ],
+    "flagged_uncertain": 11
+   },
+   "cost_usd": 0.037052,
+   "words": 1053
   },
   {
    "case": "e15",
    "system": "debrief",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder",
+    "objection_buried"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    },
+    {
+     "id": "C4",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 35,
+    "supported": 31,
+    "overstated_commitments": 2,
+    "overstated_list": [
+     "Ask Liam to share the engineering lead's build assumptions or an intro so Apex can draft the comparison; owner Nora, due 2026-10-05.",
+     "Send Helen's terms to deal desk and get an answer by 2026-10-05, owner Nora."
+    ],
+    "unsupported_list": [
+     "Ask Liam to share the engineering lead's build assumptions or an intro so Apex can draft the comparison; owner Nora, due 2026-10-05.",
+     "Send Helen's terms to deal desk and get an answer by 2026-10-05, owner Nora.",
+     "The deal state is low_information.",
+     "Mutual action plan: build versus buy comparison owned by Liam and Nora, using the engineering lead's assumptions, proposed."
+    ],
+    "flagged_uncertain": 8
+   },
+   "cost_usd": 0.301117,
+   "words": 988,
+   "evidence_ok": 58,
+   "evidence_total": 58,
+   "errors": [],
+   "needs_review": [
+    "recap_email",
+    "internal_summary"
+   ],
+   "deal_state": "low_information"
   },
   {
    "case": "e15",
    "system": "baseline",
-   "status": "not_run",
-   "reason": "no output"
+   "status": "ran",
+   "hard_cases": [
+    "missing_stakeholder",
+    "objection_buried"
+   ],
+   "risks": [
+    {
+     "id": "R1",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R2",
+     "found": true,
+     "found_full": true
+    },
+    {
+     "id": "R3",
+     "found": true,
+     "found_full": true
+    }
+   ],
+   "concerns": [
+    {
+     "id": "C1",
+     "found": true
+    },
+    {
+     "id": "C2",
+     "found": true
+    },
+    {
+     "id": "C3",
+     "found": true
+    },
+    {
+     "id": "C4",
+     "found": true
+    }
+   ],
+   "commitments_found": [
+    "M1",
+    "M2",
+    "M3"
+   ],
+   "commitments_total": 3,
+   "hedged_as_firm": [],
+   "agreed_next_step_fabricated": false,
+   "uncertain": [
+    {
+     "id": "U1",
+     "mentioned": true,
+     "flagged": true
+    },
+    {
+     "id": "U2",
+     "mentioned": true,
+     "flagged": true
+    }
+   ],
+   "judge": {
+    "claims": 42,
+    "supported": 40,
+    "overstated_commitments": 0,
+    "overstated_list": [],
+    "unsupported_list": [
+     "Zara's list has no firm date.",
+     "No one from Apex committed to a specific deliverable."
+    ],
+    "flagged_uncertain": 3
+   },
+   "cost_usd": 0.035444,
+   "words": 1087
   }
  ],
  "totals": {
   "debrief": {
-   "ran": 0,
-   "not_run": 15,
-   "claims": 0,
-   "supported": 0,
-   "judged": 0,
-   "risks": 0,
-   "risks_found": 0,
-   "risks_found_full": 0,
-   "concerns": 0,
-   "concerns_found": 0,
-   "overstated": 0,
-   "hedged_as_firm": 0,
-   "non_commitments": 0,
+   "ran": 15,
+   "not_run": 0,
+   "claims": 443,
+   "supported": 414,
+   "judged": 15,
+   "risks": 29,
+   "risks_found": 29,
+   "risks_found_full": 29,
+   "concerns": 35,
+   "concerns_found": 35,
+   "overstated": 23,
+   "hedged_as_firm": 2,
+   "non_commitments": 16,
    "agreed_fab": 0,
-   "uncertain": 0,
-   "uncertain_mentioned": 0,
-   "uncertain_flagged": 0,
-   "commitments": 0,
-   "commitments_found": 0,
-   "cost": 0,
-   "words": 0
+   "uncertain": 23,
+   "uncertain_mentioned": 23,
+   "uncertain_flagged": 23,
+   "commitments": 35,
+   "commitments_found": 35,
+   "cost": 4.801,
+   "words": 13576,
+   "evidence_ok": 949,
+   "evidence_total": 949
   },
   "baseline": {
-   "ran": 0,
-   "not_run": 15,
-   "claims": 0,
-   "supported": 0,
-   "judged": 0,
-   "risks": 0,
-   "risks_found": 0,
-   "risks_found_full": 0,
-   "concerns": 0,
-   "concerns_found": 0,
-   "overstated": 0,
-   "hedged_as_firm": 0,
-   "non_commitments": 0,
+   "ran": 15,
+   "not_run": 0,
+   "claims": 567,
+   "supported": 529,
+   "judged": 15,
+   "risks": 29,
+   "risks_found": 29,
+   "risks_found_full": 29,
+   "concerns": 35,
+   "concerns_found": 35,
+   "overstated": 17,
+   "hedged_as_firm": 1,
+   "non_commitments": 16,
    "agreed_fab": 0,
-   "uncertain": 0,
-   "uncertain_mentioned": 0,
-   "uncertain_flagged": 0,
-   "commitments": 0,
-   "commitments_found": 0,
-   "cost": 0,
-   "words": 0
+   "uncertain": 23,
+   "uncertain_mentioned": 23,
+   "uncertain_flagged": 22,
+   "commitments": 35,
+   "commitments_found": 35,
+   "cost": 0.578,
+   "words": 16677
   }
  }
 }

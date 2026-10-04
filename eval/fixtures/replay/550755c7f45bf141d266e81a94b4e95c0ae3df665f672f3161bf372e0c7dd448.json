@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "550755c7f45bf141d266e81a94b4e95c0ae3df665f672f3161bf372e0c7dd448",
+ "recorded_at": "2026-10-04T00:32:32.403819+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFnBPES4qtCddrYv3MG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: dedicated-cluster latency is unmeasured, and the shared sandbox 99th percentile of 3.8 seconds misses the under 2 seconds need.\",\"customer_value_line\":\"Henrik Larsen stated the outcome as crane operators needing data in under 2 seconds, and he said the dedicated cluster result decides it for them.\",\"what_we_validated\":[\"Sandbox median end to end latency was 1.4 seconds on the crane telemetry sample at about 15 thousand events a second at peak.\",\"Berth schedule model shown; it takes vessel arrival estimates and shows berth conflicts 72 hours ahead.\",\"Alerting shown; berth conflicts raise an alert to the duty manager.\"],\"integration_patterns\":[\"Vessel arrival estimates come from a port community system over an old message format; Apex has not seen the format and it is not confirmed readable, pending a sample file from Yuki.\"],\"objections_and_answers\":[\"Henrik: the 99th percentile of 3.8 seconds is too slow for operators. Mateo: the sandbox is a shared cluster and he expects lower on dedicated but has not measured it and gave no number. Status: partially resolved, pending the dedicated test.\"],\"open_items\":[\"Dedicated cluster latency (median and 99th percentile) not yet measured. Owner: Mateo Ruiz.\",\"Whether Apex can read the port community system message format is unknown. Owner: Mateo Ruiz, depends on Yuki's sample file.\",\"Pass bar for the dedicated test was not stated beyond under 2 seconds; the 99th percentile was called the problem. Not confirmed with Henrik.\",\"Economic buyer and decision process not named or discussed.\"],\"commitments\":[\"Mateo Ruiz: run the same test on a dedicated cluster and send the results to the customer by Thursday, October 8th.\",\"Yuki Tanaka: send a sample file of the vessel estimate message format today, October 2nd.\",\"Olivia Grant: send the invite for the review on Monday, October 12th, 9 am customer time; no send date stated.\"],\"stakeholders\":[\"Henrik Larsen, Head of Terminal Operations Technology, champion, present.\",\"Yuki Tanaka, Systems Integration Lead, technical evaluator, present; owns the sample file.\",\"Economic buyer: not named.\"],\"competitive_notes\":[],\"risks\":[\"If the dedicated cluster still misses under 2 seconds at the 99th percentile, Henrik's stated deciding factor turns against Apex.\",\"Message format readability is unconfirmed until the sample file arrives.\",\"No economic buyer is known, and TV began September 14.\",\"Henrik's reply to the berth model and alerting was brief (\\\"Fine. Latency is the real question.\\\"), so little reaction to those areas.\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"Crane operators need data in under 2 seconds.\"},{\"utterance_id\":\"U003\",\"excerpt\":\"The 99th percentile was 3.8 seconds.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"The 99th percentile is the problem. 3.8 seconds is too slow for operators.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"On a dedicated cluster I'd expect it to be lower, but I haven't measured it, so I won't give you a number.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Good. That decides it for us.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"Our vessel estimates come from a port community system over an old message format.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send one today.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Yes. Monday, October 12th, 9 am our time.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5040,
+   "cache_creation_input_tokens": 2026,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2026,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1300,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

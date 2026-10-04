@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "c41c58f8e39c0a1748da52b49d16ef7a434d1e117c013ce1c9d8d5d800a669ff",
+ "recorded_at": "2026-10-04T00:34:53.753111+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFxZ5jXwmXj9B5T892i",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"internal_summary\",\"target\":\"evidence list and cited claims (U008, U010, U011, U013, U015, U021)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Every excerpt is word for word from its line, and each cited claim, including the champion-opinion-only caveat on U012, is supported by the line it cites.\",\"utterance_ids\":[\"U008\",\"U010\",\"U011\",\"U012\",\"U013\",\"U015\",\"U021\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"internal_summary\",\"target\":\"commitments: Zara send field list 'tomorrow'; Ravi test custom fields; Nora check terms with deal desk\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each commitment matches what was said, and the missing dates for Ravi and Nora are flagged rather than invented.\",\"utterance_ids\":[\"U011\",\"U014\",\"U020\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"internal_summary\",\"target\":\"deal_state_line: 'technical demo went well per champion... Low information'\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary attributes the positive view to the champion alone and weighs it against the CFO's conditions and the absence of a dated next meeting.\",\"utterance_ids\":[\"U012\",\"U013\",\"U015\",\"U021\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"internal_summary\",\"target\":\"what_we_validated and integration_patterns\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Nothing in the summary presents a corrected or superseded behavior as current, and no release card applies to the validated items.\",\"utterance_ids\":[\"U003\",\"U005\",\"U007\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 2067,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5904,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1252,
+   "output_tokens_details": {
+    "thinking_tokens": 696
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

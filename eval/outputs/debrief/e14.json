@@ -1,0 +1,1828 @@
+{
+ "debrief_id": "e14-cf6c93b0",
+ "deal_id": "e14",
+ "as_of": "2026-10-01",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No dated next meeting or action agreed by the customer in the call.",
+   "date": "",
+   "evidence": []
+  },
+  "objections": [
+   {
+    "summary": "Customer wants to hold its own keys, but its policy may not allow a cloud key service for guest data. Its on premises HSM for payment data is not supported by Apex.",
+    "raised_by": "Matteo Bianchi",
+    "status": "open",
+    "answer_given": "Keys can be held in a major cloud key service; on premises HSMs are not supported. Elena said it would need to be a cloud key service for this tenant.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "We use an on premises HSM today for payment data."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     }
+    ]
+   },
+   {
+    "summary": "Customer needs contract wording on support access to confirm EU only support access.",
+    "raised_by": "Matteo Bianchi",
+    "status": "partially_resolved",
+    "answer_given": "The tenant setting restricts support access to EU based staff; Elena will confirm exact wording with compliance.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "We'll need the contract wording on support access."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Whether the customer's policy allows a cloud key service for guest data. Group security office must decide, and its timeline is unknown.",
+    "owner": "Matteo Bianchi",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     }
+    ]
+   },
+   {
+    "summary": "Contract wording on EU only support access still to be confirmed with Apex compliance.",
+    "owner": "Elena Varga",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Elena Varga",
+    "side": "apex",
+    "what": "Confirm exact support access wording with Apex compliance and send it to the customer",
+    "by_when": "2026-10-07",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     }
+    ]
+   },
+   {
+    "who": "Elena Varga",
+    "side": "apex",
+    "what": "Send the encryption whitepaper with the key hierarchy",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send it today."
+     }
+    ]
+   },
+   {
+    "who": "Matteo Bianchi",
+    "side": "customer",
+    "what": "Ask the group security office whether policy allows a cloud key service for guest data",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Charlotte Dubois",
+    "title": "Director of Guest Data",
+    "present": true,
+    "why_they_matter": "Champion; says they can move if keys are fine",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+     }
+    ]
+   },
+   {
+    "name": "Matteo Bianchi",
+    "title": "Security and Compliance Manager",
+    "present": true,
+    "why_they_matter": "Gatekeeper on keys and support access; takes it to group security office",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     }
+    ]
+   },
+   {
+    "name": "Ivy Chen",
+    "title": "CRM Analyst",
+    "present": true,
+    "why_they_matter": "Technical evaluator; cares about reviewing uncertain merges",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "How do we review the merges it wasn't sure about?"
+     }
+    ]
+   },
+   {
+    "name": "Group security office",
+    "title": "not stated",
+    "present": false,
+    "why_they_matter": "Decides on key policy; timeline outside Matteo's control",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion calls the profile unification demo strong and says they can move if security is comfortable on keys",
+    "strength": "moderate",
+    "qualifier": "Conditional on Matteo's key decision, which depends on the group security office; no economic buyer named",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+     }
+    ]
+   },
+   {
+    "summary": "CRM analyst values the review queue for uncertain merges, tied to past bad merge experience",
+    "strength": "weak",
+    "qualifier": "Positive reaction from an evaluator, not a decision",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Good, we've been burned by bad merges before."
+     }
+    ]
+   },
+   {
+    "summary": "Security asked for contract wording and a whitepaper to feed their review, showing active engagement",
+    "strength": "weak",
+    "qualifier": "Requests for information, not commitments",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "We'll need the contract wording on support access."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "The encryption whitepaper with the key hierarchy."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Customer uses an on premises HSM for payment data, which Apex does not support; policy may not allow a cloud key service for guest data",
+    "strength": "strong",
+    "qualifier": "Matteo is unsure; outcome not yet known",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "We use an on premises HSM today for payment data."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     }
+    ]
+   },
+   {
+    "summary": "Key decision sits with the group security office, whose timeline Matteo does not control",
+    "strength": "moderate",
+    "qualifier": "No date given",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "90",
+    "what_it_measures": "Hotels the customer operates in Europe",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We operate 90 hotels in Europe, so residency is the first question."
+     }
+    ]
+   },
+   {
+    "value": "2.1 million",
+    "what_it_measures": "Guest records merged in the demo",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "Matching merged 2.1 million records into 1.4 million profiles."
+     }
+    ]
+   },
+   {
+    "value": "1.4 million",
+    "what_it_measures": "Profiles resulting from the merge in the demo",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "Matching merged 2.1 million records into 1.4 million profiles."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Matteo must ask the group security office whether policy allows a cloud key service for guest data",
+    "owner": "Matteo Bianchi",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "dated_next_step",
+    "logged_value": "",
+    "transcript_says": "No dated next meeting was agreed in the call; the only dates are the SC's wording commitment by October 7 and the whitepaper today",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "Matteo, when would you know?"
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "Support access wording by Oct 7",
+    "transcript_says": "Logged commitment is accurate but incomplete: Elena also committed to send the encryption whitepaper today",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send it today."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "partial",
+   "summary": "not stated",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "We operate 90 hotels in Europe, so residency is the first question."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "partial",
+   "summary": "Matteo must ask the group security office whether policy allows a cloud key service for guest data",
+   "evidence": [
+    {
+     "utterance_id": "U010",
+     "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data."
+    },
+    {
+     "utterance_id": "U018",
+     "excerpt": "I need to ask our group security office. I don't control their timeline."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "partial",
+   "summary": "Matteo must ask the group security office whether policy allows a cloud key service for guest data",
+   "evidence": [
+    {
+     "utterance_id": "U010",
+     "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data."
+    },
+    {
+     "utterance_id": "U018",
+     "excerpt": "I need to ask our group security office. I don't control their timeline."
+    }
+   ]
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "Customer uses an on premises HSM for payment data, which Apex does not support; policy may not allow a cloud key service for guest data",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "We use an on premises HSM today for payment data."
+    },
+    {
+     "utterance_id": "U010",
+     "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Charlotte Dubois, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U016",
+     "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "waiting_on_customer",
+  "deal_state_why": "Matteo must ask the group security office whether a cloud key service is allowed; no date given, and he doesn't control their timeline.",
+  "next_steps": [
+   {
+    "action": "Send Matteo the whitepaper with a short forwardable note for the group security office stating that keys must sit in a major cloud key service and on premises HSMs are not supported.",
+    "owner": "Elena Varga",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "RC-11",
+    "action_type": "support_customer_process",
+    "why": "Group security office decides and Matteo can't speed it; a one-page summary he can forward fits their process better than the whitepaper alone.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "The encryption whitepaper with the key hierarchy."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+     }
+    ]
+   },
+   {
+    "action": "Ask Charlotte who signs for this purchase and whether she can introduce that person while security review runs.",
+    "owner": "Sean Murphy",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "Charlotte said they can move but nobody named who signs; AEs often wait for security before asking about the signer.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Customer uses an on premises HSM for payment data and Matteo is unsure policy allows a cloud key service for guest data; this could block the deal.",
+    "competitor": "",
+    "release_card_id": "RC-11",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "We use an on premises HSM today for payment data."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Champion will move if keys are fine, but Matteo must ask the group security office, whose timeline he doesn't control and hasn't dated.",
+    "next_steps": [
+     {
+      "action": "Send the encryption whitepaper with a short cover note for the group security office: keys must sit in a major cloud key service, on premises HSMs are not supported, and offer a call with them if useful.",
+      "owner": "Elena Varga",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "RC-11",
+      "action_type": "support_customer_process",
+      "why": "The whitepaper alone doesn't answer the HSM question the security office will actually decide, and a typical rep sends it without that framing.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "The encryption whitepaper with the key hierarchy."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "We use an on premises HSM today for payment data."
+       }
+      ]
+     },
+     {
+      "action": "Ask Charlotte who signs for this purchase and what she can bring to the group security office, since no economic buyer or outcome in her words was stated.",
+      "owner": "Sean Murphy",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Charlotte's enthusiasm is conditional and nobody named who signs; the group security office is absent and easy to leave unaddressed.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I need to ask our group security office. I don't control their timeline."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Customer policy may not allow a cloud key service for guest data, and Apex does not support their on premises HSM. This could block the deal.",
+      "competitor": "",
+      "release_card_id": "RC-11",
+      "evidence": [
+       {
+        "utterance_id": "U010",
+        "excerpt": "I'm not sure it does."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "We use an on premises HSM today for payment data."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Matteo must ask the group security office whether a cloud key service is allowed; no date given, and he doesn't control their timeline.",
+    "next_steps": [
+     {
+      "action": "Send Matteo the whitepaper with a short forwardable note for the group security office stating that keys must sit in a major cloud key service and on premises HSMs are not supported.",
+      "owner": "Elena Varga",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "RC-11",
+      "action_type": "support_customer_process",
+      "why": "Group security office decides and Matteo can't speed it; a one-page summary he can forward fits their process better than the whitepaper alone.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "The encryption whitepaper with the key hierarchy."
+       },
+       {
+        "utterance_id": "U007",
+        "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+       }
+      ]
+     },
+     {
+      "action": "Ask Charlotte who signs for this purchase and whether she can introduce that person while security review runs.",
+      "owner": "Sean Murphy",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Charlotte said they can move but nobody named who signs; AEs often wait for security before asking about the signer.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Customer uses an on premises HSM for payment data and Matteo is unsure policy allows a cloud key service for guest data; this could block the deal.",
+      "competitor": "",
+      "release_card_id": "RC-11",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "We use an on premises HSM today for payment data."
+       },
+       {
+        "utterance_id": "U010",
+        "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Pinehurst Hotels Europe: recap of today's technical validation",
+    "body": "Hi Charlotte, Matteo and Ivy,\n\nThank you for your time today. Here is where we landed.\n\nShown today: Frankfurt hosting with backups and audit logs, a tenant setting that restricts support access to EU based staff, and guest profile unification across your three booking systems, which merged 2.1 million records into 1.4 million profiles. Low confidence matches go to a review queue where your team approves or splits them.\n\nOpen on keys: you can hold your own keys in a major cloud key service, but on premises HSMs are not supported. Matteo will check with the group security office whether policy allows a cloud key service for guest data.\n\nFrom Elena: the encryption whitepaper with the key hierarchy today, and the exact support access contract wording by Wednesday, October 7th.\n\nIf it would help the group security office, we are glad to join a call with them. Is there a date that works on your side for the next conversation?\n\nBest,\nSean",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "The tenant can be pinned to the Frankfurt region, including backups and audit logs."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "Matching merged 2.1 million records into 1.4 million profiles."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Low confidence matches go to a review queue. Your team approves or splits them."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send it today."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Pinehurst Hotels Europe: recap of today's technical validation",
+    "body": "Hi Charlotte, Matteo and Ivy,\n\nThank you for your time today. Here is where we landed.\n\nShown: Frankfurt region pinning, including backups and audit logs, with a tenant setting that restricts support access to EU based staff. Guest profile unification merged 2.1 million records from your three booking systems into 1.4 million profiles, with low confidence matches sent to a review queue for your team to approve or split.\n\nOpen:\n- Keys: you can hold your own keys in a major cloud key service, but on premises HSMs are not supported. Matteo is checking with your group security office whether policy allows a cloud key service for guest data.\n- Support access: Elena will confirm the exact contract wording with our compliance team and send it by Wednesday, October 7th.\n\nElena is sending the encryption whitepaper with the key hierarchy today. Matteo, if a short note for the group security office would help, we can prepare one.\n\nCharlotte, is there a good time for us to reconnect once you hear back?\n\nBest,\nSean",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "The tenant can be pinned to the Frankfurt region, including backups and audit logs."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "Matching merged 2.1 million records into 1.4 million profiles."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Low confidence matches go to a review queue. Your team approves or splits them."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send it today."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Waiting on customer: Matteo must ask the group security office whether policy allows a cloud key service for guest data; no date given.",
+    "customer_value_line": "Business outcome not stated; discovery pain was guest records split across three booking systems, but the customer did not state an outcome in the call.",
+    "what_we_validated": [
+     "EU residency: tenant pinned to Frankfurt including backups and audit logs, plus a tenant setting restricting support access to EU based staff.",
+     "Guest profile unification: 2.1 million records from three booking systems merged into 1.4 million profiles.",
+     "Low confidence matches go to a review queue where the customer team approves or splits them."
+    ],
+    "integration_patterns": [
+     "Three booking systems unified into a single guest profile set (demo data)."
+    ],
+    "objections_and_answers": [
+     "Support access contract wording: Matteo needs it; Elena will confirm exact wording with compliance and send by Oct 7. Partially resolved.",
+     "Own keys: customer wants to hold its own keys and uses an on premises HSM for payment data; Elena said keys must be in a major cloud key service and on premises HSMs are not supported. Open, Matteo unsure policy allows it.",
+     "Bad merges: Ivy asked how uncertain merges are reviewed; answered with the review queue. Ivy reacted positively."
+    ],
+    "open_items": [
+     "Whether policy allows a cloud key service for guest data. Owner Matteo Bianchi via group security office, no date.",
+     "Contract wording on EU only support access. Owner Elena Varga, due Oct 7.",
+     "No dated next meeting agreed.",
+     "Economic buyer not named."
+    ],
+    "commitments": [
+     "Elena Varga: confirm support access wording with Apex compliance and send by Wednesday, October 7th.",
+     "Elena Varga: send the encryption whitepaper with the key hierarchy today (Oct 1).",
+     "Matteo Bianchi: ask group security office about cloud key service policy, no date given."
+    ],
+    "stakeholders": [
+     "Charlotte Dubois, Director of Guest Data: champion, present. Said they can move if Matteo is comfortable on keys.",
+     "Matteo Bianchi, Security and Compliance Manager: gatekeeper on keys and support access, present.",
+     "Ivy Chen, CRM Analyst: technical evaluator, present.",
+     "Group security office: decides on key policy, absent, timeline outside Matteo's control.",
+     "Economic buyer: not stated."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "On premises HSM for payment data is not supported by Apex and the cloud key service may not be allowed by policy; this could block the deal.",
+     "Decision sits with the group security office with no timeline.",
+     "No dated next step and no economic buyer named."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "We use an on premises HSM today for payment data."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send it today."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "Matching merged 2.1 million records into 1.4 million profiles."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Waiting on customer: Matteo must ask the group security office whether policy allows a cloud key service for guest data; no date given.",
+    "customer_value_line": "Business outcome not stated; discovery pain was guest records split across three booking systems, but the customer did not state an outcome in the call.",
+    "what_we_validated": [
+     "EU residency: tenant pinned to Frankfurt including backups and audit logs, plus a tenant setting restricting support access to EU based staff.",
+     "Guest profile unification: 2.1 million records from three booking systems merged into 1.4 million profiles.",
+     "Low confidence matches go to a review queue where the customer team approves or splits them."
+    ],
+    "integration_patterns": [
+     "Three booking systems unified into a single guest profile set (demo data)."
+    ],
+    "objections_and_answers": [
+     "Support access contract wording: Matteo needs it; Elena will confirm exact wording with compliance and send by Oct 7. Partially resolved.",
+     "Own keys: customer wants to hold its own keys and uses an on premises HSM for payment data; Elena said keys must be in a major cloud key service and on premises HSMs are not supported. Open, Matteo unsure policy allows it.",
+     "Bad merges: Ivy asked how uncertain merges are reviewed; answered with the review queue. Ivy reacted positively."
+    ],
+    "open_items": [
+     "Whether policy allows a cloud key service for guest data. Owner Matteo Bianchi via group security office, no date.",
+     "Contract wording on EU only support access. Owner Elena Varga, due Oct 7.",
+     "No dated next meeting agreed.",
+     "Economic buyer not named."
+    ],
+    "commitments": [
+     "Elena Varga: confirm support access wording with Apex compliance and send by Wednesday, October 7th.",
+     "Elena Varga: send the encryption whitepaper with the key hierarchy today (Oct 1).",
+     "Matteo Bianchi: ask group security office about cloud key service policy, no date given."
+    ],
+    "stakeholders": [
+     "Charlotte Dubois, Director of Guest Data: champion, present. Said they can move if Matteo is comfortable on keys.",
+     "Matteo Bianchi, Security and Compliance Manager: gatekeeper on keys and support access, present.",
+     "Ivy Chen, CRM Analyst: technical evaluator, present.",
+     "Group security office: decides on key policy, absent, timeline outside Matteo's control.",
+     "Economic buyer: not stated."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "On premises HSM for payment data is not supported by Apex and the cloud key service may not be allowed by policy; this could block the deal.",
+     "Decision sits with the group security office with no timeline.",
+     "No dated next step and no economic buyer named."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "We use an on premises HSM today for payment data."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I need to ask our group security office. I don't control their timeline."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send it today."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "Matching merged 2.1 million records into 1.4 million profiles."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Business outcome not stated by the customer; the plan is built around the stated pain of guest records split across three booking systems and the open key policy question.",
+    "rows": [
+     {
+      "milestone": "Send the encryption whitepaper with the key hierarchy",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "The encryption whitepaper with the key hierarchy."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send it today."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm exact support access contract wording with Apex compliance and send it to the customer",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "2026-10-07",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "We'll need the contract wording on support access."
+       },
+       {
+        "utterance_id": "U005",
+        "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer asks the group security office whether policy allows a cloud key service for guest data (on premises HSMs are not supported)",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U010",
+        "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I need to ask our group security office. I don't control their timeline."
+       }
+      ]
+     },
+     {
+      "milestone": "Send Matteo a short forwardable note for the group security office on key options",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "2026-10-02",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "Is there anything we can send that would help them?"
+       }
+      ]
+     },
+     {
+      "milestone": "Identify who signs for this purchase and plan an introduction while security review runs",
+      "customer_owner": "Charlotte Dubois",
+      "apex_owner": "Sean Murphy",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Business outcome not stated by the customer; the plan is built around the stated pain of guest records split across three booking systems and the open key policy question.",
+    "rows": [
+     {
+      "milestone": "Send the encryption whitepaper with the key hierarchy",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "The encryption whitepaper with the key hierarchy."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send it today."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm exact support access contract wording with Apex compliance and send it to the customer",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "2026-10-07",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "We'll need the contract wording on support access."
+       },
+       {
+        "utterance_id": "U005",
+        "excerpt": "I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer asks the group security office whether policy allows a cloud key service for guest data (on premises HSMs are not supported)",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U010",
+        "excerpt": "I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I need to ask our group security office. I don't control their timeline."
+       }
+      ]
+     },
+     {
+      "milestone": "Send Matteo a short forwardable note for the group security office on key options",
+      "customer_owner": "Matteo Bianchi",
+      "apex_owner": "Elena Varga",
+      "target_date": "2026-10-02",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "You can hold your keys in a major cloud key service. On premises HSMs are not supported."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "Is there anything we can send that would help them?"
+       }
+      ]
+     },
+     {
+      "milestone": "Identify who signs for this purchase and plan an introduction while security review runs",
+      "customer_owner": "Charlotte Dubois",
+      "apex_owner": "Sean Murphy",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "This is strong. If Matteo is comfortable on keys, we can move."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Gatekeeper",
+   "locations": [
+    "Gatekeeper"
+   ]
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Matteo the whitepaper with a short forwardable note... cloud key service and on premises HSMs are not supported",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 shows Matteo asked for the whitepaper and U007 shows Elena stating the cloud key service and HSM constraint, so both quotes support the step.",
+   "utterance_ids": [
+    "U020",
+    "U007"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Charlotte who signs for this purchase",
+   "passed": true,
+   "severity": "low",
+   "finding": "U016 is a conditional 'we can move' with no signer named, which supports the claim that the economic buyer is unknown.",
+   "utterance_ids": [
+    "U016"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer",
+   "passed": true,
+   "severity": "low",
+   "finding": "Charlotte's enthusiasm in U016 is correctly treated as conditional on Matteo and the group security office, with no timeline.",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Charlotte Dubois: champion... Said they can move if Matteo is comfortable on keys.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary keeps the condition on Matteo and records the risks and open items, so it does not present the statement as a decision.",
+   "utterance_ids": [
+    "U016",
+    "U010",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Elena Varga: confirm support access wording... by Wednesday, October 7th; send whitepaper today",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both commitments match U005 and U021 on owner and date, and Matteo's action is correctly logged as having no date.",
+   "utterance_ids": [
+    "U005",
+    "U021",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Elena is sending the encryption whitepaper... today",
+   "passed": true,
+   "severity": "low",
+   "finding": "The whitepaper and the October 7th wording date match what Elena said in U005 and U021.",
+   "utterance_ids": [
+    "U005",
+    "U021"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Matteo, if a short note for the group security office would help, we can prepare one.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is a conditional offer of help consistent with PB-09 and U019, not a promised deliverable or date.",
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "you can hold your own keys in a major cloud key service, but on premises HSMs are not supported",
+   "passed": true,
+   "severity": "low",
+   "finding": "The statement matches U007, U009 and RC-11, with no superseded behavior presented as current.",
+   "utterance_ids": [
+    "U007",
+    "U009"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "Identify who signs for this purchase and plan an introduction while security review runs",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is marked proposed and is tied to the unnamed signer and the security-gated timeline in this deal, so it is not boilerplate.",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Send Matteo a short forwardable note for the group security office on key options",
+   "passed": true,
+   "severity": "low",
+   "finding": "U007 and U019 support the proposed note, which is correctly labeled proposed rather than agreed.",
+   "utterance_ids": [
+    "U007",
+    "U019"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send the encryption whitepaper with a short cover note for the group security office: keys must sit in a major cloud key service, on premises HSMs are not supported",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 supports the whitepaper request and U008 supports the on premises HSM context, so both quotes back the claim.",
+   "utterance_ids": [
+    "U020",
+    "U008"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Charlotte who signs for this purchase and what she can bring to the group security office",
+   "passed": true,
+   "severity": "low",
+   "finding": "U016 shows conditional enthusiasm and U018 shows the group security office is absent and outside Matteo's control, and no one named who signs.",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Customer policy may not allow a cloud key service for guest data, and Apex does not support their on premises HSM. This could block the deal.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U010 and U008 directly support the policy doubt and the HSM dependency, and U007 matches RC-11.",
+   "utterance_ids": [
+    "U010",
+    "U008",
+    "U007"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "due_by 2026-10-02 for sending the whitepaper; offer a call with the group security office",
+   "passed": true,
+   "severity": "low",
+   "finding": "Elena committed to send the whitepaper today (U021) and the 2026-10-02 due date is not firmer or sooner than that. The call offer is a suggested step, not attributed as a commitment. The Oct 7 support access wording commitment (U005) is omitted but not overstated.",
+   "utterance_ids": [
+    "U021",
+    "U005"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer; Champion will move if keys are fine",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats Charlotte's 'we can move' as conditional on keys and records that Matteo's group security office timeline is undated, so the signal is not overstated.",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "keys must sit in a major cloud key service, on premises HSMs are not supported",
+   "passed": true,
+   "severity": "low",
+   "finding": "This matches current release card RC-11 and what Elena said, with no superseded behavior presented as current.",
+   "utterance_ids": [
+    "U007",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Next steps: whitepaper cover note framing HSM/cloud key service; ask Charlotte who signs and what to bring to the group security office",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this customer's HSM issue and the absent group security office, with named owners, rule IDs and dates, so neither is generic.",
+   "utterance_ids": [
+    "U008",
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Evidence excerpts for Frankfurt hosting, 2.1 million into 1.4 million profiles, review queue, cloud key service, policy doubt, Oct 7 wording, whitepaper today",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is word for word from its cited line and supports the matching sentence in the email.",
+   "utterance_ids": [
+    "U003",
+    "U012",
+    "U014",
+    "U007",
+    "U010",
+    "U005",
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "From Elena: the encryption whitepaper with the key hierarchy today, and the exact support access contract wording by Wednesday, October 7th.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both SC commitments match what Elena said: the whitepaper today and the wording by Wednesday, October 7th. Matteo's check with the group security office is described as open, not decided.",
+   "utterance_ids": [
+    "U005",
+    "U021",
+    "U020",
+    "U018",
+    "U010"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Open on keys: ... Matteo will check with the group security office whether policy allows a cloud key service for guest data.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email does not present Charlotte's conditional 'we can move' as a decision. It keeps the key policy question open.",
+   "utterance_ids": [
+    "U016",
+    "U010",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "If it would help the group security office, we are glad to join a call with them. Is there a date that works on your side for the next conversation?",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is a conditional offer and a question, not a commitment. The only dated commitments in the email, the whitepaper and the Oct 7 wording, were made in the call.",
+   "utterance_ids": [
+    "U005",
+    "U021",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "you can hold your own keys in a major cloud key service, but on premises HSMs are not supported",
+   "passed": true,
+   "severity": "low",
+   "finding": "The key management statement matches RC-11 and Elena's own wording. No superseded behavior is presented as current.",
+   "utterance_ids": [
+    "U007",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "Closing offer to join a call with the group security office and ask for a date",
+   "passed": true,
+   "severity": "low",
+   "finding": "The ask is tied to this customer's group security office review and offered as help, not as a 'checking in' message.",
+   "utterance_ids": [
+    "U018",
+    "U019",
+    "U020"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022418,
+   "latency_ms": 8602,
+   "input_tokens": 532,
+   "output_tokens": 1478,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "ce6bdeb4a6b7724a6ddc919844d0996a47a98b4dfdecab153c74d09abda8af78"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021481,
+   "latency_ms": 8426,
+   "input_tokens": 398,
+   "output_tokens": 1409,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "a98431234918f5bc3724ade916fe8397527bec12c50e328b7f2642f684f97b21"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.056191,
+   "latency_ms": 22849,
+   "input_tokens": 9314,
+   "output_tokens": 2992,
+   "cache_read_input_tokens": 10779,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "fa3307992ba053b9722dff183303d729df14434be4cae0f1c034135631a2f118",
+    "3cdf3876e79b3a5c7bf2ee325318bf33bef439a354970311ca6bc2a07b50905f"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024359,
+   "latency_ms": 5178,
+   "input_tokens": 4733,
+   "output_tokens": 867,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "d2d765caba050db6101e07eec8d54b64765a77bac41737f2f3c64858852036dc"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023028,
+   "latency_ms": 5670,
+   "input_tokens": 4870,
+   "output_tokens": 713,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "f973482a4c7e433e8e6a8d7ebfaec9ff3109cc843265d15d81d3a6a67071e3dc"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.027918,
+   "latency_ms": 8029,
+   "input_tokens": 4745,
+   "output_tokens": 1218,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "030fefb0552478ac468976ac681dd11177fd5004a3b5537b94b8cb2dd2e6a14d"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.042544,
+   "latency_ms": 20036,
+   "input_tokens": 4651,
+   "output_tokens": 2701,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2195,
+   "validator_errors": [],
+   "keys": [
+    "d5c33026d3176cec2ac0016f34071950f789613e607df6277b9e92e8164fc0b6"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024095,
+   "latency_ms": 10296,
+   "input_tokens": 4714,
+   "output_tokens": 1337,
+   "cache_read_input_tokens": 6487,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "504af20d5d249b7e9eaa4b5ab83f9b3f341b843863c71f3c23f31bc45bb5e77d"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021638,
+   "latency_ms": 13363,
+   "input_tokens": 1352,
+   "output_tokens": 1775,
+   "cache_read_input_tokens": 5919,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "d31c02aa13ba35a3d168d471de63c132fb606d0cf538b3f451db114667e3a61c"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.017884,
+   "latency_ms": 5007,
+   "input_tokens": 4987,
+   "output_tokens": 680,
+   "cache_read_input_tokens": 5549,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "b0996ee52f979b6cf833e61c0d0078646ce1e9d7d494273d0e251476095c862e"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.01878,
+   "latency_ms": 11080,
+   "input_tokens": 1243,
+   "output_tokens": 1511,
+   "cache_read_input_tokens": 5919,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "064cb0fbebddaa2bd511fcf464367bfa038a94302282cc620c7412761134fb4a"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.300336,
+ "latency_ms": 118536,
+ "wall_clock_s": 107.8,
+ "status": "ran"
+}

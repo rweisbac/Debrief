@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f973482a4c7e433e8e6a8d7ebfaec9ff3109cc843265d15d81d3a6a67071e3dc",
+ "recorded_at": "2026-10-04T00:33:52.016062+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFtFw12d5o2MM7GZJiX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Pinehurst Hotels Europe: recap of today's technical validation\",\"body\":\"Hi Charlotte, Matteo and Ivy,\\n\\nThank you for your time today. Here is where we landed.\\n\\nShown: Frankfurt region pinning, including backups and audit logs, with a tenant setting that restricts support access to EU based staff. Guest profile unification merged 2.1 million records from your three booking systems into 1.4 million profiles, with low confidence matches sent to a review queue for your team to approve or split.\\n\\nOpen:\\n- Keys: you can hold your own keys in a major cloud key service, but on premises HSMs are not supported. Matteo is checking with your group security office whether policy allows a cloud key service for guest data.\\n- Support access: Elena will confirm the exact contract wording with our compliance team and send it by Wednesday, October 7th.\\n\\nElena is sending the encryption whitepaper with the key hierarchy today. Matteo, if a short note for the group security office would help, we can prepare one.\\n\\nCharlotte, is there a good time for us to reconnect once you hear back?\\n\\nBest,\\nSean\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"The tenant can be pinned to the Frankfurt region, including backups and audit logs.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"Matching merged 2.1 million records into 1.4 million profiles.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Low confidence matches go to a review queue. Your team approves or splits them.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"You can hold your keys in a major cloud key service. On premises HSMs are not supported.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send it today.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4870,
+   "cache_creation_input_tokens": 2195,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2195,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 713,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

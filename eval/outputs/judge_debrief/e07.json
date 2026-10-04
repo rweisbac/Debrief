@@ -1,0 +1,244 @@
+{
+ "deal_id": "e07",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Andre Silva will send the SOC 2 report and pen test summary today.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U006",
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre said he would send both today under the signed NDA."
+  },
+  {
+   "claim": "Andre will build and send the data flow diagram by Friday, October 9th.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre stated the task and the date; CRM also lists Oct 9."
+  },
+  {
+   "claim": "Sanjay will send the security questionnaire today.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sanjay said he would send the questionnaire today."
+  },
+  {
+   "claim": "The security review board meets Thursday, October 22nd.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sanjay gave the board date."
+  },
+  {
+   "claim": "If Sanjay has all documents by October 14th, Summit is on the October 22nd board agenda.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sanjay stated this conditional directly."
+  },
+  {
+   "claim": "The security review takes about three weeks once Sanjay has the documents.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Monica stated the three-week duration."
+  },
+  {
+   "claim": "Sanjay needs SOC 2, pen test summary, questionnaire and data flow diagram for the review.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sanjay listed exactly these four items."
+  },
+  {
+   "claim": "Monica will bring in Daniel from finance for commercials after the board.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Monica said she would bring Daniel in after the board."
+  },
+  {
+   "claim": "No date was set for bringing Daniel in.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Monica said only 'after the board'; no date was given."
+  },
+  {
+   "claim": "The economic buyer is not confirmed; whether Daniel signs was not stated.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Daniel is named only for commercials, and CRM economic_buyer is empty."
+  },
+  {
+   "claim": "Grace will send a recap with the agreed dates.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Grace said she would send a recap with those dates."
+  },
+  {
+   "claim": "Apex will send the written recap by 2026-10-02.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": true,
+   "why": "Grace gave no date for the recap; Oct 2 is invented, though the plan marks it proposed."
+  },
+  {
+   "claim": "The tenant is single tenant in a US region, encrypted at rest and in transit.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre stated these properties."
+  },
+  {
+   "claim": "Customers can hold their own keys in their cloud key service; Sanjay said they use the major cloud one.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003",
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre offered customer-held keys and Sanjay confirmed the cloud service."
+  },
+  {
+   "claim": "Support access requires a ticket and customer approval, with every session logged in the customer audit trail.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre stated this directly."
+  },
+  {
+   "claim": "The match rate on the customer sample was 99.2 percent, with unmatched rows in an exceptions table.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre gave the exact figure and exceptions table."
+  },
+  {
+   "claim": "The cost trend by plan updates daily instead of monthly.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Andre said this during the claims model demo."
+  },
+  {
+   "claim": "Monica said daily is the whole point and actuaries see the trend six weeks late today.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote from Monica; matches the CRM outcome."
+  },
+  {
+   "claim": "Monica said the 99.2 percent match rate is better than theirs.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Monica said 'That's better than ours.'"
+  },
+  {
+   "claim": "Any document slipping past October 14th would miss the October 22nd board.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Follows directly from Sanjay's October 14th condition."
+  },
+  {
+   "claim": "Finance has no touchpoint before commercials because Daniel was absent and engaged only after the board.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Daniel was not on the call and Monica plans to involve him only after the board."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.050592
+}

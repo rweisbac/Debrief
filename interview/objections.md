@@ -4,7 +4,7 @@ Prep for the Braze Applied AI Architect, go-to-market (GTM), live panel. Every c
 
 Terms used below: TV is technical validation, the stage where the customer tests the product on their own data. AE is account executive. SC is solutions consultant. CRM is customer relationship management. MAP is mutual action plan.
 
-Eval placeholders read `[CONFIRM: eval]` until `eval/results.md` has numbers from a live run.
+Eval numbers come from the live run on 2026-10-04: `eval/results.md` (scored by code) and `eval/hand_review.md` (post hoc, 1 reviewer).
 
 ---
 
@@ -93,20 +93,26 @@ If Gong's custom agents can carry those rules, I would rather configure Gong tha
 **30 second answer.**
 Accuracy is enforced in code at 3 layers. Quotes are never model text; code renders them from the transcript. Every cited line must exist and match. Then deterministic checks and a skeptical verifier run before anything can be approved [repo] `src/transcript.py`, `src/checks.py`, `prompts/verify/v1.md`.
 
-On 15 new hard-case transcripts, [CONFIRM: eval] of claims were judged supported, versus [CONFIRM: eval] for a plain Claude call.
+On 15 new hard-case transcripts, a blind judge marked 93% of claims supported for both Debrief and a plain Claude call [eval] `eval/results.md`. The difference is what a rep can send: Debrief blocked all 4 recaps that promised something nobody said, and the plain call's emails held 9 such promises with nothing to stop them [eval] `eval/hand_review.md`.
 
 **90 second backup.**
 On the repo's own 5 deals, the verifier caught 20 of 20 planted errors and the deterministic checks alone caught 14 of 20, with 0 false alarms on 5 clean drafts [eval] `evals/ablation.md`. Commitment recall was 22 of 23 [eval] `evals/results.md`.
 
 Those 5 deals were also the development set, so I built a fresh eval: 15 transcripts with ambiguous commitments, contradictions, missing stakeholders, a long rambling call and late objections, with gold labels written before any run [repo] `eval/gold_src.py`.
 
-Results: [CONFIRM: eval] risk recall, [CONFIRM: eval] fabricated commitments, [CONFIRM: eval] uncertain items flagged, against the baseline at [CONFIRM: eval] [eval] `eval/results.md`.
+The headline is a tie on factual support, 414 of 443 claims versus 529 of 567, both 93% [eval] `eval/results.md`. Risk recall was 29 of 29 for both, and uncertain items were flagged 23 of 23 versus 22 of 23. Those keyword metrics saturated, so they don't separate the systems.
+
+On commitments, the raw judge count went against Debrief, 23 flags versus 17 [eval] `eval/results.md`. Reading every flag by hand, 16 of Debrief's 23 were recommended steps with a due date, which the judge read as promises; 6 were real. For the plain call, 16 of 17 were real, and 9 of those sat in the customer email [eval] `eval/hand_review.md`.
+
+Where Debrief earns its keep is checkability: all 949 of its citations resolve to a transcript line, so every cited claim can be checked against the exact words. Draft sentences carry no per-sentence citation, so this covers the structured record and the steps [eval] `eval/results.md`. It costs about 8 times more, $0.32 versus $0.04 per call, and takes about 109 seconds versus 26.
+
+I also found 2 failures. A word-count rule labeled 6 of 15 calls "low information" when only 1 was, and 6 of 14 blocked drafts were false alarms from my number and name checks [eval] `eval/hand_review.md`.
 
 Hallucination benchmarks disagree and measure different things [external] F10, so I measure the failure that matters here: a promise or fact that reaches the customer and was never said.
 
 **Evidence.** [eval] `evals/ablation.md`, `evals/results.md`, `eval/results.md`; [repo] `src/transcript.py` `resolve_evidence`.
 
-**Most likely overclaim.** Quoting 20 of 20 as an accuracy rate. It is 4 planted error types on 5 drafts, 1 run each [eval] `evals/ablation.md`. The judge in the new eval is an uncalibrated model call [repo] `eval/score.py` docstring.
+**Most likely overclaim.** Saying Debrief is more accurate than a plain call. On supported claims it tied [eval] `eval/results.md`. The "6 versus 16 real overstatements" split is my own post hoc reading, not a scored metric [eval] `eval/hand_review.md`. Also never quote 20 of 20 as an accuracy rate; it is 4 planted error types on 5 drafts, 1 run each [eval] `evals/ablation.md`.
 
 **Follow-ups.**
 - *What is the false alarm cost?* deal_b's recap was blocked by a likely false alarm in run 2 [eval] `evals/results.md`, DECISIONS D-15. I would track flagged drafts a rep then sends unedited as the false alarm rate.

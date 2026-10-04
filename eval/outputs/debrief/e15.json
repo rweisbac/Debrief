@@ -1,0 +1,1920 @@
+{
+ "debrief_id": "e15-2f7f430f",
+ "deal_id": "e15",
+ "as_of": "2026-10-02",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Liam wants analysts to have fresh fraud features; today features are an hour stale.",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "That's what my analysts need. Today features are an hour stale."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "Liam said \"Let's talk next week\" but no specific date or meeting was set.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U021",
+     "excerpt": "Let's talk next week."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Helen requires three year minimum terms and quarterly in arrears payment, no annual up front.",
+    "raised_by": "Helen Brooks",
+    "status": "open",
+    "answer_given": "Nora said she would check with deal desk.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I'll need to check that with our deal desk."
+     }
+    ]
+   },
+   {
+    "summary": "Helen needs a cost comparison against building in house before anything is signed this year; engineering lead thinks they can build it in six months.",
+    "raised_by": "Helen Brooks",
+    "status": "open",
+    "answer_given": "Liam said they can't build it; no comparison was offered.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "nothing gets signed this year without a cost comparison against building it ourselves."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Maybe not. But I need the comparison."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Whether case export supports the customer's custom fields; Ravi unsure and needs to test on their case tool after receiving the field list.",
+    "owner": "Ravi Shah",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Does case export support our custom fields?"
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I believe so, but I'd want to test it on your case tool."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Card transaction stream feeds fraud features into the customer's scoring model, with case export to their case tool.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "Here are the fraud features feeding your scoring model, and the case export to your case tool."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Zara Ahmed",
+    "side": "customer",
+    "what": "Send the case tool custom field list",
+    "by_when": "2026-10-03",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "Sure, I'll send it tomorrow."
+     }
+    ]
+   },
+   {
+    "who": "Ravi Shah",
+    "side": "apex",
+    "what": "Test custom fields in case export once Zara sends the list",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll test the custom fields once Zara sends the list."
+     }
+    ]
+   },
+   {
+    "who": "Nora Quinn",
+    "side": "apex",
+    "what": "Check Helen's contract terms (three year minimum, quarterly in arrears) with deal desk",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "I'll need to check that with our deal desk."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Liam O'Connor",
+    "title": "Fraud Analytics Lead",
+    "present": true,
+    "why_they_matter": "Champion; owns fraud analytics need",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     }
+    ]
+   },
+   {
+    "name": "Zara Ahmed",
+    "title": "Data Engineer",
+    "present": true,
+    "why_they_matter": "Technical evaluator",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Does case export support our custom fields?"
+     }
+    ]
+   },
+   {
+    "name": "Helen Brooks",
+    "title": "CFO",
+    "present": true,
+    "why_they_matter": "Sets commercial terms and requires cost comparison before signing",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "nothing gets signed this year without a cost comparison against building it ourselves."
+     }
+    ]
+   },
+   {
+    "name": "Engineering lead (unnamed)",
+    "title": "Engineering lead",
+    "present": false,
+    "why_they_matter": "Believes they can build this in six months; build option rival",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our engineering lead thinks they can build this in six months."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion says the demo shows what his analysts need and that features are an hour stale today",
+    "strength": "moderate",
+    "qualifier": "Champion only; no decision or commitment followed",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     }
+    ]
+   },
+   {
+    "summary": "Champion believes the product is in good shape technically",
+    "strength": "moderate",
+    "qualifier": "Opinion of the champion; CFO then added conditions",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I think we're in good shape technically."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "CFO requires three year minimum terms and quarterly in arrears payment only, no annual up front",
+    "strength": "strong",
+    "qualifier": "Stated by the CFO; Apex AE said she would check with deal desk",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only."
+     }
+    ]
+   },
+   {
+    "summary": "CFO will not sign this year without a cost comparison against building in house; engineering lead thinks they can build in six months",
+    "strength": "strong",
+    "qualifier": "CFO held her position after the champion pushed back; close date is 2026-12-18",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "nothing gets signed this year without a cost comparison against building it ourselves."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Maybe not. But I need the comparison."
+     }
+    ]
+   },
+   {
+    "summary": "Open technical question on custom fields in case export, not yet tested",
+    "strength": "weak",
+    "qualifier": "SC believes it works but has not verified; depends on the field list",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "I believe so, but I'd want to test it on your case tool."
+     }
+    ]
+   },
+   {
+    "summary": "Next step is vague; no date set",
+    "strength": "moderate",
+    "qualifier": "Only the champion said it, no date or agenda",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "Let's talk next week."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "about 3 thousand transactions a second",
+    "what_it_measures": "Card transaction sample stream rate in the demo",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "about 3 thousand transactions a second, streamed in."
+     }
+    ]
+   },
+   {
+    "value": "under 5 seconds",
+    "what_it_measures": "Update time for features like spend velocity per card",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Features like spend velocity per card update in under 5 seconds."
+     }
+    ]
+   },
+   {
+    "value": "10 minute outage caught up in about 90 seconds",
+    "what_it_measures": "Sandbox test of stream backlog catch up",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox test a 10 minute outage caught up in about 90 seconds."
+     }
+    ]
+   },
+   {
+    "value": "three year terms minimum",
+    "what_it_measures": "Customer policy on platform contract term",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our policy is three year terms minimum for platforms"
+     }
+    ]
+   },
+   {
+    "value": "six months",
+    "what_it_measures": "Engineering lead's estimate to build the capability in house",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our engineering lead thinks they can build this in six months."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Zara to send the case tool custom field list so the SC can test custom field export",
+    "owner": "Zara Ahmed",
+    "due": "2026-10-03",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "Sure, I'll send it tomorrow."
+     }
+    ]
+   }
+  ],
+  "contradictions": [
+   {
+    "summary": "Champion says engineering cannot build this in house; CFO relays the engineering lead's belief they can build it in six months and wants a comparison anyway",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our engineering lead thinks they can build this in six months."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "They can't."
+     }
+    ]
+   }
+  ],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "dated_next_step",
+    "logged_value": "Talk next week",
+    "transcript_says": "Champion said let's talk next week; no date, time, or agenda was agreed",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "Let's talk next week."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "SC committed to test the custom fields once Zara sends the list; no due date stated",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll test the custom fields once Zara sends the list."
+     }
+    ]
+   },
+   {
+    "field": "business_outcome",
+    "logged_value": "Fraud features fresh within seconds, not an hour.",
+    "transcript_says": "Prefilled from discovery and unedited; in the call Liam only said features are an hour stale today and that this is what analysts need, with no seconds target stated",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Liam wants analysts to have fresh fraud features; today features are an hour stale. Numbers said: about 3 thousand transactions a second, under 5 seconds, 10 minute outage caught up in about 90 seconds",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "That's what my analysts need. Today features are an hour stale."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Helen Brooks: Sets commercial terms and requires cost comparison before signing",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "nothing gets signed this year without a cost comparison against building it ourselves."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "partial",
+   "summary": "1 item validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U007",
+     "excerpt": "Here are the fraud features feeding your scoring model, and the case export to your case tool."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Zara to send the case tool custom field list so the SC can test custom field export",
+   "evidence": [
+    {
+     "utterance_id": "U011",
+     "excerpt": "Sure, I'll send it tomorrow."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Liam wants analysts to have fresh fraud features; today features are an hour stale.",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "That's what my analysts need. Today features are an hour stale."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Liam O'Connor, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "That's what my analysts need. Today features are an hour stale."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "competitive_risk",
+  "deal_state_why": "CFO won't sign this year without a build-versus-buy cost comparison, and engineering lead thinks they can build in six months.",
+  "next_steps": [
+   {
+    "action": "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires.",
+    "owner": "Nora Quinn",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-05",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "Liam said they can't build it, but Helen relayed otherwise. An AE might take Liam's word and skip the absent engineering lead.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our engineering lead thinks they can build this in six months."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "They can't."
+     }
+    ]
+   },
+   {
+    "action": "Send deal desk Helen's terms of three year minimum and quarterly in arrears only, and ask for an answer before any commercial talk with her.",
+    "owner": "Nora Quinn",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "",
+    "action_type": "flag_deal_desk",
+    "why": "Nora's deal desk check was a passing remark in a rushed CFO exchange, so it is easy to leave unlogged and undated.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our policy is three year terms minimum for platforms"
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I'll need to check that with our deal desk."
+     }
+    ]
+   },
+   {
+    "action": "Propose Liam a specific date next week for a working session on the cost comparison inputs, and ask whether Helen can join for the last 15 minutes.",
+    "owner": "Nora Quinn",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-02",
+    "release_card_id": "",
+    "action_type": "book_meeting",
+    "why": "Liam's 'next week' has no date or agenda, and Helen needs a planned touchpoint before commercial discussion.",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "Let's talk next week."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "In-house build is the rival option: the engineering lead thinks they can build this in six months, and the CFO requires a cost comparison before signing.",
+    "competitor": "In-house build",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our engineering lead thinks they can build this in six months."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "low_information",
+    "deal_state_why": "CFO won't sign this year without a build-versus-buy cost comparison, and engineering lead thinks they can build in six months.",
+    "next_steps": [
+     {
+      "action": "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires.",
+      "owner": "Nora Quinn",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Liam said they can't build it, but Helen relayed otherwise. An AE might take Liam's word and skip the absent engineering lead.",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "Our engineering lead thinks they can build this in six months."
+       },
+       {
+        "utterance_id": "U016",
+        "excerpt": "They can't."
+       }
+      ]
+     },
+     {
+      "action": "Send deal desk Helen's terms of three year minimum and quarterly in arrears only, and ask for an answer before any commercial talk with her.",
+      "owner": "Nora Quinn",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "flag_deal_desk",
+      "why": "Nora's deal desk check was a passing remark in a rushed CFO exchange, so it is easy to leave unlogged and undated.",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our policy is three year terms minimum for platforms"
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I'll need to check that with our deal desk."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "In-house build is the rival option: the engineering lead thinks they can build this in six months, and the CFO requires a cost comparison before signing.",
+      "competitor": "In-house build",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "Our engineering lead thinks they can build this in six months."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "low_information",
+    "deal_state_why": "CFO won't sign this year without a build-versus-buy cost comparison, and engineering lead thinks they can build in six months.",
+    "next_steps": [
+     {
+      "action": "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires.",
+      "owner": "Nora Quinn",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Liam said they can't build it, but Helen relayed otherwise. An AE might take Liam's word and skip the absent engineering lead.",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "Our engineering lead thinks they can build this in six months."
+       },
+       {
+        "utterance_id": "U016",
+        "excerpt": "They can't."
+       }
+      ]
+     },
+     {
+      "action": "Send deal desk Helen's terms of three year minimum and quarterly in arrears only, and ask for an answer before any commercial talk with her.",
+      "owner": "Nora Quinn",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "flag_deal_desk",
+      "why": "Nora's deal desk check was a passing remark in a rushed CFO exchange, so it is easy to leave unlogged and undated.",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our policy is three year terms minimum for platforms"
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I'll need to check that with our deal desk."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "In-house build is the rival option: the engineering lead thinks they can build this in six months, and the CFO requires a cost comparison before signing.",
+      "competitor": "In-house build",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "Our engineering lead thinks they can build this in six months."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Granite Payments technical validation on Oct 2",
+    "body": "Hi Liam and Zara,\n\nThanks for the time today. Ravi showed your card transaction sample streaming at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds. He also showed the fraud features feeding your scoring model and the case export to your case tool.\n\nOpen items:\n- Zara is sending the case tool custom field list tomorrow. Once it arrives, Ravi will test custom fields in case export. We have not set a date for that test yet.\n- Helen asked for a cost comparison against building this in house. Liam, could you share what the engineering lead's six month estimate assumes, so we can discuss how to approach it?\n- I will check Helen's contract terms with our deal desk and come back to you.\n\nWe have not set a date for our next conversation. Could we agree on a time early next week?\n\nNora",
+    "customer_value_line": "Features updating in under 5 seconds in the demo speaks to Liam's point that today fraud features are an hour stale for his analysts.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Features like spend velocity per card update in under 5 seconds."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Sure, I'll send it tomorrow."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll test the custom fields once Zara sends the list."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Maybe not. But I need the comparison."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I'll need to check that with our deal desk."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Granite Payments technical validation",
+    "body": "Hi Liam and Zara,\n\nThanks for your time today. Ravi showed your card transaction sample streamed at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds. He also showed the fraud features feeding your scoring model and the case export to your case tool. In the sandbox, a 10 minute outage caught up in about 90 seconds with nothing dropped.\n\nOpen items:\n- Zara is sending the case tool custom field list tomorrow.\n- Once Ravi has it, he will test custom fields in case export on your case tool.\n- I will check Helen's contract terms with our deal desk.\n- Helen asked for a cost comparison against building this in house. Liam, could you share what the engineering lead's six month estimate assumes, so we can prepare it?\n\nLiam, you mentioned talking next week. What day and time work for you?\n\nNora",
+    "customer_value_line": "Features that update in under 5 seconds address Liam's point that fraud features are an hour stale today for his analysts.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Features like spend velocity per card update in under 5 seconds."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox test a 10 minute outage caught up in about 90 seconds."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Sure, I'll send it tomorrow."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll test the custom fields once Zara sends the list."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I'll need to check that with our deal desk."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our engineering lead thinks they can build this in six months."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Thanks. Let's talk next week."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date): next week (relative date; write the actual date)",
+    "[email_promises_uncommitted] Nora only said she would check with deal desk (U014) and never promised to come back to the customer, so the email adds a follow-up commitment, with no date, that was not made in the call. (target: I will check Helen's contract terms with our deal desk and come back to you.; lines U014)"
+   ],
+   "findings": [
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date): next week (relative date; write the actual date)",
+    "[email_promises_uncommitted] The email implies Apex will prepare the cost comparison, but nobody on Apex committed to that in the call; Helen only said she needs it. (target: Helen asked for a cost comparison against building this in house. Liam, could you share what the engineering lead's six month estimate assumes, so we can prepare it?; lines U015, U017, U018)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Low information: technical demo went well per champion, but CFO set commercial conditions (three year minimum, quarterly in arrears, build-versus-buy cost comparison) and no dated next meeting exists.",
+    "customer_value_line": "Liam said \"Today features are an hour stale\" and that the demo is what his analysts need; the CRM outcome 'within seconds' was prefilled from discovery and was not said in this call.",
+    "what_we_validated": [
+     "Card transaction sample streamed at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds (U003)",
+     "Stream backlog behavior: events queue and catch up in order, nothing dropped; sandbox 10 minute outage caught up in about 90 seconds (U005)",
+     "Fraud features feeding the scoring model and case export to the case tool were shown (U007)",
+     "Liam said he thinks they are in good shape technically; this is the champion's opinion only (U012)"
+    ],
+    "integration_patterns": [
+     "Card transaction stream feeds fraud features into the customer's scoring model, with case export to their case tool (U007)"
+    ],
+    "objections_and_answers": [
+     "Helen: three year terms minimum, no annual up front, quarterly in arrears only. Answer: Nora to check with deal desk. Status: open (U013, U014)",
+     "Helen: no signature this year without a cost comparison against building in house; engineering lead thinks they can build in six months. Liam said 'They can't'; Helen still needs the comparison. Status: open, no answer given (U015, U016, U017)"
+    ],
+    "open_items": [
+     "Whether case export supports the customer's custom fields: Ravi believes so but must test on their case tool; blocked on Zara's field list (U009, U010)",
+     "Next step is vague: Liam said 'Let's talk next week' with no date, time or agenda; needs a dated meeting (U021)",
+     "Economic buyer: Helen Brooks is the CFO in CRM, but CRM economic buyer field is blank and nobody in the call said who signs; confirm",
+     "Build-versus-buy cost comparison for Helen: owner and date not set"
+    ],
+    "commitments": [
+     "Zara Ahmed: send the case tool custom field list 'tomorrow' (said Friday 2026-10-02, so Saturday 2026-10-03; confirm a business day date such as Monday 2026-10-05) (U011)",
+     "Ravi Shah: test custom fields once Zara sends the list; no date stated, log one (U020)",
+     "Nora Quinn: check Helen's contract terms with deal desk; no date stated, log one (U014)"
+    ],
+    "stakeholders": [
+     "Liam O'Connor, Fraud Analytics Lead: champion, present",
+     "Zara Ahmed, Data Engineer: technical evaluator, present",
+     "Helen Brooks, CFO: sets terms and requires cost comparison, joined late and left early",
+     "Engineering lead (unnamed): believes they can build this in six months, absent"
+    ],
+    "competitive_notes": [
+     "No named competitor. In-house build is the rival option, raised by Helen (U015)"
+    ],
+    "risks": [
+     "CFO conditions: three year minimum, quarterly in arrears only, and no signature this year without a build-versus-buy comparison; CRM close date is 2026-12-18 (U013, U015, U017)",
+     "Champion and CFO disagree on whether in-house build is feasible; absent engineering lead holds the six month view (U015, U016)",
+     "No dated next meeting; 'next week' is not a next step (U021)",
+     "Custom field export untested (U010)"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Also, nothing gets signed this year without a cost comparison against building it ourselves."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "I believe so, but I'd want to test it on your case tool."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Thanks. Let's talk next week."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Sure, I'll send it tomorrow."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Low information: technical fit looks good to the champion, but the CFO set contract terms and a build-versus-buy cost comparison before any signature this year, and no dated next step exists.",
+    "customer_value_line": "Liam said features are an hour stale today and that the demo is what his analysts need; no seconds target was stated in the call (the CRM outcome was prefilled from discovery and unedited).",
+    "what_we_validated": [
+     "Card transaction sample streamed at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds",
+     "Stream backlog: events queue and catch up in order, nothing dropped; sandbox 10 minute outage caught up in about 90 seconds",
+     "Fraud features feeding the customer's scoring model and case export to their case tool were shown",
+     "Liam: \"I think we're in good shape technically\" (champion opinion only)"
+    ],
+    "integration_patterns": [
+     "Card transaction stream feeds fraud features into the customer's scoring model",
+     "Case export to the customer's case tool; custom field support not yet verified"
+    ],
+    "objections_and_answers": [
+     "Helen: three year terms minimum, no annual up front, quarterly in arrears only. Answer: Nora to check with deal desk. Open",
+     "Helen: no signing this year without a cost comparison against building it ourselves; engineering lead thinks they can build in six months. Liam said they can't; Helen still wants the comparison. No comparison offered yet. Open"
+    ],
+    "open_items": [
+     "Case export support for custom fields: Ravi to test on their case tool once Zara sends the field list; no due date stated",
+     "Next step: Liam said \"Let's talk next week\"; no date, time or agenda set",
+     "Deal desk answer on three year minimum and quarterly in arrears: Nora, no date stated",
+     "Build versus buy cost comparison for Helen: no owner or date agreed in the call",
+     "Economic buyer: Helen is the CFO per CRM, but the CRM economic buyer field is empty and no touchpoint is planned"
+    ],
+    "commitments": [
+     "Zara Ahmed (customer): send case tool custom field list tomorrow (2026-10-03)",
+     "Ravi Shah (Apex): test custom fields once Zara sends the list; no date stated",
+     "Nora Quinn (Apex): check Helen's terms with deal desk; no date stated"
+    ],
+    "stakeholders": [
+     "Liam O'Connor, Fraud Analytics Lead, champion, present",
+     "Zara Ahmed, Data Engineer, technical evaluator, present",
+     "Helen Brooks, CFO, joined for the last minutes, set commercial terms and the cost comparison condition",
+     "Engineering lead (unnamed), absent, believes they can build this in six months"
+    ],
+    "competitive_notes": [
+     "In-house build is the rival option; no named vendor competitor was mentioned"
+    ],
+    "risks": [
+     "CFO will not sign this year without a cost comparison; close date is 2026-12-18",
+     "Contract terms (three year minimum, quarterly in arrears only) need deal desk input",
+     "Next step is vague with no date set",
+     "Custom field export is unverified and depends on Zara's list",
+     "Absent engineering lead holds the build view and Liam's dismissal does not settle it"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Features like spend velocity per card update in under 5 seconds."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox test a 10 minute outage caught up in about 90 seconds."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's what my analysts need. Today features are an hour stale."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Also, nothing gets signed this year without a cost comparison against building it ourselves."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Maybe not. But I need the comparison."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll test the custom fields once Zara sends the list."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Thanks. Let's talk next week."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)",
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date), 2026-10-03 (weekend), 2026-10-05 (not a date said in the call), 2026-12-18 (not a date said in the call), next week (relative date; write the actual date): next week (relative date; write the actual date), 2026-10-03 (weekend), 2026-10-05 (not a date said in the call), 2026-12-18 (not a date said in the call), next week (relative date; write the actual date)"
+   ],
+   "findings": [
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date), 2026-10-03 (weekend), 2026-12-18 (not a date said in the call): next week (relative date; write the actual date), 2026-10-03 (weekend), 2026-12-18 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Liam said, \"Today features are an hour stale,\" and the plan works toward fresher fraud features for his analysts; no seconds target was stated in the call.",
+    "rows": [
+     {
+      "milestone": "Zara sends the case tool custom field list",
+      "customer_owner": "Zara Ahmed",
+      "apex_owner": "Ravi Shah",
+      "target_date": "2026-10-03",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "Sure, I'll send it tomorrow."
+       }
+      ]
+     },
+     {
+      "milestone": "Ravi tests custom fields in case export on the customer's case tool and reports the result",
+      "customer_owner": "Zara Ahmed",
+      "apex_owner": "Ravi Shah",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll test the custom fields once Zara sends the list."
+       }
+      ]
+     },
+     {
+      "milestone": "Dated follow-up meeting with Liam and Zara",
+      "customer_owner": "Liam O'Connor",
+      "apex_owner": "Nora Quinn",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "Let's talk next week."
+       }
+      ]
+     },
+     {
+      "milestone": "Deal desk answer on three year minimum term and quarterly in arrears payment",
+      "customer_owner": "Helen Brooks",
+      "apex_owner": "Nora Quinn",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I'll need to check that with our deal desk."
+       }
+      ]
+     },
+     {
+      "milestone": "Build versus buy cost comparison for Helen, using the engineering lead's build assumptions",
+      "customer_owner": "Liam O'Connor",
+      "apex_owner": "Nora Quinn",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "nothing gets signed this year without a cost comparison against building it ourselves."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Maybe not. But I need the comparison."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Liam said, \"Today features are an hour stale,\" and the plan works toward fresher fraud features for his analysts; no seconds target was stated in the call.",
+    "rows": [
+     {
+      "milestone": "Zara sends the case tool custom field list",
+      "customer_owner": "Zara Ahmed",
+      "apex_owner": "Ravi Shah",
+      "target_date": "2026-10-03",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "Sure, I'll send it tomorrow."
+       }
+      ]
+     },
+     {
+      "milestone": "Ravi tests custom fields in case export on the customer's case tool and reports the result",
+      "customer_owner": "Zara Ahmed",
+      "apex_owner": "Ravi Shah",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll test the custom fields once Zara sends the list."
+       }
+      ]
+     },
+     {
+      "milestone": "Dated follow-up meeting with Liam and Zara",
+      "customer_owner": "Liam O'Connor",
+      "apex_owner": "Nora Quinn",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "Let's talk next week."
+       }
+      ]
+     },
+     {
+      "milestone": "Deal desk answer on three year minimum term and quarterly in arrears payment",
+      "customer_owner": "Helen Brooks",
+      "apex_owner": "Nora Quinn",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I'll need to check that with our deal desk."
+       }
+      ]
+     },
+     {
+      "milestone": "Build versus buy cost comparison for Helen, using the engineering lead's build assumptions",
+      "customer_owner": "Liam O'Connor",
+      "apex_owner": "Nora Quinn",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "nothing gets signed this year without a cost comparison against building it ourselves."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Maybe not. But I need the comparison."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "competitive_risk",
+   "after": "low_information",
+   "reason": "only 5 substantive customer utterances"
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "next_steps",
+   "before": "3",
+   "after": "2",
+   "reason": "low information call, cut: Propose Liam a specific date next week for a working session on the cost comparison inputs, and ask whether Helen can join for the last 15 minutes."
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Prefilled",
+   "locations": [
+    "Prefilled"
+   ]
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date)",
+   "locations": [
+    "next week (relative date; write the actual date)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date), 2026-10-03 (weekend), 2026-12-18 (not a date said in the call)",
+   "locations": [
+    "next week (relative date; write the actual date)",
+    "2026-10-03 (weekend)",
+    "2026-12-18 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": false,
+   "severity": "medium",
+   "detail": "bad dates: 2026-10-03 (weekend)",
+   "locations": [
+    "2026-10-03 (weekend)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date)",
+   "locations": [
+    "next week (relative date; write the actual date)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date), 2026-10-03 (weekend), 2026-10-05 (not a date said in the call), 2026-12-18 (not a date said in the call), next week (relative date; write the actual date)",
+   "locations": [
+    "next week (relative date; write the actual date)",
+    "2026-10-03 (weekend)",
+    "2026-10-05 (not a date said in the call)",
+    "2026-12-18 (not a date said in the call)",
+    "next week (relative date; write the actual date)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U015 and U016 support the six month build claim and Liam's dismissal, and the step gives the champion something to bring to the absent engineering lead.",
+   "utterance_ids": [
+    "U015",
+    "U016",
+    "U017"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send deal desk Helen's terms of three year minimum and quarterly in arrears only (playbook_rule_id PB-08)",
+   "passed": false,
+   "severity": "low",
+   "finding": "U013 and U014 support the terms and Nora's deal desk remark, but PB-08 covers SC commitments and Nora is the AE, so the rule citation does not fit.",
+   "utterance_ids": [
+    "U013",
+    "U014"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Both next steps and their 2026-10-05 due dates",
+   "passed": true,
+   "severity": "low",
+   "finding": "The steps are framed as actions for Nora and the 10-05 dates are proposed due dates; they are not presented as customer-agreed commitments.",
+   "utterance_ids": [
+    "U014",
+    "U021"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state low_information and its rationale",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment does not treat Liam's technical comfort as a decision and keeps the CFO's conditions front and center.",
+   "utterance_ids": [
+    "U012",
+    "U015",
+    "U017"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this customer: the engineering lead's six month build claim and Helen's three year and quarterly in arrears terms.",
+   "utterance_ids": [
+    "U013",
+    "U015"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Helen asked for a cost comparison against building this in house. Liam, could you share what the engineering lead's six month estimate assumes, so we can prepare it?",
+   "passed": false,
+   "severity": "medium",
+   "finding": "The email implies Apex will prepare the cost comparison, but nobody on Apex committed to that in the call; Helen only said she needs it.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U018"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Zara send list tomorrow; Ravi tests custom fields; I will check Helen's terms with deal desk",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each of these three open items matches a commitment made in the call (Zara's send in U011, Ravi's test in U020, Nora's deal desk check in U014).",
+   "utterance_ids": [
+    "U011",
+    "U020",
+    "U014"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Features that update in under 5 seconds address Liam's point that fraud features are an hour stale today",
+   "passed": true,
+   "severity": "low",
+   "finding": "U003 and U008 support both the demonstrated update time and Liam's stated pain, and the email does not invent a seconds target.",
+   "utterance_ids": [
+    "U003",
+    "U008"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "In the sandbox, a 10 minute outage caught up in about 90 seconds with nothing dropped.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The numbers and the no-drop claim match Ravi's statement in U005.",
+   "utterance_ids": [
+    "U005"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "commitments, open_items, objections and stakeholders",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary matches the transcript, notes that no dates were stated, and caveats the CRM outcome as prefilled from discovery.",
+   "utterance_ids": [
+    "U011",
+    "U013",
+    "U015",
+    "U017",
+    "U020",
+    "U021"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Liam: \"I think we're in good shape technically\" (champion opinion only)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary labels the statement as champion opinion only and records the CFO's conditions that follow it.",
+   "utterance_ids": [
+    "U012",
+    "U013",
+    "U015"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Build versus buy cost comparison for Helen, using the engineering lead's build assumptions (proposed, no date)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The row is marked proposed with no date, and U015 and U017 support the need for the comparison; the use of the engineering lead's assumptions is a proposal, not a stated commitment.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Row statuses and target dates",
+   "passed": true,
+   "severity": "low",
+   "finding": "Only Zara's list is marked agreed with a date (2026-10-03), which matches U011; every other row is marked proposed with no date.",
+   "utterance_ids": [
+    "U011",
+    "U020",
+    "U021"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "Dated follow-up meeting with Liam and Zara",
+   "passed": true,
+   "severity": "low",
+   "finding": "The row rests on Liam's 'next week' remark and addresses the vague next step; the other rows are specific to this deal.",
+   "utterance_ids": [
+    "U021"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Evidence items U003, U008, U011, U020, U017, U014 and the customer_value_line",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is verbatim and supports the sentence it backs, including Liam's own statement that features are an hour stale.",
+   "utterance_ids": [
+    "U003",
+    "U008",
+    "U011",
+    "U020",
+    "U017",
+    "U014"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Zara is sending the case tool custom field list tomorrow. Once it arrives, Ravi will test custom fields in case export. We have not set a date for that test yet.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Zara's send-tomorrow and Ravi's test-once-received commitments are stated as said, and the email honestly notes there is no test date.",
+   "utterance_ids": [
+    "U011",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Features updating in under 5 seconds in the demo speaks to Liam's point that today fraud features are an hour stale for his analysts.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email only links the demo to Liam's stated pain and does not claim a decision, approval or positive commercial signal.",
+   "utterance_ids": [
+    "U008",
+    "U003"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "I will check Helen's contract terms with our deal desk and come back to you.",
+   "passed": false,
+   "severity": "low",
+   "finding": "Nora only said she would check with deal desk (U014) and never promised to come back to the customer, so the email adds a follow-up commitment, with no date, that was not made in the call.",
+   "utterance_ids": [
+    "U014"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Ravi showed your card transaction sample streaming at about 3 thousand transactions a second, with features updating in under 5 seconds.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email states only demo behavior as spoken, and no later line or release card corrects or supersedes it.",
+   "utterance_ids": [
+    "U003"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "Open items list and Could we agree on a time early next week?",
+   "passed": true,
+   "severity": "low",
+   "finding": "The open items are tied to this customer: the custom field list, the build-versus-buy comparison and the deal desk check on Helen's terms, so the email is not generic.",
+   "utterance_ids": [
+    "U011",
+    "U015",
+    "U017",
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "evidence list and cited claims (U008, U010, U011, U013, U015, U021)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every excerpt is word for word from its line, and each cited claim, including the champion-opinion-only caveat on U012, is supported by the line it cites.",
+   "utterance_ids": [
+    "U008",
+    "U010",
+    "U011",
+    "U012",
+    "U013",
+    "U015",
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments: Zara send field list 'tomorrow'; Ravi test custom fields; Nora check terms with deal desk",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each commitment matches what was said, and the missing dates for Ravi and Nora are flagged rather than invented.",
+   "utterance_ids": [
+    "U011",
+    "U014",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line: 'technical demo went well per champion... Low information'",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary attributes the positive view to the champion alone and weighs it against the CFO's conditions and the absence of a dated next meeting.",
+   "utterance_ids": [
+    "U012",
+    "U013",
+    "U015",
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "what_we_validated and integration_patterns",
+   "passed": true,
+   "severity": "low",
+   "finding": "Nothing in the summary presents a corrected or superseded behavior as current, and no release card applies to the validated items.",
+   "utterance_ids": [
+    "U003",
+    "U005",
+    "U007"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022301,
+   "latency_ms": 9083,
+   "input_tokens": 532,
+   "output_tokens": 1470,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "2e6bce3b953317a997fdf4d2a061f39c62553b44c8083362c392ebf691cfebb6"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024694,
+   "latency_ms": 10288,
+   "input_tokens": 398,
+   "output_tokens": 1734,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "3e166332f601fc6f5c07c0f27060b7fc528959ace13077a2ce29c2432f401b6c"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.038372,
+   "latency_ms": 16035,
+   "input_tokens": 5077,
+   "output_tokens": 2191,
+   "cache_read_input_tokens": 4292,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "1bcc03b03ba4911b5ac12be3c793ed9803d5db332fabddae76904d33674b7b24"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023987,
+   "latency_ms": 4750,
+   "input_tokens": 5156,
+   "output_tokens": 749,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "421d243cc6ffc0f01e79fbf56c0384ab533f6570dbb069f188cea2679a1c4428"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023467,
+   "latency_ms": 4904,
+   "input_tokens": 5293,
+   "output_tokens": 676,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "9e90c2b4154e705db9e49bd6eec8a045d7556ccd9afc738553f22ae7e57dccfd"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.030277,
+   "latency_ms": 8593,
+   "input_tokens": 5168,
+   "output_tokens": 1373,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "609346c7d5692685130c9d7b0c2222b8b1d7a480f46422c54899416577caed37"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.054811,
+   "latency_ms": 25766,
+   "input_tokens": 4628,
+   "output_tokens": 3936,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2180,
+   "validator_errors": [],
+   "keys": [
+    "384886f46dd4366040042d3730802f85aacd2414c97a54326ffea77b64a5f081"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018007,
+   "latency_ms": 4634,
+   "input_tokens": 5495,
+   "output_tokens": 591,
+   "cache_read_input_tokens": 5534,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "f19007b6f939b495d32ef20a47febcd201774459d8802ac34ade06b11ef1214d"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021499,
+   "latency_ms": 12429,
+   "input_tokens": 1144,
+   "output_tokens": 1803,
+   "cache_read_input_tokens": 5904,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "9246f65fc50d43f4e4a136dda50cb88ec5e274b0e1aab5c8483fff9293c9a4fe"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025867,
+   "latency_ms": 9519,
+   "input_tokens": 5305,
+   "output_tokens": 1406,
+   "cache_read_input_tokens": 5985,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "22514a2f3390b1bc81951a9c04d444ca4649df67b4fca832c57f1c053217178e"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.017835,
+   "latency_ms": 9118,
+   "input_tokens": 2067,
+   "output_tokens": 1252,
+   "cache_read_input_tokens": 5904,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "c41c58f8e39c0a1748da52b49d16ef7a434d1e117c013ce1c9d8d5d800a669ff"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.301117,
+ "latency_ms": 115119,
+ "wall_clock_s": 105.5,
+ "status": "ran"
+}

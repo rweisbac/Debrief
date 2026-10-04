@@ -1,0 +1,1764 @@
+{
+ "debrief_id": "e10-35d1c657",
+ "deal_id": "e10",
+ "as_of": "2026-10-02",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No customer agreed to a dated next meeting or action. Fatima named the architecture board meeting on November 3rd, but only as the date of its monthly meeting, and no follow-up call was agreed.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "They meet monthly, next on November 3rd."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Nested net_groups claim is not supported in GA, and she wants it in writing for the architecture board. Her question about whether next quarter is committed was never firmly answered.",
+    "raised_by": "Fatima Zahid",
+    "status": "open",
+    "answer_given": "Ana said nested claims are coming next quarter per what she heard from product, and she will get the exact date. Derek offered preview program access.",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "So nested doesn't work."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Next quarter, is that committed?"
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "I'll need that in writing for our architecture board."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Date for nested claim support is unconfirmed. Ana relayed hearsay from product, and the release card says nested claims are in private preview with no announced GA date.",
+    "owner": "Ana Petrov",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+     }
+    ]
+   },
+   {
+    "summary": "Written SSO design for the architecture board, covering the nested net_groups claim with region and role.",
+    "owner": "Ana Petrov",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "A written SSO design and the date for nested claims."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "Right. An object with region and role."
+     }
+    ]
+   },
+   {
+    "summary": "Preview program access for nested claims was offered by Derek with no confirmation that it exists or that the customer is eligible.",
+    "owner": "Derek Shaw",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "And we can get you into the preview program before that, I'm sure."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Customer's own OIDC identity provider sends roles in a nested claim called net_groups, an object with region and role.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "You use your own OIDC provider, and roles come in a nested claim called net_groups, is that right?"
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "Right. An object with region and role."
+     }
+    ]
+   },
+   {
+    "summary": "Network usage data loaded incrementally into Apex, then synced to the customer's BI tool through the warehouse connector, which is continuous at about 1 minute end to end.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "This is the network usage data you sent, about 1.2 billion rows a day, loaded incrementally."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "The connector is continuous now, about 1 minute end to end."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Ana Petrov",
+    "side": "apex",
+    "what": "Send the written SSO design",
+    "by_when": "2026-10-09",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "who": "Derek Shaw",
+    "side": "apex",
+    "what": "Send the nested claims date along with the SSO design",
+    "by_when": "2026-10-09",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "And I'll send the nested claims date along with it."
+     }
+    ]
+   },
+   {
+    "who": "Ana Petrov",
+    "side": "apex",
+    "what": "Get Fatima the exact date for nested claims",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'll get you the exact date."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Fatima Zahid",
+    "title": "Director of Identity and Access",
+    "present": true,
+    "why_they_matter": "Champion. SSO is the gate for her, and she brings the design to the architecture board.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "SSO first please. That's the gate for us."
+     }
+    ]
+   },
+   {
+    "name": "Colin Byrne",
+    "title": "Principal Data Engineer",
+    "present": true,
+    "why_they_matter": "Technical evaluator for the usage pipeline. His current job takes about 5 hours.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     }
+    ]
+   },
+   {
+    "name": "Architecture board",
+    "title": "Approves the SSO design",
+    "present": false,
+    "why_they_matter": "Approves the SSO design and meets monthly, next on November 3rd.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "They meet monthly, next on November 3rd."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "I'll need that in writing for our architecture board."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Pipeline performance well ahead of current job: 22 minutes vs about 5 hours",
+    "strength": "moderate",
+    "qualifier": "Colin stated the current time but did not express a decision or commit to anything",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Last night's run took 22 minutes."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     }
+    ]
+   },
+   {
+    "summary": "Colin reacted positively to continuous warehouse sync",
+    "strength": "weak",
+    "qualifier": "Brief enthusiasm only, no commitment, and he had a hard stop",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Even better."
+     }
+    ]
+   },
+   {
+    "summary": "Fatima named what the architecture board needs and a meeting date, giving a clear path to approval",
+    "strength": "moderate",
+    "qualifier": "Approval depends on the SSO design and a nested claims date that Apex has not yet confirmed",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "A written SSO design and the date for nested claims. They meet monthly, next on November 3rd."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "SSO is the gate and nested claims are not supported in general availability; the customer's roles come in a nested claim",
+    "strength": "strong",
+    "qualifier": "Fatima called SSO the gate; Apex offered only an uncommitted next-quarter claim",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "SSO first please. That's the gate for us."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "So nested doesn't work."
+     }
+    ]
+   },
+   {
+    "summary": "Nested claims timing is unconfirmed; SC relayed hearsay from product and AE offered preview access without basis",
+    "strength": "strong",
+    "qualifier": "Release card RC-09 says nested claims are in private preview with no announced GA date; confirm with identity team before committing a date",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "And we can get you into the preview program before that, I'm sure."
+     }
+    ]
+   },
+   {
+    "summary": "Fatima needs the nested claims answer in writing for the board",
+    "strength": "moderate",
+    "qualifier": "A date Apex cannot confirm may fail the board review",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "I'll need that in writing for our architecture board."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "1.2 billion rows a day",
+    "what_it_measures": "Network usage data volume loaded incrementally",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "about 1.2 billion rows a day, loaded incrementally"
+     }
+    ]
+   },
+   {
+    "value": "22 minutes",
+    "what_it_measures": "Apex pipeline run time for last night's run",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Last night's run took 22 minutes."
+     }
+    ]
+   },
+   {
+    "value": "about 5 hours",
+    "what_it_measures": "Customer's current pipeline job duration",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     }
+    ]
+   },
+   {
+    "value": "about 1 minute end to end",
+    "what_it_measures": "Warehouse connector continuous sync latency",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "The connector is continuous now, about 1 minute end to end."
+     }
+    ]
+   },
+   {
+    "value": "November 3rd",
+    "what_it_measures": "Next architecture board meeting date",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "They meet monthly, next on November 3rd."
+     }
+    ]
+   },
+   {
+    "value": "Friday, October 9th",
+    "what_it_measures": "Date Ana committed to send the SSO design",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Architecture board must approve the SSO design; it needs the written SSO design and the nested claims date",
+    "owner": "Fatima Zahid",
+    "due": "2026-11-03",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "A written SSO design and the date for nested claims. They meet monthly, next on November 3rd."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [
+   {
+    "original_statement": "Nested claims are coming next quarter, so you'd be covered by the time you go live.",
+    "corrected_statement": "Nested object claims are in private preview with no announced general availability date (RC-09); the date needs confirming with the identity team.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+     }
+    ]
+   },
+   {
+    "original_statement": "The warehouse connector syncs hourly to your BI tool.",
+    "corrected_statement": "The connector is continuous now, about 1 minute end to end; hourly was the old behavior.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "And the warehouse connector syncs hourly to your BI tool."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Sorry, correction. The connector is continuous now, about 1 minute end to end."
+     }
+    ]
+   }
+  ],
+  "checklist_mismatches": [
+   {
+    "field": "sc_commitment",
+    "logged_value": "SSO design and nested claims date by Oct 9",
+    "transcript_says": "Ana committed to the SSO design by October 9th; Derek, not Ana, said he would send the nested claims date along with it. Ana said she would get the exact date, with no day given.",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "And I'll send the nested claims date along with it."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'll get you the exact date."
+     }
+    ]
+   },
+   {
+    "field": "business_outcome",
+    "logged_value": "",
+    "transcript_says": "No business outcome was stated in the call; the only pain, a 5 hour job, was stated as a fact, not an outcome.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "partial",
+   "summary": "not stated",
+   "evidence": [
+    {
+     "utterance_id": "U013",
+     "excerpt": "about 1.2 billion rows a day, loaded incrementally"
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Architecture board: Approves the SSO design and meets monthly, next on November 3rd.",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "They meet monthly, next on November 3rd."
+    },
+    {
+     "utterance_id": "U011",
+     "excerpt": "I'll need that in writing for our architecture board."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "known",
+   "summary": "2 items validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U003",
+     "excerpt": "You use your own OIDC provider, and roles come in a nested claim called net_groups, is that right?"
+    },
+    {
+     "utterance_id": "U004",
+     "excerpt": "Right. An object with region and role."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Architecture board must approve the SSO design; it needs the written SSO design and the nested claims date",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "A written SSO design and the date for nested claims. They meet monthly, next on November 3rd."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "SSO is the gate and nested claims are not supported in general availability; the customer's roles come in a nested claim",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "SSO first please. That's the gate for us."
+    },
+    {
+     "utterance_id": "U006",
+     "excerpt": "So nested doesn't work."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Fatima Zahid, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "SSO first please. That's the gate for us."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "open_technical_gap",
+  "deal_state_why": "Nested role claims are unsupported in general availability, SSO is Fatima's gate, and the promised next-quarter date is unconfirmed.",
+  "next_steps": [
+   {
+    "action": "Ask the identity team in writing for a GA date for nested net_groups claims and whether Corvid can join the private preview, to start the SSO design and date due Oct 9.",
+    "owner": "Ana Petrov",
+    "due_by": "2026-10-06",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "RC-09",
+    "action_type": "route_to_sc",
+    "why": "Ana relayed hearsay from product, and the release card says no GA date is announced. An AE would likely just wait for her answer.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+     }
+    ]
+   },
+   {
+    "action": "Tell Fatima that next quarter is not confirmed and preview access is unverified, so she doesn't put either in front of the architecture board.",
+    "owner": "Derek Shaw",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "RC-09",
+    "action_type": "resolve_with_champion",
+    "why": "Both claims were made in the call and the board will read them in writing. Reps rarely retract their own reassurances unprompted.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "And we can get you into the preview program before that, I'm sure."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Nested claims date may fail the Nov 3 architecture board review if it stays unconfirmed. The board meets monthly, so a miss could threaten the Dec 18 close.",
+    "competitor": "",
+    "release_card_id": "RC-09",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "I'll need that in writing for our architecture board."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "low_information",
+    "deal_state_why": "Nested role claims are unsupported in general availability, SSO is Fatima's gate, and the promised next-quarter date is unconfirmed.",
+    "next_steps": [
+     {
+      "action": "Ask the identity team in writing for a GA date for nested net_groups claims and whether Corvid can join the private preview, to start the SSO design and date due Oct 9.",
+      "owner": "Ana Petrov",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-09",
+      "action_type": "route_to_sc",
+      "why": "Ana relayed hearsay from product, and the release card says no GA date is announced. An AE would likely just wait for her answer.",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+       }
+      ]
+     },
+     {
+      "action": "Tell Fatima that next quarter is not confirmed and preview access is unverified, so she doesn't put either in front of the architecture board.",
+      "owner": "Derek Shaw",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-09",
+      "action_type": "resolve_with_champion",
+      "why": "Both claims were made in the call and the board will read them in writing. Reps rarely retract their own reassurances unprompted.",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+       },
+       {
+        "utterance_id": "U010",
+        "excerpt": "And we can get you into the preview program before that, I'm sure."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Nested claims date may fail the Nov 3 architecture board review if it stays unconfirmed. The board meets monthly, so a miss could threaten the Dec 18 close.",
+      "competitor": "",
+      "release_card_id": "RC-09",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "I'll need that in writing for our architecture board."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "low_information",
+    "deal_state_why": "Nested role claims are unsupported in general availability, SSO is Fatima's gate, and the promised next-quarter date is unconfirmed.",
+    "next_steps": [
+     {
+      "action": "Ask the identity team in writing for a GA date for nested net_groups claims and whether Corvid can join the private preview, to start the SSO design and date due Oct 9.",
+      "owner": "Ana Petrov",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-09",
+      "action_type": "route_to_sc",
+      "why": "Ana relayed hearsay from product, and the release card says no GA date is announced. An AE would likely just wait for her answer.",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+       }
+      ]
+     },
+     {
+      "action": "Tell Fatima that next quarter is not confirmed and preview access is unverified, so she doesn't put either in front of the architecture board.",
+      "owner": "Derek Shaw",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "RC-09",
+      "action_type": "resolve_with_champion",
+      "why": "Both claims were made in the call and the board will read them in writing. Reps rarely retract their own reassurances unprompted.",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+       },
+       {
+        "utterance_id": "U010",
+        "excerpt": "And we can get you into the preview program before that, I'm sure."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Nested claims date may fail the Nov 3 architecture board review if it stays unconfirmed. The board meets monthly, so a miss could threaten the Dec 18 close.",
+      "competitor": "",
+      "release_card_id": "RC-09",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "I'll need that in writing for our architecture board."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Apex technical validation, SSO and usage pipeline",
+    "body": "Hi Fatima and Colin,\n\nThanks for your time today. Here is where we landed.\n\nShown: the network usage data you sent, about 1.2 billion rows a day, loaded incrementally. Last night's run took 22 minutes, against your current job of about 5 hours. The warehouse connector to your BI tool is continuous now, about 1 minute end to end.\n\nOpen: our claim mapping takes flat claims today, so your nested net_groups claim is not supported in general availability. We have not confirmed a date for nested claims or preview access, so please don't present either to the architecture board yet.\n\nOwners:\n- Ana will send the written SSO design by Friday, October 9th.\n- Ana will get you the exact date for nested claims, and I will send it with the design.\n\nYou mentioned the board meets next on November 3rd. Is there a time before then you would like us to walk through the design with you?\n\nDerek",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Last night's run took 22 minutes."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "The connector is continuous now, about 1 minute end to end."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Today our claim mapping takes flat claims. A string or a list of strings."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "And I'll send the nested claims date along with it."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They meet monthly, next on November 3rd."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Apex technical validation, SSO and usage pipeline",
+    "body": "Hi Fatima and Colin,\n\nThanks for your time today. Here is where we landed.\n\nShown: the network usage data you sent, about 1.2 billion rows a day, loaded incrementally. Last night's run took 22 minutes, against your current job of about 5 hours. The warehouse connector to your BI tool is continuous now, about 1 minute end to end.\n\nOpen: our claim mapping takes flat claims today, so your nested net_groups claim is not supported in general availability. We have not confirmed a date for nested claims or preview access, so please don't present either to the architecture board yet.\n\nOwners:\n- Ana will send the written SSO design by Friday, October 9th.\n- Ana will get you the exact date for nested claims, and I will send it with the design.\n\nYou mentioned the board meets next on November 3rd. Is there a time before then you would like us to walk through the design with you?\n\nDerek",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Last night's run took 22 minutes."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "The connector is continuous now, about 1 minute end to end."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Today our claim mapping takes flat claims. A string or a list of strings."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "And I'll send the nested claims date along with it."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They meet monthly, next on November 3rd."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Low information: SSO is Fatima's gate, nested role claims are not supported in GA, and the next-quarter date Ana gave is unconfirmed.",
+    "customer_value_line": "Business outcome not stated; the only pain voiced was a current usage job of about 5 hours, a fact and not an outcome.",
+    "what_we_validated": [
+     "Network usage pipeline: about 1.2 billion rows a day loaded incrementally, last night's run took 22 minutes vs Colin's current job of about 5 hours.",
+     "Warehouse connector is continuous, about 1 minute end to end (Ana corrected the earlier hourly statement)."
+    ],
+    "integration_patterns": [
+     "Customer's own OIDC provider sends roles in a nested claim called net_groups, an object with region and role.",
+     "Network usage data loaded incrementally into Apex, then synced to the BI tool via the warehouse connector."
+    ],
+    "objections_and_answers": [
+     "Fatima: nested net_groups claim does not work in GA. Answer given: Ana said coming next quarter per what she heard from product and she will get the exact date; Derek said preview access was possible. RC-09 says private preview with no announced GA date, so both claims are unconfirmed. Status: open."
+    ],
+    "open_items": [
+     "Confirmed GA date for nested claims, and whether preview access is available: owner Ana Petrov, no date stated for the exact date.",
+     "Written SSO design covering the nested net_groups claim for the architecture board: owner Ana Petrov.",
+     "Business outcome: not stated, needs to be asked for.",
+     "Economic buyer: not named in the call."
+    ],
+    "commitments": [
+     "Ana Petrov: send the SSO design by Friday, October 9th.",
+     "Derek Shaw: send the nested claims date along with the SSO design (by October 9th).",
+     "Ana Petrov: get Fatima the exact date for nested claims, no day given."
+    ],
+    "stakeholders": [
+     "Fatima Zahid, Director of Identity and Access, champion, present.",
+     "Colin Byrne, Principal Data Engineer, technical evaluator, present, had a hard stop.",
+     "Architecture board, approves the SSO design, absent, meets monthly, next on November 3rd."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "SSO is the gate and the roles arrive in a nested claim that GA does not support.",
+     "Next quarter and preview access were stated without a confirmed basis; RC-09 says no announced GA date. Fatima wants the answer in writing for the board.",
+     "A date Apex cannot confirm may fail the November 3rd board review, and the board meets monthly.",
+     "No dated follow-up meeting with the customer was agreed; the board date was named only as its meeting date."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "SSO first please. That's the gate for us."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Today our claim mapping takes flat claims. A string or a list of strings."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "And we can get you into the preview program before that, I'm sure."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Okay. I'll need that in writing for our architecture board."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Last night's run took 22 minutes."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Sorry, correction. The connector is continuous now, about 1 minute end to end."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "A written SSO design and the date for nested claims. They meet monthly, next on November 3rd."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "And I'll send the nested claims date along with it."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Low information: nested role claims are not supported in GA, SSO is Fatima's gate, and the next-quarter date Ana mentioned is unconfirmed.",
+    "customer_value_line": "Business outcome not stated; the only pain is a current usage job of about 5 hours, which is a fact and not an outcome.",
+    "what_we_validated": [
+     "Usage pipeline on the customer's network usage data: about 1.2 billion rows a day, loaded incrementally, last night's run took 22 minutes vs their current job of about 5 hours (U013, U014).",
+     "Warehouse connector is continuous, about 1 minute end to end (hourly was old behavior, per Ana's correction) (U017)."
+    ],
+    "integration_patterns": [
+     "Customer's own OIDC provider sends roles in a nested claim called net_groups, an object with region and role (U003, U004).",
+     "Network usage data loads incrementally into Apex, then syncs to the customer's BI tool through the warehouse connector (U013, U017)."
+    ],
+    "objections_and_answers": [
+     "Fatima: nested net_groups claim does not work today, and she needs it in writing for the architecture board. Answer given: Ana said nested is coming next quarter per product and she'd get the exact date; Derek offered preview access. Status: open. Per RC-09, nested claims are in private preview with no announced GA date, so the next-quarter claim and preview access are unverified (U005, U007, U009, U010, U011)."
+    ],
+    "open_items": [
+     "Nested claims date: unconfirmed, owner Ana Petrov; confirm with the identity team before any date goes in writing (RC-09) (U009).",
+     "Written SSO design covering the nested net_groups claim, owner Ana Petrov, for the architecture board (U020).",
+     "Preview program access offered by Derek with no confirmation the customer is eligible (U010).",
+     "Business outcome not stated; ask Fatima and Colin for it.",
+     "Economic buyer not named."
+    ],
+    "commitments": [
+     "Ana Petrov: send the written SSO design by Friday, October 9th (U021).",
+     "Derek Shaw: send the nested claims date along with the SSO design, by October 9th (U022).",
+     "Ana Petrov: get Fatima the exact nested claims date, no day given (U009)."
+    ],
+    "stakeholders": [
+     "Fatima Zahid, Director of Identity and Access, champion, present (U002).",
+     "Colin Byrne, Principal Data Engineer, technical evaluator, present, had a hard stop (U012).",
+     "Architecture board, approves the SSO design, absent; meets monthly, next on November 3rd (U020)."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "SSO is the gate and roles arrive in a nested claim that GA does not support (U002, U006).",
+     "Ana's next-quarter reassurance and Derek's preview offer lack basis; RC-09 says no GA date is announced. If put in writing they could fail the board review (U007, U010).",
+     "The board meets monthly, next on November 3rd, so a miss could put the December 18 close at risk.",
+     "No dated follow-up call was agreed; November 3rd is only the board's meeting date (U020)."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "Today our claim mapping takes flat claims. A string or a list of strings."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "That's what I've heard from the product team. I'll get you the exact date."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "And we can get you into the preview program before that, I'm sure."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Last night's run took 22 minutes."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Our current job is about 5 hours."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Sorry, correction. The connector is continuous now, about 1 minute end to end."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They meet monthly, next on November 3rd."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send the SSO design by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "And I'll send the nested claims date along with it."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[dates_future_business_days] bad dates: December 18 (not a date said in the call): December 18 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Business outcome not stated by the customer; Colin gave the current usage job as about 5 hours and Apex's last run took 22 minutes, but no outcome was named.",
+    "rows": [
+     {
+      "milestone": "Apex sends the written SSO design for the architecture board",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Ana Petrov",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "A written SSO design and the date for nested claims. They meet monthly, next on November 3rd."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send the SSO design by Friday, October 9th."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "Okay. Thanks."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex confirms the nested claims date with the identity team and sends it with the SSO design (RC-09: private preview, no announced GA date)",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Derek Shaw",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "And I'll send the nested claims date along with it."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "I'll get you the exact date."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "Okay. Thanks."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm with Fatima that next quarter and preview access are not yet confirmed, before anything goes to the board",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Derek Shaw",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+       },
+       {
+        "utterance_id": "U010",
+        "excerpt": "And we can get you into the preview program before that, I'm sure."
+       }
+      ]
+     },
+     {
+      "milestone": "Architecture board reviews the SSO design",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Ana Petrov",
+      "target_date": "2026-11-03",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "They meet monthly, next on November 3rd."
+       },
+       {
+        "utterance_id": "U011",
+        "excerpt": "I'll need that in writing for our architecture board."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Business outcome not stated by the customer; Colin gave the current usage job as about 5 hours and Apex's last run took 22 minutes, but no outcome was named.",
+    "rows": [
+     {
+      "milestone": "Apex sends the written SSO design for the architecture board",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Ana Petrov",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "A written SSO design and the date for nested claims. They meet monthly, next on November 3rd."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send the SSO design by Friday, October 9th."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "Okay. Thanks."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex confirms the nested claims date with the identity team and sends it with the SSO design (RC-09: private preview, no announced GA date)",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Derek Shaw",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "And I'll send the nested claims date along with it."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "I'll get you the exact date."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "Okay. Thanks."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm with Fatima that next quarter and preview access are not yet confirmed, before anything goes to the board",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Derek Shaw",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "But nested claims are coming next quarter, so you'd be covered by the time you go live."
+       },
+       {
+        "utterance_id": "U010",
+        "excerpt": "And we can get you into the preview program before that, I'm sure."
+       }
+      ]
+     },
+     {
+      "milestone": "Architecture board reviews the SSO design",
+      "customer_owner": "Fatima Zahid",
+      "apex_owner": "Ana Petrov",
+      "target_date": "2026-11-03",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "They meet monthly, next on November 3rd."
+       },
+       {
+        "utterance_id": "U011",
+        "excerpt": "I'll need that in writing for our architecture board."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "open_technical_gap",
+   "after": "low_information",
+   "reason": "only 4 substantive customer utterances"
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: December 18 (not a date said in the call)",
+   "locations": [
+    "December 18 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask the identity team in writing for a GA date for nested net_groups claims and preview eligibility",
+   "passed": true,
+   "severity": "low",
+   "finding": "U009 shows Ana relaying hearsay from product and promising to get the exact date, which supports routing the item to her.",
+   "utterance_ids": [
+    "U009"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Tell Fatima that next quarter is not confirmed and preview access is unverified",
+   "passed": true,
+   "severity": "low",
+   "finding": "U007 and U010 are the two reassurances made in the call, and RC-09 says no GA date is announced, so the cited lines support the step.",
+   "utterance_ids": [
+    "U007",
+    "U010",
+    "U011"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "due_by 2026-10-06 and 2026-10-05 for the next steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "The dates are internal working deadlines before the Oct 9 commitment and are not presented as customer commitments.",
+   "utterance_ids": [
+    "U021",
+    "U022"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to the nested net_groups claim, RC-09 and the board's need for it in writing, so neither is generic.",
+   "utterance_ids": [
+    "U007",
+    "U009",
+    "U010",
+    "U011"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "The warehouse connector to your BI tool is continuous now, about 1 minute end to end.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email uses the corrected continuous behavior from U017 and RC-12, not the old hourly sync.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Ana will send the SSO design by Oct 9; Ana will get the exact date and I will send it with the design",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every promise in the email maps to a line in the call: U021 for the design, U009 for the date, U022 for Derek sending it. The walkthrough is only a question.",
+   "utterance_ids": [
+    "U009",
+    "U021",
+    "U022"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Please don't present either to the architecture board yet",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email makes no firm claim about nested claims or preview access and correctly says neither is confirmed, consistent with U009 and RC-09.",
+   "utterance_ids": [
+    "U007",
+    "U009",
+    "U010"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Written SSO design covering the nested net_groups claim, owner Ana Petrov, for the architecture board (U020)",
+   "passed": false,
+   "severity": "low",
+   "finding": "U020 asks for a written SSO design and the date for nested claims, but does not say the design must cover the nested net_groups claim, so that scope is added.",
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Overall risks and deal_state_line",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary treats the customer's 'Even better' and 'Okay. Thanks.' as no more than politeness and records the open risks and the missing outcome and economic buyer.",
+   "utterance_ids": [
+    "U018",
+    "U023"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Warehouse connector is continuous, about 1 minute end to end (hourly was old behavior)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary reflects Ana's correction in U017 and does not present the hourly sync as current.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Apex confirms the nested claims date... status agreed, target 2026-10-09",
+   "passed": true,
+   "severity": "low",
+   "finding": "Derek said he would send the date along with the design (U022) and Fatima said okay, so the Oct 9 target is supported.",
+   "utterance_ids": [
+    "U021",
+    "U022",
+    "U023"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Row status values agreed and proposed",
+   "passed": true,
+   "severity": "low",
+   "finding": "Only the two Oct 9 Apex deliveries are marked agreed; the board review and the retraction call are correctly marked proposed.",
+   "utterance_ids": [
+    "U020",
+    "U023"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "evidence list and the claims it supports (flat-claims limit, next-quarter statement, preview offer, board needs, SC commitments)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is copied word for word from its cited line and supports the claim it is attached to.",
+   "utterance_ids": [
+    "U002",
+    "U005",
+    "U007",
+    "U009",
+    "U010",
+    "U011",
+    "U013",
+    "U014",
+    "U017",
+    "U020",
+    "U021",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments: SSO design by October 9th; nested claims date along with it; exact date with no day given",
+   "passed": true,
+   "severity": "low",
+   "finding": "The commitments match what Ana and Derek said, and the summary correctly treats the next-quarter and preview statements as unconfirmed rather than committed.",
+   "utterance_ids": [
+    "U009",
+    "U010",
+    "U021",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line: Low information; no outcome or economic buyer stated",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary does not inflate Colin's 'Even better' or Fatima's 'Okay' into buying signals and correctly records that no business outcome or economic buyer was stated.",
+   "utterance_ids": [
+    "U008",
+    "U011",
+    "U018",
+    "U023"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Warehouse connector is continuous, about 1 minute end to end (Ana corrected the earlier hourly statement)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary uses the corrected continuous-sync behavior, consistent with RC-12, and does not present hourly sync as current.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "internal_summary",
+   "target": "open_items list",
+   "passed": true,
+   "severity": "low",
+   "finding": "The open items are tied to this account (nested net_groups claim, SSO design for the November 3rd board, missing outcome and economic buyer) and are not generic.",
+   "utterance_ids": [
+    "U020",
+    "U021",
+    "U022"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024801,
+   "latency_ms": 10699,
+   "input_tokens": 532,
+   "output_tokens": 1713,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "afcbd558afd64babc743b67be6f3c1bec085f4dde2e762654ca9308ab2486669"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028294,
+   "latency_ms": 13335,
+   "input_tokens": 398,
+   "output_tokens": 2087,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "c148bcce576b207ec2a0a17a48d28b60f27dcbd9ad63367e94d24c4303a88ddc"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.06777,
+   "latency_ms": 29971,
+   "input_tokens": 11576,
+   "output_tokens": 3694,
+   "cache_read_input_tokens": 10792,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "772e2dc2992a2833f7e5bb06d79555cca9e6e7e8867b61c9b2139cd308ac1e5e",
+    "aabb589d57659f3b10a1d824ddd8e33a48fad18f9cd97cbbfcae78dd3e327ce2"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024261,
+   "latency_ms": 4952,
+   "input_tokens": 5980,
+   "output_tokens": 611,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "188c1dd383d785e67d1674453658ca3407aebb363e5b045a06e3368f829625f3"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025931,
+   "latency_ms": 5602,
+   "input_tokens": 5843,
+   "output_tokens": 799,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "cb9ff56df44939b4123a882af81152ae82bfd29e3a6117eefddb4396552264e0"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.032091,
+   "latency_ms": 8962,
+   "input_tokens": 5855,
+   "output_tokens": 1410,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "3de3caece26e4595b7df3b1e6640a80bf16c284895a12f59bb83baa7af63628a"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.052057,
+   "latency_ms": 26141,
+   "input_tokens": 4641,
+   "output_tokens": 3651,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2208,
+   "validator_errors": [],
+   "keys": [
+    "5eff01a8581bded7de7681a71d9720fc55842ab1e3a558c535eb2fa901526e96"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.026547,
+   "latency_ms": 10156,
+   "input_tokens": 5932,
+   "output_tokens": 1348,
+   "cache_read_input_tokens": 6013,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "d4d66c510b859b59502872f288097e8cfde086f4d2f5adb88f5db2eebdb94d78"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025734,
+   "latency_ms": 15100,
+   "input_tokens": 2054,
+   "output_tokens": 2044,
+   "cache_read_input_tokens": 5932,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "ef7e48c30ea4be1ccf7252328f0632b20cc704128e70cf68648f62b31983e282"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.307486,
+ "latency_ms": 124918,
+ "wall_clock_s": 114.4,
+ "status": "ran"
+}

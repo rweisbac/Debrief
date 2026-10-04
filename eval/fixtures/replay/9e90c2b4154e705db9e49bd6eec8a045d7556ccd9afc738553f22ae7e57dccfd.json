@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "9e90c2b4154e705db9e49bd6eec8a045d7556ccd9afc738553f22ae7e57dccfd",
+ "recorded_at": "2026-10-04T00:33:48.553837+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFt4Ny1vFquM3TGTpWu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Granite Payments technical validation\",\"body\":\"Hi Liam and Zara,\\n\\nThanks for your time today. Ravi showed your card transaction sample streamed at about 3 thousand transactions a second, with features like spend velocity per card updating in under 5 seconds. He also showed the fraud features feeding your scoring model and the case export to your case tool. In the sandbox, a 10 minute outage caught up in about 90 seconds with nothing dropped.\\n\\nOpen items:\\n- Zara is sending the case tool custom field list tomorrow.\\n- Once Ravi has it, he will test custom fields in case export on your case tool.\\n- I will check Helen's contract terms with our deal desk.\\n- Helen asked for a cost comparison against building this in house. Liam, could you share what the engineering lead's six month estimate assumes, so we can prepare it?\\n\\nLiam, you mentioned talking next week. What day and time work for you?\\n\\nNora\",\"customer_value_line\":\"Features that update in under 5 seconds address Liam's point that fraud features are an hour stale today for his analysts.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"Features like spend velocity per card update in under 5 seconds.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"In the sandbox test a 10 minute outage caught up in about 90 seconds.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Sure, I'll send it tomorrow.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll test the custom fields once Zara sends the list.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"I'll need to check that with our deal desk.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Our engineering lead thinks they can build this in six months.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Thanks. Let's talk next week.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5293,
+   "cache_creation_input_tokens": 2180,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2180,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 676,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

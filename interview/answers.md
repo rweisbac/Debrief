@@ -38,7 +38,11 @@ Accuracy is enforced in code. Quotes come from the transcript table, every cited
 
 On the repo's 5 deals, the verifier caught 20 of 20 planted errors, 14 of 20 without it, with 0 false alarms on 5 clean drafts. [eval] `evals/ablation.md`
 
-On 15 new hard-case transcripts, the judge marked [CONFIRM: eval] of Debrief's claims supported, against [CONFIRM: eval] for a plain Claude call. [eval] `eval/results.md`
+I tested it against a plain Claude call on 15 new hard-case transcripts. On factual support they tied: a blind judge marked 93% of claims supported for both. [eval] `eval/results.md`
+
+The difference is what can reach a customer. Debrief blocked all 4 recaps that promised something nobody said. The plain call's emails held 9 of those, with nothing to stop them. [eval] `eval/hand_review.md`
+
+It also lost on some things. It costs about 8 times more, and a word-count rule mislabeled 5 calls as low information. [eval] `eval/README.md`
 
 These are 1-run results on synthetic data with an uncalibrated judge, so I read them as direction.
 

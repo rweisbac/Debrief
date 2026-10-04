@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "06c727206da3b5c1da2871cd276dbb6371178a2822e7069cff61f4984c0d0fdb",
+ "recorded_at": "2026-10-04T00:32:55.928625+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFp2CeTdqXq4tuhCX8Y",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: signature depends on a board technology committee approval or exception that Neil is unsure he can get, and the board meets in November.\",\"customer_value_line\":\"Amira Saleh said the loss ratio report is monthly today and that daily would change how they reprice.\",\"what_we_validated\":[\"Policy pricing model shown on the customer's policy extract, with versioned rating factors, and side by side runs with the current model for any date range.\",\"Claims dashboard showing loss ratio by line and by region, refreshed daily.\",\"Governance: rating factors changeable only by the pricing committee role, with every change logged; Neil said this is what the regulator asks about.\"],\"integration_patterns\":[],\"objections_and_answers\":[\"Board approval: Amira said purchases over 300 thousand went through the board's technology committee last year. Neil said end of month only if he can get an exception, otherwise after the November meeting. No Apex answer given. Status: open.\"],\"open_items\":[\"Mid term endorsements were not shown in the demo; Amira needs to see how the model handles them. Owner: Rosa Medina.\",\"Board technology committee path: what it needs and whether an exception is possible is not stated. Owner: not stated.\",\"No dated next meeting was agreed.\"],\"commitments\":[\"Rosa Medina: set up the mid term endorsements demo and send a recording by Tuesday, October 6th.\",\"Victor Hayes: send the order form and a recap today.\"],\"stakeholders\":[\"Neil Patterson, Chief Data Officer, champion, present; said he would sign by end of month, then made it conditional on the board.\",\"Amira Saleh, Analytics Manager, technical evaluator, present; raised the board requirement and the endorsements gap.\",\"Board technology committee, absent; approval needed for purchases over 300 thousand, meets in November.\",\"Actuaries, absent; will want to compare the model to the current one.\"],\"competitive_notes\":[],\"risks\":[\"End of month signature is conditional on a board exception; otherwise it is after the November meeting. The CRM next step of signature by Oct 30 does not match what Neil said.\",\"Mid term endorsements gap is open until the recording is delivered.\",\"No dated next meeting, and no customer step was agreed beyond the order form request.\"],\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"Today the loss ratio report is monthly. Daily would change how we reprice.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Let's say end of month if I can get an exception, otherwise after the November meeting.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"You're right, it wasn't. I'll set that up and send a recording by Tuesday, October 6th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the order form and a recap today.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5667,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5902,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 969,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

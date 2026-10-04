@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "3e166332f601fc6f5c07c0f27060b7fc528959ace13077a2ce29c2432f401b6c",
+ "recorded_at": "2026-10-04T00:33:27.607054+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFr7sGZEsxSxVRjcRdS",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Champion says the demo shows what his analysts need and that features are an hour stale today\",\"strength\":\"moderate\",\"qualifier\":\"Champion only; no decision or commitment followed\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"}]},{\"summary\":\"Champion believes the product is in good shape technically\",\"strength\":\"moderate\",\"qualifier\":\"Opinion of the champion; CFO then added conditions\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"I think we're in good shape technically.\"}]}],\"risk_signals\":[{\"summary\":\"CFO requires three year minimum terms and quarterly in arrears payment only, no annual up front\",\"strength\":\"strong\",\"qualifier\":\"Stated by the CFO; Apex AE said she would check with deal desk\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only.\"}]},{\"summary\":\"CFO will not sign this year without a cost comparison against building in house; engineering lead thinks they can build in six months\",\"strength\":\"strong\",\"qualifier\":\"CFO held her position after the champion pushed back; close date is 2026-12-18\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"nothing gets signed this year without a cost comparison against building it ourselves.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Maybe not. But I need the comparison.\"}]},{\"summary\":\"Open technical question on custom fields in case export, not yet tested\",\"strength\":\"weak\",\"qualifier\":\"SC believes it works but has not verified; depends on the field list\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"I believe so, but I'd want to test it on your case tool.\"}]},{\"summary\":\"Next step is vague; no date set\",\"strength\":\"moderate\",\"qualifier\":\"Only the champion said it, no date or agenda\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"Let's talk next week.\"}]}],\"exact_numbers\":[{\"value\":\"about 3 thousand transactions a second\",\"what_it_measures\":\"Card transaction sample stream rate in the demo\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"about 3 thousand transactions a second, streamed in.\"}]},{\"value\":\"under 5 seconds\",\"what_it_measures\":\"Update time for features like spend velocity per card\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"Features like spend velocity per card update in under 5 seconds.\"}]},{\"value\":\"10 minute outage caught up in about 90 seconds\",\"what_it_measures\":\"Sandbox test of stream backlog catch up\",\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"In the sandbox test a 10 minute outage caught up in about 90 seconds.\"}]},{\"value\":\"three year terms minimum\",\"what_it_measures\":\"Customer policy on platform contract term\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Our policy is three year terms minimum for platforms\"}]},{\"value\":\"six months\",\"what_it_measures\":\"Engineering lead's estimate to build the capability in house\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Our engineering lead thinks they can build this in six months.\"}]}],\"customer_dependencies\":[{\"summary\":\"Zara to send the case tool custom field list so the SC can test custom field export\",\"owner\":\"Zara Ahmed\",\"due\":\"2026-10-03\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"Sure, I'll send it tomorrow.\"}]}],\"contradictions\":[{\"summary\":\"Champion says engineering cannot build this in house; CFO relays the engineering lead's belief they can build it in six months and wants a comparison anyway\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Our engineering lead thinks they can build this in six months.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"They can't.\"}]}],\"corrections\":[],\"checklist_mismatches\":[{\"field\":\"dated_next_step\",\"logged_value\":\"Talk next week\",\"transcript_says\":\"Champion said let's talk next week; no date, time, or agenda was agreed\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"Let's talk next week.\"}]},{\"field\":\"sc_commitment\",\"logged_value\":\"\",\"transcript_says\":\"SC committed to test the custom fields once Zara sends the list; no due date stated\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"I'll test the custom fields once Zara sends the list.\"}]},{\"field\":\"business_outcome\",\"logged_value\":\"Fraud features fresh within seconds, not an hour.\",\"transcript_says\":\"Prefilled from discovery and unedited; in the call Liam only said features are an hour stale today and that this is what analysts need, with no seconds target stated\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"That's what my analysts need. Today features are an hour stale.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2180,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2180,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1734,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

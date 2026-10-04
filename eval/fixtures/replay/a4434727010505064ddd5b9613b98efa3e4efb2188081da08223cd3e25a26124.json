@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a4434727010505064ddd5b9613b98efa3e4efb2188081da08223cd3e25a26124",
+ "recorded_at": "2026-10-04T00:33:06.447288+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFpZZJ69c4whkkBQA73",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "CAQS6BMKEAgSGAI4AUIIdGhpbmtpbmcSDNlfdIinIl2ERU2ZTxoMLCNmNCeAWtDQwSyvIjAch8UW/VFXI+hA6msS8ageKBbwUG2NA56dv2foQf55WLXJIeMv0kP6oGu9Fi89R0sqhRNGLTdCLhl9pExSYwrgWOJFH3CuYPlh5Fpkq0mLgyCoMkSraKi9Mlg6Tgb/PWM9MHqxnuj5fL62bisMuNgnewiEbcpCNrAKy/JwY4JDlmblFcUMkEo7rsiI/vfnF9J3JgK7NJss9gpiWcGZo05zVCA+gq0u8H1BjtEiTzkm8wIaY2eIcG5ByboZw0GbAvdrdYMCxhg2QxY7+G7/93G8kRpHWhJOsoQxPfaHAPbhBr1cCnBB4F+b4WSaOGJWXR6UOi+Zd6H0IlcVVK/ddYmQ8TvPj7+CgR2BcipcTokd6V7J8/4PXRh/4eefhY3Y9fafJ3EvckDVjHSISp1q4lHd+QVTd2DAptTnNd1ndhYxIvSgrDboextJC3DkGEDqaZkv4r1L4Y6RTZwOL/Rrr/3mkdWcQSxHf1njJnHB8bjsjuP/N8Vsz7hkCq8u/cQi7PcFj8l7u42hQf2/Jq/dsLf/3yz7xRWg3uBKIGFvD8RDvECfoqlYFoockCXSMFY1bM67lja2HbTCQkF3ipSXdLSVLPDDRs9NKVIeB9H3A+U4+M0/aYbGnMM7hDuQrFYX4IXD7egmKgUQM3wHjoxmG4ECS3+z9UNk5byZtK9x1cRJ+l1K1IZBPpB34i8pmZgnoD0duw1+dbVu10bHFU6Y6vd2O9RL3xGgsEYM95sEo8u+GuRVyIPjQuOdHZfsPxMS3JwzuoKrgmXv7K9qPQnila5KxYQqPiWP0D4weBDw7vX+0X9A/nFnwvND/+rLV1R2O0PAfXXea8IXIk7nxU1ZV2yX0lUkTM/k4N9VAM2HaMErlFWi4HRJQy3ZyrCQbITZo30Wc4bushT0CzH2SDL4tT0d89ha1xUWk1oRen4LpHYJqoBYmghQedaBidja1bUY0Ivxjc7lFS4pwtqt+3uufEG8xrX+lITZhr3+iEdzZDTARB0gKA/UZ29BOlKu3xeJmgYxI9hbv/hadMIY0/Qn/ID0gVj8D0vxdK5c/gtwyN5n69x9S1yP3wGS2P0zEBdQLt1fIbgIJZpJaD1gH0OMcBgSGhk1p69EayiHU9JbSgAQkDiS1Si0ip+O78qroKcGcMFI/I5coCGvPMxOlMBA3LWBNtmHdbeor8X/5ruKyCKcoYxnkdaPpcMGEqBl2RteY7vk3dXWaRm1w/ELpkhkAm7ZbD3wiKZ77DBMKEpupEs4HyCS+Gr0btCn9Olo0RX5LcYxIG5ovXcsu6yaqeURWrEU2+k1tN3XuMCjI6JEZaU6kWhKrP9rWYZ2+/yyJQhYM1muK4DC/Q3QbmZneqxyNH/6HgLNhqOLAJfNZgXH5jA+fWBHRx2iX2j+yOesHm3N4RwTInnMd1tLUM0oEAx+pE02eR8S/+7MGg0wpwtxSJ9+SoIbE7TqCJTt9H54QIz/fGP185pXeIflw8jWwT7FWxWY6VRHJgHJf28cCDrm4VDo/b5YH0/iMXEl81qvYbCMIUQV+2ZEi2n9uEM0BmBzLjlCw4X+qAD2ZDEL/0+wCf7SiKENIuhOFh6Zjp0OhugWacs5n6CQ6xoUkilTu3CRS3tvzLh3VgFCk7fxyKA/GODSAxBgKUAb0wgmqYEfqq7Epm5wo9UMCKKpRrlL0xgTOUwuLZmEzZMT1GIccOGvoP5y9VLc3DxLWtdgcGWs3VzPNB8pWlO+E5RRDPZJr22cTpVBJEdEONr15rYTwEM+PPy0yc0t2wO/NMWr1H9sbK8sI0azh2O8pFgGCBnYVCkf6llwljlxWG7PMKIIRYpQy2QyqG+/jSYKsna2AEBp0t6W4wqK5c0Ix92b30ViIDCPYUl9AQRDv2ywlBuvMz6JYB6R2Yoful3BwfBzJi9MRID1R7meIdU7YzQRAPxp5uTG+n8qK1ya1/5uCwIxLjMCwRRi0B+hExzprpa3SJZnIykdZ8gv4nXqiKKPjiDXvXXFy1/LWYveXXSVbyrh/rkD2bBhVB3OKAxtrpSjSo4gMhF0OYoyG28jZbxG2iRCGM28LY5oUUEtCzWOZusvMr28IMMSdi4Ny91LnkX+cynAMrTIbnvJ3cMPSeCt2bcaLxuZg6wTZc8OuWIcOVXhgI+d/5k7NFcy+MB9QHsuT34LT88PnuOHz0vFj4lorIfYxZw9VnHFX1OuiSJsTysRMhYo33RqCGqGUwb/9Dl9ktURgf13HmGAbv6jzRJfyHu8O/nOslAl5GPyahOKN2y2XfMzXZdpfUoYdZiGF55a3PMSpGTSd+iFpQmuXwl0AelcZZ9OLniTKlzKjtC81GYlwhXe9dbuWnUDFRVHiBXeIofRjKQBeCey5zZ3OAnqDuuNfYtJk/6SRdH7GI3+nzirSDdkOq3Lv6pPT9e8yF5NK5uhzoa6vjVkpXLfNeHVl19d5zDxr4i5C7SDeeh6nDIsmiGgxqMpkoHpN+jsc1mgpB1bdHWvMPlF5dCoKKjQ7QVWBg1Md9Y/nACynKZcCkehm/C4yUjNmbsVtih6PfXAHYaUpudxY93KiwkQwPp+q8xtmxoYmufoGusc01qk2pCD4Wmb+m0K3WvgxyTb130KUDuriG/RPezccySF84wWzfGd+E4UvSdNlfuY57312j8WWJcqbKK2TjRrf5ZdmA27uQBK0oVsj24lmA/MvF0NXWG6GEartvuRmfOYibQ+f7rVjFQh3jxgzbg/bmee+IjHpWfHx1VAYjDC7wRMFeqerJL4/a4BKKZbkfCn43qqEcG6akpq/Mp6Dktm3EmZU2T/XM3e4FaD9pNzP+y8s+mhz9S47oLiTpkj3jUGWitbFcL1HBYhCDXJ2pvpWfUkjI+yy/WlPlRfBXLb86nF1BTKsnK9CgqQU+IZwCxYNf6jt+EpS3G04LP5kBK+LjQJ9lQ6uNO5upqq6BixdsjcIQ0dOOhaZd9H/F4AdwhIv1QK/1eJRQNCSfHJNHyXgpoLNW8N4m+Jm1uONL74YgNDphqPsTgmItI3P9qD1f2uAU7KXapN6/8eT0Zw3ypOgoaoMQolVIsX+xAGloejoBAtFty9RlOugbkAretQsDqA0VBRDBdkLXops/GVXYZv9oOn0DaQ4LZkhtzXJF5pbZb2IXWSRnqliPXx8J6Ihy4kU6cTQ/dqkdzQYl/uul97eRZdrNWv658MCaMFd7Jp9su4RABXtMxQiojaV4PwBmlwOwN2sI7KQZnK3yhdIto0yV2lBpXs+ldUx8P4UUUYxklqZVL57Ls9yAAOXBLHxFG7B41o+1CfKttV4Ijs4yD5ErR12UlDGAE="
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"internal_summary\",\"target\":\"evidence excerpts U008, U013, U016, U018, U020 and the claims attached to them\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt is word for word from its cited line and supports the claim it is attached to, including the Amira attribution for the monthly versus daily loss ratio line.\",\"utterance_ids\":[\"U008\",\"U013\",\"U016\",\"U018\",\"U020\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"internal_summary\",\"target\":\"commitments: Rosa to send the endorsements recording by Tuesday, October 6th; Victor to send the order form and a recap today\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Both commitments match what Rosa and Victor said in the call, with the same owners and dates, and nothing firmer or broader is added.\",\"utterance_ids\":[\"U018\",\"U020\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"internal_summary\",\"target\":\"deal_state_line: Low information: signature depends on a board technology committee approval or exception that Neil is unsure he can get\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary does not treat Neil's early 'we'll sign by end of month' as a decision, and it correctly reflects his later conditional answer about the board and the November meeting.\",\"utterance_ids\":[\"U002\",\"U014\",\"U016\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"internal_summary\",\"target\":\"what_we_validated: claims dashboard showing loss ratio by line and by region, refreshed daily\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Rosa stated the daily refresh for the claims dashboard, no later line corrects it, and no release card covers or supersedes it.\",\"utterance_ids\":[\"U007\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1593,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5821,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1361,
+   "output_tokens_details": {
+    "thinking_tokens": 759
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

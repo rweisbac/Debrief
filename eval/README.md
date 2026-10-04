@@ -46,9 +46,29 @@ One `messages.create` call per transcript with the same model, the raw transcrip
 
 See the docstring in `score.py`. In short: (a) share of claims a blind judge marks supported, plus Debrief's deterministic evidence resolution; (b) gold risk recall by keyword; (c) overstated or fabricated commitments by the judge, plus gold hedged statements written as firm; (d) gold uncertain items that appear next to a hedge word.
 
-## Status
+## Status and verdict
 
-The first attempt on 2026-10-04 could not run: every API call returned 400 "Your credit balance is too low". See `results.md` for the current state.
+Run on 2026-10-04 after an earlier attempt failed on API credit. All 15 cases ran for both systems with no errors. Total spend about $7.00: Debrief $4.80, baseline $0.58, judge $1.62. Numbers come from `results.md`; the hand classification comes from `hand_review.md`.
+
+| Metric | Result | Verdict |
+|---|---|---|
+| (a) Claims the judge marks supported | 414 of 443 (93%) vs 529 of 567 (93%) | Tie |
+| (a) Claims a rep can check against a cited line | 949 of 949 Debrief citations resolve; the baseline cites nothing | Debrief wins on checkability, not on accuracy |
+| (b) Gold risk recall | 29 of 29 vs 29 of 29 | Tie. The keyword metric saturated and cannot tell the systems apart |
+| (c) Overstated commitments, judge count | 23 vs 17 | Debrief loses on the raw count |
+| (c) Same flags, hand classified as real | 6 vs 16 | Debrief better, post hoc and 1 reviewer. 16 of Debrief's 23 are recommendations with due dates |
+| (c) Hedged statements written as firm, keyword | 2 of 16 vs 1 of 16 | Debrief slightly worse |
+| (c) Uncommitted promises in the customer email | Debrief's recaps also contained them: 4 recaps, all blocked before approval. The baseline's emails held 9, with no gate | Debrief wins on what can be sent, hand review. Both systems write this error; only Debrief stops it |
+| (d) Uncertain items flagged | 23 of 23 vs 22 of 23 | Tie |
+| Cost per case | $0.320 vs $0.039 | Debrief costs about 8x |
+| Wall clock per case, median | about 109 s vs 26 s, run 4 at a time | Debrief about 4x slower |
+| Words a rep reads | 13,576 vs 16,677 | Debrief about 19% shorter |
+
+Debrief failures found:
+- The low-information rule overrode the deal state on 6 of 15 cases; only 1 was a low-information call by design.
+- 6 of 14 blocked drafts were pure false alarms from the number and name checks ("one", "two", "Budget:", "Deferral:").
+
+What this eval cannot show: anything about real calls, variance across runs, or whether the judge agrees with people.
 
 ## Rules followed
 

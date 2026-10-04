@@ -1,0 +1,1844 @@
+{
+ "debrief_id": "e12-132fed04",
+ "deal_id": "e12",
+ "as_of": "2026-10-01",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Amira Saleh said the loss ratio report is monthly today and that daily would change how they reprice.",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No dated next meeting or action was agreed by the customer. Neil asked for the order form, but no date was set for it; the only dated item is Rosa's recording, which is an Apex commitment, not an agreed customer step.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U019",
+     "excerpt": "Fine. Send the order form anyway."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Signing by end of month is not certain: purchases over 300 thousand went through the board's technology committee last year, the board meets in November, and Neil is unsure he can get approval before then.",
+    "raised_by": "Amira Saleh",
+    "status": "open",
+    "answer_given": "None from Apex; Victor only asked whether the timeline depends on the board. Neil said end of month only if he can get an exception, otherwise after the November meeting.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I think I can get it approved before that, but I'm not certain."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Show how the model handles mid term endorsements, which was not covered in the demo.",
+    "owner": "Rosa Medina",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "I also need to see how the model handles our mid term endorsements. That wasn't in the demo."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "You're right, it wasn't. I'll set that up and send a recording by Tuesday, October 6th."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Rosa Medina",
+    "side": "apex",
+    "what": "Set up a demo of mid term endorsements handling and send a recording to Amira.",
+    "by_when": "2026-10-06",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     }
+    ]
+   },
+   {
+    "who": "Victor Hayes",
+    "side": "apex",
+    "what": "Send the order form and a recap today.",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the order form and a recap today."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Neil Patterson",
+    "title": "Chief Data Officer",
+    "present": true,
+    "why_they_matter": "Champion; says he will sign by end of month but needs board approval or an exception.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "I'll be honest, I've mostly made up my mind. We'll sign by end of month."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     }
+    ]
+   },
+   {
+    "name": "Amira Saleh",
+    "title": "Analytics Manager",
+    "present": true,
+    "why_they_matter": "Technical evaluator; raised the board approval requirement and the endorsements gap.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "I also need to see how the model handles our mid term endorsements. That wasn't in the demo."
+     }
+    ]
+   },
+   {
+    "name": "Board technology committee",
+    "title": "Board committee",
+    "present": false,
+    "why_they_matter": "Approval needed for purchases over 300 thousand; meets in November.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "It depends on the board. They meet in November."
+     }
+    ]
+   },
+   {
+    "name": "Actuaries",
+    "title": "Actuaries",
+    "present": false,
+    "why_they_matter": "Will want to compare the new model to the current model.",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "Our actuaries will want to compare it to the current model."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Neil Patterson, the Chief Data Officer, says he has mostly decided and will sign by end of month, and asks for the order form.",
+    "strength": "moderate",
+    "qualifier": "Stated before the demo and walked back once the board technology committee was raised; he later said end of month depends on getting an exception. Enthusiasm is not a decision.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "I've mostly made up my mind. We'll sign by end of month."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "Paper. Send me the order form."
+     }
+    ]
+   },
+   {
+    "summary": "Amira Saleh ties the daily loss ratio to repricing, which matches the stated business outcome and shows a real use for the claims dashboard.",
+    "strength": "moderate",
+    "qualifier": "Said by the analytics manager, not the buyer. Does not commit to purchase.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+     }
+    ]
+   },
+   {
+    "summary": "Neil Patterson values the governance and change logging because the regulator asks about it.",
+    "strength": "weak",
+    "qualifier": "Brief positive reaction with no commitment attached.",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Good. That's what the regulator asks about."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "The deal may need approval from the board's technology committee, which meets in November. That puts end-of-month signature at risk.",
+    "strength": "strong",
+    "qualifier": "Neil Patterson is not certain he can get an exception before the meeting. The CRM close date is 2026-12-18.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I think I can get it approved before that, but I'm not certain."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     }
+    ]
+   },
+   {
+    "summary": "An open technical item remains: mid term endorsements were not shown in the demo, and Amira Saleh needs to see them.",
+    "strength": "moderate",
+    "qualifier": "Rosa Medina committed to send a recording by Tuesday, October 6th.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "I also need to see how the model handles our mid term endorsements. That wasn't in the demo."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     }
+    ]
+   },
+   {
+    "summary": "No dated next meeting was agreed, and the only follow-ups named are the order form and recap today and the endorsement recording by October 6th.",
+    "strength": "weak",
+    "qualifier": "Transcript shows no meeting date and no discussion of the board path beyond Neil's comments.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the order form and a recap today."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "300 thousand",
+    "what_it_measures": "Spend threshold above which purchases went through the board's technology committee last year, per Amira Saleh.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Anything over 300 thousand did last year."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Board technology committee approval, or an exception from it, is needed before signing. The board meets in November.",
+    "owner": "Neil Patterson",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "It depends on the board. They meet in November."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "end of month if I can get an exception, otherwise after the November meeting."
+     }
+    ]
+   }
+  ],
+  "contradictions": [
+   {
+    "summary": "Neil Patterson says signing by end of month, while Amira Saleh says the deal needs board technology committee approval. Neil then concedes the timeline depends on the board.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We'll sign by end of month."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "doesn't this need to go through the board's technology committee?"
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Probably."
+     }
+    ]
+   }
+  ],
+  "corrections": [
+   {
+    "original_statement": "Neil Patterson said they would sign by end of month.",
+    "corrected_statement": "Neil said end of month only if he can get an exception to the board process; otherwise signing is after the November meeting.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We'll sign by end of month."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     }
+    ]
+   }
+  ],
+  "checklist_mismatches": [
+   {
+    "field": "dated_next_step",
+    "logged_value": "Signature by Oct 30",
+    "transcript_says": "Signature by end of month is conditional on a board exception; otherwise it is after the November board meeting. The only dated item is Rosa's recording by October 6th.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     }
+    ]
+   },
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "The board's technology committee was named as a required approval step, but no stakeholder was recorded.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "doesn't this need to go through the board's technology committee?"
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Rosa Medina committed to set up the mid term endorsements demo and send a recording by Tuesday, October 6th.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     }
+    ]
+   },
+   {
+    "field": "business_outcome",
+    "logged_value": "Daily loss ratio to change how we reprice.",
+    "transcript_says": "Amira Saleh, not Neil, said daily loss ratio would change how they reprice. The outcome was prefilled from discovery and is supported by the call, though it was not stated by the buyer.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Daily would change how we reprice."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Amira Saleh said the loss ratio report is monthly today and that daily would change how they reprice. Numbers said: 300 thousand",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "known",
+   "summary": "Neil Patterson, Champion; says he will sign by end of month but needs board approval or an exception.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "I'll be honest, I've mostly made up my mind. We'll sign by end of month."
+    },
+    {
+     "utterance_id": "U016",
+     "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "partial",
+   "summary": "Board technology committee approval, or an exception from it, is needed before signing. The board meets in November.",
+   "evidence": [
+    {
+     "utterance_id": "U014",
+     "excerpt": "It depends on the board. They meet in November."
+    },
+    {
+     "utterance_id": "U016",
+     "excerpt": "end of month if I can get an exception, otherwise after the November meeting."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Amira Saleh said the loss ratio report is monthly today and that daily would change how they reprice.",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Neil Patterson, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "I'll be honest, I've mostly made up my mind. We'll sign by end of month."
+    },
+    {
+     "utterance_id": "U016",
+     "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "waiting_on_customer",
+  "deal_state_why": "Signing hinges on a board technology committee approval or exception, which Neil is unsure of. The board meets in November; no date is known.",
+  "next_steps": [
+   {
+    "action": "In the recap, offer Neil a one-page board technology committee approval pack tied to daily loss ratio and repricing, and ask what the committee needs and by when.",
+    "owner": "Victor Hayes",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "support_customer_process",
+    "why": "Neil wants paper, but the real gate is the board. An AE may send only the order form and miss helping Neil's approval.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     }
+    ]
+   },
+   {
+    "action": "Ask Neil which date he is working to, end of month or after the November board meeting, and fix the CRM close and Oct 30 signature step.",
+    "owner": "Victor Hayes",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "CRM says signature by Oct 30, but Neil made it conditional. Amira raised the board requirement, so the AE may miss the conflict.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We'll sign by end of month."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "It depends on the board. They meet in November."
+     }
+    ]
+   },
+   {
+    "action": "Log the mid term endorsements demo and recording for Amira as an Apex commitment due Tuesday, October 6th, and confirm the recording is sent by then.",
+    "owner": "Rosa Medina",
+    "due_by": "2026-10-06",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "",
+    "action_type": "route_to_sc",
+    "why": "Rosa said it in passing and the CRM sc_commitment is empty. It is the one open technical item that could stall approval.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Neil's end of month signing depends on an exception he is not certain of; after the November board meeting is the fallback. The CRM close date is 2026-12-18.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "I think I can get it approved before that, but I'm not certain."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "low_information",
+    "deal_state_why": "Signature depends on a board technology committee approval or exception Neil is unsure he can get; the board meets in November and no date is set.",
+    "next_steps": [
+     {
+      "action": "Ask Neil what the board technology committee needs, and offer a short summary for the committee tied to daily loss ratio and repricing.",
+      "owner": "Victor Hayes",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Neil's end of month signature is conditional on the board, so the recap and order form alone don't help him get approval.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+       }
+      ]
+     },
+     {
+      "action": "Log Rosa's mid term endorsements commitment with the October 6th date and confirm to Amira when the recording is sent.",
+      "owner": "Rosa Medina",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "route_to_sc",
+      "why": "The commitment was made in passing and the CRM sc_commitment field is empty, so it could slip.",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "CRM shows signature by Oct 30, but Neil said that depends on a board exception; otherwise it is after the November meeting.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "low_information",
+    "deal_state_why": "Signing hinges on a board technology committee approval or exception, which Neil is unsure of. The board meets in November; no date is known.",
+    "next_steps": [
+     {
+      "action": "In the recap, offer Neil a one-page board technology committee approval pack tied to daily loss ratio and repricing, and ask what the committee needs and by when.",
+      "owner": "Victor Hayes",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Neil wants paper, but the real gate is the board. An AE may send only the order form and miss helping Neil's approval.",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+       },
+       {
+        "utterance_id": "U016",
+        "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+       }
+      ]
+     },
+     {
+      "action": "Ask Neil which date he is working to, end of month or after the November board meeting, and fix the CRM close and Oct 30 signature step.",
+      "owner": "Victor Hayes",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "CRM says signature by Oct 30, but Neil made it conditional. Amira raised the board requirement, so the AE may miss the conflict.",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "We'll sign by end of month."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "It depends on the board. They meet in November."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Neil's end of month signing depends on an exception he is not certain of; after the November board meeting is the fallback. The CRM close date is 2026-12-18.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "I think I can get it approved before that, but I'm not certain."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap from today's Apex demo and next steps",
+    "body": "Hi Neil and Amira,\n\nThanks for your time today. We covered the policy pricing model on your policy extract, the claims dashboard and the governance setup.\n\nWhat we showed: rating factors are versioned, the new and current models can run side by side for any date range, loss ratio is shown by line and by region, and only the pricing committee role can change rating factors, with every change logged.\n\nOpen item: Amira, mid term endorsements were not in the demo. Rosa will set that up and send you a recording by Tuesday, October 6th.\n\nNeil, I'm sending the order form with this note. You mentioned the board's technology committee may need to review it and that the board meets in November. If it would help, I can put together a short summary for that review. What does the committee need, and by when?\n\nVictor",
+    "customer_value_line": "Amira said the loss ratio report is monthly today and that daily would change how you reprice, which is what the claims dashboard is meant to support.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "Rating factors are versioned, so you can see which factors were used for any quote."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "You can run both side by side for any date range."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Rating factors can only be changed by the pricing committee role, and every change is logged."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the order form and a recap today."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "It depends on the board. They meet in November."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap from today's Apex demo and next steps",
+    "body": "Hi Neil and Amira,\n\nThanks for your time today. We covered the policy pricing model on your policy extract, the claims dashboard and the governance setup.\n\nWhat we showed: rating factors are versioned, the new and current models can run side by side for any date range, loss ratio is shown by line and by region, and only the pricing committee role can change rating factors, with every change logged.\n\nOpen item: Amira, mid term endorsements were not in the demo. Rosa will set that up and send you a recording by Tuesday, October 6th.\n\nNeil, I'm sending the order form with this note. You mentioned the board's technology committee may need to review it and that the board meets in November. If it would help, I can put together a short summary for that review. What does the committee need, and by when?\n\nVictor",
+    "customer_value_line": "Amira said the loss ratio report is monthly today and that daily would change how you reprice, which is what the claims dashboard is meant to support.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "Rating factors are versioned, so you can see which factors were used for any quote."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "You can run both side by side for any date range."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Rating factors can only be changed by the pricing committee role, and every change is logged."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the order form and a recap today."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "It depends on the board. They meet in November."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Low information: signature depends on a board technology committee approval or exception that Neil is unsure he can get, and the board meets in November.",
+    "customer_value_line": "Amira Saleh said the loss ratio report is monthly today and that daily would change how they reprice.",
+    "what_we_validated": [
+     "Policy pricing model shown on the customer's policy extract, with versioned rating factors, and side by side runs with the current model for any date range.",
+     "Claims dashboard showing loss ratio by line and by region, refreshed daily.",
+     "Governance: rating factors changeable only by the pricing committee role, with every change logged; Neil said this is what the regulator asks about."
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [
+     "Board approval: Amira said purchases over 300 thousand went through the board's technology committee last year. Neil said end of month only if he can get an exception, otherwise after the November meeting. No Apex answer given. Status: open."
+    ],
+    "open_items": [
+     "Mid term endorsements were not shown in the demo; Amira needs to see how the model handles them. Owner: Rosa Medina.",
+     "Board technology committee path: what it needs and whether an exception is possible is not stated. Owner: not stated.",
+     "No dated next meeting was agreed."
+    ],
+    "commitments": [
+     "Rosa Medina: set up the mid term endorsements demo and send a recording by Tuesday, October 6th.",
+     "Victor Hayes: send the order form and a recap today."
+    ],
+    "stakeholders": [
+     "Neil Patterson, Chief Data Officer, champion, present; said he would sign by end of month, then made it conditional on the board.",
+     "Amira Saleh, Analytics Manager, technical evaluator, present; raised the board requirement and the endorsements gap.",
+     "Board technology committee, absent; approval needed for purchases over 300 thousand, meets in November.",
+     "Actuaries, absent; will want to compare the model to the current one."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "End of month signature is conditional on a board exception; otherwise it is after the November meeting. The CRM next step of signature by Oct 30 does not match what Neil said.",
+     "Mid term endorsements gap is open until the recording is delivered.",
+     "No dated next meeting, and no customer step was agreed beyond the order form request."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "You're right, it wasn't. I'll set that up and send a recording by Tuesday, October 6th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the order form and a recap today."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Low information: signature by end of month is conditional on a board technology committee exception Neil is not certain of; otherwise after the November board meeting.",
+    "customer_value_line": "Amira said the loss ratio report is monthly today and daily would change how they reprice (U008).",
+    "what_we_validated": [
+     "Policy pricing model shown on the customer's policy extract, with versioned rating factors (U004)",
+     "Side-by-side run of two models for any date range, in response to the actuaries' comparison need (U006)",
+     "Claims dashboard with loss ratio by line and by region, refreshed daily (U007)",
+     "Governance: rating factors changeable only by the pricing committee role, every change logged; Neil said this is what the regulator asks about (U009, U010)"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [
+     "Board technology committee approval: Amira said purchases over 300 thousand went through it last year. No Apex answer given. Neil said end of month only with an exception, otherwise after the November meeting. Status: open (U013, U014, U016)"
+    ],
+    "open_items": [
+     "Mid term endorsements not shown in the demo; Amira needs to see them. Owner: Rosa Medina (U017, U018)",
+     "Board committee requirements and date not known; no one has asked what the committee needs. Owner: not assigned",
+     "CRM says Signature by Oct 30 but Neil made it conditional; CRM close date is 2026-12-18. Needs reconciling with Neil",
+     "No dated next meeting agreed with the customer"
+    ],
+    "commitments": [
+     "Rosa Medina: set up mid term endorsements demo and send a recording by Tuesday, October 6th (U018)",
+     "Victor Hayes: send the order form and a recap today, 2026-10-01 (U020)"
+    ],
+    "stakeholders": [
+     "Neil Patterson, Chief Data Officer, champion and listed as economic buyer in CRM, present; signing depends on the board",
+     "Amira Saleh, Analytics Manager, technical evaluator, present; raised the board requirement and the endorsements gap",
+     "Board technology committee, absent; approval needed for purchases over 300 thousand, meets in November",
+     "Actuaries, absent; will want to compare the new model to the current model (U005)"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "End-of-month signature depends on a board exception Neil is unsure he can get (U014, U016)",
+     "Order form requested before the board path is understood; CRM Oct 30 signature step may be wrong",
+     "Mid term endorsements gap open until the recording is sent",
+     "No dated next meeting agreed"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "I've mostly made up my mind. We'll sign by end of month."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Today the loss ratio report is monthly. Daily would change how we reprice."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I think I can get it approved before that, but I'm not certain."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the order form and a recap today."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)",
+    "[dates_future_business_days] bad dates: Oct 30 (not a date said in the call): Oct 30 (not a date said in the call)"
+   ],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM); two (not in transcript or CRM): one (not in transcript or CRM), two (not in transcript or CRM)",
+    "[dates_future_business_days] bad dates: 2026-12-18 (not a date said in the call), Oct 30 (not a date said in the call), Oct 30 (not a date said in the call): 2026-12-18 (not a date said in the call), Oct 30 (not a date said in the call), Oct 30 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Amira Saleh said: \"Today the loss ratio report is monthly. Daily would change how we reprice.\"",
+    "rows": [
+     {
+      "milestone": "Apex sets up a demo of mid term endorsements handling and sends Amira the recording",
+      "customer_owner": "Amira Saleh",
+      "apex_owner": "Rosa Medina",
+      "target_date": "2026-10-06",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U017",
+        "excerpt": "I also need to see how the model handles our mid term endorsements. That wasn't in the demo."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "Thanks."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends the order form and a recap",
+      "customer_owner": "Neil Patterson",
+      "apex_owner": "Victor Hayes",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "Fine. Send the order form anyway."
+       },
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll send the order form and a recap today."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm with Neil whether the board technology committee needs to approve this purchase, what it needs, and whether an exception is possible before the November meeting",
+      "customer_owner": "Neil Patterson",
+      "apex_owner": "Victor Hayes",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I think I can get it approved before that, but I'm not certain."
+       }
+      ]
+     },
+     {
+      "milestone": "Board technology committee approval, or an exception, before signing",
+      "customer_owner": "Neil Patterson",
+      "apex_owner": "Victor Hayes",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+       }
+      ]
+     },
+     {
+      "milestone": "Actuaries compare the pricing model to the current model, running both side by side",
+      "customer_owner": "Amira Saleh",
+      "apex_owner": "Rosa Medina",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U005",
+        "excerpt": "Our actuaries will want to compare it to the current model."
+       },
+       {
+        "utterance_id": "U006",
+        "excerpt": "You can run both side by side for any date range."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Amira Saleh said: \"Today the loss ratio report is monthly. Daily would change how we reprice.\"",
+    "rows": [
+     {
+      "milestone": "Apex sets up a demo of mid term endorsements handling and sends Amira the recording",
+      "customer_owner": "Amira Saleh",
+      "apex_owner": "Rosa Medina",
+      "target_date": "2026-10-06",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U017",
+        "excerpt": "I also need to see how the model handles our mid term endorsements. That wasn't in the demo."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set that up and send a recording by Tuesday, October 6th."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "Thanks."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends the order form and a recap",
+      "customer_owner": "Neil Patterson",
+      "apex_owner": "Victor Hayes",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "Fine. Send the order form anyway."
+       },
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll send the order form and a recap today."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm with Neil whether the board technology committee needs to approve this purchase, what it needs, and whether an exception is possible before the November meeting",
+      "customer_owner": "Neil Patterson",
+      "apex_owner": "Victor Hayes",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I think I can get it approved before that, but I'm not certain."
+       }
+      ]
+     },
+     {
+      "milestone": "Board technology committee approval, or an exception, before signing",
+      "customer_owner": "Neil Patterson",
+      "apex_owner": "Victor Hayes",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Let's say end of month if I can get an exception, otherwise after the November meeting."
+       }
+      ]
+     },
+     {
+      "milestone": "Actuaries compare the pricing model to the current model, running both side by side",
+      "customer_owner": "Amira Saleh",
+      "apex_owner": "Rosa Medina",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U005",
+        "excerpt": "Our actuaries will want to compare it to the current model."
+       },
+       {
+        "utterance_id": "U006",
+        "excerpt": "You can run both side by side for any date range."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "waiting_on_customer",
+   "after": "low_information",
+   "reason": "only 7 substantive customer utterances"
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "next_steps",
+   "before": "3",
+   "after": "2",
+   "reason": "low information call, cut: Log the mid term endorsements demo and recording for Amira as an Apex commitment due Tuesday, October 6th, and confirm the recording is sent by then."
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "waiting_on_customer",
+   "after": "low_information",
+   "reason": "only 7 substantive customer utterances"
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM); two (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)",
+    "two (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-12-18 (not a date said in the call), Oct 30 (not a date said in the call), Oct 30 (not a date said in the call)",
+   "locations": [
+    "2026-12-18 (not a date said in the call)",
+    "Oct 30 (not a date said in the call)",
+    "Oct 30 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: Oct 30 (not a date said in the call)",
+   "locations": [
+    "Oct 30 (not a date said in the call)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Offer Neil a one-page board technology committee approval pack ... ask what the committee needs and by when",
+   "passed": true,
+   "severity": "low",
+   "finding": "U013 and U016 support the board gate and the conditional end-of-month timing, and the PB-09 offer-help framing fits.",
+   "utterance_ids": [
+    "U013",
+    "U016"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: low_information; signing hinges on board approval or exception",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment correctly treats Neil's 'we'll sign by end of month' as conditional, given U014 and U016, and does not call the deal committed.",
+   "utterance_ids": [
+    "U002",
+    "U014",
+    "U016"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Neil which date he is working to ... fix the CRM close and Oct 30 signature step",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is specific to the conflict between the CRM Oct 30 signature and Neil's board-dependent timing.",
+   "utterance_ids": [
+    "U002",
+    "U014",
+    "U016"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "If it would help, I can put together a short summary for that review.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is a conditional offer, not a commitment. The dated promises (order form and recap today, recording by October 6th) match U018 and U020.",
+   "utterance_ids": [
+    "U018",
+    "U020"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "What we showed: ... side by side for any date range ... only the pricing committee role can change rating factors",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each demo claim matches Rosa's statements in U004, U006, U007 and U009.",
+   "utterance_ids": [
+    "U004",
+    "U006",
+    "U007",
+    "U009"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments: Rosa recording by Tuesday, October 6th; Victor order form and recap today",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both commitments, with owners and dates, match U018 and U020 without being broadened.",
+   "utterance_ids": [
+    "U018",
+    "U020"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line: Low information: signature by end of month is conditional on a board exception",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary reflects Neil's hedging in U014 and U016 rather than treating U002 as a decision.",
+   "utterance_ids": [
+    "U002",
+    "U014",
+    "U016"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Claims dashboard with loss ratio by line and by region, refreshed daily",
+   "passed": true,
+   "severity": "low",
+   "finding": "Daily refresh is stated as shown in U007, and no release card or later line supersedes it.",
+   "utterance_ids": [
+    "U007"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Apex sets up a demo of mid term endorsements ... status: agreed, 2026-10-06",
+   "passed": true,
+   "severity": "low",
+   "finding": "Rosa explicitly committed to this with the date in U018, so 'agreed' is fair.",
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Board approval and actuary comparison rows, status proposed, no dates",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both rows are marked proposed with no invented dates, which matches the absence of any commitment in the call.",
+   "utterance_ids": [
+    "U005",
+    "U006",
+    "U016"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Neil what the board technology committee needs... (cites U016)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U016 states signature is conditional on an exception or the November meeting, supporting the claim that the end-of-month signature depends on the board.",
+   "utterance_ids": [
+    "U016"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Log Rosa's mid term endorsements commitment with the October 6th date (cites U018)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U018 contains Rosa's exact commitment and date, matching the step.",
+   "utterance_ids": [
+    "U018",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Watch item: CRM shows signature by Oct 30, but Neil said that depends on a board exception",
+   "passed": true,
+   "severity": "low",
+   "finding": "U016 supports the discrepancy between the CRM date and Neil's conditional timeline.",
+   "utterance_ids": [
+    "U016",
+    "U014"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Log Rosa's commitment: 'send a recording by Tuesday, October 6th'; confirm to Amira when sent",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step restates Rosa's commitment as spoken, with the same date and no added scope.",
+   "utterance_ids": [
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: low_information; 'Signature depends on a board technology committee approval or exception Neil is unsure he can get'",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment does not treat Neil's 'mostly made up my mind' as a decision, and correctly reflects his uncertainty about the board (U014, U016).",
+   "utterance_ids": [
+    "U002",
+    "U014",
+    "U016"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Neil what the board technology committee needs, and offer a short summary tied to daily loss ratio and repricing",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is specific to the board technology committee threshold raised by Amira and ties to the stated outcome, supporting a customer-owned process per PB-09.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U008"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "evidence excerpts U008, U013, U016, U018, U020 and the claims attached to them",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is word for word from its cited line and supports the claim it is attached to, including the Amira attribution for the monthly versus daily loss ratio line.",
+   "utterance_ids": [
+    "U008",
+    "U013",
+    "U016",
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments: Rosa to send the endorsements recording by Tuesday, October 6th; Victor to send the order form and a recap today",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both commitments match what Rosa and Victor said in the call, with the same owners and dates, and nothing firmer or broader is added.",
+   "utterance_ids": [
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line: Low information: signature depends on a board technology committee approval or exception that Neil is unsure he can get",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary does not treat Neil's early 'we'll sign by end of month' as a decision, and it correctly reflects his later conditional answer about the board and the November meeting.",
+   "utterance_ids": [
+    "U002",
+    "U014",
+    "U016"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "what_we_validated: claims dashboard showing loss ratio by line and by region, refreshed daily",
+   "passed": true,
+   "severity": "low",
+   "finding": "Rosa stated the daily refresh for the claims dashboard, no later line corrects it, and no release card covers or supersedes it.",
+   "utterance_ids": [
+    "U007"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022283,
+   "latency_ms": 9388,
+   "input_tokens": 532,
+   "output_tokens": 1489,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "5d0799b9b7ee59da59f712f6f8da0a8e66fe44062c400a667d3c0bcb687097a0"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028666,
+   "latency_ms": 12997,
+   "input_tokens": 398,
+   "output_tokens": 2152,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "8331081ee4b2bc509a11bc4c5fa5ddae7baa6427bf2b67b448958b8143926bd9"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.026047,
+   "latency_ms": 6785,
+   "input_tokens": 5478,
+   "output_tokens": 899,
+   "cache_read_input_tokens": 4292,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "60c552821f8883a5a8b83319b998ba6e050e79c908c43e9ecb01e3d03410bee2"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023481,
+   "latency_ms": 5197,
+   "input_tokens": 5704,
+   "output_tokens": 616,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "5baf37a4f917aec8a4730a4786983626f7e3909b213273c5a8eab9ad374f599e"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025732,
+   "latency_ms": 5911,
+   "input_tokens": 5567,
+   "output_tokens": 862,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "155866ee2bd3a196f721cf4aebd43ac9f8bdada588969ed68b5afaa00e3706a7"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028501,
+   "latency_ms": 8470,
+   "input_tokens": 5579,
+   "output_tokens": 1134,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "6dc30da6d81b96fa3d9832ac575914c806970e2c5b5c3f0775ae6bce7aa88483"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.043007,
+   "latency_ms": 19956,
+   "input_tokens": 4445,
+   "output_tokens": 2813,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2097,
+   "validator_errors": [],
+   "keys": [
+    "b1d02def9ddc674267f115ecab03c59d4a54f2408ceb1169b5ce89a265a01128"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.046598,
+   "latency_ms": 17189,
+   "input_tokens": 11166,
+   "output_tokens": 2171,
+   "cache_read_input_tokens": 12778,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [
+    "deal_state_why has 26 words, max 25"
+   ],
+   "keys": [
+    "bf6f78d268b0a8ce236cb104fdf00e2b1581f2b06b46b990084a53724a76b4bb",
+    "5405da6504c0ea817dd686ce26ade9fb38d70734c7044ac0dc93e702116a2251"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.011398,
+   "latency_ms": 6053,
+   "input_tokens": 1177,
+   "output_tokens": 788,
+   "cache_read_input_tokens": 5821,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "0c4d6180a27dc69a27af3bdeb17b031e2041ea36453bfe3a8cd87546af2de1b4"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022204,
+   "latency_ms": 7057,
+   "input_tokens": 5667,
+   "output_tokens": 969,
+   "cache_read_input_tokens": 5902,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "06c727206da3b5c1da2871cd276dbb6371178a2822e7069cff61f4984c0d0fdb"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.01796,
+   "latency_ms": 10512,
+   "input_tokens": 1593,
+   "output_tokens": 1361,
+   "cache_read_input_tokens": 5821,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "a4434727010505064ddd5b9613b98efa3e4efb2188081da08223cd3e25a26124"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.295877,
+ "latency_ms": 109515,
+ "wall_clock_s": 98.5,
+ "status": "ran"
+}

@@ -1,0 +1,1928 @@
+{
+ "debrief_id": "e11-060ee976",
+ "deal_id": "e11",
+ "as_of": "2026-09-30",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No dated next step agreed. Paula proposed time with Dr. Abernathy and Elise deferred it with 'Eventually, sure'.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "Eventually, sure. She's very busy this term."
+    },
+    {
+     "utterance_id": "U019",
+     "excerpt": "We'll figure it out."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Deferral on involving the provost: Elise put off a meeting with Dr. Abernathy, citing her busy term, and gave no date.",
+    "raised_by": "Dr. Elise Martin",
+    "status": "open",
+    "answer_given": "",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Eventually, sure. She's very busy this term."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Privacy officer will want to see the student data access controls (advisors see own students, deans see their college). The privacy officer has not been identified or engaged.",
+    "owner": "Dr. Elise Martin",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     }
+    ]
+   },
+   {
+    "summary": "Date of the technology committee meeting is unknown; Elise and Kevin do not know when it meets.",
+    "owner": "Dr. Elise Martin",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "I'm honestly not sure. Kevin, do you know?"
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Sam Okoro",
+    "side": "apex",
+    "what": "Send the retention dashboard screenshots so the customer can share them.",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+     }
+    ]
+   },
+   {
+    "who": "Dr. Elise Martin",
+    "side": "customer",
+    "what": "Figure out when the technology committee meets (said in passing, no date given).",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "We'll figure it out."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Dr. Elise Martin",
+    "title": "Director of Institutional Research",
+    "present": true,
+    "why_they_matter": "Champion; enthusiastic but no decision authority stated",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "Oh, I'll absolutely champion this. I'm going to tell everyone about it."
+     }
+    ]
+   },
+   {
+    "name": "Kevin Tran",
+    "title": "Data Analyst",
+    "present": true,
+    "why_they_matter": "Technical evaluator; asked about first generation filter",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "Can we filter by first generation students?"
+     }
+    ]
+   },
+   {
+    "name": "Dr. Abernathy",
+    "title": "Provost",
+    "present": false,
+    "why_they_matter": "Owns the budget and must approve the purchase",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+     }
+    ]
+   },
+   {
+    "name": "Technology committee",
+    "title": "Committee",
+    "present": false,
+    "why_they_matter": "Part of the decision process; meets once a semester, date unknown",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     }
+    ]
+   },
+   {
+    "name": "Privacy officer",
+    "title": "Privacy officer",
+    "present": false,
+    "why_they_matter": "Will want to review the access controls",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion expresses strong enthusiasm for the retention dashboard and says she will champion it internally",
+    "strength": "moderate",
+    "qualifier": "Enthusiasm only; no next meeting, no date, and she was vague about involving the provost ('Eventually, sure')",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "This is exactly what I've wanted for years."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Oh, I'll absolutely champion this. I'm going to tell everyone about it."
+     }
+    ]
+   },
+   {
+    "summary": "Analyst confirms the first generation filter is the cut the provost always asks for, tying the demo to the decision maker's interest",
+    "strength": "moderate",
+    "qualifier": "Said by the technical evaluator; no follow-up commitment",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "Great. That's the cut the provost always asks for."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Economic buyer (provost) is not engaged and the champion defers any meeting with her",
+    "strength": "strong",
+    "qualifier": "Champion said 'Eventually' and cited the provost being busy this term; close date is 2026-12-18",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Eventually, sure. She's very busy this term."
+     }
+    ]
+   },
+   {
+    "summary": "Technology committee meeting date is unknown to both customer contacts and it meets about once a semester, which could miss the close date",
+    "strength": "strong",
+    "qualifier": "Kevin's recollection is uncertain ('I think'); champion said 'We'll figure it out' without an owner or date",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "We'll figure it out."
+     }
+    ]
+   },
+   {
+    "summary": "Privacy officer is a likely additional stakeholder who has not been engaged",
+    "strength": "moderate",
+    "qualifier": "Mentioned in passing; no plan to involve them",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     }
+    ]
+   },
+   {
+    "summary": "No dated next step was agreed and no business outcome was stated in the call",
+    "strength": "strong",
+    "qualifier": "The call ended with only screenshots promised",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "We'll figure it out. Anyway, I'm thrilled. Thank you."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [],
+  "customer_dependencies": [
+   {
+    "summary": "Provost approval of the purchase",
+    "owner": "Dr. Abernathy (provost)",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+     }
+    ]
+   },
+   {
+    "summary": "Technology committee review; meeting date unknown",
+    "owner": "Technology committee",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "And there's a technology committee."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     }
+    ]
+   },
+   {
+    "summary": "Privacy officer review of the student data access controls",
+    "owner": "Privacy officer",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "Provost Dr. Abernathy (approver, owns budget), the technology committee, and the privacy officer were named as stakeholders to add",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Sam committed in passing to send the retention dashboard screenshots; no date was given",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "economic_buyer": {
+   "status": "known",
+   "summary": "Dr. Abernathy, Owns the budget and must approve the purchase",
+   "evidence": [
+    {
+     "utterance_id": "U013",
+     "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "partial",
+   "summary": "Provost approval of the purchase",
+   "evidence": [
+    {
+     "utterance_id": "U013",
+     "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "Economic buyer (provost) is not engaged and the champion defers any meeting with her",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "Eventually, sure. She's very busy this term."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Dr. Elise Martin, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U011",
+     "excerpt": "Oh, I'll absolutely champion this. I'm going to tell everyone about it."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "missing_stakeholder",
+  "deal_state_why": "Provost Dr. Abernathy approves the budget but is absent, and Elise deferred a meeting with her. Enthusiasm came with no dated next step.",
+  "next_steps": [
+   {
+    "action": "Send Elise a short provost-ready summary of the first generation retention cut, with a line she can forward to Dr. Abernathy.",
+    "owner": "Paula Jensen",
+    "due_by": "2026-10-01",
+    "playbook_rule_id": "PB-05",
+    "release_card_id": "",
+    "action_type": "send_material",
+    "why": "Elise said 'Eventually' about the provost. Enthusiasm is easy to mistake for access, so the champion needs something specific to carry.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "Great. That's the cut the provost always asks for."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+     }
+    ]
+   },
+   {
+    "action": "Send Elise a one-page summary of the advisor and dean access controls she can forward to the privacy officer, and offer a committee-ready version once the meeting date is known.",
+    "owner": "Sam Okoro",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "support_customer_process",
+    "why": "The privacy officer was mentioned in passing and the committee date is unknown. Helping their review beats pushing for a meeting.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     }
+    ]
+   },
+   {
+    "action": "Add one question to the recap asking Elise to state in her own words the outcome she wants from retention reporting.",
+    "owner": "Paula Jensen",
+    "due_by": "2026-10-01",
+    "playbook_rule_id": "PB-07",
+    "release_card_id": "",
+    "action_type": "send_recap",
+    "why": "No business outcome was stated, and enthusiasm like 'wanted for years' can pass for one. The recap needs her words, not ours.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "This is exactly what I've wanted for years."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Technology committee meets about once a semester and its date is unknown. It may fall after the 2026-12-18 close date, and no one owns finding it out.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "We'll figure it out."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "The provost approves and owns the budget but is absent, and Elise deferred a meeting with her. No dated next step or business outcome was stated.",
+    "next_steps": [
+     {
+      "action": "Send Elise a short provost-ready summary of the first generation retention cut, in her words, to forward to Dr. Abernathy.",
+      "owner": "Paula Jensen",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Elise deferred the provost meeting; a ready-to-forward piece tied to the provost's own ask gives her an easy path in.",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "Great. That's the cut the provost always asks for."
+       },
+       {
+        "utterance_id": "U015",
+        "excerpt": "Eventually, sure. She's very busy this term."
+       }
+      ]
+     },
+     {
+      "action": "Offer Elise a committee-ready summary and ask what the technology committee needs to review and when it meets.",
+      "owner": "Paula Jensen",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Nobody knows when the committee meets and it may miss the close date. Offer help rather than chase.",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I think they meet once a semester. I don't know when."
+       }
+      ]
+     },
+     {
+      "action": "Send the promised screenshots with a stated date, and add an access-controls view Elise can show the privacy officer.",
+      "owner": "Sam Okoro",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "Screenshots were promised in passing with no date; adding the access-controls view gives Elise something for the privacy officer.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "Our privacy officer will want to see that."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "The technology committee meets about once a semester and its date is unknown, so its review could land after the 2026-12-18 close date.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I think they meet once a semester. I don't know when."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Provost Dr. Abernathy approves the budget but is absent, and Elise deferred a meeting with her. Enthusiasm came with no dated next step.",
+    "next_steps": [
+     {
+      "action": "Send Elise a short provost-ready summary of the first generation retention cut, with a line she can forward to Dr. Abernathy.",
+      "owner": "Paula Jensen",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "Elise said 'Eventually' about the provost. Enthusiasm is easy to mistake for access, so the champion needs something specific to carry.",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "Great. That's the cut the provost always asks for."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+       }
+      ]
+     },
+     {
+      "action": "Send Elise a one-page summary of the advisor and dean access controls she can forward to the privacy officer, and offer a committee-ready version once the meeting date is known.",
+      "owner": "Sam Okoro",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "The privacy officer was mentioned in passing and the committee date is unknown. Helping their review beats pushing for a meeting.",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "Our privacy officer will want to see that."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I think they meet once a semester. I don't know when."
+       }
+      ]
+     },
+     {
+      "action": "Add one question to the recap asking Elise to state in her own words the outcome she wants from retention reporting.",
+      "owner": "Paula Jensen",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-07",
+      "release_card_id": "",
+      "action_type": "send_recap",
+      "why": "No business outcome was stated, and enthusiasm like 'wanted for years' can pass for one. The recap needs her words, not ours.",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "This is exactly what I've wanted for years."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Technology committee meets about once a semester and its date is unknown. It may fall after the 2026-12-18 close date, and no one owns finding it out.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I think they meet once a semester. I don't know when."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "We'll figure it out."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Alder State retention demo and next steps",
+    "body": "Hi Elise and Kevin,\n\nThank you for your time today. Sam showed the enrollment and course data from your extract joined by student ID, the first year retention dashboard by college and by program, and the access controls, where advisors see only their own students and deans see their college. Kevin asked about filtering by first generation students, and Sam confirmed any attribute in your student table can be a filter.\n\nOpen items:\n- Sam will send the retention dashboard screenshots so you can share them. No date was set during the call.\n- You mentioned the privacy officer will want to see the access controls, and that the technology committee meets about once a semester with the date unknown. Tell us what either group needs and we will help.\n\nTo make sure we tie this to what matters to you, what outcome do you most want from retention reporting, in your own words?\n\nThanks again,\nPaula",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "The retention dashboard shows first year retention by college and by program."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "Yes, any attribute in your student table can be a filter."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Advisors see only their own students. Deans see their college."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Alder State retention demo and next steps",
+    "body": "Hi Elise and Kevin,\n\nThank you for your time today. Sam showed the enrollment and course data from your extract joined by student ID, the first year retention dashboard by college and by program, and the access controls, where advisors see only their own students and deans see their college. Kevin asked about filtering by first generation students, and Sam confirmed any attribute in your student table can be a filter.\n\nOpen items:\n- Sam will send the retention dashboard screenshots so you can share them. No date was set during the call.\n- You mentioned the privacy officer will want to see the access controls, and that the technology committee meets about once a semester with the date unknown. Tell us what either group needs and we will help.\n\nTo make sure we tie this to what matters to you, what outcome do you most want from retention reporting, in your own words?\n\nThanks again,\nPaula",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "The retention dashboard shows first year retention by college and by program."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "Yes, any attribute in your student table can be a filter."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Advisors see only their own students. Deans see their college."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Waiting on customer: provost Dr. Abernathy (approver, owns budget) was not on the call, Elise deferred a meeting with her, and no dated next step was agreed.",
+    "customer_value_line": "Business outcome not stated in the call; CRM discovery notes list the pain as manual retention reporting, but no outcome was said in the customer's words. Ask for it.",
+    "what_we_validated": [
+     "Enrollment and course data from the customer extract joined by student ID",
+     "Retention dashboard showing first year retention by college and by program",
+     "Filtering by first generation students; any attribute in the student table can be a filter",
+     "Access controls: advisors see only their own students, deans see their college"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [
+     "Deferral on involving the provost: Elise said 'Eventually, sure. She's very busy this term.' No answer given, status open."
+    ],
+    "open_items": [
+     "Date the technology committee meets is unknown; Kevin thinks once a semester. Owner: Dr. Elise Martin, no date given",
+     "Privacy officer wants to see the access controls; not identified or engaged. Owner: not stated",
+     "No dated next meeting agreed",
+     "Business outcome not stated"
+    ],
+    "commitments": [
+     "Sam Okoro: send retention dashboard screenshots so the customer can share them, no date given",
+     "Dr. Elise Martin: 'We'll figure it out' on the committee meeting date, said in passing, no owner or date"
+    ],
+    "stakeholders": [
+     "Dr. Elise Martin, Director of Institutional Research, champion, present",
+     "Kevin Tran, Data Analyst, technical evaluator, present",
+     "Dr. Abernathy, Provost, owns budget and must approve, absent",
+     "Technology committee, part of the decision, absent, meeting date unknown",
+     "Privacy officer, will want to see access controls, absent, not named"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Economic buyer not engaged; champion deferred the meeting with her",
+     "Technology committee meets about once a semester with an unknown date, so it could land late relative to the close date",
+     "Champion enthusiasm is not a decision; she gave no date or commitment after it",
+     "Privacy officer not yet engaged",
+     "No dated next step and no stated business outcome"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Eventually, sure. She's very busy this term."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "Great. That's the cut the provost always asks for."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Waiting on customer: the provost who approves the budget was absent and Elise deferred a meeting with her, so enthusiasm came with no dated next step.",
+    "customer_value_line": "Not stated: no business outcome was said in the call; CRM discovery notes list the pain 'Retention reporting is manual' but no stated outcome.",
+    "what_we_validated": [
+     "Enrollment and course data from the customer's extract joined by student ID (U003)",
+     "Retention dashboard showing first year retention by college and by program (U003)",
+     "Filtering by first generation students; any attribute in the student table can be a filter (U005, U006)",
+     "Access controls: advisors see only their own students, deans see their college (U008)"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [
+     "Deferral on involving the provost: Elise said 'Eventually, sure. She's very busy this term.' No answer given and no date set. Status: open."
+    ],
+    "open_items": [
+     "Privacy officer will want to see the access controls; not yet identified or engaged. Owner: Dr. Elise Martin",
+     "Technology committee meeting date unknown; Kevin thinks they meet once a semester. Owner: Dr. Elise Martin ('We'll figure it out', no date)",
+     "No dated next meeting agreed",
+     "Business outcome in the customer's own words not yet captured"
+    ],
+    "commitments": [
+     "Sam Okoro: send the retention dashboard screenshots so the customer can share them; no date given",
+     "Dr. Elise Martin: figure out when the technology committee meets; said in passing, no date given"
+    ],
+    "stakeholders": [
+     "Dr. Elise Martin, Director of Institutional Research: champion, present",
+     "Kevin Tran, Data Analyst: technical evaluator, present",
+     "Dr. Abernathy, Provost: owns the budget and must approve, absent",
+     "Technology committee: part of the decision process, absent",
+     "Privacy officer: will want to review access controls, absent, not named"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Economic buyer not engaged: Elise said 'Eventually' about meeting the provost, and close date is 2026-12-18",
+     "Technology committee meets about once a semester with date unknown, so it could miss the close date",
+     "Privacy officer is an unengaged likely reviewer",
+     "Call ended with only screenshots promised: no dated next step and no business outcome"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Eventually, sure. She's very busy this term."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I think they meet once a semester. I don't know when."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "Our privacy officer will want to see that."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "We'll figure it out."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[names_known] not found in transcript, CRM or reference: Deferral: Deferral"
+   ],
+   "findings": [
+    "[dates_future_business_days] bad dates: 2026-12-18 (not a date said in the call): 2026-12-18 (not a date said in the call)",
+    "[names_known] not found in transcript, CRM or reference: Deferral: Deferral"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Business outcome not stated in the call; discovery noted only that retention reporting is manual.",
+    "rows": [
+     {
+      "milestone": "Send retention dashboard screenshots Elise can share",
+      "customer_owner": "",
+      "apex_owner": "Sam Okoro",
+      "target_date": "2026-10-01",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+       }
+      ]
+     },
+     {
+      "milestone": "Send Elise a provost-ready summary of the first generation retention cut to forward to Dr. Abernathy",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Paula Jensen",
+      "target_date": "2026-10-01",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "Great. That's the cut the provost always asks for."
+       },
+       {
+        "utterance_id": "U015",
+        "excerpt": "Eventually, sure. She's very busy this term."
+       }
+      ]
+     },
+     {
+      "milestone": "Provide an access-controls view for the privacy officer to review",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Sam Okoro",
+      "target_date": "2026-10-01",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "Our privacy officer will want to see that."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "Advisors see only their own students. Deans see their college."
+       }
+      ]
+     },
+     {
+      "milestone": "Find out when the technology committee meets and what it needs to review",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Paula Jensen",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I think they meet once a semester. I don't know when."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "We'll figure it out."
+       }
+      ]
+     },
+     {
+      "milestone": "Meeting with Dr. Abernathy, provost, who owns the budget and must approve",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Paula Jensen",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+       },
+       {
+        "utterance_id": "U015",
+        "excerpt": "Eventually, sure. She's very busy this term."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Business outcome not stated by the customer; only discovery pain noted is manual retention reporting, and the customer's own words on the outcome are still needed.",
+    "rows": [
+     {
+      "milestone": "Send screenshots of the retention dashboard so Elise can share them",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Sam Okoro",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I'll send the retention dashboard screenshots so you can share them."
+       }
+      ]
+     },
+     {
+      "milestone": "Send recap including a first generation retention summary Elise can forward to the provost, and ask Elise to state her desired outcome in her own words",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Paula Jensen",
+      "target_date": "2026-10-01",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "Great. That's the cut the provost always asks for."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "The provost owns the budget. Dr. Abernathy. She'd have to approve it."
+       }
+      ]
+     },
+     {
+      "milestone": "Send a one-page summary of advisor and dean access controls for the privacy officer's review",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Sam Okoro",
+      "target_date": "2026-10-02",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "Our privacy officer will want to see that."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "Advisors see only their own students. Deans see their college."
+       }
+      ]
+     },
+     {
+      "milestone": "Find out when the technology committee meets",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Paula Jensen",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I think they meet once a semester. I don't know when."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "We'll figure it out."
+       }
+      ]
+     },
+     {
+      "milestone": "Meeting with provost Dr. Abernathy, who approves the budget",
+      "customer_owner": "Dr. Elise Martin",
+      "apex_owner": "Paula Jensen",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "Would it make sense to set up time with Dr. Abernathy?"
+       },
+       {
+        "utterance_id": "U015",
+        "excerpt": "Eventually, sure. She's very busy this term."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[quote_supports_claim] U007 and U015 only show the provost asks for the first-generation cut and that a meeting is deferred, and U009 only says the privacy officer will want to see access controls; nobody committed to either deliverable, and Elise was never named as owner of either. (target: Send Elise a provost-ready summary of the first generation retention cut to forward to Dr. Abernathy; Provide an access-controls view for the privacy officer to review; lines U007, U015, U009, U008)"
+   ],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-WAIT",
+   "target": "deal_state",
+   "before": "missing_stakeholder",
+   "after": "waiting_on_customer",
+   "reason": "customer dependency with no date: Provost approval of the purchase"
+  },
+  {
+   "rule_id": "R-WAIT",
+   "target": "deal_state",
+   "before": "missing_stakeholder",
+   "after": "waiting_on_customer",
+   "reason": "customer dependency with no date: Provost approval of the purchase"
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Deferral",
+   "locations": [
+    "Deferral"
+   ]
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-12-18 (not a date said in the call)",
+   "locations": [
+    "2026-12-18 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Deferral",
+   "locations": [
+    "Deferral"
+   ]
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Deferral",
+   "locations": [
+    "Deferral"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Elise a short provost-ready summary of the first generation retention cut, with a line she can forward to Dr. Abernathy.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U007 ties the first generation cut to the provost and U013 names the provost as the budget owner who must approve, so both quotes support the step.",
+   "utterance_ids": [
+    "U007",
+    "U013"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "Provost Dr. Abernathy approves the budget but is absent, and Elise deferred a meeting with her. Enthusiasm came with no dated next step.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The state is waiting_on_customer and the assessment treats Elise's enthusiasm as non-committal, which matches her 'Eventually, sure' and 'We'll figure it out'.",
+   "utterance_ids": [
+    "U011",
+    "U015",
+    "U019"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Add one question to the recap asking Elise to state in her own words the outcome she wants from retention reporting.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is tied to this account because no outcome was stated and the CRM stated_business_outcome is empty, which is what PB-07 requires.",
+   "utterance_ids": [
+    "U004"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Tell us what either group needs and we will help.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is a general offer of help consistent with PB-09, not a dated deliverable, and the only firm commitment (Sam sending screenshots) is stated without a date, as in the call.",
+   "utterance_ids": [
+    "U009",
+    "U018",
+    "U020"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Sam will send the retention dashboard screenshots so you can share them. No date was set during the call.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email matches Sam's U020 commitment and states plainly that no date was given.",
+   "utterance_ids": [
+    "U020"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Dr. Elise Martin: figure out when the technology committee meets; said in passing, no date given",
+   "passed": true,
+   "severity": "low",
+   "finding": "The commitment is logged with the owner Elise said it for and notes that it was said in passing with no date, which is faithful to U019.",
+   "utterance_ids": [
+    "U017",
+    "U019"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Find out when the technology committee meets (apex_owner Paula Jensen)",
+   "passed": false,
+   "severity": "low",
+   "finding": "In the call Elise said 'We'll figure it out' and nobody at Apex took this on, so listing Paula as Apex owner assigns a commitment that was not made, though the row is marked proposed.",
+   "utterance_ids": [
+    "U016",
+    "U017",
+    "U018",
+    "U019"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Access controls: advisors see only their own students, deans see their college (U008)",
+   "passed": true,
+   "severity": "low",
+   "finding": "No behavior in the call was corrected later and no release card applies, so nothing superseded is presented as current.",
+   "utterance_ids": [
+    "U008"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Elise a short provost-ready summary of the first generation retention cut... (U007, U015)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U007 says the provost always asks for the first generation cut and U015 shows Elise deferring the provost meeting, so both quotes support the step.",
+   "utterance_ids": [
+    "U007",
+    "U015"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Offer Elise a committee-ready summary and ask what the technology committee needs to review and when it meets. (U018)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U018 supports that the committee's meeting date is unknown, which is what the step addresses.",
+   "utterance_ids": [
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send the promised screenshots with a stated date, and add an access-controls view for the privacy officer (U020, U009)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 is the passing screenshot promise with no date and U009 is the privacy officer remark, so the quotes support the step.",
+   "utterance_ids": [
+    "U020",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer; no dated next step or business outcome was stated",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment does not treat Elise's enthusiasm (U004, U011, U019) as a decision and correctly notes the provost's absence and the deferral in U015.",
+   "utterance_ids": [
+    "U004",
+    "U011",
+    "U015",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Send the promised screenshots with a stated date",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step attributes only the screenshots to Sam as a commitment (U020), and the access-controls view is framed as an addition rather than a promise.",
+   "utterance_ids": [
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Offer Elise a committee-ready summary and ask what the technology committee needs to review and when it meets.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Asking when the committee meets is close to a generic follow-up, and it does not name the committee's actual requirements or a dated path; the step is tied to U018 but does not give a specific deliverable.",
+   "utterance_ids": [
+    "U017",
+    "U018",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Send Elise a short provost-ready summary of the first generation retention cut",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is specific to this customer, tied to the provost's own ask in U007 and the deferral in U015.",
+   "utterance_ids": [
+    "U007",
+    "U015"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "evidence list: U013, U015, U018, U009, U020, U007 excerpts",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is verbatim from its line and supports its use: the provost approves and owns the budget, the meeting was deferred, the committee date is unknown, the privacy officer wants to see the controls, Sam promised the screenshots.",
+   "utterance_ids": [
+    "U013",
+    "U015",
+    "U018",
+    "U009",
+    "U020",
+    "U007"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments: Sam screenshots 'no date given'; Elise 'We'll figure it out' 'said in passing, no owner or date'",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both commitments are recorded at the strength actually spoken, with the missing dates and owners flagged rather than invented.",
+   "utterance_ids": [
+    "U020",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "risks: 'Champion enthusiasm is not a decision; she gave no date or commitment after it'",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary treats Elise's enthusiasm as non-committal, which fits her deferral of the provost meeting and her vague answer on the committee date.",
+   "utterance_ids": [
+    "U011",
+    "U015",
+    "U017",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Send Elise a provost-ready summary of the first generation retention cut to forward to Dr. Abernathy; Provide an access-controls view for the privacy officer to review",
+   "passed": false,
+   "severity": "high",
+   "finding": "U007 and U015 only show the provost asks for the first-generation cut and that a meeting is deferred, and U009 only says the privacy officer will want to see access controls; nobody committed to either deliverable, and Elise was never named as owner of either.",
+   "utterance_ids": [
+    "U007",
+    "U015",
+    "U009",
+    "U008"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "target_date 2026-10-01 on the screenshots, provost summary and privacy-officer rows",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Sam said only \"I'll send the retention dashboard screenshots\" with no date, and the other two rows have no commitment at all, so the 2026-10-01 dates were invented and the two uncommitted rows are presented as firmer than anything said.",
+   "utterance_ids": [
+    "U020",
+    "U007",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Meeting with Dr. Abernathy, provost, who owns the budget and must approve",
+   "passed": true,
+   "severity": "low",
+   "finding": "The row is marked proposed with no date and the value line says no outcome was stated, so Elise's \"Eventually, sure. She's very busy this term\" deferral is not inflated.",
+   "utterance_ids": [
+    "U013",
+    "U015"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "Find out when the technology committee meets and what it needs to review",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is tied to this deal, since the committee and its unknown meeting date came up in the call and Elise said \"We'll figure it out\".",
+   "utterance_ids": [
+    "U013",
+    "U017",
+    "U018",
+    "U019"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.019693,
+   "latency_ms": 7763,
+   "input_tokens": 532,
+   "output_tokens": 1253,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "b9e929c1eb7bf604a16cb152e1e222e27e42f7ff665450e80c2892afe662363f"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021316,
+   "latency_ms": 9317,
+   "input_tokens": 398,
+   "output_tokens": 1440,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "0a5ea3269d66881bad3164f5ecfc4133085e27daf646ea0e6405b3671498300b"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.030361,
+   "latency_ms": 11614,
+   "input_tokens": 4430,
+   "output_tokens": 1563,
+   "cache_read_input_tokens": 4292,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "8e3e69715eb3c54f1c0734a577bd99562ef2d2407354f51151810cc4f2d3af6e"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.020927,
+   "latency_ms": 4287,
+   "input_tokens": 4907,
+   "output_tokens": 543,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "0496e4e05ce390f97c90e78b8e3b37fdf87e326b65cec88fbc5fbafa3e7d1ac7"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023638,
+   "latency_ms": 5381,
+   "input_tokens": 4770,
+   "output_tokens": 835,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "5046554c2adf798d6e33abdae69481f8cdec54c95a03dee3a6316d7549580230"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025138,
+   "latency_ms": 6696,
+   "input_tokens": 4782,
+   "output_tokens": 980,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "32193d2615e7cd0552715e597530bde0db08964bac3b2f3dfac6b86a2fbfc547"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.037329,
+   "latency_ms": 16696,
+   "input_tokens": 4421,
+   "output_tokens": 2273,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2005,
+   "validator_errors": [],
+   "keys": [
+    "42742d0100dab3b5202de9cb635125c34c5cc716c8ef73a5e805352520957502"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.057134,
+   "latency_ms": 26589,
+   "input_tokens": 9053,
+   "output_tokens": 3651,
+   "cache_read_input_tokens": 12594,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [
+    "deal_state_why has 26 words, max 25"
+   ],
+   "keys": [
+    "59e2f90d5058669b815f71fd918d1eb4152485c4c3bd03d4fd08119cb20095db",
+    "b14ddac23d6d72680a336a30653d9b56e254b90dd994fbb87b0b625a3df8c989"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.013426,
+   "latency_ms": 6205,
+   "input_tokens": 1470,
+   "output_tokens": 934,
+   "cache_read_input_tokens": 5729,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "4b343ea8304a65e37d3f4943837b5527e7cda074248cb70fa8513f1ce367492e"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.020338,
+   "latency_ms": 6926,
+   "input_tokens": 4808,
+   "output_tokens": 956,
+   "cache_read_input_tokens": 5810,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "9421caea037df56c2894786054716a6e1af8ad63b3668c59651dea8bb6b1d84c"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.017006,
+   "latency_ms": 9299,
+   "input_tokens": 1605,
+   "output_tokens": 1265,
+   "cache_read_input_tokens": 5729,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "de752a113cdebec9572b1d68692692f37aba5b7f8d428bb3a4c32ccc08f0a790"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018628,
+   "latency_ms": 4818,
+   "input_tokens": 4756,
+   "output_tokens": 798,
+   "cache_read_input_tokens": 5682,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "5dabb895dbd12ca514050416d7139a3bd803666b30773d572abab54149c3ba76"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018762,
+   "latency_ms": 11128,
+   "input_tokens": 1503,
+   "output_tokens": 1461,
+   "cache_read_input_tokens": 5729,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "85f47a8ce49fcd423382d7ecefa24c7cd648e27634050091de9dd752f78a624d"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.323696,
+ "latency_ms": 126719,
+ "wall_clock_s": 117.1,
+ "status": "ran"
+}
