@@ -1,0 +1,346 @@
+{
+ "deal_id": "e11",
+ "system": "baseline",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Sam demoed the retention dashboard on Alder State's enrollment and course data, joined by student ID, showing first-year retention by college and program.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam states this directly."
+  },
+  {
+   "claim": "Kevin confirmed that any attribute in the student table can be used as a filter.",
+   "category": "other",
+   "supported": false,
+   "utterance_ids": [
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Kevin asked the question; Sam confirmed it. The summary misattributes the confirmation to Kevin."
+  },
+  {
+   "claim": "Kevin said the first-generation filter is the cut the provost always asks for.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Kevin says this in U007."
+  },
+  {
+   "claim": "Sam covered role-based access: advisors see only their own students and deans see their college.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches Sam's statement."
+  },
+  {
+   "claim": "Dr. Martin said the product is 'exactly what I've wanted for years'.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote."
+  },
+  {
+   "claim": "Dr. Martin said she will champion the product internally.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She said she'll absolutely champion it."
+  },
+  {
+   "claim": "The provost, Dr. Abernathy, owns the budget and must approve; a technology committee is also involved.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Martin states this."
+  },
+  {
+   "claim": "The call ended with no dated next step and no known technology committee date.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018",
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No dates were set; neither contact knew the committee date."
+  },
+  {
+   "claim": "The call ran about 7 minutes.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM shows 13:00 to 13:07; the transcript ends at 06:46."
+  },
+  {
+   "claim": "The access controls got roughly one sentence of coverage.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam gave two short sentences, so the characterization is accurate."
+  },
+  {
+   "claim": "The enrollment model Paula mentioned at the start isn't explicitly shown in the transcript.",
+   "category": "other",
+   "supported": false,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Sam says he is showing enrollment and course data joined by student ID, which is the model."
+  },
+  {
+   "claim": "Dr. Martin raised no objections.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U002",
+    "U004",
+    "U009",
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She voiced only positive reactions."
+  },
+  {
+   "claim": "Dr. Martin expects the privacy officer will want to see the access controls.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She says the privacy officer will want to see that."
+  },
+  {
+   "claim": "Kevin wanted to confirm filtering by first-generation students, and Sam confirmed it, so this is resolved.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Kevin asked and Sam said yes."
+  },
+  {
+   "claim": "Dr. Martin deferred a meeting with Dr. Abernathy, saying 'Eventually, sure' and that the provost is very busy this term.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches her reply."
+  },
+  {
+   "claim": "The technology committee reportedly meets once a semester, and neither contact knows when.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Kevin said 'I think' and neither knew the date; the summary says 'reportedly'."
+  },
+  {
+   "claim": "The close date is 2026-12-18 and ACV is $150K.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches the CRM record."
+  },
+  {
+   "claim": "The privacy officer is not in the CRM.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM contacts list only Martin and Tran."
+  },
+  {
+   "claim": "No security or privacy materials were requested or offered on the call.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nothing in the transcript offers or requests such materials."
+  },
+  {
+   "claim": "The CRM's stated business outcome is blank; the only recorded pain is that retention reporting is manual.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches the CRM discovery notes."
+  },
+  {
+   "claim": "Dr. Martin made no specific commitments and deflected on dates ('We'll figure it out').",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U015",
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She gave only general support and vague answers."
+  },
+  {
+   "claim": "No competitors are listed in the CRM.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM competitors is empty; the summary notes this may mean none or unexplored."
+  },
+  {
+   "claim": "Dr. Martin plans to circulate the dashboard screenshots widely.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Sam offered screenshots 'so you can share them'; Martin only said 'Lovely'. Wide circulation was not stated."
+  },
+  {
+   "claim": "Sam will send the retention dashboard screenshots, with no date stated.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam offered; no date was given."
+  },
+  {
+   "claim": "Dr. Martin and Kevin will find out when the technology committee meets.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Only Martin said 'We'll figure it out', loosely and without a date; the summary marks it with that hedge."
+  },
+  {
+   "claim": "Paula's email says the retention view is what you've been looking for and attaches screenshots 'as promised', built from your own extract.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U004",
+    "U003",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sam promised the screenshots and the data is the customer's extract."
+  },
+  {
+   "claim": "The email says Dr. Abernathy is very busy this term.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Martin said so."
+  },
+  {
+   "claim": "The email says the first-generation cut is one Dr. Abernathy regularly asks for.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Kevin said the provost always asks for it."
+  },
+  {
+   "claim": "Sam can walk the privacy officer through advisor and dean-level permissions and how student data is handled.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U008",
+    "U009"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Sam never offered a privacy session or data-handling walkthrough; the email makes this offer on Sam's behalf."
+  },
+  {
+   "claim": "The email says Dr. Martin mentioned the privacy officer will want to review the access controls.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She said the privacy officer will want to see that."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.057013
+}

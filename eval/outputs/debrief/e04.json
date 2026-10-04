@@ -1,0 +1,2073 @@
+{
+ "debrief_id": "e04-fb3fc6d8",
+ "deal_id": "e04",
+ "as_of": "2026-09-30",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No dated next meeting or action was agreed. Simone said she could not move forward without Dr. Okafor and did not commit to a date.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U016",
+     "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+    },
+    {
+     "utterance_id": "U018",
+     "excerpt": "Maybe. She doesn't read long documents though."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Simone cannot move the deal forward without CISO sign-off, and the CISO's calendar is unavailable until the audit is done. This is a decision-process blocker, not a technical concern.",
+    "raised_by": "Simone Achebe",
+    "status": "open",
+    "answer_given": "Marta offered to write something up for the CISO; Simone was lukewarm and said the CISO does not read long documents.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Would it help if we wrote something up for her?"
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Maybe. She doesn't read long documents though."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Scope the full trial data load. Theo needs Wes's data dictionary for the full trial model to do it.",
+    "owner": "Theo Grant",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "That would help. I'll use it to scope the full load."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Trial extract loaded nightly with each load versioned; the audit trail can be exported to the customer's log system.",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "This is the trial extract you sent, loaded nightly. Each load is versioned, so you can see exactly what the data looked like on any date."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "It can be exported to your log system."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Wes Hollis",
+    "side": "customer",
+    "what": "Send the data dictionary for the full trial model",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     }
+    ]
+   },
+   {
+    "who": "Theo Grant",
+    "side": "apex",
+    "what": "Use the data dictionary to scope the full load",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "I'll use it to scope the full load."
+     }
+    ]
+   },
+   {
+    "who": "Marta Kowal",
+    "side": "apex",
+    "what": "Send a recap",
+    "by_when": "2026-09-30",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "I'll send a recap this afternoon."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Simone Achebe",
+    "title": "Director of Clinical Data",
+    "present": true,
+    "why_they_matter": "Champion; cannot move the deal without the CISO",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is a good fit technically."
+     }
+    ]
+   },
+   {
+    "name": "Wes Hollis",
+    "title": "Senior Data Engineer",
+    "present": true,
+    "why_they_matter": "Technical evaluator; asked about rollback and time-boxed roles",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Can the role be time boxed? We only unblind at interim analysis."
+     }
+    ]
+   },
+   {
+    "name": "Dr. Amaka Okafor",
+    "title": "CISO",
+    "present": false,
+    "why_they_matter": "Must sign off on anything touching trial data; first asks about audit trail and unblinded data access",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "She'll have to sign off on anything that touches trial data."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+     }
+    ]
+   },
+   {
+    "name": "VP of R and D",
+    "title": "VP of R and D",
+    "present": false,
+    "why_they_matter": "Possible approver for deals above a size threshold; unconfirmed",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "above a certain size it goes to the VP of R and D, but I don't know the threshold this year."
+     }
+    ]
+   },
+   {
+    "name": "Procurement contact",
+    "title": "Procurement",
+    "present": false,
+    "why_they_matter": "Likely involved in the commercial side; unnamed",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement"
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion says the product is a good technical fit after seeing ingestion, audit trail and access controls.",
+    "strength": "moderate",
+    "qualifier": "Immediately followed by saying she cannot move the deal without the CISO, whose availability is unknown.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is a good fit technically."
+     }
+    ]
+   },
+   {
+    "summary": "Champion confirms the audit trail read logging is what the CISO will ask about.",
+    "strength": "weak",
+    "qualifier": "Approval of a feature, not a commitment to proceed.",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "That's what she'll ask. Good."
+     }
+    ]
+   },
+   {
+    "summary": "Technical evaluator offers to send the full trial data dictionary so Apex can scope the full load.",
+    "strength": "moderate",
+    "qualifier": "No date given for sending it.",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "CISO sign-off is required on anything touching trial data, and the CISO was absent from the demo.",
+    "strength": "strong",
+    "qualifier": "",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "She'll have to sign off on anything that touches trial data."
+     }
+    ]
+   },
+   {
+    "summary": "Champion cannot move the deal without the CISO and does not know when the CISO will have time; calendar is blocked until the audit is done.",
+    "strength": "strong",
+    "qualifier": "No date for any follow-up meeting was agreed.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+     }
+    ]
+   },
+   {
+    "summary": "Economic buyer and commercial path are unknown; procurement and possibly the VP of R and D, threshold unknown.",
+    "strength": "moderate",
+    "qualifier": "Champion is unsure and described it as a guess.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Honestly I'm not sure yet."
+     }
+    ]
+   },
+   {
+    "summary": "Champion is lukewarm on a written summary for the CISO, who does not read long documents.",
+    "strength": "weak",
+    "qualifier": "Format constraint rather than a refusal.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Maybe. She doesn't read long documents though."
+     }
+    ]
+   },
+   {
+    "summary": "Call ended without a dated next step.",
+    "strength": "moderate",
+    "qualifier": "Only the AE's recap this afternoon was stated.",
+    "evidence": [
+     {
+      "utterance_id": "U023",
+      "excerpt": "Okay. Let's leave it there for today. Thanks both."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [],
+  "customer_dependencies": [
+   {
+    "summary": "CISO sign-off required before anything touching trial data can proceed; her calendar is full until the audit is done.",
+    "owner": "Dr. Amaka Okafor (CISO)",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+     }
+    ]
+   },
+   {
+    "summary": "Procurement involvement and possible VP of R and D approval above an unknown size threshold.",
+    "owner": "Simone Achebe to find out",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D"
+     }
+    ]
+   },
+   {
+    "summary": "Send the data dictionary for the full trial model so Apex can scope the full load.",
+    "owner": "Wes Hollis",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "Checklist is blank, but the CISO Dr. Okafor was named as required sign-off and absent. The VP of R and D and procurement were named as possible commercial approvers.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "She'll have to sign off on anything that touches trial data."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D"
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Checklist is blank, but the SC said he will use the customer's data dictionary to scope the full load.",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "I'll use it to scope the full load."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Dr. Amaka Okafor: Must sign off on anything touching trial data; first asks about audit trail and unblinded data access",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "She'll have to sign off on anything that touches trial data."
+    },
+    {
+     "utterance_id": "U004",
+     "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "partial",
+   "summary": "1 item validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U005",
+     "excerpt": "This is the trial extract you sent, loaded nightly. Each load is versioned, so you can see exactly what the data looked like on any date."
+    },
+    {
+     "utterance_id": "U009",
+     "excerpt": "It can be exported to your log system."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "partial",
+   "summary": "CISO sign-off required before anything touching trial data can proceed; her calendar is full until the audit is done.",
+   "evidence": [
+    {
+     "utterance_id": "U016",
+     "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "partial",
+   "summary": "Procurement involvement and possible VP of R and D approval above an unknown size threshold.",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D"
+    }
+   ]
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "CISO sign-off is required on anything touching trial data, and the CISO was absent from the demo.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "She'll have to sign off on anything that touches trial data."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Simone Achebe, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U016",
+     "excerpt": "This is a good fit technically."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "waiting_on_customer",
+  "deal_state_why": "Champion says technical fit is good but cannot move without the CISO, whose calendar is blocked until the audit is done; no dated next step.",
+  "next_steps": [
+   {
+    "action": "Offer Simone a one-page CISO brief covering read-level audit logging, unblinded-column masking and time-boxed role grants, for her to forward to Dr. Okafor on her own timing.",
+    "owner": "Marta Kowal",
+    "due_by": "2026-10-01",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "support_customer_process",
+    "why": "Simone said the CISO doesn't read long documents; a typical AE sends a full recap or pushes for a meeting instead of a short brief.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Maybe. She doesn't read long documents though."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+     }
+    ]
+   },
+   {
+    "action": "Ask Simone who owns the procurement step and what size threshold sends a deal to the VP of R and D, and record the answer as the economic buyer path.",
+    "owner": "Marta Kowal",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "Simone's guess about procurement and the VP of R and D was said in passing, so the economic buyer is easy to leave blank.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year."
+     }
+    ]
+   },
+   {
+    "action": "Log the data dictionary scoping as an SC commitment and ask Wes for a send date, so Theo can give a dated scope of the full load.",
+    "owner": "Theo Grant",
+    "due_by": "2026-10-01",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "",
+    "action_type": "route_to_sc",
+    "why": "Theo's commitment was made in passing and the CRM field is blank; Wes offered the dictionary with no date.",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "That would help. I'll use it to scope the full load."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "The CISO must sign off on anything touching trial data and was absent, so a late security review could push the 2026-12-18 close date.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "She'll have to sign off on anything that touches trial data."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "low_information",
+    "deal_state_why": "Champion cannot move forward without CISO sign-off, the CISO's calendar is blocked until the audit ends, and no dated next step was agreed.",
+    "next_steps": [
+     {
+      "action": "Send Simone a very short CISO brief, a few lines on read-level query logging and masked unblinded columns with expiring role grants, to forward whenever Dr. Okafor has time.",
+      "owner": "Marta Kowal",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "CISO sign-off is the gate, and she skips long documents. A typical AE would attach the full recap or push for a meeting.",
+      "evidence": [
+       {
+        "utterance_id": "U004",
+        "excerpt": "Audit trail and who can see unblinded data."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "Maybe. She doesn't read long documents though."
+       }
+      ]
+     },
+     {
+      "action": "Ask Simone to find out whether procurement and the VP of R and D approve at this deal size, and who signs, so the economic buyer is named before any commercial talk.",
+      "owner": "Marta Kowal",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Simone said it in passing and was unsure of the threshold. The CRM economic buyer is blank and easy to leave that way.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D"
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "CISO sign-off is required on anything touching trial data, and her calendar is blocked until the audit is done. A slip here could push the 2026-12-18 close date.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+       }
+      ]
+     },
+     {
+      "summary": "Economic buyer and approval threshold are unknown, and the VP of R and D is a possible approver.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Honestly I'm not sure yet."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "low_information",
+    "deal_state_why": "Champion says technical fit is good but cannot move without the CISO, whose calendar is blocked until the audit is done; no dated next step.",
+    "next_steps": [
+     {
+      "action": "Offer Simone a one-page CISO brief covering read-level audit logging, unblinded-column masking and time-boxed role grants, for her to forward to Dr. Okafor on her own timing.",
+      "owner": "Marta Kowal",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Simone said the CISO doesn't read long documents; a typical AE sends a full recap or pushes for a meeting instead of a short brief.",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "Maybe. She doesn't read long documents though."
+       },
+       {
+        "utterance_id": "U004",
+        "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+       }
+      ]
+     },
+     {
+      "action": "Ask Simone who owns the procurement step and what size threshold sends a deal to the VP of R and D, and record the answer as the economic buyer path.",
+      "owner": "Marta Kowal",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Simone's guess about procurement and the VP of R and D was said in passing, so the economic buyer is easy to leave blank.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "The CISO must sign off on anything touching trial data and was absent, so a late security review could push the 2026-12-18 close date.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "She'll have to sign off on anything that touches trial data."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Apex technical validation, trial data audit and access controls",
+    "body": "Hi Simone and Wes,\n\nThanks for your time today. Here is a short recap.\n\nWhat we showed: nightly trial extract loads, versioned so you can see the data as of any date, with restore of any version (the restore is logged). The audit trail logs reads as well as changes and can be exported to your log system. Unblinded columns are masked except for the unblinded statistics role, and role grants can have an expiry date.\n\nOpen items:\n- Wes: you offered to send the data dictionary for the full trial model. Theo will use it to scope the full load.\n- Dr. Okafor: you mentioned she must sign off on anything touching trial data. I'll send a few short lines on audit logging and unblinded access that you can forward whenever she has time.\n- Commercial approvers: you said procurement and possibly the VP of R and D may be involved, and that you are not sure yet.\n\nNo next meeting is set yet. Would a short check-in after Dr. Okafor has had a look work for you?\n\nMarta",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "Each load is versioned, so you can see exactly what the data looked like on any date."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "Yes. Any version can be restored, and the restore itself is logged."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Reads too. Every query against a protected table is logged with the user and the columns returned."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Role grants can have an expiry date, yes."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "That would help. I'll use it to scope the full load."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Honestly I'm not sure yet."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Apex technical validation, Vela Therapeutics",
+    "body": "Hi Simone and Wes,\n\nThanks for your time today. Here is what we covered.\n\nShown: nightly trial extract loads, versioned, with restore of any version (logged); audit trail covering reads, with the user and columns returned, exportable to your log system; unblinded columns masked except for the unblinded statistics role, with role grants that can carry an expiry date. Simone, you said this is a good fit technically.\n\nOpen:\n- Wes: send the data dictionary for the full trial model. Theo will use it to scope the full load.\n- Dr. Okafor: you said she needs to sign off on anything touching trial data. If useful, we can prepare a short one-page summary on audit logging and unblinded data access for you to forward whenever suits her.\n- Commercial approvals: you mentioned procurement and possibly the VP of R and D, and will confirm when you know more.\n\nIs there a next conversation you would like us to plan around?\n\nMarta",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "Each load is versioned, so you can see exactly what the data looked like on any date."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Reads too. Every query against a protected table is logged with the user and the columns returned."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Role grants can have an expiry date, yes."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "This is a good fit technically."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I can send over the data dictionary for the full trial model."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "That would help. I'll use it to scope the full load."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D"
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[email_promises_uncommitted] Marta only asked 'Would it help if we wrote something up for her?' and Simone answered 'Maybe', so the email turns a tentative offer into a firm commitment nobody agreed to. (target: I'll send a few short lines on audit logging and unblinded access that you can forward whenever she has time.; lines U017, U018)"
+   ],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)",
+    "[email_promises_uncommitted] Simone never agreed to confirm the commercial approvers; she only said she was not sure, so the email assigns her a commitment she did not make. (target: Commercial approvals: you mentioned procurement and possibly the VP of R and D, and will confirm when you know more.; lines U020)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Low information: champion says technical fit is good but cannot move without CISO sign-off, and no dated next step was agreed.",
+    "customer_value_line": "Business outcome not stated; discovery noted only the pain of an audit trail spread across systems. Ask Simone for the outcome in her words.",
+    "what_we_validated": [
+     "Nightly trial extract load with each load versioned (U005)",
+     "Any version can be restored and the restore is logged (U007)",
+     "Audit trail covers queries, exports and policy changes, and reads too, with user and columns returned (U009, U011)",
+     "Unblinded columns masked except for the unblinded statistics role (U013)",
+     "Role grants can have an expiry date (U015)",
+     "Simone: good fit technically (U016)"
+    ],
+    "integration_patterns": [
+     "Trial extract loaded nightly, versioned per load",
+     "Audit trail can be exported to the customer's log system"
+    ],
+    "objections_and_answers": [
+     "CISO sign-off needed, her availability unknown: Marta offered a write-up, Simone said maybe as the CISO does not read long documents. Open.",
+     "Commercial approvers unclear: Simone guessed procurement and possibly the VP of R and D above an unknown threshold. Open."
+    ],
+    "open_items": [
+     "Scope the full trial data load once the data dictionary arrives (Theo Grant)",
+     "Data dictionary for the full trial model, no date given (Wes Hollis)",
+     "Dated next meeting: none agreed",
+     "CISO path: Dr. Okafor's availability unknown",
+     "Economic buyer and approval threshold: not stated (Simone to find out)"
+    ],
+    "commitments": [
+     "Marta Kowal: send recap this afternoon (2026-09-30)",
+     "Wes Hollis: send data dictionary for the full trial model, no date stated",
+     "Theo Grant: use the data dictionary to scope the full load, no date stated"
+    ],
+    "stakeholders": [
+     "Simone Achebe, Director of Clinical Data, champion, present",
+     "Wes Hollis, Senior Data Engineer, technical evaluator, present",
+     "Dr. Amaka Okafor, CISO, must sign off on anything touching trial data, absent",
+     "VP of R and D, possible approver above a size threshold, absent, unconfirmed",
+     "Procurement, likely involved commercially, unnamed, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "CISO sign-off required, she was absent and her calendar is blocked until the audit is done",
+     "No dated next step agreed",
+     "Economic buyer not named and approval threshold unknown",
+     "Champion lukewarm on a written summary for the CISO"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "She'll have to sign off on anything that touches trial data."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Maybe. She doesn't read long documents though."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D"
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "That would help. I'll use it to scope the full load."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "I'll send a recap this afternoon."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Low information: champion says technical fit is good but cannot move without the absent CISO, whose calendar is blocked until the audit is done; no dated next step.",
+    "customer_value_line": "Business outcome not stated. CRM discovery notes list the pain as audit trail spread across systems, but the customer did not state an outcome in the call.",
+    "what_we_validated": [
+     "Trial extract loaded nightly with each load versioned, so data can be viewed as of any date (U005)",
+     "Any version can be restored and the restore is logged (U007)",
+     "Audit trail covers queries, exports and policy changes, and reads too, with user and columns returned (U009, U011)",
+     "Unblinded columns masked except for the unblinded statistics role (U013)",
+     "Role grants can have an expiry date, which fits unblinding only at interim analysis (U015)",
+     "Simone: good fit technically (U016)"
+    ],
+    "integration_patterns": [
+     "Nightly trial extract load, versioned per load",
+     "Audit trail export to the customer's log system"
+    ],
+    "objections_and_answers": [
+     "Simone cannot move this without CISO sign-off and does not know when Dr. Okafor will have time. Marta offered a written summary; Simone said maybe, as the CISO does not read long documents. Status: open"
+    ],
+    "open_items": [
+     "Wes Hollis to send the data dictionary for the full trial model; no date given",
+     "Theo Grant to scope the full load from the data dictionary; no date given",
+     "No dated next meeting or action agreed with the customer",
+     "Economic buyer and commercial path unknown: probably procurement, and above a threshold Simone does not know it goes to the VP of R and D",
+     "CISO review: no date; format must be short"
+    ],
+    "commitments": [
+     "Marta Kowal: send a recap this afternoon (2026-09-30)",
+     "Wes Hollis: send the data dictionary for the full trial model, by when not stated",
+     "Theo Grant: use the data dictionary to scope the full load, by when not stated (not yet logged as SC commitment in CRM)"
+    ],
+    "stakeholders": [
+     "Simone Achebe, Director of Clinical Data, champion, present",
+     "Wes Hollis, Senior Data Engineer, technical evaluator, present",
+     "Dr. Amaka Okafor, CISO, must sign off on anything touching trial data, absent; first asks about audit trail and who can see unblinded data",
+     "VP of R and D, possible approver above an unknown size threshold, absent, unconfirmed",
+     "Procurement contact, unnamed, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "CISO sign-off required and she was absent; her availability is unknown, so a late security review could threaten the 2026-12-18 close date",
+     "No dated next step agreed",
+     "Economic buyer not identified",
+     "Champion lukewarm on a written summary for the CISO"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "She'll have to sign off on anything that touches trial data."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Maybe. She doesn't read long documents though."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "That would help. I'll use it to scope the full load."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "Thank you. I'll send a recap this afternoon."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[dates_future_business_days] bad dates: 2026-12-18 (not a date said in the call): 2026-12-18 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "not stated",
+    "rows": [
+     {
+      "milestone": "Wes Hollis sends the data dictionary for the full trial model",
+      "customer_owner": "Wes Hollis",
+      "apex_owner": "Theo Grant",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "I can send over the data dictionary for the full trial model."
+       }
+      ]
+     },
+     {
+      "milestone": "Theo Grant scopes the full trial data load using the data dictionary",
+      "customer_owner": "Wes Hollis",
+      "apex_owner": "Theo Grant",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "That would help. I'll use it to scope the full load."
+       }
+      ]
+     },
+     {
+      "milestone": "Marta Kowal sends a short CISO brief on read-level audit logging, unblinded-column masking and time-boxed role grants for Simone to forward to Dr. Okafor on her own timing",
+      "customer_owner": "Simone Achebe",
+      "apex_owner": "Marta Kowal",
+      "target_date": "2026-10-01",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "Maybe. She doesn't read long documents though."
+       },
+       {
+        "utterance_id": "U004",
+        "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+       }
+      ]
+     },
+     {
+      "milestone": "CISO review and sign-off on anything touching trial data (date depends on her availability)",
+      "customer_owner": "Dr. Amaka Okafor",
+      "apex_owner": "Marta Kowal",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "She'll have to sign off on anything that touches trial data."
+       },
+       {
+        "utterance_id": "U016",
+        "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+       }
+      ]
+     },
+     {
+      "milestone": "Simone confirms the procurement owner and the size threshold that sends a deal to the VP of R and D",
+      "customer_owner": "Simone Achebe",
+      "apex_owner": "Marta Kowal",
+      "target_date": "2026-10-02",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "not stated",
+    "rows": [
+     {
+      "milestone": "Wes Hollis sends the data dictionary for the full trial model",
+      "customer_owner": "Wes Hollis",
+      "apex_owner": "Theo Grant",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "I can send over the data dictionary for the full trial model."
+       }
+      ]
+     },
+     {
+      "milestone": "Theo Grant scopes the full trial data load using the data dictionary",
+      "customer_owner": "Wes Hollis",
+      "apex_owner": "Theo Grant",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "That would help. I'll use it to scope the full load."
+       }
+      ]
+     },
+     {
+      "milestone": "Marta Kowal sends a short CISO brief on read-level audit logging, unblinded-column masking and time-boxed role grants for Simone to forward to Dr. Okafor on her own timing",
+      "customer_owner": "Simone Achebe",
+      "apex_owner": "Marta Kowal",
+      "target_date": "2026-10-01",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "Maybe. She doesn't read long documents though."
+       },
+       {
+        "utterance_id": "U004",
+        "excerpt": "Audit trail and who can see unblinded data. That's always her first question."
+       }
+      ]
+     },
+     {
+      "milestone": "CISO review and sign-off on anything touching trial data (date depends on her availability)",
+      "customer_owner": "Dr. Amaka Okafor",
+      "apex_owner": "Marta Kowal",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "She'll have to sign off on anything that touches trial data."
+       },
+       {
+        "utterance_id": "U016",
+        "excerpt": "I can't move this without Dr. Okafor, and I don't know when she'll have time."
+       }
+      ]
+     },
+     {
+      "milestone": "Simone confirms the procurement owner and the size threshold that sends a deal to the VP of R and D",
+      "customer_owner": "Simone Achebe",
+      "apex_owner": "Marta Kowal",
+      "target_date": "2026-10-02",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "waiting_on_customer",
+   "after": "low_information",
+   "reason": "only 7 substantive customer utterances"
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "next_steps",
+   "before": "3",
+   "after": "2",
+   "reason": "low information call, cut: Log the data dictionary scoping as an SC commitment and ask Wes for a send date, so Theo can give a dated scope of the full load."
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "waiting_on_customer",
+   "after": "low_information",
+   "reason": "only 7 substantive customer utterances"
+  },
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "next_steps",
+   "before": "3",
+   "after": "2",
+   "reason": "low information call, cut: Log Theo's full-load scoping commitment and ask Wes for a date for the data dictionary, then tell Wes when Theo will return the scope."
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-12-18 (not a date said in the call)",
+   "locations": [
+    "2026-12-18 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Offer Simone a one-page CISO brief ... for her to forward to Dr. Okafor on her own timing",
+   "passed": true,
+   "severity": "low",
+   "finding": "U018 (she doesn't read long documents) and U004 (audit trail and unblinded data are the CISO's first question) support the short brief and its topics.",
+   "utterance_ids": [
+    "U018",
+    "U004"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Simone who owns the procurement step and what size threshold sends a deal to the VP of R and D",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 directly states the procurement and VP of R and D guess and the unknown threshold.",
+   "utterance_ids": [
+    "U020"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: low_information",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment pairs 'good fit technically' with the champion saying she cannot move without the CISO, so it does not overstate the signal.",
+   "utterance_ids": [
+    "U016"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this account's CISO constraint and the unclear commercial path, not generic follow-ups.",
+   "utterance_ids": [
+    "U016",
+    "U018",
+    "U020"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Commercial approvals: you mentioned procurement and possibly the VP of R and D, and will confirm when you know more.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Simone never agreed to confirm the commercial approvers; she only said she was not sure, so the email assigns her a commitment she did not make.",
+   "utterance_ids": [
+    "U020"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "we can prepare a short one-page summary ... for you to forward whenever suits her",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is worded as a conditional offer following Marta's question in U017 and Simone's 'maybe' in U018, not as a firm promise.",
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Simone, you said this is a good fit technically.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The line accurately reflects U016 and the email separately lists the CISO sign-off as open.",
+   "utterance_ids": [
+    "U016"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "what_we_validated and open_items",
+   "passed": true,
+   "severity": "low",
+   "finding": "The validated items and open items match U005, U007, U009, U011, U013, U015, U021 and U022 as spoken, and the undated commitments are flagged as undated.",
+   "utterance_ids": [
+    "U005",
+    "U007",
+    "U011",
+    "U013",
+    "U015",
+    "U021",
+    "U022"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line and risks",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary frames the technical-fit comment as low information and keeps the missing CISO and economic buyer as risks.",
+   "utterance_ids": [
+    "U016",
+    "U020"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "target_date 2026-10-01 and 2026-10-02 on the CISO brief and the procurement/threshold confirmation rows",
+   "passed": false,
+   "severity": "medium",
+   "finding": "These dates were never said or agreed in the call, and the threshold row names Simone as owner of a task she did not accept, though both rows are marked proposed.",
+   "utterance_ids": [
+    "U017",
+    "U018",
+    "U020"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "CISO review and sign-off row",
+   "passed": true,
+   "severity": "low",
+   "finding": "U002 and U016 support the sign-off requirement and the unknown availability, and the date is correctly left blank.",
+   "utterance_ids": [
+    "U002",
+    "U016"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "All product behavior claims",
+   "passed": true,
+   "severity": "low",
+   "finding": "No later line or release card corrects any feature stated as current, and none of the release cards applies to this call.",
+   "utterance_ids": [
+    "U007",
+    "U011",
+    "U015"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Simone a very short CISO brief ... to forward whenever Dr. Okafor has time.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U004 names audit trail and unblinded data access as the CISO's first questions, and U018 says she does not read long documents, so both quotes support the short-brief step.",
+   "utterance_ids": [
+    "U004",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Simone to find out whether procurement and the VP of R and D approve at this deal size, and who signs",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 contains the passing mention of procurement and the VP of R and D with an unknown threshold, which supports the step.",
+   "utterance_ids": [
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Watch items on CISO sign-off and unknown economic buyer",
+   "passed": true,
+   "severity": "low",
+   "finding": "U016 and U020 directly support both watch items; the close-date risk is a reasonable inference and is not presented as something the customer said.",
+   "utterance_ids": [
+    "U016",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Next steps and deal_state_why",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment does not claim any customer or Apex commitment beyond the call, and it states that no dated next step was agreed.",
+   "utterance_ids": [
+    "U016",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: low_information",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats Simone's 'good fit technically' as qualified by her admission that she cannot move without the CISO, so the signal is not overstated.",
+   "utterance_ids": [
+    "U016"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Send Simone a very short CISO brief ... and Ask Simone to find out ... who signs",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this customer's CISO gate, the short-document preference and the unclear approval threshold, rather than a generic recap or meeting push.",
+   "utterance_ids": [
+    "U004",
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Evidence list: U005, U007, U011, U015, U021, U022, U020",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every excerpt is a verbatim substring of its cited line and supports the recap sentence it backs, although the audit export and masking claims (U009, U013) are not cited.",
+   "utterance_ids": [
+    "U005",
+    "U007",
+    "U011",
+    "U015",
+    "U021",
+    "U022",
+    "U020",
+    "U009",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Wes: you offered to send the data dictionary... Theo will use it to scope the full load.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Wes offered the data dictionary and Theo said he would use it to scope the full load, so the email states both accurately with no date invented.",
+   "utterance_ids": [
+    "U021",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "I'll send a few short lines on audit logging and unblinded access that you can forward whenever she has time.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Marta only asked 'Would it help if we wrote something up for her?' and Simone answered 'Maybe', so the email turns a tentative offer into a firm commitment nobody agreed to.",
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Dr. Okafor: you mentioned she must sign off on anything touching trial data.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email reports the CISO sign-off requirement and the uncertain commercial approvers as stated, and does not claim a decision or enthusiasm.",
+   "utterance_ids": [
+    "U002",
+    "U016",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "What we showed: nightly trial extract loads, versioned... audit trail... role grants can have an expiry date.",
+   "passed": true,
+   "severity": "low",
+   "finding": "No superseded or corrected feature appears, and no release card applies to the capabilities described.",
+   "utterance_ids": [
+    "U005",
+    "U009",
+    "U013",
+    "U015"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "Would a short check-in after Dr. Okafor has had a look work for you?",
+   "passed": false,
+   "severity": "medium",
+   "finding": "This is an undated, generic check-in that is not tied to a customer-owned process, and Simone said Dr. Okafor's calendar is unavailable until the audit is done (PB-02, PB-09).",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "evidence list and what_we_validated citations (U002, U016, U018, U020, U022, U024; U005, U007, U009, U011, U013, U015)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every excerpt is word for word from its line, and each validated item matches what Theo showed or said.",
+   "utterance_ids": [
+    "U002",
+    "U005",
+    "U007",
+    "U009",
+    "U011",
+    "U013",
+    "U015",
+    "U016",
+    "U018",
+    "U020",
+    "U022",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Economic buyer and approval threshold: not stated (Simone to find out)",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Simone only said she was unsure of the approvers and did not know the threshold; she never agreed to find out, so this invents a customer commitment.",
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Wes Hollis: send data dictionary for the full trial model, no date stated",
+   "passed": false,
+   "severity": "low",
+   "finding": "Wes said 'I can send over the data dictionary', which is an offer, yet the summary logs it as a commitment; Theo's reply only says it would help.",
+   "utterance_ids": [
+    "U021",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Low information: champion says technical fit is good but cannot move without CISO sign-off",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary pairs Simone's 'good fit technically' with her 'can't move this without Dr. Okafor' and rates the deal low information, which matches how the signal was qualified.",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "integration_patterns and what_we_validated",
+   "passed": true,
+   "severity": "low",
+   "finding": "No release card applies and the summary presents nothing as current that was corrected later in the call.",
+   "utterance_ids": [
+    "U005",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "internal_summary",
+   "target": "open_items and customer_value_line ('Ask Simone for the outcome in her words')",
+   "passed": true,
+   "severity": "low",
+   "finding": "The open items tie to this deal: the CISO path, the missing dated next meeting, the data dictionary and the unnamed economic buyer.",
+   "utterance_ids": [
+    "U016",
+    "U020",
+    "U022"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023536,
+   "latency_ms": 8603,
+   "input_tokens": 532,
+   "output_tokens": 1551,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "619154ad4d77c38fa4c28c2c93f78e061d05e1976a099950b0bb9d6b33a6db39"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023499,
+   "latency_ms": 9936,
+   "input_tokens": 398,
+   "output_tokens": 1572,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "b07df651774aaef34328653651ec7f765743bc293bb1d0b5f8884a42e2c0b3bc"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025621,
+   "latency_ms": 6223,
+   "input_tokens": 4924,
+   "output_tokens": 904,
+   "cache_read_input_tokens": 4292,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "09183766ab704f0ee03c8f32b13bf6b39ea2369e0dcbcaee4e3f41a3b4786329"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023222,
+   "latency_ms": 5181,
+   "input_tokens": 5138,
+   "output_tokens": 640,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "fe885f878ae6bb978174e61d2f5d4d3f743ecc85afba3c6a48472aaf142ce0b9"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024412,
+   "latency_ms": 6083,
+   "input_tokens": 5001,
+   "output_tokens": 780,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "4eb5f4e331ed7faf03bb41add66d1500436f4ecfd7b345c11d131910090efc08"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028602,
+   "latency_ms": 7909,
+   "input_tokens": 5013,
+   "output_tokens": 1194,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "3bfc207454474fe0b1c8df0846f44a5697e0de0232ed79ff2ea54fc7ee43e510"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.043134,
+   "latency_ms": 18859,
+   "input_tokens": 4417,
+   "output_tokens": 2768,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2350,
+   "validator_errors": [],
+   "keys": [
+    "ff32786a3dd85c96acf5a418d0965835b54ac7ce6c3e0b50a6e436adfb8654fc"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.02934,
+   "latency_ms": 12553,
+   "input_tokens": 5001,
+   "output_tokens": 1801,
+   "cache_read_input_tokens": 6642,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "e94dcaaa716e70aa9b804fb009c922b60cec17065a632dd4fbc5f8a8e0ed17ad"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.016415,
+   "latency_ms": 9117,
+   "input_tokens": 1400,
+   "output_tokens": 1240,
+   "cache_read_input_tokens": 6074,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "42c249359be795ed3044a7c63f2d0ad3e8dbdfe8ebca5c5be1cef211b7d00ec3"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018585,
+   "latency_ms": 5184,
+   "input_tokens": 5442,
+   "output_tokens": 656,
+   "cache_read_input_tokens": 5704,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "a311215a7f7ed283c92d23091e266e9e6139ff3fb936b67fc73df52e004f178c"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024183,
+   "latency_ms": 14939,
+   "input_tokens": 1219,
+   "output_tokens": 2053,
+   "cache_read_input_tokens": 6074,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "7713f1599a757d157844d1df76e5d0029feb918017e0847dd15ae95d3bf1a495"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022367,
+   "latency_ms": 7337,
+   "input_tokens": 5218,
+   "output_tokens": 1070,
+   "cache_read_input_tokens": 6155,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "0a16551e97147d3ea209de9eb256e2e5a03e1d9c49260718591539bb3a9fb4b0"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.026483,
+   "latency_ms": 15510,
+   "input_tokens": 1739,
+   "output_tokens": 2179,
+   "cache_read_input_tokens": 6074,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "864e9c7b35d75f79bc846d00ca5a9f52e6044841f00873815d87165a345f00e0"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.329399,
+ "latency_ms": 127434,
+ "wall_clock_s": 116.6,
+ "status": "ran"
+}

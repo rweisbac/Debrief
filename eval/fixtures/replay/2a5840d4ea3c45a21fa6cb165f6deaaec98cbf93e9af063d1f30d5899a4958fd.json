@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "2a5840d4ea3c45a21fa6cb165f6deaaec98cbf93e9af063d1f30d5899a4958fd",
+ "recorded_at": "2026-10-04T00:29:20.293236+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFYJ2i2vLWPi8PK3DCz",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Apex technical validation, Sept 28\",\"body\":\"Hi Frank, Ingrid and Pete,\\n\\nThanks for your time today. Here is what we covered.\\n\\nShown: the shipment tracking feed on your telematics sample, with positions updating every 30 seconds versus every 5 minutes today, and the dispatcher dashboard with late loads flagged. Late load alerts go to email or a webhook, so text messages can run through your paging tool.\\n\\nOpen: Canadian data residency. Omar will check with our hosting team and come back by Thursday, October 1st. It would help to see the contract wording on shipment data and who in legal can confirm how it applies to telematics.\\n\\nPricing: you asked for 50 seats and 400 seats. We said we can show both, and we will confirm timing separately.\\n\\nCould we set a time to review Omar's answer once you have it?\\n\\nBest,\\nLeah\",\"customer_value_line\":\"Updates every 30 seconds against today's 5 minutes move dispatch toward seeing every truck in real time.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"Positions update every 30 seconds.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"That's faster than what we get today. Today it's every 5 minutes.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Today alerts go to email or a webhook. Text would go through your own messaging tool on the webhook.\"},{\"utterance_id\":\"U027\",\"excerpt\":\"Yes, I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st.\"},{\"utterance_id\":\"U026\",\"excerpt\":\"We can show both.\"},{\"utterance_id\":\"U002\",\"excerpt\":\"They need to see every truck in real time.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7308,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5994,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 595,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

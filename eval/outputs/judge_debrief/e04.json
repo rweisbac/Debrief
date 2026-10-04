@@ -1,0 +1,259 @@
+{
+ "deal_id": "e04",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Simone cannot move the deal without Dr. Okafor, the CISO.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Simone said she can't move this without Dr. Okafor."
+  },
+  {
+   "claim": "Dr. Okafor must sign off on anything touching trial data.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Simone said so directly; CRM decision process matches."
+  },
+  {
+   "claim": "Dr. Okafor was absent from the demo because she was at a conference.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Simone said she was at a conference."
+  },
+  {
+   "claim": "Dr. Okafor's calendar is blocked until the audit is done, and her availability is unknown.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Simone said her calendar is a disaster until the audit is done and she doesn't know when she'll have time."
+  },
+  {
+   "claim": "No dated next step or next meeting was agreed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U023",
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "The call ended with no meeting date; Marta only promised a recap."
+  },
+  {
+   "claim": "Simone said the product is a good technical fit.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Simone said 'This is a good fit technically.'"
+  },
+  {
+   "claim": "Trial extract is loaded nightly and each load is versioned.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo stated this while demoing."
+  },
+  {
+   "claim": "Any version can be restored and the restore itself is logged.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo answered Wes's rollback question this way."
+  },
+  {
+   "claim": "Audit trail covers queries, exports and policy changes, with who, when and from where.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo described this."
+  },
+  {
+   "claim": "Audit trail logs reads, including user and columns returned for queries on protected tables.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo confirmed reads are logged with user and columns."
+  },
+  {
+   "claim": "Audit trail can be exported to the customer's log system.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo said it can be exported to your log system."
+  },
+  {
+   "claim": "Unblinded columns are masked for everyone except the unblinded statistics role.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo stated this directly."
+  },
+  {
+   "claim": "Role grants can have an expiry date.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo answered Wes's time-boxing question."
+  },
+  {
+   "claim": "Marta will send a recap this afternoon, 2026-09-30.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Marta said she'd send a recap this afternoon; the demo was 2026-09-30."
+  },
+  {
+   "claim": "Wes offered to send the data dictionary for the full trial model, with no date stated.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Wes offered it; no date was given."
+  },
+  {
+   "claim": "Theo will use the data dictionary to scope the full load, no date stated.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Theo said he'd use it to scope the full load."
+  },
+  {
+   "claim": "Marta offered to write something up for the CISO.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Marta asked whether a write-up would help."
+  },
+  {
+   "claim": "Simone was only lukewarm on a write-up, saying maybe, and noted the CISO doesn't read long documents.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Simone said 'Maybe' and that Okafor doesn't read long documents."
+  },
+  {
+   "claim": "Simone thinks procurement is probably involved and the VP of R and D above a size threshold, but is unsure.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Simone said she's not sure and doesn't know the threshold."
+  },
+  {
+   "claim": "The economic buyer is not named; the CRM field is blank.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM economic buyer is empty and Simone could not name a signer."
+  },
+  {
+   "claim": "Close date is 2026-12-18.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM close_date field says 2026-12-18."
+  },
+  {
+   "claim": "The customer has not stated a business outcome; discovery noted only the pain of an audit trail spread across systems.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM stated_business_outcome is empty and pains lists the audit trail."
+  },
+  {
+   "claim": "Simone Achebe is the champion and Wes Hollis is the technical evaluator.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM contacts list these roles."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.050761
+}

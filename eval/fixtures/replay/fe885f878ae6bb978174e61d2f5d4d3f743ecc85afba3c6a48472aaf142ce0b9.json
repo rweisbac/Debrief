@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "fe885f878ae6bb978174e61d2f5d4d3f743ecc85afba3c6a48472aaf142ce0b9",
+ "recorded_at": "2026-10-04T00:28:12.459573+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFTGLNHmgCrS7cZLvte",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Apex technical validation, Vela Therapeutics\",\"body\":\"Hi Simone and Wes,\\n\\nThanks for your time today. Here is what we covered.\\n\\nShown: nightly trial extract loads, versioned, with restore of any version (logged); audit trail covering reads, with the user and columns returned, exportable to your log system; unblinded columns masked except for the unblinded statistics role, with role grants that can carry an expiry date. Simone, you said this is a good fit technically.\\n\\nOpen:\\n- Wes: send the data dictionary for the full trial model. Theo will use it to scope the full load.\\n- Dr. Okafor: you said she needs to sign off on anything touching trial data. If useful, we can prepare a short one-page summary on audit logging and unblinded data access for you to forward whenever suits her.\\n- Commercial approvals: you mentioned procurement and possibly the VP of R and D, and will confirm when you know more.\\n\\nIs there a next conversation you would like us to plan around?\\n\\nMarta\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"Each load is versioned, so you can see exactly what the data looked like on any date.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Reads too. Every query against a protected table is logged with the user and the columns returned.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Role grants can have an expiry date, yes.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"This is a good fit technically.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"That would help. I'll use it to scope the full load.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Probably someone in procurement, and above a certain size it goes to the VP of R and D\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5138,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 640,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "32193d2615e7cd0552715e597530bde0db08964bac3b2f3dfac6b86a2fbfc547",
+ "recorded_at": "2026-10-04T00:32:00.377597+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFjxFQepaVBacXcn3T8",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: the provost who approves the budget was absent and Elise deferred a meeting with her, so enthusiasm came with no dated next step.\",\"customer_value_line\":\"Not stated: no business outcome was said in the call; CRM discovery notes list the pain 'Retention reporting is manual' but no stated outcome.\",\"what_we_validated\":[\"Enrollment and course data from the customer's extract joined by student ID (U003)\",\"Retention dashboard showing first year retention by college and by program (U003)\",\"Filtering by first generation students; any attribute in the student table can be a filter (U005, U006)\",\"Access controls: advisors see only their own students, deans see their college (U008)\"],\"integration_patterns\":[],\"objections_and_answers\":[\"Deferral on involving the provost: Elise said 'Eventually, sure. She's very busy this term.' No answer given and no date set. Status: open.\"],\"open_items\":[\"Privacy officer will want to see the access controls; not yet identified or engaged. Owner: Dr. Elise Martin\",\"Technology committee meeting date unknown; Kevin thinks they meet once a semester. Owner: Dr. Elise Martin ('We'll figure it out', no date)\",\"No dated next meeting agreed\",\"Business outcome in the customer's own words not yet captured\"],\"commitments\":[\"Sam Okoro: send the retention dashboard screenshots so the customer can share them; no date given\",\"Dr. Elise Martin: figure out when the technology committee meets; said in passing, no date given\"],\"stakeholders\":[\"Dr. Elise Martin, Director of Institutional Research: champion, present\",\"Kevin Tran, Data Analyst: technical evaluator, present\",\"Dr. Abernathy, Provost: owns the budget and must approve, absent\",\"Technology committee: part of the decision process, absent\",\"Privacy officer: will want to review access controls, absent, not named\"],\"competitive_notes\":[],\"risks\":[\"Economic buyer not engaged: Elise said 'Eventually' about meeting the provost, and close date is 2026-12-18\",\"Technology committee meets about once a semester with date unknown, so it could miss the close date\",\"Privacy officer is an unengaged likely reviewer\",\"Call ended with only screenshots promised: no dated next step and no business outcome\"],\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Eventually, sure. She's very busy this term.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"The provost owns the budget. Dr. Abernathy. She'd have to approve it.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I think they meet once a semester. I don't know when.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"Our privacy officer will want to see that.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the retention dashboard screenshots so you can share them.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"We'll figure it out.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4782,
+   "cache_creation_input_tokens": 2005,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2005,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 980,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

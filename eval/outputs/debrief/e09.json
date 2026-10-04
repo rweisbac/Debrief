@@ -1,0 +1,1441 @@
+{
+ "debrief_id": "e09-a0b8f707",
+ "deal_id": "e09",
+ "as_of": "2026-09-29",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "",
+   "date": "",
+   "evidence": []
+  },
+  "objections": [],
+  "open_technical_items": [],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Kofi Mensah",
+    "side": "apex",
+    "what": "Send Hugo the load summary",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Hugo Brandt",
+    "title": "IT Manager",
+    "present": true,
+    "why_they_matter": "Only attendee; sets up access, not the decision maker",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'm not really the one who decides. I just set up access."
+     }
+    ]
+   },
+   {
+    "name": "Unnamed operations decision maker",
+    "title": "Operations (name and title not stated)",
+    "present": false,
+    "why_they_matter": "Hugo says operations probably decides; person unknown",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Hugo gave only minimal acknowledgements after the load and usage view demo; no stated interest or fit confirmation.",
+    "strength": "weak",
+    "qualifier": "Said by an IT manager who is not the decision maker; 'Fine' and 'Okay' are neutral, and he did not answer whether it is close to what the team wants.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "Fine."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Sole customer attendee says he does not decide and has no named decision maker.",
+    "strength": "strong",
+    "qualifier": "Only one customer contact engaged; economic buyer unknown.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'm not really the one who decides. I just set up access."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     }
+    ]
+   },
+   {
+    "summary": "Fit question went unanswered and no next meeting was set.",
+    "strength": "moderate",
+    "qualifier": "Call ended after the load summary promise with no dated next step.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "is this close to what your team is looking for?"
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Sure."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "about 4 minutes",
+    "what_it_measures": "Time to load and partition the meter readings file by region in the demo",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "It took about 4 minutes."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Kofi committed to send the load summary; no date was given.",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     }
+    ]
+   },
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "Hugo said the right person is probably in operations, but he does not know who.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "partial",
+   "summary": "not stated",
+   "evidence": [
+    {
+     "utterance_id": "U004",
+     "excerpt": "It took about 4 minutes."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "Sole customer attendee says he does not decide and has no named decision maker.",
+   "evidence": [
+    {
+     "utterance_id": "U009",
+     "excerpt": "I'm not really the one who decides. I just set up access."
+    },
+    {
+     "utterance_id": "U011",
+     "excerpt": "Probably operations. I'm not sure who."
+    }
+   ]
+  },
+  "champion": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "missing_stakeholder",
+  "deal_state_why": "Hugo, the only attendee, says he doesn't decide and doesn't know who in operations does; no next meeting was set.",
+  "next_steps": [
+   {
+    "action": "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary he can forward to that person.",
+    "owner": "Mia Torres",
+    "due_by": "2026-09-30",
+    "playbook_rule_id": "PB-05",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "Hugo said he doesn't decide and doesn't know who does; AEs may just wait for the summary reply.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'm not really the one who decides. I just set up access."
+     }
+    ]
+   },
+   {
+    "action": "Log Kofi's load summary promise with an owner and a send date of 2026-09-30, and tell Hugo when it is sent.",
+    "owner": "Kofi Mensah",
+    "due_by": "2026-09-30",
+    "playbook_rule_id": "PB-08",
+    "release_card_id": "",
+    "action_type": "send_material",
+    "why": "No date was given, and passing commitments get dropped; a dated send also lets Hugo forward it.",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Single-threaded: Hugo was the only customer contact on the call, and no economic buyer, outcome, or next meeting is known.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "No, just me today."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "low_information",
+    "deal_state_why": "Hugo, the only attendee, says he doesn't decide and doesn't know who in operations does; no next meeting was set.",
+    "next_steps": [
+     {
+      "action": "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary he can forward to that person.",
+      "owner": "Mia Torres",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Hugo said he doesn't decide and doesn't know who does; AEs may just wait for the summary reply.",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "Probably operations. I'm not sure who."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "I'm not really the one who decides. I just set up access."
+       }
+      ]
+     },
+     {
+      "action": "Log Kofi's load summary promise with an owner and a send date of 2026-09-30, and tell Hugo when it is sent.",
+      "owner": "Kofi Mensah",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "No date was given, and passing commitments get dropped; a dated send also lets Hugo forward it.",
+      "evidence": [
+       {
+        "utterance_id": "U012",
+        "excerpt": "I'll send the load summary so you have it."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Single-threaded: Hugo was the only customer contact on the call, and no economic buyer, outcome, or next meeting is known.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "No, just me today."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "low_information",
+    "deal_state_why": "Hugo, the only attendee, says he doesn't decide and doesn't know who in operations does; no next meeting was set.",
+    "next_steps": [
+     {
+      "action": "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary he can forward to that person.",
+      "owner": "Mia Torres",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Hugo said he doesn't decide and doesn't know who does; AEs may just wait for the summary reply.",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "Probably operations. I'm not sure who."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "I'm not really the one who decides. I just set up access."
+       }
+      ]
+     },
+     {
+      "action": "Log Kofi's load summary promise with an owner and a send date of 2026-09-30, and tell Hugo when it is sent.",
+      "owner": "Kofi Mensah",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-08",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "No date was given, and passing commitments get dropped; a dated send also lets Hugo forward it.",
+      "evidence": [
+       {
+        "utterance_id": "U012",
+        "excerpt": "I'll send the load summary so you have it."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Single-threaded: Hugo was the only customer contact on the call, and no economic buyer, outcome, or next meeting is known.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "No, just me today."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: meter data load demo",
+    "body": "Hi Hugo,\n\nThanks for joining today. Kofi loaded the meter readings file you sent, partitioned by region. It took about 4 minutes. He also showed a daily usage view by region.\n\nKofi will send you the load summary so you have it.\n\nYou mentioned that operations probably makes the decision, but you are not sure who. Could you let me know who in operations we should include? No next meeting is set yet, so a time that works for you and that person would be a good next step.\n\nThanks again,\nMia",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "So this is the meter readings file you sent, loaded and partitioned by region. It took about 4 minutes."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "And here's a daily usage view by region."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: meter data load demo",
+    "body": "Hi Hugo,\n\nThanks for joining today. Kofi loaded the meter readings file you sent and partitioned it by region. It took about 4 minutes. He also showed a daily usage view by region.\n\nKofi will send you the load summary so you have it. No send date was given on the call; we will tell you when it is sent.\n\nYou mentioned that you set up access and are not the one who decides, and that operations is probably the right group. Would you be able to tell us who in operations owns meter data loads? If it helps, the load summary is written so you can forward it to them.\n\nThanks again,\nMia",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "So this is the meter readings file you sent, loaded and partitioned by region. It took about 4 minutes."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "And here's a daily usage view by region."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'm not really the one who decides. I just set up access."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[email_promises_uncommitted] Kofi committed only to sending the load summary; the email adds that it is written for forwarding and promises to tell Hugo when it is sent, neither of which was said on the call. (target: Kofi will send you the load summary so you have it... the load summary is written so you can forward it to them.; lines U012, U013)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Low information: Hugo Brandt, the only attendee, said he does not decide and does not know who in operations does; no next meeting was set.",
+    "customer_value_line": "Business outcome not stated; the only pain on file from discovery is manual meter data loads.",
+    "what_we_validated": [
+     "Meter readings file sent by the customer was loaded and partitioned by region in about 4 minutes",
+     "Daily usage view by region was shown",
+     "Hugo gave only minimal acknowledgements (Okay, Fine) and did not confirm fit"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [],
+    "open_items": [
+     "Fit question to Hugo went unanswered (owner: Mia Torres)",
+     "Decision maker in operations is unknown (owner: Mia Torres)",
+     "No dated next meeting agreed (owner: Mia Torres)",
+     "Business outcome in the customer's words not stated; ask for it (owner: Mia Torres)"
+    ],
+    "commitments": [
+     "Kofi Mensah: send Hugo the load summary; no date was stated in the call",
+     "Assessment proposes logging a send date of 2026-09-30 and telling Hugo when it is sent; this date was not said in the call"
+    ],
+    "stakeholders": [
+     "Hugo Brandt, IT Manager: present, sets up access, not the decision maker",
+     "Unnamed operations decision maker: absent, name and title not stated",
+     "Economic buyer: not stated"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Single-threaded: Hugo was the only customer contact on the call",
+     "Economic buyer unknown and decision process not discussed",
+     "Fit question unanswered and no dated next step"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'm not really the one who decides. I just set up access."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "It took about 4 minutes."
+     },
+     {
+      "utterance_id": "U002",
+      "excerpt": "No, just me today."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Low information: Hugo Brandt, the only attendee, says he does not decide and does not know who does; no next meeting was set.",
+    "customer_value_line": "Not stated: no business outcome was voiced on the call and discovery has none recorded; only pain on file is manual meter data loads.",
+    "what_we_validated": [
+     "Kofi loaded the meter readings file Hugo sent, partitioned by region, in about 4 minutes.",
+     "Kofi showed a daily usage view by region.",
+     "Hugo gave only minimal acknowledgements (Okay, Fine); he did not say whether it fits what his team wants."
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [],
+    "open_items": [
+     "Economic buyer not named; Hugo said probably operations but not who. Owner: Mia Torres.",
+     "Fit question (is this close to what your team wants) went unanswered.",
+     "No dated next meeting agreed.",
+     "Business outcome not stated; ask for it in the customer's words."
+    ],
+    "commitments": [
+     "Kofi Mensah: send Hugo the load summary; no date was given on the call (assessment proposes 2026-09-30)."
+    ],
+    "stakeholders": [
+     "Hugo Brandt, IT Manager: present, sets up access, not the decision maker.",
+     "Unnamed operations decision maker: absent, name and title not stated."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Single-threaded: Hugo was the only customer contact and he does not decide.",
+     "Economic buyer unknown and no dated next step, with close date 2026-12-18 in CRM.",
+     "Hugo's replies were neutral, so interest is not confirmed."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "I'm not really the one who decides. I just set up access."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "Probably operations. I'm not sure who."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "I'll send the load summary so you have it."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "It took about 4 minutes."
+     },
+     {
+      "utterance_id": "U002",
+      "excerpt": "No, just me today."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[dates_future_business_days] bad dates: 2026-12-18 (not a date said in the call): 2026-12-18 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "not stated",
+    "rows": [
+     {
+      "milestone": "Kofi sends Hugo the meter data load summary",
+      "customer_owner": "Hugo Brandt",
+      "apex_owner": "Kofi Mensah",
+      "target_date": "2026-09-30",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U012",
+        "excerpt": "I'll send the load summary so you have it."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "Sure."
+       }
+      ]
+     },
+     {
+      "milestone": "Hugo identifies who in operations owns meter data loads and decisions",
+      "customer_owner": "Hugo Brandt",
+      "apex_owner": "Mia Torres",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "Probably operations. I'm not sure who."
+       }
+      ]
+     },
+     {
+      "milestone": "Dated next meeting with Hugo and the operations contact to review fit and the stated business outcome",
+      "customer_owner": "",
+      "apex_owner": "Mia Torres",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "I'm not really the one who decides. I just set up access."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "not stated",
+    "rows": [
+     {
+      "milestone": "Kofi sends Hugo the meter data load summary",
+      "customer_owner": "Hugo Brandt",
+      "apex_owner": "Kofi Mensah",
+      "target_date": "2026-09-30",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U012",
+        "excerpt": "I'll send the load summary so you have it."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "Sure."
+       }
+      ]
+     },
+     {
+      "milestone": "Hugo identifies who in operations owns meter data loads and decisions",
+      "customer_owner": "Hugo Brandt",
+      "apex_owner": "Mia Torres",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "Probably operations. I'm not sure who."
+       }
+      ]
+     },
+     {
+      "milestone": "Dated next meeting with Hugo and the operations contact to review fit and the stated business outcome",
+      "customer_owner": "",
+      "apex_owner": "Mia Torres",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U009",
+        "excerpt": "I'm not really the one who decides. I just set up access."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [
+  {
+   "rule_id": "R-LOWINFO",
+   "target": "deal_state",
+   "before": "missing_stakeholder",
+   "after": "low_information",
+   "reason": "only 1 substantive customer utterances"
+  }
+ ],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-12-18 (not a date said in the call)",
+   "locations": [
+    "2026-12-18 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Email Hugo asking who in operations owns meter data loads... (U011, U009)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U009 and U011 support Hugo not deciding and operations being probably the right group with no named person.",
+   "utterance_ids": [
+    "U009",
+    "U011"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Log Kofi's load summary promise with a send date of 2026-09-30",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment states that no date was given and proposes 2026-09-30 as the date to log, so the commitment is not overstated.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state low_information; Single-threaded watch item",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats Hugo's neutral replies as low information and does not claim any buying signal.",
+   "utterance_ids": [
+    "U002",
+    "U005",
+    "U007",
+    "U009"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary",
+   "passed": false,
+   "severity": "low",
+   "finding": "Asking the contact who the right person is and forwarding a summary is fairly standard, though it is tied to Hugo's remark about operations and PB-05; it also leaves out a concrete ask such as an intro to operations.",
+   "utterance_ids": [
+    "U009",
+    "U011"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Kofi will send you the load summary so you have it... the load summary is written so you can forward it to them.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Kofi committed only to sending the load summary; the email adds that it is written for forwarding and promises to tell Hugo when it is sent, neither of which was said on the call.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Kofi loaded the meter readings file you sent and partitioned it by region. It took about 4 minutes.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U004 states the file was loaded and partitioned by region and took about 4 minutes.",
+   "utterance_ids": [
+    "U004"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Hugo's replies were neutral, so interest is not confirmed.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary correctly reads Okay, Fine and Sure as neutral acknowledgements and not as interest.",
+   "utterance_ids": [
+    "U005",
+    "U007",
+    "U013"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Kofi Mensah: send Hugo the load summary; no date was given on the call (assessment proposes 2026-09-30).",
+   "passed": true,
+   "severity": "low",
+   "finding": "The commitment is stated as given, with the absence of a date flagged.",
+   "utterance_ids": [
+    "U012"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Kofi sends Hugo the meter data load summary, target 2026-09-30, customer owner Hugo Brandt",
+   "passed": false,
+   "severity": "medium",
+   "finding": "The 2026-09-30 date was never stated on the call and Hugo's 'Sure' does not make him an owner of the milestone, so the row presents a firmer plan than what was agreed.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Hugo identifies who in operations owns meter data loads and decisions (U011)",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U011 shows Hugo does not know who in operations decides, but he never agreed to find out, so listing him as owner overstates his commitment even though the status is proposed.",
+   "utterance_ids": [
+    "U011",
+    "U009"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Evidence list (U009, U011, U012, U004, U002) and the claims they support",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is word for word from its line and supports its claim: not the decider, operations unnamed, load summary promised, about 4 minutes, sole attendee.",
+   "utterance_ids": [
+    "U009",
+    "U011",
+    "U012",
+    "U004",
+    "U002"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Kofi Mensah: send Hugo the load summary; no date was stated in the call",
+   "passed": true,
+   "severity": "low",
+   "finding": "The commitment is stated as said, with no date. The proposed 2026-09-30 send date is labelled as not said in the call, so it is not presented as a commitment.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Hugo gave only minimal acknowledgements (Okay, Fine) and did not confirm fit",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary reads Okay and Fine as non-committal and records that Hugo disclaimed decision authority. It does not inflate them into approval.",
+   "utterance_ids": [
+    "U005",
+    "U007",
+    "U008",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "internal_summary",
+   "target": "Open items: fit question unanswered; decision maker in operations unknown; no dated next meeting; business outcome not stated",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each open item comes from this call (Hugo's non-answer on fit, his 'Probably operations. I'm not sure who.', no next meeting set, no stated outcome) and has an owner, so none is generic.",
+   "utterance_ids": [
+    "U008",
+    "U009",
+    "U011",
+    "U014"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Kofi loaded the meter readings file you sent, partitioned by region. It took about 4 minutes. He also showed a daily usage view by region.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each factual claim matches the cited lines U004, U006, U011 and U012, with the number 4 minutes copied as spoken.",
+   "utterance_ids": [
+    "U004",
+    "U006",
+    "U011",
+    "U012"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Kofi will send you the load summary so you have it.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This matches Kofi's own words in U012 and adds no date or extra deliverable.",
+   "utterance_ids": [
+    "U012"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "You mentioned that operations probably makes the decision, but you are not sure who.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email keeps Hugo's hedging (probably, not sure who) and does not present his flat replies as interest or approval.",
+   "utterance_ids": [
+    "U005",
+    "U007",
+    "U009",
+    "U011",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Could you let me know who in operations we should include? No next meeting is set yet...",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email only asks Hugo for a name and says no meeting is set; it promises nothing that was not committed, apart from Kofi's load summary.",
+   "utterance_ids": [
+    "U011",
+    "U012"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Recap content overall",
+   "passed": true,
+   "severity": "low",
+   "finding": "No product capability or behavior is described, and nothing in the call was corrected later.",
+   "utterance_ids": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "a time that works for you and that person would be a good next step",
+   "passed": false,
+   "severity": "medium",
+   "finding": "The next step is an open-ended ask with no proposed date (PB-02), no owner or due date for the load summary (PB-08), and nothing specific for Hugo to bring to the unnamed operations stakeholder (PB-05).",
+   "utterance_ids": [
+    "U009",
+    "U011",
+    "U012"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.009483,
+   "latency_ms": 3772,
+   "input_tokens": 532,
+   "output_tokens": 387,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "e57505be3fe5aef75908e6d3299d2cc6ed7dcae5ba5705ab0381994959f20578"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.012736,
+   "latency_ms": 6255,
+   "input_tokens": 398,
+   "output_tokens": 737,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "53efeb925cc25e23b617acae74d4c5e9ca314f455b75f10c3a2da2fa7db6c22d"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.036946,
+   "latency_ms": 17406,
+   "input_tokens": 4975,
+   "output_tokens": 2154,
+   "cache_read_input_tokens": 9969,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "f263546ee1074e115aed091c23e9e5b8057eb0f62f131ae4047f4e8b3b848177",
+    "61eeb8a483cc11e0fab45bbde0ad4418895c3a1d1990629c5d0f3141796c5d28"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.012906,
+   "latency_ms": 3498,
+   "input_tokens": 2409,
+   "output_tokens": 389,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "256b4b21d465143b9e355d97c973689b141ac12c5f261a0da29ad992b001ba0f"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.013455,
+   "latency_ms": 3946,
+   "input_tokens": 2546,
+   "output_tokens": 423,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "6d804d17ed4709fa2a85bb010f36e0e3af586602234986fcc09736c9b90101e5"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.015976,
+   "latency_ms": 5690,
+   "input_tokens": 2421,
+   "output_tokens": 691,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "e610a1bf48a7cbae7614e99a30be171675235be18948a5d3e655ec3d962575fb"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023693,
+   "latency_ms": 9782,
+   "input_tokens": 3043,
+   "output_tokens": 1340,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 1385,
+   "validator_errors": [],
+   "keys": [
+    "2fed3117a9dde902c59df0dd8064ab0d308e33cf9f21b44c798c838cc302e46f"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.01299,
+   "latency_ms": 6073,
+   "input_tokens": 2506,
+   "output_tokens": 694,
+   "cache_read_input_tokens": 5190,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "6f26d33685c1df167a8fe34659d7c9a3e73af4f9f9d66b0cc27d429a3bfe55d3"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.017026,
+   "latency_ms": 10778,
+   "input_tokens": 1312,
+   "output_tokens": 1338,
+   "cache_read_input_tokens": 5109,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "5bd6d1265d81215d68010dc3c5ba069bf47dd63c4b944238ae100da09e747b00"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.00993,
+   "latency_ms": 3603,
+   "input_tokens": 2691,
+   "output_tokens": 360,
+   "cache_read_input_tokens": 4739,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "4f278de99d2baae7160eabc25107f726cb726eecc76bcc3c971c17737184ca20"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.015728,
+   "latency_ms": 10174,
+   "input_tokens": 893,
+   "output_tokens": 1292,
+   "cache_read_input_tokens": 5109,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "b82f18c8f4e68b092f151b11a1fa38274621ff5fd7c1255d870a2a2f1fc54fe0"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.180869,
+ "latency_ms": 80977,
+ "wall_clock_s": 73.6,
+ "status": "ran"
+}

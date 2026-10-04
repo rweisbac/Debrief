@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "53210fb12313e6d05d5534cfe5b717e48f39354326709662880ad1f17cb92160",
+ "recorded_at": "2026-10-04T00:27:26.977649+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFPuFG8Whg6AhVgiDkG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Northwind Grocers validation and next steps\",\"body\":\"Hi Maya and Carlos,\\n\\nThanks for the time this morning. Here is where we landed.\\n\\nWhat we validated: streaming inventory (point of sale and order feeds merged into one model, refreshing every 5 minutes), the store rollup across 212 stores with projected days to reorder point, and regional manager access through a row level policy on the region key, with one level of parent and child regions. Carlos, reads come from your change feed rather than the order database, and the sandbox peaked at about 40 reads a second.\\n\\nNext steps:\\n- Hannah: business case numbers for Priscilla (cost per store and the overstock reduction we modeled together) by Friday, October 2nd.\\n- Devon: change feed setup doc for your ops runbook, today.\\n- Maya: 30 minutes with Priscilla on Tuesday, October 6th at 10. Hannah and Devon will join.\\n\\nThanks again,\\nHannah\",\"customer_value_line\":\"Store managers can see on hand including open orders within minutes, which is how Northwind plans to stop shipping to stores that are already full.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"It refreshes every 5 minutes, and there's no separate streaming product involved.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"In the sandbox it peaked at about 40 reads a second.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"212 stores, each with projected days to reorder point, computed in parallel per store.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"One level of parent and child works out of the box. You described one level, so you're covered.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Yes, I'll send it by Friday the 2nd.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send you the setup doc today.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set up 30 minutes with her for Tuesday, October 6th at 10.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I'll be there with Devon.\"},{\"utterance_id\":\"U002\",\"excerpt\":\"We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5327,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5798,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 765,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

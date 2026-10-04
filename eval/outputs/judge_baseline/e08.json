@@ -1,0 +1,371 @@
+{
+ "deal_id": "e08",
+ "system": "baseline",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Lena demonstrated the inventory projection on Kestrel's data.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003",
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Lena said she would show the projection on their data and described it."
+  },
+  {
+   "claim": "The projection merges point-of-sale and open-order data on a 5-minute refresh.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Lena stated 5 minute refresh merging POS and open orders."
+  },
+  {
+   "claim": "The store rollup covers 640 stores showing days to reorder point.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Lena: 640 stores, days to reorder point by store."
+  },
+  {
+   "claim": "Rachel said the store rollup is exactly the view she needs.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel: 'That's exactly the view.'"
+  },
+  {
+   "claim": "Lena demonstrated the cost comparison approach in the demo.",
+   "category": "other",
+   "supported": false,
+   "utterance_ids": [
+    "U001",
+    "U013",
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Cost comparison was promised for later; no cost comparison was shown in the call."
+  },
+  {
+   "claim": "Kestrel already runs Lakestream for marketing data.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel said they run Lakestream for marketing data."
+  },
+  {
+   "claim": "Rachel expects leadership to ask why not expand Lakestream instead of adding a second platform.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel said leadership will ask why not expand what we have."
+  },
+  {
+   "claim": "Rachel asked for a side-by-side on Kestrel's workload including volume, refresh and all-in costs with the add-on.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel requested side by side with volume, refresh, all in costs including add on."
+  },
+  {
+   "claim": "Rachel wants the comparison before the Lakestream renewal conversation on Oct 20.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel said before renewal conversation October 20th."
+  },
+  {
+   "claim": "A 30-minute review is set for Wednesday, Oct 14.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Isaac proposed 30 minutes Oct 14; Rachel agreed."
+  },
+  {
+   "claim": "Lakestream told Rachel its add-on is cheap.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel said Lakestream told them add on is cheap."
+  },
+  {
+   "claim": "Tobias noted Lakestream previously said batch was enough and then it wasn't.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tobias said they told us batch was enough, then it wasn't."
+  },
+  {
+   "claim": "Tobias asked whether Lakestream needs its streaming add-on for this use case.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tobias asked if Lakestream would need streaming add on."
+  },
+  {
+   "claim": "Tobias is supplying the sizing inputs.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tobias offered and said he'd send event volumes."
+  },
+  {
+   "claim": "The economic buyer is not identified; the CRM field is blank and no stakeholder was added.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM economic_buyer and stakeholder_to_add are empty."
+  },
+  {
+   "claim": "Approval sits with leadership for a second platform.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM decision process and Rachel's leadership remark support this."
+  },
+  {
+   "claim": "Lakestream's renewal conversation is Oct 20, 6 days after the Oct 14 review.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Dates stated; 6 day gap follows."
+  },
+  {
+   "claim": "The comparison cannot be built until Tobias sends event volumes.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Lena: will build once she has the volumes."
+  },
+  {
+   "claim": "Lena said the comparison would be ready about a week after Tobias sends volumes.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Lena: about a week after volumes sent."
+  },
+  {
+   "claim": "Apex has not seen Lakestream pricing.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U007",
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No pricing discussed; follows from transcript."
+  },
+  {
+   "claim": "Lena's claim that Lakestream needs the add-on comes from public docs and is unverified for Kestrel.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Lena said understanding from public docs."
+  },
+  {
+   "claim": "Kestrel's required refresh rate was not stated.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel mentioned 'our refresh' without a number."
+  },
+  {
+   "claim": "There are only two contacts, and no phone numbers are on file.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM lists two contacts with empty phones."
+  },
+  {
+   "claim": "Tobias will send hourly event volumes on Oct 1.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tobias said tomorrow; call was Sept 30."
+  },
+  {
+   "claim": "Lena will build the cost comparison by roughly Oct 8, an inferred date.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Date derived from a week after Oct 1; output labels it inferred."
+  },
+  {
+   "claim": "Isaac will send the calendar invite for the review.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Isaac: I'll send the invite."
+  },
+  {
+   "claim": "Rachel confirmed attending the Oct 14 review.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Rachel: the 14th works."
+  },
+  {
+   "claim": "Lena should ask Kestrel for the required refresh interval and any Lakestream add-on quote.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Recommended action; no factual assertion beyond the call that is unsupported."
+  },
+  {
+   "claim": "Isaac should follow up with Tobias if volumes haven't arrived by Oct 2.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Recommendation, consistent with Tobias promising Oct 1."
+  },
+  {
+   "claim": "The email says Lena expects the comparison about a week after volumes arrive and aims to share it ahead of the review.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches Lena's estimate; sharing before Oct 14 is consistent."
+  },
+  {
+   "claim": "The email states Tobias mentioned sending volumes tomorrow (Oct 1).",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Tobias said he'd send tomorrow."
+  },
+  {
+   "claim": "Isaac will send an invite for Wednesday, October 14, ahead of the Oct 20 Lakestream renewal.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U019",
+    "U020",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Dates and invite promise stated."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.043805
+}

@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "ee794f7ef60b8617a2f0fa50a04bba86e99e6fecb94421fd6d134577be91494f",
+ "recorded_at": "2026-10-04T00:30:31.083767+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFdQiBGZstJCkhTxQuu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Summit Health Plans technical validation and next dates\",\"body\":\"Hi Monica and Sanjay,\\n\\nThanks for your time this morning. Here is what we covered and what comes next.\\n\\nValidated: the single tenant US region setup with encryption at rest and in transit, and customer-held keys in your cloud key service. Support access requires a ticket and your approval, with every session logged in your audit trail. On your sample, claims matched to members at a 99.2 percent match rate, with unmatched rows in an exceptions table, and the cost trend by plan updates daily.\\n\\nNext steps:\\n- Andre: SOC 2 report and pen test summary today, and the data flow diagram by Friday, October 9th.\\n- Sanjay: security questionnaire today.\\n- Sanjay's review board meets Thursday, October 22nd. With everything in by October 14th, Summit is on that agenda.\\n- Monica: bring in Daniel from finance for commercials after the board.\\n\\nMonica, who signs on the finance side is not yet clear to us. Could you let me know?\\n\\nBest,\\nGrace\",\"customer_value_line\":\"Daily cost trend by plan speaks to Monica's point that actuaries see the trend six weeks late today.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"You can hold your own keys in your cloud key service.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"Support access requires a ticket and your approval, and every session is logged in your audit trail.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"The match rate on your sample was 99.2 percent.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"Daily is the whole point. Our actuaries see the trend six weeks late today.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"I'll send both today under the NDA you already signed.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll do the data flow diagram and send it by Friday, October 9th.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I'll send the questionnaire today.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4547,
+   "cache_creation_input_tokens": 2212,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2212,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 794,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

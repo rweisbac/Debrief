@@ -1,0 +1,383 @@
+{
+ "deal_id": "e03",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Canadian data residency is unresolved; Frank cites contracts and Ingrid disagrees.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U015",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Frank and Ingrid disagree and Omar declined to answer without checking."
+  },
+  {
+   "claim": "Omar owes a residency answer by October 1.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U027"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar said he'd come back by Thursday, October 1st; CRM matches."
+  },
+  {
+   "claim": "No economic buyer was named.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM economic_buyer is blank and no one named who signs."
+  },
+  {
+   "claim": "No dated next meeting was agreed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U023",
+    "U026",
+    "U027"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No follow-up meeting date was set; CRM dated_next_step empty."
+  },
+  {
+   "claim": "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Recommended action grounded in the contract dispute; nothing claimed as agreed."
+  },
+  {
+   "claim": "Frank and Ingrid contradict each other on whether the contracts cover telematics.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Frank says Canadian contracts require it; Ingrid says it doesn't apply to telematics."
+  },
+  {
+   "claim": "No one named who signs for this purchase.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No line names a signer; CRM economic_buyer empty."
+  },
+  {
+   "claim": "Pricing for two seat counts will start commercial talk before any buyer touchpoint.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U024",
+    "U025",
+    "U026"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Both seat counts were requested and no buyer was named; the inference is reasonable."
+  },
+  {
+   "claim": "Frank and Ingrid disagree on whether finance is a user, driving 50 versus 400 seats.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U007",
+    "U008",
+    "U009",
+    "U024",
+    "U025"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Frank doubts finance needs it, Ingrid says they asked; seat counts differ."
+  },
+  {
+   "claim": "The tracking feed ran on the customer's telematics sample, updating positions every 30 seconds.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar said the sample was loaded in the sandbox with 30 second updates."
+  },
+  {
+   "claim": "Positions update every 5 minutes today.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Pete said today it is every 5 minutes; CRM pain agrees."
+  },
+  {
+   "claim": "The dispatcher dashboard flags late loads in red with drill-in to any truck.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar stated this while showing the dashboard."
+  },
+  {
+   "claim": "Late load alerts go to email or a webhook; text runs through the customer's own paging tool.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U021",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar described email or webhook; Pete said their paging tool takes webhooks."
+  },
+  {
+   "claim": "Omar will check with the hosting team on Canadian residency.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U027"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar said he'd check with the hosting team."
+  },
+  {
+   "claim": "The hosting shown is a US region by default with backups in the same region.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U011"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar said the tenant defaults to a US region with same-region backups."
+  },
+  {
+   "claim": "Frank said real time is non negotiable and dispatch needs to see every truck in real time.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Frank said both in these lines; CRM outcome matches."
+  },
+  {
+   "claim": "Frank said this is what dispatch needs.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote of Frank in U006."
+  },
+  {
+   "claim": "Half of Frank's loads are Canadian, and Canadian contracts say shipment data stays in Canada.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Frank said it; Ingrid disputed it and it remains unconfirmed."
+  },
+  {
+   "claim": "Ingrid said legal looked at residency last year and it does not apply to telematics.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Ingrid stated it, Frank contradicted it."
+  },
+  {
+   "claim": "Omar mentioned a Canadian region on the roadmap.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Omar said so while declining to guess on current availability."
+  },
+  {
+   "claim": "Ingrid said daily refresh would be enough for most of what IT reports on.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ingrid said it; Frank replied dispatch needs real time."
+  },
+  {
+   "claim": "Ingrid expects 400 seats in year one.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ingrid said we're looking at 400 seats in year one."
+  },
+  {
+   "claim": "Frank wants 50 seat pricing.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Frank asked for pricing for 50 seats."
+  },
+  {
+   "claim": "Leah committed to show pricing for both 50 and 400 seats, no date stated.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U026"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Leah said we can show both; no date was given, and the output says so."
+  },
+  {
+   "claim": "Leah framed it as two use cases with different freshness needs.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Leah said it sounds like two use cases with different freshness needs."
+  },
+  {
+   "claim": "The recap says we said we can show both pricing options and will confirm timing separately.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U026"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Leah said we can show both; timing confirmation is a mild forward-looking addition with no date."
+  },
+  {
+   "claim": "Frank Delacroix is the champion, present; Ingrid and Pete are technical evaluators, present.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM contacts list these roles and all three spoke in the call."
+  },
+  {
+   "claim": "Finance is absent from the call and a possible additional user group.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007",
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Ingrid said finance asked about it; Frank doubts they need it."
+  },
+  {
+   "claim": "Legal reviewed residency last year and is absent from the call.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ingrid said legal looked at it last year; legal didn't speak."
+  },
+  {
+   "claim": "Decision process was not discussed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM discovery notes say not discussed; none in the call."
+  },
+  {
+   "claim": "The customer must align internally on 50 versus 400 seats, with owner and date not stated.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U024",
+    "U025"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Seat counts conflict; the output marks owner and date as not stated."
+  },
+  {
+   "claim": "Mutual action plan: Frank Delacroix to name who signs and Leah to set a dated next meeting, no date.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Nobody agreed to this in the call; marked as proposed, so it is not an overstated commitment."
+  },
+  {
+   "claim": "Omar's hosting answer is marked agreed in the plan with date 2026-10-01.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U027",
+    "U028"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Omar committed to October 1st and Frank said Good."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.054217
+}

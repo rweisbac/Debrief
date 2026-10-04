@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6dc30da6d81b96fa3d9832ac575914c806970e2c5b5c3f0775ae6bce7aa88483",
+ "recorded_at": "2026-10-04T00:32:05.632186+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFkD86tPkjqXcSjtvSZ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: signature by end of month is conditional on a board technology committee exception Neil is not certain of; otherwise after the November board meeting.\",\"customer_value_line\":\"Amira said the loss ratio report is monthly today and daily would change how they reprice (U008).\",\"what_we_validated\":[\"Policy pricing model shown on the customer's policy extract, with versioned rating factors (U004)\",\"Side-by-side run of two models for any date range, in response to the actuaries' comparison need (U006)\",\"Claims dashboard with loss ratio by line and by region, refreshed daily (U007)\",\"Governance: rating factors changeable only by the pricing committee role, every change logged; Neil said this is what the regulator asks about (U009, U010)\"],\"integration_patterns\":[],\"objections_and_answers\":[\"Board technology committee approval: Amira said purchases over 300 thousand went through it last year. No Apex answer given. Neil said end of month only with an exception, otherwise after the November meeting. Status: open (U013, U014, U016)\"],\"open_items\":[\"Mid term endorsements not shown in the demo; Amira needs to see them. Owner: Rosa Medina (U017, U018)\",\"Board committee requirements and date not known; no one has asked what the committee needs. Owner: not assigned\",\"CRM says Signature by Oct 30 but Neil made it conditional; CRM close date is 2026-12-18. Needs reconciling with Neil\",\"No dated next meeting agreed with the customer\"],\"commitments\":[\"Rosa Medina: set up mid term endorsements demo and send a recording by Tuesday, October 6th (U018)\",\"Victor Hayes: send the order form and a recap today, 2026-10-01 (U020)\"],\"stakeholders\":[\"Neil Patterson, Chief Data Officer, champion and listed as economic buyer in CRM, present; signing depends on the board\",\"Amira Saleh, Analytics Manager, technical evaluator, present; raised the board requirement and the endorsements gap\",\"Board technology committee, absent; approval needed for purchases over 300 thousand, meets in November\",\"Actuaries, absent; will want to compare the new model to the current model (U005)\"],\"competitive_notes\":[],\"risks\":[\"End-of-month signature depends on a board exception Neil is unsure he can get (U014, U016)\",\"Order form requested before the board path is understood; CRM Oct 30 signature step may be wrong\",\"Mid term endorsements gap open until the recording is sent\",\"No dated next meeting agreed\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"I've mostly made up my mind. We'll sign by end of month.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Today the loss ratio report is monthly. Daily would change how we reprice.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"I think I can get it approved before that, but I'm not certain.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Let's say end of month if I can get an exception, otherwise after the November meeting.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set that up and send a recording by Tuesday, October 6th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the order form and a recap today.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5579,
+   "cache_creation_input_tokens": 2097,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2097,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1134,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

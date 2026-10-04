@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "31ea69f24a38a3f051c6258a0dc8fa7e23234eb0b607d5f0406913c57a482dc5",
+ "recorded_at": "2026-10-04T00:29:34.938937+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFZMqRQkyfV61PeJFPW",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Calder Bank technical validation, September 29\",\"body\":\"Hi Gregor and Tamsin,\\n\\nThanks for your time today. Here is what we covered.\\n\\nShown on your sample data: column level lineage for the loan book model, a masking policy on borrower name and national ID, and the warehouse connector, which syncs continuously at about a minute end to end.\\n\\nOpen items:\\n- Stored procedures: Tamsin, most of yours are dynamic, so Sofia will try to run a couple through our parser. No timing is promised yet. Sofia will send you a short write-up of what she needs from you.\\n- Data dictionary: Gregor, you will try to find it so we can scope the full model. If a partial export is easier, tell us and we will size the request.\\n\\nNo next meeting is set. Gregor, you will ping me once the quarter close is clearer, and I will wait for your note.\\n\\nBen\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"This is column level lineage for the loan book model you sent.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"It syncs continuously now, about a minute end to end.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Then I'll see if I can get a couple of them run through our parser.\"},{\"utterance_id\":\"U024\",\"excerpt\":\"And I'll write up the stored procedure question so it's clear what I need from Tamsin.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"I'll try to dig it up.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"Not yet. Let me see how things shake out first and I'll ping you.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5750,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5760,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 557,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

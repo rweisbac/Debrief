@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "bb3e21d65d48f0e571305587b03c2219ee496c7f5c0c060c56f4357b60124735",
+ "recorded_at": "2026-10-04T00:30:58.940370+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFfX6xBqxRiwz1bC1NE",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"internal_summary\",\"target\":\"Evidence excerpts U002, U011, U013, U017, U018, U019, U020\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt appears word for word in its cited line and supports the point it is attached to.\",\"utterance_ids\":[\"U002\",\"U011\",\"U013\",\"U017\",\"U018\",\"U019\",\"U020\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"internal_summary\",\"target\":\"Lena Fischer: build the comparison once volumes arrive, 'about a week after Tobias sends the volumes'; no fixed date was said\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary keeps Lena's commitment conditional on the volumes and flags that no fixed date was given; Tobias's 'tomorrow' and Isaac's invite are also stated as said.\",\"utterance_ids\":[\"U015\",\"U017\",\"U018\",\"U020\",\"U022\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"internal_summary\",\"target\":\"Rachel Kim said the store rollup is 'exactly the view'... her open question is cost.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary ties the enthusiasm to the view only and notes that cost remains open, with leadership risk and no economic buyer recorded.\",\"utterance_ids\":[\"U011\",\"U013\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"internal_summary\",\"target\":\"Point of sale and open orders merged into one model with a 5 minute refresh (RC-10)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The 5 minute refresh matches RC-10 and U004, and no superseded behavior is presented as current.\",\"utterance_ids\":[\"U004\"]},{\"check\":\"generic_step\",\"artifact\":\"internal_summary\",\"target\":\"Who approves a second platform: not named; Rachel to be asked (Isaac Morgan)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The open items are tied to Kestrel's workload, the missing signer, and Lena's dependency on volumes, and none is a generic check-in.\",\"utterance_ids\":[\"U013\",\"U014\",\"U015\",\"U019\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 2022,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5958,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 721,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

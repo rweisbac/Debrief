@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "4f278de99d2baae7160eabc25107f726cb726eecc76bcc3c971c17737184ca20",
+ "recorded_at": "2026-10-04T00:31:03.628168+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFfzZwUBmRJ2Bwws74M",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: meter data load demo\",\"body\":\"Hi Hugo,\\n\\nThanks for joining today. Kofi loaded the meter readings file you sent, partitioned by region. It took about 4 minutes. He also showed a daily usage view by region.\\n\\nKofi will send you the load summary so you have it.\\n\\nYou mentioned that operations probably makes the decision, but you are not sure who. Could you let me know who in operations we should include? No next meeting is set yet, so a time that works for you and that person would be a good next step.\\n\\nThanks again,\\nMia\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"So this is the meter readings file you sent, loaded and partitioned by region. It took about 4 minutes.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"And here's a daily usage view by region.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send the load summary so you have it.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Probably operations. I'm not sure who.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 2691,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 4739,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 360,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

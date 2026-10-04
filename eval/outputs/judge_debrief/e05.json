@@ -1,0 +1,447 @@
+{
+ "deal_id": "e05",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Privacy team's consent decision on joining viewing logs to subscriber records could kill attribution.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U043",
+    "U045"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Doug said it might kill the whole attribution piece but did not know; output hedges it."
+  },
+  {
+   "claim": "No owner or date is known for the privacy team's consent decision.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U043",
+    "U045"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "No owner or date was stated for the privacy decision."
+  },
+  {
+   "claim": "Ann is not yet confirmed as signer.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U066"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Ann was only described as data budget owner; CRM economic buyer is empty."
+  },
+  {
+   "claim": "Nia should send Doug a one-paragraph consent-flag note by 2026-10-02 for his privacy team to review.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [
+    "U044"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Nia never committed to this note or date; she only explained the consent flag filter."
+  },
+  {
+   "claim": "Doug downplayed the consent issue as 'could be nothing' but said it might kill attribution.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U043",
+    "U045"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said it could be nothing and might kill the whole attribution piece."
+  },
+  {
+   "claim": "Ryan should email Doug by 2026-10-05 asking what outcome Ann cares about and whether Ann signs.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Nobody committed to this email or the 2026-10-05 date; it is a recommendation presented with a firm date."
+  },
+  {
+   "claim": "CRM business outcome was prefilled from discovery, not said on the call.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM shows prefilled_from_discovery true and edited false; no outcome statement appears in the transcript."
+  },
+  {
+   "claim": "Nobody said Ann signs.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U066"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ann was described only as owning the data budget; no one said she signs."
+  },
+  {
+   "claim": "Doug's past vendor promised real time that turned out to be every six hours.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said real time meant every six hours."
+  },
+  {
+   "claim": "The past vendor's account manager left and customer never heard from anyone again.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said the account manager left two months in and no one followed up."
+  },
+  {
+   "claim": "Dedupe took about 11 minutes for 380 million events on the customer's sample day.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia stated about 11 minutes for 380 million events."
+  },
+  {
+   "claim": "Karen said attribution numbers looked about right at the 14 day window.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U038",
+    "U039",
+    "U040"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Karen's current window is 14 days; Nia switched to it and Karen said the numbers looked about right."
+  },
+  {
+   "claim": "Luis saw failure alerts with a single automatic retry before anything pages him.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U058"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said the job retries the failed step once before alerting."
+  },
+  {
+   "claim": "Ryan will send a one pager for Ann by Wednesday, October 7th.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U067",
+    "U068",
+    "U070",
+    "U071"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ryan committed to the one pager by Oct 7 and Doug agreed."
+  },
+  {
+   "claim": "Nia will send the dedupe config and a note on late events tomorrow.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U072",
+    "U073"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said she'd send both tomorrow; call date is Oct 1."
+  },
+  {
+   "claim": "Karen will send a list of the 60 segments marking SQL versus spreadsheet.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U075"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Karen offered to send the list so they can see SQL vs spreadsheet."
+  },
+  {
+   "claim": "Privacy team's view on joining viewing logs for opted out people is an open item.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U043",
+    "U044",
+    "U045"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Nia said whether the join is allowed is the privacy team's call; unresolved."
+  },
+  {
+   "claim": "Nia can filter on a consent flag at ingestion so opted out records never get joined.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U044"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia stated this directly."
+  },
+  {
+   "claim": "Nia mentioned an aggregate only agency view she could set up if they move to a pilot.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U049"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said she'd set up the aggregate only view as part of the pilot."
+  },
+  {
+   "claim": "No pilot has been agreed yet.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U062",
+    "U063",
+    "U064",
+    "U065",
+    "U066"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No pilot agreement appears anywhere in the call; next steps concern budget and a one pager."
+  },
+  {
+   "claim": "Business outcome was not stated on the call.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug described the four hour job pain but never stated a business outcome; the CRM value is from discovery."
+  },
+  {
+   "claim": "Doug said the current job takes four hours on a good day and fails on bad days.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said four hours on a good day and it falls over on bad days."
+  },
+  {
+   "claim": "Custom segments work as tables; any segment definable in SQL works.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U028"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said segments are just tables and any SQL-definable segment works."
+  },
+  {
+   "claim": "Karen said the manual refresh for spreadsheet segments is fine.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U030",
+    "U031"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said manual refresh; Karen replied that's fine."
+  },
+  {
+   "claim": "Spreadsheet-defined segments would be loaded as reference tables with a manual refresh.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U030"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said they'd load the spreadsheets as reference tables with manual refresh."
+  },
+  {
+   "claim": "Failure alerts route to the customer's on call tool.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U058"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said failure alerts go to your on call tool."
+  },
+  {
+   "claim": "Past vendor story was an anecdote with no direct objection to Apex and no answer given; status open.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U021",
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Doug told the story without objecting to Apex; Ryan only joked in response."
+  },
+  {
+   "claim": "Nia's dedupe config commitment is not yet logged in CRM sc_commitment.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM sc_commitment value is empty."
+  },
+  {
+   "claim": "Nia committed to set up the aggregate-only agency view as part of the pilot, no date.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U049"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said she'd set it up as part of the pilot; no date given."
+  },
+  {
+   "claim": "Doug will talk to Ann about budget before November planning.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U066"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said he needs to talk to Ann and wants something before November planning."
+  },
+  {
+   "claim": "Ann owns next year's data budget and was absent from the call.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U066"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said Ann owns the data budget; she did not speak on the call."
+  },
+  {
+   "claim": "Privacy team decides on the consent join and is absent.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U044"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nia said the join is a call for the privacy team; none attended."
+  },
+  {
+   "claim": "Doug's overall positivity was discounted by himself because he liked the last vendor too.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U063"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug said he liked it but also liked the last vendor, so take it with a grain of salt."
+  },
+  {
+   "claim": "No meeting with Ann is set.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U066",
+    "U070"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Only a one pager for Ann was agreed; no meeting was scheduled."
+  },
+  {
+   "claim": "Karen said she likes the segment piece a lot because her team would use it every day.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U064"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Karen said this directly."
+  },
+  {
+   "claim": "Ryan Castellano commits to Doug Whitfield that Apex will do the Ann one pager, with Doug as the customer owner.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U066",
+    "U068",
+    "U070",
+    "U071"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Doug requested the one pager and agreed to Oct 7."
+  },
+  {
+   "claim": "The mutual action plan lists Nia as Apex owner of Karen's segment list and of the privacy team decision.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [
+    "U075",
+    "U044"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": true,
+   "why": "Nia took no ownership of either; Karen offered the list and privacy decision belongs to the customer's team."
+  },
+  {
+   "claim": "Nia would set up the agency view as part of the pilot with Karen as customer owner.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U047",
+    "U048",
+    "U049"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Nia said she'd set it up for Karen's agency need; the plan marks it proposed."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.058839
+}

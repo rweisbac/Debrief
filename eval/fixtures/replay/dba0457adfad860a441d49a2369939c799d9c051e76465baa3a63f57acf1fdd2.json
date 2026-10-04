@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "dba0457adfad860a441d49a2369939c799d9c051e76465baa3a63f57acf1fdd2",
+ "recorded_at": "2026-10-04T00:32:28.445440+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFnBb8rL1oMqSvHRBxC",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: crane telemetry demo and next steps\",\"body\":\"Hi Henrik and Yuki,\\n\\nThanks for your time today. Here is where we landed.\\n\\nWhat we saw: on the shared sandbox, crane telemetry at about 15 thousand events a second at peak had a median end to end latency of 1.4 seconds and a 99th percentile of 3.8 seconds. Henrik, we agree the 99th percentile is the issue for operators.\\n\\nOpen items:\\n- Mateo will run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\\n- Yuki will send a sample file of the port community system vessel message format today. Mateo has not seen that format yet, so we cannot confirm we can read it until he reviews it.\\n\\nNext meeting: Monday, October 12th, 9 am your time, to review the dedicated cluster results. I will send the invite.\\n\\nPlease tell us if anything here is off.\\n\\nOlivia\",\"customer_value_line\":\"The dedicated cluster test is meant to show whether crane operators can get data in under 2 seconds, which is the outcome you described.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"Crane operators need data in under 2 seconds.\"},{\"utterance_id\":\"U003\",\"excerpt\":\"The 99th percentile was 3.8 seconds.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"I haven't seen that format. Can you send a sample file?\"},{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send one today.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Yes. Monday, October 12th, 9 am our time.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Booked. I'll send the invite.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5165,
+   "cache_creation_input_tokens": 2026,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2026,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 646,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

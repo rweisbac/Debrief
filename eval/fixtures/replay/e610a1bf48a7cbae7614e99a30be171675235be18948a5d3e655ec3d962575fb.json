@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e610a1bf48a7cbae7614e99a30be171675235be18948a5d3e655ec3d962575fb",
+ "recorded_at": "2026-10-04T00:30:33.359000+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFdcYproB4a9ZksM28v",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: Hugo Brandt, the only attendee, says he does not decide and does not know who does; no next meeting was set.\",\"customer_value_line\":\"Not stated: no business outcome was voiced on the call and discovery has none recorded; only pain on file is manual meter data loads.\",\"what_we_validated\":[\"Kofi loaded the meter readings file Hugo sent, partitioned by region, in about 4 minutes.\",\"Kofi showed a daily usage view by region.\",\"Hugo gave only minimal acknowledgements (Okay, Fine); he did not say whether it fits what his team wants.\"],\"integration_patterns\":[],\"objections_and_answers\":[],\"open_items\":[\"Economic buyer not named; Hugo said probably operations but not who. Owner: Mia Torres.\",\"Fit question (is this close to what your team wants) went unanswered.\",\"No dated next meeting agreed.\",\"Business outcome not stated; ask for it in the customer's words.\"],\"commitments\":[\"Kofi Mensah: send Hugo the load summary; no date was given on the call (assessment proposes 2026-09-30).\"],\"stakeholders\":[\"Hugo Brandt, IT Manager: present, sets up access, not the decision maker.\",\"Unnamed operations decision maker: absent, name and title not stated.\"],\"competitive_notes\":[],\"risks\":[\"Single-threaded: Hugo was the only customer contact and he does not decide.\",\"Economic buyer unknown and no dated next step, with close date 2026-12-18 in CRM.\",\"Hugo's replies were neutral, so interest is not confirmed.\"],\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"I'm not really the one who decides. I just set up access.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Probably operations. I'm not sure who.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send the load summary so you have it.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"It took about 4 minutes.\"},{\"utterance_id\":\"U002\",\"excerpt\":\"No, just me today.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 2421,
+   "cache_creation_input_tokens": 1385,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 1385,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 691,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

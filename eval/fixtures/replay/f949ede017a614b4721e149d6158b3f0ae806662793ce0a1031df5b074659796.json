@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f949ede017a614b4721e149d6158b3f0ae806662793ce0a1031df5b074659796",
+ "recorded_at": "2026-10-04T00:30:25.408485+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFcrJ2UpQJXNJoh1eaG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: legal needs written EU hosting confirmation, and a CFO spend freeze needs a finance exception check; both are customer-owned and undated.\",\"customer_value_line\":\"Business outcome not stated in the call in Petra's words; she only said plant managers get downtime in a weekly spreadsheet today and will love the dashboard. The CRM outcome was prefilled from discovery.\",\"what_we_validated\":[\"Line 3 sensor readings, about 2 thousand readings a second, land in under 10 seconds.\",\"Downtime dashboard classifies each stoppage by cause and shows minutes lost per shift.\",\"Quality model learned from 18 months of defect records, about 900 defect batches.\"],\"integration_patterns\":[\"Line 3 controller sensor readings land in Apex; pilot would run on line 3, with Milan arranging controller access.\"],\"objections_and_answers\":[\"EU data: legal won't accept a processor storing data outside the EU. Jonas said the tenant can be pinned to Frankfurt including backups, contract wording to be confirmed with Apex compliance. Partially resolved; legal wants it in writing.\",\"Spend freeze: CFO froze new software spend until the second quarter, contract before April unlikely, pilot is fine. No answer given. Open; Petra unsure an exception applies and must check with finance.\"],\"open_items\":[\"Written EU hosting and contract wording from Apex compliance for customer legal; owner Jonas Weber; undated and not logged.\",\"Whether Apex replaces the historian license renewing in March: Petra unsure, Milan thinks it might; Petra to check with finance; no date.\",\"Economic buyer not named and decision process not discussed.\",\"No dated next meeting was agreed.\"],\"commitments\":[\"Jonas Weber (Apex): send pilot plan with success criteria by Monday, October 5th.\",\"Jonas Weber (Apex): confirm exact EU hosting contract wording with Apex compliance; no date stated.\",\"Milan Horak (customer): controller access sorted by Friday, October 9th.\",\"Petra Novak (customer): check with finance on an exception; no date stated.\"],\"stakeholders\":[\"Petra Novak, Head of Manufacturing Analytics, champion, present.\",\"Milan Horak, Plant Systems Engineer, technical evaluator, owns controller access, present.\",\"CFO, froze new software spend until Q2, absent.\",\"Legal team, requires EU-only data storage in writing, absent.\",\"Finance, could approve an exception, absent.\"],\"competitive_notes\":[],\"risks\":[\"CRM close date is 2026-12-18, but Petra said a contract before April is unlikely because of the spend freeze.\",\"Legal's EU requirement is unconfirmed in writing.\",\"Exception path is uncertain: Petra and Milan disagree on whether anything is replaced.\",\"Positive reactions were enthusiasm, not decisions; no economic buyer involved.\"],\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"our CFO froze new software spend until the second quarter. So the pilot is fine but a contract before April is unlikely.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"Our legal team told us last week they won't accept a processor that stores data outside the EU.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"The exact contract wording I'd confirm with our compliance team.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"And I'll send the pilot plan with the success criteria by Monday, October 5th.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Yes, I'll get the controller access sorted by Friday, October 9th.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"The plant managers will love this. Today they get this in a weekly spreadsheet.\"},{\"utterance_id\":\"U023\",\"excerpt\":\"It might replace the old historian license. That renews in March.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7609,
+   "cache_creation_input_tokens": 2408,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2408,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1288,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

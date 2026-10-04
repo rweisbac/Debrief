@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "3de3caece26e4595b7df3b1e6640a80bf16c284895a12f59bb83baa7af63628a",
+ "recorded_at": "2026-10-04T00:32:16.799385+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFkzoDeP3TCpgLgq4PB",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: nested role claims are not supported in GA, SSO is Fatima's gate, and the next-quarter date Ana mentioned is unconfirmed.\",\"customer_value_line\":\"Business outcome not stated; the only pain is a current usage job of about 5 hours, which is a fact and not an outcome.\",\"what_we_validated\":[\"Usage pipeline on the customer's network usage data: about 1.2 billion rows a day, loaded incrementally, last night's run took 22 minutes vs their current job of about 5 hours (U013, U014).\",\"Warehouse connector is continuous, about 1 minute end to end (hourly was old behavior, per Ana's correction) (U017).\"],\"integration_patterns\":[\"Customer's own OIDC provider sends roles in a nested claim called net_groups, an object with region and role (U003, U004).\",\"Network usage data loads incrementally into Apex, then syncs to the customer's BI tool through the warehouse connector (U013, U017).\"],\"objections_and_answers\":[\"Fatima: nested net_groups claim does not work today, and she needs it in writing for the architecture board. Answer given: Ana said nested is coming next quarter per product and she'd get the exact date; Derek offered preview access. Status: open. Per RC-09, nested claims are in private preview with no announced GA date, so the next-quarter claim and preview access are unverified (U005, U007, U009, U010, U011).\"],\"open_items\":[\"Nested claims date: unconfirmed, owner Ana Petrov; confirm with the identity team before any date goes in writing (RC-09) (U009).\",\"Written SSO design covering the nested net_groups claim, owner Ana Petrov, for the architecture board (U020).\",\"Preview program access offered by Derek with no confirmation the customer is eligible (U010).\",\"Business outcome not stated; ask Fatima and Colin for it.\",\"Economic buyer not named.\"],\"commitments\":[\"Ana Petrov: send the written SSO design by Friday, October 9th (U021).\",\"Derek Shaw: send the nested claims date along with the SSO design, by October 9th (U022).\",\"Ana Petrov: get Fatima the exact nested claims date, no day given (U009).\"],\"stakeholders\":[\"Fatima Zahid, Director of Identity and Access, champion, present (U002).\",\"Colin Byrne, Principal Data Engineer, technical evaluator, present, had a hard stop (U012).\",\"Architecture board, approves the SSO design, absent; meets monthly, next on November 3rd (U020).\"],\"competitive_notes\":[],\"risks\":[\"SSO is the gate and roles arrive in a nested claim that GA does not support (U002, U006).\",\"Ana's next-quarter reassurance and Derek's preview offer lack basis; RC-09 says no GA date is announced. If put in writing they could fail the board review (U007, U010).\",\"The board meets monthly, next on November 3rd, so a miss could put the December 18 close at risk.\",\"No dated follow-up call was agreed; November 3rd is only the board's meeting date (U020).\"],\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"Today our claim mapping takes flat claims. A string or a list of strings.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"But nested claims are coming next quarter, so you'd be covered by the time you go live.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"That's what I've heard from the product team. I'll get you the exact date.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"And we can get you into the preview program before that, I'm sure.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Last night's run took 22 minutes.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Our current job is about 5 hours.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Sorry, correction. The connector is continuous now, about 1 minute end to end.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"They meet monthly, next on November 3rd.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send the SSO design by Friday, October 9th.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"And I'll send the nested claims date along with it.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5855,
+   "cache_creation_input_tokens": 2208,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2208,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1410,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

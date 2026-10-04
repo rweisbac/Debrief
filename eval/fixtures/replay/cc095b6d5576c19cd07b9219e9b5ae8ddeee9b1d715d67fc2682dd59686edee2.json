@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "cc095b6d5576c19cd07b9219e9b5ae8ddeee9b1d715d67fc2682dd59686edee2",
+ "recorded_at": "2026-10-04T00:28:54.818524+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFWQ533T6cQZruB7vC2",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Harbor Freightways technical validation\",\"body\":\"Hi Frank, Ingrid and Pete,\\n\\nThanks for your time today. Here is what we covered.\\n\\nValidated: In the sandbox with your telematics sample, positions updated every 30 seconds, compared with every 5 minutes today. The dispatcher dashboard flags late loads in red and lets you drill into any truck. Late load alerts go to email or a webhook, so text messages can run through your paging tool, which takes webhooks.\\n\\nStill open: Canadian data residency. Omar will check with our hosting team and come back by Thursday, October 1st. It would help to see the Canadian contract wording on shipment data, and to know who in legal can confirm whether it covers telematics.\\n\\nPricing: we will show both 50 seats and 400 seats.\\n\\nCould we find a time to go over Omar's answer and the pricing after October 1st? Let us know what works.\\n\\nLeah\",\"customer_value_line\":\"Dispatch needs to see every truck in real time, and the sandbox showed positions updating every 30 seconds versus every 5 minutes today.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"Positions update every 30 seconds.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"That's faster than what we get today. Today it's every 5 minutes.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"Late loads are flagged in red, and you can drill into any truck.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Today alerts go to email or a webhook. Text would go through your own messaging tool on the webhook.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"We use a paging tool, it takes webhooks.\"},{\"utterance_id\":\"U027\",\"excerpt\":\"Yes, I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st.\"},{\"utterance_id\":\"U026\",\"excerpt\":\"We can show both.\"},{\"utterance_id\":\"U002\",\"excerpt\":\"They need to see every truck in real time.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7196,
+   "cache_creation_input_tokens": 2640,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2640,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 693,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

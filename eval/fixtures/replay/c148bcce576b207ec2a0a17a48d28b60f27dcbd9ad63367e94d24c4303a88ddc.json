@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "c148bcce576b207ec2a0a17a48d28b60f27dcbd9ad63367e94d24c4303a88ddc",
+ "recorded_at": "2026-10-04T00:31:37.851849+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFhoVFprJQmFpi9f1yC",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Pipeline performance well ahead of current job: 22 minutes vs about 5 hours\",\"strength\":\"moderate\",\"qualifier\":\"Colin stated the current time but did not express a decision or commit to anything\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Last night's run took 22 minutes.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Our current job is about 5 hours.\"}]},{\"summary\":\"Colin reacted positively to continuous warehouse sync\",\"strength\":\"weak\",\"qualifier\":\"Brief enthusiasm only, no commitment, and he had a hard stop\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"Even better.\"}]},{\"summary\":\"Fatima named what the architecture board needs and a meeting date, giving a clear path to approval\",\"strength\":\"moderate\",\"qualifier\":\"Approval depends on the SSO design and a nested claims date that Apex has not yet confirmed\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"A written SSO design and the date for nested claims. They meet monthly, next on November 3rd.\"}]}],\"risk_signals\":[{\"summary\":\"SSO is the gate and nested claims are not supported in general availability; the customer's roles come in a nested claim\",\"strength\":\"strong\",\"qualifier\":\"Fatima called SSO the gate; Apex offered only an uncommitted next-quarter claim\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"SSO first please. That's the gate for us.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"So nested doesn't work.\"}]},{\"summary\":\"Nested claims timing is unconfirmed; SC relayed hearsay from product and AE offered preview access without basis\",\"strength\":\"strong\",\"qualifier\":\"Release card RC-09 says nested claims are in private preview with no announced GA date; confirm with identity team before committing a date\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"That's what I've heard from the product team. I'll get you the exact date.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"And we can get you into the preview program before that, I'm sure.\"}]},{\"summary\":\"Fatima needs the nested claims answer in writing for the board\",\"strength\":\"moderate\",\"qualifier\":\"A date Apex cannot confirm may fail the board review\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"I'll need that in writing for our architecture board.\"}]}],\"exact_numbers\":[{\"value\":\"1.2 billion rows a day\",\"what_it_measures\":\"Network usage data volume loaded incrementally\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"about 1.2 billion rows a day, loaded incrementally\"}]},{\"value\":\"22 minutes\",\"what_it_measures\":\"Apex pipeline run time for last night's run\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Last night's run took 22 minutes.\"}]},{\"value\":\"about 5 hours\",\"what_it_measures\":\"Customer's current pipeline job duration\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Our current job is about 5 hours.\"}]},{\"value\":\"about 1 minute end to end\",\"what_it_measures\":\"Warehouse connector continuous sync latency\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"The connector is continuous now, about 1 minute end to end.\"}]},{\"value\":\"November 3rd\",\"what_it_measures\":\"Next architecture board meeting date\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"They meet monthly, next on November 3rd.\"}]},{\"value\":\"Friday, October 9th\",\"what_it_measures\":\"Date Ana committed to send the SSO design\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send the SSO design by Friday, October 9th.\"}]}],\"customer_dependencies\":[{\"summary\":\"Architecture board must approve the SSO design; it needs the written SSO design and the nested claims date\",\"owner\":\"Fatima Zahid\",\"due\":\"2026-11-03\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"A written SSO design and the date for nested claims. They meet monthly, next on November 3rd.\"}]}],\"contradictions\":[],\"corrections\":[{\"original_statement\":\"Nested claims are coming next quarter, so you'd be covered by the time you go live.\",\"corrected_statement\":\"Nested object claims are in private preview with no announced general availability date (RC-09); the date needs confirming with the identity team.\",\"evidence\":[{\"utterance_id\":\"U007\",\"excerpt\":\"But nested claims are coming next quarter, so you'd be covered by the time you go live.\"}]},{\"original_statement\":\"The warehouse connector syncs hourly to your BI tool.\",\"corrected_statement\":\"The connector is continuous now, about 1 minute end to end; hourly was the old behavior.\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"And the warehouse connector syncs hourly to your BI tool.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Sorry, correction. The connector is continuous now, about 1 minute end to end.\"}]}],\"checklist_mismatches\":[{\"field\":\"sc_commitment\",\"logged_value\":\"SSO design and nested claims date by Oct 9\",\"transcript_says\":\"Ana committed to the SSO design by October 9th; Derek, not Ana, said he would send the nested claims date along with it. Ana said she would get the exact date, with no day given.\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send the SSO design by Friday, October 9th.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"And I'll send the nested claims date along with it.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"I'll get you the exact date.\"}]},{\"field\":\"business_outcome\",\"logged_value\":\"\",\"transcript_says\":\"No business outcome was stated in the call; the only pain, a 5 hour job, was stated as a fact, not an outcome.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Our current job is about 5 hours.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2208,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2208,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 2087,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

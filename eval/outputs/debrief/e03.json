@@ -1,0 +1,1867 @@
+{
+ "debrief_id": "e03-bc07bdb7",
+ "deal_id": "e03",
+ "as_of": "2026-09-28",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Frank Delacroix said the dispatch team (about 50 people) needs to see every truck in real time, and that real time is non negotiable.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "They need to see every truck in real time."
+    },
+    {
+     "utterance_id": "U006",
+     "excerpt": "Real time is non negotiable for us."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No dated next meeting or customer action was agreed. Pricing was requested and Omar's residency answer was promised, but no follow-up meeting was set.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U023",
+     "excerpt": "For next steps, what would be most useful?"
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Data residency: Frank says Canadian contracts require shipment data to stay in Canada. Ingrid disagrees that this applies to telematics data, so the customer side is not aligned.",
+    "raised_by": "Frank Delacroix",
+    "status": "open",
+    "answer_given": "Omar would not guess, said a Canadian region is on the roadmap, and promised to check what is available today.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our Canadian contracts say shipment data stays in Canada."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I don't think that applies to telematics data."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "I don't want to guess on residency."
+     }
+    ]
+   },
+   {
+    "summary": "Seat count and scope disagreement: Ingrid expects 400 seats in year one as finance and regional offices adopt; Frank thinks finance does not need it. Pricing is wanted for both 50 and 400.",
+    "raised_by": "Ingrid Solberg",
+    "status": "open",
+    "answer_given": "Leah said both pricing options can be shown.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "we're looking at 400 seats in year one."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "I don't think finance needs this."
+     },
+     {
+      "utterance_id": "U026",
+      "excerpt": "We can show both."
+     }
+    ]
+   },
+   {
+    "summary": "Freshness requirement differs by use case: Ingrid says daily refresh is enough for IT reporting, while Frank says dispatch needs real time.",
+    "raised_by": "Ingrid Solberg",
+    "status": "partially_resolved",
+    "answer_given": "Leah said it sounds like there are two use cases with different freshness needs.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "daily refresh would be enough for most of what IT reports on."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "For IT maybe. Dispatch needs real time."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "it sounds like there are two use cases with different freshness needs."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Canadian data residency: what Apex offers today and whether Canadian contracts apply to telematics data.",
+    "owner": "Omar Haddad",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "I'd need to check what's available today before saying anything."
+     },
+     {
+      "utterance_id": "U027",
+      "excerpt": "I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Late load alerts go to the customer's paging tool through a webhook, since text messages are not native.",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "Text would go through your own messaging tool on the webhook."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "We use a paging tool, it takes webhooks."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Omar Haddad",
+    "side": "apex",
+    "what": "Check with the hosting team on Canadian residency and come back with an answer.",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U027",
+      "excerpt": "I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+     }
+    ]
+   },
+   {
+    "who": "Leah Brennan",
+    "side": "apex",
+    "what": "Show pricing for both 50 and 400 seats.",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U026",
+      "excerpt": "We can show both."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Frank Delacroix",
+    "title": "VP of Operations",
+    "present": true,
+    "why_they_matter": "Champion; owns dispatch need and wants to move fast.",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Get me pricing for 50 seats. I want to move fast."
+     }
+    ]
+   },
+   {
+    "name": "Ingrid Solberg",
+    "title": "Director of IT",
+    "present": true,
+    "why_they_matter": "Technical evaluator; plans for 400 seats and cost surprises.",
+    "evidence": [
+     {
+      "utterance_id": "U025",
+      "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+     }
+    ]
+   },
+   {
+    "name": "Pete Nakamura",
+    "title": "Operations Analyst",
+    "present": true,
+    "why_they_matter": "Technical evaluator; asked about late load alerts.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Can I ask about late load alerts? Can they go to text message?"
+     }
+    ]
+   },
+   {
+    "name": "Finance team (unnamed)",
+    "title": "not stated",
+    "present": false,
+    "why_they_matter": "Possible additional users; asked IT about the product, and Frank disputes the need.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "They asked me about it last week."
+     }
+    ]
+   },
+   {
+    "name": "Legal (unnamed)",
+    "title": "not stated",
+    "present": false,
+    "why_they_matter": "Reviewed residency question last year per Ingrid; relevant to Canadian data requirement.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Legal looked at it last year."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion calls real-time visibility non negotiable and says the demo is what dispatch needs.",
+    "strength": "strong",
+    "qualifier": "Stated by the champion for the dispatch use case only. Not a purchase decision, and the IT director said daily refresh would be enough for IT reporting.",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "This is what dispatch needs. Real time is non negotiable for us."
+     }
+    ]
+   },
+   {
+    "summary": "Champion wants pricing quickly and says he wants to move fast.",
+    "strength": "moderate",
+    "qualifier": "Asked for 50 seats while the IT director asked for 400. No economic buyer or dated meeting was named.",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Get me pricing for 50 seats. I want to move fast."
+     }
+    ]
+   },
+   {
+    "summary": "Analyst reacts positively to the 30 second update rate compared with today's 5 minutes.",
+    "strength": "weak",
+    "qualifier": "Analyst is a technical evaluator, not a decision maker.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "That's faster than what we get today. Today it's every 5 minutes."
+     }
+    ]
+   },
+   {
+    "summary": "IT director expects growth to 400 seats in year one if finance and regional offices adopt it.",
+    "strength": "moderate",
+    "qualifier": "Champion disagreed that finance needs this.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "we're looking at 400 seats in year one."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Possible Canadian data residency requirement. Frank says Canadian contracts keep shipment data in Canada and half the loads are Canadian. The hosting shown is US only.",
+    "strength": "strong",
+    "qualifier": "Unresolved. Ingrid believes it does not apply to telematics and Frank disputes that. Apex has not confirmed what is available today.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "I'd need to check what's available today before saying anything."
+     }
+    ]
+   },
+   {
+    "summary": "Champion and IT director disagree on seat count and scope (50 vs 400, and whether finance needs it), which makes pricing and sizing uncertain.",
+    "strength": "moderate",
+    "qualifier": "Both asked for different pricing and Apex agreed to show both.",
+    "evidence": [
+     {
+      "utterance_id": "U025",
+      "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "I don't think finance needs this."
+     }
+    ]
+   },
+   {
+    "summary": "IT director says daily refresh would be enough for IT reporting, which could weaken the real-time requirement.",
+    "strength": "weak",
+    "qualifier": "Champion said dispatch still needs real time.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "daily refresh would be enough for most of what IT reports on."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "For IT maybe. Dispatch needs real time."
+     }
+    ]
+   },
+   {
+    "summary": "No economic buyer, dated next meeting or decision process was stated in the call.",
+    "strength": "moderate",
+    "qualifier": "Next steps covered only pricing and the residency answer.",
+    "evidence": [
+     {
+      "utterance_id": "U023",
+      "excerpt": "For next steps, what would be most useful?"
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "About 50 people",
+    "what_it_measures": "Size of the dispatch team that needs the tool",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "About 50 people."
+     }
+    ]
+   },
+   {
+    "value": "every 30 seconds",
+    "what_it_measures": "Position update rate shown in the sandbox",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Positions update every 30 seconds."
+     }
+    ]
+   },
+   {
+    "value": "every 5 minutes",
+    "what_it_measures": "Customer's current position update rate",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "Today it's every 5 minutes."
+     }
+    ]
+   },
+   {
+    "value": "400 seats in year one",
+    "what_it_measures": "IT director's expected seat count if finance and regional offices adopt",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "we're looking at 400 seats in year one."
+     }
+    ]
+   },
+   {
+    "value": "Half our loads",
+    "what_it_measures": "Share of loads that are Canadian",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Half our loads are Canadian."
+     }
+    ]
+   },
+   {
+    "value": "50 seats",
+    "what_it_measures": "Champion's requested pricing quantity",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Get me pricing for 50 seats."
+     }
+    ]
+   },
+   {
+    "value": "Thursday, October 1st",
+    "what_it_measures": "Date Omar committed to return with the Canadian residency answer",
+    "evidence": [
+     {
+      "utterance_id": "U027",
+      "excerpt": "come back by Thursday, October 1st."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Customer must settle internally whether Canadian contracts require shipment and telematics data to stay in Canada. Ingrid cites a legal review from last year and Frank was told otherwise.",
+    "owner": "not stated",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Legal looked at it last year."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "That's not what I was told."
+     }
+    ]
+   },
+   {
+    "summary": "Customer must align on scope and seat count (50 vs 400, and whether finance is a user) before pricing can be sized.",
+    "owner": "not stated",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Get me pricing for 50 seats. I want to move fast."
+     },
+     {
+      "utterance_id": "U025",
+      "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+     }
+    ]
+   }
+  ],
+  "contradictions": [
+   {
+    "summary": "Frank says finance does not need the tool, but Ingrid says finance asked her about it last week.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "I don't think finance needs this."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "They asked me about it last week."
+     }
+    ]
+   },
+   {
+    "summary": "Ingrid says Canadian residency does not apply to telematics data. Frank says it is not what he was told.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "I don't think that applies to telematics data."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "That's not what I was told."
+     }
+    ]
+   },
+   {
+    "summary": "Ingrid says US hosting is fine, but Frank says Canadian contracts require shipment data to stay in Canada.",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "That works for us. US hosting is fine."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our Canadian contracts say shipment data stays in Canada."
+     }
+    ]
+   },
+   {
+    "summary": "Frank and Ingrid disagree on freshness needs. Ingrid says daily refresh is enough for IT, while Frank says dispatch needs real time.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "daily refresh would be enough for most of what IT reports on."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "For IT maybe. Dispatch needs real time."
+     }
+    ]
+   },
+   {
+    "summary": "Frank asks for pricing for 50 seats and Ingrid for 400.",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Get me pricing for 50 seats."
+     },
+     {
+      "utterance_id": "U025",
+      "excerpt": "I'd rather see pricing for 400"
+     }
+    ]
+   }
+  ],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "Finance (and regional offices) was named as a likely user group who asked Ingrid about the tool, and legal was named as having reviewed residency. Neither attended and neither is logged.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "They asked me about it last week."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Legal looked at it last year."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Frank Delacroix said the dispatch team (about 50 people) needs to see every truck in real time, and that real time is non negotiable. Numbers said: About 50 people, every 30 seconds, every 5 minutes",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "They need to see every truck in real time."
+    },
+    {
+     "utterance_id": "U006",
+     "excerpt": "Real time is non negotiable for us."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Frank Delacroix: Champion; owns dispatch need and wants to move fast.",
+   "evidence": [
+    {
+     "utterance_id": "U024",
+     "excerpt": "Get me pricing for 50 seats. I want to move fast."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "partial",
+   "summary": "1 item validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U021",
+     "excerpt": "Text would go through your own messaging tool on the webhook."
+    },
+    {
+     "utterance_id": "U022",
+     "excerpt": "We use a paging tool, it takes webhooks."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "partial",
+   "summary": "Customer must settle internally whether Canadian contracts require shipment and telematics data to stay in Canada. Ingrid cites a legal review from last year and Frank was told otherwise.",
+   "evidence": [
+    {
+     "utterance_id": "U014",
+     "excerpt": "Legal looked at it last year."
+    },
+    {
+     "utterance_id": "U015",
+     "excerpt": "That's not what I was told."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "partial",
+   "summary": "Customer must settle internally whether Canadian contracts require shipment and telematics data to stay in Canada. Ingrid cites a legal review from last year and Frank was told otherwise.",
+   "evidence": [
+    {
+     "utterance_id": "U014",
+     "excerpt": "Legal looked at it last year."
+    },
+    {
+     "utterance_id": "U015",
+     "excerpt": "That's not what I was told."
+    }
+   ]
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Frank Delacroix said the dispatch team (about 50 people) needs to see every truck in real time, and that real time is non negotiable.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "They need to see every truck in real time."
+    },
+    {
+     "utterance_id": "U006",
+     "excerpt": "Real time is non negotiable for us."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Frank Delacroix, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U024",
+     "excerpt": "Get me pricing for 50 seats. I want to move fast."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "open_technical_gap",
+  "deal_state_why": "Canadian data residency is unresolved: Frank cites contracts, Ingrid disagrees, and Omar owes an answer by October 1. No economic buyer or dated meeting.",
+  "next_steps": [
+   {
+    "action": "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm whether it covers telematics, so Omar's October 1 answer addresses it.",
+    "owner": "Leah Brennan",
+    "due_by": "2026-09-29",
+    "playbook_rule_id": "PB-05",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "Frank and Ingrid contradict each other on whether the contracts cover telematics; Omar's answer is useless unless legal's actual position is known.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "I don't think that applies to telematics data. Legal looked at it last year."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian."
+     }
+    ]
+   },
+   {
+    "action": "Ask Frank who signs for this purchase and propose a dated meeting after Omar's October 1 answer, before sending 50 and 400 seat pricing.",
+    "owner": "Leah Brennan",
+    "due_by": "2026-09-29",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "No one named who signs, and pricing for two seat counts will start commercial talk before any buyer touchpoint.",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Get me pricing for 50 seats. I want to move fast."
+     },
+     {
+      "utterance_id": "U025",
+      "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Frank and Ingrid disagree on whether finance is a user, which drives 50 versus 400 seats and the pricing scope.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "I don't think finance needs this."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "They asked me about it last week."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "open_technical_gap",
+    "deal_state_why": "Canadian data residency is unresolved: Frank cites contracts, Ingrid disagrees, and Omar owes an answer by October 1. No economic buyer or dated meeting.",
+    "next_steps": [
+     {
+      "action": "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm whether it covers telematics, so Omar's October 1 answer addresses it.",
+      "owner": "Leah Brennan",
+      "due_by": "2026-09-29",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Frank and Ingrid contradict each other on whether the contracts cover telematics; Omar's answer is useless unless legal's actual position is known.",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "I don't think that applies to telematics data. Legal looked at it last year."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian."
+       }
+      ]
+     },
+     {
+      "action": "Ask Frank who signs for this purchase and propose a dated meeting after Omar's October 1 answer, before sending 50 and 400 seat pricing.",
+      "owner": "Leah Brennan",
+      "due_by": "2026-09-29",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "No one named who signs, and pricing for two seat counts will start commercial talk before any buyer touchpoint.",
+      "evidence": [
+       {
+        "utterance_id": "U024",
+        "excerpt": "Get me pricing for 50 seats. I want to move fast."
+       },
+       {
+        "utterance_id": "U025",
+        "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Frank and Ingrid disagree on whether finance is a user, which drives 50 versus 400 seats and the pricing scope.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "I don't think finance needs this."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "They asked me about it last week."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "open_technical_gap",
+    "deal_state_why": "Canadian data residency is unresolved: Frank cites contracts, Ingrid disagrees, and Omar owes an answer by October 1. No economic buyer or dated meeting.",
+    "next_steps": [
+     {
+      "action": "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm whether it covers telematics, so Omar's October 1 answer addresses it.",
+      "owner": "Leah Brennan",
+      "due_by": "2026-09-29",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Frank and Ingrid contradict each other on whether the contracts cover telematics; Omar's answer is useless unless legal's actual position is known.",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "I don't think that applies to telematics data. Legal looked at it last year."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian."
+       }
+      ]
+     },
+     {
+      "action": "Ask Frank who signs for this purchase and propose a dated meeting after Omar's October 1 answer, before sending 50 and 400 seat pricing.",
+      "owner": "Leah Brennan",
+      "due_by": "2026-09-29",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "No one named who signs, and pricing for two seat counts will start commercial talk before any buyer touchpoint.",
+      "evidence": [
+       {
+        "utterance_id": "U024",
+        "excerpt": "Get me pricing for 50 seats. I want to move fast."
+       },
+       {
+        "utterance_id": "U025",
+        "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Frank and Ingrid disagree on whether finance is a user, which drives 50 versus 400 seats and the pricing scope.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "I don't think finance needs this."
+       },
+       {
+        "utterance_id": "U009",
+        "excerpt": "They asked me about it last week."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Apex technical validation, Sept 28",
+    "body": "Hi Frank, Ingrid and Pete,\n\nThanks for your time today. Here is what we covered.\n\nShown: the shipment tracking feed on your telematics sample, with positions updating every 30 seconds versus every 5 minutes today, and the dispatcher dashboard with late loads flagged. Late load alerts go to email or a webhook, so text messages can run through your paging tool.\n\nOpen: Canadian data residency. Omar will check with our hosting team and come back by Thursday, October 1st. It would help to see the contract wording on shipment data and who in legal can confirm how it applies to telematics.\n\nPricing: you asked for 50 seats and 400 seats. We said we can show both, and we will confirm timing separately.\n\nCould we set a time to review Omar's answer once you have it?\n\nBest,\nLeah",
+    "customer_value_line": "Updates every 30 seconds against today's 5 minutes move dispatch toward seeing every truck in real time.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Positions update every 30 seconds."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "That's faster than what we get today. Today it's every 5 minutes."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Today alerts go to email or a webhook. Text would go through your own messaging tool on the webhook."
+     },
+     {
+      "utterance_id": "U027",
+      "excerpt": "Yes, I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+     },
+     {
+      "utterance_id": "U026",
+      "excerpt": "We can show both."
+     },
+     {
+      "utterance_id": "U002",
+      "excerpt": "They need to see every truck in real time."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Harbor Freightways technical validation",
+    "body": "Hi Frank, Ingrid and Pete,\n\nThanks for your time today. Here is what we covered.\n\nValidated: In the sandbox with your telematics sample, positions updated every 30 seconds, compared with every 5 minutes today. The dispatcher dashboard flags late loads in red and lets you drill into any truck. Late load alerts go to email or a webhook, so text messages can run through your paging tool, which takes webhooks.\n\nStill open: Canadian data residency. Omar will check with our hosting team and come back by Thursday, October 1st. It would help to see the Canadian contract wording on shipment data, and to know who in legal can confirm whether it covers telematics.\n\nPricing: we will show both 50 seats and 400 seats.\n\nCould we find a time to go over Omar's answer and the pricing after October 1st? Let us know what works.\n\nLeah",
+    "customer_value_line": "Dispatch needs to see every truck in real time, and the sandbox showed positions updating every 30 seconds versus every 5 minutes today.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Positions update every 30 seconds."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "That's faster than what we get today. Today it's every 5 minutes."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Late loads are flagged in red, and you can drill into any truck."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Today alerts go to email or a webhook. Text would go through your own messaging tool on the webhook."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "We use a paging tool, it takes webhooks."
+     },
+     {
+      "utterance_id": "U027",
+      "excerpt": "Yes, I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+     },
+     {
+      "utterance_id": "U026",
+      "excerpt": "We can show both."
+     },
+     {
+      "utterance_id": "U002",
+      "excerpt": "They need to see every truck in real time."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: 28 (not in transcript or CRM): 28 (not in transcript or CRM)",
+    "[email_promises_uncommitted] Leah only said 'We can show both' and nobody committed to confirming a pricing timeline, so 'we will confirm timing separately' is an uncommitted promise and no owner or date is logged. (target: We said we can show both, and we will confirm timing separately.; lines U026, U024, U025)"
+   ],
+   "findings": [
+    "[email_promises_uncommitted] Leah only said 'We can show both' with no owner or date, so the email turns an offer into a firm promise. (target: Pricing: we will show both 50 seats and 400 seats.; lines U026)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Open technical gap: Canadian data residency is unresolved and Omar owes an answer by Thursday, October 1st; no economic buyer or dated next meeting.",
+    "customer_value_line": "Frank Delacroix said the dispatch team needs to see every truck in real time and that real time is non negotiable; the sandbox showed positions updating every 30 seconds versus every 5 minutes today.",
+    "what_we_validated": [
+     "Tracking feed on the customer's telematics sample in the sandbox: positions update every 30 seconds (U003); Pete said today it is every 5 minutes (U004).",
+     "Dispatcher dashboard: late loads flagged in red with drill into any truck (U005); Frank said this is what dispatch needs (U006).",
+     "Late load alerts go to email or a webhook (U021); the customer's paging tool takes webhooks (U022)."
+    ],
+    "integration_patterns": [
+     "Late load alerts to text message go through the customer's own paging tool via webhook; text is not native (U021, U022)."
+    ],
+    "objections_and_answers": [
+     "Data residency: Frank says Canadian contracts keep shipment data in Canada and half the loads are Canadian; Ingrid says it does not apply to telematics and legal looked at it last year; Omar would not guess, mentioned a Canadian region on the roadmap, and will check. Open.",
+     "Seat count and scope: Ingrid expects 400 seats in year one; Frank said he does not think finance needs this and wants 50 seat pricing; Leah said both can be shown. Open.",
+     "Freshness: Ingrid said daily refresh would be enough for most of what IT reports on; Frank said dispatch needs real time; Leah framed it as two use cases. Partially resolved."
+    ],
+    "open_items": [
+     "Canadian data residency: what Apex offers today and whether the contracts cover telematics data. Owner: Omar Haddad.",
+     "Customer must settle internally whether Canadian contracts apply to telematics data; owner and date not stated.",
+     "Customer must align on 50 versus 400 seats and whether finance is a user; owner and date not stated.",
+     "Economic buyer not named, decision process not discussed, and no dated next meeting agreed."
+    ],
+    "commitments": [
+     "Omar Haddad: check with the hosting team on Canadian residency and come back by Thursday, October 1st.",
+     "Leah Brennan: show pricing for both 50 and 400 seats; no date stated."
+    ],
+    "stakeholders": [
+     "Frank Delacroix, VP of Operations: champion, present.",
+     "Ingrid Solberg, Director of IT: technical evaluator, present.",
+     "Pete Nakamura, Operations Analyst: technical evaluator, present.",
+     "Finance team (unnamed): possible additional users, absent.",
+     "Legal (unnamed): reviewed residency last year per Ingrid, absent."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Possible Canadian residency requirement: the hosting shown is a US region by default with backups in the same region, and Apex has not confirmed what is available today.",
+     "Frank and Ingrid disagree on seat count and scope, which makes pricing and sizing uncertain.",
+     "No economic buyer, decision process, or dated next meeting stated in the call.",
+     "Ingrid's daily refresh comment could weaken the real time requirement, though Frank said dispatch still needs it."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "They need to see every truck in real time."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "Real time is non negotiable for us."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I don't think that applies to telematics data. Legal looked at it last year."
+     },
+     {
+      "utterance_id": "U027",
+      "excerpt": "I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "we're looking at 400 seats in year one."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Text would go through your own messaging tool on the webhook."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Open technical gap: Canadian data residency is unresolved and Omar owes an answer by Thursday, October 1st; no economic buyer or dated next meeting.",
+    "customer_value_line": "Frank Delacroix said the dispatch team needs to see every truck in real time and that real time is non negotiable; the sandbox showed positions updating every 30 seconds versus every 5 minutes today.",
+    "what_we_validated": [
+     "Tracking feed on the customer's telematics sample in the sandbox: positions update every 30 seconds (U003); Pete said today it is every 5 minutes (U004).",
+     "Dispatcher dashboard: late loads flagged in red with drill into any truck (U005); Frank said this is what dispatch needs (U006).",
+     "Late load alerts go to email or a webhook (U021); the customer's paging tool takes webhooks (U022)."
+    ],
+    "integration_patterns": [
+     "Late load alerts to text message go through the customer's own paging tool via webhook; text is not native (U021, U022)."
+    ],
+    "objections_and_answers": [
+     "Data residency: Frank says Canadian contracts keep shipment data in Canada and half the loads are Canadian; Ingrid says it does not apply to telematics and legal looked at it last year; Omar would not guess, mentioned a Canadian region on the roadmap, and will check. Open.",
+     "Seat count and scope: Ingrid expects 400 seats in year one; Frank said he does not think finance needs this and wants 50 seat pricing; Leah said both can be shown. Open.",
+     "Freshness: Ingrid said daily refresh would be enough for most of what IT reports on; Frank said dispatch needs real time; Leah framed it as two use cases. Partially resolved."
+    ],
+    "open_items": [
+     "Canadian data residency: what Apex offers today and whether the contracts cover telematics data. Owner: Omar Haddad.",
+     "Customer must settle internally whether Canadian contracts apply to telematics data; owner and date not stated.",
+     "Customer must align on 50 versus 400 seats and whether finance is a user; owner and date not stated.",
+     "Economic buyer not named, decision process not discussed, and no dated next meeting agreed."
+    ],
+    "commitments": [
+     "Omar Haddad: check with the hosting team on Canadian residency and come back by Thursday, October 1st.",
+     "Leah Brennan: show pricing for both 50 and 400 seats; no date stated."
+    ],
+    "stakeholders": [
+     "Frank Delacroix, VP of Operations: champion, present.",
+     "Ingrid Solberg, Director of IT: technical evaluator, present.",
+     "Pete Nakamura, Operations Analyst: technical evaluator, present.",
+     "Finance team (unnamed): possible additional users, absent.",
+     "Legal (unnamed): reviewed residency last year per Ingrid, absent."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Possible Canadian residency requirement: the hosting shown is a US region by default with backups in the same region, and Apex has not confirmed what is available today.",
+     "Frank and Ingrid disagree on seat count and scope, which makes pricing and sizing uncertain.",
+     "No economic buyer, decision process, or dated next meeting stated in the call.",
+     "Ingrid's daily refresh comment could weaken the real time requirement, though Frank said dispatch still needs it."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "They need to see every truck in real time."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "Real time is non negotiable for us."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "I don't think that applies to telematics data. Legal looked at it last year."
+     },
+     {
+      "utterance_id": "U027",
+      "excerpt": "I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "we're looking at 400 seats in year one."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Text would go through your own messaging tool on the webhook."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Frank Delacroix said dispatch needs to see every truck in real time, and that real time is non negotiable.",
+    "rows": [
+     {
+      "milestone": "Apex hosting team answer on Canadian data residency",
+      "customer_owner": "",
+      "apex_owner": "Omar Haddad",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U027",
+        "excerpt": "I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+       },
+       {
+        "utterance_id": "U028",
+        "excerpt": "Good."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer settles whether Canadian contracts require telematics data to stay in Canada, and shares the contract clause and the legal contact",
+      "customer_owner": "Frank Delacroix",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our Canadian contracts say shipment data stays in Canada."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I don't think that applies to telematics data."
+       }
+      ]
+     },
+     {
+      "milestone": "Align on seat count and scope: 50 seats for dispatch versus 400 seats including finance and regional offices",
+      "customer_owner": "Frank Delacroix",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U024",
+        "excerpt": "Get me pricing for 50 seats."
+       },
+       {
+        "utterance_id": "U025",
+        "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+       }
+      ]
+     },
+     {
+      "milestone": "Pricing shown for both 50 and 400 seats",
+      "customer_owner": "",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U026",
+        "excerpt": "We can show both."
+       }
+      ]
+     },
+     {
+      "milestone": "Name who signs for this purchase and set a dated next meeting",
+      "customer_owner": "Frank Delacroix",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U023",
+        "excerpt": "For next steps, what would be most useful?"
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Frank Delacroix said dispatch needs to see every truck in real time, and that real time is non negotiable.",
+    "rows": [
+     {
+      "milestone": "Apex hosting team answer on Canadian data residency",
+      "customer_owner": "",
+      "apex_owner": "Omar Haddad",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U027",
+        "excerpt": "I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st."
+       },
+       {
+        "utterance_id": "U028",
+        "excerpt": "Good."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer settles whether Canadian contracts require telematics data to stay in Canada, and shares the contract clause and the legal contact",
+      "customer_owner": "Frank Delacroix",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "Our Canadian contracts say shipment data stays in Canada."
+       },
+       {
+        "utterance_id": "U014",
+        "excerpt": "I don't think that applies to telematics data."
+       }
+      ]
+     },
+     {
+      "milestone": "Align on seat count and scope: 50 seats for dispatch versus 400 seats including finance and regional offices",
+      "customer_owner": "Frank Delacroix",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U024",
+        "excerpt": "Get me pricing for 50 seats."
+       },
+       {
+        "utterance_id": "U025",
+        "excerpt": "I'd rather see pricing for 400, so we don't get surprised later."
+       }
+      ]
+     },
+     {
+      "milestone": "Pricing shown for both 50 and 400 seats",
+      "customer_owner": "",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U026",
+        "excerpt": "We can show both."
+       }
+      ]
+     },
+     {
+      "milestone": "Name who signs for this purchase and set a dated next meeting",
+      "customer_owner": "Frank Delacroix",
+      "apex_owner": "Leah Brennan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U023",
+        "excerpt": "For next steps, what would be most useful?"
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: 28 (not in transcript or CRM)",
+   "locations": [
+    "28 (not in transcript or CRM)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Both next steps and the finance watch item",
+   "passed": true,
+   "severity": "low",
+   "finding": "U013/U014 support the residency conflict, U024/U025 support the two pricing scopes, and U008/U009 support the finance disagreement.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U024",
+    "U025",
+    "U008",
+    "U009"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Omar owes an answer by October 1",
+   "passed": true,
+   "severity": "low",
+   "finding": "Omar committed to come back by Thursday, October 1st (U027), so the stated deadline matches the call.",
+   "utterance_ids": [
+    "U027"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Frank who signs and propose a dated meeting after Oct 1 before sending pricing",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this account's open residency question and the 50 versus 400 seat conflict, not generic follow-ups.",
+   "utterance_ids": [
+    "U013",
+    "U024",
+    "U025",
+    "U027"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Pricing: we will show both 50 seats and 400 seats.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Leah only said 'We can show both' with no owner or date, so the email turns an offer into a firm promise.",
+   "utterance_ids": [
+    "U026"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Validated section and customer_value_line",
+   "passed": true,
+   "severity": "low",
+   "finding": "The 30 second updates, 5 minute baseline, red late load flags, webhook alerts and real time need are all supported by U002 to U005, U021 and U022.",
+   "utterance_ids": [
+    "U002",
+    "U003",
+    "U004",
+    "U005",
+    "U021",
+    "U022"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Late load alerts go to email or a webhook",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email presents only current behavior and does not offer the roadmap Canadian region as available.",
+   "utterance_ids": [
+    "U016",
+    "U021"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Evidence and validated items",
+   "passed": true,
+   "severity": "low",
+   "finding": "The cited excerpts match the claims they are attached to, including the 400 seats in year one and the webhook text path.",
+   "utterance_ids": [
+    "U002",
+    "U006",
+    "U007",
+    "U013",
+    "U014",
+    "U021",
+    "U027"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Leah Brennan: show pricing for both 50 and 400 seats; no date stated.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary notes that no date was stated, and 'We can show both' is only mildly firmed up as a commitment.",
+   "utterance_ids": [
+    "U026"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Omar ... mentioned a Canadian region on the roadmap",
+   "passed": true,
+   "severity": "low",
+   "finding": "The Canadian region is correctly described as roadmap and unconfirmed, not as available.",
+   "utterance_ids": [
+    "U016"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Name who signs for this purchase and set a dated next meeting (evidence U023)",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U023 is Leah asking an open question about next steps; nobody discussed or agreed to naming a signer or setting a meeting, so the cited line does not support the row.",
+   "utterance_ids": [
+    "U023"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Residency row status agreed, target 2026-10-01",
+   "passed": true,
+   "severity": "low",
+   "finding": "Omar committed to Oct 1 and Frank acknowledged it, and the other rows are correctly marked proposed with no invented dates.",
+   "utterance_ids": [
+    "U027",
+    "U028"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Updates every 30 seconds against today's 5 minutes move dispatch toward seeing every truck in real time.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U003, U004 and U002 support the 30 second figure, the 5 minute baseline and the stated outcome, and the 'move toward' wording does not claim the real time requirement is met.",
+   "utterance_ids": [
+    "U002",
+    "U003",
+    "U004",
+    "U021",
+    "U027"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Omar will check with our hosting team and come back by Thursday, October 1st.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This matches Omar's U027 commitment on owner, task and date, and Oct 1 2026 is a Thursday.",
+   "utterance_ids": [
+    "U027",
+    "U026"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Pricing: you asked for 50 seats and 400 seats.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email reports the requests without calling them a decision or commitment, although it does not note that Frank and Ingrid disagreed on seat count.",
+   "utterance_ids": [
+    "U024",
+    "U025"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "We said we can show both, and we will confirm timing separately.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Leah only said 'We can show both' and nobody committed to confirming a pricing timeline, so 'we will confirm timing separately' is an uncommitted promise and no owner or date is logged.",
+   "utterance_ids": [
+    "U026",
+    "U024",
+    "U025"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Late load alerts go to email or a webhook, so text messages can run through your paging tool.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This matches Omar's current-behavior statement in U021 and Pete's paging tool in U022, no release card supersedes it, and the roadmap Canadian region is not presented as available.",
+   "utterance_ids": [
+    "U021",
+    "U022",
+    "U016"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "Could we set a time to review Omar's answer once you have it?",
+   "passed": true,
+   "severity": "low",
+   "finding": "The ask is tied to the Canadian residency answer, and the request for contract wording and a legal contact is specific to the Frank and Ingrid disagreement.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U015",
+    "U027"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028091,
+   "latency_ms": 11491,
+   "input_tokens": 532,
+   "output_tokens": 1934,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "9eacd6217c8748af2d907e93f6e14e687fc444ba8332e3a4e5f1b1673c13f199"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.048504,
+   "latency_ms": 25387,
+   "input_tokens": 398,
+   "output_tokens": 4000,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "ee02b6f15f747d5483294289f1ea01e1a55a9b3a64e48a1489dcb719796625a1"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.078048,
+   "latency_ms": 30442,
+   "input_tokens": 13812,
+   "output_tokens": 4158,
+   "cache_read_input_tokens": 11224,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "35f0dceec9bf7a7871691939c168307b5e6ac61b701bd4879abec8895c071e0b",
+    "6ee008b56b43ebb63898fca0d8f89ecb3a31bfb43d7e74915535ca01792684d1"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028873,
+   "latency_ms": 4783,
+   "input_tokens": 7059,
+   "output_tokens": 742,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "f3f83440d05ce328f9fec9c1cdbad83ed9c224519a39dd6b22782fa73bb4be7a"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.028593,
+   "latency_ms": 5020,
+   "input_tokens": 7196,
+   "output_tokens": 693,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "cc095b6d5576c19cd07b9219e9b5ae8ddeee9b1d715d67fc2682dd59686edee2"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.035143,
+   "latency_ms": 8790,
+   "input_tokens": 7071,
+   "output_tokens": 1364,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "f3e3246ad5d2d13373c0bce6252748d026ba0583bbcb721acedb6437849cd723"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.042529,
+   "latency_ms": 16896,
+   "input_tokens": 4707,
+   "output_tokens": 2577,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2640,
+   "validator_errors": [],
+   "keys": [
+    "b4d9207fba13a226b61ac88a2d7feb14bb5f5c4c70330846fd1ca23bf6a35220"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021765,
+   "latency_ms": 4780,
+   "input_tokens": 7308,
+   "output_tokens": 595,
+   "cache_read_input_tokens": 5994,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "2a5840d4ea3c45a21fa6cb165f6deaaec98cbf93e9af063d1f30d5899a4958fd"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.026429,
+   "latency_ms": 17056,
+   "input_tokens": 1148,
+   "output_tokens": 2286,
+   "cache_read_input_tokens": 6364,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "2f6a0a0c991700b56cc0a4ea6cf9a69a36b5d7a593eb7a1ee0c38826a269cd74"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.337975,
+ "latency_ms": 124645,
+ "wall_clock_s": 114.9,
+ "status": "ran"
+}

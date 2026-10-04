@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "94a6b4a0f87665c292fa5b3eb36c62f34ef8655d8d5dba0b1ac158058b4e9416",
+ "recorded_at": "2026-10-04T00:29:53.528853+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFaM1MEcUmPpGpNm9Wg",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Champion says daily cost trend is the whole point, tying the demo to her stated outcome\",\"strength\":\"strong\",\"qualifier\":\"Stated by the champion; she is not the economic buyer\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Daily is the whole point. Our actuaries see the trend six weeks late today.\"}]},{\"summary\":\"Champion reacts positively to the 99.2 percent match rate, saying it beats theirs\",\"strength\":\"moderate\",\"qualifier\":\"Enthusiasm only; no commitment attached\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"That's better than ours.\"}]},{\"summary\":\"Security lead offers a dated path to the review board agenda and the champion plans to bring in finance after the board\",\"strength\":\"moderate\",\"qualifier\":\"Conditional on all documents arriving by October 14th; board approval is not guaranteed\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"If I have everything by October 14th, you're on that agenda.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"}]}],\"risk_signals\":[{\"summary\":\"Security review takes about three weeks and the board date is fixed, so any slip in documents misses the October 22nd board\",\"strength\":\"moderate\",\"qualifier\":\"Deadline of October 14th is set by the customer and the review is customer-owned\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"It's about three weeks once he has the documents.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"If I have everything by October 14th, you're on that agenda.\"}]},{\"summary\":\"Finance (Daniel) is only engaged after the board, so the economic buyer has no touchpoint before commercials and is not on the call\",\"strength\":\"weak\",\"qualifier\":\"Daniel's role as signer is not stated; only that he handles commercials\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"}]}],\"exact_numbers\":[{\"value\":\"99.2 percent\",\"what_it_measures\":\"Match rate of claims to members on the customer's sample\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"The match rate on your sample was 99.2 percent.\"}]},{\"value\":\"six weeks\",\"what_it_measures\":\"How late actuaries currently see the cost trend\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Our actuaries see the trend six weeks late today.\"}]},{\"value\":\"about three weeks\",\"what_it_measures\":\"Length of the vendor security review once documents are received\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"It's about three weeks once he has the documents.\"}]},{\"value\":\"October 14th\",\"what_it_measures\":\"Deadline for all documents to get on the review board agenda\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"If I have everything by October 14th, you're on that agenda.\"}]},{\"value\":\"Thursday, October 22nd\",\"what_it_measures\":\"Date of the security review board meeting\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Our review board meets Thursday, October 22nd.\"}]},{\"value\":\"Friday, October 9th\",\"what_it_measures\":\"Date the SC committed to send the data flow diagram\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I'll do the data flow diagram and send it by Friday, October 9th.\"}]}],\"customer_dependencies\":[{\"summary\":\"Vendor security review by Sanjay's review board, which needs SOC 2, pen test summary, questionnaire, and data flow diagram\",\"owner\":\"Sanjay Iyer\",\"due\":\"2026-10-22\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"SOC 2, pen test summary, our questionnaire, and a data flow diagram.\"}]},{\"summary\":\"Customer sends the completed security questionnaire\",\"owner\":\"Sanjay Iyer\",\"due\":\"2026-10-01\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U019\",\"excerpt\":\"I'll send the questionnaire today.\"}]},{\"summary\":\"Finance engagement with Daniel for commercials after the board\",\"owner\":\"Monica Reyes\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"}]}],\"contradictions\":[],\"corrections\":[],\"checklist_mismatches\":[]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2212,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2212,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1624,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

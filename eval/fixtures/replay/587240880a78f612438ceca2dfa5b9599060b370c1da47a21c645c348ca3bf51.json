@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "587240880a78f612438ceca2dfa5b9599060b370c1da47a21c645c348ca3bf51",
+ "recorded_at": "2026-10-04T00:30:25.334307+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFcn1Za5rsAckBDZiNL",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Competitive risk: leadership may prefer expanding incumbent Lakestream, no economic buyer named, and the cost comparison is due before the October 20th Lakestream renewal conversation.\",\"customer_value_line\":\"Rachel Kim said the store rollup showing days to reorder point by store is \\\"exactly the view\\\"; the open question is cost versus expanding Lakestream (the CRM outcome was prefilled from discovery, not restated in the call).\",\"what_we_validated\":[\"Merge of point of sale and open orders with a 5 minute refresh, no separate streaming product (U004).\",\"Projection to reorder point per store, in parallel (U004).\",\"Store rollup of days to reorder point by store across 640 stores; Rachel: \\\"That's exactly the view.\\\" (U010, U011).\"],\"integration_patterns\":[\"Point of sale and open orders merged into one model with a 5 minute refresh (RC-10).\"],\"objections_and_answers\":[\"Why add Apex when Lakestream is already run for marketing data (Rachel): Lena offered to compare on Kestrel's workload rather than slides; partially resolved, cost still open.\",\"Leadership will ask why not expand what we have (Rachel): Rachel asked for a side by side on their volume, refresh and all-in costs including the add on; Lena will build it once volumes arrive; open.\",\"Lakestream add on is cheap, and Lakestream said batch was enough (Rachel, Tobias): no Apex answer beyond comparing on their workload; open.\"],\"open_items\":[\"Cost comparison versus Lakestream including its streaming add on, on Kestrel's volume and refresh. Owner Lena Fischer; blocked on event volumes per hour from Tobias Lund.\",\"Economic buyer / approver for a second platform not named. Owner Isaac Morgan to ask Rachel.\",\"Lena's commitment is logged in CRM as 'Workload cost comparison' without owner and date.\"],\"commitments\":[\"Tobias Lund: send event volumes per hour tomorrow (CRM date 2026-10-01).\",\"Lena Fischer: build the cost comparison about a week after volumes arrive (about 2026-10-08 if sent tomorrow).\",\"Isaac Morgan: send invite for the 30 minute walkthrough on Wednesday, October 14th; Rachel agreed the 14th works.\"],\"stakeholders\":[\"Rachel Kim, VP of Supply Chain Analytics, champion, present; wants the comparison before the October 20th renewal conversation.\",\"Tobias Lund, Data Platform Manager, technical evaluator, present; supplies event volumes.\",\"Leadership (not named), approver of a second platform, absent; signer not stated.\"],\"competitive_notes\":[\"Lakestream is the incumbent for marketing data; renewal conversation is October 20th.\",\"Lena said Lakestream would need its streaming add on for near real time, based on its public docs; compare on Kestrel's workload, not general claims (RC-10).\",\"Flag Lakestream to deal desk.\"],\"risks\":[\"Leadership may push to expand Lakestream instead of adding a second platform (Rachel's expectation, not a leadership statement).\",\"Timing: the review on the 14th leaves only a few days before the October 20th renewal conversation, and the comparison depends on volumes arriving tomorrow.\",\"No economic buyer named and no stakeholder logged to add.\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"we already run Lakestream for marketing data. So the question is why add Apex.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"If I go to leadership with a second platform, they'll ask why not expand what we have.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"A side by side on our workload. Our volume, our refresh, all in costs. Including the add on.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About a week after Tobias sends the volumes.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I want to see it before the Lakestream renewal conversation on October 20th.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Fine, the 14th works.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5258,
+   "cache_creation_input_tokens": 2234,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2234,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1424,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

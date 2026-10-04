@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a749144810b2575ff948876ffcd662724bbcb61bbaaa97595f8d29478c5e3471",
+ "recorded_at": "2026-10-04T00:30:53.534833+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFeuYnhUYiSckM6sYFw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Competitive risk: leadership may favor expanding incumbent Lakestream, the cost comparison is due ahead of the October 20th Lakestream renewal conversation, and no economic buyer was named.\",\"customer_value_line\":\"Rachel Kim said the store rollup is 'exactly the view' for days to reorder point by store with open orders (outcome prefilled from discovery, not restated in the call); her open question is cost.\",\"what_we_validated\":[\"Merge of point of sale and open orders with a 5 minute refresh, no separate streaming product (U004)\",\"Projection to reorder point per store, in parallel (U004)\",\"Store rollup of days to reorder point across 640 stores (U010)\",\"Rachel confirmed the rollup is the view she needs (U011)\"],\"integration_patterns\":[\"Point of sale and open orders merged into one model with a 5 minute refresh (RC-10)\"],\"objections_and_answers\":[\"Why add Apex when Lakestream is already in place, and leadership will ask why not expand it: Lena offered to compare on Kestrel's own workload, including the add on, rather than on slides. Status: partially resolved, pending the cost comparison.\",\"Lakestream add on said to be cheap: not answered yet; the all in cost comparison on Kestrel volumes is the answer.\"],\"open_items\":[\"Side by side cost comparison on Kestrel's workload, including the Lakestream add on: Lena Fischer, needs Tobias's event volumes per hour\",\"Event volumes per hour: Tobias Lund, said he would send them tomorrow\",\"Who approves a second platform: not named; Rachel to be asked (Isaac Morgan)\"],\"commitments\":[\"Tobias Lund: send event volumes per hour, 'tomorrow' (the day after the demo)\",\"Lena Fischer: build the comparison once volumes arrive, 'about a week after Tobias sends the volumes'; no fixed date was said and the CRM entry has no owner or date\",\"Isaac Morgan: send the invite for the 30 minute walkthrough on Wednesday, October 14th; Rachel agreed the 14th works\"],\"stakeholders\":[\"Rachel Kim, VP of Supply Chain Analytics, champion, present\",\"Tobias Lund, Data Platform Manager, technical evaluator, present\",\"Leadership, not named, absent; will question a second platform; signer not stated\"],\"competitive_notes\":[\"Lakestream is the incumbent for marketing data; its renewal conversation is on October 20th and Rachel wants the comparison before it\",\"Tobias said Lakestream told them batch was enough, and then it wasn't\",\"Lena said Lakestream needs its streaming add on for near real time, based on public docs; compare on Kestrel's workload, not general claims (RC-10)\",\"Flag Lakestream to deal desk within 1 business day (PB-06)\"],\"risks\":[\"Leadership may push to expand Lakestream instead of adding a second platform (Rachel's expectation, not a leadership statement)\",\"Time pressure: comparison is wanted before October 20th and depends on volumes arriving first\",\"No economic buyer named\",\"Lena's comparison date is not fixed, only 'about a week' after volumes\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"we already run Lakestream for marketing data. So the question is why add Apex.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"That's exactly the view. The question is cost.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"A side by side on our workload. Our volume, our refresh, all in costs. Including the add on.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About a week after Tobias sends the volumes.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll send them tomorrow.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I want to see it before the Lakestream renewal conversation on October 20th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5388,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6039,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1348,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

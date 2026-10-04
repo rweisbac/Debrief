@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "050157ac306ba50895b680851e4f53777fbce35e6c24dff314c3249a2e8a8192",
+ "recorded_at": "2026-10-04T00:28:03.060729+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFS4rmKcb1dJZSzYDYn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Gregor reacted positively to the continuous warehouse connector sync compared with his current hourly tool.\",\"strength\":\"moderate\",\"qualifier\":\"Product reaction only; no decision or purchase step attached.\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Nice. Our current tool is hourly at best.\"}]},{\"summary\":\"Gregor said the masking policy matches what they do today, consolidated from three places into one.\",\"strength\":\"weak\",\"qualifier\":\"Lukewarm wording ('That's fine'); no commitment.\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"That's roughly what we have today, just in three places instead of one.\"}]},{\"summary\":\"Tamsin offered to loop in procurement early.\",\"strength\":\"weak\",\"qualifier\":\"Conditional on her manager's approval; no date.\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I might be able to loop in procurement early, if that helps. I'd have to ask my manager first.\"}]}],\"risk_signals\":[{\"summary\":\"Next meeting is undated and deferred; Gregor declined a calendar hold and will ping Ben depending on quarter close.\",\"strength\":\"strong\",\"qualifier\":\"Contingent on the customer's quarter close.\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Maybe the week after next, depending on how the quarter close goes.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"Not yet. Let me see how things shake out first and I'll ping you.\"}]},{\"summary\":\"Data dictionary delivery is vague with no firm date, which gates scoping the full model.\",\"strength\":\"moderate\",\"qualifier\":\"Gregor hedged ('try', 'maybe').\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"Hard to say. Sometime next week, maybe. It's spread across a few wikis.\"}]},{\"summary\":\"Stored procedure lineage is a likely gap: most of Tamsin's procedures are dynamic, and the SC could not promise parsing or timing.\",\"strength\":\"strong\",\"qualifier\":\"Tamsin's main interest is lineage; parser team capacity is limited.\",\"evidence\":[{\"utterance_id\":\"U007\",\"excerpt\":\"Most of them are dynamic. That's a known pain.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"No promises on timing, our parser team is stretched.\"}]},{\"summary\":\"No economic buyer or business outcome was named or discussed; engagement is limited to two contacts, and Tamsin's replies were flat.\",\"strength\":\"moderate\",\"qualifier\":\"Absence of information, not a stated objection.\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Okay.\"}]}],\"exact_numbers\":[{\"value\":\"about a minute end to end\",\"what_it_measures\":\"Warehouse connector sync time as stated by the SC\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"It syncs continuously now, about a minute end to end.\"}]},{\"value\":\"hourly at best\",\"what_it_measures\":\"Freshness of the customer's current tool\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Our current tool is hourly at best.\"}]},{\"value\":\"three places\",\"what_it_measures\":\"Number of places the customer's masking policies currently live\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"That's roughly what we have today, just in three places instead of one.\"}]}],\"customer_dependencies\":[{\"summary\":\"Gregor to find and send the data dictionary so Apex can scope the full model.\",\"owner\":\"Gregor Hale\",\"due\":\"\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"I'd probably want to get you our data dictionary so you can scope the full model. I'll try to dig it up.\"}]},{\"summary\":\"Tamsin may loop in procurement early, pending her manager's approval.\",\"owner\":\"Tamsin Wu\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I might be able to loop in procurement early, if that helps. I'd have to ask my manager first.\"}]},{\"summary\":\"Tamsin to review the SC's stored procedure write-up and supply what is needed.\",\"owner\":\"Tamsin Wu\",\"due\":\"\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U025\",\"excerpt\":\"Okay, I'll look at it when it comes.\"}]}],\"contradictions\":[],\"corrections\":[],\"checklist_mismatches\":[{\"field\":\"dated_next_step\",\"logged_value\":\"Reconnect week after next\",\"transcript_says\":\"No dated next meeting. Gregor was tentative on the week after next, depending on quarter close, declined a calendar hold, and said he would ping Ben.\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Maybe the week after next, depending on how the quarter close goes.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"Not yet. Let me see how things shake out first and I'll ping you.\"}]},{\"field\":\"sc_commitment\",\"logged_value\":\"\",\"transcript_says\":\"Sofia said she would try to get a couple of stored procedures run through the parser (no timing promised) and would write up the stored procedure question for Tamsin.\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"Then I'll see if I can get a couple of them run through our parser.\"},{\"utterance_id\":\"U024\",\"excerpt\":\"And I'll write up the stored procedure question so it's clear what I need from Tamsin.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2406,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2406,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1887,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "342dd802b896699ef7df63cb96c4b5e6c4cedd301884b51caadabfb81f1bac84",
+ "recorded_at": "2026-10-04T00:31:32.873047+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFhfzJSZoTnXrtchumX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"internal_summary\",\"target\":\"Evidence list U010, U015, U017, U018, U020, U011 and the customer_value_line\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Every excerpt is copied word for word from its cited line and supports the claim it is attached to.\",\"utterance_ids\":[\"U010\",\"U011\",\"U015\",\"U017\",\"U018\",\"U020\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"internal_summary\",\"target\":\"commitments list, including Daniel from finance 'no date given' and the recap 'no date stated'\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each commitment matches the owner, date and scope spoken, and the undated items are correctly marked as undated.\",\"utterance_ids\":[\"U007\",\"U018\",\"U019\",\"U020\",\"U021\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"internal_summary\",\"target\":\"Ready to advance: dated path exists... economic buyer still unconfirmed.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The dated path comes from Sanjay's conditional agenda offer and Monica's plan, and the summary keeps the economic buyer as unconfirmed and treats the match-rate reaction as not a commitment.\",\"utterance_ids\":[\"U012\",\"U015\",\"U020\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"internal_summary\",\"target\":\"what_we_validated: security setup, customer-held keys, daily cost trend\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The customer-managed keys claim agrees with RC-11, and no superseded behavior such as hourly warehouse sync is presented as current.\",\"utterance_ids\":[\"U003\",\"U004\",\"U009\"]},{\"check\":\"generic_step\",\"artifact\":\"internal_summary\",\"target\":\"open_items and risks\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The open items are specific to this deal, naming the October 14th document deadline, the October 22nd board, and the undated Daniel touchpoint.\",\"utterance_ids\":[\"U015\",\"U017\",\"U020\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1755,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5936,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1404,
+   "output_tokens_details": {
+    "thinking_tokens": 718
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

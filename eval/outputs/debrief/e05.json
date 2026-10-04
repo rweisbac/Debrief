@@ -1,0 +1,1942 @@
+{
+ "debrief_id": "e05-552a2ded",
+ "deal_id": "e05",
+ "as_of": "2026-10-01",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "Ryan Castellano to send a one pager for Ann (data budget owner) by Wednesday, October 7th; Doug agreed it works.",
+   "date": "2026-10-07",
+   "evidence": [
+    {
+     "utterance_id": "U070",
+     "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+    },
+    {
+     "utterance_id": "U071",
+     "excerpt": "That works."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Privacy team may block joining viewing logs to subscriber records for opted-out users, which Doug says could kill the attribution piece. Doug downplays it but it is a real risk.",
+    "raised_by": "Doug Whitfield",
+    "status": "partially_resolved",
+    "answer_given": "Apex can filter on a consent flag at ingestion so opted out records never get joined; whether the join is allowed at all is up to the customer's privacy team.",
+    "evidence": [
+     {
+      "utterance_id": "U043",
+      "excerpt": "The privacy team has been making noise about consent data."
+     },
+     {
+      "utterance_id": "U044",
+      "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+     },
+     {
+      "utterance_id": "U045",
+      "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+     }
+    ]
+   },
+   {
+    "summary": "Doug's story about a past vendor that overpromised real time and vanished after signing suggests worry about overpromising and post-sale support.",
+    "raised_by": "Doug Whitfield",
+    "status": "open",
+    "answer_given": "",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "they promised us real time. We signed, and then real time meant every six hours."
+     }
+    ]
+   },
+   {
+    "summary": "Doug's lukewarm overall reaction, discounting his own enthusiasm because he liked the last vendor too.",
+    "raised_by": "Doug Whitfield",
+    "status": "open",
+    "answer_given": "",
+    "evidence": [
+     {
+      "utterance_id": "U063",
+      "excerpt": "I liked the last vendor too, so take that with a grain of salt."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Whether the privacy team allows joining viewing logs to subscriber records for people who opted out of personalization; outcome unknown and could affect attribution.",
+    "owner": "Customer privacy team (via Doug Whitfield)",
+    "evidence": [
+     {
+      "utterance_id": "U043",
+      "excerpt": "whether we can join viewing logs to subscriber records at all for people who opted out of personalization."
+     },
+     {
+      "utterance_id": "U045",
+      "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+     }
+    ]
+   },
+   {
+    "summary": "Luis wants to see how the dedupe handles late events; Nia to send the dedupe config and a note on late events.",
+    "owner": "Nia Oduya",
+    "evidence": [
+     {
+      "utterance_id": "U072",
+      "excerpt": "I want to see how you handle late events."
+     },
+     {
+      "utterance_id": "U073",
+      "excerpt": "I'll send the dedupe config and a note on late events tomorrow."
+     }
+    ]
+   },
+   {
+    "summary": "Which of Karen's roughly 60 custom segments are SQL versus spreadsheet defined, to size loading and manual refresh of spreadsheet segments.",
+    "owner": "Karen Ibsen",
+    "evidence": [
+     {
+      "utterance_id": "U075",
+      "excerpt": "I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Spreadsheet-defined segments would be loaded as reference tables with a manual refresh; SQL-defined segments work directly as tables.",
+    "evidence": [
+     {
+      "utterance_id": "U030",
+      "excerpt": "Then we'd load the spreadsheets as reference tables. That works, it's just a manual refresh."
+     },
+     {
+      "utterance_id": "U031",
+      "excerpt": "That's fine."
+     }
+    ]
+   },
+   {
+    "summary": "Agency gets an aggregate-only shared view with row level rules, set up by Nia as part of the pilot.",
+    "evidence": [
+     {
+      "utterance_id": "U049",
+      "excerpt": "We can do that with an aggregate only view. I'd set it up for you as part of the pilot."
+     },
+     {
+      "utterance_id": "U050",
+      "excerpt": "Great."
+     }
+    ]
+   },
+   {
+    "summary": "Failure alerts from the daily job route to the customer's on call tool.",
+    "evidence": [
+     {
+      "utterance_id": "U058",
+      "excerpt": "Failure alerts go to your on call tool, and the job retries the failed step once on its own before it alerts."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Ryan Castellano",
+    "side": "apex",
+    "what": "Send a one pager for Ann",
+    "by_when": "2026-10-07",
+    "evidence": [
+     {
+      "utterance_id": "U070",
+      "excerpt": "I'll get that to you by Wednesday, October 7th."
+     }
+    ]
+   },
+   {
+    "who": "Nia Oduya",
+    "side": "apex",
+    "what": "Send the dedupe config and a note on late events",
+    "by_when": "2026-10-02",
+    "evidence": [
+     {
+      "utterance_id": "U073",
+      "excerpt": "I'll send the dedupe config and a note on late events tomorrow."
+     }
+    ]
+   },
+   {
+    "who": "Nia Oduya",
+    "side": "apex",
+    "what": "Set up an aggregate-only view for the agency as part of the pilot",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U049",
+      "excerpt": "I'd set it up for you as part of the pilot."
+     }
+    ]
+   },
+   {
+    "who": "Karen Ibsen",
+    "side": "customer",
+    "what": "Send the list of the 60 segments, marking SQL versus spreadsheet",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U075",
+      "excerpt": "I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+     }
+    ]
+   },
+   {
+    "who": "Doug Whitfield",
+    "side": "customer",
+    "what": "Talk to Ann about budget before November planning",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "I need to talk to Ann about budget."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Doug Whitfield",
+    "title": "Director of Audience Data",
+    "present": true,
+    "why_they_matter": "Champion driving the next step",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "I need to talk to Ann about budget."
+     }
+    ]
+   },
+   {
+    "name": "Karen Ibsen",
+    "title": "Marketing Analytics Manager",
+    "present": true,
+    "why_they_matter": "Daily user of the segment capability",
+    "evidence": [
+     {
+      "utterance_id": "U064",
+      "excerpt": "I like the segment piece a lot. That's the part my team would use every day."
+     }
+    ]
+   },
+   {
+    "name": "Luis Ferreira",
+    "title": "Data Engineer",
+    "present": true,
+    "why_they_matter": "Runs the dedupe job; technical evaluator",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "On a bad day it falls over and Luis gets paged at 3 in the morning."
+     }
+    ]
+   },
+   {
+    "name": "Ann",
+    "title": "Data budget owner",
+    "present": false,
+    "why_they_matter": "Owns next year's data budget; planning in November",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "She owns the data budget for next year."
+     }
+    ]
+   },
+   {
+    "name": "Privacy team",
+    "title": "Privacy team (names not given)",
+    "present": false,
+    "why_they_matter": "Decides whether the consent-based join is allowed",
+    "evidence": [
+     {
+      "utterance_id": "U043",
+      "excerpt": "The privacy team has been making noise about consent data."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Dedupe ran in about 11 minutes on 380 million events versus the customer's current four-hour job.",
+    "strength": "moderate",
+    "qualifier": "Luis said 'that's interesting'; no commitment to buy.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "Our current job takes four hours. So that's interesting."
+     }
+    ]
+   },
+   {
+    "summary": "Luis values failure alerts and retry because they would end 3 a.m. pages.",
+    "strength": "moderate",
+    "qualifier": "Technical evaluator enthusiasm, not a decision.",
+    "evidence": [
+     {
+      "utterance_id": "U059",
+      "excerpt": "That alone would save me a lot of sleep."
+     }
+    ]
+   },
+   {
+    "summary": "Karen expects her team to use the segment capability every day.",
+    "strength": "moderate",
+    "qualifier": "Evaluator preference; Karen is not the budget owner.",
+    "evidence": [
+     {
+      "utterance_id": "U064",
+      "excerpt": "I like the segment piece a lot. That's the part my team would use every day."
+     }
+    ]
+   },
+   {
+    "summary": "Doug accepted a one pager for Ann and wants it in front of her before November planning.",
+    "strength": "moderate",
+    "qualifier": "Champion is willing to take it to the budget owner, but no meeting with Ann is set.",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "Planning is in November, so I'd want something in front of her before then."
+     },
+     {
+      "utterance_id": "U071",
+      "excerpt": "That works."
+     }
+    ]
+   },
+   {
+    "summary": "Doug said overall he likes the demo.",
+    "strength": "weak",
+    "qualifier": "Doug immediately discounted it because he also liked the last vendor.",
+    "evidence": [
+     {
+      "utterance_id": "U063",
+      "excerpt": "I liked the last vendor too, so take that with a grain of salt."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Privacy team consent concerns could block joining viewing logs to subscriber records, which may kill the attribution piece.",
+    "strength": "strong",
+    "qualifier": "Raised casually by Doug and downplayed ('could be nothing'), but he said it could kill the whole attribution piece. Outcome unknown, owned by the customer's privacy team.",
+    "evidence": [
+     {
+      "utterance_id": "U043",
+      "excerpt": "The privacy team has been making noise about consent data."
+     },
+     {
+      "utterance_id": "U045",
+      "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+     }
+    ]
+   },
+   {
+    "summary": "Past vendor overpromised real time and the account manager left, so the customer may be wary of Apex promises and support.",
+    "strength": "moderate",
+    "qualifier": "Told as an anecdote with humor; no explicit link to Apex was made.",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "they promised us real time. We signed, and then real time meant every six hours."
+     }
+    ]
+   },
+   {
+    "summary": "Budget owner Ann was not on the call and decides on data budget, with planning in November; no dated meeting with her exists.",
+    "strength": "moderate",
+    "qualifier": "Doug is only going to talk to Ann; her view of the purchase is unknown.",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "I need to talk to Ann about budget. She owns the data budget for next year."
+     }
+    ]
+   },
+   {
+    "summary": "Segments defined in spreadsheets need a manual refresh when loaded as reference tables.",
+    "strength": "weak",
+    "qualifier": "Karen said that's fine.",
+    "evidence": [
+     {
+      "utterance_id": "U030",
+      "excerpt": "That works, it's just a manual refresh."
+     },
+     {
+      "utterance_id": "U031",
+      "excerpt": "That's fine."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "about 11 minutes for 380 million events",
+    "what_it_measures": "Apex dedupe time on the customer's sample day",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+     }
+    ]
+   },
+   {
+    "value": "four hours",
+    "what_it_measures": "Duration of the customer's current dedupe job",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Our current job takes four hours."
+     }
+    ]
+   },
+   {
+    "value": "Twice last month",
+    "what_it_measures": "Number of times the current job failed and paged Luis",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Twice last month."
+     }
+    ]
+   },
+   {
+    "value": "about 60",
+    "what_it_measures": "Custom segments built by marketing",
+    "evidence": [
+     {
+      "utterance_id": "U027",
+      "excerpt": "We have about 60 that marketing built over the years."
+     }
+    ]
+   },
+   {
+    "value": "7 day window",
+    "what_it_measures": "Apex attribution default window",
+    "evidence": [
+     {
+      "utterance_id": "U037",
+      "excerpt": "It uses a 7 day window by default, which you can change."
+     }
+    ]
+   },
+   {
+    "value": "14 days",
+    "what_it_measures": "Attribution window the customer uses today",
+    "evidence": [
+     {
+      "utterance_id": "U038",
+      "excerpt": "We use 14 days today."
+     }
+    ]
+   },
+   {
+    "value": "Wednesday, October 7th",
+    "what_it_measures": "Date Ryan committed to send the one pager for Ann",
+    "evidence": [
+     {
+      "utterance_id": "U070",
+      "excerpt": "I'll get that to you by Wednesday, October 7th."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Privacy team decision on whether viewing logs can be joined to subscriber records for people who opted out of personalization.",
+    "owner": "Customer privacy team",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U043",
+      "excerpt": "Whether we can join viewing logs to subscriber records at all for people who opted out of personalization."
+     },
+     {
+      "utterance_id": "U044",
+      "excerpt": "But whether the join is allowed at all is a call for your privacy team."
+     }
+    ]
+   },
+   {
+    "summary": "Doug to talk to Ann about the data budget before November planning.",
+    "owner": "Doug Whitfield",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "I need to talk to Ann about budget."
+     }
+    ]
+   },
+   {
+    "summary": "Karen to send the list of the 60 segments, marking which are SQL and which are spreadsheets.",
+    "owner": "Karen Ibsen",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U075",
+      "excerpt": "I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [
+   {
+    "original_statement": "Luis said the current job takes four hours.",
+    "corrected_statement": "Doug clarified it takes four hours on a good day and fails on bad days, paging Luis at 3 in the morning.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Our current job takes four hours."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Our current job takes four hours on a good day."
+     }
+    ]
+   }
+  ],
+  "checklist_mismatches": [
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Nia committed to send the dedupe config and a note on late events tomorrow, which is Friday, October 2.",
+    "evidence": [
+     {
+      "utterance_id": "U073",
+      "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+     }
+    ]
+   },
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "Ann, data budget owner",
+    "transcript_says": "Ann is named as owner of the data budget, but no one said she signs; the economic buyer is not named, and no step was agreed to bring Ann in beyond the one pager.",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "She owns the data budget for next year."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "partial",
+   "summary": "not stated",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Ann: Owns next year's data budget; planning in November",
+   "evidence": [
+    {
+     "utterance_id": "U066",
+     "excerpt": "She owns the data budget for next year."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "known",
+   "summary": "3 items validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U030",
+     "excerpt": "Then we'd load the spreadsheets as reference tables. That works, it's just a manual refresh."
+    },
+    {
+     "utterance_id": "U031",
+     "excerpt": "That's fine."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Ryan Castellano to send a one pager for Ann (data budget owner) by Wednesday, October 7th; Doug agreed it works.",
+   "evidence": [
+    {
+     "utterance_id": "U070",
+     "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+    },
+    {
+     "utterance_id": "U071",
+     "excerpt": "That works."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "Privacy team consent concerns could block joining viewing logs to subscriber records, which may kill the attribution piece.",
+   "evidence": [
+    {
+     "utterance_id": "U043",
+     "excerpt": "The privacy team has been making noise about consent data."
+    },
+    {
+     "utterance_id": "U045",
+     "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Doug Whitfield, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U066",
+     "excerpt": "I need to talk to Ann about budget."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "waiting_on_customer",
+  "deal_state_why": "Privacy team's consent decision on joining viewing logs to subscriber records could kill attribution; no owner or date known, and Ann is not yet confirmed as signer.",
+  "next_steps": [
+   {
+    "action": "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it.",
+    "owner": "Nia Oduya",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "support_customer_process",
+    "why": "Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+    "evidence": [
+     {
+      "utterance_id": "U044",
+      "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+     },
+     {
+      "utterance_id": "U045",
+      "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+     }
+    ]
+   },
+   {
+    "action": "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager.",
+    "owner": "Ryan Castellano",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both.",
+    "evidence": [
+     {
+      "utterance_id": "U066",
+      "excerpt": "She owns the data budget for next year."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Doug's past vendor promised real time that turned out to be every six hours, and the account manager left. Avoid overpromising and show post-sale support.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "they promised us real time. We signed, and then real time meant every six hours."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Privacy team's consent decision on joining viewing logs to subscriber records could kill attribution; no owner or date known, and Ann is not yet confirmed as signer.",
+    "next_steps": [
+     {
+      "action": "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it.",
+      "owner": "Nia Oduya",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+      "evidence": [
+       {
+        "utterance_id": "U044",
+        "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+       },
+       {
+        "utterance_id": "U045",
+        "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+       }
+      ]
+     },
+     {
+      "action": "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager.",
+      "owner": "Ryan Castellano",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both.",
+      "evidence": [
+       {
+        "utterance_id": "U066",
+        "excerpt": "She owns the data budget for next year."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Doug's past vendor promised real time that turned out to be every six hours, and the account manager left. Avoid overpromising and show post-sale support.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "they promised us real time. We signed, and then real time meant every six hours."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Privacy team's consent decision on joining viewing logs to subscriber records could kill attribution; no owner or date known, and Ann is not yet confirmed as signer.",
+    "next_steps": [
+     {
+      "action": "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it.",
+      "owner": "Nia Oduya",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+      "evidence": [
+       {
+        "utterance_id": "U044",
+        "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+       },
+       {
+        "utterance_id": "U045",
+        "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+       }
+      ]
+     },
+     {
+      "action": "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager.",
+      "owner": "Ryan Castellano",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both.",
+      "evidence": [
+       {
+        "utterance_id": "U066",
+        "excerpt": "She owns the data budget for next year."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Doug's past vendor promised real time that turned out to be every six hours, and the account manager left. Avoid overpromising and show post-sale support.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "they promised us real time. We signed, and then real time meant every six hours."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Brightline Media: recap of today's technical validation",
+    "body": "Hi Doug, Karen, Luis,\n\nThanks for the time today. Nia ran your viewing logs through the audience pipeline: dedupe took about 11 minutes for 380 million events on your sample day, and the attribution numbers looked about right to Karen at the 14 day window. Luis also saw failure alerts with a single automatic retry before anything pages him.\n\nWhat's next:\n- Ryan: one pager for Ann by Wednesday, October 7th.\n- Nia: dedupe config and a note on late events tomorrow.\n- Karen: list of your 60 segments, marking SQL vs spreadsheet.\n- Open: your privacy team's view on joining viewing logs to subscriber records for opted out people. We can filter on a consent flag at ingestion, but whether the join is allowed is their call.\n\nNia also mentioned an aggregate only agency view that she could set up if you move to a pilot. No pilot has been agreed yet.\n\nRyan",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+     },
+     {
+      "utterance_id": "U040",
+      "excerpt": "Okay, the numbers look about right compared to what we have."
+     },
+     {
+      "utterance_id": "U058",
+      "excerpt": "Failure alerts go to your on call tool, and the job retries the failed step once on its own before it alerts."
+     },
+     {
+      "utterance_id": "U070",
+      "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U073",
+      "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+     },
+     {
+      "utterance_id": "U075",
+      "excerpt": "And I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+     },
+     {
+      "utterance_id": "U044",
+      "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+     },
+     {
+      "utterance_id": "U049",
+      "excerpt": "We can do that with an aggregate only view. I'd set it up for you as part of the pilot."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap from today's Apex validation session",
+    "body": "Hi Doug, Karen, and Luis,\n\nThanks for the time today. Here is where we landed.\n\nWhat we showed: on your sample day, the dedupe ran in about 11 minutes for 380 million events, versus your current four hour job. Attribution ran with a 14 day window, and Karen said the numbers looked about right. Failure alerts go to your on call tool, with one automatic retry first.\n\nFrom Apex:\n- Nia will send the dedupe config and a note on late events tomorrow.\n- I will send a one pager for Ann by Wednesday, October 7th.\n- Nia will set up an aggregate only agency view as part of the pilot.\n\nFrom you:\n- Karen will send the list of the 60 segments, marking SQL versus spreadsheet.\n- Doug will talk to Ann about budget ahead of November planning.\n\nStill open: your privacy team's view on joining viewing logs to subscriber records for people who opted out. We can filter on a consent flag at ingestion, but the decision on the join is theirs.\n\nRyan",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+     },
+     {
+      "utterance_id": "U073",
+      "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+     },
+     {
+      "utterance_id": "U070",
+      "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U049",
+      "excerpt": "We can do that with an aggregate only view. I'd set it up for you as part of the pilot."
+     },
+     {
+      "utterance_id": "U075",
+      "excerpt": "And I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+     },
+     {
+      "utterance_id": "U044",
+      "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[email_promises_uncommitted] Nia said she would set it up as part of the pilot, but no pilot was agreed on the call, so the email presents a conditional offer as a committed Apex deliverable. (target: Nia will set up an aggregate only agency view as part of the pilot.; lines U049)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Waiting on customer: privacy team's consent decision (owner and date unknown) could kill attribution, and Ann (data budget owner) is absent with no meeting set; economic buyer not confirmed.",
+    "customer_value_line": "Business outcome not stated on the call (CRM 'Daily audience numbers without the four hour job' is prefilled from discovery); on the call Doug said the current job takes four hours on a good day and fails on bad days, versus about 11 minutes for 380 million events on the sample day.",
+    "what_we_validated": [
+     "Dedupe on the customer's sample day: about 11 minutes for 380 million events (current job: four hours on a good day)",
+     "Custom segments work as tables; any segment definable in SQL works; Karen said the spreadsheet manual refresh is fine",
+     "Attribution window set to 14 days live; Karen said numbers look about right versus what they have",
+     "Failure alert with failed step to the on call tool, with one automatic retry of the failed step before alerting"
+    ],
+    "integration_patterns": [
+     "Spreadsheet-defined segments loaded as reference tables with a manual refresh",
+     "Aggregate-only shared view with row level rules for the agency, to be set up by Nia as part of the pilot",
+     "Daily job failure alerts routed to the customer's on call tool"
+    ],
+    "objections_and_answers": [
+     "Consent/privacy: Doug said privacy team may block joining viewing logs to subscriber records for opted-out people and it might kill attribution. Answer: filter on a consent flag at ingestion so opted-out records never get joined; whether the join is allowed is the privacy team's call. Status: partially resolved, open",
+     "Past vendor overpromised real time (every six hours) and the account manager left: told as an anecdote, no direct objection to Apex, no answer given. Status: open"
+    ],
+    "open_items": [
+     "Privacy team decision on joining viewing logs to subscriber records for opted-out people: owner customer privacy team via Doug, no date",
+     "Dedupe config and note on late events: Nia, Friday Oct 2 ('tomorrow')",
+     "List of the 60 segments marked SQL vs spreadsheet: Karen, no date",
+     "Doug to talk to Ann about budget before November planning: no date, no meeting with Ann set",
+     "Economic buyer not named; nobody said Ann signs",
+     "Business outcome in customer's words not stated; ask Doug"
+    ],
+    "commitments": [
+     "Ryan Castellano: one pager for Ann by Wednesday, October 7th (Doug said it works)",
+     "Nia Oduya: send the dedupe config and a note on late events tomorrow (Oct 2); not yet logged in CRM sc_commitment",
+     "Nia Oduya: set up aggregate-only agency view as part of the pilot, no date",
+     "Karen Ibsen: send the list of the 60 segments, no date",
+     "Doug Whitfield: talk to Ann about budget before November planning, no date"
+    ],
+    "stakeholders": [
+     "Doug Whitfield, Director of Audience Data, champion, present",
+     "Karen Ibsen, Marketing Analytics Manager, evaluator and daily segment user, present",
+     "Luis Ferreira, Data Engineer, evaluator who runs the dedupe job, present",
+     "Ann, owns next year's data budget, absent; signer not confirmed",
+     "Privacy team, names not given, decides on the consent join, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Strong: privacy consent concern raised casually by Doug could kill the attribution piece; outcome unknown, no date",
+     "Moderate: Ann absent, no dated meeting, budget planning in November, economic buyer not confirmed",
+     "Moderate: past vendor overpromised real time and vanished post-sale; avoid overpromising and show post-sale support",
+     "Weak: Doug's overall positivity was discounted by himself ('I liked the last vendor too')"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Our current job takes four hours on a good day."
+     },
+     {
+      "utterance_id": "U043",
+      "excerpt": "The privacy team has been making noise about consent data."
+     },
+     {
+      "utterance_id": "U044",
+      "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+     },
+     {
+      "utterance_id": "U045",
+      "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+     },
+     {
+      "utterance_id": "U066",
+      "excerpt": "She owns the data budget for next year."
+     },
+     {
+      "utterance_id": "U070",
+      "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U073",
+      "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "So we had this tool, I won't name it, and they promised us real time."
+     },
+     {
+      "utterance_id": "U063",
+      "excerpt": "I liked the last vendor too, so take that with a grain of salt."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Waiting on customer: privacy team's consent decision (owner and date unknown) could kill attribution, and Ann (data budget owner) is absent with no meeting set; economic buyer not confirmed.",
+    "customer_value_line": "Business outcome not stated on the call (CRM 'Daily audience numbers without the four hour job' is prefilled from discovery); on the call Doug said the current job takes four hours on a good day and fails on bad days, versus about 11 minutes for 380 million events on the sample day.",
+    "what_we_validated": [
+     "Dedupe on the customer's sample day: about 11 minutes for 380 million events (current job: four hours on a good day)",
+     "Custom segments work as tables; any segment definable in SQL works; Karen said the spreadsheet manual refresh is fine",
+     "Attribution window set to 14 days live; Karen said numbers look about right versus what they have",
+     "Failure alert with failed step to the on call tool, with one automatic retry of the failed step before alerting"
+    ],
+    "integration_patterns": [
+     "Spreadsheet-defined segments loaded as reference tables with a manual refresh",
+     "Aggregate-only shared view with row level rules for the agency, to be set up by Nia as part of the pilot",
+     "Daily job failure alerts routed to the customer's on call tool"
+    ],
+    "objections_and_answers": [
+     "Consent/privacy: Doug said privacy team may block joining viewing logs to subscriber records for opted-out people and it might kill attribution. Answer: filter on a consent flag at ingestion so opted-out records never get joined; whether the join is allowed is the privacy team's call. Status: partially resolved, open",
+     "Past vendor overpromised real time (every six hours) and the account manager left: told as an anecdote, no direct objection to Apex, no answer given. Status: open"
+    ],
+    "open_items": [
+     "Privacy team decision on joining viewing logs to subscriber records for opted-out people: owner customer privacy team via Doug, no date",
+     "Dedupe config and note on late events: Nia, Friday Oct 2 ('tomorrow')",
+     "List of the 60 segments marked SQL vs spreadsheet: Karen, no date",
+     "Doug to talk to Ann about budget before November planning: no date, no meeting with Ann set",
+     "Economic buyer not named; nobody said Ann signs",
+     "Business outcome in customer's words not stated; ask Doug"
+    ],
+    "commitments": [
+     "Ryan Castellano: one pager for Ann by Wednesday, October 7th (Doug said it works)",
+     "Nia Oduya: send the dedupe config and a note on late events tomorrow (Oct 2); not yet logged in CRM sc_commitment",
+     "Nia Oduya: set up aggregate-only agency view as part of the pilot, no date",
+     "Karen Ibsen: send the list of the 60 segments, no date",
+     "Doug Whitfield: talk to Ann about budget before November planning, no date"
+    ],
+    "stakeholders": [
+     "Doug Whitfield, Director of Audience Data, champion, present",
+     "Karen Ibsen, Marketing Analytics Manager, evaluator and daily segment user, present",
+     "Luis Ferreira, Data Engineer, evaluator who runs the dedupe job, present",
+     "Ann, owns next year's data budget, absent; signer not confirmed",
+     "Privacy team, names not given, decides on the consent join, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Strong: privacy consent concern raised casually by Doug could kill the attribution piece; outcome unknown, no date",
+     "Moderate: Ann absent, no dated meeting, budget planning in November, economic buyer not confirmed",
+     "Moderate: past vendor overpromised real time and vanished post-sale; avoid overpromising and show post-sale support",
+     "Weak: Doug's overall positivity was discounted by himself ('I liked the last vendor too')"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "On the sample day you sent, about 11 minutes for 380 million events."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Our current job takes four hours on a good day."
+     },
+     {
+      "utterance_id": "U043",
+      "excerpt": "The privacy team has been making noise about consent data."
+     },
+     {
+      "utterance_id": "U044",
+      "excerpt": "We can filter on a consent flag at ingestion, so opted out records never get joined."
+     },
+     {
+      "utterance_id": "U045",
+      "excerpt": "Or it might kill the whole attribution piece, I honestly don't know."
+     },
+     {
+      "utterance_id": "U066",
+      "excerpt": "She owns the data budget for next year."
+     },
+     {
+      "utterance_id": "U070",
+      "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+     },
+     {
+      "utterance_id": "U073",
+      "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "So we had this tool, I won't name it, and they promised us real time."
+     },
+     {
+      "utterance_id": "U063",
+      "excerpt": "I liked the last vendor too, so take that with a grain of salt."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "not stated",
+    "rows": [
+     {
+      "milestone": "Send Doug a one pager for Ann",
+      "customer_owner": "Doug Whitfield",
+      "apex_owner": "Ryan Castellano",
+      "target_date": "2026-10-07",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U070",
+        "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+       },
+       {
+        "utterance_id": "U071",
+        "excerpt": "That works."
+       }
+      ]
+     },
+     {
+      "milestone": "Send the dedupe config and a note on late events",
+      "customer_owner": "Luis Ferreira",
+      "apex_owner": "Nia Oduya",
+      "target_date": "2026-10-02",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "Can you also send the dedupe config? I want to see how you handle late events."
+       },
+       {
+        "utterance_id": "U073",
+        "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+       }
+      ]
+     },
+     {
+      "milestone": "Send the list of the 60 segments, marking SQL versus spreadsheet",
+      "customer_owner": "Karen Ibsen",
+      "apex_owner": "Nia Oduya",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U075",
+        "excerpt": "And I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+       }
+      ]
+     },
+     {
+      "milestone": "Privacy team decision on joining viewing logs to subscriber records for opted out people",
+      "customer_owner": "Privacy team (names not given)",
+      "apex_owner": "Nia Oduya",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U043",
+        "excerpt": "The privacy team has been making noise about consent data."
+       },
+       {
+        "utterance_id": "U044",
+        "excerpt": "But whether the join is allowed at all is a call for your privacy team."
+       }
+      ]
+     },
+     {
+      "milestone": "Doug talks to Ann about budget before November planning",
+      "customer_owner": "Doug Whitfield",
+      "apex_owner": "Ryan Castellano",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U066",
+        "excerpt": "I need to talk to Ann about budget. She owns the data budget for next year."
+       }
+      ]
+     },
+     {
+      "milestone": "Set up an aggregate only agency view as part of the pilot",
+      "customer_owner": "Karen Ibsen",
+      "apex_owner": "Nia Oduya",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U049",
+        "excerpt": "We can do that with an aggregate only view. I'd set it up for you as part of the pilot."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "not stated",
+    "rows": [
+     {
+      "milestone": "Send Doug a one pager for Ann",
+      "customer_owner": "Doug Whitfield",
+      "apex_owner": "Ryan Castellano",
+      "target_date": "2026-10-07",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U070",
+        "excerpt": "Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th."
+       },
+       {
+        "utterance_id": "U071",
+        "excerpt": "That works."
+       }
+      ]
+     },
+     {
+      "milestone": "Send the dedupe config and a note on late events",
+      "customer_owner": "Luis Ferreira",
+      "apex_owner": "Nia Oduya",
+      "target_date": "2026-10-02",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U072",
+        "excerpt": "Can you also send the dedupe config? I want to see how you handle late events."
+       },
+       {
+        "utterance_id": "U073",
+        "excerpt": "Sure, I'll send the dedupe config and a note on late events tomorrow."
+       }
+      ]
+     },
+     {
+      "milestone": "Send the list of the 60 segments, marking SQL versus spreadsheet",
+      "customer_owner": "Karen Ibsen",
+      "apex_owner": "Nia Oduya",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U075",
+        "excerpt": "And I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets."
+       }
+      ]
+     },
+     {
+      "milestone": "Privacy team decision on joining viewing logs to subscriber records for opted out people",
+      "customer_owner": "Privacy team (names not given)",
+      "apex_owner": "Nia Oduya",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U043",
+        "excerpt": "The privacy team has been making noise about consent data."
+       },
+       {
+        "utterance_id": "U044",
+        "excerpt": "But whether the join is allowed at all is a call for your privacy team."
+       }
+      ]
+     },
+     {
+      "milestone": "Doug talks to Ann about budget before November planning",
+      "customer_owner": "Doug Whitfield",
+      "apex_owner": "Ryan Castellano",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U066",
+        "excerpt": "I need to talk to Ann about budget. She owns the data budget for next year."
+       }
+      ]
+     },
+     {
+      "milestone": "Set up an aggregate only agency view as part of the pilot",
+      "customer_owner": "Karen Ibsen",
+      "apex_owner": "Nia Oduya",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U049",
+        "excerpt": "We can do that with an aggregate only view. I'd set it up for you as part of the pilot."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Doug a one-paragraph note on the consent-flag filter at ingestion",
+   "passed": true,
+   "severity": "low",
+   "finding": "U044 and U045 support both the consent-flag filter and Doug's admission that the consent issue might kill attribution.",
+   "utterance_ids": [
+    "U044",
+    "U045"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats the consent aside as a real risk and does not inflate Doug's mild positivity into a buying signal.",
+   "utterance_ids": [
+    "U043",
+    "U045",
+    "U063"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this deal (the consent filter, and Ann as the absent budget owner), not to a generic follow-up.",
+   "utterance_ids": [
+    "U066",
+    "U044"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Evidence excerpts for 11 minutes, one pager, dedupe config, segments list, consent filter",
+   "passed": true,
+   "severity": "low",
+   "finding": "The excerpts are verbatim and support the sentences they are attached to.",
+   "utterance_ids": [
+    "U015",
+    "U070",
+    "U073",
+    "U075",
+    "U044",
+    "U049"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Nia will set up an aggregate only agency view as part of the pilot.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Nia said she would set it up as part of the pilot, but no pilot was agreed on the call, so the email presents a conditional offer as a committed Apex deliverable.",
+   "utterance_ids": [
+    "U049"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Dated commitments: dedupe config tomorrow, one pager by October 7th",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both dated commitments match what Nia and Ryan said, and Doug said the Oct 7 date works.",
+   "utterance_ids": [
+    "U070",
+    "U071",
+    "U073"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Failure alerts go to your on call tool, with one automatic retry first",
+   "passed": true,
+   "severity": "low",
+   "finding": "The alert and retry behavior matches Nia's description, and no later correction or release card changes it.",
+   "utterance_ids": [
+    "U058"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Evidence excerpts including U063, U021, U017, U043",
+   "passed": true,
+   "severity": "low",
+   "finding": "The excerpts are contiguous, verbatim text from the cited lines and support the risks and objections they are used for.",
+   "utterance_ids": [
+    "U017",
+    "U021",
+    "U043",
+    "U063"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Nia Oduya: set up aggregate-only agency view as part of the pilot, no date",
+   "passed": false,
+   "severity": "low",
+   "finding": "This is listed as a commitment, but Nia only said she would set it up as part of the pilot and no pilot was agreed, so it should be marked as conditional.",
+   "utterance_ids": [
+    "U049"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Weak: Doug's overall positivity was discounted by himself",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary correctly treats Doug's overall positivity as weak, since he discounted it himself, and does not treat Ann as a confirmed signer.",
+   "utterance_ids": [
+    "U063",
+    "U066"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Privacy team decision row with Nia Oduya as Apex owner",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U043 and U044 show only that the privacy question exists and is the customer's call, not that Nia or anyone took an owned MAP milestone, so the Apex owner is invented.",
+   "utterance_ids": [
+    "U043",
+    "U044"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Doug talks to Ann about budget, Apex owner Ryan Castellano, status proposed",
+   "passed": true,
+   "severity": "low",
+   "finding": "The row is marked proposed with no date, so it does not claim a firmer commitment than Doug's stated intent; the dated Oct 7 and Oct 2 rows match the transcript.",
+   "utterance_ids": [
+    "U066",
+    "U070",
+    "U073"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "All eight evidence excerpts and the claims they support (11 minutes for 380 million events, 14 day window, alerts with one retry, one pager by October 7th, dedupe config tomorrow, segment list, consent flag, aggregate view)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is verbatim from its cited line and supports the sentence it is attached to, with numbers and dates copied exactly.",
+   "utterance_ids": [
+    "U015",
+    "U039",
+    "U040",
+    "U044",
+    "U049",
+    "U058",
+    "U070",
+    "U073",
+    "U075"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "What's next: Ryan one pager by Wednesday, October 7th; Nia dedupe config and late events note tomorrow; Karen segment list",
+   "passed": true,
+   "severity": "low",
+   "finding": "Owners and dates match what was said: Ryan said October 7th, Nia said tomorrow, and Karen's list is listed without an invented date.",
+   "utterance_ids": [
+    "U070",
+    "U073",
+    "U075"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Whole email, including 'the attribution numbers looked about right to Karen'",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email makes no claim of a decision or buying intent and correctly says no pilot has been agreed.",
+   "utterance_ids": [
+    "U040",
+    "U063"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Nia also mentioned an aggregate only agency view that she could set up if you move to a pilot. No pilot has been agreed yet.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The pilot offer is conditional, matching Nia's 'as part of the pilot', and the email states no pilot is agreed, so nothing uncommitted is promised.",
+   "utterance_ids": [
+    "U049"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Luis also saw failure alerts with a single automatic retry; consent flag filter at ingestion",
+   "passed": true,
+   "severity": "low",
+   "finding": "No behavior in the email was corrected later in the call or superseded by a release card.",
+   "utterance_ids": [
+    "U044",
+    "U058"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "What's next bullets and open privacy item",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every step is tied to this customer (Ann one pager, Luis's late event config, Karen's 60 segments, the privacy consent question) and has an owner.",
+   "utterance_ids": [
+    "U043",
+    "U070",
+    "U072",
+    "U073",
+    "U075"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.041001,
+   "latency_ms": 13722,
+   "input_tokens": 532,
+   "output_tokens": 2484,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [],
+   "keys": [
+    "b1199f9023160e4d6cc02e196d5eb9545b5e510c9b06c9dd4bdd21c8117503ab"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.041664,
+   "latency_ms": 15202,
+   "input_tokens": 398,
+   "output_tokens": 2575,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [],
+   "keys": [
+    "8c1b12d200dcf0781ad184281244c0a2a5b41d463f0a3a47bebd96204b9c8b57"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.086161,
+   "latency_ms": 28642,
+   "input_tokens": 14777,
+   "output_tokens": 3976,
+   "cache_read_input_tokens": 14188,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [
+    "deal_state_why has 27 words, max 25"
+   ],
+   "keys": [
+    "74b20db722f1b5a3c26c020913f7a022a441527d99a21290131ca480bbbb9663",
+    "e48bb93a9357987c81adb1f7616f184509e3164d4fecb8108f85e3bdbb3a24e7"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.036703,
+   "latency_ms": 4858,
+   "input_tokens": 7561,
+   "output_tokens": 690,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [],
+   "keys": [
+    "1b97cc4e92b6aab6a173277eb2f6ab2b834028d60d0617613c6fef3488cd1610"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.047003,
+   "latency_ms": 10214,
+   "input_tokens": 7424,
+   "output_tokens": 1741,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [],
+   "keys": [
+    "be6832e30336147ac2b745b5b4ad5c442a71074d5fdec4f3252de740d65c2057"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.046243,
+   "latency_ms": 10544,
+   "input_tokens": 7436,
+   "output_tokens": 1660,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [],
+   "keys": [
+    "a0aa1ee6f96e2e750160b290cc0fa49090af2cdc3873037b2a471a5ce601e95f"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.062787,
+   "latency_ms": 25167,
+   "input_tokens": 5091,
+   "output_tokens": 3785,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 5604,
+   "validator_errors": [],
+   "keys": [
+    "f778124bb819decfd92abf3cea1bcca3159da91cf0138f418f32df5d15ba1b01"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.02468,
+   "latency_ms": 5274,
+   "input_tokens": 7694,
+   "output_tokens": 750,
+   "cache_read_input_tokens": 8958,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "2ca4cd21640eeeec12035525bfeda78acb4a384cdb9f33bfc318576bcad88b20"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.019662,
+   "latency_ms": 10419,
+   "input_tokens": 1323,
+   "output_tokens": 1515,
+   "cache_read_input_tokens": 9328,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "31d385bf76b6347ad5553be5f72aa21e85685895e1eb92ae259a7bccb524ede7"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.405904,
+ "latency_ms": 124042,
+ "wall_clock_s": 109.0,
+ "status": "ran"
+}

@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a311215a7f7ed283c92d23091e266e9e6139ff3fb936b67fc73df52e004f178c",
+ "recorded_at": "2026-10-04T00:29:01.252492+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFWru5FCGW8a9Mu7D6M",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Apex technical validation, trial data audit and access controls\",\"body\":\"Hi Simone and Wes,\\n\\nThanks for your time today. Here is a short recap.\\n\\nWhat we showed: nightly trial extract loads, versioned so you can see the data as of any date, with restore of any version (the restore is logged). The audit trail logs reads as well as changes and can be exported to your log system. Unblinded columns are masked except for the unblinded statistics role, and role grants can have an expiry date.\\n\\nOpen items:\\n- Wes: you offered to send the data dictionary for the full trial model. Theo will use it to scope the full load.\\n- Dr. Okafor: you mentioned she must sign off on anything touching trial data. I'll send a few short lines on audit logging and unblinded access that you can forward whenever she has time.\\n- Commercial approvers: you said procurement and possibly the VP of R and D may be involved, and that you are not sure yet.\\n\\nNo next meeting is set yet. Would a short check-in after Dr. Okafor has had a look work for you?\\n\\nMarta\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"Each load is versioned, so you can see exactly what the data looked like on any date.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"Yes. Any version can be restored, and the restore itself is logged.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Reads too. Every query against a protected table is logged with the user and the columns returned.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Role grants can have an expiry date, yes.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"That would help. I'll use it to scope the full load.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Honestly I'm not sure yet.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5442,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5704,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 656,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

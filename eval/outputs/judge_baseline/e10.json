@@ -1,0 +1,346 @@
+{
+ "deal_id": "e10",
+ "system": "baseline",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "The call ran roughly 7 minutes.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U001",
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Transcript runs from 00:03 to 06:47, and the CRM end time is 09:07 against a 09:00 start."
+  },
+  {
+   "claim": "Corvid uses its own OIDC provider and sends roles in a nested net_groups claim, an object with region and role.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003",
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ana asked and Fatima confirmed the nested claim with region and role."
+  },
+  {
+   "claim": "Apex claim mapping supports only flat claims, a string or a list of strings.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ana stated this directly and release card RC-09 agrees."
+  },
+  {
+   "claim": "Nested claims are not supported in general availability today.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ana said 'Not today in general availability.'"
+  },
+  {
+   "claim": "Ana said nested support is coming next quarter, but only from hearsay and with no confirmed date.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U007",
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "She said next quarter, then said it was only what she heard from the product team."
+  },
+  {
+   "claim": "Last night's run on Corvid's sample data (~1.2B rows/day, incremental) took 22 minutes versus about 5 hours for the current job.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Both figures match the transcript."
+  },
+  {
+   "claim": "Colin was happy with the pipeline result.",
+   "category": "other",
+   "supported": false,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "His only positive remark, 'Even better,' was about the connector, and he said nothing about the 22-minute run."
+  },
+  {
+   "claim": "Ana first said the connector syncs hourly, then corrected to continuous, about 1 minute end to end.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ana said hourly, then corrected herself, and RC-12 confirms continuous sync."
+  },
+  {
+   "claim": "The architecture board needs a written SSO design and the nested-claims date, and meets monthly, next on November 3.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Fatima stated this directly."
+  },
+  {
+   "claim": "The transcript has timestamp jumps (00:32 to 02:40, 03:23 to 05:50), so content may be missing.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005",
+    "U006",
+    "U013",
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "The gaps exist in the transcript, and the output marks possible missing content as uncertain."
+  },
+  {
+   "claim": "Fatima asked whether next quarter was committed and did not get a firm yes.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U008",
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She asked directly, and Ana answered with hearsay and a promise to get the date."
+  },
+  {
+   "claim": "Fatima needs the nested-claims timing in writing for the architecture board.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "She said she needs it in writing for the board."
+  },
+  {
+   "claim": "Colin said hourly sync was fine for BI.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote."
+  },
+  {
+   "claim": "Colin had a hard stop, so the pipeline discussion was brief.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "He said he had a hard stop and asked to move to the pipeline."
+  },
+  {
+   "claim": "If 'next quarter' means calendar Q1 2027, nested support may land after the Dec 18 target close.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "The CRM close date is 2026-12-18 and the quarter was not defined; the output states it as conditional."
+  },
+  {
+   "claim": "Derek said 'I'm sure' Corvid could join the preview program, but no one confirmed availability or eligibility.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Derek's hedged offer is in the transcript, and nothing confirms eligibility."
+  },
+  {
+   "claim": "The Nov 3 board is the only checkpoint before the Dec 18 close, and the next board is likely early December.",
+   "category": "risk",
+   "supported": false,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Only monthly meetings and a Nov 3 date were stated; 'only checkpoint' and the December date are inferred."
+  },
+  {
+   "claim": "CRM economic buyer is blank.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "The CRM economic_buyer field is empty."
+  },
+  {
+   "claim": "CRM business outcome is blank and no stakeholder is recorded for the architecture board.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "The CRM business_outcome value and stakeholder_to_add are both empty."
+  },
+  {
+   "claim": "Corvid's go-live date was not captured.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No go-live date appears in the transcript or the CRM."
+  },
+  {
+   "claim": "The 22-minute run was on Corvid's sample data in an Apex environment and has not been seen at production scale.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "The run used data Corvid sent; the Apex environment and the lack of production-scale testing are reasonable inferences, and the output flags them as unqualified."
+  },
+  {
+   "claim": "Ana committed to send the written SSO design by Friday, October 9.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ana stated this directly."
+  },
+  {
+   "claim": "Derek committed to send the nested-claims date along with the SSO design.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Derek said he would send it along with the design."
+  },
+  {
+   "claim": "Ana committed to get the exact nested-claims date from product, due before Oct 9 (implied).",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U009",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "She said 'I'll get you the exact date'; the pre-Oct 9 timing is implied and marked as such."
+  },
+  {
+   "claim": "Fatima committed to take the design and date to the architecture board at the Nov 3 meeting.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U011",
+    "U020"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "She said the board needs the material and meets Nov 3, but never committed to submit it."
+  },
+  {
+   "claim": "Preview program access was mentioned only by Derek and has no owner or date.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Only Derek mentioned it, with no owner or date."
+  },
+  {
+   "claim": "The CRM sc_commitment puts both the SSO design and nested claims date under the SC, while Derek owns the date in the call.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U021",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "The CRM text and the transcript ownership match this description."
+  },
+  {
+   "claim": "The email says Apex is also checking with product on preview program access and will include what it learns.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Nobody committed to check on or report back about preview access; Derek only said 'I'm sure'."
+  },
+  {
+   "claim": "The email offers to walk through the SSO design with Fatima before she submits it.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No walkthrough was offered or discussed in the call."
+  },
+  {
+   "claim": "The warehouse connector now syncs continuously, about 1 minute end to end; hourly was the previous behavior.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ana's correction states this and release card RC-12 confirms it."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.064813
+}

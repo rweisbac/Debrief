@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "afcbd558afd64babc743b67be6f3c1bec085f4dde2e762654ca9308ab2486669",
+ "recorded_at": "2026-10-04T00:31:24.513265+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFh24kzHEQoLFe9Y7fi",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":false,\"summary\":\"not stated\",\"evidence\":[]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No customer agreed to a dated next meeting or action. Fatima named the architecture board meeting on November 3rd, but only as the date of its monthly meeting, and no follow-up call was agreed.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"They meet monthly, next on November 3rd.\"}]},\"objections\":[{\"summary\":\"Nested net_groups claim is not supported in GA, and she wants it in writing for the architecture board. Her question about whether next quarter is committed was never firmly answered.\",\"raised_by\":\"Fatima Zahid\",\"status\":\"open\",\"answer_given\":\"Ana said nested claims are coming next quarter per what she heard from product, and she will get the exact date. Derek offered preview program access.\",\"evidence\":[{\"utterance_id\":\"U006\",\"excerpt\":\"So nested doesn't work.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Next quarter, is that committed?\"},{\"utterance_id\":\"U011\",\"excerpt\":\"I'll need that in writing for our architecture board.\"}]}],\"open_technical_items\":[{\"summary\":\"Date for nested claim support is unconfirmed. Ana relayed hearsay from product, and the release card says nested claims are in private preview with no announced GA date.\",\"owner\":\"Ana Petrov\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"That's what I've heard from the product team. I'll get you the exact date.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"But nested claims are coming next quarter, so you'd be covered by the time you go live.\"}]},{\"summary\":\"Written SSO design for the architecture board, covering the nested net_groups claim with region and role.\",\"owner\":\"Ana Petrov\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"A written SSO design and the date for nested claims.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"Right. An object with region and role.\"}]},{\"summary\":\"Preview program access for nested claims was offered by Derek with no confirmation that it exists or that the customer is eligible.\",\"owner\":\"Derek Shaw\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"And we can get you into the preview program before that, I'm sure.\"}]}],\"integration_patterns\":[{\"summary\":\"Customer's own OIDC identity provider sends roles in a nested claim called net_groups, an object with region and role.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"You use your own OIDC provider, and roles come in a nested claim called net_groups, is that right?\"},{\"utterance_id\":\"U004\",\"excerpt\":\"Right. An object with region and role.\"}]},{\"summary\":\"Network usage data loaded incrementally into Apex, then synced to the customer's BI tool through the warehouse connector, which is continuous at about 1 minute end to end.\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"This is the network usage data you sent, about 1.2 billion rows a day, loaded incrementally.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"The connector is continuous now, about 1 minute end to end.\"}]}],\"commitments\":[{\"who\":\"Ana Petrov\",\"side\":\"apex\",\"what\":\"Send the written SSO design\",\"by_when\":\"2026-10-09\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send the SSO design by Friday, October 9th.\"}]},{\"who\":\"Derek Shaw\",\"side\":\"apex\",\"what\":\"Send the nested claims date along with the SSO design\",\"by_when\":\"2026-10-09\",\"evidence\":[{\"utterance_id\":\"U022\",\"excerpt\":\"And I'll send the nested claims date along with it.\"}]},{\"who\":\"Ana Petrov\",\"side\":\"apex\",\"what\":\"Get Fatima the exact date for nested claims\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"I'll get you the exact date.\"}]}],\"stakeholders\":[{\"name\":\"Fatima Zahid\",\"title\":\"Director of Identity and Access\",\"present\":true,\"why_they_matter\":\"Champion. SSO is the gate for her, and she brings the design to the architecture board.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"SSO first please. That's the gate for us.\"}]},{\"name\":\"Colin Byrne\",\"title\":\"Principal Data Engineer\",\"present\":true,\"why_they_matter\":\"Technical evaluator for the usage pipeline. His current job takes about 5 hours.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Our current job is about 5 hours.\"}]},{\"name\":\"Architecture board\",\"title\":\"Approves the SSO design\",\"present\":false,\"why_they_matter\":\"Approves the SSO design and meets monthly, next on November 3rd.\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"They meet monthly, next on November 3rd.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"I'll need that in writing for our architecture board.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2208,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2208,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1713,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

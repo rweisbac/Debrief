@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "986e473373c54ce2d18cf57e6ab66fa4f16b3e34e8e22e457da275bdc5075425",
+ "recorded_at": "2026-10-04T00:26:55.311356+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFMK2RLfwWFk7muF8DQ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Ready to advance: champion says all three validation items are covered and a CFO meeting is planned for Oct 6, but the CFO has not seen the product.\",\"customer_value_line\":\"Maya's stated goal: store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full; the demo showed a 5 minute refresh on sandbox data.\",\"what_we_validated\":[\"Streaming inventory: point of sale and order feeds merged into one model, 5 minute refresh, no separate streaming product (sandbox extract).\",\"Store rollup: 212 stores, each with projected days to reorder point, computed in parallel per store. Maya: 'That's what the store managers need.'\",\"Regional manager access: row level policy on the region key; one level of parent and child regions works out of the box, which matches what Carlos described.\"],\"integration_patterns\":[\"Reads from the customer's change feed, not queries against the order database; sandbox peaked at about 40 reads a second.\",\"Row level policy on the region key with one level of parent and child.\"],\"objections_and_answers\":[\"Carlos: load on the order database, citing a past vendor that hammered it. Answer: Apex reads from the change feed, about 40 reads a second peak in the sandbox. Carlos: well under what they allow. Resolved on sandbox numbers only.\"],\"open_items\":[\"CFO Priscilla's email is not in the CRM and what she needs to approve a purchase over 200 thousand is not stated. Owner: Hannah Ortiz.\",\"Decision process and paper process not discussed. Owner: not stated.\",\"Production load and behavior not shown; validation ran on a sandbox extract. Owner: not stated.\"],\"commitments\":[\"Hannah Ortiz (Apex): send business case numbers (cost per store and the overstock reduction modeled together) to Maya by Friday, Oct 2.\",\"Devon Clarke (Apex): send Carlos the change feed setup doc today, Sep 28.\",\"Maya Lindqvist (customer): set up a 30 minute meeting with Priscilla for Tuesday, Oct 6 at 10.\",\"Hannah Ortiz (Apex): attend the Oct 6 meeting with Devon.\"],\"stakeholders\":[\"Maya Lindqvist, VP of Data: champion, present.\",\"Carlos Mendes, Data Engineering Lead: technical evaluator, present; owns the change feed and ops runbook.\",\"Priscilla Grant, CFO: economic buyer, absent; signs anything over 200 thousand; has not seen the product.\"],\"competitive_notes\":[],\"risks\":[\"The CFO signs anything over 200 thousand (CRM ACV 310000), has not seen the product, and her view is unknown until Oct 6.\",\"Readiness is stated by the champion only; the CFO meeting is not yet confirmed by Priscilla.\",\"Validation was on sandbox data; production load and behavior were not shown.\",\"The Oct 6 meeting depends on Apex delivering the business case numbers by Oct 2.\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"It covers all three. Honestly I'm ready to take this to Priscilla. She's our CFO and she signs anything over 200 thousand.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"Then let's book Priscilla. I'll set up 30 minutes with her for Tuesday, October 6th at 10.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Yes, I'll send it by Friday the 2nd.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send you the setup doc today.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"In the sandbox it peaked at about 40 reads a second.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"One level of parent and child works out of the box. You described one level, so you're covered.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5063,
+   "cache_creation_input_tokens": 6249,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 6249,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1331,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

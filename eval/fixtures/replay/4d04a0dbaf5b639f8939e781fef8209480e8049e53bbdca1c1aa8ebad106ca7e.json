@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "4d04a0dbaf5b639f8939e781fef8209480e8049e53bbdca1c1aa8ebad106ca7e",
+ "recorded_at": "2026-10-04T00:29:43.345887+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFZuMVUtQFNvHbpPnvG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Monica Reyes said daily cost trend is the whole point; actuaries currently see the trend six weeks late.\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Daily is the whole point. Our actuaries see the trend six weeks late today.\"}]},\"agreed_next_step\":{\"exists\":true,\"summary\":\"Sanjay will put Summit on the Oct 22 review board agenda if he has SOC 2, pen test summary, questionnaire and data flow diagram by Oct 14.\",\"date\":\"2026-10-22\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda.\"}]},\"objections\":[],\"open_technical_items\":[],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Andre Silva\",\"side\":\"apex\",\"what\":\"Send the SOC 2 report and pen test summary today\",\"by_when\":\"2026-10-01\",\"evidence\":[{\"utterance_id\":\"U007\",\"excerpt\":\"I'll send both today under the NDA you already signed.\"}]},{\"who\":\"Andre Silva\",\"side\":\"apex\",\"what\":\"Build and send the data flow diagram\",\"by_when\":\"2026-10-09\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I'll do the data flow diagram and send it by Friday, October 9th.\"}]},{\"who\":\"Sanjay Iyer\",\"side\":\"customer\",\"what\":\"Send the security questionnaire\",\"by_when\":\"2026-10-01\",\"evidence\":[{\"utterance_id\":\"U019\",\"excerpt\":\"I'll send the questionnaire today.\"}]},{\"who\":\"Monica Reyes\",\"side\":\"customer\",\"what\":\"Bring in Daniel from finance for commercials after the review board\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"}]},{\"who\":\"Grace Liu\",\"side\":\"apex\",\"what\":\"Send a recap with the agreed dates\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send a recap with those dates.\"}]}],\"stakeholders\":[{\"name\":\"Monica Reyes\",\"title\":\"Director of Enterprise Data\",\"present\":true,\"why_they_matter\":\"Champion; owns the claims model business case\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"Okay, the claims model please. That's the business case.\"}]},{\"name\":\"Sanjay Iyer\",\"title\":\"Information Security Lead\",\"present\":true,\"why_they_matter\":\"Runs vendor security review and board agenda\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Sanjay runs the vendor security review.\"}]},{\"name\":\"Daniel\",\"title\":\"Finance\",\"present\":false,\"why_they_matter\":\"Finance contact for commercials after the board\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2212,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2212,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1032,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

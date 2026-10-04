@@ -1,0 +1,2207 @@
+{
+ "debrief_id": "e02-6c27f742",
+ "deal_id": "e02",
+ "as_of": "2026-09-29",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "not stated",
+   "evidence": []
+  },
+  "agreed_next_step": {
+   "exists": false,
+   "summary": "No agreed dated next step. Gregor floated reconnecting the week after next, depending on quarter close, and declined a calendar hold, saying he would ping Ben.",
+   "date": "",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+    },
+    {
+     "utterance_id": "U022",
+     "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+    }
+   ]
+  },
+  "objections": [],
+  "open_technical_items": [
+   {
+    "summary": "Whether column level lineage can parse Tamsin's mostly dynamic stored procedures is unconfirmed; Sofia will try to run a couple through the parser, with no timing given and the parser team stretched.",
+    "owner": "Sofia Russo",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "Does it pick up the transformations done in our stored procedures?"
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Ben Adeyemi",
+    "side": "apex",
+    "what": "Send a recap of what was covered today",
+    "by_when": "2026-09-29",
+    "evidence": [
+     {
+      "utterance_id": "U023",
+      "excerpt": "I'll send a recap today with what we covered."
+     }
+    ]
+   },
+   {
+    "who": "Sofia Russo",
+    "side": "apex",
+    "what": "Write up the stored procedure question so it is clear what she needs from Tamsin",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+     }
+    ]
+   },
+   {
+    "who": "Sofia Russo",
+    "side": "apex",
+    "what": "Try to get a couple of Calder's stored procedures run through the Apex parser, no timing promised",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+     }
+    ]
+   },
+   {
+    "who": "Gregor Hale",
+    "side": "customer",
+    "what": "Try to find and send the data dictionary so Apex can scope the full model; he said sometime next week, maybe",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "I'll try to dig it up."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Sometime next week, maybe. It's spread across a few wikis."
+     }
+    ]
+   },
+   {
+    "who": "Tamsin Wu",
+    "side": "customer",
+    "what": "Possibly loop in procurement early, after asking her manager first",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     }
+    ]
+   },
+   {
+    "who": "Tamsin Wu",
+    "side": "customer",
+    "what": "Look at Sofia's stored procedure write-up when it arrives",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U025",
+      "excerpt": "Okay, I'll look at it when it comes."
+     }
+    ]
+   },
+   {
+    "who": "Gregor Hale",
+    "side": "customer",
+    "what": "Ping Ben about reconnecting once the quarter close is clearer",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "Let me see how things shake out first and I'll ping you."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Gregor Hale",
+    "title": "Head of Analytics Engineering",
+    "present": true,
+    "why_they_matter": "Champion; controls data dictionary and timing of next meeting",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "Sounds good. Tamsin is here mostly for the governance bit."
+     }
+    ]
+   },
+   {
+    "name": "Tamsin Wu",
+    "title": "Data Governance Manager",
+    "present": true,
+    "why_they_matter": "Governance evaluator; lineage is her main interest and may open procurement",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "Yes. Lineage is my main interest."
+     }
+    ]
+   },
+   {
+    "name": "Tamsin Wu's manager",
+    "title": "not stated",
+    "present": false,
+    "why_they_matter": "Must approve Tamsin looping in procurement early",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'd have to ask my manager first."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Gregor reacted positively to the continuous warehouse connector sync compared with his current hourly tool.",
+    "strength": "moderate",
+    "qualifier": "Product reaction only; no decision or purchase step attached.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Nice. Our current tool is hourly at best."
+     }
+    ]
+   },
+   {
+    "summary": "Gregor said the masking policy matches what they do today, consolidated from three places into one.",
+    "strength": "weak",
+    "qualifier": "Lukewarm wording ('That's fine'); no commitment.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's roughly what we have today, just in three places instead of one."
+     }
+    ]
+   },
+   {
+    "summary": "Tamsin offered to loop in procurement early.",
+    "strength": "weak",
+    "qualifier": "Conditional on her manager's approval; no date.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Next meeting is undated and deferred; Gregor declined a calendar hold and will ping Ben depending on quarter close.",
+    "strength": "strong",
+    "qualifier": "Contingent on the customer's quarter close.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     }
+    ]
+   },
+   {
+    "summary": "Data dictionary delivery is vague with no firm date, which gates scoping the full model.",
+    "strength": "moderate",
+    "qualifier": "Gregor hedged ('try', 'maybe').",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "Hard to say. Sometime next week, maybe. It's spread across a few wikis."
+     }
+    ]
+   },
+   {
+    "summary": "Stored procedure lineage is a likely gap: most of Tamsin's procedures are dynamic, and the SC could not promise parsing or timing.",
+    "strength": "strong",
+    "qualifier": "Tamsin's main interest is lineage; parser team capacity is limited.",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "Most of them are dynamic. That's a known pain."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "No promises on timing, our parser team is stretched."
+     }
+    ]
+   },
+   {
+    "summary": "No economic buyer or business outcome was named or discussed; engagement is limited to two contacts, and Tamsin's replies were flat.",
+    "strength": "moderate",
+    "qualifier": "Absence of information, not a stated objection.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Okay."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "about a minute end to end",
+    "what_it_measures": "Warehouse connector sync time as stated by the SC",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "It syncs continuously now, about a minute end to end."
+     }
+    ]
+   },
+   {
+    "value": "hourly at best",
+    "what_it_measures": "Freshness of the customer's current tool",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Our current tool is hourly at best."
+     }
+    ]
+   },
+   {
+    "value": "three places",
+    "what_it_measures": "Number of places the customer's masking policies currently live",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's roughly what we have today, just in three places instead of one."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Gregor to find and send the data dictionary so Apex can scope the full model.",
+    "owner": "Gregor Hale",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "I'd probably want to get you our data dictionary so you can scope the full model. I'll try to dig it up."
+     }
+    ]
+   },
+   {
+    "summary": "Tamsin may loop in procurement early, pending her manager's approval.",
+    "owner": "Tamsin Wu",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     }
+    ]
+   },
+   {
+    "summary": "Tamsin to review the SC's stored procedure write-up and supply what is needed.",
+    "owner": "Tamsin Wu",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U025",
+      "excerpt": "Okay, I'll look at it when it comes."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "dated_next_step",
+    "logged_value": "Reconnect week after next",
+    "transcript_says": "No dated next meeting. Gregor was tentative on the week after next, depending on quarter close, declined a calendar hold, and said he would ping Ben.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "",
+    "transcript_says": "Sofia said she would try to get a couple of stored procedures run through the parser (no timing promised) and would write up the stored procedure question for Tamsin.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "partial",
+   "summary": "not stated",
+   "evidence": [
+    {
+     "utterance_id": "U012",
+     "excerpt": "It syncs continuously now, about a minute end to end."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Tamsin Wu's manager: Must approve Tamsin looping in procurement early",
+   "evidence": [
+    {
+     "utterance_id": "U018",
+     "excerpt": "I'd have to ask my manager first."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "partial",
+   "summary": "Gregor to find and send the data dictionary so Apex can scope the full model.",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "I'd probably want to get you our data dictionary so you can scope the full model. I'll try to dig it up."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "partial",
+   "summary": "Tamsin may loop in procurement early, pending her manager's approval.",
+   "evidence": [
+    {
+     "utterance_id": "U018",
+     "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+    }
+   ]
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "Next meeting is undated and deferred; Gregor declined a calendar hold and will ping Ben depending on quarter close.",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+    },
+    {
+     "utterance_id": "U022",
+     "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Gregor Hale, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "Sounds good. Tamsin is here mostly for the governance bit."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "waiting_on_customer",
+  "deal_state_why": "Gregor tied the next meeting to quarter close, declined a calendar hold, and gave no firm date for the data dictionary.",
+  "next_steps": [
+   {
+    "action": "Ask the parser team for a date to run a couple of Tamsin's dynamic stored procedures, then send Tamsin the write-up naming that date and the two or three procedures needed.",
+    "owner": "Sofia Russo",
+    "due_by": "2026-09-30",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "",
+    "action_type": "route_to_sc",
+    "why": "Sofia said no promises on timing; an undated 'I'll see' leaves Tamsin's main lineage question open and easy to forget.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+     }
+    ]
+   },
+   {
+    "action": "Send Gregor a short list of the exact data dictionary fields needed, and offer to take whatever format the wikis hold.",
+    "owner": "Ben Adeyemi",
+    "due_by": "2026-09-30",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "support_customer_process",
+    "why": "Gregor said the dictionary is spread across wikis; a sized request makes it easier than asking when it will arrive.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "I think we'd probably want to get you our data dictionary so you can scope the full model."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "It's spread across a few wikis."
+     }
+    ]
+   },
+   {
+    "action": "Give Tamsin a brief note on what procurement would need, so she can take it to her manager when asking approval.",
+    "owner": "Ben Adeyemi",
+    "due_by": "2026-09-30",
+    "playbook_rule_id": "PB-05",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "Tamsin's offer was conditional on her manager; without something specific to bring, it likely stalls and the manager stays unseen.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "No dated next meeting: Gregor declined a calendar hold and will ping Ben depending on quarter close. No economic buyer or business outcome was stated.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     }
+    ]
+   },
+   {
+    "summary": "Stored procedure lineage is a likely gap: Tamsin says most procedures are dynamic and the parser team is stretched.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "Most of them are dynamic. That's a known pain."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Gregor deferred the next meeting to quarter close and will ping Ben. Data dictionary timing is vague, and stored procedure lineage remains unconfirmed.",
+    "next_steps": [
+     {
+      "action": "Send Tamsin the stored procedure write-up asking for a few dynamic procedures, and tell her the date Sofia will report back on the parser run.",
+      "owner": "Sofia Russo",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "",
+      "action_type": "route_to_sc",
+      "why": "Sofia promised the parser run with no timing; AEs often leave it undated, and the customer never hears a date.",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+       },
+       {
+        "utterance_id": "U024",
+        "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+       }
+      ]
+     },
+     {
+      "action": "Send Gregor a short list of the minimum tables and fields needed from the data dictionary, so he can send a partial export instead of gathering it all.",
+      "owner": "Ben Adeyemi",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Gregor said it is spread across wikis; a sized request makes it easier to send than a reminder would.",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "I'll try to dig it up."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Sometime next week, maybe. It's spread across a few wikis."
+       }
+      ]
+     },
+     {
+      "action": "Ask Tamsin what her manager needs to approve early procurement involvement, and who signs for this purchase, then offer to send it.",
+      "owner": "Ben Adeyemi",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "No economic buyer is named. Tamsin's manager is a possible path in, easy to miss because it was said in passing.",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'd have to ask my manager first."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Next meeting is undated and tied to the customer's quarter close. Gregor declined a calendar hold; do not push for one, and offer help instead.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Gregor tied the next meeting to quarter close, declined a calendar hold, and gave no firm date for the data dictionary.",
+    "next_steps": [
+     {
+      "action": "Ask the parser team for a date to run a couple of Tamsin's dynamic stored procedures, then send Tamsin the write-up naming that date and the two or three procedures needed.",
+      "owner": "Sofia Russo",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "",
+      "action_type": "route_to_sc",
+      "why": "Sofia said no promises on timing; an undated 'I'll see' leaves Tamsin's main lineage question open and easy to forget.",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+       },
+       {
+        "utterance_id": "U024",
+        "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+       }
+      ]
+     },
+     {
+      "action": "Send Gregor a short list of the exact data dictionary fields needed, and offer to take whatever format the wikis hold.",
+      "owner": "Ben Adeyemi",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Gregor said the dictionary is spread across wikis; a sized request makes it easier than asking when it will arrive.",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "I think we'd probably want to get you our data dictionary so you can scope the full model."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "It's spread across a few wikis."
+       }
+      ]
+     },
+     {
+      "action": "Give Tamsin a brief note on what procurement would need, so she can take it to her manager when asking approval.",
+      "owner": "Ben Adeyemi",
+      "due_by": "2026-09-30",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Tamsin's offer was conditional on her manager; without something specific to bring, it likely stalls and the manager stays unseen.",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "No dated next meeting: Gregor declined a calendar hold and will ping Ben depending on quarter close. No economic buyer or business outcome was stated.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+       }
+      ]
+     },
+     {
+      "summary": "Stored procedure lineage is a likely gap: Tamsin says most procedures are dynamic and the parser team is stretched.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U007",
+        "excerpt": "Most of them are dynamic. That's a known pain."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: two (not in transcript or CRM): two (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Calder Bank technical validation, September 29",
+    "body": "Hi Gregor and Tamsin,\n\nThanks for your time today. Here is what we covered.\n\nShown on your sample data: column level lineage for the loan book model, a masking policy on borrower name and national ID, and the warehouse connector, which syncs continuously at about a minute end to end.\n\nOpen items:\n- Stored procedures: Tamsin, most of yours are dynamic, so Sofia will try to run a couple through our parser. No timing is promised yet. Sofia will send you a short write-up of what she needs from you.\n- Data dictionary: Gregor, you will try to find it so we can scope the full model. If a partial export is easier, tell us and we will size the request.\n\nNo next meeting is set. Gregor, you will ping me once the quarter close is clearer, and I will wait for your note.\n\nBen",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "This is column level lineage for the loan book model you sent."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "It syncs continuously now, about a minute end to end."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "I'll try to dig it up."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Apex technical validation on 2026-09-29",
+    "body": "Hi Gregor and Tamsin,\n\nThanks for your time today. Here is what we covered.\n\nShown on your sample data:\n- Column level lineage on the loan book model\n- A masking policy on borrower name and national ID, visible to analysts only when masked unless they hold the steward role\n- The warehouse connector, which syncs continuously, about a minute end to end\n\nOpen items:\n- Stored procedures: Tamsin, most of yours are dynamic, so Sofia will see if she can get a couple run through our parser. We have no timing yet. Sofia will also send a short write-up of what she needs from you.\n- Data dictionary: Gregor, you will try to find it so we can scope the full model, maybe next week.\n- Procurement: Tamsin, you may loop them in early after checking with your manager.\n\nGregor, you mentioned reconnecting sometime after that, depending on quarter close, and that you would ping me. Is there anything we can send that makes that easier?\n\nBen",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "It syncs continuously now, about a minute end to end."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "I think we'd probably want to get you our data dictionary so you can scope the full model. I'll try to dig it up."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[email_promises_uncommitted] Nobody on the call offered to accept a partial export or to size a request, so the email makes a new Apex commitment that was never made. (target: If a partial export is easier, tell us and we will size the request.; lines U015, U017, U024)"
+   ],
+   "findings": [
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date): next week (relative date; write the actual date)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Waiting on customer: Gregor deferred the next meeting to after quarter close and will ping Ben; no dated next step.",
+    "customer_value_line": "Business outcome not stated; discovery noted only a pain of governance spread across three tools, and Gregor said masking policies are in three places instead of one.",
+    "what_we_validated": [
+     "Column level lineage demoed on the loan book model; Tamsin's main interest",
+     "Masking policy on borrower name and national ID, with analysts seeing masked values unless they have the steward role; Gregor said it is roughly what they have today",
+     "Warehouse connector syncs continuously, about a minute end to end; Gregor said their current tool is hourly at best"
+    ],
+    "integration_patterns": [
+     "Warehouse connector continuous sync, about a minute end to end, versus customer's current hourly tool"
+    ],
+    "objections_and_answers": [
+     "Tamsin asked whether lineage picks up transformations in stored procedures. Sofia said SQL is parsed, stored procedures depend on how dynamic they are. Tamsin said most are dynamic. Status: unresolved."
+    ],
+    "open_items": [
+     "Stored procedure lineage unconfirmed; Sofia to try running a couple of Tamsin's procedures through the parser, no timing promised, parser team stretched",
+     "Data dictionary needed to scope the full model; Gregor owns it, said sometime next week, maybe, no firm date",
+     "Tamsin may loop in procurement early, pending her manager's approval; no date",
+     "Economic buyer not named",
+     "Next meeting undated; Gregor floated the week after next, depending on quarter close, and declined a calendar hold"
+    ],
+    "commitments": [
+     "Ben Adeyemi: send a recap today (2026-09-29)",
+     "Sofia Russo: write up the stored procedure question for Tamsin; no date stated",
+     "Sofia Russo: try to get a couple of stored procedures run through the parser; no timing promised",
+     "Gregor Hale: try to find and send the data dictionary; no firm date",
+     "Tamsin Wu: look at Sofia's write-up when it arrives; may ask her manager about procurement",
+     "Gregor Hale: ping Ben about reconnecting once quarter close is clearer"
+    ],
+    "stakeholders": [
+     "Gregor Hale, Head of Analytics Engineering, champion, present",
+     "Tamsin Wu, Data Governance Manager, governance evaluator, present",
+     "Tamsin Wu's manager, title not stated, absent; would approve early procurement involvement"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Next meeting is undated and deferred; Gregor declined a calendar hold",
+     "Stored procedure lineage is a likely gap: most are dynamic and the parser team is stretched",
+     "Data dictionary delivery is vague and gates scoping",
+     "No economic buyer or business outcome named; only two customer contacts, and Tamsin's replies were flat",
+     "The CRM dated_next_step says reconnect week after next, but the transcript shows no agreed date"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "Most of them are dynamic. That's a known pain."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "No promises on timing, our parser team is stretched."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Hard to say. Sometime next week, maybe. It's spread across a few wikis."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "It syncs continuously now, about a minute end to end."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Waiting on customer: Gregor tied the next meeting to quarter close, declined a calendar hold, and gave no firm date for the data dictionary.",
+    "customer_value_line": "not stated; no business outcome was discussed in the call and CRM has none logged. Discovery notes only list a pain: governance spread across three tools.",
+    "what_we_validated": [
+     "Column level lineage shown on the loan book model Calder sent; Tamsin's main interest.",
+     "Masking policy on borrower name and national ID shown; Gregor said it is roughly what they have today, just in three places instead of one.",
+     "Warehouse connector syncs continuously, about a minute end to end (RC-12); Gregor said their current tool is hourly at best."
+    ],
+    "integration_patterns": [
+     "Warehouse connector with continuous sync, about a minute end to end, versus Calder's current hourly at best."
+    ],
+    "objections_and_answers": [
+     "Stored procedure lineage: Tamsin asked if lineage picks up transformations in stored procedures; Sofia said SQL is parsed, stored procedures depend on how dynamic they are; Tamsin said most are dynamic. Status: open, unconfirmed."
+    ],
+    "open_items": [
+     "Whether lineage can parse Tamsin's mostly dynamic stored procedures; Sofia to try a couple through the parser, no timing given, parser team stretched.",
+     "Data dictionary needed to scope the full model; Gregor to try to find it, said sometime next week, maybe, spread across a few wikis.",
+     "Procurement involvement: Tamsin might loop in procurement early, only after asking her manager; no date.",
+     "No dated next meeting; Gregor floated the week after next depending on quarter close and will ping Ben. CRM shows 'Reconnect week after next', which overstates what was agreed.",
+     "Economic buyer not named."
+    ],
+    "commitments": [
+     "Ben Adeyemi: send a recap today (2026-09-29).",
+     "Sofia Russo: write up the stored procedure question so it is clear what she needs from Tamsin; no date.",
+     "Sofia Russo: try to get a couple of Calder's stored procedures run through the parser; no timing promised.",
+     "Gregor Hale: try to find and send the data dictionary; sometime next week, maybe.",
+     "Tamsin Wu: possibly loop in procurement early after asking her manager; no date.",
+     "Tamsin Wu: look at Sofia's write-up when it arrives.",
+     "Gregor Hale: ping Ben about reconnecting once quarter close is clearer."
+    ],
+    "stakeholders": [
+     "Gregor Hale, Head of Analytics Engineering, champion, present.",
+     "Tamsin Wu, Data Governance Manager, technical evaluator focused on lineage, present.",
+     "Tamsin Wu's manager, title not stated, absent; must approve Tamsin looping in procurement."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Next meeting is undated and deferred; Gregor declined a calendar hold.",
+     "Stored procedure lineage is a likely gap and the SC could not promise parsing or timing.",
+     "Data dictionary delivery is vague and gates scoping the full model.",
+     "No economic buyer or business outcome stated; only two engaged contacts and Tamsin's replies were flat."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "Most of them are dynamic. That's a known pain."
+     },
+     {
+      "utterance_id": "U008",
+      "excerpt": "No promises on timing, our parser team is stretched."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Hard to say. Sometime next week, maybe. It's spread across a few wikis."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "It syncs continuously now, about a minute end to end."
+     },
+     {
+      "utterance_id": "U023",
+      "excerpt": "I'll send a recap today with what we covered."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: two (not in transcript or CRM): two (not in transcript or CRM)",
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date): next week (relative date; write the actual date)"
+   ],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: two (not in transcript or CRM): two (not in transcript or CRM)",
+    "[dates_future_business_days] bad dates: next week (relative date; write the actual date), next week (relative date; write the actual date): next week (relative date; write the actual date), next week (relative date; write the actual date)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Business outcome not stated by the customer; discovery notes record only the pain of governance spread across three tools.",
+    "rows": [
+     {
+      "milestone": "Apex sends the post-demo recap covering what was shown, open items, owners and dates",
+      "customer_owner": "",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "2026-09-29",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U023",
+        "excerpt": "I'll send a recap today with what we covered."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex writes up the stored procedure question and what is needed from Tamsin; customer reviews it",
+      "customer_owner": "Tamsin Wu",
+      "apex_owner": "Sofia Russo",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U024",
+        "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+       },
+       {
+        "utterance_id": "U025",
+        "excerpt": "Okay, I'll look at it when it comes."
+       }
+      ]
+     },
+     {
+      "milestone": "Run a couple of Calder's dynamic stored procedures through the Apex parser to confirm lineage coverage",
+      "customer_owner": "Tamsin Wu",
+      "apex_owner": "Sofia Russo",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer shares data dictionary so Apex can scope the full model",
+      "customer_owner": "Gregor Hale",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "I'll try to dig it up."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Sometime next week, maybe. It's spread across a few wikis."
+       }
+      ]
+     },
+     {
+      "milestone": "Tamsin asks her manager about looping in procurement early",
+      "customer_owner": "Tamsin Wu",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+       }
+      ]
+     },
+     {
+      "milestone": "Next customer meeting to reconnect; Gregor to ping Ben, no calendar hold yet",
+      "customer_owner": "Gregor Hale",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+       },
+       {
+        "utterance_id": "U022",
+        "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Business outcome not stated by the customer; discovery notes record only the pain of governance spread across three tools.",
+    "rows": [
+     {
+      "milestone": "Apex sends the post-demo recap covering what was shown, open items, owners and dates",
+      "customer_owner": "",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "2026-09-29",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U023",
+        "excerpt": "I'll send a recap today with what we covered."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex writes up the stored procedure question and what is needed from Tamsin; customer reviews it",
+      "customer_owner": "Tamsin Wu",
+      "apex_owner": "Sofia Russo",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U024",
+        "excerpt": "And I'll write up the stored procedure question so it's clear what I need from Tamsin."
+       },
+       {
+        "utterance_id": "U025",
+        "excerpt": "Okay, I'll look at it when it comes."
+       }
+      ]
+     },
+     {
+      "milestone": "Run a couple of Calder's dynamic stored procedures through the Apex parser to confirm lineage coverage",
+      "customer_owner": "Tamsin Wu",
+      "apex_owner": "Sofia Russo",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U008",
+        "excerpt": "Then I'll see if I can get a couple of them run through our parser."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer shares data dictionary so Apex can scope the full model",
+      "customer_owner": "Gregor Hale",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "I'll try to dig it up."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Sometime next week, maybe. It's spread across a few wikis."
+       }
+      ]
+     },
+     {
+      "milestone": "Tamsin asks her manager about looping in procurement early",
+      "customer_owner": "Tamsin Wu",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I might be able to loop in procurement early, if that helps. I'd have to ask my manager first."
+       }
+      ]
+     },
+     {
+      "milestone": "Next customer meeting to reconnect; Gregor to ping Ben, no calendar hold yet",
+      "customer_owner": "Gregor Hale",
+      "apex_owner": "Ben Adeyemi",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Maybe the week after next, depending on how the quarter close goes."
+       },
+       {
+        "utterance_id": "U022",
+        "excerpt": "Not yet. Let me see how things shake out first and I'll ping you."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: two (not in transcript or CRM)",
+   "locations": [
+    "two (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date)",
+   "locations": [
+    "next week (relative date; write the actual date)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: two (not in transcript or CRM)",
+   "locations": [
+    "two (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date), next week (relative date; write the actual date)",
+   "locations": [
+    "next week (relative date; write the actual date)",
+    "next week (relative date; write the actual date)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: two (not in transcript or CRM)",
+   "locations": [
+    "two (not in transcript or CRM)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: next week (relative date; write the actual date)",
+   "locations": [
+    "next week (relative date; write the actual date)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "All three next steps and both watch items with their cited excerpts",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each cited line (U008, U024, U015, U017, U018, U022, U007) supports the claim it is attached to.",
+   "utterance_ids": [
+    "U008",
+    "U024",
+    "U015",
+    "U017",
+    "U018",
+    "U022",
+    "U007"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Ask the parser team for a date to run a couple of Tamsin's dynamic stored procedures",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is an internal action that respects Sofia's 'no promises on timing' and does not present a customer-facing commitment as firm.",
+   "utterance_ids": [
+    "U008",
+    "U024"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment reads Gregor's deferral, declined calendar hold and vague dictionary timing as waiting, not as momentum.",
+   "utterance_ids": [
+    "U020",
+    "U022",
+    "U017"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Dictionary field list, procurement note, and parser date steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each step is tied to Calder specifics: the dynamic stored procedures, the wiki-scattered dictionary, and Tamsin's manager-gated procurement offer.",
+   "utterance_ids": [
+    "U007",
+    "U017",
+    "U018"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "A masking policy on borrower name and national ID, visible to analysts only when masked unless they hold the steward role",
+   "passed": false,
+   "severity": "low",
+   "finding": "The sentence is garbled; Sofia said analysts see masked values unless they have the steward role, which the email does not state clearly.",
+   "utterance_ids": [
+    "U010"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Sofia will see if she can get a couple run through our parser... Sofia will also send a short write-up",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email only promises what Sofia stated in U008 and U024, and the customer-side items are hedged as in the call.",
+   "utterance_ids": [
+    "U008",
+    "U024",
+    "U015",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Gregor, you will try to find it so we can scope the full model, maybe next week.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The wording keeps Gregor's 'try' and 'maybe' hedges and does not turn them into a date.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "The warehouse connector, which syncs continuously, about a minute end to end",
+   "passed": true,
+   "severity": "low",
+   "finding": "This matches RC-12 and Sofia's statement; the old hourly behavior is not presented as current.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Open items, risks, and the validated list with their excerpts",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary is faithful to the transcript, hedges the commitments, and correctly flags that the CRM 'Reconnect week after next' overstates what was agreed.",
+   "utterance_ids": [
+    "U020",
+    "U022",
+    "U017",
+    "U018",
+    "U008"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments list",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each commitment keeps the 'no date', 'try' or 'maybe' qualifiers actually spoken.",
+   "utterance_ids": [
+    "U008",
+    "U015",
+    "U017",
+    "U018",
+    "U023",
+    "U024"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line and risks",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary treats Gregor's remark that masking is 'roughly what we have today' and his 'Nice' as acceptance, not as buying intent.",
+   "utterance_ids": [
+    "U011",
+    "U013",
+    "U022"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Warehouse connector syncs continuously (RC-12)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary cites the current RC-12 behavior and contrasts it with the customer's own hourly tool.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Apex sends the post-demo recap covering what was shown, open items, owners and dates",
+   "passed": false,
+   "severity": "low",
+   "finding": "Ben only said he would send a recap 'with what we covered'; the open items, owners and dates scope is broader than what was said.",
+   "utterance_ids": [
+    "U023"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Rows for stored procedure write-up, parser run, data dictionary, procurement, next meeting",
+   "passed": true,
+   "severity": "low",
+   "finding": "Cited lines support each row, and unsettled items are correctly marked 'proposed' with no target date.",
+   "utterance_ids": [
+    "U024",
+    "U025",
+    "U008",
+    "U015",
+    "U017",
+    "U018",
+    "U020",
+    "U022"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "All milestones",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each milestone is specific to Calder's open items and none are boilerplate.",
+   "utterance_ids": [
+    "U008",
+    "U015",
+    "U018"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Tamsin the stored procedure write-up asking for a few dynamic procedures, and tell her the date Sofia will report back on the parser run.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U008 and U024 support Sofia's parser run and write-up commitments, and U008 shows no timing was given, so the step correctly asks for a date.",
+   "utterance_ids": [
+    "U008",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Gregor a short list of the minimum tables and fields needed from the data dictionary",
+   "passed": true,
+   "severity": "low",
+   "finding": "U015 and U017 support the data dictionary request, the vague timing, and the wikis problem.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Tamsin what her manager needs to approve early procurement involvement, and who signs for this purchase",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U018 only shows Tamsin needs her manager's approval to loop in procurement; nobody said her manager signs or is the economic buyer, so the PB-03 framing goes beyond the quote.",
+   "utterance_ids": [
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Next meeting is undated and tied to the customer's quarter close. Gregor declined a calendar hold",
+   "passed": true,
+   "severity": "low",
+   "finding": "U022 supports the declined calendar hold. The undated meeting and quarter close come from U020 and U022, and the claim is faithful to them.",
+   "utterance_ids": [
+    "U020",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Sofia promised the parser run with no timing",
+   "passed": true,
+   "severity": "low",
+   "finding": "Sofia said she would see if she could get procedures run, with no promises on timing. The assessment treats this as an undated, soft commitment and does not state it as firmer.",
+   "utterance_ids": [
+    "U006",
+    "U008"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment does not inflate the positive remarks in U011 and U013 and correctly treats the deal as stalled on customer-owned items.",
+   "utterance_ids": [
+    "U011",
+    "U013",
+    "U020",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "Send Gregor a short list of the minimum tables and fields",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment makes no claim about warehouse connector freshness, and U012 matches RC-12 as current behavior.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Send Gregor a short list of the minimum tables and fields needed from the data dictionary",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is tied to Gregor's data dictionary and wiki problem and is sized to his stated difficulty, not a generic check-in.",
+   "utterance_ids": [
+    "U015",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Evidence excerpts for lineage, connector sync, parser, write-up, data dictionary and ping",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt is copied word for word from its line and supports the claim it is attached to.",
+   "utterance_ids": [
+    "U004",
+    "U012",
+    "U008",
+    "U024",
+    "U015",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Sofia will try to run a couple through our parser. No timing is promised yet. Gregor, you will try to find it",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email keeps the hedges the speakers used: Sofia will 'see if I can' with no timing, and Gregor will 'try to dig it up'.",
+   "utterance_ids": [
+    "U008",
+    "U015",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "If a partial export is easier, tell us and we will size the request.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Nobody on the call offered to accept a partial export or to size a request, so the email makes a new Apex commitment that was never made.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Whole email",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email does not present customer enthusiasm as a decision or buying signal, and it states that no next meeting is set.",
+   "utterance_ids": [
+    "U013",
+    "U020",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "the warehouse connector, which syncs continuously at about a minute end to end",
+   "passed": true,
+   "severity": "low",
+   "finding": "Continuous sync at about a minute matches RC-12, the current behavior, and the email does not mention the old hourly batch sync as current.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Evidence excerpts U020, U022, U007, U008, U017, U018, U012",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt appears verbatim in its cited line and supports the item it backs (deferred meeting, declined hold, dynamic procedures, parser team stretched, vague dictionary timing, conditional procurement, continuous sync).",
+   "utterance_ids": [
+    "U020",
+    "U022",
+    "U007",
+    "U008",
+    "U017",
+    "U018",
+    "U012"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments list (recap today, write-up no date, parser try no timing, dictionary no firm date, Tamsin look, Gregor ping)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Commitments are stated with the same hedges the speakers used (no date, no promises on timing, try to, may ask manager) and none are firmed up.",
+   "utterance_ids": [
+    "U008",
+    "U015",
+    "U017",
+    "U018",
+    "U023",
+    "U024",
+    "U025",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "deal_state_line: Waiting on customer: Gregor deferred the next meeting to after quarter close and will ping Ben; no dated next step.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary reads Gregor's 'Nice' and 'That's fine' as mild approval only, and correctly frames the deal as deferred and waiting on the customer.",
+   "utterance_ids": [
+    "U011",
+    "U013",
+    "U020",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Warehouse connector continuous sync, about a minute end to end, versus customer's current hourly tool",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary describes continuous sync as current, matching RC-12 and Sofia's statement, and attributes the hourly behavior to the customer's current tool rather than to Apex.",
+   "utterance_ids": [
+    "U012",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "internal_summary",
+   "target": "open_items and risks (stored procedure gap, data dictionary, procurement, economic buyer not named, undated next meeting)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Items are specific to Calder Bank: dynamic stored procedures, wiki-spread data dictionary, Tamsin's manager and procurement, and the declined calendar hold. The summary notes the CRM next-step conflict with the transcript.",
+   "utterance_ids": [
+    "U007",
+    "U017",
+    "U018",
+    "U022"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022716,
+   "latency_ms": 9267,
+   "input_tokens": 532,
+   "output_tokens": 1455,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "0b3c1ae84674da4f60db825d63c34c5ac78fe4fe5439e00d8b5be2394ee79969"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.026789,
+   "latency_ms": 12026,
+   "input_tokens": 398,
+   "output_tokens": 1887,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "050157ac306ba50895b680851e4f53777fbce35e6c24dff314c3249a2e8a8192"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.059301,
+   "latency_ms": 22906,
+   "input_tokens": 10454,
+   "output_tokens": 3018,
+   "cache_read_input_tokens": 10990,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "8c060632999134b5a5e5991c8871911de2e87e4323a8e24d174925a5584f7174",
+    "abdd5ff8331fd897a5e6654564f503c374a1c5cb12f33441e8c6acd4a9200589"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024876,
+   "latency_ms": 5402,
+   "input_tokens": 5830,
+   "output_tokens": 653,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "73b423a519842aaf8270a225c9de789b8ec734742c942fa8ac88b8bc8aa83eb3"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.027426,
+   "latency_ms": 5759,
+   "input_tokens": 5693,
+   "output_tokens": 929,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "3441fae3b6156a3285e9952227782baefabcb26971788009e25e4d668de6a1dc"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.031986,
+   "latency_ms": 8410,
+   "input_tokens": 5705,
+   "output_tokens": 1380,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "22c7278f2e9d744f97fd7358ad812e6b843cb2557ed94acdaa097d7df1094586"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.051282,
+   "latency_ms": 24145,
+   "input_tokens": 5216,
+   "output_tokens": 3409,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2406,
+   "validator_errors": [],
+   "keys": [
+    "5b391e7f1e2821201fca82f63c4eae5d445d0d2f1b284dd9a86b1936a2428418"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.030838,
+   "latency_ms": 14621,
+   "input_tokens": 5284,
+   "output_tokens": 1893,
+   "cache_read_input_tokens": 6698,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "e0de264d139247bf36dda02bc62ec2686134c290595ffb5e7911afbd0cb2de4a"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025316,
+   "latency_ms": 16779,
+   "input_tokens": 1535,
+   "output_tokens": 2102,
+   "cache_read_input_tokens": 6130,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "c88de4a032f414fbaede9cacb6df7bd562f72facd854d788c6c26885a124c1c3"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018222,
+   "latency_ms": 4965,
+   "input_tokens": 5750,
+   "output_tokens": 557,
+   "cache_read_input_tokens": 5760,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "31ea69f24a38a3f051c6258a0dc8fa7e23234eb0b607d5f0406913c57a482dc5"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.016176,
+   "latency_ms": 10080,
+   "input_tokens": 1110,
+   "output_tokens": 1273,
+   "cache_read_input_tokens": 6130,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "2c7d77a6391acf96646e3315c467df543af819086200cdba64f0be7ae76a605b"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025214,
+   "latency_ms": 8196,
+   "input_tokens": 5696,
+   "output_tokens": 1258,
+   "cache_read_input_tokens": 6211,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "0ed4c1593e8bef35be5e13fbf4629380613a40ffe4aff93245ec4b898bb9c1bb"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.013744,
+   "latency_ms": 6976,
+   "input_tokens": 1929,
+   "output_tokens": 866,
+   "cache_read_input_tokens": 6130,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "aae168ee393d05aa5fdeea88efc6a130a466d15be6caf9d799a2a1dbd7b0f2d5"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.373886,
+ "latency_ms": 149532,
+ "wall_clock_s": 138.5,
+ "status": "ran"
+}

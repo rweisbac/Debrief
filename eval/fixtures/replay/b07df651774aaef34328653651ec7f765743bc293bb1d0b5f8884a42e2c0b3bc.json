@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b07df651774aaef34328653651ec7f765743bc293bb1d0b5f8884a42e2c0b3bc",
+ "recorded_at": "2026-10-04T00:28:01.046946+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFS55BGegC9DEEb2pEd",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Champion says the product is a good technical fit after seeing ingestion, audit trail and access controls.\",\"strength\":\"moderate\",\"qualifier\":\"Immediately followed by saying she cannot move the deal without the CISO, whose availability is unknown.\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"This is a good fit technically.\"}]},{\"summary\":\"Champion confirms the audit trail read logging is what the CISO will ask about.\",\"strength\":\"weak\",\"qualifier\":\"Approval of a feature, not a commitment to proceed.\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"That's what she'll ask. Good.\"}]},{\"summary\":\"Technical evaluator offers to send the full trial data dictionary so Apex can scope the full load.\",\"strength\":\"moderate\",\"qualifier\":\"No date given for sending it.\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"}]}],\"risk_signals\":[{\"summary\":\"CISO sign-off is required on anything touching trial data, and the CISO was absent from the demo.\",\"strength\":\"strong\",\"qualifier\":\"\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"She'll have to sign off on anything that touches trial data.\"}]},{\"summary\":\"Champion cannot move the deal without the CISO and does not know when the CISO will have time; calendar is blocked until the audit is done.\",\"strength\":\"strong\",\"qualifier\":\"No date for any follow-up meeting was agreed.\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can't move this without Dr. Okafor, and I don't know when she'll have time.\"}]},{\"summary\":\"Economic buyer and commercial path are unknown; procurement and possibly the VP of R and D, threshold unknown.\",\"strength\":\"moderate\",\"qualifier\":\"Champion is unsure and described it as a guess.\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Honestly I'm not sure yet.\"}]},{\"summary\":\"Champion is lukewarm on a written summary for the CISO, who does not read long documents.\",\"strength\":\"weak\",\"qualifier\":\"Format constraint rather than a refusal.\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"Maybe. She doesn't read long documents though.\"}]},{\"summary\":\"Call ended without a dated next step.\",\"strength\":\"moderate\",\"qualifier\":\"Only the AE's recap this afternoon was stated.\",\"evidence\":[{\"utterance_id\":\"U023\",\"excerpt\":\"Okay. Let's leave it there for today. Thanks both.\"}]}],\"exact_numbers\":[],\"customer_dependencies\":[{\"summary\":\"CISO sign-off required before anything touching trial data can proceed; her calendar is full until the audit is done.\",\"owner\":\"Dr. Amaka Okafor (CISO)\",\"due\":\"\",\"blocks_progress\":true,\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can't move this without Dr. Okafor, and I don't know when she'll have time.\"}]},{\"summary\":\"Procurement involvement and possible VP of R and D approval above an unknown size threshold.\",\"owner\":\"Simone Achebe to find out\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Probably someone in procurement, and above a certain size it goes to the VP of R and D\"}]},{\"summary\":\"Send the data dictionary for the full trial model so Apex can scope the full load.\",\"owner\":\"Wes Hollis\",\"due\":\"\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"}]}],\"contradictions\":[],\"corrections\":[],\"checklist_mismatches\":[{\"field\":\"stakeholder_to_add\",\"logged_value\":\"\",\"transcript_says\":\"Checklist is blank, but the CISO Dr. Okafor was named as required sign-off and absent. The VP of R and D and procurement were named as possible commercial approvers.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"She'll have to sign off on anything that touches trial data.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Probably someone in procurement, and above a certain size it goes to the VP of R and D\"}]},{\"field\":\"sc_commitment\",\"logged_value\":\"\",\"transcript_says\":\"Checklist is blank, but the SC said he will use the customer's data dictionary to scope the full load.\",\"evidence\":[{\"utterance_id\":\"U022\",\"excerpt\":\"I'll use it to scope the full load.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1572,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,457 @@
+{
+ "deal_id": "e14",
+ "system": "baseline",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "The tenant can be pinned to the Frankfurt region, including backups and audit logs.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena stated this directly."
+  },
+  {
+   "claim": "A tenant setting restricts support access to EU-based staff.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena stated this directly."
+  },
+  {
+   "claim": "Customer-held keys are supported through a major cloud key service.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena said keys can be held in a major cloud key service."
+  },
+  {
+   "claim": "On-premises HSMs are not supported.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007",
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena said so explicitly."
+  },
+  {
+   "claim": "Pinehurst operates 90 hotels in Europe.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Charlotte said it."
+  },
+  {
+   "claim": "Matteo's team uses an on-prem HSM today for payment data.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matteo said it."
+  },
+  {
+   "claim": "Matteo is unsure whether their policy allows a cloud key service for guest data.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Matteo said he's not sure; the output marks it unsure."
+  },
+  {
+   "claim": "Matching merged records from the three booking systems (2.1M) into 1.4M profiles.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena gave these numbers."
+  },
+  {
+   "claim": "Low-confidence matches go to a review queue where the customer's team approves or splits them.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena stated this."
+  },
+  {
+   "claim": "Charlotte called the demo \"strong\".",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Charlotte said \"This is strong.\""
+  },
+  {
+   "claim": "Charlotte said \"If Matteo is comfortable on keys, we can move.\"",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Exact quote."
+  },
+  {
+   "claim": "Ivy valued the review queue because they have been burned by bad merges before.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ivy said \"Good, we've been burned by bad merges before.\""
+  },
+  {
+   "claim": "Matteo must ask the group security office and does not control their timeline.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matteo said this."
+  },
+  {
+   "claim": "No date was given for when the group security office will answer.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sean asked when; Matteo gave no date."
+  },
+  {
+   "claim": "Charlotte's first question was EU residency, and she is positive but conditions moving forward on Matteo's comfort with keys.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U002",
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Both lines show this."
+  },
+  {
+   "claim": "Matteo needs contract wording on EU-only support access.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matteo asked for it."
+  },
+  {
+   "claim": "Matteo wants to hold their own keys.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matteo said it."
+  },
+  {
+   "claim": "Matteo needs the encryption whitepaper with the key hierarchy for the group security office.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Sean asked what would help them; Matteo named the whitepaper."
+  },
+  {
+   "claim": "Ivy wants control over uncertain merges and the review queue addressed this.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Ivy asked about it; Elena answered; Ivy said Good."
+  },
+  {
+   "claim": "Key management is a potential blocker because cloud-only keys may not meet Pinehurst's policy.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U008",
+    "U009",
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Follows from Matteo's doubt; output says outcome is unknown."
+  },
+  {
+   "claim": "The CRM close date is 2026-12-18.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM states this close date."
+  },
+  {
+   "claim": "No dated next step was agreed on the call.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No next meeting was set; CRM dated_next_step is empty."
+  },
+  {
+   "claim": "Economic buyer is blank in the CRM.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM economic_buyer is empty."
+  },
+  {
+   "claim": "No group security office contacts are on the deal.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM contacts list has none."
+  },
+  {
+   "claim": "The only decision-process note is \"Group security office review.\"",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches CRM decision_process."
+  },
+  {
+   "claim": "Business outcome is blank in the discovery notes; only the pain about guest records split across three booking systems is recorded.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM stated_business_outcome is empty; pain matches."
+  },
+  {
+   "claim": "Support-access contract wording is unconfirmed and depends on Elena's compliance team.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Elena said she'd confirm wording with compliance."
+  },
+  {
+   "claim": "The only prior note says \"Agreed the TV items,\" which doesn't say what was agreed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches CRM prior_call_notes."
+  },
+  {
+   "claim": "Elena will confirm the support-access contract wording with compliance and send it to Matteo by Wednesday, October 7.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena said she'd do this by Oct 7."
+  },
+  {
+   "claim": "Elena will send the encryption whitepaper with the key hierarchy today.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Elena said \"I'll send it today.\""
+  },
+  {
+   "claim": "Matteo will check whether policy allows a cloud key service for guest data and ask the group security office, no date given.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U010",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "He said he'll have to check and needs to ask."
+  },
+  {
+   "claim": "Only the support-access wording is logged in the CRM sc_commitment; the whitepaper commitment is not.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM sc_commitment holds only the support access wording."
+  },
+  {
+   "claim": "Sean should confirm the whitepaper went out today and log both Elena commitments in the CRM.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Follows from Elena's same-day commitment and CRM gap."
+  },
+  {
+   "claim": "Ask Matteo for a date by which he'll know, or a short check-in after Oct 7.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Proposed as a suggestion, not agreed; Matteo gave no date."
+  },
+  {
+   "claim": "Offer a session with the group security office, with Elena on hand for key hierarchy questions.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U018",
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "A proposed offer, not agreed on the call."
+  },
+  {
+   "claim": "Prepare for a \"no\" on cloud keys without implying on-prem HSM support.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U007",
+    "U009",
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Follows from Matteo's doubt; framed as contingency."
+  },
+  {
+   "claim": "Business outcome should be confirmed with Charlotte rather than assumed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM outcome blank; framed as to-confirm."
+  },
+  {
+   "claim": "Re-check the Dec 18 close date against the security review timeline once Matteo gives a date.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM close date; security timeline unknown."
+  },
+  {
+   "claim": "The email proposes a 20-minute check-in the week of October 12.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Nobody proposed this timing; it's a draft suggestion phrased as a question."
+  },
+  {
+   "claim": "Email states Elena is sending the whitepaper today for Matteo and the group security office, flagged to confirm before sending.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Matches Elena's commitment; output flags confirmation."
+  },
+  {
+   "claim": "Email says Elena can join a session with the security office to walk through the key hierarchy.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": true,
+   "flagged_uncertain": true,
+   "why": "Elena never offered to join such a session; framed as conditional offer."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.051243
+}

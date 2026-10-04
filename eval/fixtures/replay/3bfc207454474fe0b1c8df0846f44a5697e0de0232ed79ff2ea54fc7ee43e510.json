@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "3bfc207454474fe0b1c8df0846f44a5697e0de0232ed79ff2ea54fc7ee43e510",
+ "recorded_at": "2026-10-04T00:28:15.189642+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFTG9DCVdbAoDSkTieu",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Low information: champion says technical fit is good but cannot move without the absent CISO, whose calendar is blocked until the audit is done; no dated next step.\",\"customer_value_line\":\"Business outcome not stated. CRM discovery notes list the pain as audit trail spread across systems, but the customer did not state an outcome in the call.\",\"what_we_validated\":[\"Trial extract loaded nightly with each load versioned, so data can be viewed as of any date (U005)\",\"Any version can be restored and the restore is logged (U007)\",\"Audit trail covers queries, exports and policy changes, and reads too, with user and columns returned (U009, U011)\",\"Unblinded columns masked except for the unblinded statistics role (U013)\",\"Role grants can have an expiry date, which fits unblinding only at interim analysis (U015)\",\"Simone: good fit technically (U016)\"],\"integration_patterns\":[\"Nightly trial extract load, versioned per load\",\"Audit trail export to the customer's log system\"],\"objections_and_answers\":[\"Simone cannot move this without CISO sign-off and does not know when Dr. Okafor will have time. Marta offered a written summary; Simone said maybe, as the CISO does not read long documents. Status: open\"],\"open_items\":[\"Wes Hollis to send the data dictionary for the full trial model; no date given\",\"Theo Grant to scope the full load from the data dictionary; no date given\",\"No dated next meeting or action agreed with the customer\",\"Economic buyer and commercial path unknown: probably procurement, and above a threshold Simone does not know it goes to the VP of R and D\",\"CISO review: no date; format must be short\"],\"commitments\":[\"Marta Kowal: send a recap this afternoon (2026-09-30)\",\"Wes Hollis: send the data dictionary for the full trial model, by when not stated\",\"Theo Grant: use the data dictionary to scope the full load, by when not stated (not yet logged as SC commitment in CRM)\"],\"stakeholders\":[\"Simone Achebe, Director of Clinical Data, champion, present\",\"Wes Hollis, Senior Data Engineer, technical evaluator, present\",\"Dr. Amaka Okafor, CISO, must sign off on anything touching trial data, absent; first asks about audit trail and who can see unblinded data\",\"VP of R and D, possible approver above an unknown size threshold, absent, unconfirmed\",\"Procurement contact, unnamed, absent\"],\"competitive_notes\":[],\"risks\":[\"CISO sign-off required and she was absent; her availability is unknown, so a late security review could threaten the 2026-12-18 close date\",\"No dated next step agreed\",\"Economic buyer not identified\",\"Champion lukewarm on a written summary for the CISO\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"She'll have to sign off on anything that touches trial data.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"Audit trail and who can see unblinded data. That's always her first question.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"I can't move this without Dr. Okafor, and I don't know when she'll have time.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"Maybe. She doesn't read long documents though.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"That would help. I'll use it to scope the full load.\"},{\"utterance_id\":\"U024\",\"excerpt\":\"Thank you. I'll send a recap this afternoon.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5013,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1194,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

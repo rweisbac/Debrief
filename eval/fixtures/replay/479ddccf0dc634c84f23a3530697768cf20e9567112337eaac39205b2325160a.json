@@ -1,0 +1,39 @@
+{
+ "step": "extract_b",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "479ddccf0dc634c84f23a3530697768cf20e9567112337eaac39205b2325160a",
+ "recorded_at": "2026-10-04T00:32:08.622053+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFkG7Sd4jhzTNfpGRg9",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"competitor_mentions\":[],\"buying_signals\":[{\"summary\":\"Henrik says the dedicated cluster latency result decides it for them, tying a clear evaluation criterion to a dated Apex deliverable.\",\"strength\":\"moderate\",\"qualifier\":\"Conditional on the dedicated-cluster result, which Mateo has not measured yet. Henrik is the champion, not the economic buyer.\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"Good. That decides it for us.\"}]},{\"summary\":\"Henrik agreed to a dated review of the dedicated-cluster results on Monday, October 12th at 9 am.\",\"strength\":\"moderate\",\"qualifier\":\"Meeting is conditional on latency results; no economic buyer or decision process named.\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"Yes. Monday, October 12th, 9 am our time.\"}]},{\"summary\":\"Yuki, the technical evaluator, is engaged and will send a sample file of the port community system message format today.\",\"strength\":\"weak\",\"qualifier\":\"Technical engagement only; Apex has not confirmed it can read the format.\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send one today.\"}]}],\"risk_signals\":[{\"summary\":\"The 99th percentile latency of 3.8 seconds misses the under 2 second requirement; Henrik calls it the problem and too slow for operators.\",\"strength\":\"strong\",\"qualifier\":\"Measured on a shared sandbox cluster; the dedicated result is unmeasured.\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"The 99th percentile is the problem. 3.8 seconds is too slow for operators.\"}]},{\"summary\":\"Apex has not confirmed it can read the customer's old vessel-estimate message format from the port community system.\",\"strength\":\"moderate\",\"qualifier\":\"Depends on the sample file Yuki said he would send today.\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"I haven't seen that format. Can you send a sample file?\"}]},{\"summary\":\"Henrik treats latency as the only real question, so the other demoed areas (berth model, alerting) drew little reaction.\",\"strength\":\"weak\",\"qualifier\":\"Brief reply; may only mean latency is the priority.\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Fine. Latency is the real question.\"}]}],\"exact_numbers\":[{\"value\":\"15 thousand events a second\",\"what_it_measures\":\"Peak event rate of the crane telemetry sample\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"about 15 thousand events a second at peak\"}]},{\"value\":\"1.4 seconds\",\"what_it_measures\":\"Median end to end latency in the shared sandbox\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"the median end to end latency was 1.4 seconds\"}]},{\"value\":\"3.8 seconds\",\"what_it_measures\":\"99th percentile latency in the shared sandbox\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"The 99th percentile was 3.8 seconds.\"}]},{\"value\":\"under 2 seconds\",\"what_it_measures\":\"Customer's latency requirement for crane operators\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"Crane operators need data in under 2 seconds.\"}]},{\"value\":\"72 hours\",\"what_it_measures\":\"How far ahead the berth schedule model shows berth conflicts\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"shows berth conflicts 72 hours ahead\"}]}],\"customer_dependencies\":[{\"summary\":\"Yuki to send a sample file of the port community system vessel estimate message format so Apex can check whether it can be read.\",\"owner\":\"Yuki Tanaka\",\"due\":\"2026-10-02\",\"blocks_progress\":false,\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send one today.\"}]}],\"contradictions\":[],\"corrections\":[],\"checklist_mismatches\":[{\"field\":\"stakeholder_to_add\",\"logged_value\":\"\",\"transcript_says\":\"No economic buyer or other stakeholder was named in the call; the field is blank and the transcript does not support filling it.\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"Yes. Monday, October 12th, 9 am our time.\"}]},{\"field\":\"dated_next_step\",\"logged_value\":\"Results review Oct 12\",\"transcript_says\":\"The review was agreed for Monday, October 12th at 9 am customer time, consistent with the log. The CRM entry was filled at 08:09:30, before the review was agreed at 08:50 and 08:56 in the call, so timing differs but content matches.\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"Booked. I'll send the invite.\"}]},{\"field\":\"sc_commitment\",\"logged_value\":\"Dedicated cluster latency test by Oct 8\",\"transcript_says\":\"Mateo committed to run the same test on a dedicated cluster and send results by Thursday, October 8th. The log omits that Mateo will send the results to the customer. He also needs a log entry for the sample-file review, which he asked for.\",\"evidence\":[{\"utterance_id\":\"U007\",\"excerpt\":\"I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 398,
+   "cache_creation_input_tokens": 2026,
+   "cache_read_input_tokens": 5538,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2026,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1804,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

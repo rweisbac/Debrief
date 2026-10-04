@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "5d0799b9b7ee59da59f712f6f8da0a8e66fe44062c400a667d3c0bcb687097a0",
+ "recorded_at": "2026-10-04T00:31:37.364846+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFi4Zs4XmrRnYrwpE3T",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Amira Saleh said the loss ratio report is monthly today and that daily would change how they reprice.\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"Today the loss ratio report is monthly. Daily would change how we reprice.\"}]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No dated next meeting or action was agreed by the customer. Neil asked for the order form, but no date was set for it; the only dated item is Rosa's recording, which is an Apex commitment, not an agreed customer step.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U019\",\"excerpt\":\"Fine. Send the order form anyway.\"}]},\"objections\":[{\"summary\":\"Signing by end of month is not certain: purchases over 300 thousand went through the board's technology committee last year, the board meets in November, and Neil is unsure he can get approval before then.\",\"raised_by\":\"Amira Saleh\",\"status\":\"open\",\"answer_given\":\"None from Apex; Victor only asked whether the timeline depends on the board. Neil said end of month only if he can get an exception, otherwise after the November meeting.\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"I think I can get it approved before that, but I'm not certain.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Let's say end of month if I can get an exception, otherwise after the November meeting.\"}]}],\"open_technical_items\":[{\"summary\":\"Show how the model handles mid term endorsements, which was not covered in the demo.\",\"owner\":\"Rosa Medina\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"I also need to see how the model handles our mid term endorsements. That wasn't in the demo.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"You're right, it wasn't. I'll set that up and send a recording by Tuesday, October 6th.\"}]}],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Rosa Medina\",\"side\":\"apex\",\"what\":\"Set up a demo of mid term endorsements handling and send a recording to Amira.\",\"by_when\":\"2026-10-06\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set that up and send a recording by Tuesday, October 6th.\"}]},{\"who\":\"Victor Hayes\",\"side\":\"apex\",\"what\":\"Send the order form and a recap today.\",\"by_when\":\"2026-10-01\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the order form and a recap today.\"}]}],\"stakeholders\":[{\"name\":\"Neil Patterson\",\"title\":\"Chief Data Officer\",\"present\":true,\"why_they_matter\":\"Champion; says he will sign by end of month but needs board approval or an exception.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"I'll be honest, I've mostly made up my mind. We'll sign by end of month.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"Let's say end of month if I can get an exception, otherwise after the November meeting.\"}]},{\"name\":\"Amira Saleh\",\"title\":\"Analytics Manager\",\"present\":true,\"why_they_matter\":\"Technical evaluator; raised the board approval requirement and the endorsements gap.\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"I also need to see how the model handles our mid term endorsements. That wasn't in the demo.\"}]},{\"name\":\"Board technology committee\",\"title\":\"Board committee\",\"present\":false,\"why_they_matter\":\"Approval needed for purchases over 300 thousand; meets in November.\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"It depends on the board. They meet in November.\"}]},{\"name\":\"Actuaries\",\"title\":\"Actuaries\",\"present\":false,\"why_they_matter\":\"Will want to compare the new model to the current model.\",\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"Our actuaries will want to compare it to the current model.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2097,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2097,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1489,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

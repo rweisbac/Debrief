@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f19001211b485be6a8270902d132b9696b4555d76fcdd8ca4f261080e2710e95",
+ "recorded_at": "2026-10-04T00:31:16.373809+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFgqJcmXyTQeSwaRCyn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: line 3 pilot and next steps\",\"body\":\"Hi Petra, Milan,\\n\\nThank you for the time today. Here is where we landed.\\n\\nShown: sensor readings from line 3 landing in under 10 seconds, the downtime dashboard with minutes lost per shift, and the quality model trained on about 900 defect batches.\\n\\nAgreed:\\n- Plan a pilot on line 3.\\n- Jonas sends the pilot plan with success criteria by Monday, October 5th.\\n- Milan gets controller access sorted by Friday, October 9th.\\n\\nOpen:\\n- EU hosting: Jonas said we can pin the tenant to Frankfurt, including backups, and that he will confirm the exact contract wording with our compliance team. We know your legal team wants it in writing.\\n- Budget: we noted the spend freeze until the second quarter, and that you will check with finance about the historian license.\\n\\nIf it helps, tell us what you would like to bring to your legal team or finance and we will work from that.\\n\\nBest,\\nClaire\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"They land in under 10 seconds.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"The 18 months of defect records you shared, about 900 defect batches.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"And I'll send the pilot plan with the success criteria by Monday, October 5th.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Yes, I'll get the controller access sorted by Friday, October 9th.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"The exact contract wording I'd confirm with our compliance team.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"They'll want that in writing.\"},{\"utterance_id\":\"U024\",\"excerpt\":\"Maybe. I'd have to check with finance.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7883,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5762,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 641,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

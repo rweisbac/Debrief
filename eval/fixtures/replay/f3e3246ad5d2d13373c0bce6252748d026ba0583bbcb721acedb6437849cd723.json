@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f3e3246ad5d2d13373c0bce6252748d026ba0583bbcb721acedb6437849cd723",
+ "recorded_at": "2026-10-04T00:28:58.591818+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFWQ7X149o2ZVzaxhUo",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Open technical gap: Canadian data residency is unresolved and Omar owes an answer by Thursday, October 1st; no economic buyer or dated next meeting.\",\"customer_value_line\":\"Frank Delacroix said the dispatch team needs to see every truck in real time and that real time is non negotiable; the sandbox showed positions updating every 30 seconds versus every 5 minutes today.\",\"what_we_validated\":[\"Tracking feed on the customer's telematics sample in the sandbox: positions update every 30 seconds (U003); Pete said today it is every 5 minutes (U004).\",\"Dispatcher dashboard: late loads flagged in red with drill into any truck (U005); Frank said this is what dispatch needs (U006).\",\"Late load alerts go to email or a webhook (U021); the customer's paging tool takes webhooks (U022).\"],\"integration_patterns\":[\"Late load alerts to text message go through the customer's own paging tool via webhook; text is not native (U021, U022).\"],\"objections_and_answers\":[\"Data residency: Frank says Canadian contracts keep shipment data in Canada and half the loads are Canadian; Ingrid says it does not apply to telematics and legal looked at it last year; Omar would not guess, mentioned a Canadian region on the roadmap, and will check. Open.\",\"Seat count and scope: Ingrid expects 400 seats in year one; Frank said he does not think finance needs this and wants 50 seat pricing; Leah said both can be shown. Open.\",\"Freshness: Ingrid said daily refresh would be enough for most of what IT reports on; Frank said dispatch needs real time; Leah framed it as two use cases. Partially resolved.\"],\"open_items\":[\"Canadian data residency: what Apex offers today and whether the contracts cover telematics data. Owner: Omar Haddad.\",\"Customer must settle internally whether Canadian contracts apply to telematics data; owner and date not stated.\",\"Customer must align on 50 versus 400 seats and whether finance is a user; owner and date not stated.\",\"Economic buyer not named, decision process not discussed, and no dated next meeting agreed.\"],\"commitments\":[\"Omar Haddad: check with the hosting team on Canadian residency and come back by Thursday, October 1st.\",\"Leah Brennan: show pricing for both 50 and 400 seats; no date stated.\"],\"stakeholders\":[\"Frank Delacroix, VP of Operations: champion, present.\",\"Ingrid Solberg, Director of IT: technical evaluator, present.\",\"Pete Nakamura, Operations Analyst: technical evaluator, present.\",\"Finance team (unnamed): possible additional users, absent.\",\"Legal (unnamed): reviewed residency last year per Ingrid, absent.\"],\"competitive_notes\":[],\"risks\":[\"Possible Canadian residency requirement: the hosting shown is a US region by default with backups in the same region, and Apex has not confirmed what is available today.\",\"Frank and Ingrid disagree on seat count and scope, which makes pricing and sizing uncertain.\",\"No economic buyer, decision process, or dated next meeting stated in the call.\",\"Ingrid's daily refresh comment could weaken the real time requirement, though Frank said dispatch still needs it.\"],\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"They need to see every truck in real time.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"Real time is non negotiable for us.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"I don't think that applies to telematics data. Legal looked at it last year.\"},{\"utterance_id\":\"U027\",\"excerpt\":\"I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"we're looking at 400 seats in year one.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Text would go through your own messaging tool on the webhook.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7071,
+   "cache_creation_input_tokens": 2640,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2640,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1364,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

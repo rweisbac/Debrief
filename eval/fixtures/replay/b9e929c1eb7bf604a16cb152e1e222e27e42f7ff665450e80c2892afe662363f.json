@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b9e929c1eb7bf604a16cb152e1e222e27e42f7ff665450e80c2892afe662363f",
+ "recorded_at": "2026-10-04T00:31:32.736078+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFhqdEbKiFRsuSVxHej",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":false,\"summary\":\"not stated\",\"evidence\":[]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No dated next step agreed. Paula proposed time with Dr. Abernathy and Elise deferred it with 'Eventually, sure'.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Eventually, sure. She's very busy this term.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"We'll figure it out.\"}]},\"objections\":[{\"summary\":\"Deferral on involving the provost: Elise put off a meeting with Dr. Abernathy, citing her busy term, and gave no date.\",\"raised_by\":\"Dr. Elise Martin\",\"status\":\"open\",\"answer_given\":\"\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"Eventually, sure. She's very busy this term.\"}]}],\"open_technical_items\":[{\"summary\":\"Privacy officer will want to see the student data access controls (advisors see own students, deans see their college). The privacy officer has not been identified or engaged.\",\"owner\":\"Dr. Elise Martin\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Our privacy officer will want to see that.\"}]},{\"summary\":\"Date of the technology committee meeting is unknown; Elise and Kevin do not know when it meets.\",\"owner\":\"Dr. Elise Martin\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"I'm honestly not sure. Kevin, do you know?\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I think they meet once a semester. I don't know when.\"}]}],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Sam Okoro\",\"side\":\"apex\",\"what\":\"Send the retention dashboard screenshots so the customer can share them.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the retention dashboard screenshots so you can share them.\"}]},{\"who\":\"Dr. Elise Martin\",\"side\":\"customer\",\"what\":\"Figure out when the technology committee meets (said in passing, no date given).\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U019\",\"excerpt\":\"We'll figure it out.\"}]}],\"stakeholders\":[{\"name\":\"Dr. Elise Martin\",\"title\":\"Director of Institutional Research\",\"present\":true,\"why_they_matter\":\"Champion; enthusiastic but no decision authority stated\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"Oh, I'll absolutely champion this. I'm going to tell everyone about it.\"}]},{\"name\":\"Kevin Tran\",\"title\":\"Data Analyst\",\"present\":true,\"why_they_matter\":\"Technical evaluator; asked about first generation filter\",\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"Can we filter by first generation students?\"}]},{\"name\":\"Dr. Abernathy\",\"title\":\"Provost\",\"present\":false,\"why_they_matter\":\"Owns the budget and must approve the purchase\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"The provost owns the budget. Dr. Abernathy. She'd have to approve it.\"}]},{\"name\":\"Technology committee\",\"title\":\"Committee\",\"present\":false,\"why_they_matter\":\"Part of the decision process; meets once a semester, date unknown\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I think they meet once a semester. I don't know when.\"}]},{\"name\":\"Privacy officer\",\"title\":\"Privacy officer\",\"present\":false,\"why_they_matter\":\"Will want to review the access controls\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Our privacy officer will want to see that.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2005,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2005,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1253,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

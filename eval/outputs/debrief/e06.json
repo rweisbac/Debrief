@@ -1,0 +1,2106 @@
+{
+ "debrief_id": "e06-732afd39",
+ "deal_id": "e06",
+ "as_of": "2026-10-01",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": false,
+   "summary": "Not stated in the call. Petra said plant managers will love the dashboard and that they get downtime in a weekly spreadsheet today, but no outcome was stated as a goal. The CRM outcome comes from discovery only.",
+   "evidence": [
+    {
+     "utterance_id": "U006",
+     "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "Plan a pilot on line 3. Milan owns controller access by Oct 9 and Jonas sends the pilot plan with success criteria by Oct 5. No next meeting was scheduled.",
+   "date": "2026-10-05",
+   "evidence": [
+    {
+     "utterance_id": "U013",
+     "excerpt": "Let's plan the pilot on line 3. Milan, can you own the controller access?"
+    },
+    {
+     "utterance_id": "U015",
+     "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Legal will not accept a processor that stores data outside the EU. Customer wants hosting confirmed in writing.",
+    "raised_by": "Petra Novak",
+    "status": "partially_resolved",
+    "answer_given": "Jonas said the tenant can be pinned to Frankfurt including backups, and that exact contract wording needs confirming with Apex compliance.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Okay. They'll want that in writing."
+     }
+    ]
+   },
+   {
+    "summary": "CFO froze new software spend until Q2, so a contract before April is unlikely. Pilot is fine. An exception might exist if Apex replaces something already paid for, but Petra is unsure and needs to check with finance.",
+    "raised_by": "Petra Novak",
+    "status": "open",
+    "answer_given": "",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Written confirmation of EU hosting and contract wording (Frankfurt pinning, backups) for the customer's legal team. Compliance wording is not yet confirmed.",
+    "owner": "Jonas Weber",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Okay. They'll want that in writing."
+     }
+    ]
+   },
+   {
+    "summary": "Whether Apex could replace the old historian license (renews in March) is unconfirmed and no one owns it.",
+    "owner": "Petra Novak",
+    "evidence": [
+     {
+      "utterance_id": "U023",
+      "excerpt": "It might replace the old historian license. That renews in March."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [
+   {
+    "summary": "Sensor readings from line 3 controllers (about 2 thousand readings a second) land in Apex; the pilot would run on line 3, with Milan arranging controller access.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "These are the sensor readings from line 3 that Milan sent, about 2 thousand readings a second."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Milan Horak",
+    "side": "customer",
+    "what": "Get controller access sorted for the line 3 pilot",
+    "by_when": "2026-10-09",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "who": "Jonas Weber",
+    "side": "apex",
+    "what": "Send the pilot plan with success criteria",
+    "by_when": "2026-10-05",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     }
+    ]
+   },
+   {
+    "who": "Jonas Weber",
+    "side": "apex",
+    "what": "Confirm exact EU hosting contract wording with Apex compliance",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     }
+    ]
+   },
+   {
+    "who": "Petra Novak",
+    "side": "customer",
+    "what": "Check with finance whether an exception applies if Apex replaces the historian license",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Petra Novak",
+    "title": "Head of Manufacturing Analytics",
+    "present": true,
+    "why_they_matter": "Champion, driving the pilot",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Let's plan the pilot on line 3. Milan, can you own the controller access?"
+     }
+    ]
+   },
+   {
+    "name": "Milan Horak",
+    "title": "Plant Systems Engineer",
+    "present": true,
+    "why_they_matter": "Technical evaluator, owns controller access",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "name": "CFO",
+    "title": "CFO",
+    "present": false,
+    "why_they_matter": "Froze new software spend until Q2; likely controls budget",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter."
+     }
+    ]
+   },
+   {
+    "name": "Legal team",
+    "title": "Legal",
+    "present": false,
+    "why_they_matter": "Requires EU-only data storage in writing",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     }
+    ]
+   },
+   {
+    "name": "Finance",
+    "title": "Finance",
+    "present": false,
+    "why_they_matter": "Could approve an exception if Apex replaces the historian",
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Customer lead asked to plan a pilot on line 3 and assigned Milan to own controller access, with Milan committing to a date.",
+    "strength": "strong",
+    "qualifier": "Pilot only; no contract commitment, and spend is frozen until Q2.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Let's plan the pilot on line 3. Milan, can you own the controller access?"
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "summary": "Champion and technical evaluator reacted positively to the dashboard and quality model.",
+    "strength": "moderate",
+    "qualifier": "Enthusiasm statements, not decisions; no economic buyer involved.",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "This is really strong. The team will be happy."
+     }
+    ]
+   },
+   {
+    "summary": "Milan said line 3, with the old controllers, is the hard case and implied a good result there generalizes.",
+    "strength": "moderate",
+    "qualifier": "Technical evaluator view only.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "If it works there, it works everywhere."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "CFO froze new software spend until Q2; a contract before April is unlikely, against a CRM close date of 2026-12-18.",
+    "strength": "strong",
+    "qualifier": "Pilot is still fine; an exception may exist if Apex replaces something already paid for.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter. So the pilot is fine but a contract before April is unlikely."
+     }
+    ]
+   },
+   {
+    "summary": "Legal will not accept a processor that stores data outside the EU and wants written confirmation.",
+    "strength": "strong",
+    "qualifier": "Frankfurt pinning was offered, but contract wording is unconfirmed and legal wants it in writing.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They'll want that in writing."
+     }
+    ]
+   },
+   {
+    "summary": "The budget exception path is uncertain: the champion is unsure that Apex replaces anything and needs to check with finance.",
+    "strength": "moderate",
+    "qualifier": "Milan suggested the historian license renewing in March as a possible replacement.",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "Maybe, if it replaces something we already pay for. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   },
+   {
+    "summary": "No economic buyer was named and the decision process is undiscussed; the finance and CFO decision makers were absent.",
+    "strength": "moderate",
+    "qualifier": "CRM shows the economic buyer blank and decision process 'Not discussed.'",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "about 2 thousand readings a second",
+    "what_it_measures": "Sensor ingestion rate from line 3 in the demo",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "about 2 thousand readings a second"
+     }
+    ]
+   },
+   {
+    "value": "under 10 seconds",
+    "what_it_measures": "Time for sensor readings to land",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "They land in under 10 seconds."
+     }
+    ]
+   },
+   {
+    "value": "18 months",
+    "what_it_measures": "Span of defect records the quality model learned from",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "The 18 months of defect records you shared, about 900 defect batches."
+     }
+    ]
+   },
+   {
+    "value": "about 900",
+    "what_it_measures": "Defect batches used to train the quality model",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "The 18 months of defect records you shared, about 900 defect batches."
+     }
+    ]
+   },
+   {
+    "value": "Friday, October 9th",
+    "what_it_measures": "Milan's date for controller access",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "value": "Monday, October 5th",
+    "what_it_measures": "Jonas's date for the pilot plan with success criteria",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Controller access on line 3 for the pilot.",
+    "owner": "Milan Horak",
+    "due": "2026-10-09",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "summary": "Legal review: written confirmation that data stays in the EU, including contract wording.",
+    "owner": "Customer legal team",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They'll want that in writing."
+     }
+    ]
+   },
+   {
+    "summary": "Check with finance whether the budget freeze has an exception, for example by replacing the historian license that renews in March.",
+    "owner": "Petra Novak",
+    "due": "",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     },
+     {
+      "utterance_id": "U023",
+      "excerpt": "It might replace the old historian license. That renews in March."
+     }
+    ]
+   }
+  ],
+  "contradictions": [
+   {
+    "summary": "Petra was unsure the product replaces anything the company already pays for, while Milan suggested it might replace the historian license renewing in March.",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "Maybe, if it replaces something we already pay for. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U023",
+      "excerpt": "It might replace the old historian license. That renews in March."
+     }
+    ]
+   }
+  ],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "The checklist is blank, but the transcript names the CFO (spend freeze), the legal team (EU data requirement) and finance (exception check) as stakeholders; none were in the call.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     }
+    ]
+   },
+   {
+    "field": "dated_next_step",
+    "logged_value": "Pilot on line 3",
+    "transcript_says": "The pilot was agreed without a dated next meeting; dated items are the pilot plan on Oct 5 and controller access by Oct 9.",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "Let's plan the pilot on line 3. Milan, can you own the controller access?"
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "Pilot plan by Oct 5",
+    "transcript_says": "Jonas committed to the pilot plan with success criteria by Monday, October 5th, and also to confirm contract wording on EU hosting with compliance, undated and not logged.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     }
+    ]
+   },
+   {
+    "field": "business_outcome",
+    "logged_value": "Plant managers see downtime by cause per shift.",
+    "transcript_says": "The logged outcome was prefilled from discovery and unedited; in the call Petra only said plant managers get this in a weekly spreadsheet today and would love the dashboard, not that outcome in her own words.",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "partial",
+   "summary": "Not stated in the call. Petra said plant managers will love the dashboard and that they get downtime in a weekly spreadsheet today, but no outcome was stated as a goal. The CRM outcome comes from discovery only.",
+   "evidence": [
+    {
+     "utterance_id": "U006",
+     "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "CFO: Froze new software spend until Q2; likely controls budget",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "our CFO froze new software spend until the second quarter."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "partial",
+   "summary": "1 item validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U003",
+     "excerpt": "These are the sensor readings from line 3 that Milan sent, about 2 thousand readings a second."
+    },
+    {
+     "utterance_id": "U014",
+     "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Plan a pilot on line 3. Milan owns controller access by Oct 9 and Jonas sends the pilot plan with success criteria by Oct 5. No next meeting was scheduled.",
+   "evidence": [
+    {
+     "utterance_id": "U013",
+     "excerpt": "Let's plan the pilot on line 3. Milan, can you own the controller access?"
+    },
+    {
+     "utterance_id": "U015",
+     "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "partial",
+   "summary": "Legal review: written confirmation that data stays in the EU, including contract wording.",
+   "evidence": [
+    {
+     "utterance_id": "U018",
+     "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+    },
+    {
+     "utterance_id": "U020",
+     "excerpt": "They'll want that in writing."
+    }
+   ]
+  },
+  "pain": {
+   "status": "partial",
+   "summary": "CFO froze new software spend until Q2; a contract before April is unlikely, against a CRM close date of 2026-12-18.",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "our CFO froze new software spend until the second quarter. So the pilot is fine but a contract before April is unlikely."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Petra Novak, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U013",
+     "excerpt": "Let's plan the pilot on line 3. Milan, can you own the controller access?"
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "waiting_on_customer",
+  "deal_state_why": "Legal needs written EU hosting confirmation and a CFO spend freeze needs a finance exception check; both are customer-owned, with no dates.",
+  "next_steps": [
+   {
+    "action": "Ask Apex compliance for written wording on Frankfurt tenant pinning including backups, so Petra can hand it to her legal team.",
+    "owner": "Jonas Weber",
+    "due_by": "2026-10-05",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "RC-14",
+    "action_type": "route_to_sc",
+    "why": "Jonas's compliance promise was undated and not logged. Legal wants it in writing, and it is easy to miss next to the pilot plan.",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They'll want that in writing."
+     }
+    ]
+   },
+   {
+    "action": "Ask Petra to confirm with Milan whether Apex would replace the historian license renewing in March, and offer to send what finance needs to review an exception.",
+    "owner": "Claire Dumont",
+    "due_by": "2026-10-06",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "Petra and Milan disagree on whether anything gets replaced. That decides whether the freeze has an exception, and it is easy to take one side.",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "Maybe, if it replaces something we already pay for. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U023",
+      "excerpt": "It might replace the old historian license. That renews in March."
+     }
+    ]
+   },
+   {
+    "action": "Ask Petra who signs and whether the CFO approves, and offer a one-page pilot summary she can bring to finance.",
+    "owner": "Claire Dumont",
+    "due_by": "2026-10-07",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "The CFO came up in passing and the CRM economic buyer is blank. Easy to treat the freeze as only a timing issue.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "CRM close date is 2026-12-18, but Petra said a contract before April is unlikely because of the spend freeze.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "So the pilot is fine but a contract before April is unlikely."
+     }
+    ]
+   },
+   {
+    "summary": "The CRM business outcome was prefilled from discovery. Petra did not state an outcome as a goal in the call, so ask for it in her words.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Legal needs written EU hosting confirmation and a CFO spend freeze needs a finance exception check; both are customer-owned, with no dates.",
+    "next_steps": [
+     {
+      "action": "Ask Apex compliance for written wording on Frankfurt tenant pinning including backups, so Petra can hand it to her legal team.",
+      "owner": "Jonas Weber",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-14",
+      "action_type": "route_to_sc",
+      "why": "Jonas's compliance promise was undated and not logged. Legal wants it in writing, and it is easy to miss next to the pilot plan.",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "The exact contract wording I'd confirm with our compliance team."
+       },
+       {
+        "utterance_id": "U020",
+        "excerpt": "They'll want that in writing."
+       }
+      ]
+     },
+     {
+      "action": "Ask Petra to confirm with Milan whether Apex would replace the historian license renewing in March, and offer to send what finance needs to review an exception.",
+      "owner": "Claire Dumont",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Petra and Milan disagree on whether anything gets replaced. That decides whether the freeze has an exception, and it is easy to take one side.",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "Maybe, if it replaces something we already pay for. I'm not sure it does."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "It might replace the old historian license. That renews in March."
+       }
+      ]
+     },
+     {
+      "action": "Ask Petra who signs and whether the CFO approves, and offer a one-page pilot summary she can bring to finance.",
+      "owner": "Claire Dumont",
+      "due_by": "2026-10-07",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "The CFO came up in passing and the CRM economic buyer is blank. Easy to treat the freeze as only a timing issue.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "our CFO froze new software spend until the second quarter."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "CRM close date is 2026-12-18, but Petra said a contract before April is unlikely because of the spend freeze.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "So the pilot is fine but a contract before April is unlikely."
+       }
+      ]
+     },
+     {
+      "summary": "The CRM business outcome was prefilled from discovery. Petra did not state an outcome as a goal in the call, so ask for it in her words.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U006",
+        "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "waiting_on_customer",
+    "deal_state_why": "Legal needs written EU hosting confirmation and a CFO spend freeze needs a finance exception check; both are customer-owned, with no dates.",
+    "next_steps": [
+     {
+      "action": "Ask Apex compliance for written wording on Frankfurt tenant pinning including backups, so Petra can hand it to her legal team.",
+      "owner": "Jonas Weber",
+      "due_by": "2026-10-05",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-14",
+      "action_type": "route_to_sc",
+      "why": "Jonas's compliance promise was undated and not logged. Legal wants it in writing, and it is easy to miss next to the pilot plan.",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "The exact contract wording I'd confirm with our compliance team."
+       },
+       {
+        "utterance_id": "U020",
+        "excerpt": "They'll want that in writing."
+       }
+      ]
+     },
+     {
+      "action": "Ask Petra to confirm with Milan whether Apex would replace the historian license renewing in March, and offer to send what finance needs to review an exception.",
+      "owner": "Claire Dumont",
+      "due_by": "2026-10-06",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Petra and Milan disagree on whether anything gets replaced. That decides whether the freeze has an exception, and it is easy to take one side.",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "Maybe, if it replaces something we already pay for. I'm not sure it does."
+       },
+       {
+        "utterance_id": "U023",
+        "excerpt": "It might replace the old historian license. That renews in March."
+       }
+      ]
+     },
+     {
+      "action": "Ask Petra who signs and whether the CFO approves, and offer a one-page pilot summary she can bring to finance.",
+      "owner": "Claire Dumont",
+      "due_by": "2026-10-07",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "The CFO came up in passing and the CRM economic buyer is blank. Easy to treat the freeze as only a timing issue.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "our CFO froze new software spend until the second quarter."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "CRM close date is 2026-12-18, but Petra said a contract before April is unlikely because of the spend freeze.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "So the pilot is fine but a contract before April is unlikely."
+       }
+      ]
+     },
+     {
+      "summary": "The CRM business outcome was prefilled from discovery. Petra did not state an outcome as a goal in the call, so ask for it in her words.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U006",
+        "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: line 3 pilot and next steps",
+    "body": "Hi Petra, Milan,\n\nThank you for the time today. Here is where we landed.\n\nShown: sensor readings from line 3 landing in under 10 seconds, the downtime dashboard with minutes lost per shift, and the quality model trained on about 900 defect batches.\n\nAgreed:\n- Plan a pilot on line 3.\n- Jonas sends the pilot plan with success criteria by Monday, October 5th.\n- Milan gets controller access sorted by Friday, October 9th.\n\nOpen:\n- EU hosting: Jonas said we can pin the tenant to Frankfurt, including backups, and that he will confirm the exact contract wording with our compliance team. We know your legal team wants it in writing.\n- Budget: we noted the spend freeze until the second quarter, and that you will check with finance about the historian license.\n\nIf it helps, tell us what you would like to bring to your legal team or finance and we will work from that.\n\nBest,\nClaire",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "They land in under 10 seconds."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "The 18 months of defect records you shared, about 900 defect batches."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "They'll want that in writing."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: line 3 pilot and next steps",
+    "body": "Hi Petra, Milan,\n\nThanks for the time today. Jonas showed line 3 sensor readings landing in under 10 seconds, the downtime dashboard with stoppages classified by cause and minutes lost per shift, and the quality model trained on about 900 defect batches from your 18 months of records.\n\nWhat we agreed:\n- Pilot on line 3. Milan will get controller access sorted by Friday, October 9th.\n- Jonas will send the pilot plan with success criteria by Monday, October 5th.\n- Jonas will also confirm the exact contract wording on Frankfurt hosting, including backups, with our compliance team, so your legal team has it in writing. We will share it as soon as we have it.\n\nOn your side, you mentioned checking with finance about the spend freeze. If it helps, we can send a short summary of the pilot for that conversation.\n\nWe did not set a next meeting. Would a short check-in after the pilot plan arrives work for you?\n\nClaire",
+    "customer_value_line": "not stated",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "They land in under 10 seconds."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Each stoppage is classified by cause, and you can see minutes lost per shift."
+     },
+     {
+      "utterance_id": "U009",
+      "excerpt": "The 18 months of defect records you shared, about 900 defect batches."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Okay. They'll want that in writing."
+     },
+     {
+      "utterance_id": "U024",
+      "excerpt": "Maybe. I'd have to check with finance."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[names_known] not found in transcript, CRM or reference: Budget: Budget"
+   ],
+   "findings": [
+    "[email_promises_uncommitted] Jonas only said he would confirm the wording with compliance (U019); nobody committed to sharing it, and the pilot summary for finance was never offered or agreed in the call. (target: We will share it as soon as we have it. / we can send a short summary of the pilot for that conversation.; lines U019, U020, U024)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Waiting on customer: legal needs written EU hosting confirmation and a CFO spend freeze needs a finance exception check; both are customer-owned and undated.",
+    "customer_value_line": "Business outcome not stated in the call as a goal; Petra only said plant managers get downtime in a weekly spreadsheet today and will love the dashboard. The CRM outcome is prefilled from discovery, so ask for it in her words.",
+    "what_we_validated": [
+     "Line 3 sensor readings, about 2 thousand readings a second, landed in under 10 seconds",
+     "Downtime dashboard classifies each stoppage by cause and shows minutes lost per shift",
+     "Quality model flags batches whose sensor patterns look like past defects, trained on 18 months of records, about 900 defect batches",
+     "Customer agreed to plan a pilot on line 3"
+    ],
+    "integration_patterns": [
+     "Sensor readings from line 3 controllers land in Apex; pilot would run on line 3 with Milan arranging controller access"
+    ],
+    "objections_and_answers": [
+     "Legal will not accept a processor storing data outside the EU: Jonas said the tenant can be pinned to Frankfurt including backups and exact contract wording needs Apex compliance; legal wants it in writing. Partially resolved",
+     "CFO froze new software spend until the second quarter, so a contract before April is unlikely: no answer given; Petra may check with finance on an exception if Apex replaces something already paid for. Open"
+    ],
+    "open_items": [
+     "Written EU hosting and contract wording from Apex compliance for customer legal (Jonas Weber, undated)",
+     "Whether Apex replaces the historian license renewing in March: Petra unsure, Milan thinks it might (Petra to check with finance)",
+     "Economic buyer not named and decision process not discussed",
+     "Business outcome in Petra's own words",
+     "No next meeting scheduled"
+    ],
+    "commitments": [
+     "Milan Horak: controller access sorted by Friday, October 9th",
+     "Jonas Weber: pilot plan with success criteria by Monday, October 5th",
+     "Jonas Weber: confirm exact EU hosting contract wording with Apex compliance, no date given and not logged in CRM",
+     "Petra Novak: check with finance on a spend freeze exception, no date given"
+    ],
+    "stakeholders": [
+     "Petra Novak, Head of Manufacturing Analytics, champion, present",
+     "Milan Horak, Plant Systems Engineer, technical evaluator, present",
+     "CFO, froze new software spend until Q2, absent",
+     "Legal team, requires EU-only data storage in writing, absent",
+     "Finance, could review an exception, absent"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Spend freeze: Petra said a contract before April is unlikely, while the CRM close date is later than the freeze implies and needs review",
+     "Legal will not accept data stored outside the EU; Frankfurt pinning offered but wording unconfirmed",
+     "Budget exception path uncertain: Petra and Milan disagree on whether anything is replaced",
+     "No economic buyer named; CFO and finance were absent",
+     "Positive reactions were enthusiasm, not decisions; pilot only, no contract commitment"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter. So the pilot is fine but a contract before April is unlikely."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U022",
+      "excerpt": "Maybe, if it replaces something we already pay for. I'm not sure it does."
+     },
+     {
+      "utterance_id": "U023",
+      "excerpt": "It might replace the old historian license. That renews in March."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Waiting on customer: legal needs written EU hosting confirmation, and a CFO spend freeze needs a finance exception check; both are customer-owned and undated.",
+    "customer_value_line": "Business outcome not stated in the call in Petra's words; she only said plant managers get downtime in a weekly spreadsheet today and will love the dashboard. The CRM outcome was prefilled from discovery.",
+    "what_we_validated": [
+     "Line 3 sensor readings, about 2 thousand readings a second, land in under 10 seconds.",
+     "Downtime dashboard classifies each stoppage by cause and shows minutes lost per shift.",
+     "Quality model learned from 18 months of defect records, about 900 defect batches."
+    ],
+    "integration_patterns": [
+     "Line 3 controller sensor readings land in Apex; pilot would run on line 3, with Milan arranging controller access."
+    ],
+    "objections_and_answers": [
+     "EU data: legal won't accept a processor storing data outside the EU. Jonas said the tenant can be pinned to Frankfurt including backups, contract wording to be confirmed with Apex compliance. Partially resolved; legal wants it in writing.",
+     "Spend freeze: CFO froze new software spend until the second quarter, contract before April unlikely, pilot is fine. No answer given. Open; Petra unsure an exception applies and must check with finance."
+    ],
+    "open_items": [
+     "Written EU hosting and contract wording from Apex compliance for customer legal; owner Jonas Weber; undated and not logged.",
+     "Whether Apex replaces the historian license renewing in March: Petra unsure, Milan thinks it might; Petra to check with finance; no date.",
+     "Economic buyer not named and decision process not discussed.",
+     "No dated next meeting was agreed."
+    ],
+    "commitments": [
+     "Jonas Weber (Apex): send pilot plan with success criteria by Monday, October 5th.",
+     "Jonas Weber (Apex): confirm exact EU hosting contract wording with Apex compliance; no date stated.",
+     "Milan Horak (customer): controller access sorted by Friday, October 9th.",
+     "Petra Novak (customer): check with finance on an exception; no date stated."
+    ],
+    "stakeholders": [
+     "Petra Novak, Head of Manufacturing Analytics, champion, present.",
+     "Milan Horak, Plant Systems Engineer, technical evaluator, owns controller access, present.",
+     "CFO, froze new software spend until Q2, absent.",
+     "Legal team, requires EU-only data storage in writing, absent.",
+     "Finance, could approve an exception, absent."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "CRM close date is 2026-12-18, but Petra said a contract before April is unlikely because of the spend freeze.",
+     "Legal's EU requirement is unconfirmed in writing.",
+     "Exception path is uncertain: Petra and Milan disagree on whether anything is replaced.",
+     "Positive reactions were enthusiasm, not decisions; no economic buyer involved."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "our CFO froze new software spend until the second quarter. So the pilot is fine but a contract before April is unlikely."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Our legal team told us last week they won't accept a processor that stores data outside the EU."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "The exact contract wording I'd confirm with our compliance team."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "The plant managers will love this. Today they get this in a weekly spreadsheet."
+     },
+     {
+      "utterance_id": "U023",
+      "excerpt": "It might replace the old historian license. That renews in March."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[quote_supports_claim] The CRM close date is 2026-12-18, which is earlier than April, so it conflicts with the freeze; 'later than the freeze implies' reverses the problem and could mislead forecasting. (target: Spend freeze: Petra said a contract before April is unlikely, while the CRM close date is later than the freeze implies and needs review; lines U020)"
+   ],
+   "findings": [
+    "[dates_future_business_days] bad dates: 2026-12-18 (not a date said in the call): 2026-12-18 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Outcome not stated in the call in Petra's own words; the CRM outcome 'Plant managers see downtime by cause per shift' came from discovery and needs her confirmation. In the call she said plant managers get downtime in a weekly spreadsheet today.",
+    "rows": [
+     {
+      "milestone": "Controller access on line 3 sorted for the pilot",
+      "customer_owner": "Milan Horak",
+      "apex_owner": "",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+       }
+      ]
+     },
+     {
+      "milestone": "Pilot plan with success criteria sent to the customer",
+      "customer_owner": "",
+      "apex_owner": "Jonas Weber",
+      "target_date": "2026-10-05",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+       }
+      ]
+     },
+     {
+      "milestone": "Written confirmation of EU hosting (Frankfurt pinning, backups) and contract wording from Apex compliance, for the customer's legal team",
+      "customer_owner": "Petra Novak",
+      "apex_owner": "Jonas Weber",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "The exact contract wording I'd confirm with our compliance team."
+       },
+       {
+        "utterance_id": "U020",
+        "excerpt": "Okay. They'll want that in writing."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm whether Apex replaces the historian license renewing in March, and check with finance whether the spend freeze has an exception",
+      "customer_owner": "Petra Novak",
+      "apex_owner": "Claire Dumont",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U023",
+        "excerpt": "It might replace the old historian license. That renews in March."
+       },
+       {
+        "utterance_id": "U024",
+        "excerpt": "Maybe. I'd have to check with finance."
+       }
+      ]
+     },
+     {
+      "milestone": "Name who signs and plan a touchpoint with the CFO or finance before any commercial discussion",
+      "customer_owner": "Petra Novak",
+      "apex_owner": "Claire Dumont",
+      "target_date": "2026-10-07",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "our CFO froze new software spend until the second quarter."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Outcome not stated in the call in Petra's own words; the CRM outcome 'Plant managers see downtime by cause per shift' came from discovery and needs her confirmation. In the call she said plant managers get downtime in a weekly spreadsheet today.",
+    "rows": [
+     {
+      "milestone": "Controller access on line 3 sorted for the pilot",
+      "customer_owner": "Milan Horak",
+      "apex_owner": "",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "Yes, I'll get the controller access sorted by Friday, October 9th."
+       }
+      ]
+     },
+     {
+      "milestone": "Pilot plan with success criteria sent to the customer",
+      "customer_owner": "",
+      "apex_owner": "Jonas Weber",
+      "target_date": "2026-10-05",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "And I'll send the pilot plan with the success criteria by Monday, October 5th."
+       }
+      ]
+     },
+     {
+      "milestone": "Written confirmation of EU hosting (Frankfurt pinning, backups) and contract wording from Apex compliance, for the customer's legal team",
+      "customer_owner": "Petra Novak",
+      "apex_owner": "Jonas Weber",
+      "target_date": "2026-10-05",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "The exact contract wording I'd confirm with our compliance team."
+       },
+       {
+        "utterance_id": "U020",
+        "excerpt": "Okay. They'll want that in writing."
+       }
+      ]
+     },
+     {
+      "milestone": "Confirm whether Apex replaces the historian license renewing in March, and check with finance whether the spend freeze has an exception",
+      "customer_owner": "Petra Novak",
+      "apex_owner": "Claire Dumont",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U023",
+        "excerpt": "It might replace the old historian license. That renews in March."
+       },
+       {
+        "utterance_id": "U024",
+        "excerpt": "Maybe. I'd have to check with finance."
+       }
+      ]
+     },
+     {
+      "milestone": "Name who signs and plan a touchpoint with the CFO or finance before any commercial discussion",
+      "customer_owner": "Petra Novak",
+      "apex_owner": "Claire Dumont",
+      "target_date": "2026-10-07",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "our CFO froze new software spend until the second quarter."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "3 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "no chase steps",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-12-18 (not a date said in the call)",
+   "locations": [
+    "2026-12-18 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Budget",
+   "locations": [
+    "Budget"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Apex compliance for written wording on Frankfurt tenant pinning including backups",
+   "passed": true,
+   "severity": "low",
+   "finding": "U019 and U020 support the undated compliance promise and legal's need for it in writing, and RC-14 applies.",
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Petra to confirm with Milan whether Apex would replace the historian license",
+   "passed": true,
+   "severity": "low",
+   "finding": "U022 and U023 show Petra unsure and Milan suggesting a replacement, which supports the disagreement the step describes.",
+   "utterance_ids": [
+    "U022",
+    "U023"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Petra who signs and whether the CFO approves, and offer a one-page pilot summary",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is tied to the CFO spend freeze named in U020 and the blank economic buyer, so it is not a generic AE step.",
+   "utterance_ids": [
+    "U020"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: waiting_on_customer",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats the enthusiasm as timing-limited by the freeze and does not overstate it, and the pilot agreement in U013 and U014 is real.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U020"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "We will share it as soon as we have it. / we can send a short summary of the pilot for that conversation.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Jonas only said he would confirm the wording with compliance (U019); nobody committed to sharing it, and the pilot summary for finance was never offered or agreed in the call.",
+   "utterance_ids": [
+    "U019",
+    "U020",
+    "U024"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Jonas will also confirm the exact contract wording on Frankfurt hosting, including backups",
+   "passed": true,
+   "severity": "low",
+   "finding": "U019 supports Jonas confirming wording with compliance; the email adds no date.",
+   "utterance_ids": [
+    "U019"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Frankfurt hosting, including backups",
+   "passed": true,
+   "severity": "low",
+   "finding": "The Frankfurt pinning with backups matches U019 and RC-14, and nothing in the email was corrected later.",
+   "utterance_ids": [
+    "U019"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Petra Novak (customer): check with finance on an exception; no date stated.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Petra said 'Maybe. I'd have to check with finance' while running off the call, which is tentative and not a commitment, so listing it as a commitment overstates it.",
+   "utterance_ids": [
+    "U022",
+    "U024"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Positive reactions were enthusiasm, not decisions; no economic buyer involved.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary correctly separates the enthusiasm in U002, U006 and U011 from the actual pilot decision and notes the freeze.",
+   "utterance_ids": [
+    "U002",
+    "U006",
+    "U011",
+    "U020"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Written confirmation of EU hosting... target_date 2026-10-05; CFO touchpoint target_date 2026-10-07",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Nobody committed to dates for the compliance wording or the CFO touchpoint in the call, and PB-04 requires a date the customer heard, so these rows carry invented dates and a customer owner (Petra) who committed to nothing.",
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Controller access (U014) and pilot plan (U015) rows",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both rows have owners and dates that match the spoken commitments exactly.",
+   "utterance_ids": [
+    "U014",
+    "U015"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Spend freeze: Petra said a contract before April is unlikely, while the CRM close date is later than the freeze implies and needs review",
+   "passed": false,
+   "severity": "high",
+   "finding": "The CRM close date is 2026-12-18, which is earlier than April, so it conflicts with the freeze; 'later than the freeze implies' reverses the problem and could mislead forecasting.",
+   "utterance_ids": [
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Waiting on customer: legal needs written EU hosting confirmation ... both are customer-owned and undated.",
+   "passed": false,
+   "severity": "medium",
+   "finding": "The written EU hosting confirmation is owed by Apex (Jonas will confirm wording with Apex compliance), so it is not customer-owned and the deal state misstates who is waiting on whom.",
+   "utterance_ids": [
+    "U018",
+    "U019",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Petra Novak: check with finance on a spend freeze exception, no date given",
+   "passed": false,
+   "severity": "low",
+   "finding": "Petra only said 'Maybe. I'd have to check with finance', which is a conditional possibility and not a commitment, yet it is listed alongside firm commitments.",
+   "utterance_ids": [
+    "U022",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Positive reactions were enthusiasm, not decisions; pilot only, no contract commitment",
+   "passed": true,
+   "severity": "low",
+   "finding": "Enthusiasm is correctly separated from decisions, and the pilot is correctly scoped given the spend freeze and no economic buyer.",
+   "utterance_ids": [
+    "U002",
+    "U011",
+    "U013",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Frankfurt pinning including backups; exact wording needs Apex compliance",
+   "passed": true,
+   "severity": "low",
+   "finding": "This matches RC-14 and Jonas's statement and does not present any superseded behavior as current.",
+   "utterance_ids": [
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Shown: sensor readings from line 3 landing in under 10 seconds, the downtime dashboard..., quality model trained on about 900 defect batches.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Cited lines U003 and U009 support the under 10 seconds and about 900 defect batches claims, and the pilot, date and legal-in-writing quotes match too.",
+   "utterance_ids": [
+    "U003",
+    "U009",
+    "U014",
+    "U015",
+    "U019",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "you will check with finance about the historian license",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U024 says 'I'd have to check with finance' after a hedged 'Maybe', and Milan raised the historian in U023; Petra did not commit to checking, so it is presented as firmer than said.",
+   "utterance_ids": [
+    "U022",
+    "U023",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Agreed: Plan a pilot on line 3. Jonas sends the pilot plan by Monday, October 5th. Milan gets controller access by Friday, October 9th.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Dates and owners match U013, U014 and U015 exactly.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U015"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Jonas said ... that he will confirm the exact contract wording with our compliance team.",
+   "passed": false,
+   "severity": "low",
+   "finding": "Jonas said 'I'd confirm' the wording with compliance, a passing commitment with no date; the email states it plainly with no date, which is acceptable but PB-08 needs an owner and date that the customer heard, and none was given.",
+   "utterance_ids": [
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "If it helps, tell us what you would like to bring to your legal team or finance and we will work from that.",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is an offer to help, not a dated promise, and is consistent with PB-09; nothing in the email promises an uncommitted deliverable.",
+   "utterance_ids": [
+    "U020",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "EU hosting: ... we can pin the tenant to Frankfurt, including backups",
+   "passed": true,
+   "severity": "low",
+   "finding": "Matches U019 and RC-14, and the email does not promise contract terms or EU-only support access, which was not discussed.",
+   "utterance_ids": [
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Budget: we noted the spend freeze until the second quarter",
+   "passed": true,
+   "severity": "low",
+   "finding": "The freeze is described accurately and the email does not claim an exception exists or that a contract is likely.",
+   "utterance_ids": [
+    "U020",
+    "U022",
+    "U024"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "customer_value_line: not stated",
+   "passed": false,
+   "severity": "medium",
+   "finding": "CRM holds a stated outcome from discovery, 'Plant managers see downtime by cause per shift', and Petra's U006 comment about the weekly spreadsheet supports it, but the email never ties the demo to it (PB-07), and the field says not stated.",
+   "utterance_ids": [
+    "U006"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "entire email",
+   "passed": true,
+   "severity": "low",
+   "finding": "No superseded feature behavior is presented as current; the only release-card item used is the Frankfurt pinning consistent with RC-14.",
+   "utterance_ids": [
+    "U019"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.029051,
+   "latency_ms": 11582,
+   "input_tokens": 532,
+   "output_tokens": 2088,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "c216c8c0897fdd009358f8b374d4bd0331c108077ad9ff3bb7dc3f0d810fbf13"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.036344,
+   "latency_ms": 16017,
+   "input_tokens": 398,
+   "output_tokens": 2842,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "7fcb8258ba229f26b2864a57c25538d0c080dea2dfc61300715a44682f3cdfb0"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.047206,
+   "latency_ms": 18115,
+   "input_tokens": 7114,
+   "output_tokens": 2610,
+   "cache_read_input_tokens": 4292,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "27c59bca867222afd91d61569341077ed5972c32cde8e55c30880901b4e8c5a0"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.029079,
+   "latency_ms": 5241,
+   "input_tokens": 7734,
+   "output_tokens": 692,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "f0534fa023746d30d51ec5c29c5bea1ed745b7b90da934d7e8a37ba80afeb89a"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.030089,
+   "latency_ms": 5443,
+   "input_tokens": 7597,
+   "output_tokens": 814,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "b103854aef26ccb8dd79581a587115939345eb7fac77f33681ccda855bf72dee"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.034879,
+   "latency_ms": 8084,
+   "input_tokens": 7609,
+   "output_tokens": 1288,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "f949ede017a614b4721e149d6158b3f0ae806662793ce0a1031df5b074659796"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.053901,
+   "latency_ms": 25388,
+   "input_tokens": 4998,
+   "output_tokens": 3714,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2408,
+   "validator_errors": [],
+   "keys": [
+    "075f388ecd74951b206228515c01ce884997f9a8e2c63846903ec5f21ede1a3a"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.030521,
+   "latency_ms": 8922,
+   "input_tokens": 7694,
+   "output_tokens": 1389,
+   "cache_read_input_tokens": 6213,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "461e86f223bb52740e87ca134f63122d3cc62bea21fd55ad31e793921764636a"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.022898,
+   "latency_ms": 11602,
+   "input_tokens": 2076,
+   "output_tokens": 1752,
+   "cache_read_input_tokens": 6132,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "18d410a296504f836d5c8f0edb8fee6bd2164c403e9eeb53b013a3a5a6871465"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023328,
+   "latency_ms": 5015,
+   "input_tokens": 7883,
+   "output_tokens": 641,
+   "cache_read_input_tokens": 5762,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "f19001211b485be6a8270902d132b9696b4555d76fcdd8ca4f261080e2710e95"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.016224,
+   "latency_ms": 8587,
+   "input_tokens": 1204,
+   "output_tokens": 1259,
+   "cache_read_input_tokens": 6132,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "fd7193e65334589e83d15326cdf85b01a67fbe681fe4df9e4713802243396ac9"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.35352,
+ "latency_ms": 123996,
+ "wall_clock_s": 113.4,
+ "status": "ran"
+}

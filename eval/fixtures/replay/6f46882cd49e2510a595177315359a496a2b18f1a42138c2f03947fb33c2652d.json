@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6f46882cd49e2510a595177315359a496a2b18f1a42138c2f03947fb33c2652d",
+ "recorded_at": "2026-10-04T00:26:01.627822+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFHPLmfN1LesfPm6eub",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full.\"}]},\"agreed_next_step\":{\"exists\":true,\"summary\":\"Maya will set up a 30 minute meeting with Priscilla (CFO) with Hannah and Devon attending.\",\"date\":\"2026-10-06\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set up 30 minutes with her for Tuesday, October 6th at 10.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I'll be there with Devon.\"}]},\"objections\":[{\"summary\":\"Carlos worried about load on the order database, based on a past vendor that hammered it.\",\"raised_by\":\"Carlos Mendes\",\"status\":\"resolved\",\"answer_given\":\"Apex reads from the customer's change feed, not the order database; sandbox peaked at about 40 reads a second.\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"We had a vendor that hammered the order database.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"Okay, that's fine. That's well under what we allow.\"}]}],\"open_technical_items\":[],\"integration_patterns\":[{\"summary\":\"Apex merges the point of sale feed and the order feed into one model, reading from the customer's change feed rather than querying the order database; 5 minute refresh.\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"It refreshes every 5 minutes, and there's no separate streaming product involved.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"We read from the change feed you set up, so no queries against the order database itself.\"}]},{\"summary\":\"Regional manager access via a row level policy on the region key, with one level of parent and child regions.\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"Regional managers only see their region. That's a row level policy on the region key.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"Yes, just one level.\"}]}],\"commitments\":[{\"who\":\"Hannah Ortiz\",\"side\":\"apex\",\"what\":\"Send the business case numbers for Priscilla: cost per store and the overstock reduction modeled together.\",\"by_when\":\"2026-10-02\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"Yes, I'll send it by Friday the 2nd.\"}]},{\"who\":\"Devon Clarke\",\"side\":\"apex\",\"what\":\"Send Carlos the change feed setup doc for the ops runbook.\",\"by_when\":\"2026-09-28\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send you the setup doc today.\"}]},{\"who\":\"Maya Lindqvist\",\"side\":\"customer\",\"what\":\"Set up a 30 minute meeting with Priscilla (CFO).\",\"by_when\":\"2026-10-06\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set up 30 minutes with her for Tuesday, October 6th at 10.\"}]},{\"who\":\"Hannah Ortiz\",\"side\":\"apex\",\"what\":\"Attend the Priscilla meeting with Devon.\",\"by_when\":\"2026-10-06\",\"evidence\":[{\"utterance_id\":\"U019\",\"excerpt\":\"I'll be there with Devon.\"}]}],\"stakeholders\":[{\"name\":\"Maya Lindqvist\",\"title\":\"VP of Data\",\"present\":true,\"why_they_matter\":\"Champion; taking this to the CFO\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Honestly I'm ready to take this to Priscilla.\"}]},{\"name\":\"Carlos Mendes\",\"title\":\"Data Engineering Lead\",\"present\":true,\"why_they_matter\":\"Technical evaluator; owns the change feed and ops runbook\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"I want the change feed setup written down for our ops runbook.\"}]},{\"name\":\"Priscilla\",\"title\":\"CFO\",\"present\":false,\"why_they_matter\":\"Economic buyer; signs anything over 200 thousand\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"She's our CFO and she signs anything over 200 thousand.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 7878,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 7878,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1454,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

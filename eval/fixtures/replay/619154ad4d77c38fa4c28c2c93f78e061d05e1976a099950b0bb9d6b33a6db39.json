@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "619154ad4d77c38fa4c28c2c93f78e061d05e1976a099950b0bb9d6b33a6db39",
+ "recorded_at": "2026-10-04T00:27:51.106744+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFRSn7JxfKhwnSE9jnb",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":false,\"summary\":\"not stated\",\"evidence\":[]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"No dated next meeting or action was agreed. Simone said she could not move forward without Dr. Okafor and did not commit to a date.\",\"date\":\"\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can't move this without Dr. Okafor, and I don't know when she'll have time.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"Maybe. She doesn't read long documents though.\"}]},\"objections\":[{\"summary\":\"Simone cannot move the deal forward without CISO sign-off, and the CISO's calendar is unavailable until the audit is done. This is a decision-process blocker, not a technical concern.\",\"raised_by\":\"Simone Achebe\",\"status\":\"open\",\"answer_given\":\"Marta offered to write something up for the CISO; Simone was lukewarm and said the CISO does not read long documents.\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"I can't move this without Dr. Okafor, and I don't know when she'll have time.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Would it help if we wrote something up for her?\"},{\"utterance_id\":\"U018\",\"excerpt\":\"Maybe. She doesn't read long documents though.\"}]}],\"open_technical_items\":[{\"summary\":\"Scope the full trial data load. Theo needs Wes's data dictionary for the full trial model to do it.\",\"owner\":\"Theo Grant\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"That would help. I'll use it to scope the full load.\"}]}],\"integration_patterns\":[{\"summary\":\"Trial extract loaded nightly with each load versioned; the audit trail can be exported to the customer's log system.\",\"evidence\":[{\"utterance_id\":\"U005\",\"excerpt\":\"This is the trial extract you sent, loaded nightly. Each load is versioned, so you can see exactly what the data looked like on any date.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"It can be exported to your log system.\"}]}],\"commitments\":[{\"who\":\"Wes Hollis\",\"side\":\"customer\",\"what\":\"Send the data dictionary for the full trial model\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"}]},{\"who\":\"Theo Grant\",\"side\":\"apex\",\"what\":\"Use the data dictionary to scope the full load\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U022\",\"excerpt\":\"I'll use it to scope the full load.\"}]},{\"who\":\"Marta Kowal\",\"side\":\"apex\",\"what\":\"Send a recap\",\"by_when\":\"2026-09-30\",\"evidence\":[{\"utterance_id\":\"U024\",\"excerpt\":\"I'll send a recap this afternoon.\"}]}],\"stakeholders\":[{\"name\":\"Simone Achebe\",\"title\":\"Director of Clinical Data\",\"present\":true,\"why_they_matter\":\"Champion; cannot move the deal without the CISO\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"This is a good fit technically.\"}]},{\"name\":\"Wes Hollis\",\"title\":\"Senior Data Engineer\",\"present\":true,\"why_they_matter\":\"Technical evaluator; asked about rollback and time-boxed roles\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"Can the role be time boxed? We only unblind at interim analysis.\"}]},{\"name\":\"Dr. Amaka Okafor\",\"title\":\"CISO\",\"present\":false,\"why_they_matter\":\"Must sign off on anything touching trial data; first asks about audit trail and unblinded data access\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"She'll have to sign off on anything that touches trial data.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"Audit trail and who can see unblinded data. That's always her first question.\"}]},{\"name\":\"VP of R and D\",\"title\":\"VP of R and D\",\"present\":false,\"why_they_matter\":\"Possible approver for deals above a size threshold; unconfirmed\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"above a certain size it goes to the VP of R and D, but I don't know the threshold this year.\"}]},{\"name\":\"Procurement contact\",\"title\":\"Procurement\",\"present\":false,\"why_they_matter\":\"Likely involved in the commercial side; unnamed\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Probably someone in procurement\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1551,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

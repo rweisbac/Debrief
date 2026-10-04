@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "c95209793cef08db5feedd98aa6e940af637069b47bb7b21b32374c5215d0a05",
+ "recorded_at": "2026-10-04T00:26:52.053331+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFMKLHPveqjRrNKjXbh",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Northwind Grocers technical validation and next steps\",\"body\":\"Hi Maya and Carlos,\\n\\nThanks for the time this morning. Here is where we landed.\\n\\nValidated today: streaming inventory (point of sale and order feeds merged into one model, refreshing every 5 minutes, reading from your change feed with no queries against the order database), the store rollup across 212 stores with projected days to reorder point, and regional manager access through a row level policy on the region key, including one level of parent and child regions.\\n\\nNext steps:\\n- Hannah: business case numbers for Priscilla (cost per store and the overstock reduction we modeled together) by Friday, October 2nd.\\n- Devon: change feed setup doc for Carlos's ops runbook, today.\\n- Maya: 30 minutes with Priscilla on Tuesday, October 6th at 10. Hannah and Devon will join.\\n\\nIf Priscilla needs anything else ahead of that meeting, tell us and we will prepare it.\\n\\nBest,\\nHannah\",\"customer_value_line\":\"The store rollup and the 5 minute merged inventory model are aimed at your goal of store managers seeing on hand including open orders within minutes, so you stop shipping to stores that are already full.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full.\"},{\"utterance_id\":\"U003\",\"excerpt\":\"It refreshes every 5 minutes, and there's no separate streaming product involved.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"We read from the change feed you set up, so no queries against the order database itself.\"},{\"utterance_id\":\"U007\",\"excerpt\":\"212 stores, each with projected days to reorder point, computed in parallel per store.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"One level of parent and child works out of the box. You described one level, so you're covered.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Yes, I'll send it by Friday the 2nd.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set up 30 minutes with her for Tuesday, October 6th at 10.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I'll be there with Devon.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send you the setup doc today.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5188,
+   "cache_creation_input_tokens": 5798,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 5798,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 801,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6ac1fe2260cf9b8e8f75d2f14b7b4a44ceecb6a171eca449fef2c121e867c128",
+ "recorded_at": "2026-10-04T00:31:22.732942+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFh8zE9CYLEg1GhbktN",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Ready to advance: dated path exists (documents by October 14th, review board Thursday, October 22nd, then finance); economic buyer still unconfirmed.\",\"customer_value_line\":\"Monica Reyes: \\\"Daily is the whole point. Our actuaries see the trend six weeks late today.\\\" Demo showed the cost trend by plan updating daily instead of monthly.\",\"what_we_validated\":[\"Security setup covered: single tenant in a US region, encrypted at rest and in transit, customer-held keys in their cloud key service (Sanjay confirmed they use the major cloud one).\",\"Support access requires a ticket and customer approval, with every session logged in the customer audit trail.\",\"Claims matched to members on the customer extract; cost trend by plan updates daily instead of monthly.\",\"Match rate on the customer sample was 99.2 percent, unmatched rows go to an exceptions table; Monica said it is better than theirs.\"],\"integration_patterns\":[],\"objections_and_answers\":[],\"open_items\":[\"Vendor security review needs SOC 2, pen test summary, questionnaire and data flow diagram from both sides by October 14th to make the October 22nd board; review takes about three weeks.\",\"Economic buyer not confirmed: Daniel from finance was named only for commercials after the board; whether he signs was not stated (owner: Grace Liu).\",\"No date set for bringing Daniel in; Monica said only 'after the board'.\"],\"commitments\":[\"Andre Silva (Apex): send SOC 2 report and pen test summary today, October 1.\",\"Andre Silva (Apex): build and send the data flow diagram by Friday, October 9th.\",\"Sanjay Iyer (customer): send the security questionnaire today.\",\"Monica Reyes (customer): bring in Daniel from finance for commercials after the board, no date given.\",\"Grace Liu (Apex): send a recap with the agreed dates, no date stated.\"],\"stakeholders\":[\"Monica Reyes, Director of Enterprise Data: champion, present.\",\"Sanjay Iyer, Information Security Lead: runs vendor security review and board agenda, present.\",\"Daniel, Finance: commercials contact, absent; signer role not stated.\"],\"competitive_notes\":[],\"risks\":[\"Fixed board date: any document slipping past October 14th misses the October 22nd board; review is customer-owned.\",\"Finance engaged only after the board, so the economic buyer has no touchpoint before commercials and was not on the call.\",\"Customer enthusiasm (match rate reaction) is not a commitment.\"],\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Daily is the whole point. Our actuaries see the trend six weeks late today.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"SOC 2, pen test summary, our questionnaire, and a data flow diagram.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll do the data flow diagram and send it by Friday, October 9th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"The match rate on your sample was 99.2 percent.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4507,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6017,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1118,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

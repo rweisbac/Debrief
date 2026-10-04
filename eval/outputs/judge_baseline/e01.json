@@ -1,0 +1,338 @@
+{
+ "deal_id": "e01",
+ "system": "baseline",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Maya said the demo covers all three validation items.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya says 'It covers all three.'"
+  },
+  {
+   "claim": "POS and order feeds are merged into one model refreshing every 5 minutes, with no separate streaming product.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon states this directly."
+  },
+  {
+   "claim": "The product reads from Northwind's change feed, not the order database.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon says it reads from the change feed with no queries against the order database."
+  },
+  {
+   "claim": "Sandbox peak load was about 40 reads per second.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon gives this figure."
+  },
+  {
+   "claim": "Carlos said the load is well under their limit.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos: 'well under what we allow.'"
+  },
+  {
+   "claim": "The store rollup shows projected days to reorder point for 212 stores.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon states this."
+  },
+  {
+   "claim": "Maya said the rollup screen is what store managers need.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote."
+  },
+  {
+   "claim": "A row-level policy on the region key limits regional managers to their own region.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon states this."
+  },
+  {
+   "claim": "One level of parent/child regions works out of the box, and Carlos confirmed one level is all they have.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon and Carlos exchange confirms this."
+  },
+  {
+   "claim": "Maya is ready to take this to Priscilla Grant, the CFO, who signs anything over $200K.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya says this."
+  },
+  {
+   "claim": "The deal's ACV is $310K.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM acv_usd is 310000."
+  },
+  {
+   "claim": "A 30-minute CFO meeting is planned for Tuesday, Oct 6 at 10:00.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya says she'll set up 30 minutes Tuesday Oct 6 at 10."
+  },
+  {
+   "claim": "Maya wants store managers to see on-hand including open orders within minutes, to stop shipping to full stores.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya states this goal."
+  },
+  {
+   "claim": "Maya needs cost per store and the overstock reduction for the CFO business case.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya asks for these."
+  },
+  {
+   "claim": "Carlos was worried about order database load after a past vendor hammered it; this was resolved.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U004",
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos raised it, Devon answered, Carlos said fine."
+  },
+  {
+   "claim": "Carlos wants the change feed setup documented for their ops runbook.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos states this."
+  },
+  {
+   "claim": "Priscilla has no stated concerns yet and will presumably focus on cost and ROI.",
+   "category": "concern",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "No concerns stated is true, but the cost and ROI focus is speculation."
+  },
+  {
+   "claim": "Maya cited an overstock reduction 'modeled together last month', but CRM shows only a Sept 14 discovery call with 'Agreed the TV items.'",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Maya's reference and the CRM note match the claim. The output flags the inputs as untraceable."
+  },
+  {
+   "claim": "The CRM economic_buyer field is blank and Priscilla has no email or phone.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "The CRM shows economic_buyer empty and no email or phone for Priscilla."
+  },
+  {
+   "claim": "The Oct 6 invite depends on Maya sending it, and nothing is confirmed on Priscilla's side.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Maya said she'd set it up. No CFO confirmation was stated."
+  },
+  {
+   "claim": "The decision process is undocumented beyond the $200K signature threshold; security, legal and procurement steps are unknown against a Dec 18 close.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM says decision process 'Not discussed', close date is 2026-12-18, and only the CFO threshold was said."
+  },
+  {
+   "claim": "The 5-minute refresh and 40 reads/sec peak came from a sandbox extract, so production behavior at scale is not shown.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U003",
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Both figures were described as sandbox."
+  },
+  {
+   "claim": "The call did not confirm whether 212 stores is Northwind's full footprint.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Nobody addressed footprint. The output flags it as unconfirmed."
+  },
+  {
+   "claim": "The meeting time zone for the 10:00 CFO meeting was not stated.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Maya said only '10'. The output marks the time zone as needing confirmation."
+  },
+  {
+   "claim": "The session ran about 9 minutes and no competitor, security or compliance topics came up.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM demo window is 09:00 to 09:09, and the transcript has none of those topics."
+  },
+  {
+   "claim": "Devon will send Carlos the change feed setup doc today (Sept 28).",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon: 'I'll send you the setup doc today.'"
+  },
+  {
+   "claim": "Hannah will send Maya the business case numbers by Friday, Oct 2.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U015",
+    "U016",
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Hannah agreed to send by Friday the 2nd."
+  },
+  {
+   "claim": "Maya will set up a 30-minute meeting with Priscilla on Oct 6 at 10:00.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya says she'll set up 30 minutes."
+  },
+  {
+   "claim": "Hannah and Devon will both attend the Oct 6 CFO meeting.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Hannah says 'I'll be there with Devon.'"
+  },
+  {
+   "claim": "CRM close_the_demo lists only Devon's commitment without a due date, and Hannah's Oct 2 deliverable is not recorded.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM sc_commitment is 'Change feed setup doc' with no date, and Hannah's deliverable is absent."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.071539
+}

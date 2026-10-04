@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "188c1dd383d785e67d1674453658ca3407aebb363e5b045a06e3368f829625f3",
+ "recorded_at": "2026-10-04T00:32:12.786641+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFkzk1Mr7QcXMyx256P",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Apex technical validation, SSO and usage pipeline\",\"body\":\"Hi Fatima and Colin,\\n\\nThanks for your time today. Here is where we landed.\\n\\nShown: the network usage data you sent, about 1.2 billion rows a day, loaded incrementally. Last night's run took 22 minutes, against your current job of about 5 hours. The warehouse connector to your BI tool is continuous now, about 1 minute end to end.\\n\\nOpen: our claim mapping takes flat claims today, so your nested net_groups claim is not supported in general availability. We have not confirmed a date for nested claims or preview access, so please don't present either to the architecture board yet.\\n\\nOwners:\\n- Ana will send the written SSO design by Friday, October 9th.\\n- Ana will get you the exact date for nested claims, and I will send it with the design.\\n\\nYou mentioned the board meets next on November 3rd. Is there a time before then you would like us to walk through the design with you?\\n\\nDerek\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"Last night's run took 22 minutes.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Our current job is about 5 hours.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"The connector is continuous now, about 1 minute end to end.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"Today our claim mapping takes flat claims. A string or a list of strings.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"I'll send the SSO design by Friday, October 9th.\"},{\"utterance_id\":\"U022\",\"excerpt\":\"And I'll send the nested claims date along with it.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"They meet monthly, next on November 3rd.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5980,
+   "cache_creation_input_tokens": 2208,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2208,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 611,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "0496e4e05ce390f97c90e78b8e3b37fdf87e326b65cec88fbc5fbafa3e7d1ac7",
+ "recorded_at": "2026-10-04T00:31:57.965784+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFjx4EmEkHGbcwiG1fG",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: Alder State retention demo and next steps\",\"body\":\"Hi Elise and Kevin,\\n\\nThank you for your time today. Sam showed the enrollment and course data from your extract joined by student ID, the first year retention dashboard by college and by program, and the access controls, where advisors see only their own students and deans see their college. Kevin asked about filtering by first generation students, and Sam confirmed any attribute in your student table can be a filter.\\n\\nOpen items:\\n- Sam will send the retention dashboard screenshots so you can share them. No date was set during the call.\\n- You mentioned the privacy officer will want to see the access controls, and that the technology committee meets about once a semester with the date unknown. Tell us what either group needs and we will help.\\n\\nTo make sure we tie this to what matters to you, what outcome do you most want from retention reporting, in your own words?\\n\\nThanks again,\\nPaula\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"The retention dashboard shows first year retention by college and by program.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"Yes, any attribute in your student table can be a filter.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Advisors see only their own students. Deans see their college.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"Our privacy officer will want to see that.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I think they meet once a semester. I don't know when.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the retention dashboard screenshots so you can share them.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4907,
+   "cache_creation_input_tokens": 2005,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2005,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 543,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,409 @@
+{
+ "deal_id": "e01",
+ "system": "debrief",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Champion says all three validation items are covered.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya said 'It covers all three.'"
+  },
+  {
+   "claim": "A CFO meeting is planned for October 6th.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya said she will set up 30 minutes with Priscilla on Oct 6 at 10."
+  },
+  {
+   "claim": "The CFO has not seen the product.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Priscilla was not on the call; Maya will take it to her and book a meeting."
+  },
+  {
+   "claim": "Priscilla's email is not in the CRM.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM contact for Priscilla Grant has an empty email field."
+  },
+  {
+   "claim": "What Priscilla needs to approve a purchase over 200 thousand is not stated.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Only that she signs over 200 thousand was said; approval needs were not discussed."
+  },
+  {
+   "claim": "The CFO signs anything over 200 thousand.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya said she signs anything over 200 thousand."
+  },
+  {
+   "claim": "Hannah should ask Maya to add Hannah and Devon to the Oct 6 invite by 2026-09-29.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Hannah said she'd attend with Devon; the Sep 29 date is a proposed action, not attributed to the customer."
+  },
+  {
+   "claim": "Maya is booking the CFO meeting herself.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya said 'I'll set up 30 minutes with her.'"
+  },
+  {
+   "claim": "Business case should lead with Maya's outcome of store managers seeing on hand including open orders within minutes.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya stated this goal in her own words."
+  },
+  {
+   "claim": "Maya asked for the business case by Friday, Oct 2, and Hannah agreed to send it.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U016",
+    "U017"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya asked for it by Oct 2; Hannah said 'I'll send it by Friday the 2nd.'"
+  },
+  {
+   "claim": "The business case covers cost per store and the overstock reduction modeled together.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U016"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya named those two items."
+  },
+  {
+   "claim": "The business case should note the sandbox basis.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Demo used a sandbox extract; a caveat is a recommended action."
+  },
+  {
+   "claim": "The decision process and paper process were not discussed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "CRM says decision process not discussed; transcript has no legal or procurement talk."
+  },
+  {
+   "claim": "Streaming inventory merges point of sale and order feeds into one model refreshing every 5 minutes.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "There is no separate streaming product involved.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "The store rollup covers 212 stores with projected days to reorder point.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "Projected days to reorder point is computed in parallel per store.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "Regional manager access uses a row level policy on the region key.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "One level of parent and child regions works out of the box.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U012"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so; Carlos confirmed one level; RC-07 agrees."
+  },
+  {
+   "claim": "Reads come from the customer's change feed, not queries against the order database.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "Sandbox peaked at about 40 reads a second.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said so."
+  },
+  {
+   "claim": "Carlos raised load on the order database, citing a past vendor that hammered it.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos asked about load and mentioned a vendor that hammered the order database."
+  },
+  {
+   "claim": "Carlos said the load was well under what they allow.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos said 'That's well under what we allow.'"
+  },
+  {
+   "claim": "The load concern was resolved on sandbox numbers only.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U005",
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Carlos accepted the 40 reads/second figure, which came from the sandbox."
+  },
+  {
+   "claim": "Maya said of the store rollup: 'That's what the store managers need.'",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct quote."
+  },
+  {
+   "claim": "Validation ran on a sandbox extract, so production load and behavior were not shown.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U003",
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Demo used sandbox extract and sandbox peak numbers; no production data shown."
+  },
+  {
+   "claim": "Devon committed to send Carlos the change feed setup doc today, Sep 28.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U021"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Devon said 'I'll send you the setup doc today'; demo date is Sep 28."
+  },
+  {
+   "claim": "Carlos wants the change feed setup written down for his ops runbook.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos said so."
+  },
+  {
+   "claim": "Hannah and Devon will attend the Oct 6 meeting.",
+   "category": "commitment",
+   "supported": false,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": true,
+   "flagged_uncertain": false,
+   "why": "Hannah said 'I'll be there with Devon' but Devon himself did not commit; Hannah spoke for him."
+  },
+  {
+   "claim": "Maya is champion, Carlos is technical evaluator, and Priscilla Grant is CFO economic buyer, absent.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM roles match; Priscilla was not on the call."
+  },
+  {
+   "claim": "Readiness is stated by the champion only; the CFO has not confirmed the Oct 6 meeting.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Maya set the meeting up; Priscilla did not confirm anything on the call."
+  },
+  {
+   "claim": "The Oct 6 meeting depends on Apex delivering business case numbers by Oct 2.",
+   "category": "risk",
+   "supported": false,
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nobody said the meeting depends on the business case; it was booked separately."
+  },
+  {
+   "claim": "Maya's stated goal is to stop shipping to stores that are already full.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U002"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Maya said 'so we stop shipping to stores that are already full.'"
+  },
+  {
+   "claim": "Decision and paper process should be identified after the CFO meeting, with Maya and Hannah as owners.",
+   "category": "next_step",
+   "supported": false,
+   "utterance_ids": [],
+   "overstated_commitment": true,
+   "flagged_uncertain": true,
+   "why": "No one agreed this or owners; output marks it proposed with no date."
+  },
+  {
+   "claim": "Mutual action plan item for the Apex change feed doc is marked agreed.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U021",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Carlos asked, Devon agreed, Carlos thanked."
+  },
+  {
+   "claim": "Mutual action plan item for sharing Priscilla's email and her approval needs by 2026-09-29 is marked proposed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Output labels it proposed; no one agreed to it in the call."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.055715
+}

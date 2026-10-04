@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6d804d17ed4709fa2a85bb010f36e0e3af586602234986fcc09736c9b90101e5",
+ "recorded_at": "2026-10-04T00:30:31.612035+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFdcVLq4zN6CnVSrJBw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: meter data load demo\",\"body\":\"Hi Hugo,\\n\\nThanks for joining today. Kofi loaded the meter readings file you sent and partitioned it by region. It took about 4 minutes. He also showed a daily usage view by region.\\n\\nKofi will send you the load summary so you have it. No send date was given on the call; we will tell you when it is sent.\\n\\nYou mentioned that you set up access and are not the one who decides, and that operations is probably the right group. Would you be able to tell us who in operations owns meter data loads? If it helps, the load summary is written so you can forward it to them.\\n\\nThanks again,\\nMia\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"So this is the meter readings file you sent, loaded and partitioned by region. It took about 4 minutes.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"And here's a daily usage view by region.\"},{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send the load summary so you have it.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"I'm not really the one who decides. I just set up access.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"Probably operations. I'm not sure who.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 2546,
+   "cache_creation_input_tokens": 1385,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 1385,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 423,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

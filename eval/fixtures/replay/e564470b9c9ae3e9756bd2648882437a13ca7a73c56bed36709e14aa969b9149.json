@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e564470b9c9ae3e9756bd2648882437a13ca7a73c56bed36709e14aa969b9149",
+ "recorded_at": "2026-10-04T00:31:57.858454+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFjfNuER35mMvaXVA6L",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Crane operators need data in under 2 seconds; the 99th percentile latency is the main concern.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"Crane operators need data in under 2 seconds.\"}]},\"agreed_next_step\":{\"exists\":true,\"summary\":\"Review of the dedicated cluster latency results, with Henrik Larsen agreeing to the time. Olivia will send the invite.\",\"date\":\"2026-10-12\",\"evidence\":[{\"utterance_id\":\"U016\",\"excerpt\":\"Yes. Monday, October 12th, 9 am our time.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Booked. I'll send the invite.\"}]},\"objections\":[{\"summary\":\"The 99th percentile latency of 3.8 seconds in the sandbox is too slow for crane operators.\",\"raised_by\":\"Henrik Larsen\",\"status\":\"partially_resolved\",\"answer_given\":\"Mateo said the sandbox is a shared cluster and he expects lower on a dedicated cluster, but has not measured it and gave no number. He committed to run the test.\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"The 99th percentile is the problem. 3.8 seconds is too slow for operators.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"On a dedicated cluster I'd expect it to be lower, but I haven't measured it, so I won't give you a number.\"}]}],\"open_technical_items\":[{\"summary\":\"Latency (median and 99th percentile) on a dedicated cluster is not yet measured. Henrik said the result decides it for them.\",\"owner\":\"Mateo Ruiz\",\"evidence\":[{\"utterance_id\":\"U006\",\"excerpt\":\"Can you measure it on dedicated?\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Good. That decides it for us.\"}]},{\"summary\":\"Whether Apex can read the vessel estimate message format from the port community system is unknown; Mateo has not seen the format and needs a sample file.\",\"owner\":\"Mateo Ruiz\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Our vessel estimates come from a port community system over an old message format. Can you read it?\"},{\"utterance_id\":\"U011\",\"excerpt\":\"I haven't seen that format. Can you send a sample file?\"}]}],\"integration_patterns\":[{\"summary\":\"Vessel arrival estimates come from a port community system over an old message format; whether Apex can read it is not yet confirmed, pending a sample file.\",\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Our vessel estimates come from a port community system over an old message format.\"}]}],\"commitments\":[{\"who\":\"Mateo Ruiz\",\"side\":\"apex\",\"what\":\"Run the same latency test on a dedicated cluster and send the results to the customer.\",\"by_when\":\"2026-10-08\",\"evidence\":[{\"utterance_id\":\"U007\",\"excerpt\":\"I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th.\"}]},{\"who\":\"Yuki Tanaka\",\"side\":\"customer\",\"what\":\"Send a sample file of the vessel estimate message format.\",\"by_when\":\"2026-10-02\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send one today.\"}]},{\"who\":\"Olivia Grant\",\"side\":\"apex\",\"what\":\"Send the calendar invite for the October 12 results review.\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U017\",\"excerpt\":\"Booked. I'll send the invite.\"}]}],\"stakeholders\":[{\"name\":\"Henrik Larsen\",\"title\":\"Head of Terminal Operations Technology\",\"present\":true,\"why_they_matter\":\"Champion; set the latency bar and said the dedicated result decides it\",\"evidence\":[{\"utterance_id\":\"U008\",\"excerpt\":\"Good. That decides it for us.\"}]},{\"name\":\"Yuki Tanaka\",\"title\":\"Systems Integration Lead\",\"present\":true,\"why_they_matter\":\"Technical evaluator; owns the vessel message format sample\",\"evidence\":[{\"utterance_id\":\"U006\",\"excerpt\":\"Can you measure it on dedicated?\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2026,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2026,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1406,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

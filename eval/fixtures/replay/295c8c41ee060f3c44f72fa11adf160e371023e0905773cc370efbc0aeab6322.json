@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "295c8c41ee060f3c44f72fa11adf160e371023e0905773cc370efbc0aeab6322",
+ "recorded_at": "2026-10-04T00:30:31.809563+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFdQjAwHathRoXbEbX7",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Missing stakeholder: security review is on track for the Oct 22 board, but nobody has said who signs; Daniel from finance only comes in after the board.\",\"customer_value_line\":\"Monica Reyes: \\\"Daily is the whole point. Our actuaries see the trend six weeks late today.\\\" The demo showed the cost trend by plan updating daily instead of monthly.\",\"what_we_validated\":[\"Single tenant in a US region, encrypted at rest and in transit, customer-held keys in their cloud key service (Sanjay uses the major cloud one)\",\"Support access needs a ticket and customer approval, with every session logged in the customer audit trail\",\"Claims matched to members on the customer's extract; cost trend by plan updates daily instead of monthly\",\"Match rate on the sample was 99.2 percent, with unmatched rows in an exceptions table\"],\"integration_patterns\":[],\"objections_and_answers\":[],\"open_items\":[\"Sanjay needs SOC 2, pen test summary, questionnaire and data flow diagram by Oct 14 to get on the Oct 22 review board agenda\",\"Who signs is not stated; Daniel's role as signer is unconfirmed\",\"No date stated for bringing Daniel in beyond after the board\"],\"commitments\":[\"Andre Silva: send SOC 2 report and pen test summary today (Oct 1) under the signed NDA\",\"Andre Silva: send data flow diagram by Fri Oct 9\",\"Sanjay Iyer: send security questionnaire today (Oct 1)\",\"Monica Reyes: bring in Daniel from finance for commercials after the board (no date)\",\"Grace Liu: send a recap with the agreed dates (no date stated; playbook says within 24 hours)\"],\"stakeholders\":[\"Monica Reyes, Director of Enterprise Data, champion, present\",\"Sanjay Iyer, Information Security Lead, runs vendor security review, present\",\"Daniel, finance, commercials after the board, absent\",\"Economic buyer: not stated\"],\"competitive_notes\":[],\"risks\":[\"Review takes about three weeks and the board date is fixed, so any document missing after Oct 14 misses the Oct 22 board\",\"Finance is engaged only after the board, so the economic buyer has no touchpoint before commercials\",\"Champion enthusiasm (\\\"That's better than ours.\\\") is not a commitment\"],\"evidence\":[{\"utterance_id\":\"U010\",\"excerpt\":\"Daily is the whole point. Our actuaries see the trend six weeks late today.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"If I have everything by October 14th, you're on that agenda.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"SOC 2, pen test summary, our questionnaire, and a data flow diagram.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll do the data flow diagram and send it by Friday, October 9th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"And after the board, I'll bring in Daniel from finance for commercials.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"The match rate on your sample was 99.2 percent.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 4422,
+   "cache_creation_input_tokens": 2212,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2212,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1040,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

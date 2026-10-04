@@ -1,0 +1,39 @@
+{
+ "step": "draft_mutual_action_plan",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "4eb5f4e331ed7faf03bb41add66d1500436f4ecfd7b345c11d131910090efc08",
+ "recorded_at": "2026-10-04T00:28:13.367578+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFTGPLsreqS3KVpebdd",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"customer_value_line\":\"not stated\",\"rows\":[{\"milestone\":\"Wes Hollis sends the data dictionary for the full trial model\",\"customer_owner\":\"Wes Hollis\",\"apex_owner\":\"Theo Grant\",\"target_date\":\"\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U021\",\"excerpt\":\"I can send over the data dictionary for the full trial model.\"}]},{\"milestone\":\"Theo Grant scopes the full trial data load using the data dictionary\",\"customer_owner\":\"Wes Hollis\",\"apex_owner\":\"Theo Grant\",\"target_date\":\"\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U022\",\"excerpt\":\"That would help. I'll use it to scope the full load.\"}]},{\"milestone\":\"Marta Kowal sends a short CISO brief on read-level audit logging, unblinded-column masking and time-boxed role grants for Simone to forward to Dr. Okafor on her own timing\",\"customer_owner\":\"Simone Achebe\",\"apex_owner\":\"Marta Kowal\",\"target_date\":\"2026-10-01\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"Maybe. She doesn't read long documents though.\"},{\"utterance_id\":\"U004\",\"excerpt\":\"Audit trail and who can see unblinded data. That's always her first question.\"}]},{\"milestone\":\"CISO review and sign-off on anything touching trial data (date depends on her availability)\",\"customer_owner\":\"Dr. Amaka Okafor\",\"apex_owner\":\"Marta Kowal\",\"target_date\":\"\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"She'll have to sign off on anything that touches trial data.\"},{\"utterance_id\":\"U016\",\"excerpt\":\"I can't move this without Dr. Okafor, and I don't know when she'll have time.\"}]},{\"milestone\":\"Simone confirms the procurement owner and the size threshold that sends a deal to the VP of R and D\",\"customer_owner\":\"Simone Achebe\",\"apex_owner\":\"Marta Kowal\",\"target_date\":\"2026-10-02\",\"status\":\"proposed\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5001,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 3677,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 780,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

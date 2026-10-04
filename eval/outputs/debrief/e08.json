@@ -1,0 +1,1876 @@
+{
+ "debrief_id": "e08-f00d919f",
+ "deal_id": "e08",
+ "as_of": "2026-09-30",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Rachel wants days to reorder point by store, which she says is exactly the view she needs, and a cost case she can take to leadership against extending Lakestream.",
+   "evidence": [
+    {
+     "utterance_id": "U011",
+     "excerpt": "That's exactly the view. The question is cost."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "30-minute session to walk through the side-by-side cost comparison; Rachel agreed the 14th works. Isaac to send the invite.",
+   "date": "2026-10-14",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+    },
+    {
+     "utterance_id": "U021",
+     "excerpt": "Fine, the 14th works."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Why add a second platform when Lakestream is already in place; leadership will ask why not expand what they have. The real concern is cost, including the Lakestream add on.",
+    "raised_by": "Rachel Kim",
+    "status": "partially_resolved",
+    "answer_given": "Lena offered to compare on the customer's own workload and will build a cost comparison once volumes arrive.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [
+   {
+    "summary": "Workload cost comparison versus Lakestream including its streaming add on, which cannot be sized until Tobias sends event volumes per hour.",
+    "owner": "Lena Fischer",
+    "evidence": [
+     {
+      "utterance_id": "U013",
+      "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "I'll build the comparison once I have the volumes."
+     }
+    ]
+   }
+  ],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Tobias Lund",
+    "side": "customer",
+    "what": "Send event volumes per hour",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll send them tomorrow."
+     }
+    ]
+   },
+   {
+    "who": "Lena Fischer",
+    "side": "apex",
+    "what": "Build the side by side cost comparison once volumes are received, about a week after they arrive",
+    "by_when": "2026-10-08",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "I'll build the comparison once I have the volumes."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     }
+    ]
+   },
+   {
+    "who": "Isaac Morgan",
+    "side": "apex",
+    "what": "Send the calendar invite for the October 14th walkthrough",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U022",
+      "excerpt": "Great, I'll send the invite."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Rachel Kim",
+    "title": "VP of Supply Chain Analytics",
+    "present": true,
+    "why_they_matter": "Champion; must make the case to leadership and wants the comparison before the Lakestream renewal conversation on October 20th",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     }
+    ]
+   },
+   {
+    "name": "Tobias Lund",
+    "title": "Data Platform Manager",
+    "present": true,
+    "why_they_matter": "Technical evaluator; supplies the event volumes needed for the comparison",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "I can give you our event volumes per hour."
+     }
+    ]
+   },
+   {
+    "name": "Leadership (not named)",
+    "title": "not stated",
+    "present": false,
+    "why_they_matter": "Will question a second platform and decide on approval; the signer was not named",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [
+   {
+    "competitor": "Lakestream",
+    "context": "Incumbent for marketing data; Rachel asks why add Apex, and leadership will ask why not expand it. Lakestream streaming add-on cost is the open question, and a renewal conversation is on October 20th.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     }
+    ]
+   }
+  ],
+  "buying_signals": [
+   {
+    "summary": "Rachel confirmed the store rollup is the view she needs.",
+    "strength": "moderate",
+    "qualifier": "Immediately followed by a cost concern and the need to justify a second platform to leadership.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's exactly the view. The question is cost."
+     }
+    ]
+   },
+   {
+    "summary": "Customer is investing effort: Tobias will send event volumes tomorrow and Rachel agreed to a dated review on the 14th.",
+    "strength": "strong",
+    "qualifier": "",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll send them tomorrow."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Fine, the 14th works."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Leadership may push to expand the incumbent Lakestream instead of adding a second platform.",
+    "strength": "strong",
+    "qualifier": "Rachel is the one raising it; it is her expected leadership reaction, not yet a leadership statement.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     }
+    ]
+   },
+   {
+    "summary": "Time pressure: Rachel wants the comparison before the Lakestream renewal conversation on October 20th, and the cost comparison depends on volumes arriving first.",
+    "strength": "moderate",
+    "qualifier": "The October 14th review leaves a few days before the 20th.",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     }
+    ]
+   },
+   {
+    "summary": "No economic buyer or leadership approver was named in the call.",
+    "strength": "moderate",
+    "qualifier": "Leadership is referenced only generically.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "5 minute refresh",
+    "what_it_measures": "Refresh interval for merged point of sale and open orders data",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product."
+     }
+    ]
+   },
+   {
+    "value": "640 stores",
+    "what_it_measures": "Number of stores in the days-to-reorder-point rollup shown",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "640 stores, days to reorder point by store."
+     }
+    ]
+   },
+   {
+    "value": "October 20th",
+    "what_it_measures": "Date of the Lakestream renewal conversation",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Tobias to send event volumes per hour so Lena can build the cost comparison.",
+    "owner": "Tobias Lund",
+    "due": "2026-10-01",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "I can give you our event volumes per hour."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll send them tomorrow."
+     }
+    ]
+   },
+   {
+    "summary": "Rachel needs to make the case to leadership for a second platform versus expanding Lakestream.",
+    "owner": "Rachel Kim",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": [
+   {
+    "field": "stakeholder_to_add",
+    "logged_value": "",
+    "transcript_says": "No stakeholder was named to add; leadership is mentioned only generically, so the blank is accurate.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     }
+    ]
+   },
+   {
+    "field": "business_outcome",
+    "logged_value": "Days to reorder point by store with open orders.",
+    "transcript_says": "The outcome was prefilled from discovery and not restated in the call. The customer stated the view is right and that the open question is cost.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's exactly the view. The question is cost."
+     }
+    ]
+   },
+   {
+    "field": "sc_commitment",
+    "logged_value": "Workload cost comparison",
+    "transcript_says": "Lena committed to build the comparison about a week after Tobias sends volumes, which is not logged with an owner and date.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "I'll build the comparison once I have the volumes."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     }
+    ]
+   },
+   {
+    "field": "dated_next_step",
+    "logged_value": "Cost comparison review Oct 14",
+    "transcript_says": "The October 14th 30 minute walkthrough is supported, and the logged date matches.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+     }
+    ]
+   }
+  ]
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Rachel wants days to reorder point by store, which she says is exactly the view she needs, and a cost case she can take to leadership against extending Lakestream. Numbers said: 5 minute refresh, 640 stores, October 20th",
+   "evidence": [
+    {
+     "utterance_id": "U011",
+     "excerpt": "That's exactly the view. The question is cost."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Rachel Kim: Champion; must make the case to leadership and wants the comparison before the Lakestream renewal conversation on October 20th",
+   "evidence": [
+    {
+     "utterance_id": "U019",
+     "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "30-minute session to walk through the side-by-side cost comparison; Rachel agreed the 14th works. Isaac to send the invite.",
+   "evidence": [
+    {
+     "utterance_id": "U020",
+     "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+    },
+    {
+     "utterance_id": "U021",
+     "excerpt": "Fine, the 14th works."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Rachel wants days to reorder point by store, which she says is exactly the view she needs, and a cost case she can take to leadership against extending Lakestream.",
+   "evidence": [
+    {
+     "utterance_id": "U011",
+     "excerpt": "That's exactly the view. The question is cost."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Rachel Kim, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U019",
+     "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+    }
+   ]
+  },
+  "competition": {
+   "status": "known",
+   "summary": "Lakestream",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+    },
+    {
+     "utterance_id": "U011",
+     "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+    }
+   ]
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "competitive_risk",
+  "deal_state_why": "Leadership may favor expanding incumbent Lakestream; cost comparison due before the October 20th renewal conversation, and no economic buyer was named.",
+  "next_steps": [
+   {
+    "action": "Tell Tobias exactly which event-volume fields you need, and confirm to Rachel that the Lakestream add-on comparison will reach her by October 8, ahead of the October 14th review.",
+    "owner": "Lena Fischer",
+    "due_by": "2026-10-01",
+    "playbook_rule_id": "PB-04",
+    "release_card_id": "RC-10",
+    "action_type": "route_to_sc",
+    "why": "The week-after-volumes promise was said in passing and has no date; Rachel's October 20th renewal deadline makes a slipped volume file costly.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     }
+    ]
+   },
+   {
+    "action": "Ask Rachel who approves a second platform, and give her a short Lakestream-add-on versus Apex cost outline to bring to that person.",
+    "owner": "Isaac Morgan",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "Leadership was mentioned only generically, so the approver is easy to leave unnamed while attention goes to the cost comparison.",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Lakestream is the incumbent for marketing data, and its renewal conversation is October 20th. Compare on Kestrel's own workload, including the streaming add-on, not on general claims.",
+    "competitor": "Lakestream",
+    "release_card_id": "RC-10",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "competitive_risk",
+    "deal_state_why": "Rachel likes the view but expects leadership to ask why not expand Lakestream; the cost case is pending and no approver is named.",
+    "next_steps": [
+     {
+      "action": "Ask Rachel who in leadership decides on a second platform, and offer a one-page outline of the Lakestream side-by-side for her to bring to that person.",
+      "owner": "Isaac Morgan",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Leadership was mentioned only generically, so the signer is easy to leave unnamed while the focus stays on the cost comparison.",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+       }
+      ]
+     },
+     {
+      "action": "Send Tobias a short list of what the cost comparison needs (event volumes per hour, required refresh, add-on scope), and tell Rachel it lands about a week after the volumes arrive, before the October 14th review.",
+      "owner": "Lena Fischer",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-10",
+      "action_type": "route_to_sc",
+      "why": "A vague volume request risks a second round, and the CRM logs the commitment without a date. Say 'about a week', not a firm date.",
+      "evidence": [
+       {
+        "utterance_id": "U013",
+        "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "About a week after Tobias sends the volumes."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Lakestream is the incumbent for marketing data. Leadership may push to extend it, and the renewal conversation on October 20th falls just after the October 14th review. Compare on Kestrel's own workload using RC-10, not general claims.",
+      "competitor": "Lakestream",
+      "release_card_id": "RC-10",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+       },
+       {
+        "utterance_id": "U008",
+        "excerpt": "They also told us batch was enough. And then it wasn't."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "competitive_risk",
+    "deal_state_why": "Leadership may favor expanding incumbent Lakestream; cost comparison due before the October 20th renewal conversation, and no economic buyer was named.",
+    "next_steps": [
+     {
+      "action": "Tell Tobias exactly which event-volume fields you need, and confirm to Rachel that the Lakestream add-on comparison will reach her by October 8, ahead of the October 14th review.",
+      "owner": "Lena Fischer",
+      "due_by": "2026-10-01",
+      "playbook_rule_id": "PB-04",
+      "release_card_id": "RC-10",
+      "action_type": "route_to_sc",
+      "why": "The week-after-volumes promise was said in passing and has no date; Rachel's October 20th renewal deadline makes a slipped volume file costly.",
+      "evidence": [
+       {
+        "utterance_id": "U017",
+        "excerpt": "About a week after Tobias sends the volumes."
+       }
+      ]
+     },
+     {
+      "action": "Ask Rachel who approves a second platform, and give her a short Lakestream-add-on versus Apex cost outline to bring to that person.",
+      "owner": "Isaac Morgan",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Leadership was mentioned only generically, so the approver is easy to leave unnamed while attention goes to the cost comparison.",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Lakestream is the incumbent for marketing data, and its renewal conversation is October 20th. Compare on Kestrel's own workload, including the streaming add-on, not on general claims.",
+      "competitor": "Lakestream",
+      "release_card_id": "RC-10",
+      "evidence": [
+       {
+        "utterance_id": "U002",
+        "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)"
+   ],
+   "findings": [
+    "[commitment_overstated] Lena only said about a week after Tobias sends the volumes, so a firm October 8 date to Rachel is firmer than what was committed. (target: confirm to Rachel that the Lakestream add-on comparison will reach her by October 8, ahead of the October 14th review.; lines U017, U018)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Kestrel Outfitters recap: inventory projection and Oct 14 cost review",
+    "body": "Hi Rachel, hi Tobias,\n\nThanks for your time today. Here is where we landed.\n\nShown: Lena merged your point of sale and open orders with a 5 minute refresh, with projection to reorder point per store, and the rollup of days to reorder point across 640 stores. Rachel, you said that is exactly the view you need.\n\nOpen: the cost question. You asked for a side by side on your workload, covering your volume, your refresh, and all in costs including the Lakestream add on.\n\nNext steps:\n- Tobias: send event volumes per hour tomorrow.\n- Lena: build the comparison about a week after the volumes arrive.\n- Isaac: send the invite for 30 minutes on Wednesday, October 14th to walk through it.\n\nRachel, we know you want to see it before the Lakestream renewal conversation on October 20th.\n\nBest,\nIsaac",
+    "customer_value_line": "The store rollup gives Kestrel the days to reorder point by store with open orders view Rachel called exactly what she needs, and the October 14th cost comparison addresses the open cost question.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "640 stores, days to reorder point by store."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's exactly the view. The question is cost."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll send them tomorrow."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Kestrel Outfitters recap: inventory projection and Oct 14 cost review",
+    "body": "Hi Rachel, hi Tobias,\n\nThanks for your time today. Here is where we landed.\n\nShown: Lena merged your point of sale and open orders with a 5 minute refresh, with projection to reorder point per store, and the rollup of days to reorder point across 640 stores. Rachel, you said that is exactly the view you need.\n\nOpen: the cost question. You asked for a side by side on your workload, covering your volume, your refresh, and all in costs including the Lakestream add on.\n\nNext steps:\n- Tobias: send event volumes per hour tomorrow.\n- Lena: build the comparison about a week after the volumes arrive.\n- Isaac: send the invite for 30 minutes on Wednesday, October 14th to walk through it.\n\nRachel, we know you want to see it before the Lakestream renewal conversation on October 20th.\n\nBest,\nIsaac",
+    "customer_value_line": "The store rollup gives Kestrel the days to reorder point by store with open orders view Rachel called exactly what she needs, and the October 14th cost comparison addresses the open cost question.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "640 stores, days to reorder point by store."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's exactly the view. The question is cost."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll send them tomorrow."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Competitive risk: leadership may favor expanding incumbent Lakestream, the cost comparison is due ahead of the October 20th Lakestream renewal conversation, and no economic buyer was named.",
+    "customer_value_line": "Rachel Kim said the store rollup is 'exactly the view' for days to reorder point by store with open orders (outcome prefilled from discovery, not restated in the call); her open question is cost.",
+    "what_we_validated": [
+     "Merge of point of sale and open orders with a 5 minute refresh, no separate streaming product (U004)",
+     "Projection to reorder point per store, in parallel (U004)",
+     "Store rollup of days to reorder point across 640 stores (U010)",
+     "Rachel confirmed the rollup is the view she needs (U011)"
+    ],
+    "integration_patterns": [
+     "Point of sale and open orders merged into one model with a 5 minute refresh (RC-10)"
+    ],
+    "objections_and_answers": [
+     "Why add Apex when Lakestream is already in place, and leadership will ask why not expand it: Lena offered to compare on Kestrel's own workload, including the add on, rather than on slides. Status: partially resolved, pending the cost comparison.",
+     "Lakestream add on said to be cheap: not answered yet; the all in cost comparison on Kestrel volumes is the answer."
+    ],
+    "open_items": [
+     "Side by side cost comparison on Kestrel's workload, including the Lakestream add on: Lena Fischer, needs Tobias's event volumes per hour",
+     "Event volumes per hour: Tobias Lund, said he would send them tomorrow",
+     "Who approves a second platform: not named; Rachel to be asked (Isaac Morgan)"
+    ],
+    "commitments": [
+     "Tobias Lund: send event volumes per hour, 'tomorrow' (the day after the demo)",
+     "Lena Fischer: build the comparison once volumes arrive, 'about a week after Tobias sends the volumes'; no fixed date was said and the CRM entry has no owner or date",
+     "Isaac Morgan: send the invite for the 30 minute walkthrough on Wednesday, October 14th; Rachel agreed the 14th works"
+    ],
+    "stakeholders": [
+     "Rachel Kim, VP of Supply Chain Analytics, champion, present",
+     "Tobias Lund, Data Platform Manager, technical evaluator, present",
+     "Leadership, not named, absent; will question a second platform; signer not stated"
+    ],
+    "competitive_notes": [
+     "Lakestream is the incumbent for marketing data; its renewal conversation is on October 20th and Rachel wants the comparison before it",
+     "Tobias said Lakestream told them batch was enough, and then it wasn't",
+     "Lena said Lakestream needs its streaming add on for near real time, based on public docs; compare on Kestrel's workload, not general claims (RC-10)",
+     "Flag Lakestream to deal desk within 1 business day (PB-06)"
+    ],
+    "risks": [
+     "Leadership may push to expand Lakestream instead of adding a second platform (Rachel's expectation, not a leadership statement)",
+     "Time pressure: comparison is wanted before October 20th and depends on volumes arriving first",
+     "No economic buyer named",
+     "Lena's comparison date is not fixed, only 'about a week' after volumes"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "That's exactly the view. The question is cost."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll send them tomorrow."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Competitive risk: leadership may prefer expanding incumbent Lakestream, no economic buyer named, and the cost comparison is due before the October 20th Lakestream renewal conversation.",
+    "customer_value_line": "Rachel Kim said the store rollup showing days to reorder point by store is \"exactly the view\"; the open question is cost versus expanding Lakestream (the CRM outcome was prefilled from discovery, not restated in the call).",
+    "what_we_validated": [
+     "Merge of point of sale and open orders with a 5 minute refresh, no separate streaming product (U004).",
+     "Projection to reorder point per store, in parallel (U004).",
+     "Store rollup of days to reorder point by store across 640 stores; Rachel: \"That's exactly the view.\" (U010, U011)."
+    ],
+    "integration_patterns": [
+     "Point of sale and open orders merged into one model with a 5 minute refresh (RC-10)."
+    ],
+    "objections_and_answers": [
+     "Why add Apex when Lakestream is already run for marketing data (Rachel): Lena offered to compare on Kestrel's workload rather than slides; partially resolved, cost still open.",
+     "Leadership will ask why not expand what we have (Rachel): Rachel asked for a side by side on their volume, refresh and all-in costs including the add on; Lena will build it once volumes arrive; open.",
+     "Lakestream add on is cheap, and Lakestream said batch was enough (Rachel, Tobias): no Apex answer beyond comparing on their workload; open."
+    ],
+    "open_items": [
+     "Cost comparison versus Lakestream including its streaming add on, on Kestrel's volume and refresh. Owner Lena Fischer; blocked on event volumes per hour from Tobias Lund.",
+     "Economic buyer / approver for a second platform not named. Owner Isaac Morgan to ask Rachel.",
+     "Lena's commitment is logged in CRM as 'Workload cost comparison' without owner and date."
+    ],
+    "commitments": [
+     "Tobias Lund: send event volumes per hour tomorrow (CRM date 2026-10-01).",
+     "Lena Fischer: build the cost comparison about a week after volumes arrive (about 2026-10-08 if sent tomorrow).",
+     "Isaac Morgan: send invite for the 30 minute walkthrough on Wednesday, October 14th; Rachel agreed the 14th works."
+    ],
+    "stakeholders": [
+     "Rachel Kim, VP of Supply Chain Analytics, champion, present; wants the comparison before the October 20th renewal conversation.",
+     "Tobias Lund, Data Platform Manager, technical evaluator, present; supplies event volumes.",
+     "Leadership (not named), approver of a second platform, absent; signer not stated."
+    ],
+    "competitive_notes": [
+     "Lakestream is the incumbent for marketing data; renewal conversation is October 20th.",
+     "Lena said Lakestream would need its streaming add on for near real time, based on its public docs; compare on Kestrel's workload, not general claims (RC-10).",
+     "Flag Lakestream to deal desk."
+    ],
+    "risks": [
+     "Leadership may push to expand Lakestream instead of adding a second platform (Rachel's expectation, not a leadership statement).",
+     "Timing: the review on the 14th leaves only a few days before the October 20th renewal conversation, and the comparison depends on volumes arriving tomorrow.",
+     "No economic buyer named and no stakeholder logged to add."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "we already run Lakestream for marketing data. So the question is why add Apex."
+     },
+     {
+      "utterance_id": "U004",
+      "excerpt": "This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+     },
+     {
+      "utterance_id": "U013",
+      "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "About a week after Tobias sends the volumes."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "Fine, the 14th works."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": true,
+   "flagged": [
+    "[numbers_in_source] numbers not grounded: 1 (not in transcript or CRM); one (not in transcript or CRM): 1 (not in transcript or CRM), one (not in transcript or CRM)"
+   ],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: one (not in transcript or CRM): one (not in transcript or CRM)",
+    "[dates_future_business_days] bad dates: 2026-10-08 (not a date said in the call): 2026-10-08 (not a date said in the call)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Rachel wants days to reorder point by store with open orders, and a cost case for leadership versus expanding Lakestream.",
+    "rows": [
+     {
+      "milestone": "Tobias sends event volumes per hour",
+      "customer_owner": "Tobias Lund",
+      "apex_owner": "Lena Fischer",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll send them tomorrow."
+       }
+      ]
+     },
+     {
+      "milestone": "Lena builds side by side cost comparison on Kestrel's workload, including the Lakestream add on",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "Lena Fischer",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U017",
+        "excerpt": "About a week after Tobias sends the volumes."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+       }
+      ]
+     },
+     {
+      "milestone": "30 minute walkthrough of the cost comparison",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "Isaac Morgan",
+      "target_date": "2026-10-14",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "Fine, the 14th works."
+       }
+      ]
+     },
+     {
+      "milestone": "Isaac sends the calendar invite for the October 14th walkthrough",
+      "customer_owner": "",
+      "apex_owner": "Isaac Morgan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "Great, I'll send the invite."
+       }
+      ]
+     },
+     {
+      "milestone": "Name who approves a second platform and share a cost outline for that person",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "Isaac Morgan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+       }
+      ]
+     },
+     {
+      "milestone": "Rachel sees the comparison before the Lakestream renewal conversation",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "",
+      "target_date": "2026-10-20",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Rachel wants days to reorder point by store with open orders, and a cost case for leadership versus expanding Lakestream.",
+    "rows": [
+     {
+      "milestone": "Tobias sends event volumes per hour",
+      "customer_owner": "Tobias Lund",
+      "apex_owner": "Lena Fischer",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll send them tomorrow."
+       }
+      ]
+     },
+     {
+      "milestone": "Lena builds side by side cost comparison on Kestrel's workload, including the Lakestream add on",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "Lena Fischer",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U017",
+        "excerpt": "About a week after Tobias sends the volumes."
+       },
+       {
+        "utterance_id": "U013",
+        "excerpt": "A side by side on our workload. Our volume, our refresh, all in costs. Including the add on."
+       }
+      ]
+     },
+     {
+      "milestone": "30 minute walkthrough of the cost comparison",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "Isaac Morgan",
+      "target_date": "2026-10-14",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "Fine, the 14th works."
+       }
+      ]
+     },
+     {
+      "milestone": "Isaac sends the calendar invite for the October 14th walkthrough",
+      "customer_owner": "",
+      "apex_owner": "Isaac Morgan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U022",
+        "excerpt": "Great, I'll send the invite."
+       }
+      ]
+     },
+     {
+      "milestone": "Name who approves a second platform and share a cost outline for that person",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "Isaac Morgan",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U011",
+        "excerpt": "If I go to leadership with a second platform, they'll ask why not expand what we have."
+       }
+      ]
+     },
+     {
+      "milestone": "Rachel sees the comparison before the Lakestream renewal conversation",
+      "customer_owner": "Rachel Kim",
+      "apex_owner": "",
+      "target_date": "2026-10-20",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "I want to see it before the Lakestream renewal conversation on October 20th."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "bad dates: 2026-10-08 (not a date said in the call)",
+   "locations": [
+    "2026-10-08 (not a date said in the call)"
+   ]
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: 1 (not in transcript or CRM); one (not in transcript or CRM)",
+   "locations": [
+    "1 (not in transcript or CRM)",
+    "one (not in transcript or CRM)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: one (not in transcript or CRM)",
+   "locations": [
+    "one (not in transcript or CRM)"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "confirm to Rachel that the Lakestream add-on comparison will reach her by October 8, ahead of the October 14th review.",
+   "passed": false,
+   "severity": "high",
+   "finding": "Lena only said about a week after Tobias sends the volumes, so a firm October 8 date to Rachel is firmer than what was committed.",
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Rachel who approves a second platform... (U011 'they'll ask why not expand what we have')",
+   "passed": true,
+   "severity": "low",
+   "finding": "U011 shows leadership mentioned only generically with no approver named, which supports the PB-03 step.",
+   "utterance_ids": [
+    "U011"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Rachel who approves a second platform, and give her a short Lakestream-add-on versus Apex cost outline",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is tied to Rachel's stated need for a cost case to take to leadership and to the Lakestream add-on question.",
+   "utterance_ids": [
+    "U011",
+    "U013"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "RC-10 streaming merge and Lakestream add-on comparison",
+   "passed": true,
+   "severity": "low",
+   "finding": "RC-10 is current and no later line or release card supersedes the 5 minute refresh claim.",
+   "utterance_ids": [
+    "U004"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Next steps: Tobias volumes tomorrow; Lena comparison about a week after; Isaac invite for Oct 14",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each listed step was said in the call (the comparison timing is worded as 'about a week') and the email adds no new promises.",
+   "utterance_ids": [
+    "U017",
+    "U018",
+    "U020",
+    "U022"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "customer_value_line: days to reorder point by store with open orders view Rachel called exactly what she needs",
+   "passed": false,
+   "severity": "low",
+   "finding": "Rachel said only 'exactly the view'; the 'with open orders' outcome wording comes from CRM discovery prefill and was not restated in the call.",
+   "utterance_ids": [
+    "U011"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Rachel, you said that is exactly the view you need.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The email presents the praise as view fit only, and the open cost question follows immediately.",
+   "utterance_ids": [
+    "U011"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Rachel: \"That's exactly the view.\" (U010, U011)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary pairs the praise with the open cost question and marks the deal as competitive risk, so it does not overstate the signal.",
+   "utterance_ids": [
+    "U011"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Lena Fischer: build the cost comparison about a week after volumes arrive (about 2026-10-08 if sent tomorrow).",
+   "passed": true,
+   "severity": "low",
+   "finding": "The commitment keeps the 'about' hedge and presents the date as conditional.",
+   "utterance_ids": [
+    "U017",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Rachel sees the comparison before the Lakestream renewal conversation (target_date 2026-10-20)",
+   "passed": false,
+   "severity": "medium",
+   "finding": "October 20th is Rachel's renewal-conversation deadline, not an agreed delivery date; the agreed review date is October 14th.",
+   "utterance_ids": [
+    "U019",
+    "U020",
+    "U021"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "Isaac sends the calendar invite for the October 14th walkthrough",
+   "passed": false,
+   "severity": "low",
+   "finding": "Sending an invite is a routine AE step with no customer-specific content, and Isaac committed to it so it is not merely 'proposed'.",
+   "utterance_ids": [
+    "U022"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Tobias sends event volumes per hour, 2026-10-01, agreed",
+   "passed": true,
+   "severity": "low",
+   "finding": "Tobias said 'I'll send them tomorrow', which with a 2026-09-30 demo date is 2026-10-01.",
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Evidence excerpts U002, U011, U013, U017, U018, U019, U020",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each excerpt appears word for word in its cited line and supports the point it is attached to.",
+   "utterance_ids": [
+    "U002",
+    "U011",
+    "U013",
+    "U017",
+    "U018",
+    "U019",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "Lena Fischer: build the comparison once volumes arrive, 'about a week after Tobias sends the volumes'; no fixed date was said",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary keeps Lena's commitment conditional on the volumes and flags that no fixed date was given; Tobias's 'tomorrow' and Isaac's invite are also stated as said.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U018",
+    "U020",
+    "U022"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Rachel Kim said the store rollup is 'exactly the view'... her open question is cost.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary ties the enthusiasm to the view only and notes that cost remains open, with leadership risk and no economic buyer recorded.",
+   "utterance_ids": [
+    "U011",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "Point of sale and open orders merged into one model with a 5 minute refresh (RC-10)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The 5 minute refresh matches RC-10 and U004, and no superseded behavior is presented as current.",
+   "utterance_ids": [
+    "U004"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "internal_summary",
+   "target": "Who approves a second platform: not named; Rachel to be asked (Isaac Morgan)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The open items are tied to Kestrel's workload, the missing signer, and Lena's dependency on volumes, and none is a generic check-in.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U015",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Rachel who in leadership decides on a second platform... (cites U011)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U011 shows Rachel referring to leadership only generically and not naming a signer, which supports the stated reason for the PB-03 step.",
+   "utterance_ids": [
+    "U011"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Send Tobias a short list of what the cost comparison needs... (cites U013, U017)",
+   "passed": true,
+   "severity": "low",
+   "finding": "U013 gives the workload, volume, refresh and add-on scope, and U017 gives the 'about a week after volumes' timing, so both quotes support the step.",
+   "utterance_ids": [
+    "U013",
+    "U017"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "tell Rachel it lands about a week after the volumes arrive, before the October 14th review",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step keeps Lena's 'about a week' wording, and with Tobias sending volumes tomorrow that falls before the October 14th review, so no firm date is invented.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: competitive_risk - Rachel likes the view but expects leadership to ask why not expand Lakestream",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment treats Rachel's praise as interest only and keeps the cost case, the unnamed approver and the Lakestream pushback as the main risk.",
+   "utterance_ids": [
+    "U011",
+    "U013"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "Compare on Kestrel's own workload using RC-10",
+   "passed": true,
+   "severity": "low",
+   "finding": "RC-10 is a current release card with no superseding entry, and the assessment cites no outdated behavior.",
+   "utterance_ids": [
+    "U004"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Ask Rachel who in leadership decides on a second platform, and offer a one-page outline",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step is tied to Kestrel's leadership approval for a second platform and gives Rachel something specific to bring, so it is not a generic follow-up.",
+   "utterance_ids": [
+    "U011",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Send Tobias a short list of what the cost comparison needs",
+   "passed": true,
+   "severity": "low",
+   "finding": "The step lists Kestrel-specific inputs (event volumes per hour, refresh, add-on scope) with an owner and due date, so it is not generic.",
+   "utterance_ids": [
+    "U013",
+    "U014",
+    "U018"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021546,
+   "latency_ms": 8552,
+   "input_tokens": 532,
+   "output_tokens": 1381,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "b8262d75533b5a5d95a0af73661c2429a622b77211310348c003c99a8163db31"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.026899,
+   "latency_ms": 11646,
+   "input_tokens": 398,
+   "output_tokens": 1941,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "f11be3a105f14fd8651fd1de47a0ae913c9ca6d5af36c99171dfa69b4a68b836"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.050768,
+   "latency_ms": 17032,
+   "input_tokens": 10320,
+   "output_tokens": 2238,
+   "cache_read_input_tokens": 10818,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "7f78083c9ff1e1c3244f224ef9dcafa56a7b86744de3f4eee1436abe50efc00c",
+    "7eafa9771b9880f79830168ecd038c380fc456a4b9aa9f662d09e81aa79b1c06"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.024452,
+   "latency_ms": 5342,
+   "input_tokens": 5383,
+   "output_tokens": 743,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "598ecac05aed42c96523e0d281cbc6a42f4abc670607019729edd8fe787920a2"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025312,
+   "latency_ms": 5636,
+   "input_tokens": 5246,
+   "output_tokens": 850,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "91ac21ab581800103e76037f6248aeceb76b4da13d024e5c7b031d3f3e824c36"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.031102,
+   "latency_ms": 9022,
+   "input_tokens": 5258,
+   "output_tokens": 1424,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "587240880a78f612438ceca2dfa5b9599060b370c1da47a21c645c348ca3bf51"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.04548,
+   "latency_ms": 19874,
+   "input_tokens": 4890,
+   "output_tokens": 2937,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2234,
+   "validator_errors": [],
+   "keys": [
+    "504bf8aad5bedd517d187dad118b6bb012508d8c3aa6e169fcec7eb79fb35820"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025464,
+   "latency_ms": 8303,
+   "input_tokens": 5388,
+   "output_tokens": 1348,
+   "cache_read_input_tokens": 6039,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "a749144810b2575ff948876ffcd662724bbcb61bbaaa97595f8d29478c5e3471"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.012446,
+   "latency_ms": 5395,
+   "input_tokens": 2022,
+   "output_tokens": 721,
+   "cache_read_input_tokens": 5958,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "bb3e21d65d48f0e571305587b03c2219ee496c7f5c0c060c56f4357b60124735"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.032619,
+   "latency_ms": 15084,
+   "input_tokens": 5282,
+   "output_tokens": 2075,
+   "cache_read_input_tokens": 6526,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "b01d3b6a820df96c30674d6a9eda70d6bb81be10eb1a2ae3fa279ca13d9e8c7d"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023796,
+   "latency_ms": 13932,
+   "input_tokens": 1382,
+   "output_tokens": 1984,
+   "cache_read_input_tokens": 5958,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "aeb01a91caa4eb8cb421e3be93784c8a1c3f4fa7d2cea1c5911d704fcee079a5"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.319884,
+ "latency_ms": 119818,
+ "wall_clock_s": 108.9,
+ "status": "ran"
+}

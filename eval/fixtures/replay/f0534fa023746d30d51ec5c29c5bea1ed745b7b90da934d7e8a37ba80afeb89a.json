@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f0534fa023746d30d51ec5c29c5bea1ed745b7b90da934d7e8a37ba80afeb89a",
+ "recorded_at": "2026-10-04T00:30:22.561243+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFcrFYp7sm6yztxD9nn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap: line 3 pilot and next steps\",\"body\":\"Hi Petra, Milan,\\n\\nThanks for the time today. Jonas showed line 3 sensor readings landing in under 10 seconds, the downtime dashboard with stoppages classified by cause and minutes lost per shift, and the quality model trained on about 900 defect batches from your 18 months of records.\\n\\nWhat we agreed:\\n- Pilot on line 3. Milan will get controller access sorted by Friday, October 9th.\\n- Jonas will send the pilot plan with success criteria by Monday, October 5th.\\n- Jonas will also confirm the exact contract wording on Frankfurt hosting, including backups, with our compliance team, so your legal team has it in writing. We will share it as soon as we have it.\\n\\nOn your side, you mentioned checking with finance about the spend freeze. If it helps, we can send a short summary of the pilot for that conversation.\\n\\nWe did not set a next meeting. Would a short check-in after the pilot plan arrives work for you?\\n\\nClaire\",\"customer_value_line\":\"not stated\",\"evidence\":[{\"utterance_id\":\"U003\",\"excerpt\":\"They land in under 10 seconds.\"},{\"utterance_id\":\"U005\",\"excerpt\":\"Each stoppage is classified by cause, and you can see minutes lost per shift.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"The 18 months of defect records you shared, about 900 defect batches.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"Yes, I'll get the controller access sorted by Friday, October 9th.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"And I'll send the pilot plan with the success criteria by Monday, October 5th.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"The exact contract wording I'd confirm with our compliance team.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Okay. They'll want that in writing.\"},{\"utterance_id\":\"U024\",\"excerpt\":\"Maybe. I'd have to check with finance.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7734,
+   "cache_creation_input_tokens": 2408,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2408,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 692,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

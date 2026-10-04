@@ -1,0 +1,9 @@
+debrief e01: saved output exists, skipped
+debrief e05: ran errors=[] cost=$0.406
+debrief e03: ran errors=[] cost=$0.338
+debrief e04: ran errors=[] cost=$0.329
+debrief e02: ran errors=[] cost=$0.374
+debrief e09: ran errors=[] cost=$0.181
+debrief e06: ran errors=[] cost=$0.354
+debrief e08: ran errors=[] cost=$0.320
+debrief e07: ran errors=[] cost=$0.348

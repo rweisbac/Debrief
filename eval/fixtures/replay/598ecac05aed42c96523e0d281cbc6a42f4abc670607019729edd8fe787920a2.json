@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "598ecac05aed42c96523e0d281cbc6a42f4abc670607019729edd8fe787920a2",
+ "recorded_at": "2026-10-04T00:30:21.650159+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFcmsdbAcCQTyKmu3mX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Kestrel Outfitters recap: inventory projection and Oct 14 cost review\",\"body\":\"Hi Rachel, hi Tobias,\\n\\nThanks for your time today. Here is where we landed.\\n\\nShown: Lena merged your point of sale and open orders with a 5 minute refresh, with projection to reorder point per store, and the rollup of days to reorder point across 640 stores. Rachel, you said that is exactly the view you need.\\n\\nOpen: the cost question. You asked for a side by side on your workload, covering your volume, your refresh, and all in costs including the Lakestream add on.\\n\\nNext steps:\\n- Tobias: send event volumes per hour tomorrow.\\n- Lena: build the comparison about a week after the volumes arrive.\\n- Isaac: send the invite for 30 minutes on Wednesday, October 14th to walk through it.\\n\\nRachel, we know you want to see it before the Lakestream renewal conversation on October 20th.\\n\\nBest,\\nIsaac\",\"customer_value_line\":\"The store rollup gives Kestrel the days to reorder point by store with open orders view Rachel called exactly what she needs, and the October 14th cost comparison addresses the open cost question.\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product.\"},{\"utterance_id\":\"U010\",\"excerpt\":\"640 stores, days to reorder point by store.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"That's exactly the view. The question is cost.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"A side by side on our workload. Our volume, our refresh, all in costs. Including the add on.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll send them tomorrow.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About a week after Tobias sends the volumes.\"},{\"utterance_id\":\"U019\",\"excerpt\":\"I want to see it before the Lakestream renewal conversation on October 20th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5383,
+   "cache_creation_input_tokens": 2234,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2234,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 743,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

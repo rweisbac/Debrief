@@ -1,0 +1,1683 @@
+{
+ "debrief_id": "e01-590e4b8c",
+ "deal_id": "e01",
+ "as_of": "2026-09-28",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "Maya will set up a 30 minute meeting with Priscilla (CFO) with Hannah and Devon attending.",
+   "date": "2026-10-06",
+   "evidence": [
+    {
+     "utterance_id": "U018",
+     "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+    },
+    {
+     "utterance_id": "U019",
+     "excerpt": "I'll be there with Devon."
+    }
+   ]
+  },
+  "objections": [
+   {
+    "summary": "Carlos worried about load on the order database, based on a past vendor that hammered it.",
+    "raised_by": "Carlos Mendes",
+    "status": "resolved",
+    "answer_given": "Apex reads from the customer's change feed, not the order database; sandbox peaked at about 40 reads a second.",
+    "evidence": [
+     {
+      "utterance_id": "U004",
+      "excerpt": "We had a vendor that hammered the order database."
+     },
+     {
+      "utterance_id": "U006",
+      "excerpt": "Okay, that's fine. That's well under what we allow."
+     }
+    ]
+   }
+  ],
+  "open_technical_items": [],
+  "integration_patterns": [
+   {
+    "summary": "Apex merges the point of sale feed and the order feed into one model, reading from the customer's change feed rather than querying the order database; 5 minute refresh.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "It refreshes every 5 minutes, and there's no separate streaming product involved."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "We read from the change feed you set up, so no queries against the order database itself."
+     }
+    ]
+   },
+   {
+    "summary": "Regional manager access via a row level policy on the region key, with one level of parent and child regions.",
+    "evidence": [
+     {
+      "utterance_id": "U009",
+      "excerpt": "Regional managers only see their region. That's a row level policy on the region key."
+     },
+     {
+      "utterance_id": "U012",
+      "excerpt": "Yes, just one level."
+     }
+    ]
+   }
+  ],
+  "commitments": [
+   {
+    "who": "Hannah Ortiz",
+    "side": "apex",
+    "what": "Send the business case numbers for Priscilla: cost per store and the overstock reduction modeled together.",
+    "by_when": "2026-10-02",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "Yes, I'll send it by Friday the 2nd."
+     }
+    ]
+   },
+   {
+    "who": "Devon Clarke",
+    "side": "apex",
+    "what": "Send Carlos the change feed setup doc for the ops runbook.",
+    "by_when": "2026-09-28",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send you the setup doc today."
+     }
+    ]
+   },
+   {
+    "who": "Maya Lindqvist",
+    "side": "customer",
+    "what": "Set up a 30 minute meeting with Priscilla (CFO).",
+    "by_when": "2026-10-06",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     }
+    ]
+   },
+   {
+    "who": "Hannah Ortiz",
+    "side": "apex",
+    "what": "Attend the Priscilla meeting with Devon.",
+    "by_when": "2026-10-06",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll be there with Devon."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Maya Lindqvist",
+    "title": "VP of Data",
+    "present": true,
+    "why_they_matter": "Champion; taking this to the CFO",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Honestly I'm ready to take this to Priscilla."
+     }
+    ]
+   },
+   {
+    "name": "Carlos Mendes",
+    "title": "Data Engineering Lead",
+    "present": true,
+    "why_they_matter": "Technical evaluator; owns the change feed and ops runbook",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "I want the change feed setup written down for our ops runbook."
+     }
+    ]
+   },
+   {
+    "name": "Priscilla",
+    "title": "CFO",
+    "present": false,
+    "why_they_matter": "Economic buyer; signs anything over 200 thousand",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "She's our CFO and she signs anything over 200 thousand."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion says the demo covers all three validation items and she is ready to take it to the CFO.",
+    "strength": "strong",
+    "qualifier": "Said by the champion. The CFO was not on the call and has not yet said anything.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "It covers all three. Honestly I'm ready to take this to Priscilla."
+     }
+    ]
+   },
+   {
+    "summary": "Champion committed to a dated 30 minute meeting with the CFO and asked Apex for business case numbers ahead of it.",
+    "strength": "strong",
+    "qualifier": "The meeting is not yet confirmed by the CFO. Maya said she will set it up.",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     },
+     {
+      "utterance_id": "U016",
+      "excerpt": "I need the cost per store and the overstock reduction we modeled together last month."
+     }
+    ]
+   },
+   {
+    "summary": "The store rollup screen matches what store managers need.",
+    "strength": "moderate",
+    "qualifier": "Said by the champion only. The demo used sandbox data.",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "That's the screen. That's what the store managers need."
+     }
+    ]
+   },
+   {
+    "summary": "The technical evaluator accepted the load on their order database as fine.",
+    "strength": "moderate",
+    "qualifier": "Based on sandbox numbers only.",
+    "evidence": [
+     {
+      "utterance_id": "U006",
+      "excerpt": "Okay, that's fine. That's well under what we allow."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "The CFO signs anything over 200 thousand and has not seen the product. Her view on the case is unknown and the decision process was not discussed.",
+    "strength": "moderate",
+    "qualifier": "The CRM ACV is 310000, so the CFO sign-off threshold applies. The CFO has no email in the CRM.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "She's our CFO and she signs anything over 200 thousand."
+     }
+    ]
+   },
+   {
+    "summary": "The validation ran on a sandbox extract, so production behavior and load were not shown.",
+    "strength": "weak",
+    "qualifier": "No customer concern was raised about this.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "This is your point of sale feed and the order feed from your sandbox extract, merged into one model."
+     }
+    ]
+   },
+   {
+    "summary": "The CFO meeting depends on the business case numbers that Apex promised by Friday.",
+    "strength": "weak",
+    "qualifier": "Hannah committed clearly. This is a risk only if the date slips.",
+    "evidence": [
+     {
+      "utterance_id": "U017",
+      "excerpt": "Yes, I'll send it by Friday the 2nd."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "every 5 minutes",
+    "what_it_measures": "Refresh interval for the merged inventory and order model",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "It refreshes every 5 minutes, and there's no separate streaming product involved."
+     }
+    ]
+   },
+   {
+    "value": "about 40 reads a second",
+    "what_it_measures": "Peak read load on the change feed in the sandbox",
+    "evidence": [
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox it peaked at about 40 reads a second."
+     }
+    ]
+   },
+   {
+    "value": "212 stores",
+    "what_it_measures": "Stores in the store rollup shown",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "212 stores, each with projected days to reorder point, computed in parallel per store."
+     }
+    ]
+   },
+   {
+    "value": "200 thousand",
+    "what_it_measures": "Contract size above which the CFO signs",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "She's our CFO and she signs anything over 200 thousand."
+     }
+    ]
+   },
+   {
+    "value": "Friday, October 2nd",
+    "what_it_measures": "Date Maya asked for the business case numbers",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "Can you have that to me by Friday, October 2nd?"
+     }
+    ]
+   },
+   {
+    "value": "30 minutes",
+    "what_it_measures": "Length of the CFO meeting",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     }
+    ]
+   },
+   {
+    "value": "Tuesday, October 6th at 10",
+    "what_it_measures": "Date and time of the CFO meeting",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Maya to set up the 30 minute meeting with the CFO and take the case to her (internal alignment and sign-off).",
+    "owner": "Maya Lindqvist",
+    "due": "2026-10-06",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "Then let's book Priscilla. I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": []
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full. Numbers said: every 5 minutes, about 40 reads a second, 212 stores",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "partial",
+   "summary": "Maya Lindqvist: Champion; taking this to the CFO",
+   "evidence": [
+    {
+     "utterance_id": "U014",
+     "excerpt": "Honestly I'm ready to take this to Priscilla."
+    }
+   ]
+  },
+  "decision_criteria": {
+   "status": "known",
+   "summary": "3 items validated or agreed",
+   "evidence": [
+    {
+     "utterance_id": "U004",
+     "excerpt": "We had a vendor that hammered the order database."
+    },
+    {
+     "utterance_id": "U006",
+     "excerpt": "Okay, that's fine. That's well under what we allow."
+    }
+   ]
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Maya will set up a 30 minute meeting with Priscilla (CFO) with Hannah and Devon attending.",
+   "evidence": [
+    {
+     "utterance_id": "U018",
+     "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+    },
+    {
+     "utterance_id": "U019",
+     "excerpt": "I'll be there with Devon."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full.",
+   "evidence": [
+    {
+     "utterance_id": "U002",
+     "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Maya Lindqvist, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U014",
+     "excerpt": "Honestly I'm ready to take this to Priscilla."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "ready_to_advance",
+  "deal_state_why": "Champion says all three items are covered, and a dated CFO meeting is planned for October 6th. CFO has not seen the product.",
+  "next_steps": [
+   {
+    "action": "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand.",
+    "owner": "Hannah Ortiz",
+    "due_by": "2026-09-29",
+    "playbook_rule_id": "PB-05",
+    "release_card_id": "",
+    "action_type": "resolve_with_champion",
+    "why": "Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "She's our CFO and she signs anything over 200 thousand."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     }
+    ]
+   },
+   {
+    "action": "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis.",
+    "owner": "Hannah Ortiz",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-07",
+    "release_card_id": "",
+    "action_type": "send_material",
+    "why": "Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat.",
+    "evidence": [
+     {
+      "utterance_id": "U016",
+      "excerpt": "I need the cost per store and the overstock reduction we modeled together last month."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "The CFO signs above 200 thousand, has not seen the product, and the decision and paper process were not discussed. Her view is unknown until Oct 6.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "She's our CFO and she signs anything over 200 thousand."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "ready_to_advance",
+    "deal_state_why": "Champion says all three items are covered, and a dated CFO meeting is planned for October 6th. CFO has not seen the product.",
+    "next_steps": [
+     {
+      "action": "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand.",
+      "owner": "Hannah Ortiz",
+      "due_by": "2026-09-29",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+       }
+      ]
+     },
+     {
+      "action": "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis.",
+      "owner": "Hannah Ortiz",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-07",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "I need the cost per store and the overstock reduction we modeled together last month."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "The CFO signs above 200 thousand, has not seen the product, and the decision and paper process were not discussed. Her view is unknown until Oct 6.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "ready_to_advance",
+    "deal_state_why": "Champion says all three items are covered, and a dated CFO meeting is planned for October 6th. CFO has not seen the product.",
+    "next_steps": [
+     {
+      "action": "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand.",
+      "owner": "Hannah Ortiz",
+      "due_by": "2026-09-29",
+      "playbook_rule_id": "PB-05",
+      "release_card_id": "",
+      "action_type": "resolve_with_champion",
+      "why": "Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       },
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+       }
+      ]
+     },
+     {
+      "action": "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis.",
+      "owner": "Hannah Ortiz",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-07",
+      "release_card_id": "",
+      "action_type": "send_material",
+      "why": "Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat.",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "I need the cost per store and the overstock reduction we modeled together last month."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "The CFO signs above 200 thousand, has not seen the product, and the decision and paper process were not discussed. Her view is unknown until Oct 6.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Northwind Grocers validation and next steps",
+    "body": "Hi Maya and Carlos,\n\nThanks for the time this morning. Here is where we landed.\n\nWhat we validated: streaming inventory (point of sale and order feeds merged into one model, refreshing every 5 minutes), the store rollup across 212 stores with projected days to reorder point, and regional manager access through a row level policy on the region key, with one level of parent and child regions. Carlos, reads come from your change feed rather than the order database, and the sandbox peaked at about 40 reads a second.\n\nNext steps:\n- Hannah: business case numbers for Priscilla (cost per store and the overstock reduction we modeled together) by Friday, October 2nd.\n- Devon: change feed setup doc for your ops runbook, today.\n- Maya: 30 minutes with Priscilla on Tuesday, October 6th at 10. Hannah and Devon will join.\n\nThanks again,\nHannah",
+    "customer_value_line": "Store managers can see on hand including open orders within minutes, which is how Northwind plans to stop shipping to stores that are already full.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "It refreshes every 5 minutes, and there's no separate streaming product involved."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox it peaked at about 40 reads a second."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "212 stores, each with projected days to reorder point, computed in parallel per store."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "One level of parent and child works out of the box. You described one level, so you're covered."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Yes, I'll send it by Friday the 2nd."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send you the setup doc today."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll be there with Devon."
+     },
+     {
+      "utterance_id": "U002",
+      "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Northwind Grocers technical validation and next steps",
+    "body": "Hi Maya and Carlos,\n\nThanks for the time this morning. Here is where we landed.\n\nValidated today: streaming inventory (point of sale and order feeds merged into one model, refreshing every 5 minutes, reading from your change feed with no queries against the order database), the store rollup across 212 stores with projected days to reorder point, and regional manager access through a row level policy on the region key, including one level of parent and child regions.\n\nNext steps:\n- Hannah: business case numbers for Priscilla (cost per store and the overstock reduction we modeled together) by Friday, October 2nd.\n- Devon: change feed setup doc for Carlos's ops runbook, today.\n- Maya: 30 minutes with Priscilla on Tuesday, October 6th at 10. Hannah and Devon will join.\n\nIf Priscilla needs anything else ahead of that meeting, tell us and we will prepare it.\n\nBest,\nHannah",
+    "customer_value_line": "The store rollup and the 5 minute merged inventory model are aimed at your goal of store managers seeing on hand including open orders within minutes, so you stop shipping to stores that are already full.",
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+     },
+     {
+      "utterance_id": "U003",
+      "excerpt": "It refreshes every 5 minutes, and there's no separate streaming product involved."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "We read from the change feed you set up, so no queries against the order database itself."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "212 stores, each with projected days to reorder point, computed in parallel per store."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "One level of parent and child works out of the box. You described one level, so you're covered."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Yes, I'll send it by Friday the 2nd."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll be there with Devon."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send you the setup doc today."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[email_promises_uncommitted] No one in the call offered to prepare additional material for Priscilla beyond the business case numbers, so this sentence is a new open-ended promise. (target: If Priscilla needs anything else ahead of that meeting, tell us and we will prepare it.; lines U015, U016, U017)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Ready to advance: champion says all three validation items are covered and a CFO meeting is planned for Oct 6, but the CFO has not seen the product.",
+    "customer_value_line": "Maya's stated goal: store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full; the demo showed a 5 minute refresh on sandbox data.",
+    "what_we_validated": [
+     "Streaming inventory: point of sale and order feeds merged into one model, 5 minute refresh, no separate streaming product (sandbox extract).",
+     "Store rollup: 212 stores, each with projected days to reorder point, computed in parallel per store. Maya: 'That's what the store managers need.'",
+     "Regional manager access: row level policy on the region key; one level of parent and child regions works out of the box, which matches what Carlos described."
+    ],
+    "integration_patterns": [
+     "Reads from the customer's change feed, not queries against the order database; sandbox peaked at about 40 reads a second.",
+     "Row level policy on the region key with one level of parent and child."
+    ],
+    "objections_and_answers": [
+     "Carlos: load on the order database, citing a past vendor that hammered it. Answer: Apex reads from the change feed, about 40 reads a second peak in the sandbox. Carlos: well under what they allow. Resolved on sandbox numbers only."
+    ],
+    "open_items": [
+     "CFO Priscilla's email is not in the CRM and what she needs to approve a purchase over 200 thousand is not stated. Owner: Hannah Ortiz.",
+     "Decision process and paper process not discussed. Owner: not stated.",
+     "Production load and behavior not shown; validation ran on a sandbox extract. Owner: not stated."
+    ],
+    "commitments": [
+     "Hannah Ortiz (Apex): send business case numbers (cost per store and the overstock reduction modeled together) to Maya by Friday, Oct 2.",
+     "Devon Clarke (Apex): send Carlos the change feed setup doc today, Sep 28.",
+     "Maya Lindqvist (customer): set up a 30 minute meeting with Priscilla for Tuesday, Oct 6 at 10.",
+     "Hannah Ortiz (Apex): attend the Oct 6 meeting with Devon."
+    ],
+    "stakeholders": [
+     "Maya Lindqvist, VP of Data: champion, present.",
+     "Carlos Mendes, Data Engineering Lead: technical evaluator, present; owns the change feed and ops runbook.",
+     "Priscilla Grant, CFO: economic buyer, absent; signs anything over 200 thousand; has not seen the product."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "The CFO signs anything over 200 thousand (CRM ACV 310000), has not seen the product, and her view is unknown until Oct 6.",
+     "Readiness is stated by the champion only; the CFO meeting is not yet confirmed by Priscilla.",
+     "Validation was on sandbox data; production load and behavior were not shown.",
+     "The Oct 6 meeting depends on Apex delivering the business case numbers by Oct 2."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "It covers all three. Honestly I'm ready to take this to Priscilla. She's our CFO and she signs anything over 200 thousand."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Then let's book Priscilla. I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Yes, I'll send it by Friday the 2nd."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send you the setup doc today."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox it peaked at about 40 reads a second."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "One level of parent and child works out of the box. You described one level, so you're covered."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Ready to advance: champion says all three validation items are covered and a CFO meeting is planned for Oct 6, but the CFO has not seen the product.",
+    "customer_value_line": "Maya's stated goal: store managers see on hand including open orders within minutes, so they stop shipping to stores that are already full; the demo showed a 5 minute refresh on sandbox data.",
+    "what_we_validated": [
+     "Streaming inventory: point of sale and order feeds merged into one model, 5 minute refresh, no separate streaming product (sandbox extract).",
+     "Store rollup: 212 stores, each with projected days to reorder point, computed in parallel per store. Maya: 'That's what the store managers need.'",
+     "Regional manager access: row level policy on the region key; one level of parent and child regions works out of the box, which matches what Carlos described."
+    ],
+    "integration_patterns": [
+     "Reads from the customer's change feed, not queries against the order database; sandbox peaked at about 40 reads a second.",
+     "Row level policy on the region key with one level of parent and child."
+    ],
+    "objections_and_answers": [
+     "Carlos: load on the order database, citing a past vendor that hammered it. Answer: Apex reads from the change feed, about 40 reads a second peak in the sandbox. Carlos: well under what they allow. Resolved on sandbox numbers only."
+    ],
+    "open_items": [
+     "CFO Priscilla's email is not in the CRM and what she needs to approve a purchase over 200 thousand is not stated. Owner: Hannah Ortiz.",
+     "Decision process and paper process not discussed. Owner: not stated.",
+     "Production load and behavior not shown; validation ran on a sandbox extract. Owner: not stated."
+    ],
+    "commitments": [
+     "Hannah Ortiz (Apex): send business case numbers (cost per store and the overstock reduction modeled together) to Maya by Friday, Oct 2.",
+     "Devon Clarke (Apex): send Carlos the change feed setup doc today, Sep 28.",
+     "Maya Lindqvist (customer): set up a 30 minute meeting with Priscilla for Tuesday, Oct 6 at 10.",
+     "Hannah Ortiz (Apex): attend the Oct 6 meeting with Devon."
+    ],
+    "stakeholders": [
+     "Maya Lindqvist, VP of Data: champion, present.",
+     "Carlos Mendes, Data Engineering Lead: technical evaluator, present; owns the change feed and ops runbook.",
+     "Priscilla Grant, CFO: economic buyer, absent; signs anything over 200 thousand; has not seen the product."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "The CFO signs anything over 200 thousand (CRM ACV 310000), has not seen the product, and her view is unknown until Oct 6.",
+     "Readiness is stated by the champion only; the CFO meeting is not yet confirmed by Priscilla.",
+     "Validation was on sandbox data; production load and behavior were not shown.",
+     "The Oct 6 meeting depends on Apex delivering the business case numbers by Oct 2."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U002",
+      "excerpt": "We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full."
+     },
+     {
+      "utterance_id": "U014",
+      "excerpt": "It covers all three. Honestly I'm ready to take this to Priscilla. She's our CFO and she signs anything over 200 thousand."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "Then let's book Priscilla. I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "Yes, I'll send it by Friday the 2nd."
+     },
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send you the setup doc today."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "In the sandbox it peaked at about 40 reads a second."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "One level of parent and child works out of the box. You described one level, so you're covered."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Store managers see on hand including open orders within minutes, so Northwind stops shipping to stores that are already full.",
+    "rows": [
+     {
+      "milestone": "Apex sends the change feed setup doc for Carlos's ops runbook",
+      "customer_owner": "Carlos Mendes",
+      "apex_owner": "Devon Clarke",
+      "target_date": "2026-09-28",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I want the change feed setup written down for our ops runbook."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send you the setup doc today."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends business case numbers for Priscilla: cost per store and the overstock reduction modeled together",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "2026-10-02",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Can you have that to me by Friday, October 2nd?"
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Yes, I'll send it by Friday the 2nd."
+       }
+      ]
+     },
+     {
+      "milestone": "30 minute meeting with Priscilla (CFO) with Hannah and Devon attending",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "2026-10-06",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "I'll be there with Devon."
+       }
+      ]
+     },
+     {
+      "milestone": "Maya shares Priscilla's email, adds Hannah and Devon to the invite, and says what Priscilla needs to approve a purchase over 200 thousand",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "2026-09-29",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       }
+      ]
+     },
+     {
+      "milestone": "Decision and paper process (approval, legal, procurement) identified after the CFO meeting",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Store managers see on hand including open orders within minutes, so Northwind stops shipping to stores that are already full.",
+    "rows": [
+     {
+      "milestone": "Apex sends the change feed setup doc for Carlos's ops runbook",
+      "customer_owner": "Carlos Mendes",
+      "apex_owner": "Devon Clarke",
+      "target_date": "2026-09-28",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "I want the change feed setup written down for our ops runbook."
+       },
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send you the setup doc today."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends business case numbers for Priscilla: cost per store and the overstock reduction modeled together",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "2026-10-02",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U016",
+        "excerpt": "Can you have that to me by Friday, October 2nd?"
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "Yes, I'll send it by Friday the 2nd."
+       }
+      ]
+     },
+     {
+      "milestone": "30 minute meeting with Priscilla (CFO) with Hannah and Devon attending",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "2026-10-06",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll set up 30 minutes with her for Tuesday, October 6th at 10."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "I'll be there with Devon."
+       }
+      ]
+     },
+     {
+      "milestone": "Maya shares Priscilla's email, adds Hannah and Devon to the invite, and says what Priscilla needs to approve a purchase over 200 thousand",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "2026-09-29",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       }
+      ]
+     },
+     {
+      "milestone": "Decision and paper process (approval, legal, procurement) identified after the CFO meeting",
+      "customer_owner": "Maya Lindqvist",
+      "apex_owner": "Hannah Ortiz",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "She's our CFO and she signs anything over 200 thousand."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U014 supports that Priscilla signs above 200 thousand and U018 supports that Maya is booking the Oct 6 meeting herself; the missing CFO email is true in the CRM.",
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Build the business case ... leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Hannah committed to the numbers by Oct 2 (U017); the framing and sandbox caveat are recommendations to Hannah, not stated as customer-heard commitments.",
+   "utterance_ids": [
+    "U016",
+    "U017"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: ready_to_advance",
+   "passed": true,
+   "severity": "low",
+   "finding": "The state rests on a dated CFO meeting that Maya says she will set up, and the assessment states that the CFO has not seen the product, so the enthusiasm is not treated as a decision.",
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are specific: one gets the CFO's email and her approval needs via the champion, and the other makes the business case standalone with the customer's outcome wording.",
+   "utterance_ids": [
+    "U014",
+    "U016",
+    "U018"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "Whole assessment",
+   "passed": true,
+   "severity": "low",
+   "finding": "No superseded feature is cited; the assessment makes no connector freshness claim.",
+   "utterance_ids": []
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Validated today: streaming inventory ... 5 minutes ... one level of parent and child regions.",
+   "passed": true,
+   "severity": "low",
+   "finding": "U003, U005, U007 and U011 support each validated item as stated, consistent with RC-10 and RC-07.",
+   "utterance_ids": [
+    "U003",
+    "U005",
+    "U007",
+    "U011"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Hannah and Devon will join.",
+   "passed": true,
+   "severity": "low",
+   "finding": "Hannah said 'I'll be there with Devon', and the other dated commitments match what was said (Oct 2 for Hannah, today for Devon).",
+   "utterance_ids": [
+    "U017",
+    "U019",
+    "U021"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "If Priscilla needs anything else ahead of that meeting, tell us and we will prepare it.",
+   "passed": false,
+   "severity": "low",
+   "finding": "No one in the call offered to prepare additional material for Priscilla beyond the business case numbers, so this sentence is a new open-ended promise.",
+   "utterance_ids": [
+    "U015",
+    "U016",
+    "U017"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "refreshing every 5 minutes",
+   "passed": true,
+   "severity": "low",
+   "finding": "The 5 minute refresh matches U003 and RC-10, and nothing superseded is presented as current.",
+   "utterance_ids": [
+    "U003"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "The Oct 6 meeting depends on Apex delivering the business case numbers by Oct 2.",
+   "passed": false,
+   "severity": "low",
+   "finding": "Maya asked for the numbers by Oct 2 to take to Priscilla, but nobody said the Oct 6 meeting depends on them, so this is inference stated as risk.",
+   "utterance_ids": [
+    "U016",
+    "U018"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Ready to advance ... Readiness is stated by the champion only",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary correctly separates the champion's readiness from the absent CFO's unknown view and notes the meeting is not confirmed by Priscilla.",
+   "utterance_ids": [
+    "U014",
+    "U018"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "30 minute meeting with Priscilla (CFO) with Hannah and Devon attending | status: agreed",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Maya only said she would set up the meeting and Priscilla has not accepted, so 'agreed' overstates it; the status should be proposed or pending.",
+   "utterance_ids": [
+    "U018",
+    "U019"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Change feed setup doc and business case rows",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 and U021 support the doc due today, and U016 and U017 support the Oct 2 business case date.",
+   "utterance_ids": [
+    "U016",
+    "U017",
+    "U020",
+    "U021"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "recap_email",
+   "target": "Validated: 5 minute refresh, 212 stores, one level of parent and child, about 40 reads a second",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each validated item matches the cited line word for word, including 5 minutes, 212 stores, one level and about 40 reads a second.",
+   "utterance_ids": [
+    "U003",
+    "U005",
+    "U007",
+    "U011",
+    "U012"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Next steps: Hannah by Friday, October 2nd; Devon setup doc today; Maya 30 minutes with Priscilla on Tuesday, October 6th at 10",
+   "passed": true,
+   "severity": "low",
+   "finding": "Owners and dates match what was said, and Maya's booking is worded as her own action, not as Priscilla's confirmed attendance.",
+   "utterance_ids": [
+    "U017",
+    "U018",
+    "U019",
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Hannah and Devon will join; business case includes cost per store and the overstock reduction we modeled together",
+   "passed": true,
+   "severity": "low",
+   "finding": "Hannah committed to joining with Devon, and the business case contents are what Maya asked for. The email promises nothing beyond those commitments.",
+   "utterance_ids": [
+    "U016",
+    "U017",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "streaming inventory refreshing every 5 minutes with no separate streaming product",
+   "passed": true,
+   "severity": "low",
+   "finding": "The 5 minute refresh matches RC-10 and no corrected or superseded behavior is presented as current.",
+   "utterance_ids": [
+    "U003"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "recap_email",
+   "target": "Customer value line and Priscilla meeting framing",
+   "passed": true,
+   "severity": "low",
+   "finding": "The value line quotes Maya's stated goal, and the email does not present her readiness to take this to Priscilla as a decision or approval.",
+   "utterance_ids": [
+    "U002",
+    "U014"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "recap_email",
+   "target": "Next steps list",
+   "passed": true,
+   "severity": "low",
+   "finding": "All three steps are specific, with a named owner, a date and a deliverable tied to Northwind.",
+   "utterance_ids": [
+    "U016",
+    "U018",
+    "U020",
+    "U021"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.035299,
+   "latency_ms": 8989,
+   "input_tokens": 532,
+   "output_tokens": 1454,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 7878,
+   "validator_errors": [],
+   "keys": [
+    "6f46882cd49e2510a595177315359a496a2b18f1a42138c2f03947fb33c2652d"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.045701,
+   "latency_ms": 16150,
+   "input_tokens": 398,
+   "output_tokens": 2495,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 7982,
+   "validator_errors": [],
+   "keys": [
+    "ad2aeb2f0b24cd50bab267e49993fad8c9b45adfb9fe0df0d85cdd458b6427e5"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.076085,
+   "latency_ms": 28657,
+   "input_tokens": 9954,
+   "output_tokens": 3799,
+   "cache_read_input_tokens": 6736,
+   "cache_creation_input_tokens": 6736,
+   "validator_errors": [],
+   "keys": [
+    "82544865f2c1922a69af4079ed853d1c2bde54d17f5b8172ff6d009edafedf12",
+    "44f5744546870d9c0a8251b09c0d9cc555b1f90b36b43aacdc30db13fabe6d5f"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.032881,
+   "latency_ms": 5590,
+   "input_tokens": 5188,
+   "output_tokens": 801,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 5798,
+   "validator_errors": [],
+   "keys": [
+    "c95209793cef08db5feedd98aa6e940af637069b47bb7b21b32374c5215d0a05"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.033895,
+   "latency_ms": 5879,
+   "input_tokens": 5051,
+   "output_tokens": 849,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 6121,
+   "validator_errors": [],
+   "keys": [
+    "f9030162ab2f251214984184ec578b5b9c51865bfc8c0fb28db9c086bacee8b3"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.039059,
+   "latency_ms": 8844,
+   "input_tokens": 5063,
+   "output_tokens": 1331,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 6249,
+   "validator_errors": [],
+   "keys": [
+    "986e473373c54ce2d18cf57e6ab66fa4f16b3e34e8e22e457da275bdc5075425"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.063978,
+   "latency_ms": 26119,
+   "input_tokens": 4814,
+   "output_tokens": 3893,
+   "cache_read_input_tokens": 0,
+   "cache_creation_input_tokens": 6168,
+   "validator_errors": [],
+   "keys": [
+    "8ba2402298e6838f54b109c0b23937b7102f454f4bd3f98710c7fb504526d411"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.019464,
+   "latency_ms": 5326,
+   "input_tokens": 5327,
+   "output_tokens": 765,
+   "cache_read_input_tokens": 5798,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "53210fb12313e6d05d5534cfe5b717e48f39354326709662880ad1f17cb92160"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.01918,
+   "latency_ms": 11327,
+   "input_tokens": 1348,
+   "output_tokens": 1525,
+   "cache_read_input_tokens": 6168,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "91b9dd2fbcf1da6a8135dbaaa6c0c748fcecc3d6b0e7d734d8670f2e0109b52d"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.365542,
+ "latency_ms": 116881,
+ "wall_clock_s": 105.7,
+ "status": "ran"
+}

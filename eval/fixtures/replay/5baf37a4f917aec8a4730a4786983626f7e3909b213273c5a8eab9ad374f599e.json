@@ -1,0 +1,39 @@
+{
+ "step": "draft_recap_email",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "5baf37a4f917aec8a4730a4786983626f7e3909b213273c5a8eab9ad374f599e",
+ "recorded_at": "2026-10-04T00:32:02.355750+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFkD77RJr4hMeSPCPb4",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"subject\":\"Recap from today's Apex demo and next steps\",\"body\":\"Hi Neil and Amira,\\n\\nThanks for your time today. We covered the policy pricing model on your policy extract, the claims dashboard and the governance setup.\\n\\nWhat we showed: rating factors are versioned, the new and current models can run side by side for any date range, loss ratio is shown by line and by region, and only the pricing committee role can change rating factors, with every change logged.\\n\\nOpen item: Amira, mid term endorsements were not in the demo. Rosa will set that up and send you a recording by Tuesday, October 6th.\\n\\nNeil, I'm sending the order form with this note. You mentioned the board's technology committee may need to review it and that the board meets in November. If it would help, I can put together a short summary for that review. What does the committee need, and by when?\\n\\nVictor\",\"customer_value_line\":\"Amira said the loss ratio report is monthly today and that daily would change how you reprice, which is what the claims dashboard is meant to support.\",\"evidence\":[{\"utterance_id\":\"U004\",\"excerpt\":\"Rating factors are versioned, so you can see which factors were used for any quote.\"},{\"utterance_id\":\"U006\",\"excerpt\":\"You can run both side by side for any date range.\"},{\"utterance_id\":\"U009\",\"excerpt\":\"Rating factors can only be changed by the pricing committee role, and every change is logged.\"},{\"utterance_id\":\"U008\",\"excerpt\":\"Today the loss ratio report is monthly. Daily would change how we reprice.\"},{\"utterance_id\":\"U018\",\"excerpt\":\"I'll set that up and send a recording by Tuesday, October 6th.\"},{\"utterance_id\":\"U020\",\"excerpt\":\"I'll send the order form and a recap today.\"},{\"utterance_id\":\"U014\",\"excerpt\":\"It depends on the board. They meet in November.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 5704,
+   "cache_creation_input_tokens": 2097,
+   "cache_read_input_tokens": 3354,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2097,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 616,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

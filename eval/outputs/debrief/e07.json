@@ -1,0 +1,1943 @@
+{
+ "debrief_id": "e07-be2fd299",
+ "deal_id": "e07",
+ "as_of": "2026-10-01",
+ "mode": "record",
+ "model": "claude-sonnet-5-5",
+ "extraction": {
+  "business_outcome": {
+   "stated": true,
+   "summary": "Monica Reyes said daily cost trend is the whole point; actuaries currently see the trend six weeks late.",
+   "evidence": [
+    {
+     "utterance_id": "U010",
+     "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+    }
+   ]
+  },
+  "agreed_next_step": {
+   "exists": true,
+   "summary": "Sanjay will put Summit on the Oct 22 review board agenda if he has SOC 2, pen test summary, questionnaire and data flow diagram by Oct 14.",
+   "date": "2026-10-22",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+    }
+   ]
+  },
+  "objections": [],
+  "open_technical_items": [],
+  "integration_patterns": [],
+  "commitments": [
+   {
+    "who": "Andre Silva",
+    "side": "apex",
+    "what": "Send the SOC 2 report and pen test summary today",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll send both today under the NDA you already signed."
+     }
+    ]
+   },
+   {
+    "who": "Andre Silva",
+    "side": "apex",
+    "what": "Build and send the data flow diagram",
+    "by_when": "2026-10-09",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+     }
+    ]
+   },
+   {
+    "who": "Sanjay Iyer",
+    "side": "customer",
+    "what": "Send the security questionnaire",
+    "by_when": "2026-10-01",
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll send the questionnaire today."
+     }
+    ]
+   },
+   {
+    "who": "Monica Reyes",
+    "side": "customer",
+    "what": "Bring in Daniel from finance for commercials after the review board",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   },
+   {
+    "who": "Grace Liu",
+    "side": "apex",
+    "what": "Send a recap with the agreed dates",
+    "by_when": "",
+    "evidence": [
+     {
+      "utterance_id": "U021",
+      "excerpt": "I'll send a recap with those dates."
+     }
+    ]
+   }
+  ],
+  "stakeholders": [
+   {
+    "name": "Monica Reyes",
+    "title": "Director of Enterprise Data",
+    "present": true,
+    "why_they_matter": "Champion; owns the claims model business case",
+    "evidence": [
+     {
+      "utterance_id": "U008",
+      "excerpt": "Okay, the claims model please. That's the business case."
+     }
+    ]
+   },
+   {
+    "name": "Sanjay Iyer",
+    "title": "Information Security Lead",
+    "present": true,
+    "why_they_matter": "Runs vendor security review and board agenda",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "Sanjay runs the vendor security review."
+     }
+    ]
+   },
+   {
+    "name": "Daniel",
+    "title": "Finance",
+    "present": false,
+    "why_they_matter": "Finance contact for commercials after the board",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   }
+  ],
+  "competitor_mentions": [],
+  "buying_signals": [
+   {
+    "summary": "Champion says daily cost trend is the whole point, tying the demo to her stated outcome",
+    "strength": "strong",
+    "qualifier": "Stated by the champion; she is not the economic buyer",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+     }
+    ]
+   },
+   {
+    "summary": "Champion reacts positively to the 99.2 percent match rate, saying it beats theirs",
+    "strength": "moderate",
+    "qualifier": "Enthusiasm only; no commitment attached",
+    "evidence": [
+     {
+      "utterance_id": "U012",
+      "excerpt": "That's better than ours."
+     }
+    ]
+   },
+   {
+    "summary": "Security lead offers a dated path to the review board agenda and the champion plans to bring in finance after the board",
+    "strength": "moderate",
+    "qualifier": "Conditional on all documents arriving by October 14th; board approval is not guaranteed",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   }
+  ],
+  "risk_signals": [
+   {
+    "summary": "Security review takes about three weeks and the board date is fixed, so any slip in documents misses the October 22nd board",
+    "strength": "moderate",
+    "qualifier": "Deadline of October 14th is set by the customer and the review is customer-owned",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "It's about three weeks once he has the documents."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "If I have everything by October 14th, you're on that agenda."
+     }
+    ]
+   },
+   {
+    "summary": "Finance (Daniel) is only engaged after the board, so the economic buyer has no touchpoint before commercials and is not on the call",
+    "strength": "weak",
+    "qualifier": "Daniel's role as signer is not stated; only that he handles commercials",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   }
+  ],
+  "exact_numbers": [
+   {
+    "value": "99.2 percent",
+    "what_it_measures": "Match rate of claims to members on the customer's sample",
+    "evidence": [
+     {
+      "utterance_id": "U011",
+      "excerpt": "The match rate on your sample was 99.2 percent."
+     }
+    ]
+   },
+   {
+    "value": "six weeks",
+    "what_it_measures": "How late actuaries currently see the cost trend",
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Our actuaries see the trend six weeks late today."
+     }
+    ]
+   },
+   {
+    "value": "about three weeks",
+    "what_it_measures": "Length of the vendor security review once documents are received",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "It's about three weeks once he has the documents."
+     }
+    ]
+   },
+   {
+    "value": "October 14th",
+    "what_it_measures": "Deadline for all documents to get on the review board agenda",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "If I have everything by October 14th, you're on that agenda."
+     }
+    ]
+   },
+   {
+    "value": "Thursday, October 22nd",
+    "what_it_measures": "Date of the security review board meeting",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our review board meets Thursday, October 22nd."
+     }
+    ]
+   },
+   {
+    "value": "Friday, October 9th",
+    "what_it_measures": "Date the SC committed to send the data flow diagram",
+    "evidence": [
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+     }
+    ]
+   }
+  ],
+  "customer_dependencies": [
+   {
+    "summary": "Vendor security review by Sanjay's review board, which needs SOC 2, pen test summary, questionnaire, and data flow diagram",
+    "owner": "Sanjay Iyer",
+    "due": "2026-10-22",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+     }
+    ]
+   },
+   {
+    "summary": "Customer sends the completed security questionnaire",
+    "owner": "Sanjay Iyer",
+    "due": "2026-10-01",
+    "blocks_progress": true,
+    "evidence": [
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll send the questionnaire today."
+     }
+    ]
+   },
+   {
+    "summary": "Finance engagement with Daniel for commercials after the board",
+    "owner": "Monica Reyes",
+    "due": "",
+    "blocks_progress": false,
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   }
+  ],
+  "contradictions": [],
+  "corrections": [],
+  "checklist_mismatches": []
+ },
+ "meddpicc": {
+  "metrics": {
+   "status": "known",
+   "summary": "Monica Reyes said daily cost trend is the whole point; actuaries currently see the trend six weeks late. Numbers said: 99.2 percent, six weeks, about three weeks",
+   "evidence": [
+    {
+     "utterance_id": "U010",
+     "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+    }
+   ]
+  },
+  "economic_buyer": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_criteria": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  },
+  "decision_process": {
+   "status": "known",
+   "summary": "Sanjay will put Summit on the Oct 22 review board agenda if he has SOC 2, pen test summary, questionnaire and data flow diagram by Oct 14.",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+    }
+   ]
+  },
+  "paper_process": {
+   "status": "known",
+   "summary": "Vendor security review by Sanjay's review board, which needs SOC 2, pen test summary, questionnaire, and data flow diagram (due 2026-10-22)",
+   "evidence": [
+    {
+     "utterance_id": "U015",
+     "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+    },
+    {
+     "utterance_id": "U017",
+     "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+    }
+   ]
+  },
+  "pain": {
+   "status": "known",
+   "summary": "Monica Reyes said daily cost trend is the whole point; actuaries currently see the trend six weeks late.",
+   "evidence": [
+    {
+     "utterance_id": "U010",
+     "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+    }
+   ]
+  },
+  "champion": {
+   "status": "known",
+   "summary": "Monica Reyes, present in the call",
+   "evidence": [
+    {
+     "utterance_id": "U008",
+     "excerpt": "Okay, the claims model please. That's the business case."
+    }
+   ]
+  },
+  "competition": {
+   "status": "unknown",
+   "summary": "Unknown after TV demo",
+   "evidence": []
+  }
+ },
+ "assessment_raw": {
+  "deal_state": "missing_stakeholder",
+  "deal_state_why": "Security review is on track for October 22nd, but nobody has said who signs; Daniel from finance appears only after the board.",
+  "next_steps": [
+   {
+    "action": "Ask Monica whether Daniel signs, and offer a short finance-facing note tying daily cost trend to the six weeks late problem for her to bring him.",
+    "owner": "Grace Liu",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-03",
+    "release_card_id": "",
+    "action_type": "reach_stakeholder",
+    "why": "Daniel was named only for commercials after the board; nobody said who signs, and the economic buyer is unknown past day 5.",
+    "evidence": [
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   },
+   {
+    "action": "Put the October 14th cutoff and the four-document checklist, with an owner and date for each item, in the recap to Sanjay and Monica.",
+    "owner": "Grace Liu",
+    "due_by": "2026-10-02",
+    "playbook_rule_id": "PB-09",
+    "release_card_id": "",
+    "action_type": "support_customer_process",
+    "why": "The board agenda depends on all four documents arriving by October 14th, and the recap is where that cutoff gets written down.",
+    "evidence": [
+     {
+      "utterance_id": "U015",
+      "excerpt": "If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+     }
+    ]
+   }
+  ],
+  "watch_items": [
+   {
+    "summary": "Security review takes about three weeks and the board date is fixed, so any missing document after October 14th misses the October 22nd board.",
+    "competitor": "",
+    "release_card_id": "",
+    "evidence": [
+     {
+      "utterance_id": "U014",
+      "excerpt": "It's about three weeks once he has the documents."
+     }
+    ]
+   }
+  ]
+ },
+ "artifacts": {
+  "assessment": {
+   "current": {
+    "deal_state": "ready_to_advance",
+    "deal_state_why": "Dated path exists: documents by October 14th, review board October 22nd, then finance. Owners are named. Economic buyer is still unconfirmed.",
+    "next_steps": [
+     {
+      "action": "Ask Monica whether Daniel signs or only handles commercials, and agree what to bring him and when before any pricing talk.",
+      "owner": "Grace Liu",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Daniel was named in passing and only after the board. An AE may not check whether he is the signer.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+       }
+      ]
+     },
+     {
+      "action": "Send Sanjay one list of the documents he named, with owner and send date for each, so the October 14th cutoff is visible.",
+      "owner": "Grace Liu",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "Missing the October 14th cutoff loses the October 22nd board. A single checklist helps without chasing.",
+      "evidence": [
+       {
+        "utterance_id": "U017",
+        "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Security review takes about three weeks and the board date is fixed. A late document misses the October 22nd board.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "It's about three weeks once he has the documents."
+       },
+       {
+        "utterance_id": "U015",
+        "excerpt": "If I have everything by October 14th, you're on that agenda."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "deal_state": "missing_stakeholder",
+    "deal_state_why": "Security review is on track for October 22nd, but nobody has said who signs; Daniel from finance appears only after the board.",
+    "next_steps": [
+     {
+      "action": "Ask Monica whether Daniel signs, and offer a short finance-facing note tying daily cost trend to the six weeks late problem for her to bring him.",
+      "owner": "Grace Liu",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-03",
+      "release_card_id": "",
+      "action_type": "reach_stakeholder",
+      "why": "Daniel was named only for commercials after the board; nobody said who signs, and the economic buyer is unknown past day 5.",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+       }
+      ]
+     },
+     {
+      "action": "Put the October 14th cutoff and the four-document checklist, with an owner and date for each item, in the recap to Sanjay and Monica.",
+      "owner": "Grace Liu",
+      "due_by": "2026-10-02",
+      "playbook_rule_id": "PB-09",
+      "release_card_id": "",
+      "action_type": "support_customer_process",
+      "why": "The board agenda depends on all four documents arriving by October 14th, and the recap is where that cutoff gets written down.",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "If I have everything by October 14th, you're on that agenda."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+       }
+      ]
+     }
+    ],
+    "watch_items": [
+     {
+      "summary": "Security review takes about three weeks and the board date is fixed, so any missing document after October 14th misses the October 22nd board.",
+      "competitor": "",
+      "release_card_id": "",
+      "evidence": [
+       {
+        "utterance_id": "U014",
+        "excerpt": "It's about three weeks once he has the documents."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: 5 (not in transcript or CRM); four (not in transcript or CRM): 5 (not in transcript or CRM), four (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "recap_email": {
+   "current": {
+    "subject": "Recap: Summit Health Plans technical validation and next dates",
+    "body": "Hi Monica and Sanjay,\n\nThanks for your time this morning. Here is what we covered and what comes next.\n\nValidated: the single tenant US region setup with encryption at rest and in transit, and customer-held keys in your cloud key service. Support access requires a ticket and your approval, with every session logged in your audit trail. On your sample, claims matched to members at a 99.2 percent match rate, with unmatched rows in an exceptions table, and the cost trend by plan updates daily.\n\nNext steps:\n- Andre: SOC 2 report and pen test summary today, and the data flow diagram by Friday, October 9th.\n- Sanjay: security questionnaire today.\n- Sanjay's review board meets Thursday, October 22nd. With everything in by October 14th, Summit is on that agenda.\n- Monica: bring in Daniel from finance for commercials after the board.\n\nMonica, who signs on the finance side is not yet clear to us. Could you let me know?\n\nBest,\nGrace",
+    "customer_value_line": "Daily cost trend by plan speaks to Monica's point that actuaries see the trend six weeks late today.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "You can hold your own keys in your cloud key service."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Support access requires a ticket and your approval, and every session is logged in your audit trail."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "The match rate on your sample was 99.2 percent."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll send both today under the NDA you already signed."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll send the questionnaire today."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   },
+   "original": {
+    "subject": "Recap: Summit Health Plans technical validation and next dates",
+    "body": "Hi Monica and Sanjay,\n\nThanks for your time this morning. Here is what we covered and what comes next.\n\nValidated: the single tenant US region setup with encryption at rest and in transit, and customer-held keys in your cloud key service. Support access requires a ticket and your approval, with every session logged in your audit trail. On your sample, claims matched to members at a 99.2 percent match rate, with unmatched rows in an exceptions table, and the cost trend by plan updates daily.\n\nNext steps:\n- Andre: SOC 2 report and pen test summary today, and the data flow diagram by Friday, October 9th.\n- Sanjay: security questionnaire today.\n- Sanjay's review board meets Thursday, October 22nd. With everything in by October 14th, Summit is on that agenda.\n- Monica: bring in Daniel from finance for commercials after the board.\n\nMonica, who signs on the finance side is not yet clear to us. Could you let me know?\n\nBest,\nGrace",
+    "customer_value_line": "Daily cost trend by plan speaks to Monica's point that actuaries see the trend six weeks late today.",
+    "evidence": [
+     {
+      "utterance_id": "U003",
+      "excerpt": "You can hold your own keys in your cloud key service."
+     },
+     {
+      "utterance_id": "U005",
+      "excerpt": "Support access requires a ticket and your approval, and every session is logged in your audit trail."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "The match rate on your sample was 99.2 percent."
+     },
+     {
+      "utterance_id": "U010",
+      "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+     },
+     {
+      "utterance_id": "U007",
+      "excerpt": "I'll send both today under the NDA you already signed."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U019",
+      "excerpt": "I'll send the questionnaire today."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     }
+    ]
+   },
+   "regenerated": false,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "internal_summary": {
+   "current": {
+    "deal_state_line": "Ready to advance: dated path exists (documents by October 14th, review board Thursday, October 22nd, then finance); economic buyer still unconfirmed.",
+    "customer_value_line": "Monica Reyes: \"Daily is the whole point. Our actuaries see the trend six weeks late today.\" Demo showed the cost trend by plan updating daily instead of monthly.",
+    "what_we_validated": [
+     "Security setup covered: single tenant in a US region, encrypted at rest and in transit, customer-held keys in their cloud key service (Sanjay confirmed they use the major cloud one).",
+     "Support access requires a ticket and customer approval, with every session logged in the customer audit trail.",
+     "Claims matched to members on the customer extract; cost trend by plan updates daily instead of monthly.",
+     "Match rate on the customer sample was 99.2 percent, unmatched rows go to an exceptions table; Monica said it is better than theirs."
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [],
+    "open_items": [
+     "Vendor security review needs SOC 2, pen test summary, questionnaire and data flow diagram from both sides by October 14th to make the October 22nd board; review takes about three weeks.",
+     "Economic buyer not confirmed: Daniel from finance was named only for commercials after the board; whether he signs was not stated (owner: Grace Liu).",
+     "No date set for bringing Daniel in; Monica said only 'after the board'."
+    ],
+    "commitments": [
+     "Andre Silva (Apex): send SOC 2 report and pen test summary today, October 1.",
+     "Andre Silva (Apex): build and send the data flow diagram by Friday, October 9th.",
+     "Sanjay Iyer (customer): send the security questionnaire today.",
+     "Monica Reyes (customer): bring in Daniel from finance for commercials after the board, no date given.",
+     "Grace Liu (Apex): send a recap with the agreed dates, no date stated."
+    ],
+    "stakeholders": [
+     "Monica Reyes, Director of Enterprise Data: champion, present.",
+     "Sanjay Iyer, Information Security Lead: runs vendor security review and board agenda, present.",
+     "Daniel, Finance: commercials contact, absent; signer role not stated."
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Fixed board date: any document slipping past October 14th misses the October 22nd board; review is customer-owned.",
+     "Finance engaged only after the board, so the economic buyer has no touchpoint before commercials and was not on the call.",
+     "Customer enthusiasm (match rate reaction) is not a commitment."
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "The match rate on your sample was 99.2 percent."
+     }
+    ]
+   },
+   "original": {
+    "deal_state_line": "Missing stakeholder: security review is on track for the Oct 22 board, but nobody has said who signs; Daniel from finance only comes in after the board.",
+    "customer_value_line": "Monica Reyes: \"Daily is the whole point. Our actuaries see the trend six weeks late today.\" The demo showed the cost trend by plan updating daily instead of monthly.",
+    "what_we_validated": [
+     "Single tenant in a US region, encrypted at rest and in transit, customer-held keys in their cloud key service (Sanjay uses the major cloud one)",
+     "Support access needs a ticket and customer approval, with every session logged in the customer audit trail",
+     "Claims matched to members on the customer's extract; cost trend by plan updates daily instead of monthly",
+     "Match rate on the sample was 99.2 percent, with unmatched rows in an exceptions table"
+    ],
+    "integration_patterns": [],
+    "objections_and_answers": [],
+    "open_items": [
+     "Sanjay needs SOC 2, pen test summary, questionnaire and data flow diagram by Oct 14 to get on the Oct 22 review board agenda",
+     "Who signs is not stated; Daniel's role as signer is unconfirmed",
+     "No date stated for bringing Daniel in beyond after the board"
+    ],
+    "commitments": [
+     "Andre Silva: send SOC 2 report and pen test summary today (Oct 1) under the signed NDA",
+     "Andre Silva: send data flow diagram by Fri Oct 9",
+     "Sanjay Iyer: send security questionnaire today (Oct 1)",
+     "Monica Reyes: bring in Daniel from finance for commercials after the board (no date)",
+     "Grace Liu: send a recap with the agreed dates (no date stated; playbook says within 24 hours)"
+    ],
+    "stakeholders": [
+     "Monica Reyes, Director of Enterprise Data, champion, present",
+     "Sanjay Iyer, Information Security Lead, runs vendor security review, present",
+     "Daniel, finance, commercials after the board, absent",
+     "Economic buyer: not stated"
+    ],
+    "competitive_notes": [],
+    "risks": [
+     "Review takes about three weeks and the board date is fixed, so any document missing after Oct 14 misses the Oct 22 board",
+     "Finance is engaged only after the board, so the economic buyer has no touchpoint before commercials",
+     "Champion enthusiasm (\"That's better than ours.\") is not a commitment"
+    ],
+    "evidence": [
+     {
+      "utterance_id": "U010",
+      "excerpt": "Daily is the whole point. Our actuaries see the trend six weeks late today."
+     },
+     {
+      "utterance_id": "U015",
+      "excerpt": "If I have everything by October 14th, you're on that agenda."
+     },
+     {
+      "utterance_id": "U017",
+      "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+     },
+     {
+      "utterance_id": "U018",
+      "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+     },
+     {
+      "utterance_id": "U020",
+      "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+     },
+     {
+      "utterance_id": "U011",
+      "excerpt": "The match rate on your sample was 99.2 percent."
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: 24 (not in transcript or CRM): 24 (not in transcript or CRM)",
+    "[names_known] not found in transcript, CRM or reference: Fri: Fri"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  },
+  "mutual_action_plan": {
+   "current": {
+    "customer_value_line": "Actuaries see the cost trend daily instead of six weeks late.",
+    "rows": [
+     {
+      "milestone": "Apex sends SOC 2 report and pen test summary",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "Andre Silva",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U006",
+        "excerpt": "I'll need the SOC 2 report and the pen test summary."
+       },
+       {
+        "utterance_id": "U007",
+        "excerpt": "I'll send both today under the NDA you already signed."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer sends security questionnaire",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "I'll send the questionnaire today."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends data flow diagram",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "Andre Silva",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "Good. I'll send the questionnaire today."
+       }
+      ]
+     },
+     {
+      "milestone": "All security review documents with Sanjay to get on the review board agenda",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "Grace Liu",
+      "target_date": "2026-10-14",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "If I have everything by October 14th, you're on that agenda."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+       }
+      ]
+     },
+     {
+      "milestone": "Vendor security review board meets",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "",
+      "target_date": "2026-10-22",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "Our review board meets Thursday, October 22nd."
+       }
+      ]
+     },
+     {
+      "milestone": "Bring in Daniel from finance for commercials after the board",
+      "customer_owner": "Monica Reyes",
+      "apex_owner": "Grace Liu",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends written recap with the agreed dates",
+      "customer_owner": "Monica Reyes",
+      "apex_owner": "Grace Liu",
+      "target_date": "2026-10-02",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U021",
+        "excerpt": "I'll send a recap with those dates."
+       }
+      ]
+     }
+    ]
+   },
+   "original": {
+    "customer_value_line": "Actuaries see the cost trend daily instead of six weeks late.",
+    "rows": [
+     {
+      "milestone": "Apex sends SOC 2 report and pen test summary under the signed NDA",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "Andre Silva",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U006",
+        "excerpt": "I'll need the SOC 2 report and the pen test summary."
+       },
+       {
+        "utterance_id": "U007",
+        "excerpt": "I'll send both today under the NDA you already signed."
+       }
+      ]
+     },
+     {
+      "milestone": "Customer sends completed security questionnaire",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "",
+      "target_date": "2026-10-01",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U019",
+        "excerpt": "I'll send the questionnaire today."
+       }
+      ]
+     },
+     {
+      "milestone": "Apex sends data flow diagram",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "Andre Silva",
+      "target_date": "2026-10-09",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U018",
+        "excerpt": "I'll do the data flow diagram and send it by Friday, October 9th."
+       },
+       {
+        "utterance_id": "U019",
+        "excerpt": "Good. I'll send the questionnaire today."
+       }
+      ]
+     },
+     {
+      "milestone": "All four security review documents received by Sanjay (SOC 2, pen test summary, questionnaire, data flow diagram)",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "Grace Liu",
+      "target_date": "2026-10-14",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "If I have everything by October 14th, you're on that agenda."
+       },
+       {
+        "utterance_id": "U017",
+        "excerpt": "SOC 2, pen test summary, our questionnaire, and a data flow diagram."
+       }
+      ]
+     },
+     {
+      "milestone": "Vendor security review board meeting",
+      "customer_owner": "Sanjay Iyer",
+      "apex_owner": "",
+      "target_date": "2026-10-22",
+      "status": "agreed",
+      "evidence": [
+       {
+        "utterance_id": "U015",
+        "excerpt": "Our review board meets Thursday, October 22nd."
+       }
+      ]
+     },
+     {
+      "milestone": "Bring in Daniel from finance for commercials after the board; confirm who signs",
+      "customer_owner": "Monica Reyes",
+      "apex_owner": "Grace Liu",
+      "target_date": "",
+      "status": "proposed",
+      "evidence": [
+       {
+        "utterance_id": "U020",
+        "excerpt": "And after the board, I'll bring in Daniel from finance for commercials."
+       }
+      ]
+     }
+    ]
+   },
+   "regenerated": true,
+   "needs_review": false,
+   "flagged": [],
+   "findings": [
+    "[numbers_in_source] numbers not grounded: four (not in transcript or CRM): four (not in transcript or CRM)"
+   ],
+   "refused": false,
+   "refusal": {},
+   "error": ""
+  }
+ },
+ "overrides": [],
+ "checks": [
+  {
+   "check": "evidence_resolves",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "extraction",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: 5 (not in transcript or CRM); four (not in transcript or CRM)",
+   "locations": [
+    "5 (not in transcript or CRM)",
+    "four (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": []
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": []
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "recap_email",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: 24 (not in transcript or CRM)",
+   "locations": [
+    "24 (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": false,
+   "severity": "high",
+   "detail": "not found in transcript, CRM or reference: Fri",
+   "locations": [
+    "Fri"
+   ]
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": false,
+   "severity": "high",
+   "detail": "numbers not grounded: four (not in transcript or CRM)",
+   "locations": [
+    "four (not in transcript or CRM)"
+   ]
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": []
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": []
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": []
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": []
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "max_three_steps",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "2 steps",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_chase_when_waiting",
+   "artifact": "assessment",
+   "passed": true,
+   "severity": "high",
+   "detail": "deal is not waiting on customer",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "no_unsupported_claims",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "no savings, guarantee or ROI claims",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "internal_summary",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "evidence_resolves",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "all evidence matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "numbers_in_source",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every number appears in the transcript or CRM in a matching context",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "dates_future_business_days",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "dates are future business days",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "names_known",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "every name or proper noun appears in the transcript, CRM or reference (heuristic)",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "quotes_in_transcript",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "high",
+   "detail": "quoted text matches the transcript",
+   "locations": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "map_agreed_has_evidence",
+   "artifact": "mutual_action_plan",
+   "passed": true,
+   "severity": "medium",
+   "detail": "agreed rows have evidence",
+   "locations": [],
+   "after_regeneration": true
+  }
+ ],
+ "verifier": [
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "Security review takes about three weeks and the board date is fixed, so any missing document after October 14th misses the October 22nd board.",
+   "passed": false,
+   "severity": "low",
+   "finding": "The only cited line, U014, supports the three-week review; the October 14th cutoff and fixed board date come from U015, which is not cited.",
+   "utterance_ids": [
+    "U014",
+    "U015"
+   ]
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps (ask Monica whether Daniel signs with a finance-facing note; put the October 14th cutoff and four-document checklist in the recap)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps use this customer's named people, dates and documents, and cite PB-03 and PB-09 correctly.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U020"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "recap_email",
+   "target": "Next steps list: Andre SOC 2 and pen test today, data flow diagram by October 9th; Sanjay questionnaire today; Monica bring in Daniel after the board",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each owner and date matches what was said in U007, U018, U019 and U020, and the Daniel item carries no invented date.",
+   "utterance_ids": [
+    "U007",
+    "U018",
+    "U019",
+    "U020"
+   ]
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "recap_email",
+   "target": "Monica, who signs on the finance side is not yet clear to us. Could you let me know?",
+   "passed": true,
+   "severity": "low",
+   "finding": "This is a question to the customer, not a promise, and every other item in the email traces to a commitment made in the call.",
+   "utterance_ids": [
+    "U007",
+    "U018",
+    "U019",
+    "U020"
+   ]
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "recap_email",
+   "target": "Customer-held keys, support access and daily cost trend statements",
+   "passed": true,
+   "severity": "low",
+   "finding": "No statement was corrected later in the call, and no release card supersedes anything described.",
+   "utterance_ids": [
+    "U003",
+    "U005",
+    "U009"
+   ]
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Champion enthusiasm (\"That's better than ours.\") is not a commitment",
+   "passed": true,
+   "severity": "low",
+   "finding": "The summary treats the champion's enthusiasm as a risk, not a decision, and records the economic buyer as not stated.",
+   "utterance_ids": [
+    "U012",
+    "U020"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Apex sends data flow diagram (evidence includes U019: \"Good. I'll send the questionnaire today.\")",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U019 is about Sanjay sending the questionnaire and does not support the data flow diagram milestone, which U018 alone supports.",
+   "utterance_ids": [
+    "U018",
+    "U019"
+   ]
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "All four security review documents received by Sanjay, apex_owner Grace Liu, status agreed",
+   "passed": false,
+   "severity": "medium",
+   "finding": "Nobody assigned Grace ownership of the October 14th document cutoff; Sanjay only stated the condition, and Andre owns the SOC 2, pen test summary and diagram while Sanjay owns the questionnaire.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U007",
+    "U018",
+    "U019"
+   ]
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "assessment",
+   "target": "All next steps and the watch item",
+   "passed": true,
+   "severity": "low",
+   "finding": "U020 supports Daniel being brought in for commercials after the board, U017 lists the four documents, and U014 and U015 support the three-week review and the October 14th cutoff for the October 22nd board.",
+   "utterance_ids": [
+    "U014",
+    "U015",
+    "U017",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "assessment",
+   "target": "Dated path exists: documents by October 14th, review board October 22nd, then finance. Owners are named.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The dates match what was said (Sanjay's cutoff in U015, Andre's October 9th diagram in U018, Monica's plan for finance after the board in U020), and the assessment says the economic buyer is unconfirmed rather than claiming a commitment.",
+   "utterance_ids": [
+    "U015",
+    "U018",
+    "U019",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "assessment",
+   "target": "deal_state: ready_to_advance",
+   "passed": true,
+   "severity": "low",
+   "finding": "The state rests on concrete dated process steps from the security lead and champion, not on enthusiasm, and the open economic buyer question is stated openly.",
+   "utterance_ids": [
+    "U014",
+    "U015",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "email_promises_uncommitted",
+   "artifact": "assessment",
+   "target": "No recap email in the artifacts",
+   "passed": true,
+   "severity": "low",
+   "finding": "No recap email was provided, so there is nothing to promise beyond the call; the only commitment to recap is Grace's in U021.",
+   "utterance_ids": [
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "assessment",
+   "target": "All next steps and the watch item",
+   "passed": true,
+   "severity": "low",
+   "finding": "The assessment cites no product features or release cards, so no superseded behavior is presented as current.",
+   "utterance_ids": [],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "assessment",
+   "target": "Both next steps (Daniel signer check; one document checklist for Sanjay)",
+   "passed": true,
+   "severity": "low",
+   "finding": "Both steps are tied to this deal: the Daniel signer question uses the PB-03 rule, and the checklist is built around Sanjay's four named documents and the October 14th cutoff.",
+   "utterance_ids": [
+    "U017",
+    "U020",
+    "U015"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "internal_summary",
+   "target": "Evidence list U010, U015, U017, U018, U020, U011 and the customer_value_line",
+   "passed": true,
+   "severity": "low",
+   "finding": "Every excerpt is copied word for word from its cited line and supports the claim it is attached to.",
+   "utterance_ids": [
+    "U010",
+    "U011",
+    "U015",
+    "U017",
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "internal_summary",
+   "target": "commitments list, including Daniel from finance 'no date given' and the recap 'no date stated'",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each commitment matches the owner, date and scope spoken, and the undated items are correctly marked as undated.",
+   "utterance_ids": [
+    "U007",
+    "U018",
+    "U019",
+    "U020",
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "internal_summary",
+   "target": "Ready to advance: dated path exists... economic buyer still unconfirmed.",
+   "passed": true,
+   "severity": "low",
+   "finding": "The dated path comes from Sanjay's conditional agenda offer and Monica's plan, and the summary keeps the economic buyer as unconfirmed and treats the match-rate reaction as not a commitment.",
+   "utterance_ids": [
+    "U012",
+    "U015",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "superseded_feature_as_current",
+   "artifact": "internal_summary",
+   "target": "what_we_validated: security setup, customer-held keys, daily cost trend",
+   "passed": true,
+   "severity": "low",
+   "finding": "The customer-managed keys claim agrees with RC-11, and no superseded behavior such as hourly warehouse sync is presented as current.",
+   "utterance_ids": [
+    "U003",
+    "U004",
+    "U009"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "internal_summary",
+   "target": "open_items and risks",
+   "passed": true,
+   "severity": "low",
+   "finding": "The open items are specific to this deal, naming the October 14th document deadline, the October 22nd board, and the undated Daniel touchpoint.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Apex sends data flow diagram (evidence includes U019 \"Good. I'll send the questionnaire today.\")",
+   "passed": false,
+   "severity": "medium",
+   "finding": "U019 is Sanjay's questionnaire commitment, not the diagram, so it does not support this row; only U018 does.",
+   "utterance_ids": [
+    "U018",
+    "U019"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "quote_supports_claim",
+   "artifact": "mutual_action_plan",
+   "target": "Apex sends SOC 2 report and pen test summary",
+   "passed": true,
+   "severity": "low",
+   "finding": "U006 and U007 directly support the request and Andre's same-day commitment.",
+   "utterance_ids": [
+    "U006",
+    "U007"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "All security review documents with Sanjay by 2026-10-14, Apex owner Grace Liu",
+   "passed": false,
+   "severity": "low",
+   "finding": "Sanjay set the Oct 14 condition, but Grace never took ownership of the whole package; the documents are split between Andre's items and Sanjay's questionnaire.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U018"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "commitment_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Apex sends written recap with the agreed dates, target 2026-10-02",
+   "passed": false,
+   "severity": "low",
+   "finding": "Grace said \"I'll send a recap with those dates\" with no date; 2026-10-02 comes from the playbook, not the call, though the row is marked proposed.",
+   "utterance_ids": [
+    "U021"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "buying_signal_overstated",
+   "artifact": "mutual_action_plan",
+   "target": "Bring in Daniel from finance for commercials after the board (proposed, no date)",
+   "passed": true,
+   "severity": "low",
+   "finding": "The row is marked proposed with no date, which fits Monica's conditional statement that follows the board; no economic buyer is claimed.",
+   "utterance_ids": [
+    "U020"
+   ],
+   "after_regeneration": true
+  },
+  {
+   "check": "generic_step",
+   "artifact": "mutual_action_plan",
+   "target": "All rows",
+   "passed": true,
+   "severity": "low",
+   "finding": "Each row ties to specific documents, dates, and people named in the call, such as the board on Oct 22, the diagram by Oct 9, and the Oct 14 cutoff.",
+   "utterance_ids": [
+    "U015",
+    "U017",
+    "U018",
+    "U020"
+   ],
+   "after_regeneration": true
+  }
+ ],
+ "prompt_versions": {
+  "extract": "v3+shared-v1",
+  "extract_b": "v1+shared-v1",
+  "assess_and_recommend": "v2+shared-v1",
+  "draft_mutual_action_plan": "v1+shared-v1",
+  "draft_recap_email": "v2+shared-v1",
+  "draft_internal_summary": "v1+shared-v1",
+  "verify": "v1+shared-v1"
+ },
+ "calls": [
+  {
+   "step": "extract",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018001,
+   "latency_ms": 5985,
+   "input_tokens": 532,
+   "output_tokens": 1032,
+   "cache_read_input_tokens": 5434,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "4d04a0dbaf5b639f8939e781fef8209480e8049e53bbdca1c1aa8ebad106ca7e"
+   ]
+  },
+  {
+   "step": "extract_b",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023674,
+   "latency_ms": 10179,
+   "input_tokens": 398,
+   "output_tokens": 1624,
+   "cache_read_input_tokens": 5538,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "94a6b4a0f87665c292fa5b3eb36c62f34ef8655d8d5dba0b1ac158058b4e9416"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 2,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.066005,
+   "latency_ms": 31378,
+   "input_tokens": 8813,
+   "output_tokens": 4069,
+   "cache_read_input_tokens": 10796,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "8f77de9ee3e56eb917eadade97e32950bd579df27f5967f15631e01c8dd3987f",
+    "1058cc33c5dcde29a6976443187493067e1b15516def2a1bd863b466851068cc"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023875,
+   "latency_ms": 5350,
+   "input_tokens": 4410,
+   "output_tokens": 879,
+   "cache_read_input_tokens": 3677,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "7a693f6834a0da1d2bcef917767a43393fe4caf54014760b0639fbe5a0fd2d69"
+   ]
+  },
+  {
+   "step": "draft_recap_email",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.023235,
+   "latency_ms": 6168,
+   "input_tokens": 4547,
+   "output_tokens": 794,
+   "cache_read_input_tokens": 3354,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "ee794f7ef60b8617a2f0fa50a04bba86e99e6fecb94421fd6d134577be91494f"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.025535,
+   "latency_ms": 6891,
+   "input_tokens": 4422,
+   "output_tokens": 1040,
+   "cache_read_input_tokens": 3805,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "295c8c41ee060f3c44f72fa11adf160e371023e0905773cc370efbc0aeab6322"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.042381,
+   "latency_ms": 19336,
+   "input_tokens": 4503,
+   "output_tokens": 2710,
+   "cache_read_input_tokens": 3724,
+   "cache_creation_input_tokens": 2212,
+   "validator_errors": [],
+   "keys": [
+    "ef79f40cbba24314f7fda59f55d017d5c82b7b057e7998b379f84d2074a803e5"
+   ]
+  },
+  {
+   "step": "assess_and_recommend",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.027385,
+   "latency_ms": 14140,
+   "input_tokens": 4492,
+   "output_tokens": 1710,
+   "cache_read_input_tokens": 6504,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "507df9c4857889f520999bea216d189b0baeeb7f27cc6aba9d16311219ce8f61"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.017573,
+   "latency_ms": 10184,
+   "input_tokens": 1213,
+   "output_tokens": 1396,
+   "cache_read_input_tokens": 5936,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "5f1e6b02f01b015050c61fd82c87da04f937fcc2abfb49dea848ecb9fd2d154a"
+   ]
+  },
+  {
+   "step": "draft_internal_summary",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.021397,
+   "latency_ms": 7227,
+   "input_tokens": 4507,
+   "output_tokens": 1118,
+   "cache_read_input_tokens": 6017,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "6ac1fe2260cf9b8e8f75d2f14b7b4a44ceecb6a171eca449fef2c121e867c128"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.018737,
+   "latency_ms": 10133,
+   "input_tokens": 1755,
+   "output_tokens": 1404,
+   "cache_read_input_tokens": 5936,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "342dd802b896699ef7df63cb96c4b5e6c4cedd301884b51caadabfb81f1bac84"
+   ]
+  },
+  {
+   "step": "draft_mutual_action_plan",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.01962,
+   "latency_ms": 5651,
+   "input_tokens": 4461,
+   "output_tokens": 952,
+   "cache_read_input_tokens": 5889,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "dbcac25ed269342ef4dfe800f423b6a0d4994d8093c6f1e7400d08420b66e391"
+   ]
+  },
+  {
+   "step": "verify",
+   "attempts": 1,
+   "stop_reason": "end_turn",
+   "refused": false,
+   "cost_usd": 0.020247,
+   "latency_ms": 11148,
+   "input_tokens": 1715,
+   "output_tokens": 1563,
+   "cache_read_input_tokens": 5936,
+   "cache_creation_input_tokens": 0,
+   "validator_errors": [],
+   "keys": [
+    "d4e0ff560a79c71d935449eff36f0a2f8b781f5cac70dcd180b0c28e33d2f409"
+   ]
+  }
+ ],
+ "errors": [],
+ "cost_usd": 0.347665,
+ "latency_ms": 143770,
+ "wall_clock_s": 132.3,
+ "status": "ran"
+}

@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b8262d75533b5a5d95a0af73661c2429a622b77211310348c003c99a8163db31",
+ "recorded_at": "2026-10-04T00:29:47.615360+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFa2sSicqdPm2eu1Nde",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":true,\"summary\":\"Rachel wants days to reorder point by store, which she says is exactly the view she needs, and a cost case she can take to leadership against extending Lakestream.\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"That's exactly the view. The question is cost.\"}]},\"agreed_next_step\":{\"exists\":true,\"summary\":\"30-minute session to walk through the side-by-side cost comparison; Rachel agreed the 14th works. Isaac to send the invite.\",\"date\":\"2026-10-14\",\"evidence\":[{\"utterance_id\":\"U020\",\"excerpt\":\"Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"Fine, the 14th works.\"}]},\"objections\":[{\"summary\":\"Why add a second platform when Lakestream is already in place; leadership will ask why not expand what they have. The real concern is cost, including the Lakestream add on.\",\"raised_by\":\"Rachel Kim\",\"status\":\"partially_resolved\",\"answer_given\":\"Lena offered to compare on the customer's own workload and will build a cost comparison once volumes arrive.\",\"evidence\":[{\"utterance_id\":\"U002\",\"excerpt\":\"we already run Lakestream for marketing data. So the question is why add Apex.\"},{\"utterance_id\":\"U011\",\"excerpt\":\"If I go to leadership with a second platform, they'll ask why not expand what we have.\"},{\"utterance_id\":\"U013\",\"excerpt\":\"A side by side on our workload. Our volume, our refresh, all in costs. Including the add on.\"}]}],\"open_technical_items\":[{\"summary\":\"Workload cost comparison versus Lakestream including its streaming add on, which cannot be sized until Tobias sends event volumes per hour.\",\"owner\":\"Lena Fischer\",\"evidence\":[{\"utterance_id\":\"U013\",\"excerpt\":\"A side by side on our workload. Our volume, our refresh, all in costs. Including the add on.\"},{\"utterance_id\":\"U015\",\"excerpt\":\"I'll build the comparison once I have the volumes.\"}]}],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Tobias Lund\",\"side\":\"customer\",\"what\":\"Send event volumes per hour\",\"by_when\":\"2026-10-01\",\"evidence\":[{\"utterance_id\":\"U018\",\"excerpt\":\"I'll send them tomorrow.\"}]},{\"who\":\"Lena Fischer\",\"side\":\"apex\",\"what\":\"Build the side by side cost comparison once volumes are received, about a week after they arrive\",\"by_when\":\"2026-10-08\",\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"I'll build the comparison once I have the volumes.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"About a week after Tobias sends the volumes.\"}]},{\"who\":\"Isaac Morgan\",\"side\":\"apex\",\"what\":\"Send the calendar invite for the October 14th walkthrough\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U022\",\"excerpt\":\"Great, I'll send the invite.\"}]}],\"stakeholders\":[{\"name\":\"Rachel Kim\",\"title\":\"VP of Supply Chain Analytics\",\"present\":true,\"why_they_matter\":\"Champion; must make the case to leadership and wants the comparison before the Lakestream renewal conversation on October 20th\",\"evidence\":[{\"utterance_id\":\"U019\",\"excerpt\":\"I want to see it before the Lakestream renewal conversation on October 20th.\"}]},{\"name\":\"Tobias Lund\",\"title\":\"Data Platform Manager\",\"present\":true,\"why_they_matter\":\"Technical evaluator; supplies the event volumes needed for the comparison\",\"evidence\":[{\"utterance_id\":\"U014\",\"excerpt\":\"I can give you our event volumes per hour.\"}]},{\"name\":\"Leadership (not named)\",\"title\":\"not stated\",\"present\":false,\"why_they_matter\":\"Will question a second platform and decide on approval; the signer was not named\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"If I go to leadership with a second platform, they'll ask why not expand what we have.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 2234,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2234,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1381,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

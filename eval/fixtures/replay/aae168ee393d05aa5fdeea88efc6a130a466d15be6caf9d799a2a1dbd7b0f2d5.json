@@ -1,0 +1,39 @@
+{
+ "step": "verify",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "aae168ee393d05aa5fdeea88efc6a130a466d15be6caf9d799a2a1dbd7b0f2d5",
+ "recorded_at": "2026-10-04T00:30:00.210578+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFb5HKJ2ibjhS4V5qjD",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"verdicts\":[{\"check\":\"quote_supports_claim\",\"artifact\":\"internal_summary\",\"target\":\"Evidence excerpts U020, U022, U007, U008, U017, U018, U012\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Each excerpt appears verbatim in its cited line and supports the item it backs (deferred meeting, declined hold, dynamic procedures, parser team stretched, vague dictionary timing, conditional procurement, continuous sync).\",\"utterance_ids\":[\"U020\",\"U022\",\"U007\",\"U008\",\"U017\",\"U018\",\"U012\"]},{\"check\":\"commitment_overstated\",\"artifact\":\"internal_summary\",\"target\":\"commitments list (recap today, write-up no date, parser try no timing, dictionary no firm date, Tamsin look, Gregor ping)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Commitments are stated with the same hedges the speakers used (no date, no promises on timing, try to, may ask manager) and none are firmed up.\",\"utterance_ids\":[\"U008\",\"U015\",\"U017\",\"U018\",\"U023\",\"U024\",\"U025\",\"U022\"]},{\"check\":\"buying_signal_overstated\",\"artifact\":\"internal_summary\",\"target\":\"deal_state_line: Waiting on customer: Gregor deferred the next meeting to after quarter close and will ping Ben; no dated next step.\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary reads Gregor's 'Nice' and 'That's fine' as mild approval only, and correctly frames the deal as deferred and waiting on the customer.\",\"utterance_ids\":[\"U011\",\"U013\",\"U020\",\"U022\"]},{\"check\":\"superseded_feature_as_current\",\"artifact\":\"internal_summary\",\"target\":\"Warehouse connector continuous sync, about a minute end to end, versus customer's current hourly tool\",\"passed\":true,\"severity\":\"low\",\"finding\":\"The summary describes continuous sync as current, matching RC-12 and Sofia's statement, and attributes the hourly behavior to the customer's current tool rather than to Apex.\",\"utterance_ids\":[\"U012\",\"U013\"]},{\"check\":\"generic_step\",\"artifact\":\"internal_summary\",\"target\":\"open_items and risks (stored procedure gap, data dictionary, procurement, economic buyer not named, undated next meeting)\",\"passed\":true,\"severity\":\"low\",\"finding\":\"Items are specific to Calder Bank: dynamic stored procedures, wiki-spread data dictionary, Tamsin's manager and procurement, and the declined calendar hold. The summary notes the CRM next-step conflict with the transcript.\",\"utterance_ids\":[\"U007\",\"U017\",\"U018\",\"U022\"]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1929,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 6130,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 866,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

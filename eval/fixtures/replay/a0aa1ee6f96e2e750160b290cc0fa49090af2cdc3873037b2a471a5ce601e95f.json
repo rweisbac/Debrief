@@ -1,0 +1,39 @@
+{
+ "step": "draft_internal_summary",
+ "prompt_version": "v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a0aa1ee6f96e2e750160b290cc0fa49090af2cdc3873037b2a471a5ce601e95f",
+ "recorded_at": "2026-10-04T00:28:50.676988+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFVgqKKypkbotbmc1Kw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"deal_state_line\":\"Waiting on customer: privacy team's consent decision (owner and date unknown) could kill attribution, and Ann (data budget owner) is absent with no meeting set; economic buyer not confirmed.\",\"customer_value_line\":\"Business outcome not stated on the call (CRM 'Daily audience numbers without the four hour job' is prefilled from discovery); on the call Doug said the current job takes four hours on a good day and fails on bad days, versus about 11 minutes for 380 million events on the sample day.\",\"what_we_validated\":[\"Dedupe on the customer's sample day: about 11 minutes for 380 million events (current job: four hours on a good day)\",\"Custom segments work as tables; any segment definable in SQL works; Karen said the spreadsheet manual refresh is fine\",\"Attribution window set to 14 days live; Karen said numbers look about right versus what they have\",\"Failure alert with failed step to the on call tool, with one automatic retry of the failed step before alerting\"],\"integration_patterns\":[\"Spreadsheet-defined segments loaded as reference tables with a manual refresh\",\"Aggregate-only shared view with row level rules for the agency, to be set up by Nia as part of the pilot\",\"Daily job failure alerts routed to the customer's on call tool\"],\"objections_and_answers\":[\"Consent/privacy: Doug said privacy team may block joining viewing logs to subscriber records for opted-out people and it might kill attribution. Answer: filter on a consent flag at ingestion so opted-out records never get joined; whether the join is allowed is the privacy team's call. Status: partially resolved, open\",\"Past vendor overpromised real time (every six hours) and the account manager left: told as an anecdote, no direct objection to Apex, no answer given. Status: open\"],\"open_items\":[\"Privacy team decision on joining viewing logs to subscriber records for opted-out people: owner customer privacy team via Doug, no date\",\"Dedupe config and note on late events: Nia, Friday Oct 2 ('tomorrow')\",\"List of the 60 segments marked SQL vs spreadsheet: Karen, no date\",\"Doug to talk to Ann about budget before November planning: no date, no meeting with Ann set\",\"Economic buyer not named; nobody said Ann signs\",\"Business outcome in customer's words not stated; ask Doug\"],\"commitments\":[\"Ryan Castellano: one pager for Ann by Wednesday, October 7th (Doug said it works)\",\"Nia Oduya: send the dedupe config and a note on late events tomorrow (Oct 2); not yet logged in CRM sc_commitment\",\"Nia Oduya: set up aggregate-only agency view as part of the pilot, no date\",\"Karen Ibsen: send the list of the 60 segments, no date\",\"Doug Whitfield: talk to Ann about budget before November planning, no date\"],\"stakeholders\":[\"Doug Whitfield, Director of Audience Data, champion, present\",\"Karen Ibsen, Marketing Analytics Manager, evaluator and daily segment user, present\",\"Luis Ferreira, Data Engineer, evaluator who runs the dedupe job, present\",\"Ann, owns next year's data budget, absent; signer not confirmed\",\"Privacy team, names not given, decides on the consent join, absent\"],\"competitive_notes\":[],\"risks\":[\"Strong: privacy consent concern raised casually by Doug could kill the attribution piece; outcome unknown, no date\",\"Moderate: Ann absent, no dated meeting, budget planning in November, economic buyer not confirmed\",\"Moderate: past vendor overpromised real time and vanished post-sale; avoid overpromising and show post-sale support\",\"Weak: Doug's overall positivity was discounted by himself ('I liked the last vendor too')\"],\"evidence\":[{\"utterance_id\":\"U015\",\"excerpt\":\"On the sample day you sent, about 11 minutes for 380 million events.\"},{\"utterance_id\":\"U017\",\"excerpt\":\"Our current job takes four hours on a good day.\"},{\"utterance_id\":\"U043\",\"excerpt\":\"The privacy team has been making noise about consent data.\"},{\"utterance_id\":\"U044\",\"excerpt\":\"We can filter on a consent flag at ingestion, so opted out records never get joined.\"},{\"utterance_id\":\"U045\",\"excerpt\":\"Or it might kill the whole attribution piece, I honestly don't know.\"},{\"utterance_id\":\"U066\",\"excerpt\":\"She owns the data budget for next year.\"},{\"utterance_id\":\"U070\",\"excerpt\":\"Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th.\"},{\"utterance_id\":\"U073\",\"excerpt\":\"Sure, I'll send the dedupe config and a note on late events tomorrow.\"},{\"utterance_id\":\"U021\",\"excerpt\":\"So we had this tool, I won't name it, and they promised us real time.\"},{\"utterance_id\":\"U063\",\"excerpt\":\"I liked the last vendor too, so take that with a grain of salt.\"}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 7436,
+   "cache_creation_input_tokens": 5604,
+   "cache_read_input_tokens": 3805,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 5604,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1660,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "step": "extract",
+ "prompt_version": "v3+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e57505be3fe5aef75908e6d3299d2cc6ed7dcae5ba5705ab0381994959f20578",
+ "recorded_at": "2026-10-04T00:30:03.992130+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgFbbWWH9i4TpnUQxxdw",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"business_outcome\":{\"stated\":false,\"summary\":\"not stated\",\"evidence\":[]},\"agreed_next_step\":{\"exists\":false,\"summary\":\"\",\"date\":\"\",\"evidence\":[]},\"objections\":[],\"open_technical_items\":[],\"integration_patterns\":[],\"commitments\":[{\"who\":\"Kofi Mensah\",\"side\":\"apex\",\"what\":\"Send Hugo the load summary\",\"by_when\":\"\",\"evidence\":[{\"utterance_id\":\"U012\",\"excerpt\":\"I'll send the load summary so you have it.\"}]}],\"stakeholders\":[{\"name\":\"Hugo Brandt\",\"title\":\"IT Manager\",\"present\":true,\"why_they_matter\":\"Only attendee; sets up access, not the decision maker\",\"evidence\":[{\"utterance_id\":\"U009\",\"excerpt\":\"I'm not really the one who decides. I just set up access.\"}]},{\"name\":\"Unnamed operations decision maker\",\"title\":\"Operations (name and title not stated)\",\"present\":false,\"why_they_matter\":\"Hugo says operations probably decides; person unknown\",\"evidence\":[{\"utterance_id\":\"U011\",\"excerpt\":\"Probably operations. I'm not sure who.\"}]}]}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 532,
+   "cache_creation_input_tokens": 1385,
+   "cache_read_input_tokens": 5434,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 1385,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 387,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

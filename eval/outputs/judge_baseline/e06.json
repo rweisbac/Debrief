@@ -1,0 +1,409 @@
+{
+ "deal_id": "e06",
+ "system": "baseline",
+ "status": "ran",
+ "claims": [
+  {
+   "claim": "Jonas ran the technical validation demo with Petra Novak (champion) and Milan Horak (technical evaluator).",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U001",
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM roles and the call lines show these three people at the demo."
+  },
+  {
+   "claim": "The demo used line 3 sensor data that Milan supplied.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Jonas says the line 3 readings are the ones Milan sent."
+  },
+  {
+   "claim": "About 2,000 readings per second from line 3 landed in under 10 seconds.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U003"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches Jonas's figures."
+  },
+  {
+   "claim": "Milan said line 3 has old controllers and that if it works there, it works everywhere.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct paraphrase of Milan's line."
+  },
+  {
+   "claim": "The downtime dashboard classifies stoppages by cause and shows minutes lost per shift.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U005"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated by Jonas."
+  },
+  {
+   "claim": "Petra said plant managers get this only in a weekly spreadsheet today and expects them to like the dashboard.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U006"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Petra said they will love it and get a weekly spreadsheet today."
+  },
+  {
+   "claim": "The quality model flags batches whose sensor patterns resemble past defects.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U007"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Jonas's description."
+  },
+  {
+   "claim": "The quality model was trained on 18 months of defect records, about 900 defect batches, which Milan called most of their history.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U009",
+    "U010"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches Jonas's and Milan's lines."
+  },
+  {
+   "claim": "Petra called the demo really strong and proposed a pilot on line 3.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U011",
+    "U013"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Both quoted lines are from Petra."
+  },
+  {
+   "claim": "Petra said legal will not accept a processor storing data outside the EU.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U018"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Stated directly by Petra."
+  },
+  {
+   "claim": "Petra said the CFO froze new software spend until Q2, so a contract before April is unlikely.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Petra's words: second quarter, contract before April unlikely."
+  },
+  {
+   "claim": "Petra's legal team wants the EU hosting confirmation in writing.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Petra said they will want it in writing."
+  },
+  {
+   "claim": "Jonas said the tenant can be pinned to Frankfurt including backups, and he would confirm contract wording with compliance.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Direct paraphrase of Jonas."
+  },
+  {
+   "claim": "A budget exception may exist if the product replaces something already paid for; Petra is unsure it does.",
+   "category": "concern",
+   "supported": true,
+   "utterance_ids": [
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Petra said maybe and that she is not sure; output also marks it unconfirmed."
+  },
+  {
+   "claim": "Milan asked how much history the quality model learned from.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U008"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Milan asked how many past defects it learned from."
+  },
+  {
+   "claim": "Milan suggested the product might replace the old historian license, which renews in March.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U023"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Milan said it might replace the historian license renewing in March."
+  },
+  {
+   "claim": "The call did not cover how the quality model performs on unseen batches or how it connects to other lines.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Nothing in the transcript discusses either topic; supported by absence."
+  },
+  {
+   "claim": "The CRM close date is 2026-12-18, which conflicts with Petra's statement that a contract before April is unlikely.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM close_date is 2026-12-18; Petra said before April is unlikely."
+  },
+  {
+   "claim": "The historian replacement was raised only as a maybe and Petra has to check with finance.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U023",
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Petra said maybe and that she would have to check with finance."
+  },
+  {
+   "claim": "The CRM economic buyer field is blank and the decision process was never discussed.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM shows economic_buyer empty and decision_process Not discussed."
+  },
+  {
+   "claim": "The CFO controls the budget decision, and neither the CFO nor legal was on the call.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CFO froze spend and legal sets hosting rules; only Petra and Milan attended."
+  },
+  {
+   "claim": "EU residency is unresolved: Jonas's answer was conditional on compliance, with no owner or date for written confirmation.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Jonas deferred contract wording to compliance; no owner or date set."
+  },
+  {
+   "claim": "Petra raised both blockers late in the call as she was wrapping up.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U018",
+    "U020",
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Raised after the wrap-up prompt, shortly before she left."
+  },
+  {
+   "claim": "The transcript shows no accuracy or false-positive figures for the quality model.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "No such figures appear in the transcript."
+  },
+  {
+   "claim": "Milan's works-everywhere remark is his inference, not something demonstrated.",
+   "category": "risk",
+   "supported": true,
+   "utterance_ids": [
+    "U004"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Only line 3 was shown."
+  },
+  {
+   "claim": "CRM dated next step reads Pilot on line 3 with no date; business outcome was prefilled and unedited; stakeholder-to-add is empty.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "All match CRM close_the_demo fields."
+  },
+  {
+   "claim": "The call was logged as running exactly its 10-minute slot.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "CRM actual_end equals scheduled_end at 09:10."
+  },
+  {
+   "claim": "Jonas will send the pilot plan with success criteria by Monday, October 5, 2026.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U015"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Jonas stated this commitment and date."
+  },
+  {
+   "claim": "Milan will arrange controller access for line 3 by Friday, October 9, 2026.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U013",
+    "U014"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Milan committed to controller access by Friday, October 9th."
+  },
+  {
+   "claim": "Petra will check with finance whether the product could replace the historian license; no date given.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U024"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Petra said she would have to check; the output marks it not firm."
+  },
+  {
+   "claim": "Apex has an unassigned item to get written EU hosting confirmation via compliance, with no date.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Jonas said he would confirm with compliance; Petra wants it in writing; no owner or date."
+  },
+  {
+   "claim": "The close date should be re-forecast to likely 2027 Q2 unless the exception is confirmed.",
+   "category": "next_step",
+   "supported": true,
+   "utterance_ids": [
+    "U020",
+    "U022"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Follows from the freeze until Q2 and the unconfirmed exception; hedged with likely."
+  },
+  {
+   "claim": "The email says Apex will have compliance confirm the exact wording and send it to Petra by a date to be confirmed.",
+   "category": "commitment",
+   "supported": true,
+   "utterance_ids": [
+    "U019",
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": true,
+   "why": "Jonas said he'd confirm wording; sending it to Petra was not promised; date is a placeholder."
+  },
+  {
+   "claim": "The email says Apex can pin Petra's tenant to Frankfurt, including backups.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U019"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Matches Jonas's statement and RC-14."
+  },
+  {
+   "claim": "The email says the pilot can go ahead during the spend freeze.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U020"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Petra said the pilot is fine."
+  },
+  {
+   "claim": "The email says Milan mentioned the historian license that renews in March.",
+   "category": "other",
+   "supported": true,
+   "utterance_ids": [
+    "U023"
+   ],
+   "overstated_commitment": false,
+   "flagged_uncertain": false,
+   "why": "Milan said this directly."
+  }
+ ],
+ "stop_reason": "end_turn",
+ "refused": false,
+ "error": "",
+ "cost_usd": 0.077661
+}
