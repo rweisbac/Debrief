@@ -1,0 +1,149 @@
+{
+  "hard_cases": [],
+  "scenario": "Clean call, champion books the CFO, dated next meeting.",
+  "agreed_next_step": {
+    "exists": true,
+    "date": "2026-10-06"
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Load on the order database",
+      "anchors": [
+        "hammered the order database"
+      ],
+      "keywords": [
+        [
+          "order database",
+          "load"
+        ]
+      ],
+      "utterance_ids": [
+        "U004"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Needs cost per store and overstock reduction for the CFO",
+      "anchors": [
+        "I need the cost per store"
+      ],
+      "keywords": [
+        [
+          "cost per store",
+          "overstock",
+          "business case"
+        ]
+      ],
+      "utterance_ids": [
+        "U016"
+      ]
+    }
+  ],
+  "risks": [],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send business case numbers",
+      "anchors": [
+        "I'll send it by Friday the 2nd"
+      ],
+      "keywords": [
+        [
+          "business case",
+          "cost per store",
+          "overstock"
+        ]
+      ],
+      "who": "Hannah Ortiz",
+      "side": "apex",
+      "by_when": "2026-10-02",
+      "utterance_ids": [
+        "U017"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Book 30 minutes with Priscilla, the CFO",
+      "anchors": [
+        "I'll set up 30 minutes with her"
+      ],
+      "keywords": [
+        [
+          "priscilla",
+          "cfo"
+        ]
+      ],
+      "who": "Maya Lindqvist",
+      "side": "customer",
+      "by_when": "2026-10-06",
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "M3",
+      "summary": "Send the change feed setup doc",
+      "anchors": [
+        "I'll send you the setup doc today"
+      ],
+      "keywords": [
+        [
+          "setup doc",
+          "change feed",
+          "runbook"
+        ]
+      ],
+      "who": "Devon Clarke",
+      "side": "apex",
+      "by_when": "2026-09-28",
+      "utterance_ids": [
+        "U021"
+      ]
+    }
+  ],
+  "non_commitments": [],
+  "uncertain": [],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Business case numbers to Maya by Oct 2",
+      "anchors": [],
+      "keywords": [
+        [
+          "business case",
+          "cost per store",
+          "overstock"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Prepare the Oct 6 CFO meeting with Priscilla",
+      "anchors": [],
+      "keywords": [
+        [
+          "priscilla",
+          "cfo"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Send the setup doc for the runbook",
+      "anchors": [],
+      "keywords": [
+        [
+          "setup doc",
+          "change feed",
+          "runbook"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e01",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

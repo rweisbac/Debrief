@@ -1,0 +1,74 @@
+{
+  "deal_id": "e06",
+  "account": "Ostrava Precision Works",
+  "segment": "Enterprise",
+  "industry": "Manufacturing",
+  "acv_usd": 390000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Claire Dumont",
+  "sc": "Jonas Weber",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Petra Novak",
+      "title": "Head of Manufacturing Analytics",
+      "role": "champion",
+      "email": "petra.novak@e06.example",
+      "phone": ""
+    },
+    {
+      "name": "Milan Horak",
+      "title": "Plant Systems Engineer",
+      "role": "technical_evaluator",
+      "email": "milan.horak@e06.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Petra Novak",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Plant managers see downtime by cause per shift.",
+    "pains": [
+      "Weekly downtime spreadsheet"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e06",
+    "scheduled_start": "2026-10-01T09:00:00-05:00",
+    "scheduled_end": "2026-10-01T09:10:00-05:00",
+    "actual_end": "2026-10-01T09:10:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T09:00:00-05:00",
+    "dated_next_step": {
+      "value": "Pilot on line 3",
+      "filled_at": "2026-10-01T09:10:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "Plant managers see downtime by cause per shift.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-10-01T09:10:30-05:00"
+    },
+    "sc_commitment": {
+      "value": "Pilot plan by Oct 5",
+      "filled_at": "2026-10-01T09:10:30-05:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

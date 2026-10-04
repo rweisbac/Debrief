@@ -1,0 +1,81 @@
+{
+  "deal_id": "e15",
+  "account": "Granite Payments",
+  "segment": "Enterprise",
+  "industry": "Financial services",
+  "acv_usd": 560000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Nora Quinn",
+  "sc": "Ravi Shah",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Liam O'Connor",
+      "title": "Fraud Analytics Lead",
+      "role": "champion",
+      "email": "liam.oconnor@e15.example",
+      "phone": ""
+    },
+    {
+      "name": "Zara Ahmed",
+      "title": "Data Engineer",
+      "role": "technical_evaluator",
+      "email": "zara.ahmed@e15.example",
+      "phone": ""
+    },
+    {
+      "name": "Helen Brooks",
+      "title": "CFO",
+      "role": "economic_buyer",
+      "email": "helen.brooks@e15.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Liam O'Connor",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Fraud features fresh within seconds, not an hour.",
+    "pains": [
+      "Features are an hour stale"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e15",
+    "scheduled_start": "2026-10-02T10:00:00-05:00",
+    "scheduled_end": "2026-10-02T10:07:00-05:00",
+    "actual_end": "2026-10-02T10:07:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-02T10:00:00-05:00",
+    "dated_next_step": {
+      "value": "Talk next week",
+      "filled_at": "2026-10-02T10:07:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "Fraud features fresh within seconds, not an hour.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-10-02T10:07:30-05:00"
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

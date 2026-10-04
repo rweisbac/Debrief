@@ -1,0 +1,74 @@
+{
+  "deal_id": "e07",
+  "account": "Summit Health Plans",
+  "segment": "Enterprise",
+  "industry": "Healthcare",
+  "acv_usd": 600000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Grace Liu",
+  "sc": "Andre Silva",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Monica Reyes",
+      "title": "Director of Enterprise Data",
+      "role": "champion",
+      "email": "monica.reyes@e07.example",
+      "phone": ""
+    },
+    {
+      "name": "Sanjay Iyer",
+      "title": "Information Security Lead",
+      "role": "security",
+      "email": "sanjay.iyer@e07.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Monica Reyes",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Actuaries see the cost trend daily instead of six weeks late.",
+    "pains": [
+      "Monthly cost trend"
+    ],
+    "decision_process": "Vendor security review, then finance."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e07",
+    "scheduled_start": "2026-10-01T10:00:00-05:00",
+    "scheduled_end": "2026-10-01T10:07:00-05:00",
+    "actual_end": "2026-10-01T10:07:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T10:00:00-05:00",
+    "dated_next_step": {
+      "value": "Review board Oct 22",
+      "filled_at": "2026-10-01T10:07:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "Daniel, finance",
+      "filled_at": "2026-10-01T10:07:30-05:00"
+    },
+    "business_outcome": {
+      "value": "Actuaries see the cost trend daily instead of six weeks late.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-10-01T10:07:30-05:00"
+    },
+    "sc_commitment": {
+      "value": "Data flow diagram by Oct 9",
+      "filled_at": "2026-10-01T10:07:30-05:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

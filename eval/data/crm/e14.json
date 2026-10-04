@@ -1,0 +1,81 @@
+{
+  "deal_id": "e14",
+  "account": "Pinehurst Hotels Europe",
+  "segment": "Enterprise",
+  "industry": "Hospitality",
+  "acv_usd": 370000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Sean Murphy",
+  "sc": "Elena Varga",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Charlotte Dubois",
+      "title": "Director of Guest Data",
+      "role": "champion",
+      "email": "charlotte.dubois@e14.example",
+      "phone": ""
+    },
+    {
+      "name": "Matteo Bianchi",
+      "title": "Security and Compliance Manager",
+      "role": "security",
+      "email": "matteo.bianchi@e14.example",
+      "phone": ""
+    },
+    {
+      "name": "Ivy Chen",
+      "title": "CRM Analyst",
+      "role": "technical_evaluator",
+      "email": "ivy.chen@e14.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Charlotte Dubois",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Guest records split across three booking systems"
+    ],
+    "decision_process": "Group security office review."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e14",
+    "scheduled_start": "2026-10-01T11:00:00-05:00",
+    "scheduled_end": "2026-10-01T11:07:00-05:00",
+    "actual_end": "2026-10-01T11:07:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T11:00:00-05:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "Support access wording by Oct 7",
+      "filled_at": "2026-10-01T11:07:30-05:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

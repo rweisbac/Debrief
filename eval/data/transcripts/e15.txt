@@ -1,0 +1,28 @@
+PARTICIPANTS
+Nora Quinn | Account Executive | apex
+Ravi Shah | Solutions Consultant | apex
+Liam O'Connor | Fraud Analytics Lead | customer
+Zara Ahmed | Data Engineer | customer
+Helen Brooks | CFO | customer
+---
+[00:04] Nora Quinn: Hi Liam, Zara. Thanks for the time. Today Ravi will show the transaction stream, the fraud features and case export.
+[00:14] Liam O'Connor: Great. Helen from finance might join at the end if her meeting finishes.
+[00:20] Ravi Shah: This is your card transaction sample, about 3 thousand transactions a second, streamed in. Features like spend velocity per card update in under 5 seconds.
+[02:55] Zara Ahmed: What happens when the stream backs up?
+[03:00] Ravi Shah: Events queue and catch up in order. Nothing is dropped. In the sandbox test a 10 minute outage caught up in about 90 seconds.
+[03:15] Zara Ahmed: Good.
+[03:18] Ravi Shah: Here are the fraud features feeding your scoring model, and the case export to your case tool.
+[05:40] Liam O'Connor: That's what my analysts need. Today features are an hour stale.
+[05:46] Zara Ahmed: Does case export support our custom fields?
+[05:50] Ravi Shah: I believe so, but I'd want to test it on your case tool. Can you send the field list?
+[05:57] Zara Ahmed: Sure, I'll send it tomorrow.
+[06:01] Liam O'Connor: I think we're in good shape technically.
+[06:05] Helen Brooks: Hi, sorry I'm late. I caught the last part. I'll be quick. Our policy is three year terms minimum for platforms, and we don't pay annually up front anymore. Quarterly in arrears only.
+[06:20] Nora Quinn: Thanks Helen. I'll need to check that with our deal desk.
+[06:25] Helen Brooks: Also, nothing gets signed this year without a cost comparison against building it ourselves. Our engineering lead thinks they can build this in six months.
+[06:37] Liam O'Connor: They can't.
+[06:40] Helen Brooks: Maybe not. But I need the comparison. Okay, I have to go.
+[06:45] Nora Quinn: Understood. Thank you Helen.
+[06:49] Liam O'Connor: Sorry about that. She's tough but fair.
+[06:53] Ravi Shah: I'll test the custom fields once Zara sends the list.
+[06:58] Liam O'Connor: Thanks. Let's talk next week.

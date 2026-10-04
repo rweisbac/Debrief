@@ -1,0 +1,204 @@
+{
+  "hard_cases": [
+    "ambiguous_commitments"
+  ],
+  "scenario": "SC promises nested claims next quarter; release card says no GA date.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Nested claim SSO is the gate",
+      "anchors": [
+        "SSO first please. That's the gate for us"
+      ],
+      "keywords": [
+        [
+          "nested",
+          "sso"
+        ]
+      ],
+      "utterance_ids": [
+        "U002"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Needs it in writing for the architecture board",
+      "anchors": [
+        "I'll need that in writing"
+      ],
+      "keywords": [
+        [
+          "architecture board",
+          "writing",
+          "written"
+        ]
+      ],
+      "utterance_ids": [
+        "U011"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Nested claims are not GA and have no announced date",
+      "anchors": [
+        "nested claims are coming next quarter"
+      ],
+      "keywords": [
+        [
+          "nested"
+        ]
+      ],
+      "utterance_ids": [
+        "U007"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Architecture board on Nov 3 needs a design and a date",
+      "anchors": [
+        "next on November 3rd"
+      ],
+      "keywords": [
+        [
+          "architecture board",
+          "november 3"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send the written SSO design",
+      "anchors": [
+        "I'll send the SSO design by Friday, October 9th"
+      ],
+      "keywords": [
+        [
+          "design"
+        ]
+      ],
+      "who": "Ana Petrov",
+      "side": "apex",
+      "by_when": "2026-10-09",
+      "utterance_ids": [
+        "U021"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Get the exact date for nested claims",
+      "anchors": [
+        "I'll get you the exact date"
+      ],
+      "keywords": [
+        [
+          "nested",
+          "date"
+        ]
+      ],
+      "who": "Ana Petrov",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U009"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Nested claims next quarter is hearsay, not a commitment",
+      "anchors": [
+        "That's what I've heard"
+      ],
+      "keywords": [
+        [
+          "next quarter"
+        ]
+      ],
+      "utterance_ids": [
+        "U009"
+      ]
+    },
+    {
+      "id": "H2",
+      "summary": "Preview program access was assumed, not confirmed",
+      "anchors": [
+        "I'm sure"
+      ],
+      "keywords": [
+        [
+          "preview"
+        ]
+      ],
+      "utterance_ids": [
+        "U010"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Nested claims timing",
+      "anchors": [
+        "Next quarter, is that committed?"
+      ],
+      "keywords": [
+        [
+          "nested"
+        ]
+      ],
+      "utterance_ids": [
+        "U008"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Correct the next quarter claim with the identity team before the design goes out",
+      "anchors": [],
+      "keywords": [
+        [
+          "nested"
+        ],
+        [
+          "identity team",
+          "correct",
+          "no announced",
+          "no ga",
+          "private preview",
+          "not committed",
+          "no general"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "SSO design by Oct 9, including a flat claim option",
+      "anchors": [],
+      "keywords": [
+        [
+          "design"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "traps": [
+    "Hourly connector sync was corrected to continuous at U017; hourly must not appear as current."
+  ],
+  "deal_id": "e10",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

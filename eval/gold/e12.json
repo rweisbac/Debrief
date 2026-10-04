@@ -1,0 +1,210 @@
+{
+  "hard_cases": [
+    "contradictory_statements",
+    "ambiguous_commitments"
+  ],
+  "scenario": "CDO says sign by month end, then concedes board approval.",
+  "agreed_next_step": {
+    "exists": null,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Board technology committee approval over 300 thousand",
+      "anchors": [
+        "Anything over 300 thousand did last year"
+      ],
+      "keywords": [
+        [
+          "board",
+          "committee"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Mid term endorsements not shown",
+      "anchors": [
+        "mid term endorsements"
+      ],
+      "keywords": [
+        [
+          "endorsement"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Close depends on board timing, November vs month end",
+      "anchors": [
+        "They meet in November"
+      ],
+      "keywords": [
+        [
+          "board",
+          "november"
+        ]
+      ],
+      "utterance_ids": [
+        "U014"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Mid term endorsement handling unproven",
+      "anchors": [
+        "That wasn't in the demo"
+      ],
+      "keywords": [
+        [
+          "endorsement"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send a recording of mid term endorsements",
+      "anchors": [
+        "send a recording by Tuesday, October 6th"
+      ],
+      "keywords": [
+        [
+          "endorsement"
+        ]
+      ],
+      "who": "Rosa Medina",
+      "side": "apex",
+      "by_when": "2026-10-06",
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send the order form and a recap",
+      "anchors": [
+        "I'll send the order form and a recap today"
+      ],
+      "keywords": [
+        [
+          "order form"
+        ]
+      ],
+      "who": "Victor Hayes",
+      "side": "apex",
+      "by_when": "2026-10-01",
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Sign by end of month is conditional on an exception",
+      "anchors": [
+        "We'll sign by end of month"
+      ],
+      "keywords": [
+        [
+          "end of month"
+        ],
+        [
+          "sign"
+        ]
+      ],
+      "utterance_ids": [
+        "U002"
+      ]
+    },
+    {
+      "id": "H2",
+      "summary": "Approval before November is uncertain",
+      "anchors": [
+        "I think I can get it approved before that"
+      ],
+      "keywords": [
+        [
+          "approv"
+        ],
+        [
+          "before"
+        ]
+      ],
+      "utterance_ids": [
+        "U014"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Close timing",
+      "anchors": [
+        "but I'm not certain"
+      ],
+      "keywords": [
+        [
+          "end of month",
+          "november",
+          "board"
+        ]
+      ],
+      "utterance_ids": [
+        "U014"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Support the board path or exception",
+      "anchors": [],
+      "keywords": [
+        [
+          "board",
+          "committee"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Endorsements recording by Oct 6",
+      "anchors": [],
+      "keywords": [
+        [
+          "endorsement"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Order form without treating the close date as firm",
+      "anchors": [],
+      "keywords": [
+        [
+          "order form"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e12",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

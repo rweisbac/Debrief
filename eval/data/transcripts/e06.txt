@@ -1,0 +1,30 @@
+PARTICIPANTS
+Claire Dumont | Account Executive | apex
+Jonas Weber | Solutions Consultant | apex
+Petra Novak | Head of Manufacturing Analytics | customer
+Milan Horak | Plant Systems Engineer | customer
+---
+[00:04] Claire Dumont: Dobry den, Petra, Milan. Thanks for the time. Today Jonas will show sensor ingestion, the downtime dashboard, and the quality model.
+[00:16] Petra Novak: Good. We're excited about this one.
+[00:21] Jonas Weber: Let's go. These are the sensor readings from line 3 that Milan sent, about 2 thousand readings a second. They land in under 10 seconds.
+[02:40] Milan Horak: That's the line with the old controllers. If it works there, it works everywhere.
+[02:48] Jonas Weber: Here's the downtime dashboard. Each stoppage is classified by cause, and you can see minutes lost per shift.
+[05:10] Petra Novak: The plant managers will love this. Today they get this in a weekly spreadsheet.
+[05:17] Jonas Weber: And the quality model. It flags batches where sensor patterns look like past defects.
+[07:44] Milan Horak: How many past defects did it learn from?
+[07:50] Jonas Weber: The 18 months of defect records you shared, about 900 defect batches.
+[08:01] Milan Horak: Okay. That's most of our history.
+[08:06] Petra Novak: This is really strong. The team will be happy.
+[08:11] Claire Dumont: That's great to hear. What would you want to see as a next step?
+[08:16] Petra Novak: Let's plan the pilot on line 3. Milan, can you own the controller access?
+[08:23] Milan Horak: Yes, I'll get the controller access sorted by Friday, October 9th.
+[08:31] Jonas Weber: And I'll send the pilot plan with the success criteria by Monday, October 5th.
+[08:38] Petra Novak: Good.
+[08:41] Claire Dumont: Wonderful. Anything else before we wrap?
+[08:45] Petra Novak: Oh, one more thing. I almost forgot. Our legal team told us last week they won't accept a processor that stores data outside the EU. Is your hosting in the EU?
+[08:58] Jonas Weber: We can pin the tenant to Frankfurt, including backups. The exact contract wording I'd confirm with our compliance team.
+[09:08] Petra Novak: Okay. They'll want that in writing. And, sorry, also, our CFO froze new software spend until the second quarter. So the pilot is fine but a contract before April is unlikely.
+[09:22] Claire Dumont: Thank you for telling us. Is there any exception process?
+[09:27] Petra Novak: Maybe, if it replaces something we already pay for. I'm not sure it does.
+[09:34] Milan Horak: It might replace the old historian license. That renews in March.
+[09:40] Petra Novak: Maybe. I'd have to check with finance. Okay, I have to run. Thanks.

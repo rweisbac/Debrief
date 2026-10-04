@@ -1,0 +1,67 @@
+{
+  "deal_id": "e09",
+  "account": "Juniper Energy",
+  "segment": "Enterprise",
+  "industry": "Utilities",
+  "acv_usd": 120000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Mia Torres",
+  "sc": "Kofi Mensah",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Hugo Brandt",
+      "title": "IT Manager",
+      "role": "technical_evaluator",
+      "email": "hugo.brandt@e09.example",
+      "phone": ""
+    }
+  ],
+  "champion": "",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Meter data loads are manual"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e09",
+    "scheduled_start": "2026-09-29T16:00:00-05:00",
+    "scheduled_end": "2026-09-29T16:06:00-05:00",
+    "actual_end": "2026-09-29T16:06:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-29T16:00:00-05:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

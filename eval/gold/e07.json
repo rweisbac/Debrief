@@ -1,0 +1,168 @@
+{
+  "hard_cases": [],
+  "scenario": "Security review gates the deal, with dates the customer gave.",
+  "agreed_next_step": {
+    "exists": null,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Support access control",
+      "anchors": [
+        "What about support access?"
+      ],
+      "keywords": [
+        [
+          "support access"
+        ]
+      ],
+      "utterance_ids": [
+        "U004"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Needs SOC 2 and pen test summary",
+      "anchors": [
+        "I'll need the SOC 2 report"
+      ],
+      "keywords": [
+        [
+          "soc 2",
+          "pen test"
+        ]
+      ],
+      "utterance_ids": [
+        "U006"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Security review gates progress; documents due Oct 14 for the Oct 22 board",
+      "anchors": [
+        "If I have everything by October 14th"
+      ],
+      "keywords": [
+        [
+          "review board",
+          "security review",
+          "board",
+          "october 14",
+          "oct 14"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send SOC 2 and pen test summary",
+      "anchors": [
+        "I'll send both today"
+      ],
+      "keywords": [
+        [
+          "soc 2",
+          "pen test"
+        ]
+      ],
+      "who": "Andre Silva",
+      "side": "apex",
+      "by_when": "2026-10-01",
+      "utterance_ids": [
+        "U007"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send the data flow diagram",
+      "anchors": [
+        "I'll do the data flow diagram"
+      ],
+      "keywords": [
+        [
+          "data flow"
+        ]
+      ],
+      "who": "Andre Silva",
+      "side": "apex",
+      "by_when": "2026-10-09",
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "M3",
+      "summary": "Send the security questionnaire",
+      "anchors": [
+        "I'll send the questionnaire today"
+      ],
+      "keywords": [
+        [
+          "questionnaire"
+        ]
+      ],
+      "who": "Sanjay Iyer",
+      "side": "customer",
+      "by_when": "2026-10-01",
+      "utterance_ids": [
+        "U019"
+      ]
+    },
+    {
+      "id": "M4",
+      "summary": "Bring in Daniel from finance after the board",
+      "anchors": [
+        "I'll bring in Daniel from finance"
+      ],
+      "keywords": [
+        [
+          "daniel"
+        ]
+      ],
+      "who": "Monica Reyes",
+      "side": "customer",
+      "by_when": "",
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "non_commitments": [],
+  "uncertain": [],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Complete packet by Oct 14",
+      "anchors": [],
+      "keywords": [
+        [
+          "data flow",
+          "packet",
+          "questionnaire"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Prepare for finance with Daniel after the board",
+      "anchors": [],
+      "keywords": [
+        [
+          "daniel",
+          "finance"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e07",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

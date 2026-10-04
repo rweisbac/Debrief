@@ -1,0 +1,74 @@
+{
+  "deal_id": "e11",
+  "account": "Alder State University",
+  "segment": "Enterprise",
+  "industry": "Higher education",
+  "acv_usd": 150000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Paula Jensen",
+  "sc": "Sam Okoro",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Dr. Elise Martin",
+      "title": "Director of Institutional Research",
+      "role": "champion",
+      "email": "elise.martin@e11.example",
+      "phone": ""
+    },
+    {
+      "name": "Kevin Tran",
+      "title": "Data Analyst",
+      "role": "technical_evaluator",
+      "email": "kevin.tran@e11.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Dr. Elise Martin",
+  "economic_buyer": "Dr. Abernathy",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Retention reporting is manual"
+    ],
+    "decision_process": "Provost approval and technology committee."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e11",
+    "scheduled_start": "2026-09-30T13:00:00-05:00",
+    "scheduled_end": "2026-09-30T13:07:00-05:00",
+    "actual_end": "2026-09-30T13:07:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-30T13:00:00-05:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

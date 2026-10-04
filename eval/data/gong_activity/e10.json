@@ -1,0 +1,9 @@
+{
+  "_note": "Synthetic data, fictional company. Eval case for interview prep.",
+  "deal_id": "e10",
+  "call_id": "gong-e10",
+  "started_at": "2026-10-02T09:00:00-05:00",
+  "ended_at": "2026-10-02T09:07:00-05:00",
+  "transcript_file": "eval/data/transcripts/e10.txt",
+  "post_demo_activity": []
+}

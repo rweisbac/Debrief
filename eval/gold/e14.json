@@ -1,0 +1,204 @@
+{
+  "hard_cases": [],
+  "scenario": "EU hosting fine; key policy may not allow a cloud key service.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Contract wording on support access",
+      "anchors": [
+        "We'll need the contract wording on support access"
+      ],
+      "keywords": [
+        [
+          "support access",
+          "wording"
+        ]
+      ],
+      "utterance_ids": [
+        "U004"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "On premises HSM today; cloud keys may not be allowed",
+      "anchors": [
+        "We use an on premises HSM today"
+      ],
+      "keywords": [
+        [
+          "hsm",
+          "key"
+        ]
+      ],
+      "utterance_ids": [
+        "U008"
+      ]
+    },
+    {
+      "id": "C3",
+      "summary": "Bad merges",
+      "anchors": [
+        "we've been burned by bad merges before"
+      ],
+      "keywords": [
+        [
+          "merge"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Key policy may not allow a cloud key service",
+      "anchors": [
+        "I'm not sure it does"
+      ],
+      "keywords": [
+        [
+          "hsm",
+          "key service",
+          "cloud key",
+          "policy"
+        ]
+      ],
+      "utterance_ids": [
+        "U010"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Group security office timing unknown",
+      "anchors": [
+        "I don't control their timeline"
+      ],
+      "keywords": [
+        [
+          "group security"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Confirm support access wording with compliance",
+      "anchors": [
+        "send it by Wednesday, October 7th"
+      ],
+      "keywords": [
+        [
+          "wording",
+          "support access"
+        ]
+      ],
+      "who": "Elena Varga",
+      "side": "apex",
+      "by_when": "2026-10-07",
+      "utterance_ids": [
+        "U005"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send the encryption whitepaper",
+      "anchors": [
+        "I'll send it today"
+      ],
+      "keywords": [
+        [
+          "whitepaper"
+        ]
+      ],
+      "who": "Elena Varga",
+      "side": "apex",
+      "by_when": "2026-10-01",
+      "utterance_ids": [
+        "U021"
+      ]
+    }
+  ],
+  "non_commitments": [],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Key policy",
+      "anchors": [
+        "I'll have to check whether our policy allows"
+      ],
+      "keywords": [
+        [
+          "hsm",
+          "key",
+          "policy"
+        ]
+      ],
+      "utterance_ids": [
+        "U010"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Group security timeline",
+      "anchors": [
+        "I don't control their timeline"
+      ],
+      "keywords": [
+        [
+          "group security"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Whitepaper today, framed for the group security office",
+      "anchors": [],
+      "keywords": [
+        [
+          "whitepaper"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Support access wording by Oct 7",
+      "anchors": [],
+      "keywords": [
+        [
+          "wording",
+          "support access"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Give Matteo what group security needs on cloud keys",
+      "anchors": [],
+      "keywords": [
+        [
+          "group security"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e14",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

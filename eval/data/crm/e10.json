@@ -1,0 +1,74 @@
+{
+  "deal_id": "e10",
+  "account": "Corvid Telecom",
+  "segment": "Enterprise",
+  "industry": "Telecommunications",
+  "acv_usd": 480000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Derek Shaw",
+  "sc": "Ana Petrov",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Fatima Zahid",
+      "title": "Director of Identity and Access",
+      "role": "champion",
+      "email": "fatima.zahid@e10.example",
+      "phone": ""
+    },
+    {
+      "name": "Colin Byrne",
+      "title": "Principal Data Engineer",
+      "role": "technical_evaluator",
+      "email": "colin.byrne@e10.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Fatima Zahid",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Usage pipeline takes 5 hours"
+    ],
+    "decision_process": "Architecture board approves SSO design."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e10",
+    "scheduled_start": "2026-10-02T09:00:00-05:00",
+    "scheduled_end": "2026-10-02T09:07:00-05:00",
+    "actual_end": "2026-10-02T09:07:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-02T09:00:00-05:00",
+    "dated_next_step": {
+      "value": "Architecture board Nov 3",
+      "filled_at": "2026-10-02T09:07:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "SSO design and nested claims date by Oct 9",
+      "filled_at": "2026-10-02T09:07:30-05:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

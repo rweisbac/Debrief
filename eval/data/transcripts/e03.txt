@@ -1,0 +1,36 @@
+PARTICIPANTS
+Leah Brennan | Account Executive | apex
+Omar Haddad | Solutions Consultant | apex
+Frank Delacroix | VP of Operations | customer
+Ingrid Solberg | Director of IT | customer
+Pete Nakamura | Operations Analyst | customer
+---
+[00:05] Leah Brennan: Thanks all for joining. Today Omar will walk through shipment tracking, the dispatcher dashboard and the hosting setup. Then next steps.
+[00:20] Frank Delacroix: Good. Let me set context. This is for our dispatch team. About 50 people. They need to see every truck in real time.
+[00:36] Omar Haddad: Got it. Let me show the tracking feed first. This is your telematics sample loaded into the sandbox. Positions update every 30 seconds.
+[02:44] Pete Nakamura: That's faster than what we get today. Today it's every 5 minutes.
+[02:52] Omar Haddad: And here's the dispatcher dashboard. Late loads are flagged in red, and you can drill into any truck.
+[04:30] Frank Delacroix: This is what dispatch needs. Real time is non negotiable for us.
+[04:38] Ingrid Solberg: Can I jump in? From IT's view, I'd plan for a lot more than 50 users. Once finance and the regional offices see this, we're looking at 400 seats in year one.
+[04:55] Frank Delacroix: I don't think finance needs this.
+[05:01] Ingrid Solberg: They asked me about it last week.
+[05:06] Leah Brennan: That's helpful to know. Omar, can you show the hosting setup?
+[05:12] Omar Haddad: Sure. The tenant is in a US region by default. Backups are in the same region.
+[06:40] Ingrid Solberg: That works for us. US hosting is fine.
+[06:46] Frank Delacroix: Hold on. Our Canadian contracts say shipment data stays in Canada. Half our loads are Canadian.
+[06:58] Ingrid Solberg: I don't think that applies to telematics data. Legal looked at it last year.
+[07:07] Frank Delacroix: That's not what I was told.
+[07:12] Omar Haddad: I don't want to guess on residency. We do have a Canadian region on the roadmap, but I'd need to check what's available today before saying anything.
+[07:28] Ingrid Solberg: And honestly, for the dashboard, daily refresh would be enough for most of what IT reports on.
+[07:37] Frank Delacroix: For IT maybe. Dispatch needs real time.
+[07:43] Leah Brennan: Understood, it sounds like there are two use cases with different freshness needs.
+[07:52] Pete Nakamura: Can I ask about late load alerts? Can they go to text message?
+[08:01] Omar Haddad: Today alerts go to email or a webhook. Text would go through your own messaging tool on the webhook.
+[08:15] Pete Nakamura: Okay. We use a paging tool, it takes webhooks.
+[08:22] Leah Brennan: For next steps, what would be most useful?
+[08:28] Frank Delacroix: Get me pricing for 50 seats. I want to move fast.
+[08:34] Ingrid Solberg: I'd rather see pricing for 400, so we don't get surprised later.
+[08:41] Leah Brennan: We can show both. Omar, can you confirm the residency question?
+[08:47] Omar Haddad: Yes, I'll check with our hosting team on Canadian residency and come back by Thursday, October 1st.
+[09:00] Frank Delacroix: Good.
+[09:04] Ingrid Solberg: Okay. Thanks.

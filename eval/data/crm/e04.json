@@ -1,0 +1,81 @@
+{
+  "deal_id": "e04",
+  "account": "Vela Therapeutics",
+  "segment": "Enterprise",
+  "industry": "Life sciences",
+  "acv_usd": 450000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Marta Kowal",
+  "sc": "Theo Grant",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Simone Achebe",
+      "title": "Director of Clinical Data",
+      "role": "champion",
+      "email": "simone.achebe@e04.example",
+      "phone": ""
+    },
+    {
+      "name": "Wes Hollis",
+      "title": "Senior Data Engineer",
+      "role": "technical_evaluator",
+      "email": "wes.hollis@e04.example",
+      "phone": ""
+    },
+    {
+      "name": "Dr. Amaka Okafor",
+      "title": "CISO",
+      "role": "security",
+      "email": "",
+      "phone": ""
+    }
+  ],
+  "champion": "Simone Achebe",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Audit trail spread across systems"
+    ],
+    "decision_process": "CISO sign off required for trial data."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e04",
+    "scheduled_start": "2026-09-30T11:00:00-05:00",
+    "scheduled_end": "2026-09-30T11:10:00-05:00",
+    "actual_end": "2026-09-30T11:10:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-30T11:00:00-05:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

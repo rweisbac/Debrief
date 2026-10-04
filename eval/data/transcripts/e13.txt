@@ -1,0 +1,23 @@
+PARTICIPANTS
+Olivia Grant | Account Executive | apex
+Mateo Ruiz | Solutions Consultant | apex
+Henrik Larsen | Head of Terminal Operations Technology | customer
+Yuki Tanaka | Systems Integration Lead | customer
+---
+[00:04] Olivia Grant: Hi Henrik, Yuki. Today Mateo will show crane telemetry, the berth schedule model, and alerting.
+[00:14] Henrik Larsen: Good. Our main question is latency. Crane operators need data in under 2 seconds.
+[00:23] Mateo Ruiz: Understood. This is the crane telemetry sample, about 15 thousand events a second at peak. In the sandbox the median end to end latency was 1.4 seconds. The 99th percentile was 3.8 seconds.
+[02:50] Henrik Larsen: The 99th percentile is the problem. 3.8 seconds is too slow for operators.
+[02:58] Mateo Ruiz: Agreed. The sandbox is a shared cluster. On a dedicated cluster I'd expect it to be lower, but I haven't measured it, so I won't give you a number.
+[03:12] Yuki Tanaka: Can you measure it on dedicated?
+[03:16] Mateo Ruiz: Yes. I'll run the same test on a dedicated cluster and send you the results by Thursday, October 8th.
+[03:25] Henrik Larsen: Good. That decides it for us.
+[03:29] Mateo Ruiz: Here's the berth schedule model. It takes vessel arrival estimates and shows berth conflicts 72 hours ahead.
+[06:10] Yuki Tanaka: Our vessel estimates come from a port community system over an old message format. Can you read it?
+[06:18] Mateo Ruiz: I haven't seen that format. Can you send a sample file?
+[06:23] Yuki Tanaka: I'll send one today.
+[06:27] Mateo Ruiz: Thanks. Then alerting. Berth conflicts raise an alert to the duty manager.
+[08:40] Henrik Larsen: Fine. Latency is the real question.
+[08:45] Olivia Grant: Should we schedule a review of the dedicated results?
+[08:50] Henrik Larsen: Yes. Monday, October 12th, 9 am our time.
+[08:56] Olivia Grant: Booked. I'll send the invite.

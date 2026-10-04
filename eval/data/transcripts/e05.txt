@@ -1,0 +1,90 @@
+PARTICIPANTS
+Ryan Castellano | Account Executive | apex
+Nia Oduya | Solutions Consultant | apex
+Doug Whitfield | Director of Audience Data | customer
+Karen Ibsen | Marketing Analytics Manager | customer
+Luis Ferreira | Data Engineer | customer
+---
+[00:02] Ryan Castellano: Hey everyone, can you hear me okay?
+[00:06] Doug Whitfield: Loud and clear. Sorry, we're in a new room. We just moved floors and nothing works yet.
+[00:14] Ryan Castellano: Ha, the classic move. How's the new floor?
+[00:19] Doug Whitfield: Nicer view, worse coffee. Karen's been complaining all week.
+[00:25] Karen Ibsen: It's genuinely bad coffee. I'm not exaggerating.
+[00:31] Luis Ferreira: I brought my own machine. Best decision I've made this year.
+[00:37] Ryan Castellano: Smart. Okay, so today Nia is going to walk through the audience pipeline and the attribution model. Plus whatever else you want to see.
+[00:48] Doug Whitfield: Sounds good. Before we start, did you see the game last night?
+[00:53] Ryan Castellano: I caught the end. That last minute was something.
+[00:58] Doug Whitfield: I had money on it. Don't ask.
+[01:03] Karen Ibsen: He always has money on it.
+[01:08] Doug Whitfield: Anyway. Go ahead Nia.
+[01:12] Nia Oduya: Thanks. So this is the audience pipeline using the viewing logs you shared. We land the raw events, dedupe them, and build a daily audience table by show and segment.
+[04:30] Luis Ferreira: How long does the dedupe take on a full day?
+[04:36] Nia Oduya: On the sample day you sent, about 11 minutes for 380 million events.
+[04:44] Luis Ferreira: Our current job takes four hours. So that's interesting.
+[04:50] Doug Whitfield: Our current job takes four hours on a good day. On a bad day it falls over and Luis gets paged at 3 in the morning.
+[04:59] Luis Ferreira: Twice last month.
+[05:03] Doug Whitfield: Which reminds me, the old vendor. Did I tell you about the old vendor?
+[05:08] Ryan Castellano: I don't think so.
+[05:11] Doug Whitfield: So we had this tool, I won't name it, and they promised us real time. We signed, and then real time meant every six hours. And the account manager left two months in. We never heard from anyone again.
+[05:31] Karen Ibsen: We still have the swag. Water bottles.
+[05:36] Doug Whitfield: Great water bottles. Terrible product.
+[05:40] Ryan Castellano: That's rough. Hopefully we can do better than water bottles.
+[05:45] Doug Whitfield: Ha. Okay, keep going.
+[05:49] Nia Oduya: So the daily audience table. You can see reach and frequency by show, and you can cut by any segment in your subscriber table.
+[08:02] Karen Ibsen: Can I add our custom segments? We have about 60 that marketing built over the years.
+[08:10] Nia Oduya: Yes, segments are just tables, so any segment you can define in SQL works.
+[08:18] Karen Ibsen: Some of them are defined in spreadsheets, honestly.
+[08:23] Nia Oduya: Then we'd load the spreadsheets as reference tables. That works, it's just a manual refresh.
+[08:31] Karen Ibsen: That's fine.
+[08:35] Doug Whitfield: Speaking of spreadsheets, Karen has this one spreadsheet, it's like 40 tabs.
+[08:41] Karen Ibsen: 43 tabs. And it runs the whole upfront planning process. Don't touch it.
+[08:47] Luis Ferreira: Nobody touches it. It's load bearing.
+[08:52] Ryan Castellano: Every company has one of those.
+[08:56] Doug Whitfield: Ours is special. Okay, sorry, attribution.
+[09:01] Nia Oduya: Attribution. So this model ties ad exposure to subscription starts. It uses a 7 day window by default, which you can change.
+[11:40] Karen Ibsen: We use 14 days today.
+[11:44] Nia Oduya: That's a setting. I can switch it now. There, 14 days.
+[11:52] Karen Ibsen: Okay, the numbers look about right compared to what we have.
+[11:58] Doug Whitfield: About right is good. Our current numbers are probably wrong anyway.
+[12:03] Luis Ferreira: Definitely wrong.
+[12:06] Doug Whitfield: So, you know, one thing I'm wondering about. And this is just me thinking out loud. The privacy team has been making noise about consent data. Like whether we can join viewing logs to subscriber records at all for people who opted out of personalization. I don't know where that lands. It could be nothing.
+[12:31] Nia Oduya: That's an important one. We can filter on a consent flag at ingestion, so opted out records never get joined. But whether the join is allowed at all is a call for your privacy team.
+[12:46] Doug Whitfield: Right. Yeah. It might be nothing. Or it might kill the whole attribution piece, I honestly don't know. Anyway.
+[12:55] Karen Ibsen: Can we go back to the segment thing for a second? How do I share a segment with the agency?
+[13:03] Nia Oduya: You can share a view with an external user, with row level rules on what they see.
+[13:11] Karen Ibsen: The agency should only see aggregate numbers, never subscriber level rows.
+[13:17] Nia Oduya: We can do that with an aggregate only view. I'd set it up for you as part of the pilot.
+[13:24] Karen Ibsen: Great.
+[13:27] Doug Whitfield: The agency. Don't get me started on the agency. They sent us a deck last week with our own logo spelled wrong.
+[13:35] Karen Ibsen: Twice. Two different misspellings.
+[13:39] Luis Ferreira: Impressive, honestly.
+[13:42] Ryan Castellano: That takes effort.
+[13:45] Doug Whitfield: It really does. Where were we?
+[13:48] Nia Oduya: I can show the alerting if that's useful. When the daily job fails, Luis gets an alert with the failed step instead of a page at 3 in the morning.
+[14:02] Luis Ferreira: Yes please.
+[14:05] Nia Oduya: Here. Failure alerts go to your on call tool, and the job retries the failed step once on its own before it alerts.
+[15:30] Luis Ferreira: That alone would save me a lot of sleep.
+[15:34] Doug Whitfield: Luis has two kids under three. Sleep is a big deal.
+[15:39] Luis Ferreira: It is.
+[15:42] Ryan Castellano: Understood. Doug, Karen, where does this sit for you overall?
+[15:48] Doug Whitfield: Overall I like it. I mean, I liked the last vendor too, so take that with a grain of salt.
+[15:55] Karen Ibsen: I like the segment piece a lot. That's the part my team would use every day.
+[16:01] Ryan Castellano: What would a next step look like from your side?
+[16:06] Doug Whitfield: I need to talk to Ann about budget. She owns the data budget for next year. Planning is in November, so I'd want something in front of her before then.
+[16:19] Ryan Castellano: Would it help if we put together a short summary for Ann?
+[16:24] Doug Whitfield: Yeah, a one pager. Not a deck. She hates decks. Probably hates the agency more though.
+[16:31] Karen Ibsen: Everyone hates the agency.
+[16:35] Ryan Castellano: Got it, a one pager for Ann. I'll get that to you by Wednesday, October 7th.
+[16:42] Doug Whitfield: That works.
+[16:45] Luis Ferreira: Can you also send the dedupe config? I want to see how you handle late events.
+[16:51] Nia Oduya: Sure, I'll send the dedupe config and a note on late events tomorrow.
+[16:58] Luis Ferreira: Thanks.
+[17:01] Karen Ibsen: And I'll send over the list of our 60 segments so you can see which ones are SQL and which are spreadsheets.
+[17:08] Nia Oduya: Perfect.
+[17:11] Doug Whitfield: Oh, and the fantasy league. Ryan, you said you play?
+[17:15] Ryan Castellano: I do. Badly.
+[17:18] Doug Whitfield: We have an opening. Think about it.
+[17:22] Ryan Castellano: Ha, I'll think about it.
+[17:25] Doug Whitfield: Okay, good stuff. Thanks all.
+[17:28] Karen Ibsen: Thanks.
+[17:30] Luis Ferreira: Thanks, bye.

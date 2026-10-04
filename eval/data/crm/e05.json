@@ -1,0 +1,81 @@
+{
+  "deal_id": "e05",
+  "account": "Brightline Media",
+  "segment": "Enterprise",
+  "industry": "Media",
+  "acv_usd": 275000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Ryan Castellano",
+  "sc": "Nia Oduya",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Doug Whitfield",
+      "title": "Director of Audience Data",
+      "role": "champion",
+      "email": "doug.whitfield@e05.example",
+      "phone": ""
+    },
+    {
+      "name": "Karen Ibsen",
+      "title": "Marketing Analytics Manager",
+      "role": "technical_evaluator",
+      "email": "karen.ibsen@e05.example",
+      "phone": ""
+    },
+    {
+      "name": "Luis Ferreira",
+      "title": "Data Engineer",
+      "role": "technical_evaluator",
+      "email": "luis.ferreira@e05.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Doug Whitfield",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Daily audience numbers without the four hour job.",
+    "pains": [
+      "Dedupe job takes four hours and fails at night"
+    ],
+    "decision_process": "Budget planning in November."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e05",
+    "scheduled_start": "2026-10-01T14:00:00-05:00",
+    "scheduled_end": "2026-10-01T14:18:00-05:00",
+    "actual_end": "2026-10-01T14:18:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T14:00:00-05:00",
+    "dated_next_step": {
+      "value": "One pager for Ann by Oct 7",
+      "filled_at": "2026-10-01T14:18:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "Ann, data budget owner",
+      "filled_at": "2026-10-01T14:18:30-05:00"
+    },
+    "business_outcome": {
+      "value": "Daily audience numbers without the four hour job.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-10-01T14:18:30-05:00"
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

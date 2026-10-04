@@ -1,0 +1,27 @@
+PARTICIPANTS
+Victor Hayes | Account Executive | apex
+Rosa Medina | Solutions Consultant | apex
+Neil Patterson | Chief Data Officer | customer
+Amira Saleh | Analytics Manager | customer
+---
+[00:03] Victor Hayes: Good afternoon Neil, Amira. Today Rosa will show the policy pricing model, the claims dashboard and the governance setup.
+[00:14] Neil Patterson: Great. I'll be honest, I've mostly made up my mind. We'll sign by end of month.
+[00:21] Victor Hayes: That's great to hear.
+[00:24] Rosa Medina: Let me show you why I think you'll be happy. This is the pricing model on your policy extract. Rating factors are versioned, so you can see which factors were used for any quote.
+[03:15] Amira Saleh: Our actuaries will want to compare it to the current model.
+[03:20] Rosa Medina: You can run both side by side for any date range.
+[03:26] Rosa Medina: The claims dashboard shows loss ratio by line and by region, refreshed daily.
+[05:40] Amira Saleh: Today the loss ratio report is monthly. Daily would change how we reprice.
+[05:47] Rosa Medina: And governance. Rating factors can only be changed by the pricing committee role, and every change is logged.
+[07:30] Neil Patterson: Good. That's what the regulator asks about.
+[07:36] Victor Hayes: Neil, for end of month, what do you need from us?
+[07:41] Neil Patterson: Paper. Send me the order form.
+[07:45] Amira Saleh: Neil, doesn't this need to go through the board's technology committee? Anything over 300 thousand did last year.
+[07:53] Neil Patterson: Well, yes, technically. It depends on the board. They meet in November. I think I can get it approved before that, but I'm not certain.
+[08:05] Victor Hayes: So the timeline depends on the board?
+[08:09] Neil Patterson: Probably. Let's say end of month if I can get an exception, otherwise after the November meeting.
+[08:17] Amira Saleh: I also need to see how the model handles our mid term endorsements. That wasn't in the demo.
+[08:24] Rosa Medina: You're right, it wasn't. I'll set that up and send a recording by Tuesday, October 6th.
+[08:32] Neil Patterson: Fine. Send the order form anyway.
+[08:36] Victor Hayes: I'll send the order form and a recap today.
+[08:41] Amira Saleh: Thanks.

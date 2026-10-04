@@ -1,0 +1,96 @@
+{
+  "hard_cases": [
+    "missing_stakeholder"
+  ],
+  "scenario": "One IT contact who does not decide; very little said.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "No decision maker identified",
+      "anchors": [
+        "I'm not really the one who decides"
+      ],
+      "keywords": [
+        [
+          "decide",
+          "decision",
+          "operations"
+        ]
+      ],
+      "utterance_ids": [
+        "U009"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send the load summary",
+      "anchors": [
+        "I'll send the load summary"
+      ],
+      "keywords": [
+        [
+          "summary"
+        ]
+      ],
+      "who": "Kofi Mensah",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U012"
+      ]
+    }
+  ],
+  "non_commitments": [],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Who owns the decision",
+      "anchors": [
+        "Probably operations. I'm not sure who"
+      ],
+      "keywords": [
+        [
+          "operations",
+          "decision",
+          "decides"
+        ]
+      ],
+      "utterance_ids": [
+        "U011"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Ask Hugo for the operations owner",
+      "anchors": [],
+      "keywords": [
+        [
+          "operations"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Send the load summary",
+      "anchors": [],
+      "keywords": [
+        [
+          "summary"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e09",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

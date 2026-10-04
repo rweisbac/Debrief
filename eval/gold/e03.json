@@ -1,0 +1,271 @@
+{
+  "hard_cases": [
+    "contradictory_statements"
+  ],
+  "scenario": "VP Ops and IT director disagree on seats, residency and freshness.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Dispatch needs real time",
+      "anchors": [
+        "Real time is non negotiable for us"
+      ],
+      "keywords": [
+        [
+          "real time",
+          "real-time"
+        ]
+      ],
+      "utterance_ids": [
+        "U006"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "IT expects 400 seats, not 50",
+      "anchors": [
+        "we're looking at 400 seats in year one"
+      ],
+      "keywords": [
+        [
+          "400"
+        ]
+      ],
+      "utterance_ids": [
+        "U007"
+      ]
+    },
+    {
+      "id": "C3",
+      "summary": "Canadian contracts require data in Canada",
+      "anchors": [
+        "Our Canadian contracts say shipment data stays in Canada"
+      ],
+      "keywords": [
+        [
+          "canad"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    },
+    {
+      "id": "C4",
+      "summary": "Late load alerts by text or paging tool",
+      "anchors": [
+        "Can they go to text message?"
+      ],
+      "keywords": [
+        [
+          "text",
+          "paging",
+          "sms"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Canadian data residency is unresolved",
+      "anchors": [
+        "Our Canadian contracts say shipment data stays in Canada"
+      ],
+      "keywords": [
+        [
+          "canad",
+          "residency"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Scope and seat count disputed, 50 vs 400",
+      "anchors": [
+        "we're looking at 400 seats in year one"
+      ],
+      "keywords": [
+        [
+          "400"
+        ]
+      ],
+      "utterance_ids": [
+        "U007"
+      ]
+    },
+    {
+      "id": "R3",
+      "summary": "Freshness requirement disputed, real time vs daily",
+      "anchors": [
+        "daily refresh would be enough"
+      ],
+      "keywords": [
+        [
+          "daily"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Check Canadian residency with the hosting team",
+      "anchors": [
+        "come back by Thursday, October 1st"
+      ],
+      "keywords": [
+        [
+          "canad",
+          "residency"
+        ]
+      ],
+      "who": "Omar Haddad",
+      "side": "apex",
+      "by_when": "2026-10-01",
+      "utterance_ids": [
+        "U027"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Show pricing for both 50 and 400 seats",
+      "anchors": [
+        "We can show both"
+      ],
+      "keywords": [
+        [
+          "pricing",
+          "price"
+        ]
+      ],
+      "who": "Leah Brennan",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U026"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "A Canadian region is on the roadmap, not available",
+      "anchors": [
+        "Canadian region on the roadmap"
+      ],
+      "keywords": [
+        [
+          "canadian region",
+          "roadmap"
+        ]
+      ],
+      "utterance_ids": [
+        "U016"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Seat count disagreement",
+      "anchors": [
+        "I don't think finance needs this"
+      ],
+      "keywords": [
+        [
+          "400",
+          "seat"
+        ]
+      ],
+      "utterance_ids": [
+        "U008"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Residency disagreement",
+      "anchors": [
+        "That's not what I was told"
+      ],
+      "keywords": [
+        [
+          "canad",
+          "residency"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    },
+    {
+      "id": "U3",
+      "summary": "Freshness disagreement",
+      "anchors": [
+        "For IT maybe. Dispatch needs real time"
+      ],
+      "keywords": [
+        [
+          "daily",
+          "real time",
+          "real-time"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Residency answer by Oct 1 to both, with their legal",
+      "anchors": [],
+      "keywords": [
+        [
+          "residency",
+          "canad"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Resolve seat scope with the champion; price both",
+      "anchors": [],
+      "keywords": [
+        [
+          "400"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Confirm freshness needs per use case",
+      "anchors": [],
+      "keywords": [
+        [
+          "daily",
+          "freshness"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e03",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

@@ -1,0 +1,30 @@
+PARTICIPANTS
+Derek Shaw | Account Executive | apex
+Ana Petrov | Solutions Consultant | apex
+Fatima Zahid | Director of Identity and Access | customer
+Colin Byrne | Principal Data Engineer | customer
+---
+[00:03] Derek Shaw: Hi Fatima, hi Colin. Today Ana will cover single sign on, role mapping, and the usage data pipeline.
+[00:13] Fatima Zahid: SSO first please. That's the gate for us.
+[00:18] Ana Petrov: Sure. You use your own OIDC provider, and roles come in a nested claim called net_groups, is that right?
+[00:27] Fatima Zahid: Right. An object with region and role.
+[00:32] Ana Petrov: Today our claim mapping takes flat claims. A string or a list of strings.
+[02:40] Fatima Zahid: So nested doesn't work.
+[02:44] Ana Petrov: Not today in general availability. But nested claims are coming next quarter, so you'd be covered by the time you go live.
+[02:55] Fatima Zahid: Next quarter, is that committed?
+[03:00] Ana Petrov: That's what I've heard from the product team. I'll get you the exact date.
+[03:07] Derek Shaw: And we can get you into the preview program before that, I'm sure.
+[03:13] Fatima Zahid: Okay. I'll need that in writing for our architecture board.
+[03:19] Colin Byrne: Can we do the pipeline? I have a hard stop.
+[03:23] Ana Petrov: Of course. This is the network usage data you sent, about 1.2 billion rows a day, loaded incrementally. Last night's run took 22 minutes.
+[05:50] Colin Byrne: Our current job is about 5 hours.
+[05:55] Ana Petrov: And the warehouse connector syncs hourly to your BI tool.
+[06:02] Colin Byrne: Hourly is fine for BI.
+[06:06] Ana Petrov: Sorry, correction. The connector is continuous now, about 1 minute end to end. Hourly was the old behavior.
+[06:15] Colin Byrne: Even better.
+[06:18] Derek Shaw: Fatima, what does the architecture board need from us?
+[06:24] Fatima Zahid: A written SSO design and the date for nested claims. They meet monthly, next on November 3rd.
+[06:33] Ana Petrov: I'll send the SSO design by Friday, October 9th.
+[06:39] Derek Shaw: And I'll send the nested claims date along with it.
+[06:44] Fatima Zahid: Okay. Thanks.
+[06:47] Colin Byrne: Thanks, bye.

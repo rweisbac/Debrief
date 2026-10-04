@@ -1,0 +1,28 @@
+PARTICIPANTS
+Isaac Morgan | Account Executive | apex
+Lena Fischer | Solutions Consultant | apex
+Rachel Kim | VP of Supply Chain Analytics | customer
+Tobias Lund | Data Platform Manager | customer
+---
+[00:04] Isaac Morgan: Hi Rachel, hi Tobias. Thanks for joining. Today Lena will show the inventory projection, the store rollup and the cost comparison you asked for.
+[00:15] Rachel Kim: Good. I'll say up front, we already run Lakestream for marketing data. So the question is why add Apex.
+[00:25] Lena Fischer: Fair question. Let me show the projection on your data and then we can talk about where each fits.
+[00:33] Lena Fischer: This merges your point of sale and open orders with a 5 minute refresh, no separate streaming product. Projection to reorder point is per store, in parallel.
+[03:10] Tobias Lund: Lakestream would need their streaming add on for this, right?
+[03:16] Lena Fischer: For near real time, yes, that's my understanding from their public docs. I'd rather compare on your workload than on slides.
+[03:28] Rachel Kim: Lakestream told us their add on is cheap.
+[03:33] Tobias Lund: They also told us batch was enough. And then it wasn't.
+[03:40] Rachel Kim: True.
+[03:43] Lena Fischer: Here's the store rollup. 640 stores, days to reorder point by store.
+[05:50] Rachel Kim: That's exactly the view. The question is cost. If I go to leadership with a second platform, they'll ask why not expand what we have.
+[06:05] Isaac Morgan: What would help you make that case?
+[06:10] Rachel Kim: A side by side on our workload. Our volume, our refresh, all in costs. Including the add on.
+[06:20] Tobias Lund: I can give you our event volumes per hour.
+[06:25] Lena Fischer: That would let me size it properly. I'll build the comparison once I have the volumes.
+[06:33] Rachel Kim: When could we see it?
+[06:37] Lena Fischer: About a week after Tobias sends the volumes.
+[06:43] Tobias Lund: I'll send them tomorrow.
+[06:47] Rachel Kim: Okay. And I want to see it before the Lakestream renewal conversation on October 20th.
+[06:55] Isaac Morgan: Understood. Let's put 30 minutes on the calendar for Wednesday, October 14th to walk through it.
+[07:03] Rachel Kim: Fine, the 14th works.
+[07:07] Isaac Morgan: Great, I'll send the invite.

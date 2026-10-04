@@ -1,0 +1,27 @@
+PARTICIPANTS
+Paula Jensen | Account Executive | apex
+Sam Okoro | Solutions Consultant | apex
+Dr. Elise Martin | Director of Institutional Research | customer
+Kevin Tran | Data Analyst | customer
+---
+[00:04] Paula Jensen: Hi Elise, hi Kevin. Today Sam will show the enrollment model, the retention dashboard and the student data access controls.
+[00:15] Dr. Elise Martin: Wonderful. I've been looking forward to this.
+[00:20] Sam Okoro: This is enrollment and course data from your extract, joined by student ID. The retention dashboard shows first year retention by college and by program.
+[03:05] Dr. Elise Martin: This is fantastic. This is exactly what I've wanted for years.
+[03:11] Kevin Tran: Can we filter by first generation students?
+[03:16] Sam Okoro: Yes, any attribute in your student table can be a filter.
+[03:22] Kevin Tran: Great. That's the cut the provost always asks for.
+[03:28] Sam Okoro: And access controls. Advisors see only their own students. Deans see their college.
+[05:40] Dr. Elise Martin: Perfect. Our privacy officer will want to see that.
+[05:46] Paula Jensen: Elise, how do you see this moving forward?
+[05:51] Dr. Elise Martin: Oh, I'll absolutely champion this. I'm going to tell everyone about it.
+[05:57] Paula Jensen: That's great to hear. Who else would be involved in the decision?
+[06:02] Dr. Elise Martin: The provost owns the budget. Dr. Abernathy. She'd have to approve it. And there's a technology committee.
+[06:12] Paula Jensen: Would it make sense to set up time with Dr. Abernathy?
+[06:17] Dr. Elise Martin: Eventually, sure. She's very busy this term.
+[06:23] Paula Jensen: When does the technology committee meet?
+[06:27] Dr. Elise Martin: I'm honestly not sure. Kevin, do you know?
+[06:31] Kevin Tran: I think they meet once a semester. I don't know when.
+[06:36] Dr. Elise Martin: We'll figure it out. Anyway, I'm thrilled. Thank you.
+[06:41] Sam Okoro: I'll send the retention dashboard screenshots so you can share them.
+[06:46] Dr. Elise Martin: Lovely.

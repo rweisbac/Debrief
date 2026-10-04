@@ -1,0 +1,241 @@
+{
+  "hard_cases": [
+    "missing_stakeholder"
+  ],
+  "scenario": "The CISO who must sign off is absent; economic buyer unknown.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "CISO will ask about audit trail and unblinded access",
+      "anchors": [
+        "Audit trail and who can see unblinded data"
+      ],
+      "keywords": [
+        [
+          "okafor",
+          "ciso"
+        ]
+      ],
+      "utterance_ids": [
+        "U004"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Roll back a bad load",
+      "anchors": [
+        "Can we roll back a bad load?"
+      ],
+      "keywords": [
+        [
+          "roll back",
+          "rollback",
+          "restore"
+        ]
+      ],
+      "utterance_ids": [
+        "U006"
+      ]
+    },
+    {
+      "id": "C3",
+      "summary": "Time boxed unblinding",
+      "anchors": [
+        "Can the role be time boxed?"
+      ],
+      "keywords": [
+        [
+          "expir",
+          "time box",
+          "time-box",
+          "interim"
+        ]
+      ],
+      "utterance_ids": [
+        "U014"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "CISO sign off required, timing unknown",
+      "anchors": [
+        "I can't move this without Dr. Okafor"
+      ],
+      "keywords": [
+        [
+          "okafor",
+          "ciso"
+        ]
+      ],
+      "utterance_ids": [
+        "U016"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Commercial process and economic buyer unknown",
+      "anchors": [
+        "Honestly I'm not sure yet"
+      ],
+      "keywords": [
+        [
+          "procurement",
+          "r and d",
+          "r&d",
+          "threshold",
+          "economic buyer"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send the data dictionary",
+      "anchors": [
+        "I can send over the data dictionary"
+      ],
+      "keywords": [
+        [
+          "data dictionary"
+        ]
+      ],
+      "who": "Wes Hollis",
+      "side": "customer",
+      "by_when": "",
+      "utterance_ids": [
+        "U021"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send a recap this afternoon",
+      "anchors": [
+        "I'll send a recap this afternoon"
+      ],
+      "keywords": [
+        [
+          "recap"
+        ]
+      ],
+      "who": "Marta Kowal",
+      "side": "apex",
+      "by_when": "2026-09-30",
+      "utterance_ids": [
+        "U024"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Simone said maybe to a write-up for the CISO",
+      "anchors": [
+        "Maybe. She doesn't read long documents though"
+      ],
+      "keywords": [
+        [
+          "okafor",
+          "ciso"
+        ],
+        [
+          "write",
+          "brief",
+          "summary",
+          "one page",
+          "one-page"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "CISO availability",
+      "anchors": [
+        "Her calendar is a disaster"
+      ],
+      "keywords": [
+        [
+          "okafor",
+          "ciso"
+        ]
+      ],
+      "utterance_ids": [
+        "U016"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Approval threshold and buyer unknown",
+      "anchors": [
+        "I don't know the threshold this year"
+      ],
+      "keywords": [
+        [
+          "threshold",
+          "procurement",
+          "r and d",
+          "r&d"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Short brief on audit reads and unblinded access for Simone to forward",
+      "anchors": [],
+      "keywords": [
+        [
+          "okafor",
+          "ciso"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Ask who owns budget and the approval threshold",
+      "anchors": [],
+      "keywords": [
+        [
+          "threshold",
+          "procurement",
+          "r and d",
+          "r&d",
+          "budget"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Recap",
+      "anchors": [],
+      "keywords": [
+        [
+          "recap"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e04",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

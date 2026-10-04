@@ -1,0 +1,19 @@
+PARTICIPANTS
+Mia Torres | Account Executive | apex
+Kofi Mensah | Solutions Consultant | apex
+Hugo Brandt | IT Manager | customer
+---
+[00:05] Mia Torres: Hi Hugo. Thanks for joining. Is anyone else coming?
+[00:10] Hugo Brandt: No, just me today.
+[00:14] Mia Torres: No problem. Kofi will show the meter data load we set up.
+[00:20] Kofi Mensah: So this is the meter readings file you sent, loaded and partitioned by region. It took about 4 minutes.
+[03:30] Hugo Brandt: Okay.
+[03:34] Kofi Mensah: And here's a daily usage view by region.
+[05:12] Hugo Brandt: Fine.
+[05:15] Mia Torres: Hugo, is this close to what your team is looking for?
+[05:20] Hugo Brandt: I'm not really the one who decides. I just set up access.
+[05:27] Mia Torres: Who would be the right person?
+[05:31] Hugo Brandt: Probably operations. I'm not sure who.
+[05:37] Kofi Mensah: I'll send the load summary so you have it.
+[05:42] Hugo Brandt: Sure.
+[05:45] Mia Torres: Thanks Hugo.

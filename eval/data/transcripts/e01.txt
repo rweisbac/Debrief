@@ -1,0 +1,29 @@
+PARTICIPANTS
+Hannah Ortiz | Account Executive | apex
+Devon Clarke | Solutions Consultant | apex
+Maya Lindqvist | VP of Data | customer
+Carlos Mendes | Data Engineering Lead | customer
+---
+[00:04] Hannah Ortiz: Good morning Maya, Carlos. Thanks for the time. The plan is the three items from the validation plan: streaming inventory, the store rollup, and access for regional managers.
+[00:21] Maya Lindqvist: Morning. Yes, that's the list. Our goal hasn't changed. We want store managers to see on hand including open orders within minutes, so we stop shipping to stores that are already full.
+[00:44] Devon Clarke: Great, let me start with streaming inventory. This is your point of sale feed and the order feed from your sandbox extract, merged into one model. It refreshes every 5 minutes, and there's no separate streaming product involved.
+[02:30] Carlos Mendes: What's the load on our side? We had a vendor that hammered the order database.
+[02:41] Devon Clarke: We read from the change feed you set up, so no queries against the order database itself. In the sandbox it peaked at about 40 reads a second.
+[03:02] Carlos Mendes: Okay, that's fine. That's well under what we allow.
+[03:10] Devon Clarke: Here's the store rollup. 212 stores, each with projected days to reorder point, computed in parallel per store.
+[05:15] Maya Lindqvist: That's the screen. That's what the store managers need.
+[05:22] Devon Clarke: And the access piece. Regional managers only see their region. That's a row level policy on the region key.
+[06:40] Carlos Mendes: We have a few regions that report into a parent region. Does that work?
+[06:52] Devon Clarke: One level of parent and child works out of the box. You described one level, so you're covered.
+[07:05] Carlos Mendes: Yes, just one level.
+[07:12] Hannah Ortiz: Maya, how does this compare to what you hoped to see?
+[07:20] Maya Lindqvist: It covers all three. Honestly I'm ready to take this to Priscilla. She's our CFO and she signs anything over 200 thousand.
+[07:41] Hannah Ortiz: Would it help if we put together the business case numbers for her?
+[07:49] Maya Lindqvist: Yes. I need the cost per store and the overstock reduction we modeled together last month. Can you have that to me by Friday, October 2nd?
+[08:05] Hannah Ortiz: Yes, I'll send it by Friday the 2nd.
+[08:12] Maya Lindqvist: Then let's book Priscilla. I'll set up 30 minutes with her for Tuesday, October 6th at 10.
+[08:25] Hannah Ortiz: Perfect. I'll be there with Devon.
+[08:31] Carlos Mendes: One thing from me. I want the change feed setup written down for our ops runbook.
+[08:42] Devon Clarke: I'll send you the setup doc today.
+[08:48] Carlos Mendes: Thanks.
+[08:52] Maya Lindqvist: Good. Thanks both, this was a clear session.

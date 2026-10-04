@@ -1,0 +1,191 @@
+{
+  "hard_cases": [],
+  "scenario": "Lakestream incumbent; dated review before the renewal.",
+  "agreed_next_step": {
+    "exists": true,
+    "date": "2026-10-14"
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Why add Apex next to Lakestream",
+      "anchors": [
+        "the question is why add Apex"
+      ],
+      "keywords": [
+        [
+          "lakestream"
+        ]
+      ],
+      "utterance_ids": [
+        "U002"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "All in cost including the add on",
+      "anchors": [
+        "all in costs"
+      ],
+      "keywords": [
+        [
+          "cost"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Lakestream incumbent with renewal on Oct 20",
+      "anchors": [
+        "Lakestream renewal conversation"
+      ],
+      "keywords": [
+        [
+          "lakestream"
+        ]
+      ],
+      "utterance_ids": [
+        "U019"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Comparison depends on Tobias sending volumes",
+      "anchors": [
+        "About a week after Tobias sends the volumes"
+      ],
+      "keywords": [
+        [
+          "volume"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send event volumes per hour",
+      "anchors": [
+        "I'll send them tomorrow"
+      ],
+      "keywords": [
+        [
+          "volume"
+        ]
+      ],
+      "who": "Tobias Lund",
+      "side": "customer",
+      "by_when": "2026-10-01",
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Build the workload cost comparison",
+      "anchors": [
+        "I'll build the comparison once I have the volumes"
+      ],
+      "keywords": [
+        [
+          "comparison",
+          "side by side"
+        ]
+      ],
+      "who": "Lena Fischer",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U015"
+      ]
+    },
+    {
+      "id": "M3",
+      "summary": "Send the invite for Oct 14",
+      "anchors": [
+        "I'll send the invite"
+      ],
+      "keywords": [
+        [
+          "invite",
+          "october 14",
+          "oct 14",
+          "2026-10-14"
+        ]
+      ],
+      "who": "Isaac Morgan",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U022"
+      ]
+    }
+  ],
+  "non_commitments": [],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Comparison timing depends on the volumes",
+      "anchors": [
+        "About a week after"
+      ],
+      "keywords": [
+        [
+          "volume"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Workload comparison including the add on before Oct 14",
+      "anchors": [],
+      "keywords": [
+        [
+          "comparison",
+          "side by side",
+          "side-by-side"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Flag Lakestream to deal desk",
+      "anchors": [],
+      "keywords": [
+        [
+          "deal desk"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Land the comparison before the Oct 20 renewal",
+      "anchors": [],
+      "keywords": [
+        [
+          "october 20",
+          "oct 20",
+          "renewal"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e08",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

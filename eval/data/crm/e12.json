@@ -1,0 +1,74 @@
+{
+  "deal_id": "e12",
+  "account": "Mosaic Mutual Insurance",
+  "segment": "Enterprise",
+  "industry": "Insurance",
+  "acv_usd": 410000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Victor Hayes",
+  "sc": "Rosa Medina",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Neil Patterson",
+      "title": "Chief Data Officer",
+      "role": "champion",
+      "email": "neil.patterson@e12.example",
+      "phone": ""
+    },
+    {
+      "name": "Amira Saleh",
+      "title": "Analytics Manager",
+      "role": "technical_evaluator",
+      "email": "amira.saleh@e12.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Neil Patterson",
+  "economic_buyer": "Neil Patterson",
+  "discovery_notes": {
+    "stated_business_outcome": "Daily loss ratio to change how we reprice.",
+    "pains": [
+      "Monthly loss ratio report"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e12",
+    "scheduled_start": "2026-10-01T15:00:00-05:00",
+    "scheduled_end": "2026-10-01T15:09:00-05:00",
+    "actual_end": "2026-10-01T15:09:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-10-01T15:00:00-05:00",
+    "dated_next_step": {
+      "value": "Signature by Oct 30",
+      "filled_at": "2026-10-01T15:09:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "Daily loss ratio to change how we reprice.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-10-01T15:09:30-05:00"
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

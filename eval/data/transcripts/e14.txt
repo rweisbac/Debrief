@@ -1,0 +1,29 @@
+PARTICIPANTS
+Sean Murphy | Account Executive | apex
+Elena Varga | Solutions Consultant | apex
+Charlotte Dubois | Director of Guest Data | customer
+Matteo Bianchi | Security and Compliance Manager | customer
+Ivy Chen | CRM Analyst | customer
+---
+[00:03] Sean Murphy: Bonjour Charlotte, hi Matteo, hi Ivy. Today Elena will show guest profile unification, EU hosting, and key management.
+[00:14] Charlotte Dubois: Good. We operate 90 hotels in Europe, so residency is the first question.
+[00:22] Elena Varga: Let's start there. The tenant can be pinned to the Frankfurt region, including backups and audit logs. And there's a tenant setting that restricts support access to EU based staff.
+[02:40] Matteo Bianchi: We'll need the contract wording on support access.
+[02:45] Elena Varga: I'll confirm the exact wording with our compliance team and send it by Wednesday, October 7th.
+[02:53] Matteo Bianchi: Good. And keys. We want to hold our own keys.
+[02:58] Elena Varga: You can hold your keys in a major cloud key service. On premises HSMs are not supported.
+[03:07] Matteo Bianchi: We use an on premises HSM today for payment data.
+[03:12] Elena Varga: Then for this tenant it would need to be a cloud key service. I don't want to suggest otherwise.
+[03:19] Matteo Bianchi: I'll have to check whether our policy allows a cloud key service for guest data. I'm not sure it does.
+[03:27] Charlotte Dubois: Let's see the profile unification.
+[03:31] Elena Varga: These are guest records from your three booking systems. Matching merged 2.1 million records into 1.4 million profiles.
+[05:50] Ivy Chen: How do we review the merges it wasn't sure about?
+[05:55] Elena Varga: Low confidence matches go to a review queue. Your team approves or splits them.
+[06:04] Ivy Chen: Good, we've been burned by bad merges before.
+[06:09] Charlotte Dubois: This is strong. If Matteo is comfortable on keys, we can move.
+[06:15] Sean Murphy: Matteo, when would you know?
+[06:19] Matteo Bianchi: I need to ask our group security office. I don't control their timeline.
+[06:26] Sean Murphy: Is there anything we can send that would help them?
+[06:30] Matteo Bianchi: The encryption whitepaper with the key hierarchy.
+[06:35] Elena Varga: I'll send it today.
+[06:38] Charlotte Dubois: Thanks both.

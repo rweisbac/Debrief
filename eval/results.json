@@ -1,0 +1,233 @@
+{
+ "generated": "2026-10-04 00:14 UTC",
+ "rows": [
+  {
+   "case": "e01",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e01",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e02",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e02",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e03",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e03",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e04",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e04",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e05",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e05",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e06",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e06",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e07",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e07",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e08",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e08",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e09",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e09",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e10",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e10",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e11",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e11",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e12",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e12",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e13",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e13",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e14",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e14",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e15",
+   "system": "debrief",
+   "status": "not_run",
+   "reason": "no output"
+  },
+  {
+   "case": "e15",
+   "system": "baseline",
+   "status": "not_run",
+   "reason": "no output"
+  }
+ ],
+ "totals": {
+  "debrief": {
+   "ran": 0,
+   "not_run": 15,
+   "claims": 0,
+   "supported": 0,
+   "judged": 0,
+   "risks": 0,
+   "risks_found": 0,
+   "risks_found_full": 0,
+   "concerns": 0,
+   "concerns_found": 0,
+   "overstated": 0,
+   "hedged_as_firm": 0,
+   "non_commitments": 0,
+   "agreed_fab": 0,
+   "uncertain": 0,
+   "uncertain_mentioned": 0,
+   "uncertain_flagged": 0,
+   "commitments": 0,
+   "commitments_found": 0,
+   "cost": 0,
+   "words": 0
+  },
+  "baseline": {
+   "ran": 0,
+   "not_run": 15,
+   "claims": 0,
+   "supported": 0,
+   "judged": 0,
+   "risks": 0,
+   "risks_found": 0,
+   "risks_found_full": 0,
+   "concerns": 0,
+   "concerns_found": 0,
+   "overstated": 0,
+   "hedged_as_firm": 0,
+   "non_commitments": 0,
+   "agreed_fab": 0,
+   "uncertain": 0,
+   "uncertain_mentioned": 0,
+   "uncertain_flagged": 0,
+   "commitments": 0,
+   "commitments_found": 0,
+   "cost": 0,
+   "words": 0
+  }
+ }
+}

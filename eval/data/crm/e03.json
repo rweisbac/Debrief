@@ -1,0 +1,81 @@
+{
+  "deal_id": "e03",
+  "account": "Harbor Freightways",
+  "segment": "Enterprise",
+  "industry": "Logistics",
+  "acv_usd": 180000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Leah Brennan",
+  "sc": "Omar Haddad",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Frank Delacroix",
+      "title": "VP of Operations",
+      "role": "champion",
+      "email": "frank.delacroix@e03.example",
+      "phone": ""
+    },
+    {
+      "name": "Ingrid Solberg",
+      "title": "Director of IT",
+      "role": "technical_evaluator",
+      "email": "ingrid.solberg@e03.example",
+      "phone": ""
+    },
+    {
+      "name": "Pete Nakamura",
+      "title": "Operations Analyst",
+      "role": "technical_evaluator",
+      "email": "pete.nakamura@e03.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Frank Delacroix",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "Dispatch sees every truck in real time.",
+    "pains": [
+      "Positions update every 5 minutes"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e03",
+    "scheduled_start": "2026-09-28T13:00:00-05:00",
+    "scheduled_end": "2026-09-28T13:09:00-05:00",
+    "actual_end": "2026-09-28T13:09:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-28T13:00:00-05:00",
+    "dated_next_step": {
+      "value": "",
+      "filled_at": ""
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "Dispatch sees every truck in real time.",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": "2026-09-28T13:09:30-05:00"
+    },
+    "sc_commitment": {
+      "value": "Residency answer by Oct 1",
+      "filled_at": "2026-09-28T13:09:30-05:00"
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

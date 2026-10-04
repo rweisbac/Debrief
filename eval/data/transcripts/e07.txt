@@ -1,0 +1,28 @@
+PARTICIPANTS
+Grace Liu | Account Executive | apex
+Andre Silva | Solutions Consultant | apex
+Monica Reyes | Director of Enterprise Data | customer
+Sanjay Iyer | Information Security Lead | customer
+---
+[00:03] Grace Liu: Morning Monica, Sanjay. Today is member data ingestion, the claims model, and the security setup. Sanjay, glad you could join.
+[00:14] Sanjay Iyer: Security setup is why I'm here.
+[00:18] Andre Silva: Let's start there then. The tenant is single tenant in a US region. Data is encrypted at rest and in transit. You can hold your own keys in your cloud key service.
+[02:30] Sanjay Iyer: We use the major cloud one. Fine. What about support access?
+[02:37] Andre Silva: Support access requires a ticket and your approval, and every session is logged in your audit trail.
+[02:50] Sanjay Iyer: Good. I'll need the SOC 2 report and the pen test summary.
+[02:57] Andre Silva: I'll send both today under the NDA you already signed.
+[03:04] Monica Reyes: Okay, the claims model please. That's the business case.
+[03:09] Andre Silva: This is the member and claims data from your extract. Claims are matched to members, and the cost trend by plan updates daily instead of monthly.
+[05:40] Monica Reyes: Daily is the whole point. Our actuaries see the trend six weeks late today.
+[05:48] Andre Silva: The match rate on your sample was 99.2 percent. The unmatched rows are in an exceptions table.
+[06:01] Monica Reyes: That's better than ours.
+[06:05] Grace Liu: Monica, where does the process go from here?
+[06:10] Monica Reyes: Sanjay runs the vendor security review. It's about three weeks once he has the documents.
+[06:18] Sanjay Iyer: Our review board meets Thursday, October 22nd. If I have everything by October 14th, you're on that agenda.
+[06:29] Grace Liu: What does everything include?
+[06:33] Sanjay Iyer: SOC 2, pen test summary, our questionnaire, and a data flow diagram.
+[06:40] Andre Silva: I'll do the data flow diagram and send it by Friday, October 9th.
+[06:47] Sanjay Iyer: Good. I'll send the questionnaire today.
+[06:52] Monica Reyes: And after the board, I'll bring in Daniel from finance for commercials.
+[06:58] Grace Liu: Great. I'll send a recap with those dates.
+[07:03] Monica Reyes: Thanks both.

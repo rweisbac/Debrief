@@ -1,0 +1,251 @@
+{
+  "hard_cases": [
+    "objection_buried"
+  ],
+  "scenario": "Positive call; EU-only legal rule and a spend freeze surface in the last minute.",
+  "agreed_next_step": {
+    "exists": null,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Legal will not accept a processor storing data outside the EU",
+      "anchors": [
+        "won't accept a processor"
+      ],
+      "keywords": [
+        [
+          "eu",
+          "frankfurt"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "CFO froze new software spend until Q2",
+      "anchors": [
+        "our CFO froze new software spend"
+      ],
+      "keywords": [
+        [
+          "freeze",
+          "froze",
+          "second quarter",
+          "q2",
+          "april"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "EU residency needs contract wording in writing",
+      "anchors": [
+        "They'll want that in writing"
+      ],
+      "keywords": [
+        [
+          "eu",
+          "frankfurt"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Spend freeze makes a contract before April unlikely",
+      "anchors": [
+        "a contract before April is unlikely"
+      ],
+      "keywords": [
+        [
+          "freeze",
+          "froze",
+          "april",
+          "second quarter",
+          "q2"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    },
+    {
+      "id": "R3",
+      "summary": "Exception path via historian replacement is unconfirmed",
+      "anchors": [
+        "It might replace the old historian license"
+      ],
+      "keywords": [
+        [
+          "historian"
+        ]
+      ],
+      "utterance_ids": [
+        "U023"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Get controller access sorted",
+      "anchors": [
+        "I'll get the controller access sorted"
+      ],
+      "keywords": [
+        [
+          "controller"
+        ]
+      ],
+      "who": "Milan Horak",
+      "side": "customer",
+      "by_when": "2026-10-09",
+      "utterance_ids": [
+        "U014"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send the pilot plan with success criteria",
+      "anchors": [
+        "I'll send the pilot plan"
+      ],
+      "keywords": [
+        [
+          "pilot plan",
+          "success criteria"
+        ]
+      ],
+      "who": "Jonas Weber",
+      "side": "apex",
+      "by_when": "2026-10-05",
+      "utterance_ids": [
+        "U015"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Petra would have to check with finance",
+      "anchors": [
+        "I'd have to check with finance"
+      ],
+      "keywords": [
+        [
+          "finance"
+        ]
+      ],
+      "utterance_ids": [
+        "U024"
+      ]
+    },
+    {
+      "id": "H2",
+      "summary": "Historian replacement is a maybe",
+      "anchors": [
+        "It might replace the old historian license"
+      ],
+      "keywords": [
+        [
+          "historian"
+        ]
+      ],
+      "utterance_ids": [
+        "U023"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Exception process is unclear",
+      "anchors": [
+        "Maybe, if it replaces something we already pay for"
+      ],
+      "keywords": [
+        [
+          "exception",
+          "historian"
+        ]
+      ],
+      "utterance_ids": [
+        "U022"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Contract timing after the freeze",
+      "anchors": [
+        "a contract before April is unlikely"
+      ],
+      "keywords": [
+        [
+          "april",
+          "second quarter",
+          "q2",
+          "freeze",
+          "froze"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "EU hosting wording from compliance, in writing for legal",
+      "anchors": [],
+      "keywords": [
+        [
+          "eu",
+          "frankfurt"
+        ],
+        [
+          "compliance",
+          "wording",
+          "legal",
+          "writing"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Build the historian replacement case for an exception",
+      "anchors": [],
+      "keywords": [
+        [
+          "historian"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Pilot plan by Oct 5",
+      "anchors": [],
+      "keywords": [
+        [
+          "pilot plan"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e06",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

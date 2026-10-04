@@ -1,0 +1,32 @@
+PARTICIPANTS
+Ben Adeyemi | Account Executive | apex
+Sofia Russo | Solutions Consultant | apex
+Gregor Hale | Head of Analytics Engineering | customer
+Tamsin Wu | Data Governance Manager | customer
+---
+[00:03] Ben Adeyemi: Hi Gregor, hi Tamsin. Thanks for joining. Today we wanted to show lineage, the policy engine, and the warehouse connector on your sample data.
+[00:18] Gregor Hale: Sounds good. Tamsin is here mostly for the governance bit.
+[00:25] Tamsin Wu: Yes. Lineage is my main interest.
+[00:31] Sofia Russo: Let's start there. This is column level lineage for the loan book model you sent. You can click any column and see every upstream source and every report that depends on it.
+[03:12] Tamsin Wu: Does it pick up the transformations done in our stored procedures?
+[03:20] Sofia Russo: For SQL we parse, yes. For stored procedures it depends on how dynamic they are. I'd want to look at a few of yours before I promise anything.
+[03:41] Tamsin Wu: Most of them are dynamic. That's a known pain.
+[03:48] Sofia Russo: Then I'll see if I can get a couple of them run through our parser. No promises on timing, our parser team is stretched.
+[04:05] Tamsin Wu: Okay.
+[04:09] Sofia Russo: Next, the policy engine. Here's a masking policy on the borrower name and national ID columns. Analysts see masked values unless they have the steward role.
+[06:30] Gregor Hale: That's fine. That's roughly what we have today, just in three places instead of one.
+[06:41] Sofia Russo: And the warehouse connector. It syncs continuously now, about a minute end to end.
+[07:50] Gregor Hale: Nice. Our current tool is hourly at best.
+[07:58] Ben Adeyemi: Gregor, from your side, what would it take to move forward?
+[08:06] Gregor Hale: I think we'd probably want to get you our data dictionary so you can scope the full model. I'll try to dig it up.
+[08:18] Ben Adeyemi: That would help. Any sense of when?
+[08:23] Gregor Hale: Hard to say. Sometime next week, maybe. It's spread across a few wikis.
+[08:35] Tamsin Wu: I might be able to loop in procurement early, if that helps. I'd have to ask my manager first.
+[08:46] Ben Adeyemi: That would be really useful.
+[08:51] Gregor Hale: Let's aim to reconnect sometime after that. Maybe the week after next, depending on how the quarter close goes.
+[09:04] Ben Adeyemi: Should I send a calendar hold?
+[09:09] Gregor Hale: Not yet. Let me see how things shake out first and I'll ping you.
+[09:17] Ben Adeyemi: Sounds good. I'll send a recap today with what we covered.
+[09:24] Sofia Russo: And I'll write up the stored procedure question so it's clear what I need from Tamsin.
+[09:32] Tamsin Wu: Okay, I'll look at it when it comes.
+[09:38] Gregor Hale: Great. Thanks everyone.

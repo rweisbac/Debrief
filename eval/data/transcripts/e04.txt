@@ -1,0 +1,30 @@
+PARTICIPANTS
+Marta Kowal | Account Executive | apex
+Theo Grant | Solutions Consultant | apex
+Simone Achebe | Director of Clinical Data | customer
+Wes Hollis | Senior Data Engineer | customer
+---
+[00:02] Marta Kowal: Hi Simone, hi Wes. Thanks for making time. Today we'll cover trial data ingestion, the audit trail, and access controls.
+[00:15] Simone Achebe: Thanks. Quick note before we start. Dr. Okafor, our CISO, was supposed to join but she's at a conference. She'll have to sign off on anything that touches trial data.
+[00:31] Marta Kowal: Understood. Is there anything she would want us to cover specifically?
+[00:37] Simone Achebe: Audit trail and who can see unblinded data. That's always her first question.
+[00:46] Theo Grant: Then let's start with ingestion and go straight to audit. This is the trial extract you sent, loaded nightly. Each load is versioned, so you can see exactly what the data looked like on any date.
+[03:20] Wes Hollis: Can we roll back a bad load?
+[03:26] Theo Grant: Yes. Any version can be restored, and the restore itself is logged.
+[03:40] Wes Hollis: Good.
+[03:44] Theo Grant: Here's the audit trail. Every query, export and policy change, with who, when and from where. It can be exported to your log system.
+[05:58] Simone Achebe: Does it cover reads, or only changes?
+[06:04] Theo Grant: Reads too. Every query against a protected table is logged with the user and the columns returned.
+[06:20] Simone Achebe: That's what she'll ask. Good.
+[06:26] Theo Grant: Access controls. Unblinded columns are masked for everyone except the unblinded statistics role. Here's a blinded analyst's view, and here's the statistician's.
+[08:41] Wes Hollis: Can the role be time boxed? We only unblind at interim analysis.
+[08:49] Theo Grant: Role grants can have an expiry date, yes.
+[09:02] Simone Achebe: Okay. This is a good fit technically. But I'll be honest, I can't move this without Dr. Okafor, and I don't know when she'll have time. Her calendar is a disaster until the audit is done.
+[09:20] Marta Kowal: Would it help if we wrote something up for her?
+[09:25] Simone Achebe: Maybe. She doesn't read long documents though.
+[09:31] Marta Kowal: And on the commercial side, who would be involved?
+[09:36] Simone Achebe: Honestly I'm not sure yet. Probably someone in procurement, and above a certain size it goes to the VP of R and D, but I don't know the threshold this year.
+[09:51] Wes Hollis: I can send over the data dictionary for the full trial model.
+[09:57] Theo Grant: That would help. I'll use it to scope the full load.
+[10:04] Simone Achebe: Okay. Let's leave it there for today. Thanks both.
+[10:10] Marta Kowal: Thank you. I'll send a recap this afternoon.

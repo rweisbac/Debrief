@@ -1,0 +1,74 @@
+{
+  "deal_id": "e02",
+  "account": "Calder Bank",
+  "segment": "Enterprise",
+  "industry": "Financial services",
+  "acv_usd": 520000,
+  "stage": "Technical Validation",
+  "close_date": "2026-12-18",
+  "owner_ae": "Ben Adeyemi",
+  "sc": "Sofia Russo",
+  "pod": "Eval-1",
+  "tv_entered_at": "2026-09-14T09:00:00-05:00",
+  "contacts": [
+    {
+      "name": "Gregor Hale",
+      "title": "Head of Analytics Engineering",
+      "role": "champion",
+      "email": "gregor.hale@e02.example",
+      "phone": ""
+    },
+    {
+      "name": "Tamsin Wu",
+      "title": "Data Governance Manager",
+      "role": "technical_evaluator",
+      "email": "tamsin.wu@e02.example",
+      "phone": ""
+    }
+  ],
+  "champion": "Gregor Hale",
+  "economic_buyer": "",
+  "discovery_notes": {
+    "stated_business_outcome": "",
+    "pains": [
+      "Governance spread across three tools"
+    ],
+    "decision_process": "Not discussed."
+  },
+  "prior_call_notes": [
+    {
+      "date": "2026-09-14",
+      "type": "discovery",
+      "summary": "Agreed the TV items."
+    }
+  ],
+  "competitors": [],
+  "demo": {
+    "call_id": "gong-e02",
+    "scheduled_start": "2026-09-29T10:00:00-05:00",
+    "scheduled_end": "2026-09-29T10:10:00-05:00",
+    "actual_end": "2026-09-29T10:10:00-05:00"
+  },
+  "close_the_demo": {
+    "started_at": "2026-09-29T10:00:00-05:00",
+    "dated_next_step": {
+      "value": "Reconnect week after next",
+      "filled_at": "2026-09-29T10:10:30-05:00"
+    },
+    "stakeholder_to_add": {
+      "value": "",
+      "filled_at": ""
+    },
+    "business_outcome": {
+      "value": "",
+      "prefilled_from_discovery": true,
+      "edited": false,
+      "filled_at": ""
+    },
+    "sc_commitment": {
+      "value": "",
+      "filled_at": ""
+    }
+  },
+  "_note": "Synthetic data, fictional company. Eval case for interview prep."
+}

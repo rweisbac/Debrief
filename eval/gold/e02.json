@@ -1,0 +1,235 @@
+{
+  "hard_cases": [
+    "ambiguous_commitments"
+  ],
+  "scenario": "Every customer action is hedged. No dated next step.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Lineage through dynamic stored procedures",
+      "anchors": [
+        "Most of them are dynamic"
+      ],
+      "keywords": [
+        [
+          "stored procedure"
+        ]
+      ],
+      "utterance_ids": [
+        "U007"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Lineage for dynamic stored procedures is unproven",
+      "anchors": [
+        "Most of them are dynamic"
+      ],
+      "keywords": [
+        [
+          "stored procedure"
+        ]
+      ],
+      "utterance_ids": [
+        "U007"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send a recap today",
+      "anchors": [
+        "I'll send a recap today"
+      ],
+      "keywords": [
+        [
+          "recap"
+        ]
+      ],
+      "who": "Ben Adeyemi",
+      "side": "apex",
+      "by_when": "2026-09-29",
+      "utterance_ids": [
+        "U023"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Write up the stored procedure question for Tamsin",
+      "anchors": [
+        "I'll write up the stored procedure question"
+      ],
+      "keywords": [
+        [
+          "write up",
+          "written",
+          "write-up"
+        ]
+      ],
+      "who": "Sofia Russo",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U024"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Sofia: see if a couple of procedures can run through the parser, no promises",
+      "anchors": [
+        "No promises on timing"
+      ],
+      "keywords": [
+        [
+          "parser"
+        ]
+      ],
+      "utterance_ids": [
+        "U008"
+      ]
+    },
+    {
+      "id": "H2",
+      "summary": "Gregor: try to dig up the data dictionary, maybe next week",
+      "anchors": [
+        "I'll try to dig it up"
+      ],
+      "keywords": [
+        [
+          "data dictionary"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    },
+    {
+      "id": "H3",
+      "summary": "Tamsin: might loop in procurement, needs her manager",
+      "anchors": [
+        "I might be able to loop in procurement"
+      ],
+      "keywords": [
+        [
+          "procurement"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "H4",
+      "summary": "Gregor: reconnect maybe the week after next, no hold",
+      "anchors": [
+        "Maybe the week after next"
+      ],
+      "keywords": [
+        [
+          "reconnect",
+          "week after next"
+        ]
+      ],
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Data dictionary timing",
+      "anchors": [
+        "Sometime next week, maybe"
+      ],
+      "keywords": [
+        [
+          "data dictionary"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Procurement loop-in needs manager approval",
+      "anchors": [
+        "I'd have to ask my manager first"
+      ],
+      "keywords": [
+        [
+          "procurement"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    },
+    {
+      "id": "U3",
+      "summary": "No dated next meeting",
+      "anchors": [
+        "Not yet. Let me see how things shake out"
+      ],
+      "keywords": [
+        [
+          "reconnect",
+          "next meeting",
+          "calendar",
+          "hold",
+          "week after next"
+        ]
+      ],
+      "utterance_ids": [
+        "U022"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Recap that lists the hedged asks as open, with no invented dates",
+      "anchors": [],
+      "keywords": [
+        [
+          "recap"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Make the data dictionary ask specific and easy",
+      "anchors": [],
+      "keywords": [
+        [
+          "data dictionary"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Written stored procedure ask with sample request",
+      "anchors": [],
+      "keywords": [
+        [
+          "stored procedure"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e02",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

@@ -1,0 +1,297 @@
+{
+  "hard_cases": [
+    "long_rambling_call",
+    "objection_buried"
+  ],
+  "scenario": "83 turns of tangents; privacy concern buried mid call.",
+  "agreed_next_step": {
+    "exists": null,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Privacy team may not allow joining viewing logs to opted out subscribers",
+      "anchors": [
+        "The privacy team has been making noise about consent data"
+      ],
+      "keywords": [
+        [
+          "consent",
+          "privacy",
+          "opted out",
+          "opt out"
+        ]
+      ],
+      "utterance_ids": [
+        "U043"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Burned by a past vendor that overpromised real time",
+      "anchors": [
+        "real time meant every six hours"
+      ],
+      "keywords": [
+        [
+          "vendor"
+        ]
+      ],
+      "utterance_ids": [
+        "U021"
+      ]
+    },
+    {
+      "id": "C3",
+      "summary": "Agency must only see aggregates",
+      "anchors": [
+        "The agency should only see aggregate numbers"
+      ],
+      "keywords": [
+        [
+          "agency",
+          "aggregate"
+        ]
+      ],
+      "utterance_ids": [
+        "U048"
+      ]
+    },
+    {
+      "id": "C4",
+      "summary": "Handling of late events",
+      "anchors": [
+        "I want to see how you handle late events"
+      ],
+      "keywords": [
+        [
+          "late event"
+        ]
+      ],
+      "utterance_ids": [
+        "U072"
+      ]
+    },
+    {
+      "id": "C5",
+      "summary": "Some segments live in spreadsheets",
+      "anchors": [
+        "Some of them are defined in spreadsheets"
+      ],
+      "keywords": [
+        [
+          "spreadsheet"
+        ]
+      ],
+      "utterance_ids": [
+        "U029"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Consent rules may block the attribution use case",
+      "anchors": [
+        "it might kill the whole attribution piece"
+      ],
+      "keywords": [
+        [
+          "consent",
+          "privacy"
+        ]
+      ],
+      "utterance_ids": [
+        "U045"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Budget sits with Ann; planning is in November",
+      "anchors": [
+        "I need to talk to Ann about budget"
+      ],
+      "keywords": [
+        [
+          "ann",
+          "november",
+          "budget"
+        ]
+      ],
+      "utterance_ids": [
+        "U066"
+      ]
+    },
+    {
+      "id": "R3",
+      "summary": "Spreadsheet segments need manual refresh",
+      "anchors": [
+        "it's just a manual refresh"
+      ],
+      "keywords": [
+        [
+          "spreadsheet",
+          "manual"
+        ]
+      ],
+      "utterance_ids": [
+        "U030"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "One pager for Ann",
+      "anchors": [
+        "I'll get that to you by Wednesday, October 7th"
+      ],
+      "keywords": [
+        [
+          "one pager",
+          "one-pager",
+          "summary"
+        ]
+      ],
+      "who": "Ryan Castellano",
+      "side": "apex",
+      "by_when": "2026-10-07",
+      "utterance_ids": [
+        "U070"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send dedupe config and a note on late events",
+      "anchors": [
+        "I'll send the dedupe config"
+      ],
+      "keywords": [
+        [
+          "dedupe"
+        ]
+      ],
+      "who": "Nia Oduya",
+      "side": "apex",
+      "by_when": "2026-10-02",
+      "utterance_ids": [
+        "U073"
+      ]
+    },
+    {
+      "id": "M3",
+      "summary": "Send the list of 60 segments",
+      "anchors": [
+        "I'll send over the list of our 60 segments"
+      ],
+      "keywords": [
+        [
+          "segment"
+        ]
+      ],
+      "who": "Karen Ibsen",
+      "side": "customer",
+      "by_when": "",
+      "utterance_ids": [
+        "U075"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Fantasy league: I'll think about it",
+      "anchors": [
+        "I'll think about it"
+      ],
+      "keywords": [
+        [
+          "fantasy"
+        ]
+      ],
+      "utterance_ids": [
+        "U080"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Consent issue could be nothing or could block attribution",
+      "anchors": [
+        "It might be nothing"
+      ],
+      "keywords": [
+        [
+          "consent",
+          "privacy"
+        ]
+      ],
+      "utterance_ids": [
+        "U045"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Doug's support is qualified by the last vendor experience",
+      "anchors": [
+        "take that with a grain of salt"
+      ],
+      "keywords": [
+        [
+          "last vendor",
+          "grain of salt",
+          "qualif",
+          "liked the last"
+        ]
+      ],
+      "utterance_ids": [
+        "U063"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "One pager for Ann by Oct 7",
+      "anchors": [],
+      "keywords": [
+        [
+          "ann"
+        ],
+        [
+          "one pager",
+          "one-pager",
+          "summary"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Raise the consent question with the privacy team early",
+      "anchors": [],
+      "keywords": [
+        [
+          "consent",
+          "privacy"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Dedupe config and late events note",
+      "anchors": [],
+      "keywords": [
+        [
+          "dedupe"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e05",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

@@ -1,0 +1,186 @@
+{
+  "hard_cases": [],
+  "scenario": "Latency risk with exact numbers; dated results review.",
+  "agreed_next_step": {
+    "exists": true,
+    "date": "2026-10-12"
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "99th percentile latency 3.8 seconds is too slow",
+      "anchors": [
+        "3.8 seconds is too slow"
+      ],
+      "keywords": [
+        [
+          "3.8",
+          "99th",
+          "p99",
+          "latency"
+        ]
+      ],
+      "utterance_ids": [
+        "U004"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Vessel estimates arrive in an old message format",
+      "anchors": [
+        "over an old message format"
+      ],
+      "keywords": [
+        [
+          "format",
+          "port community"
+        ]
+      ],
+      "utterance_ids": [
+        "U010"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Latency over 2 seconds at p99; dedicated cluster unmeasured",
+      "anchors": [
+        "I haven't measured it"
+      ],
+      "keywords": [
+        [
+          "latency",
+          "99th",
+          "p99",
+          "3.8"
+        ]
+      ],
+      "utterance_ids": [
+        "U005"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Message format unknown",
+      "anchors": [
+        "I haven't seen that format"
+      ],
+      "keywords": [
+        [
+          "format"
+        ]
+      ],
+      "utterance_ids": [
+        "U011"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Run the latency test on a dedicated cluster and send results",
+      "anchors": [
+        "send you the results by Thursday, October 8th"
+      ],
+      "keywords": [
+        [
+          "dedicated"
+        ]
+      ],
+      "who": "Mateo Ruiz",
+      "side": "apex",
+      "by_when": "2026-10-08",
+      "utterance_ids": [
+        "U007"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Send a sample message file",
+      "anchors": [
+        "I'll send one today"
+      ],
+      "keywords": [
+        [
+          "sample"
+        ]
+      ],
+      "who": "Yuki Tanaka",
+      "side": "customer",
+      "by_when": "2026-10-02",
+      "utterance_ids": [
+        "U012"
+      ]
+    },
+    {
+      "id": "M3",
+      "summary": "Send the invite for Oct 12",
+      "anchors": [
+        "Booked. I'll send the invite"
+      ],
+      "keywords": [
+        [
+          "invite",
+          "october 12",
+          "oct 12",
+          "2026-10-12"
+        ]
+      ],
+      "who": "Olivia Grant",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "non_commitments": [],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Dedicated cluster latency is unknown",
+      "anchors": [
+        "I won't give you a number"
+      ],
+      "keywords": [
+        [
+          "dedicated"
+        ]
+      ],
+      "utterance_ids": [
+        "U005"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Dedicated test by Oct 8 against the 2 second target",
+      "anchors": [],
+      "keywords": [
+        [
+          "dedicated"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Assess the message format sample",
+      "anchors": [],
+      "keywords": [
+        [
+          "format",
+          "sample"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "traps": [
+    "Do not present dedicated cluster latency as a result; it was not measured."
+  ],
+  "deal_id": "e13",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

@@ -1,0 +1,186 @@
+{
+  "hard_cases": [
+    "missing_stakeholder"
+  ],
+  "scenario": "Enthusiastic contact, no commitment; budget owner not engaged.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "Privacy officer will review access controls",
+      "anchors": [
+        "Our privacy officer will want to see that"
+      ],
+      "keywords": [
+        [
+          "privacy"
+        ]
+      ],
+      "utterance_ids": [
+        "U009"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Provost owns budget and is not engaged",
+      "anchors": [
+        "The provost owns the budget"
+      ],
+      "keywords": [
+        [
+          "provost",
+          "abernathy"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Technology committee timing unknown",
+      "anchors": [
+        "I think they meet once a semester"
+      ],
+      "keywords": [
+        [
+          "committee"
+        ]
+      ],
+      "utterance_ids": [
+        "U018"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send retention dashboard screenshots",
+      "anchors": [
+        "I'll send the retention dashboard screenshots"
+      ],
+      "keywords": [
+        [
+          "screenshot"
+        ]
+      ],
+      "who": "Sam Okoro",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U020"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Champion enthusiasm is not an action",
+      "anchors": [
+        "I'll absolutely champion this"
+      ],
+      "keywords": [
+        [
+          "champion"
+        ]
+      ],
+      "utterance_ids": [
+        "U011"
+      ]
+    },
+    {
+      "id": "H2",
+      "summary": "Eventually meet the provost, no date",
+      "anchors": [
+        "Eventually, sure"
+      ],
+      "keywords": [
+        [
+          "abernathy",
+          "provost"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Committee timing unknown",
+      "anchors": [
+        "I'm honestly not sure"
+      ],
+      "keywords": [
+        [
+          "committee"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "Enthusiasm without a decision path",
+      "anchors": [
+        "I'm going to tell everyone about it"
+      ],
+      "keywords": [
+        [
+          "enthusias",
+          "no commitment",
+          "not a decision",
+          "no decision"
+        ]
+      ],
+      "utterance_ids": [
+        "U011"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Give Elise something specific for Dr. Abernathy",
+      "anchors": [],
+      "keywords": [
+        [
+          "abernathy",
+          "provost"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Find the committee date and process",
+      "anchors": [],
+      "keywords": [
+        [
+          "committee"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Access control material for the privacy officer",
+      "anchors": [],
+      "keywords": [
+        [
+          "privacy"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e11",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}

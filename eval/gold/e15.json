@@ -1,0 +1,272 @@
+{
+  "hard_cases": [
+    "missing_stakeholder",
+    "objection_buried"
+  ],
+  "scenario": "CFO joins in the last minute with term and build vs buy objections.",
+  "agreed_next_step": {
+    "exists": false,
+    "date": ""
+  },
+  "concerns": [
+    {
+      "id": "C1",
+      "summary": "3 year minimum term, quarterly in arrears",
+      "anchors": [
+        "Quarterly in arrears only"
+      ],
+      "keywords": [
+        [
+          "three year",
+          "3 year",
+          "3-year",
+          "quarterly",
+          "arrears"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    },
+    {
+      "id": "C2",
+      "summary": "Cost comparison against building in house",
+      "anchors": [
+        "a cost comparison against building it ourselves"
+      ],
+      "keywords": [
+        [
+          "build"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    },
+    {
+      "id": "C3",
+      "summary": "Stream backup behavior",
+      "anchors": [
+        "What happens when the stream backs up?"
+      ],
+      "keywords": [
+        [
+          "back up",
+          "backs up",
+          "outage",
+          "catch up"
+        ]
+      ],
+      "utterance_ids": [
+        "U004"
+      ]
+    },
+    {
+      "id": "C4",
+      "summary": "Custom fields in case export",
+      "anchors": [
+        "Does case export support our custom fields?"
+      ],
+      "keywords": [
+        [
+          "custom field"
+        ]
+      ],
+      "utterance_ids": [
+        "U009"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": "R1",
+      "summary": "Payment terms conflict with standard terms",
+      "anchors": [
+        "Quarterly in arrears only"
+      ],
+      "keywords": [
+        [
+          "arrears",
+          "quarterly",
+          "three year",
+          "3 year"
+        ]
+      ],
+      "utterance_ids": [
+        "U013"
+      ]
+    },
+    {
+      "id": "R2",
+      "summary": "Build vs buy comparison required before signing",
+      "anchors": [
+        "nothing gets signed this year"
+      ],
+      "keywords": [
+        [
+          "build"
+        ]
+      ],
+      "utterance_ids": [
+        "U015"
+      ]
+    },
+    {
+      "id": "R3",
+      "summary": "Custom fields untested",
+      "anchors": [
+        "I'd want to test it on your case tool"
+      ],
+      "keywords": [
+        [
+          "custom field"
+        ]
+      ],
+      "utterance_ids": [
+        "U010"
+      ]
+    }
+  ],
+  "commitments": [
+    {
+      "id": "M1",
+      "summary": "Send the custom field list",
+      "anchors": [
+        "I'll send it tomorrow"
+      ],
+      "keywords": [
+        [
+          "field"
+        ]
+      ],
+      "who": "Zara Ahmed",
+      "side": "customer",
+      "by_when": "2026-10-03",
+      "utterance_ids": [
+        "U011"
+      ]
+    },
+    {
+      "id": "M2",
+      "summary": "Test custom fields once the list arrives",
+      "anchors": [
+        "I'll test the custom fields"
+      ],
+      "keywords": [
+        [
+          "custom field"
+        ]
+      ],
+      "who": "Ravi Shah",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U020"
+      ]
+    },
+    {
+      "id": "M3",
+      "summary": "Check terms with deal desk",
+      "anchors": [
+        "I'll need to check that with our deal desk"
+      ],
+      "keywords": [
+        [
+          "deal desk"
+        ]
+      ],
+      "who": "Nora Quinn",
+      "side": "apex",
+      "by_when": "",
+      "utterance_ids": [
+        "U014"
+      ]
+    }
+  ],
+  "non_commitments": [
+    {
+      "id": "H1",
+      "summary": "Talk next week is not a dated next step",
+      "anchors": [
+        "Let's talk next week"
+      ],
+      "keywords": [
+        [
+          "next week"
+        ]
+      ],
+      "utterance_ids": [
+        "U021"
+      ]
+    }
+  ],
+  "uncertain": [
+    {
+      "id": "U1",
+      "summary": "Next step undated",
+      "anchors": [
+        "Let's talk next week"
+      ],
+      "keywords": [
+        [
+          "next week"
+        ]
+      ],
+      "utterance_ids": [
+        "U021"
+      ]
+    },
+    {
+      "id": "U2",
+      "summary": "CFO concedes in-house build may not work but still needs the comparison",
+      "anchors": [
+        "Maybe not"
+      ],
+      "keywords": [
+        [
+          "build"
+        ]
+      ],
+      "utterance_ids": [
+        "U017"
+      ]
+    }
+  ],
+  "next_steps": [
+    {
+      "id": "N1",
+      "summary": "Take the terms to deal desk",
+      "anchors": [],
+      "keywords": [
+        [
+          "deal desk"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N2",
+      "summary": "Build vs buy comparison for Helen",
+      "anchors": [],
+      "keywords": [
+        [
+          "build"
+        ]
+      ],
+      "utterance_ids": []
+    },
+    {
+      "id": "N3",
+      "summary": "Test custom fields",
+      "anchors": [],
+      "keywords": [
+        [
+          "custom field"
+        ]
+      ],
+      "utterance_ids": []
+    }
+  ],
+  "deal_id": "e15",
+  "_note": "Synthetic data, fictional company. Hand labels written before any run."
+}
