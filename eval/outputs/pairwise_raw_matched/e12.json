@@ -1,0 +1,28 @@
+{
+ "deal_id": "e12",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Ask Neil what the board technology committee needs, and offer a short summary for the committee tied to daily loss ratio and repricing. (owner Victor Hayes, due 2026-10-02). Why: Neil's end of month signature is conditional on the board, so the recap and order form alone don't help him get approval.",
+  "Log Rosa's mid term endorsements commitment with the October 6th date and confirm to Amira when the recording is sent. (owner Rosa Medina, due 2026-10-06). Why: The commitment was made in passing and the CRM sc_commitment field is empty, so it could slip."
+ ],
+ "opponent_steps": [
+  "Map the board approval path and get a dated next step that reflects it** - **Action:** Send the recap and order form today, as promised, but frame the order form as a draft for the approval packet. In the recap, ask Neil for four things: the technology committee's November meeting date, the submission deadline, what the exception process requires, and who sits on the committee. Then book a short call this week to build the approval plan, including whether we can support a business case or brief for the committee. - **Owner:** Victor Hayes - **Timing:** Recap today (Oct 1). Approval-path call held by about Oct 6. - **Why:** At $410K the deal is over the $300K threshold, so \"sign by end of month\" depends on an exception Neil himself isn't sure he can get. The real decision-maker is the board, not Neil.",
+  "Deliver the mid-term endorsement demo recording** - **Action:** Build the demo using Mosaic's endorsement scenarios, send the recording to Amira (copying Neil), and confirm she's satisfied. If she has gaps, schedule a follow-up. - **Owner:** Rosa Medina - **Timing:** Recording sent by Tuesday, Oct 6. Confirm Amira's sign-off within a couple of days after. - **Why:** This is Amira's open technical gap and a dated commitment we made on the call. Closing it removes the last technical objection and gives Neil something concrete for the board."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step targets the board approval gap with a concise summary tied to Neil's stated outcome, and respects his pace. B's call push, extra asks and invented \"four things\" go beyond what was said.",
+   "cost_usd": 0.00399
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "A's first step maps the board approval path, sends the order form framed as a draft, and books a dated call. B's is narrower, though it adds a useful CRM commitment log.",
+   "cost_usd": 0.00388
+  }
+ ]
+}

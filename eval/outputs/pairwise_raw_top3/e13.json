@@ -1,0 +1,29 @@
+{
+ "deal_id": "e13",
+ "opponent": "raw_top3",
+ "debrief_steps": [
+  "Ask Henrik to confirm the pass bar in writing, such as 99th percentile under 2 seconds at about 15 thousand events a second, before Mateo runs the dedicated test. (owner Mateo Ruiz, due 2026-10-05). Why: Henrik called the 99th percentile the problem but also said the result decides it; an unstated bar invites a dispute over a passing median.",
+  "Ask Henrik who signs off on this purchase and whether that person can join the October 12 results review. (owner Olivia Grant, due 2026-10-05). Why: No economic buyer is named and TV began September 14. With a champion-led review booked, the gap is easy to overlook."
+ ],
+ "opponent_steps": [
+  "Run the dedicated-cluster latency test and agree the pass criteria first** - **Action:** Rerun the same 15k events/sec test on a dedicated cluster. Before running it, confirm with Henrik that \"under 2 seconds\" means p99 (not median) at peak load. Send the results with a clear pass/fail read. - **Owner:** Mateo Ruiz, with Olivia Grant confirming the criteria with Henrik. - **Timing:** Criteria confirmed by Mon Oct 5. Results to Henrik and Yuki by Thu Oct 8, the date Mateo committed to. - **Why:** Henrik said this \"decides it,\" and the sandbox p99 of 3.8s fails his 2s requirement. Mateo gave no estimate for dedicated, so the result could go either way.",
+  "Get the legacy message sample and confirm the port community system format can be read** - **Action:** Get Yuki's sample file (she promised it today). Mateo reviews it and tells her whether the platform can ingest it, and what any gap would take to close. If the file hasn't arrived, Olivia chases it. - **Owner:** Yuki sends the file. Mateo assesses it. Olivia chases if needed. - **Timing:** File received Fri Oct 2, chased Mon Oct 5 if missing. Assessment done before the Oct 12 review. - **Why:** Mateo has never seen this format, and the berth schedule model depends on those vessel estimates. It's an unvalidated integration risk that could surface after the latency question is settled.",
+  "Identify the economic buyer and decision process, and bring them into the Oct 12 review** - **Action:** Send the Oct 12 invite today. Ask Henrik who owns budget and sign-off, what the approval steps are, and whether that person should attend the review. Record the answers in the CRM (economic buyer and stakeholder fields are blank, and decision process is \"Not discussed\"). - **Owner:** Olivia Grant. - **Timing:** Invite sent Fri Oct 2. Ask Henrik this week, before Oct 12. - **Why:** This is a $530K deal targeting a Dec 18 close, and the only contacts are the champion and a technical evaluator. A good test result won't close the deal without the person who signs."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_top3",
+   "top_step_winner": "debrief",
+   "why": "A's first step nails the pass bar, but B covers the dedicated test, the unseen message-format sample, and the economic buyer, all grounded in the call. A omits the sample file, which Mateo hasn't validated.",
+   "cost_usd": 0.009326
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_top3",
+   "top_step_winner": "tie",
+   "why": "Both lead with confirming the latency pass bar before the dedicated test. A also covers the unvalidated legacy message format and the economic buyer; B misses the format risk. A's chasing is mildly pushy.",
+   "cost_usd": 0.008676
+  }
+ ]
+}

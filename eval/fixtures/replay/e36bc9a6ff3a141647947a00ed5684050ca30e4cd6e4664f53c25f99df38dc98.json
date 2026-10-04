@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e36bc9a6ff3a141647947a00ed5684050ca30e4cd6e4664f53c25f99df38dc98",
+ "recorded_at": "2026-10-04T02:11:31.713922+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLTq9q9duJWDikmxFn",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"b\",\"why\":\"A targets the real gaps (Daniel's signer role, Oct 14 document checklist) with owners and dates. B's first step is the correct, immediate unblocker, but B invents a self-imposed Oct 12 target and hedges on already-stated facts.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 720,
+   "cache_creation_input_tokens": 2212,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2212,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 106,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

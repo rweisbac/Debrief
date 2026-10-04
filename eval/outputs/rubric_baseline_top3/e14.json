@@ -1,0 +1,60 @@
+{
+ "deal_id": "e14",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Confirm the whitepaper went out** today, and log both Elena commitments in the CRM.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest is r3: the step is internal housekeeping (confirm send, log in CRM) and gives no one at the customer anything new for the group security office; fix by having Elena send the whitepaper with a short cover note on the key-hierarchy and the cloud-key-service-only limit, with the AE named as owner and today as the date."
+   },
+   "error": "",
+   "cost_usd": 0.010096
+  },
+  {
+   "rank": 2,
+   "step": "**Get a dated next step.** Ask Matteo for a date by which he'll know, or for a short check-in (for example, after Oct 7 once the wording arrives).",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest is r6: Sean already asked 'when would you know?' in U017 and Matteo said in U018 that he doesn't control the group security office's timeline, so asking again presses on a customer-owned process (PB-09); replace it with sending what that review needs, such as the whitepaper and the Oct 7 wording, with a dated offer to reconnect that Charlotte can accept or change."
+   },
+   "error": "",
+   "cost_usd": 0.0122
+  },
+  {
+   "rank": 3,
+   "step": "**Offer a session with the group security office,** with Elena on hand for questions on the key hierarchy. Ask Matteo for the right contacts, and add them as stakeholders.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest are r4 and r3: the step has no owner or date for the offer or the contact request, and it hands Matteo nothing forwardable (such as a one-page cloud key service brief for the group security office that covers the on-premises HSM gap), so fix it by naming who sends the offer by when and attaching an artifact Matteo can pass on."
+   },
+   "error": "",
+   "cost_usd": 0.012586
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "deal_id": "e03",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm whether it covers telematics, so Omar's October 1 answer addresses it. (owner Leah Brennan, due 2026-09-29). Why: Frank and Ingrid contradict each other on whether the contracts cover telematics; Omar's answer is useless unless legal's actual position is known.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest is r3_buyer_enabling: the step is an information request that serves Apex's residency answer and gives Frank and Ingrid nothing forwardable, so pair the ask with a short residency brief (what Apex can confirm by Oct 1, what legal must confirm) that Frank can take to legal."
+   },
+   "error": "",
+   "cost_usd": 0.017479
+  },
+  {
+   "rank": 2,
+   "step": "Ask Frank who signs for this purchase and propose a dated meeting after Omar's October 1 answer, before sending 50 and 400 seat pricing. (owner Leah Brennan, due 2026-09-29). Why: No one named who signs, and pricing for two seat counts will start commercial talk before any buyer touchpoint.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The step serves the seller (find the signer, gate pricing) and gives the customer nothing to forward, and holding back the 50 and 400 seat pricing Frank and Ingrid asked for cuts against their stated pace; fix by sending the pricing with a short brief the champion can take to whoever signs, and offering the dated meeting rather than making it a precondition."
+   },
+   "error": "",
+   "cost_usd": 0.013351
+  }
+ ]
+}

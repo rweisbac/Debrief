@@ -1,0 +1,60 @@
+{
+ "deal_id": "e07",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Send the SOC 2 report and pen test summary to Sanjay today (Oct 1).** - **Owner:** Andre Silva - **Timing:** Today, under the existing NDA. - **Why it matters:** This is a same-day promise to the security gatekeeper, and a slip on the first deliverable would undermine confidence in the rest of the review.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is R7: this only fulfills a request Sanjay already made (U006/U007), so it is baseline follow-through; it would go further if it bundled the full Oct 14 packet (SOC 2, pen test summary, questionnaire, data flow diagram by Oct 9) into a dated checklist Sanjay can forward to his review board."
+   },
+   "error": "",
+   "cost_usd": 0.011818
+  },
+  {
+   "rank": 2,
+   "step": "Complete the rest of the security package and have it all with Sanjay by Oct 14.** - **Action:** Return Sanjay's questionnaire and send the data flow diagram. - **Owner:** Andre owns both and pulls in apex security and compliance for the questionnaire. Grace tracks progress and confirms with Sanjay that everything is received. - **Timing:** Diagram by Fri Oct 9 (committed). Questionnaire back by about Oct 9 as well, to leave a buffer before the Oct 14 cutoff. - **Why it matters:** If the package is complete by Oct 14, Summit stays on the Oct 22 board agenda. A miss likely pushes the board a cycle and puts the Dec 18 close on a $600K deal at risk.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "R5 is the weakest: the claim that a miss 'likely pushes the board a cycle' is a guess, since Sanjay never stated the board's cadence or what happens after a missed cutoff; say only that the Oct 14 cutoff is what puts them on the Oct 22 agenda."
+   },
+   "error": "",
+   "cost_usd": 0.012674
+  },
+  {
+   "rank": 3,
+   "step": "Send the recap today and use it to pin down Daniel in finance and the economic buyer.** - **Action:** Send a recap with every date and owner, and ask Monica for Daniel's full name and contact details. Ask her who signs, and whether Daniel can join a short early commercial or budget conversation before Oct 22. Then update the CRM. - **Owner:** Grace Liu - **Timing:** Recap today. Daniel and the economic buyer by about Oct 9. - **Why it matters:** The CRM has no economic buyer, and finance only enters after the board. Naming and engaging that person now keeps commercials from stalling between Oct 22 and Dec 18.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The weakest criterion is R6: Monica said Daniel joins after the Oct 22 board, and the step pushes for an early commercial conversation, so it should offer to support the security review (documents by Oct 14) and ask only who signs, leaving the Daniel timing to her."
+   },
+   "error": "",
+   "cost_usd": 0.012276
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "deal_id": "e08",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Isaac:** Send the invite today with a specific time. Invite Tobias, and ask Rachel whether any leadership stakeholder should attend.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest are r3 and r7: the step is mostly calendar hygiene for a meeting already agreed, and it gives Rachel nothing to forward to leadership, so it should add a short agenda or brief that frames the cost comparison on her workload ahead of the Oct 20 Lakestream renewal conversation."
+   },
+   "error": "",
+   "cost_usd": 0.01289
+  },
+  {
+   "rank": 2,
+   "step": "**Isaac:** Find out who the economic buyer is and who will weigh in on the second-platform decision. Fill the blank CRM stakeholder field. Offer to help Rachel with a leadership-ready summary.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are R4 and R3: the step has no date and only offers a summary instead of delivering a forwardable leadership brief, so fix it by having Isaac send Rachel a one-page 'why Apex vs expanding Lakestream' brief on her workload ahead of the Oct 14 review, and ask who signs during that exchange."
+   },
+   "error": "",
+   "cost_usd": 0.010772
+  },
+  {
+   "rank": 3,
+   "step": "**Lena:** Confirm in writing that the comparison will be ready by about Oct 8, so Rachel has a pre-read ahead of Oct 14.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest are r7 and r3: confirming a date in writing is commitment-logging hygiene and gives Rachel nothing to forward to leadership, so pair it with a one-page pre-read on the cost comparison framing (their volumes, refresh and add-on included) that she can use before the Oct 20 Lakestream renewal conversation."
+   },
+   "error": "",
+   "cost_usd": 0.014994
+  }
+ ]
+}

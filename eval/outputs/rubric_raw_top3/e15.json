@@ -1,0 +1,60 @@
+{
+ "deal_id": "e15",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Lock in the build-vs-buy cost comparison with Helen, and get a dated meeting for it** - **Action:** Email Liam and Helen to book a dated meeting next week, replacing the vague \"talk next week\". Use it to learn what the comparison must include (the engineering lead's six-month build estimate, ongoing maintenance, opportunity cost). Then build the TCO comparison with Ravi and Liam's input. Also record Helen as economic buyer in the CRM (the field is blank) and ask about the decision process, which is still undocumented. - **Owner:** Nora, with Ravi supporting the technical side of the build estimate. - **Timing:** Send the invite by Monday, Oct 5. Hold the meeting next week and deliver the comparison soon after, leaving plenty of runway before the Dec 18 close. - **Why it matters:** Helen said nothing gets signed this year without this comparison, so it gates the whole $560K deal, and the next step has no date or economic-buyer coverage yet.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is R4: the comparison is due only 'soon after' the meeting, so it needs a firm date, and the step skips Helen's three-year and quarterly-in-arrears terms, which should be routed to deal desk with a date."
+   },
+   "error": "",
+   "cost_usd": 0.011739
+  },
+  {
+   "rank": 2,
+   "step": "**Take the 3-year term and quarterly-in-arrears payment requirements to deal desk** - **Action:** Submit both terms for approval, and ask about pricing, discount and cash-flow implications. Get a clear yes, no or counter-offer. - **Owner:** Nora. - **Timing:** Submit by Tuesday, Oct 6, and aim to have an answer before the meeting with Helen. - **Why it matters:** Helen's terms are firm policy, so the team needs to know whether Apex can meet them before it puts a proposal and comparison in front of her.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest is r2/r3: Helen's stated gate is a build-vs-buy cost comparison before anything is signed this year, but this step is an internal terms check that gives the customer nothing; fix it by owning a dated, forwardable cost comparison (including her engineering lead's six-month build claim) for Helen, with the deal desk terms check as a supporting step."
+   },
+   "error": "",
+   "cost_usd": 0.012637
+  },
+  {
+   "rank": 3,
+   "step": "**Test the custom-field case export once Zara sends her field list** - **Action:** Follow up with Zara to get the field list, test it against her case tool, and confirm the results in writing. Log this as Ravi's commitment in the CRM, where the field is currently empty. - **Owner:** Ravi. - **Timing:** Chase Zara Monday if the list hasn't arrived, and report results within 2 business days of receiving it. - **Why it matters:** It's the only open technical question, and Ravi's answer (\"I believe so\") was unconfirmed. Closing it keeps Liam's view that \"we're in good shape technically\" intact.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "The step misses the real blocker: Helen said nothing signs this year without a build-vs-buy cost comparison, plus 3-year and quarterly-in-arrears terms, while Liam already considers the technical side in good shape; fix it by adding a dated cost-comparison deliverable for Helen via Liam, and drop the Monday chase of Zara, who already committed to send the list."
+   },
+   "error": "",
+   "cost_usd": 0.013713
+  }
+ ]
+}

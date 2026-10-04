@@ -1,0 +1,60 @@
+{
+ "deal_id": "e03",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Resolve Canadian data residency, and get the customer's contract language** - **Action:** Omar gets a definitive answer from the hosting team on whether a Canadian region or in-Canada storage is available today, and on its timeline if not. Leah asks Frank and Ingrid to send the Canadian contract clause and the legal opinion Ingrid cited, since the two disagree on whether it covers telematics data. - **Owner:** Omar (hosting answer), Leah (customer-side ask). - **Timing:** Leah sends the ask in today's follow-up email. Omar delivers the answer by Thursday, Oct 1, as he committed on the call. - **Why it matters:** About half of their loads are Canadian, so this could be a deal-breaker, and nobody on either side knows yet whether it applies.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "The weakest criterion is r3_buyer_enabling: the step is seller-side work plus a document request, so it should add a forwardable residency brief for Frank and Ingrid that states what is available today and lays out the contract-language question in a form they can take to Legal."
+   },
+   "error": "",
+   "cost_usd": 0.010411
+  },
+  {
+   "rank": 2,
+   "step": "**Book a dated next meeting and widen the stakeholder group** - **Action:** Send a recap email proposing a specific meeting (for example, Oct 1 or 2) to review the residency answer and pricing. Ask Frank to add customer legal or compliance, plus whoever in finance asked Ingrid about the tool. Ask who the economic buyer is and how approval works. Record the dated next step and the new stakeholders in the CRM. - **Owner:** Leah. - **Timing:** Today, Sept 28, within hours of the call. - **Why it matters:** The call ended with no dated next step. The CRM has no economic buyer and no decision process, and the Dec 18 close date rests on both.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest are R3 and R7: the step is a recap, a meeting request and a CRM update, and gives Frank nothing specific to bring to legal, finance or the economic buyer (for example a short residency question brief or a 50 versus 400 seat pricing summary)."
+   },
+   "error": "",
+   "cost_usd": 0.011651
+  },
+  {
+   "rank": 3,
+   "step": "**Send pricing for both 50 and 400 seats, framed as phased** - **Action:** Send a quote for 50 seats (dispatch) and for 400 seats (year one). Make clear that the real-time feed is scoped to dispatch and that the other users may have different freshness needs. Note that hosting terms depend on the residency answer. - **Owner:** Leah, with Omar on scoping the real-time versus daily-refresh use cases. - **Timing:** Ready for the next meeting, by Oct 1\u20132. Send it with or right after the residency answer so the numbers don't change later. - **Why it matters:** Frank wants to move fast and Ingrid wants no surprises, and showing both sizes serves each without picking a side in their disagreement about finance's interest. Smaller follow-ups for the recap email: late-load text alerts are possible via webhook to Pete's paging tool, and the CRM's business-outcome field is still just the discovery pre-fill, so update it with the real-time versus daily-refresh split.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "none",
+    "critique": "Weakest is R2: the real blockers are the unresolved Canadian residency question and an unnamed economic buyer (no one said who signs, and PB-03 calls for a planned touchpoint before commercial discussion), so pricing both seat counts doesn't unblock the next internal decision; fix by making the residency answer and the question of who signs the lead items, with pricing following."
+   },
+   "error": "",
+   "cost_usd": 0.014989
+  }
+ ]
+}

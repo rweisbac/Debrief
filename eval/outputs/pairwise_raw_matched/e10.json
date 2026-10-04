@@ -1,0 +1,28 @@
+{
+ "deal_id": "e10",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Ask the identity team in writing for a GA date for nested net_groups claims and whether Corvid can join the private preview, to start the SSO design and date due Oct 9. (owner Ana Petrov, due 2026-10-06). Why: Ana relayed hearsay from product, and the release card says no GA date is announced. An AE would likely just wait for her answer.",
+  "Tell Fatima that next quarter is not confirmed and preview access is unverified, so she doesn't put either in front of the architecture board. (owner Derek Shaw, due 2026-10-05). Why: Both claims were made in the call and the board will read them in writing. Reps rarely retract their own reassurances unprompted."
+ ],
+ "opponent_steps": [
+  "**Get a confirmed nested-claims date and preview-program access from Product, in writing.** - **Owner:** Ana Petrov, with Derek Shaw escalating to the product manager if there's no answer. - **Timing:** Request today and have it confirmed by Tue Oct 6, so it's in hand before the Oct 9 send. - **Why:** SSO is Fatima's gate, and the only support for \"next quarter\" is Ana's secondhand \"that's what I've heard.\" Derek's \"I'm sure\" about the preview program was also unverified. If the date is soft or falls after the Dec 18 close, we need to know before it goes to the architecture board.",
+  "**Send the written SSO design and nested-claims date, with a fallback if the date slips.** - **Owner:** Ana sends the design. Derek sends the date in the same email. - **Timing:** By Fri Oct 9, as committed on the call. - **Why:** The board needs this in writing, and it's the only thing Fatima asked for. Today's GA limitation is flat claims only, so the design should include an interim option, such as flattening `net_groups` at the IdP or using the preview. The email should also confirm that the connector is continuous (about 1 minute), not hourly, so the earlier wrong statement doesn't linger."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "B's first step gets a written confirmed date and preview access, which the board needs, with escalation and timing. B's second adds an interim SSO option and the connector correction. A is shorter but passive.",
+   "cost_usd": 0.003946
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B corrects the unverified 'next quarter' and preview claims before they reach the board, and its first step asks the identity team in writing. A's top step is solid but keeps 'next quarter' alive.",
+   "cost_usd": 0.003966
+  }
+ ]
+}

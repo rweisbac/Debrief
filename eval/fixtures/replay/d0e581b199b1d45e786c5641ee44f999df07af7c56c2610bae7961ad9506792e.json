@@ -1,0 +1,44 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "d0e581b199b1d45e786c5641ee44f999df07af7c56c2610bae7961ad9506792e",
+ "recorded_at": "2026-10-04T02:14:26.899007+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZEHgJrfA4eV4fMYMV",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "CAQStQoKEAgSGAI4AUIIdGhpbmtpbmcSDMDCRyn+g07cO64nQxoMZ1IekeWcqnr2SnFKIjARZmEl+e7khej1mFN8eX6rxcxiPqwK0wgv1pbo6+xk2t1Bza3AUGuZxE5TfxPlzr8q0gmYRPt2oNK3fCRmjN13enFL/1aFA7qqGCmPelbv4zU2FLb53RBsHYZB1DCrg1vmECmboJGtjVtwfPt2t+7977HKEya7z0d8PKeJhOkhZXa1Uk7bwLFeMjLrS9xmgmsjq9ZMV76KzV5bGVTkWoiguMAKK6fonGkSlgUVVnt3FVEM2QZXpahDN48swnmV0QEQV/0VMTN3iDYMsitiyO34EFCwiW/rAIuZMKWBtUFBx/eXVWi/j2PYWa6YTJxYOpjyE/HjWy0iCgcsdHHDV5MqZn9i32oP19eB80WInLf8NLyd2O/T593TokH5W4rro54Alsqx7gq098TboSy0Xxusi2Njq7SScnX4wQJHrzri/vAHb0dbJeP3AgqiTEs1EnLSKQxbdcbuMKUKwKDdxm/NaJ7aRHqXzzqTaRcUgBGU/mon/cay3bNy8VYJ3K4ylecsXMzCp7G9+PUcZ+CfdVw2QowiazImYp7vdYYbK9qZxm6dEWnPTpQ7/D7kFLVKtXivlowpWHr4WEKd2NDVTZ5Q2xvK+LwzuQEdV6TJEiVMx/JVX2Rm/sjd4BHC0TVeJgXxs95Cc1EmU1Y8IbZ+CdgZ8rdjLm90db9ARwanGmIJo2IemIv3oqW81t8lqX1vXy2W/wlzLLCRKmmEEe9HMBJ3zzI4J1F08rTZ59axoqJYgCu1te2DVLAdawT2N+CRjQOvkaJiY0k0+pZRjw/GWgoPdkWCTQ1yo9Zrmam1mXWO5vJqFPU4Gt23cWrKvYvN7o2rLagrpOgP/II2kP3Er+8KT0mju7pY6KQv353TnE/plBoMBBCERWIc8hmlVrxBkE2ISFBGTtTDR6yE2coZxulrccIaLVZBCbh/6gDjGGL63UxHqFvouHhObqFvLSDUm+6lGpMUgl0u6JeY62xf0B0rdkvBdqa45uliNqqrA8wM5Y0Bk/uZtWnWy4PS/L8ZgJFcEM69ID8XCvjv0OSH9f8Z42tBUwopvkROiC+ogBcCERoQg+UOsK1B7/s4j+xzI1hGNGV6dcJJJuHf5Fe0KHme1rB6ODTWOtkNwZ02eApHwl14lC2LrWtIWmzYqhw1rKGlDUj2E7NvfcTC0wenEL+BrJ8BiWoQa9GVfXK8U6mQjOnS6r+c1FZI60sVKevyyrH3fBFwSgpnPJ30ML6lxJKftxxL7wBB/NZf/iVO4fL+u2PciLNmMJjoUSCLXPy9DUF4BqPpNe3J1lUzWGJgYxoY88PA4qEIWUgJ4G1q+/Oqw9F2O+WriZGi/UfLBMLCG+J6Z6OEX8FKglejgRBfxb9PPwwVnFZUgStpdvbcyyn+DOl+4KYRx5NVw5lDYYYMZWbIBTEZIQPOwIyinTD21veJLQu4Zy01Efy+uvHUkbRrbY7e/oprREelHrtTx187nd9KIa+EaEFE0Pi2+oy+8v1FUbKgz8is2DqYTxUF6WlEW1wBcKZXOJZaAghbostp2VLsQuwi2FDsjllvhSuXpvQiXVPtzzSOn8fSOsH835xEyGy9cTCfgjqjHg5WxodhACDJZ34ytqbzZ6dKDHVaC+LeZEKyQCZI/cH0tYvcmWE1Efk9Rx/jScLhmFoV6G3mLfv6N190ha4mkc8ph/BrkjMwsQgSArv02ojLhsA3F45tjWQGzRTgGAE="
+   },
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B leads with the CFO business case Maya needs by Friday and flags the unverified 'modeled together' claim. B also covers the decision process. A leads with invite logistics.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1138,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5637,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 340,
+   "output_tokens_details": {
+    "thinking_tokens": 261
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

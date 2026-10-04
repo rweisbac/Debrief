@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6a45970eedaf6013775881db5e8d86f4493ad77eb96801d5296ebeccfae46c3b",
+ "recorded_at": "2026-10-04T02:11:27.737493+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLAEzWqhio9aBWDTtQ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A has named owners and dates, ties to the CISO gate, and also captures the economic buyer mention. B lacks owners and pushes for a dated meeting Simone deferred; its CISO step is similar but secondary.}\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 793,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 95,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

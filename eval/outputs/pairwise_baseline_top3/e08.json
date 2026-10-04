@@ -1,0 +1,29 @@
+{
+ "deal_id": "e08",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Rachel who in leadership decides on a second platform, and offer a one-page outline of the Lakestream side-by-side for her to bring to that person. (owner Isaac Morgan, due 2026-10-02). Why: Leadership was mentioned only generically, so the signer is easy to leave unnamed while the focus stays on the cost comparison.",
+  "Send Tobias a short list of what the cost comparison needs (event volumes per hour, required refresh, add-on scope), and tell Rachel it lands about a week after the volumes arrive, before the October 14th review. (owner Lena Fischer, due 2026-10-01). Why: A vague volume request risks a second round, and the CRM logs the commitment without a date. Say 'about a week', not a firm date."
+ ],
+ "opponent_steps": [
+  "**Isaac:** Send the invite today with a specific time. Invite Tobias, and ask Rachel whether any leadership stakeholder should attend.",
+  "**Isaac:** Find out who the economic buyer is and who will weigh in on the second-platform decision. Fill the blank CRM stakeholder field. Offer to help Rachel with a leadership-ready summary.",
+  "**Lena:** Confirm in writing that the comparison will be ready by about Oct 8, so Rachel has a pre-read ahead of Oct 14."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step targets the unnamed leadership decider and gives Rachel something to bring; its volumes request is grounded and honest ('about a week'). B invents an Oct 8 date and leads with invite hygiene.",
+   "cost_usd": 0.008748
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B first step targets the unnamed signer and gives Rachel something to bring to leadership; its second step is dated and honest ('about a week'). A invents an Oct 8 date and leads with invite hygiene.",
+   "cost_usd": 0.003579
+  }
+ ]
+}

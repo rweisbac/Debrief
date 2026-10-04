@@ -1,0 +1,60 @@
+{
+ "deal_id": "e06",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Apex compliance for written wording on Frankfurt tenant pinning including backups, so Petra can hand it to her legal team. (owner Jonas Weber, due 2026-10-05). Why: Jonas's compliance promise was undated and not logged. Legal wants it in writing, and it is easy to miss next to the pilot plan.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest is r2: the written Frankfurt wording serves legal, but the CFO's spend freeze until Q2 is what actually blocks a contract, so a stronger step would also give Petra something to take to finance, such as the historian license renewal in March."
+   },
+   "error": "",
+   "cost_usd": 0.017239
+  },
+  {
+   "rank": 2,
+   "step": "Ask Petra to confirm with Milan whether Apex would replace the historian license renewing in March, and offer to send what finance needs to review an exception. (owner Claire Dumont, due 2026-10-06). Why: Petra and Milan disagree on whether anything gets replaced. That decides whether the freeze has an exception, and it is easy to take one side.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "The weakest point is r3: the step offers 'what finance needs' without saying what that is, so it should name a forwardable exception brief (the March historian renewal, the pilot scope, and the cost tied to the replaced license) that Petra can take to finance without Apex in the room."
+   },
+   "error": "",
+   "cost_usd": 0.011549
+  },
+  {
+   "rank": 3,
+   "step": "Ask Petra who signs and whether the CFO approves, and offer a one-page pilot summary she can bring to finance. (owner Claire Dumont, due 2026-10-07). Why: The CFO came up in passing and the CRM economic buyer is blank. Easy to treat the freeze as only a timing issue.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is R2: the one-pager should speak to the stated exception path (replacing the historian license that renews in March) rather than only summarizing the pilot, so Petra has something specific for finance."
+   },
+   "error": "",
+   "cost_usd": 0.011093
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "3e99ee53d23c7676256421373cd68f33d3a8e679760fcaf0a05bf31f916d7ecd",
+ "recorded_at": "2026-10-04T02:11:36.972270+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLqWP39jAKV6Hmuzpj",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A gives named owners and dates, ties the first-generation cut to the provost's own ask, and offers help on the committee without chasing. B lacks owners and pushes dates and a provost meeting Elise deferred.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 835,
+   "cache_creation_input_tokens": 2005,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2005,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 91,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

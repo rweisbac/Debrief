@@ -1,0 +1,60 @@
+{
+ "deal_id": "e03",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Set a date for the pricing delivery** and assign an owner (suggest Leah). Make it clear that it's a two-scenario quote.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest are r4 and r2: the step says to set a date but gives none, and it focuses on pricing while the real blocker, Canadian data residency (answer due Oct 1) with no economic buyer named, goes unaddressed; fix it by naming a specific delivery date and tying the two-scenario quote to the residency answer and a path to the signer."
+   },
+   "error": "",
+   "cost_usd": 0.014913
+  },
+  {
+   "rank": 2,
+   "step": "**Get Omar's residency answer out by Oct 1,** even if the answer is \"not available today.\" Be precise about what exists versus what is roadmap, and don't promise roadmap timing without confirmation.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest are r3 and r7: the step only closes Omar's own commitment and gives Frank nothing to take to Legal to settle the Frank vs Ingrid dispute over whether Canadian contracts cover telematics data, so fix it by making the answer a written, forwardable residency statement (what exists today vs roadmap, with contract wording to confirm with Apex compliance) for Legal."
+   },
+   "error": "",
+   "cost_usd": 0.012633
+  },
+  {
+   "rank": 3,
+   "step": "**Ask the customer for the contract language and the Legal contact** so the question is settled on the actual clause rather than recollection. Ask Frank and Ingrid to align internally on who owns that.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest are r4 and r3: the step has no Apex owner or date, and it only asks the customer for input without giving them something to bring to Legal; fix it by having Leah send a short residency question for Legal by a set date, with Omar's Oct 1 answer attached."
+   },
+   "error": "",
+   "cost_usd": 0.011315
+  }
+ ]
+}

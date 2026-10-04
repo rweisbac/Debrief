@@ -1,0 +1,29 @@
+{
+ "deal_id": "e01",
+ "opponent": "raw_top3",
+ "debrief_steps": [
+  "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand. (owner Hannah Ortiz, due 2026-09-29). Why: Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+  "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis. (owner Hannah Ortiz, due 2026-10-02). Why: Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat."
+ ],
+ "opponent_steps": [
+  "Build and send the CFO business case (cost per store and overstock reduction)** - **Owner:** Hannah, with Devon on the cost-per-store inputs - **Timing:** Start today and send by Friday, Oct 2. Aim for Thursday so Maya can review it. - **Why it matters:** It is the one deliverable Maya needs before she takes this to Priscilla, and the Oct 6 meeting depends on it. - **Check first:** Maya referred to numbers \"we modeled together last month,\" but the CRM shows discovery on Sept 14 and nothing about a joint model. Hannah should find that model now, or rebuild it and confirm the assumptions with Maya, rather than send numbers Maya doesn't recognize.",
+  "Lock in the CFO meeting and learn how the decision gets made** - **Owner:** Hannah - **Timing:** - Today or tomorrow: confirm Maya has sent the Oct 6, 10:00 invite with Devon included, get Priscilla's email, and set her as economic buyer in the CRM (the field is blank). - Before Oct 6: hold a short pre-brief with Maya, ideally right after sending the business case. - **Why it matters:** The CRM says the decision process was \"Not discussed.\" On a $310K deal that Priscilla must sign, we don't know what she will ask for, or whether procurement, legal or security reviews sit between her and a Dec 18 close. - **Pre-brief topics:** what Priscilla cares about, the approval steps and timeline, and any other approvers.",
+  "Send Carlos the change feed setup doc** - **Owner:** Devon - **Timing:** Today, Sept 28, as promised on the call. - **Why it matters:** It is a small, dated commitment to the technical evaluator, and delivering it on time keeps his support going into the CFO stage. - **Optional addition:** Ask Carlos to confirm that production volumes will stay within his limits. The 40 reads/sec figure came from the sandbox."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_top3",
+   "top_step_winner": "debrief",
+   "why": "B covers the business case, CFO path, and Devon's doc, and flags the unrecognized 'modeled together' claim. A's steps are sharper but omit Devon's committed doc; B's first step is weaker than A's.",
+   "cost_usd": 0.017622
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_top3",
+   "top_step_winner": "raw_top3",
+   "why": "A leads with the business case Maya needs before the CFO meeting and flags the unverified 'modeled together' numbers. It also logs Devon's setup-doc promise, which B omits.",
+   "cost_usd": 0.008117
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "deal_id": "e08",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Build the all-in cost comparison on Kestrel's workload** - **Action:** Build a side-by-side of Apex vs. Lakestream plus its streaming add-on, using Tobias's hourly event volumes and the 5-minute refresh. Include all-in costs. Ask Rachel and Tobias for their actual Lakestream contract pricing rather than relying on public docs, and flag any assumptions. - **Owner:** Lena Fischer, with Isaac Morgan checking that Tobias's volumes arrive. - **Timing:** Tobias sends volumes Oct 1. Lena finishes about a week later (around Oct 8), which leaves a few days of buffer before the Oct 14 review. - **Why:** Rachel named this as what she needs to justify a second platform, and she wants it before the Oct 20 Lakestream renewal conversation.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "The step passes every criterion; its weakest point is that the request for Lakestream contract pricing and Isaac's check on Tobias's volumes could read as chasing, so it should be framed as an offer and the comparison should state its assumptions if the pricing doesn't arrive."
+   },
+   "error": "",
+   "cost_usd": 0.01278
+  },
+  {
+   "rank": 2,
+   "step": "Identify the economic buyer and get them into the process** - **Action:** Ask Rachel who approves a second platform and what they will want to see. Add them to the CRM and invite them to the Oct 14 review, or at least offer a one-page leadership summary. Rachel said leadership will ask \"why not expand what we have,\" so frame the comparison around that question. - **Owner:** Isaac Morgan, working through Rachel. - **Timing:** Ask in the recap email today or tomorrow. Have the name confirmed before Oct 8 so they can be invited to the Oct 14 review. - **Why:** The CRM shows no economic buyer and no stakeholder added, yet the decision process is leadership approval. Rachel would otherwise have to make the case alone, and the deal could stall with the Lakestream renewal on Oct 20.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is the buyer-enabling lean: the Oct 8 name confirmation depends on Rachel, so make the one-page leadership summary on 'why not expand what we have' the default deliverable that Rachel can forward, and treat the invite as optional."
+   },
+   "error": "",
+   "cost_usd": 0.012662
+  },
+  {
+   "rank": 3,
+   "step": "Send the recap and invite, and lock in the volumes request today** - **Action:** Send the Oct 14 calendar invite and a recap email covering these points: - The three commitments: Tobias's volumes, the cost comparison, and the Oct 14 review. - A specific list of data needed: events per hour for POS and open orders, peak vs. average, and the Lakestream pricing details. - The Oct 20 renewal as the reason for the timeline. - Tobias is invited to the Oct 14 review. - **Owner:** Isaac Morgan, with Lena adding the data list. - **Timing:** Today (Sept 30), and follow up with Tobias if the volumes haven't arrived by end of day Oct 1. - **Why:** Lena's one-week build clock starts only when the volumes arrive. Any slip compresses the time before Oct 14 and Oct 20.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-01",
+    "critique": "Weakest is r7: this is a recap, invite and data-request hygiene step, and it chases Tobias on Oct 1 despite his same-day promise; fix by adding something Rachel can take to leadership, such as a draft side-by-side outline for the 'why not expand Lakestream' question, and drop the chase."
+   },
+   "error": "",
+   "cost_usd": 0.006324
+  }
+ ]
+}

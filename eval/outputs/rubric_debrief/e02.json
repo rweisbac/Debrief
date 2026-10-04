@@ -1,0 +1,60 @@
+{
+ "deal_id": "e02",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Send Tamsin the stored procedure write-up asking for a few dynamic procedures, and tell her the date Sofia will report back on the parser run. (owner Sofia Russo, due 2026-09-30). Why: Sofia promised the parser run with no timing; AEs often leave it undated, and the customer never hears a date.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "The weakest point is R5: the report-back date depends on a stretched parser team, so Sofia should frame it as a status update date, not a promised parser result, and say what happens if the run isn't finished."
+   },
+   "error": "",
+   "cost_usd": 0.026637
+  },
+  {
+   "rank": 2,
+   "step": "Send Gregor a short list of the minimum tables and fields needed from the data dictionary, so he can send a partial export instead of gathering it all. (owner Ben Adeyemi, due 2026-09-30). Why: Gregor said it is spread across wikis; a sized request makes it easier to send than a reminder would.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is r7: a sized request is only modestly more than hygiene, and it could go further by saying which tables matter for the loan book model Sofia demoed and for the stored procedure question, plus offering to take a partial export in any format; it also doesn't address the unnamed economic buyer or the deferred meeting, though it correctly avoids pushing one."
+   },
+   "error": "",
+   "cost_usd": 0.006102
+  },
+  {
+   "rank": 3,
+   "step": "Ask Tamsin what her manager needs to approve early procurement involvement, and who signs for this purchase, then offer to send it. (owner Ben Adeyemi, due 2026-10-01). Why: No economic buyer is named. Tamsin's manager is a possible path in, easy to miss because it was said in passing.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is r3, with r2 close behind: the step is a seller-side question about who signs, and the thing to send Tamsin is never defined. Name a concrete forwardable item, such as a short procurement-readiness brief for her manager, and tie it to what actually gates the reconnect (the data dictionary and quarter close) so it serves the customer's own process."
+   },
+   "error": "",
+   "cost_usd": 0.012694
+  }
+ ]
+}

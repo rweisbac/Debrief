@@ -70,6 +70,20 @@ Debrief failures found:
 
 What this eval cannot show: anything about real calls, variance across runs, or whether the judge agrees with people.
 
+## Next step comparison (run 2)
+
+Script `next_steps.py`, results `next_steps_results.md`, cost $2.57. Debrief unchanged; its steps come from run 1.
+
+| Test | Result | Reading |
+|---|---|---|
+| Blind head to head vs the generic baseline's first 3 steps | Debrief 13 wins, 2 ties, 0 losses | Debrief clearly better than a summarize-and-draft call |
+| Blind head to head vs raw Claude asked for a ranked top 3 | Debrief 3, ties 5, raw 7 | Raw Claude preferred; judge reasons often say "covers more" |
+| Same, raw cut to Debrief's step count (post hoc control) | Debrief 6, ties 4, raw 5 | Even once list length is matched |
+| Rubric, steps judged acceptable | Debrief 22 of 33, raw top 3 15 of 45 | Debrief's steps pass the research rubric more often |
+| Rubric, first step acceptable | Debrief 12 of 15, raw top 3 9 of 15 | Debrief's first step passes more often |
+
+Verdict: against a raw call that is asked the right question, Debrief's recommendations are about even on blind preference and somewhat better on the research rubric. Both judges are uncalibrated and disagree, so this does not settle it. Debrief gave only 2 steps on 11 of 15 cases (its low-information rule cut 6 of those), which costs it coverage. A seller panel rating a blind sample is the test that would settle it.
+
 ## Rules followed
 
 - Gold labels were written before any output was seen.

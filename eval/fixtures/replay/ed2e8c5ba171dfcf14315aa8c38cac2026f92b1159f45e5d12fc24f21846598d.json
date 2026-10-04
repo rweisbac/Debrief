@@ -1,0 +1,44 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "ed2e8c5ba171dfcf14315aa8c38cac2026f92b1159f45e5d12fc24f21846598d",
+ "recorded_at": "2026-10-04T02:11:29.480378+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPL2Nif6Fn2aPp5qDqF",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A leads with the business case Maya needs before the CFO meeting and flags the unverified 'modeled together' numbers. It also logs Devon's setup-doc promise, which B omits.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1290,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5637,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 441,
+   "output_tokens_details": {
+    "thinking_tokens": 358
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

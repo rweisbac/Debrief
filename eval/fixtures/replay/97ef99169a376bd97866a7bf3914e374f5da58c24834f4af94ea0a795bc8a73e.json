@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "97ef99169a376bd97866a7bf3914e374f5da58c24834f4af94ea0a795bc8a73e",
+ "recorded_at": "2026-10-04T02:14:24.972091+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZEKugWbMLwaszCytZ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step targets the residency dispute with a concrete ask and owner/date. A's second flags the missing buyer before pricing. B is longer, leans on hygiene, and suggests unagreed Oct 1 or 2 dates.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1105,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5833,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 99,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

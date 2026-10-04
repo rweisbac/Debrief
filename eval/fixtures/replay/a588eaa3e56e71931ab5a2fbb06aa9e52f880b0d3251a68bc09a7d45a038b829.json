@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a588eaa3e56e71931ab5a2fbb06aa9e52f880b0d3251a68bc09a7d45a038b829",
+ "recorded_at": "2026-10-04T02:11:31.483242+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLSSKApK2Yr3VC7nm2",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A has named owners, dates, and grounded steps (Frankfurt wording, historian replacement via Petra, CFO/signer). B is vague, unowned, and its step 2 explores replacing the historian, which risks overpromising; A's step 1 is concrete and EU legal-blocking.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 926,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5601,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 118,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

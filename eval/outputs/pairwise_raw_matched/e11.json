@@ -1,0 +1,30 @@
+{
+ "deal_id": "e11",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Send Elise a short provost-ready summary of the first generation retention cut, in her words, to forward to Dr. Abernathy. (owner Paula Jensen, due 2026-10-01). Why: Elise deferred the provost meeting; a ready-to-forward piece tied to the provost's own ask gives her an easy path in.",
+  "Offer Elise a committee-ready summary and ask what the technology committee needs to review and when it meets. (owner Paula Jensen, due 2026-10-02). Why: Nobody knows when the committee meets and it may miss the close date. Offer help rather than chase.",
+  "Send the promised screenshots with a stated date, and add an access-controls view Elise can show the privacy officer. (owner Sam Okoro, due 2026-10-01). Why: Screenshots were promised in passing with no date; adding the access-controls view gives Elise something for the privacy officer."
+ ],
+ "opponent_steps": [
+  "**Pin down the decision path and lock a dated next step** - **Action:** Send a same-day recap email to Elise (cc Kevin) asking for the technology committee's next meeting date, its submission deadline, and what it needs to see. Propose a 30-minute call to map the approval sequence (committee, provost, privacy) and put a specific date on the calendar. - **Owner:** Paula Jensen, with Kevin asked to find the committee calendar. - **Timing:** Email by Oct 1. Call held by about Oct 7. - **Why:** The call ended with no dated next step, and the committee meets only once a semester. If we miss the fall slot, the Dec 18 close date likely slips to next term.",
+  "**Get access to the provost, Dr. Abernathy, through a business case Elise can carry** - **Action:** Ask Elise to define the business outcome, which is blank in the CRM, since discovery only recorded \"retention reporting is manual\". Use Kevin's remark that the first-gen retention cut is \"what the provost always asks for\" as the hook. Build a one-page provost summary, then ask Elise for an intro or to co-present, rather than accepting \"eventually.\" - **Owner:** Paula, with Sam supporting the one-pager. - **Timing:** Business-outcome questions in the step 1 call. Draft one-pager by about Oct 9. Provost meeting requested for the following two weeks. - **Why:** The provost owns the budget and has not been engaged. Elise's enthusiasm (\"I'll champion this\") is not yet a commitment, and she is deferring the one step that tests it.",
+  "**Start the privacy and security review, and send the follow-up materials** - **Action:** Send the promised retention dashboard screenshots with a short outcome-focused note. Include access-control documentation (advisor and dean role scoping, plus the data handling and security details a privacy officer would ask for). Ask Elise to introduce the privacy officer. - **Owner:** Sam Okoro, with Paula making the introduction request. - **Timing:** Screenshots and documentation by Oct 1. Privacy officer introduction requested in the same email. - **Why:** Elise said the privacy officer will want to see the access controls, and student data reviews often take weeks. Starting now keeps that review from blocking the committee submission."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step gives Elise a forwardable provost piece tied to Kevin's quote, respects deferral and offers help. B invents a call and a Dec 18 slip, and pushes for a meeting Elise deferred.",
+   "cost_usd": 0.009451
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "raw_matched",
+   "why": "B is grounded, concise, respects customer pace (offer help, not chase), with owners and dates. A's first step pushes a call and overreaches, but its top step targets the decision path better.",
+   "cost_usd": 0.00471
+  }
+ ]
+}

@@ -9,6 +9,8 @@ Every [CONFIRM] in the interview files and every objection with weak evidence. H
 3. **Why you are leaving a Director role (objection 12).** Entirely yours to write. Keep employer details out.
 4. **How much you built versus the AI coding tool (objection 8 follow-up).** DECISIONS.md is framed as "where the AI output was wrong" [repo]. Expect this question; have a clear, honest split ready.
 
+5. **Next step quality is not proven better than a well-asked raw call.** Debrief beats a generic summary call 13 to 0 on blind preference, but ties a raw "give me the top 3" call once list length is matched (6 to 5, 4 ties), while scoring better on the research rubric (22 of 33 steps acceptable against 15 of 45) [eval] `eval/next_steps_results.md`. Expect "so why not just prompt Claude?" Answer: the gate, the citations and the workflow, and a seller panel to settle step quality.
+
 ## External claims not verified
 
 The network policy in this session blocked every external URL, so none of F1 to F10 was opened.

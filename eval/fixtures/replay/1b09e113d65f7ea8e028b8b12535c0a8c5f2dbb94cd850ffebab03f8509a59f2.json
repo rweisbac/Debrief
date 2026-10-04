@@ -1,0 +1,44 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "1b09e113d65f7ea8e028b8b12535c0a8c5f2dbb94cd850ffebab03f8509a59f2",
+ "recorded_at": "2026-10-04T02:14:28.710313+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZEAFLMSePZMiHzaAe",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B leads with the same-day SOC 2 and pen test send, which unblocks Sanjay's review and the Oct 14 cutoff, and adds the questionnaire. A leads with Daniel's signer status, which comes after the board, and omits Andre's same-day promise.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 930,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5405,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 548,
+   "output_tokens_details": {
+    "thinking_tokens": 436
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

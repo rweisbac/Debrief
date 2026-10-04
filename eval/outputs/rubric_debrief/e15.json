@@ -1,0 +1,42 @@
+{
+ "deal_id": "e15",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires. (owner Nora Quinn, due 2026-10-05). Why: Liam said they can't build it, but Helen relayed otherwise. An AE might take Liam's word and skip the absent engineering lead.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "The weakest point is R3/R8: the step is an ask that depends on Liam answering by Oct 5, so it would be stronger if Nora attached a short build-vs-buy template Liam could forward to the engineering lead, which makes it easier for the customer to act on."
+   },
+   "error": "",
+   "cost_usd": 0.017181
+  },
+  {
+   "rank": 2,
+   "step": "Send deal desk Helen's terms of three year minimum and quarterly in arrears only, and ask for an answer before any commercial talk with her. (owner Nora Quinn, due 2026-10-05). Why: Nora's deal desk check was a passing remark in a rushed CFO exchange, so it is easy to leave unlogged and undated.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are r3 and r7: this is an internal deal desk flag, not something Helen or Liam can use, and it misses the real blocker, Helen's demand for a build-versus-buy cost comparison before anything is signed; fix by adding a customer-forwardable cost comparison for Helen, with an owner and date."
+   },
+   "error": "",
+   "cost_usd": 0.012095
+  }
+ ]
+}

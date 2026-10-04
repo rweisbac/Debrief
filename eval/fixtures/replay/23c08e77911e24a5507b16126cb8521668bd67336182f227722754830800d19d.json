@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "23c08e77911e24a5507b16126cb8521668bd67336182f227722754830800d19d",
+ "recorded_at": "2026-10-04T02:14:26.836009+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZPZnju6JQBeA5emfP",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step targets the Frank/Ingrid contradiction on residency so Omar's answer lands, and B holds pricing until a buyer is known. A is broader and pushes generic hygiene and stakeholder asks.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1105,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5833,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 95,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

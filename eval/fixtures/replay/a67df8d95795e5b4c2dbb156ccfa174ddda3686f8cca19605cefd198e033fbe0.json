@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a67df8d95795e5b4c2dbb156ccfa174ddda3686f8cca19605cefd198e033fbe0",
+ "recorded_at": "2026-10-04T02:11:30.426630+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLPZBShbAJj21TgJ5E",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's top step is the EU residency written confirmation, the legal blocker, with timing before the pilot data flows. A also gives a fuller budget-freeze path, though it leans on CRM hygiene. B's disagreement reading is inaccurate.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1509,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5601,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 103,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

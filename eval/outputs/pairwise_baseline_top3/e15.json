@@ -1,0 +1,29 @@
+{
+ "deal_id": "e15",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires. (owner Nora Quinn, due 2026-10-05). Why: Liam said they can't build it, but Helen relayed otherwise. An AE might take Liam's word and skip the absent engineering lead.",
+  "Send deal desk Helen's terms of three year minimum and quarterly in arrears only, and ask for an answer before any commercial talk with her. (owner Nora Quinn, due 2026-10-05). Why: Nora's deal desk check was a passing remark in a rushed CFO exchange, so it is easy to leave unlogged and undated."
+ ],
+ "opponent_steps": [
+  "**Book a dated next call** this week for next week, and update the CRM next step from \"Talk next week.\"",
+  "**Log Ravi's commitment** in the CRM `sc_commitment` field (currently empty): test custom fields after Zara's list arrives.",
+  "**Send the deal desk request now** on the 3-year / quarterly-in-arrears structure, with a target response date. Confirm whether 3-year terms change how the $560K ACV should be treated."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step targets Helen's hard blocker (build-vs-buy comparison) with a named owner and date. B is mostly CRM hygiene and deal desk, missing the cost comparison and the engineering lead.",
+   "cost_usd": 0.003515
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step targets Helen's build-vs-buy gate, the real blocker to signing this year, with owners and dates. A is mostly CRM hygiene and leads with a vague next call.",
+   "cost_usd": 0.003425
+  }
+ ]
+}

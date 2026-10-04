@@ -1,0 +1,29 @@
+{
+ "deal_id": "e09",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary he can forward to that person. (owner Mia Torres, due 2026-09-30). Why: Hugo said he doesn't decide and doesn't know who does; AEs may just wait for the summary reply.",
+  "Log Kofi's load summary promise with an owner and a send date of 2026-09-30, and tell Hugo when it is sent. (owner Kofi Mensah, due 2026-09-30). Why: No date was given, and passing commitments get dropped; a dated send also lets Hugo forward it."
+ ],
+ "opponent_steps": [
+  "**Send the load summary and follow-up email today** (draft below). Kofi sends the summary, and Mia sends the email.",
+  "**Identify the operations stakeholder.** Ask Hugo for a name or a warm intro. If he can't provide one, ask who requested the evaluation or who owns the meter data load process.",
+  "**Confirm the TV criteria.** Pull the agreed TV items from the 9/14 discovery call and check which ones this demo covered. Record the result in the CRM."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step targets the real blocker, finding the operations decision-maker, with an owner and date, and logs Kofi's commitment. B leads with routine sending and a vague 'ask for a name'; its draft isn't shown.",
+   "cost_usd": 0.003326
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step targets the real blocker (unknown operations decision-maker) with a forwardable summary, and names owners and dates. A's first step is routine hygiene and refers to a draft not shown.",
+   "cost_usd": 0.003226
+  }
+ ]
+}

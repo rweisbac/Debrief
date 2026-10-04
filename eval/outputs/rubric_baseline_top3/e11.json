@@ -1,0 +1,60 @@
+{
+ "deal_id": "e11",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Send the follow-up today** with the screenshots. Ask for specific dates for the committee meeting and a provost conversation.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-01",
+    "critique": "Weakest is r6: Elise deferred the provost meeting (\"Eventually, sure. She's very busy this term\") and did not know the committee date, so asking for specific dates presses; instead offer a short forwardable brief for Dr. Abernathy and the privacy officer, name the owner (Paula or Sam) and a send date, and let Elise set the pace."
+   },
+   "error": "",
+   "cost_usd": 0.011916
+  },
+  {
+   "rank": 2,
+   "step": "**Get the committee date.** Ask Kevin or Dr. Martin to check the committee's calendar, and ask what the committee needs to see (security, budget, a business case).",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "The weakest criterion is r4: the step names no owner (who asks Kevin or Dr. Martin) and no deadline, and it gives the champion nothing to forward. Fix it by having Paula send Dr. Martin a short note by Friday Oct 2 that lists what technology committees typically need (security, budget, business case) and asks for the meeting date by a stated day."
+   },
+   "error": "",
+   "cost_usd": 0.012956
+  },
+  {
+   "rank": 3,
+   "step": "**Reframe the provost meeting.** Offer a short 20\u201330 minute session built around the first-generation retention view the provost already asks for. Alternatively, ask Dr. Martin to forward a one-page brief.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The step has no owner or date, and it leads with a provost meeting Dr. Martin deferred in U015 (\"Eventually, sure. She's very busy this term\"); fix it by making the one-page first-generation retention brief the lead, with the AE drafting it by a stated date and the meeting offered only as an optional later step."
+   },
+   "error": "",
+   "cost_usd": 0.013504
+  }
+ ]
+}

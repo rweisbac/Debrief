@@ -1,0 +1,30 @@
+{
+ "deal_id": "e06",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Apex compliance for written wording on Frankfurt tenant pinning including backups, so Petra can hand it to her legal team. (owner Jonas Weber, due 2026-10-05). Why: Jonas's compliance promise was undated and not logged. Legal wants it in writing, and it is easy to miss next to the pilot plan.",
+  "Ask Petra to confirm with Milan whether Apex would replace the historian license renewing in March, and offer to send what finance needs to review an exception. (owner Claire Dumont, due 2026-10-06). Why: Petra and Milan disagree on whether anything gets replaced. That decides whether the freeze has an exception, and it is easy to take one side.",
+  "Ask Petra who signs and whether the CFO approves, and offer a one-page pilot summary she can bring to finance. (owner Claire Dumont, due 2026-10-07). Why: The CFO came up in passing and the CRM economic buyer is blank. Easy to treat the freeze as only a timing issue."
+ ],
+ "opponent_steps": [
+  "**Assign the EU hosting confirmation.** Jonas or Claire should get compliance's written answer, covering backups, subprocessors, and support access, and agree a date with Petra.",
+  "**Explore the historian replacement.** Jonas should assess what the historian does and whether we can credibly replace it. Ask Milan for its license cost, renewal terms, and the March renewal date. Don't present this as confirmed until we know.",
+  "**Ask about the decision process.** Ask Petra who approves spend, how the CFO's freeze is lifted, and what the exception process involves. Ask for an introduction to the CFO or finance contact, and a legal contact for the hosting review."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A has named owners, dates, and grounded steps (Frankfurt wording, historian replacement via Petra, CFO/signer). B is vague, unowned, and its step 2 explores replacing the historian, which risks overpromising; A's step 1 is concrete and EU legal-blocking.",
+   "cost_usd": 0.004152
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B has named owners and dates, logs Jonas's undated compliance promise, flags Petra/Milan disagreement on historian, and offers finance material. A lacks owners/dates and its ask to meet the CFO pushes against the freeze.",
+   "cost_usd": 0.003982
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "49404af91c2b8d497520a984ef7b32bf4b1726064c4b3d8123d453a77ec27604",
+ "recorded_at": "2026-10-04T02:11:23.762387+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPKonRGMGvckYBeBB6f",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A has named owners and dates, gives Tamsin a dated parser answer, sizes the data dictionary ask, and surfaces the signer/procurement path. B lacks owners/dates, is mostly hygiene, and pushes dates Gregor deferred.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 912,
+   "cache_creation_input_tokens": 5599,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 5599,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 107,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

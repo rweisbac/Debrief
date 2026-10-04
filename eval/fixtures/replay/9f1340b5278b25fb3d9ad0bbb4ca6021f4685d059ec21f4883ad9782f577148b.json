@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "9f1340b5278b25fb3d9ad0bbb4ca6021f4685d059ec21f4883ad9782f577148b",
+ "recorded_at": "2026-10-04T02:11:46.288816+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPMYvXRNHPjcrY3zmkK",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step targets Helen's build-vs-buy gate, the real blocker to signing this year, with owners and dates. A is mostly CRM hygiene and leads with a vague next call.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 755,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5373,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 84,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "deal_id": "e10",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Today:** Ana asks Product for a firm answer on nested claims: the date, GA vs. beta, and calendar vs. fiscal quarter. Also ask whether Corvid qualifies for the preview program.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest are r3 and r4: this is an internal ask with no customer-forwardable output and no due date for Product's answer; fix by setting a deadline (e.g. Product replies by Oct 6, ahead of the Oct 9 send) and tying it to a written note Fatima can take to the Nov 3 architecture board."
+   },
+   "error": "",
+   "cost_usd": 0.011237
+  },
+  {
+   "rank": 2,
+   "step": "**Decide what Apex can put in writing.** If Product won't commit, send a clearly labeled roadmap statement rather than a commitment, and tell Fatima that plainly. Better to disappoint now than at the board.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "The weakest criterion is r4: the step names no owner or date, so add that Ana sends the labeled roadmap statement with the SSO design, and Derek sends the nested claims answer, both by Fri Oct 9, ahead of the Nov 3 board."
+   },
+   "error": "",
+   "cost_usd": 0.009997
+  },
+  {
+   "rank": 3,
+   "step": "**Build an interim path into the SSO design.** For example, ask whether Corvid's IdP can emit a flattened claim (such as a list of `region:role` strings) until nested support ships. Ana to validate feasibility before offering it.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest is r4_owned_dated: Ana is named as owner but the step has no due date, so tie it to the Oct 9 SSO design deadline ahead of the Nov 3 architecture board."
+   },
+   "error": "",
+   "cost_usd": 0.011107
+  }
+ ]
+}

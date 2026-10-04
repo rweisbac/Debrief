@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f7e09e9467f195d9d276bff2723afa50b79bcb595db5562d3fc7672d4cdb2b04",
+ "recorded_at": "2026-10-04T02:11:27.382043+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPL8t8ovXMvwweNAmX9",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"a\",\"why\":\"A's first step is sharper: a short CISO brief fits her habits. B covers more, including the SC's data dictionary commitment, and the buyer path and business outcome, but its first step pushes a dated slot against Simone's stated constraints.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1349,
+   "cache_creation_input_tokens": 2350,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2350,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 100,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

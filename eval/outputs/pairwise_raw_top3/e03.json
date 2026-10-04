@@ -1,0 +1,29 @@
+{
+ "deal_id": "e03",
+ "opponent": "raw_top3",
+ "debrief_steps": [
+  "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm whether it covers telematics, so Omar's October 1 answer addresses it. (owner Leah Brennan, due 2026-09-29). Why: Frank and Ingrid contradict each other on whether the contracts cover telematics; Omar's answer is useless unless legal's actual position is known.",
+  "Ask Frank who signs for this purchase and propose a dated meeting after Omar's October 1 answer, before sending 50 and 400 seat pricing. (owner Leah Brennan, due 2026-09-29). Why: No one named who signs, and pricing for two seat counts will start commercial talk before any buyer touchpoint."
+ ],
+ "opponent_steps": [
+  "**Resolve Canadian data residency, and get the customer's contract language** - **Action:** Omar gets a definitive answer from the hosting team on whether a Canadian region or in-Canada storage is available today, and on its timeline if not. Leah asks Frank and Ingrid to send the Canadian contract clause and the legal opinion Ingrid cited, since the two disagree on whether it covers telematics data. - **Owner:** Omar (hosting answer), Leah (customer-side ask). - **Timing:** Leah sends the ask in today's follow-up email. Omar delivers the answer by Thursday, Oct 1, as he committed on the call. - **Why it matters:** About half of their loads are Canadian, so this could be a deal-breaker, and nobody on either side knows yet whether it applies.",
+  "**Book a dated next meeting and widen the stakeholder group** - **Action:** Send a recap email proposing a specific meeting (for example, Oct 1 or 2) to review the residency answer and pricing. Ask Frank to add customer legal or compliance, plus whoever in finance asked Ingrid about the tool. Ask who the economic buyer is and how approval works. Record the dated next step and the new stakeholders in the CRM. - **Owner:** Leah. - **Timing:** Today, Sept 28, within hours of the call. - **Why it matters:** The call ended with no dated next step. The CRM has no economic buyer and no decision process, and the Dec 18 close date rests on both.",
+  "**Send pricing for both 50 and 400 seats, framed as phased** - **Action:** Send a quote for 50 seats (dispatch) and for 400 seats (year one). Make clear that the real-time feed is scoped to dispatch and that the other users may have different freshness needs. Note that hosting terms depend on the residency answer. - **Owner:** Leah, with Omar on scoping the real-time versus daily-refresh use cases. - **Timing:** Ready for the next meeting, by Oct 1\u20132. Send it with or right after the residency answer so the numbers don't change later. - **Why it matters:** Frank wants to move fast and Ingrid wants no surprises, and showing both sizes serves each without picking a side in their disagreement about finance's interest. Smaller follow-ups for the recap email: late-load text alerts are possible via webhook to Pete's paging tool, and the CRM's business-outcome field is still just the discovery pre-fill, so update it with the real-time versus daily-refresh split."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_top3",
+   "top_step_winner": "raw_top3",
+   "why": "B's first step covers both Apex's hosting answer and the customer's contract clause, and it also covers stakeholders, buyer, pricing and the webhook alerts. A is tight but narrower, with a only two steps and one due date.",
+   "cost_usd": 0.018434
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's steps are tight, owned, dated, and tied to the Frank/Ingrid contradiction and the missing signer. A is broader, sends pricing before a buyer touchpoint, and adds hygiene items; A's first step is also strong.",
+   "cost_usd": 0.005069
+  }
+ ]
+}

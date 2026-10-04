@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "3d878e97e0d0509ed23ea279618ef35dff12db6cc865ea1ece5164bd0b4a1eda",
+ "recorded_at": "2026-10-04T02:11:40.720076+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPMA46xsMsVKhnKy6Zb",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step frames the on-prem HSM limit for the group security office, which is the actual blocker, with owner and date. B leads with hygiene and pushes for a date Matteo said he can't control.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 756,
+   "cache_creation_input_tokens": 2195,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2195,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 86,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

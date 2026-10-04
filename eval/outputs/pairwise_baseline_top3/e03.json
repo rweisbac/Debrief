@@ -1,0 +1,29 @@
+{
+ "deal_id": "e03",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Frank to send the Canadian contract clause on shipment data and name who in legal can confirm whether it covers telematics, so Omar's October 1 answer addresses it. (owner Leah Brennan, due 2026-09-29). Why: Frank and Ingrid contradict each other on whether the contracts cover telematics; Omar's answer is useless unless legal's actual position is known.",
+  "Ask Frank who signs for this purchase and propose a dated meeting after Omar's October 1 answer, before sending 50 and 400 seat pricing. (owner Leah Brennan, due 2026-09-29). Why: No one named who signs, and pricing for two seat counts will start commercial talk before any buyer touchpoint."
+ ],
+ "opponent_steps": [
+  "**Set a date for the pricing delivery** and assign an owner (suggest Leah). Make it clear that it's a two-scenario quote.",
+  "**Get Omar's residency answer out by Oct 1,** even if the answer is \"not available today.\" Be precise about what exists versus what is roadmap, and don't promise roadmap timing without confirmation.",
+  "**Ask the customer for the contract language and the Legal contact** so the question is settled on the actual clause rather than recollection. Ask Frank and Ingrid to align internally on who owns that."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step settles the contract clause via legal, unblocking Omar's residency answer; it also records the missing economic buyer with owners and dates. B is less specific, with no owners or dates beyond Oct 1.",
+   "cost_usd": 0.017074
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step targets the Frank/Ingrid residency conflict with named owner and date; it also names the missing economic buyer and sequences pricing after it. A is vaguer, with no economic buyer.",
+   "cost_usd": 0.003619
+  }
+ ]
+}

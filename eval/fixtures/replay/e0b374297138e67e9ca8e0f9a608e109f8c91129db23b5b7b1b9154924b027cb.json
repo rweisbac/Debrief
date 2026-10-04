@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e0b374297138e67e9ca8e0f9a608e109f8c91129db23b5b7b1b9154924b027cb",
+ "recorded_at": "2026-10-04T02:11:36.386830+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLosAK73X4dkqJrLyg",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"b\",\"why\":\"A has named owners, dates, and corrects the hearsay roadmap claims before the board. B's first step is stronger and its interim path is useful, but it lacks owners and dates.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 816,
+   "cache_creation_input_tokens": 2208,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2208,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 80,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

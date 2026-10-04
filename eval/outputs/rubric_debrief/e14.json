@@ -1,0 +1,42 @@
+{
+ "deal_id": "e14",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Send the encryption whitepaper with a short cover note for the group security office: keys must sit in a major cloud key service, on premises HSMs are not supported, and offer a call with them if useful. (owner Elena Varga, due 2026-10-02). Why: The whitepaper alone doesn't answer the HSM question the security office will actually decide, and a typical rep sends it without that framing.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Strong step; the weakest point is that the offered call with the group security office is only an offer, which is fine, but the note should also confirm the Oct 7 support-access wording will follow so the security office gets the full picture, and the playbook rule list in this task stops at PB-10 so PB-09 is the nearest match."
+   },
+   "error": "",
+   "cost_usd": 0.011001
+  },
+  {
+   "rank": 2,
+   "step": "Ask Charlotte who signs for this purchase and what she can bring to the group security office, since no economic buyer or outcome in her words was stated. (owner Sean Murphy, due 2026-10-02). Why: Charlotte's enthusiasm is conditional and nobody named who signs; the group security office is absent and easy to leave unaddressed.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is r3: the step is a question to Charlotte, not something she can forward to the group security office, so attach a short brief on the cloud key service versus on-premises HSM question (with the whitepaper) that she can pass on."
+   },
+   "error": "",
+   "cost_usd": 0.01213
+  }
+ ]
+}

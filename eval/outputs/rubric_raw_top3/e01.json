@@ -1,0 +1,60 @@
+{
+ "deal_id": "e01",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Build and send the CFO business case (cost per store and overstock reduction)** - **Owner:** Hannah, with Devon on the cost-per-store inputs - **Timing:** Start today and send by Friday, Oct 2. Aim for Thursday so Maya can review it. - **Why it matters:** It is the one deliverable Maya needs before she takes this to Priscilla, and the Oct 6 meeting depends on it. - **Check first:** Maya referred to numbers \"we modeled together last month,\" but the CRM shows discovery on Sept 14 and nothing about a joint model. Hannah should find that model now, or rebuild it and confirm the assumptions with Maya, rather than send numbers Maya doesn't recognize.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "Strong overall; the weakest point is that Devon's role on cost-per-store inputs was not stated in the call, so it should be confirmed with him, and the step should say who finds the prior model if Hannah cannot locate it by Tuesday."
+   },
+   "error": "",
+   "cost_usd": 0.02569
+  },
+  {
+   "rank": 2,
+   "step": "Lock in the CFO meeting and learn how the decision gets made** - **Owner:** Hannah - **Timing:** - Today or tomorrow: confirm Maya has sent the Oct 6, 10:00 invite with Devon included, get Priscilla's email, and set her as economic buyer in the CRM (the field is blank). - Before Oct 6: hold a short pre-brief with Maya, ideally right after sending the business case. - **Why it matters:** The CRM says the decision process was \"Not discussed.\" On a $310K deal that Priscilla must sign, we don't know what she will ask for, or whether procurement, legal or security reviews sit between her and a Dec 18 close. - **Pre-brief topics:** what Priscilla cares about, the approval steps and timeline, and any other approvers.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is r3: the step is mostly seller-side (confirm invite, get email, set CRM field, pre-brief) and produces nothing Maya can forward to Priscilla; fix by adding a short CFO brief or approval-path checklist Maya can bring, with the business case due Oct 2, so the decision process question gets answered by the customer."
+   },
+   "error": "",
+   "cost_usd": 0.006422
+  },
+  {
+   "rank": 3,
+   "step": "Send Carlos the change feed setup doc** - **Owner:** Devon - **Timing:** Today, Sept 28, as promised on the call. - **Why it matters:** It is a small, dated commitment to the technical evaluator, and delivering it on time keeps his support going into the CFO stage. - **Optional addition:** Ask Carlos to confirm that production volumes will stay within his limits. The 40 reads/sec figure came from the sandbox.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest is r2: the setup doc serves Carlos's ops runbook and does not unblock the CFO decision, so the step is a hygiene item (PB-08) rather than one that moves the Oct 6 meeting, which needs the cost per store and overstock numbers Hannah owes Maya by Oct 2."
+   },
+   "error": "",
+   "cost_usd": 0.011272
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "3d5f438be04479cffd69418d58acd4ebebd90717e77b3437872ccf295653d0c7",
+ "recorded_at": "2026-10-04T02:14:32.962263+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZqAAhJDVGAGeiACgX",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step sends the whitepaper with HSM framing for the security office, the real blocker, and its second asks who signs. A's first step pushes for a security-office meeting, which Matteo said he doesn't control, and is mostly hygiene.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1044,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5388,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 101,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

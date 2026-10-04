@@ -1,0 +1,30 @@
+{
+ "deal_id": "e02",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Send Tamsin the stored procedure write-up asking for a few dynamic procedures, and tell her the date Sofia will report back on the parser run. (owner Sofia Russo, due 2026-09-30). Why: Sofia promised the parser run with no timing; AEs often leave it undated, and the customer never hears a date.",
+  "Send Gregor a short list of the minimum tables and fields needed from the data dictionary, so he can send a partial export instead of gathering it all. (owner Ben Adeyemi, due 2026-09-30). Why: Gregor said it is spread across wikis; a sized request makes it easier to send than a reminder would.",
+  "Ask Tamsin what her manager needs to approve early procurement involvement, and who signs for this purchase, then offer to send it. (owner Ben Adeyemi, due 2026-10-01). Why: No economic buyer is named. Tamsin's manager is a possible path in, easy to miss because it was said in passing."
+ ],
+ "opponent_steps": [
+  "**Today:** Send the recap (draft below) and Sofia's stored procedure write-up. Make the write-up very specific: how many procedures, what format, and whether sanitized or redacted samples are acceptable, given this is a bank.",
+  "**Sofia:** Ask the parser team for a realistic turnaround now, so Ben can give Tamsin an honest date. Also prepare a fallback answer on dynamic SQL in case the parser can't handle these procedures.",
+  "**Pin down dates in writing:** Propose a date for the data dictionary and a tentative reconnect window, and ask for confirmation. Gregor declined a hold, so ask for a time range rather than an invite."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A has named owners and dates, gives Tamsin a dated parser answer, sizes the data dictionary ask, and surfaces the signer/procurement path. B lacks owners/dates, is mostly hygiene, and pushes dates Gregor deferred.",
+   "cost_usd": 0.016892
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B has named owners, due dates, and grounds steps in the call: a dated parser answer, a sized dictionary request, and the unnamed economic buyer. A is generic, lacks owners, and pushes dates despite Gregor's deferral.",
+   "cost_usd": 0.003954
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "deal_id": "e10",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask the identity team in writing for a GA date for nested net_groups claims and whether Corvid can join the private preview, to start the SSO design and date due Oct 9. (owner Ana Petrov, due 2026-10-06). Why: Ana relayed hearsay from product, and the release card says no GA date is announced. An AE would likely just wait for her answer.",
+  "Tell Fatima that next quarter is not confirmed and preview access is unverified, so she doesn't put either in front of the architecture board. (owner Derek Shaw, due 2026-10-05). Why: Both claims were made in the call and the board will read them in writing. Reps rarely retract their own reassurances unprompted."
+ ],
+ "opponent_steps": [
+  "**Today:** Ana asks Product for a firm answer on nested claims: the date, GA vs. beta, and calendar vs. fiscal quarter. Also ask whether Corvid qualifies for the preview program.",
+  "**Decide what Apex can put in writing.** If Product won't commit, send a clearly labeled roadmap statement rather than a commitment, and tell Fatima that plainly. Better to disappoint now than at the board.",
+  "**Build an interim path into the SSO design.** For example, ask whether Corvid's IdP can emit a flattened claim (such as a list of `region:role` strings) until nested support ships. Ana to validate feasibility before offering it."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "baseline_top3",
+   "why": "A has named owners, dates, and corrects the hearsay roadmap claims before the board. B's first step is stronger and its interim path is useful, but it lacks owners and dates.",
+   "cost_usd": 0.008591
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "baseline_top3",
+   "why": "B is grounded with owners and dates, and corrects the unverified 'next quarter' and preview claims before the board. A's first step is strong, but it lacks owners and dates, and its flattened-claim idea is speculative.",
+   "cost_usd": 0.003652
+  }
+ ]
+}

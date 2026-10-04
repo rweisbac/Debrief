@@ -1,0 +1,42 @@
+{
+ "deal_id": "e09",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary he can forward to that person. (owner Mia Torres, due 2026-09-30). Why: Hugo said he doesn't decide and doesn't know who does; AEs may just wait for the summary reply.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "Weakest is R7: it is mostly a recap plus a name request, so adding a forwardable line tied to the customer's stated pain of manual meter data loads, and offering to join a short intro with operations, would give Hugo a stronger path to the absent decision maker."
+   },
+   "error": "",
+   "cost_usd": 0.015308
+  },
+  {
+   "rank": 2,
+   "step": "Log Kofi's load summary promise with an owner and a send date of 2026-09-30, and tell Hugo when it is sent. (owner Kofi Mensah, due 2026-09-30). Why: No date was given, and passing commitments get dropped; a dated send also lets Hugo forward it.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Logging Kofi's passing load-summary promise with a 2026-09-30 date is grounded and feasible, but it is pure hygiene and does not address the real blocker, which is that Hugo is not the decision maker and no economic buyer or operations contact is named; pair the summary with a forwardable version for operations, written in Hugo's words and tied to the manual meter data load pain, and ask Hugo who in operations should receive it."
+   },
+   "error": "",
+   "cost_usd": 0.006136
+  }
+ ]
+}

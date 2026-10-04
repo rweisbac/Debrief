@@ -1,0 +1,42 @@
+{
+ "deal_id": "e08",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Rachel who in leadership decides on a second platform, and offer a one-page outline of the Lakestream side-by-side for her to bring to that person. (owner Isaac Morgan, due 2026-10-02). Why: Leadership was mentioned only generically, so the signer is easy to leave unnamed while the focus stays on the cost comparison.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Strong step that targets the unnamed leadership signer (Rachel in U011) and gives her a forwardable outline; the weakest point is that the outline predates Tobias's volumes and Lena's comparison, so it must stay numberless and structural until the Oct 14 review."
+   },
+   "error": "",
+   "cost_usd": 0.01719
+  },
+  {
+   "rank": 2,
+   "step": "Send Tobias a short list of what the cost comparison needs (event volumes per hour, required refresh, add-on scope), and tell Rachel it lands about a week after the volumes arrive, before the October 14th review. (owner Lena Fischer, due 2026-10-01). Why: A vague volume request risks a second round, and the CRM logs the commitment without a date. Say 'about a week', not a firm date.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest is r7: a data request checklist plus a timing note is largely coordination hygiene, and it does not prepare Rachel to answer leadership's 'why not expand Lakestream' question or address the Oct 20 renewal; adding a short outline of the side by side (Apex vs Lakestream plus add-on, all-in cost) she can forward would lift it."
+   },
+   "error": "",
+   "cost_usd": 0.006178
+  }
+ ]
+}

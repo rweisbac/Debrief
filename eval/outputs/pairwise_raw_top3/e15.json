@@ -1,0 +1,29 @@
+{
+ "deal_id": "e15",
+ "opponent": "raw_top3",
+ "debrief_steps": [
+  "Ask Liam to share the engineering lead's six month build assumptions, or an intro to that lead, so Apex can draft the build versus buy cost comparison Helen requires. (owner Nora Quinn, due 2026-10-05). Why: Liam said they can't build it, but Helen relayed otherwise. An AE might take Liam's word and skip the absent engineering lead.",
+  "Send deal desk Helen's terms of three year minimum and quarterly in arrears only, and ask for an answer before any commercial talk with her. (owner Nora Quinn, due 2026-10-05). Why: Nora's deal desk check was a passing remark in a rushed CFO exchange, so it is easy to leave unlogged and undated."
+ ],
+ "opponent_steps": [
+  "**Lock in the build-vs-buy cost comparison with Helen, and get a dated meeting for it** - **Action:** Email Liam and Helen to book a dated meeting next week, replacing the vague \"talk next week\". Use it to learn what the comparison must include (the engineering lead's six-month build estimate, ongoing maintenance, opportunity cost). Then build the TCO comparison with Ravi and Liam's input. Also record Helen as economic buyer in the CRM (the field is blank) and ask about the decision process, which is still undocumented. - **Owner:** Nora, with Ravi supporting the technical side of the build estimate. - **Timing:** Send the invite by Monday, Oct 5. Hold the meeting next week and deliver the comparison soon after, leaving plenty of runway before the Dec 18 close. - **Why it matters:** Helen said nothing gets signed this year without this comparison, so it gates the whole $560K deal, and the next step has no date or economic-buyer coverage yet.",
+  "**Take the 3-year term and quarterly-in-arrears payment requirements to deal desk** - **Action:** Submit both terms for approval, and ask about pricing, discount and cash-flow implications. Get a clear yes, no or counter-offer. - **Owner:** Nora. - **Timing:** Submit by Tuesday, Oct 6, and aim to have an answer before the meeting with Helen. - **Why it matters:** Helen's terms are firm policy, so the team needs to know whether Apex can meet them before it puts a proposal and comparison in front of her.",
+  "**Test the custom-field case export once Zara sends her field list** - **Action:** Follow up with Zara to get the field list, test it against her case tool, and confirm the results in writing. Log this as Ravi's commitment in the CRM, where the field is currently empty. - **Owner:** Ravi. - **Timing:** Chase Zara Monday if the list hasn't arrived, and report results within 2 business days of receiving it. - **Why it matters:** It's the only open technical question, and Ravi's answer (\"I believe so\") was unconfirmed. Closing it keeps Liam's view that \"we're in good shape technically\" intact."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_top3",
+   "top_step_winner": "raw_top3",
+   "why": "B's first step ties the CFO's cost-comparison gate to a dated meeting and fills the blank economic buyer; it also covers deal desk and Ravi's custom-field test. A omits Ravi's commitment and the dated meeting.",
+   "cost_usd": 0.009783
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_top3",
+   "top_step_winner": "raw_top3",
+   "why": "A's top step secures a dated meeting with Helen for the gating cost comparison, records her as economic buyer, and A also covers Ravi's custom-field test commitment. B omits the dated next step and Ravi's commitment.",
+   "cost_usd": 0.004719
+  }
+ ]
+}

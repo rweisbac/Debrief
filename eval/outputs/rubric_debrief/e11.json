@@ -1,0 +1,60 @@
+{
+ "deal_id": "e11",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Send Elise a short provost-ready summary of the first generation retention cut, in her words, to forward to Dr. Abernathy. (owner Paula Jensen, due 2026-10-01). Why: Elise deferred the provost meeting; a ready-to-forward piece tied to the provost's own ask gives her an easy path in.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "R5 is weakest: Elise never stated a business outcome (only enthusiasm), and the first-generation cut was Kevin's ask answered verbally, so 'in her words' risks inventing an outcome; fix by quoting only her actual lines, noting the outcome is not stated, and asking her for it in the same message."
+   },
+   "error": "",
+   "cost_usd": 0.018092
+  },
+  {
+   "rank": 2,
+   "step": "Offer Elise a committee-ready summary and ask what the technology committee needs to review and when it meets. (owner Paula Jensen, due 2026-10-02). Why: Nobody knows when the committee meets and it may miss the close date. Offer help rather than chase.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest point is that it covers only the technology committee and leaves the provost, Dr. Abernathy, and the privacy officer without a path in; adding a forwardable one-pager for them would fully meet the intent of PB-03 and PB-05."
+   },
+   "error": "",
+   "cost_usd": 0.01043
+  },
+  {
+   "rank": 3,
+   "step": "Send the promised screenshots with a stated date, and add an access-controls view Elise can show the privacy officer. (owner Sam Okoro, due 2026-10-01). Why: Screenshots were promised in passing with no date; adding the access-controls view gives Elise something for the privacy officer.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "The weakest criterion is r2: the step helps Elise share the demo and reach the privacy officer, but the real blockers are no path to the provost, Dr. Abernathy, and an unknown technology committee date, so adding a short brief or ask Elise can take to Dr. Abernathy or the committee would fix it."
+   },
+   "error": "",
+   "cost_usd": 0.011306
+  }
+ ]
+}

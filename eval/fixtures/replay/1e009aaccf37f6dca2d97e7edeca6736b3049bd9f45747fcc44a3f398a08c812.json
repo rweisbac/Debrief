@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "1e009aaccf37f6dca2d97e7edeca6736b3049bd9f45747fcc44a3f398a08c812",
+ "recorded_at": "2026-10-04T02:11:26.180416+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPL4WCoMB4hgz6XU2mz",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's steps are specific, owned, dated, and respect Gregor's declined hold (sized dictionary request, no chasing). It catches the passing procurement/manager path and the undated SC promise. A pushes a slot and follow-ups.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1565,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5599,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 100,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

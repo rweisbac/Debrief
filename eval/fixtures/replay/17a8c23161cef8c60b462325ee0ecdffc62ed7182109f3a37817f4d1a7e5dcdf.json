@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "17a8c23161cef8c60b462325ee0ecdffc62ed7182109f3a37817f4d1a7e5dcdf",
+ "recorded_at": "2026-10-04T02:14:31.079334+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZiGB9b1t7gXvNe4en",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"tie\",\"why\":\"Both lead with confirming the pass bar before the dedicated test. B adds the unnamed economic buyer, a real gap (TV since Sept 14). A's second step is a sample file Yuki already promised, so it is routine.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1103,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5219,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 97,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "deal_id": "e07",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Monica whether Daniel signs or only handles commercials, and agree what to bring him and when before any pricing talk. (owner Grace Liu, due 2026-10-02). Why: Daniel was named in passing and only after the board. An AE may not check whether he is the signer.",
+  "Send Sanjay one list of the documents he named, with owner and send date for each, so the October 14th cutoff is visible. (owner Grace Liu, due 2026-10-02). Why: Missing the October 14th cutoff loses the October 22nd board. A single checklist helps without chasing."
+ ],
+ "opponent_steps": [
+  "**Today:** Andre sends the SOC 2 and pen test summary. Grace sends the recap email below.",
+  "**Assign questionnaire ownership** internally as soon as it arrives, and work back from Oct 14 with a target of Oct 12 or earlier. Pull in the security and legal team early.",
+  "**Clarify with Sanjay** what happens on Oct 22 (decision vs. intake), how long review takes after the Oct 14 submission, and the date of the next board if we miss."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "baseline_top3",
+   "why": "A targets the real gaps (Daniel's signer role, Oct 14 document checklist) with owners and dates. B's first step is the correct, immediate unblocker, but B invents a self-imposed Oct 12 target and hedges on already-stated facts.",
+   "cost_usd": 0.008669
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "baseline_top3",
+   "top_step_winner": "baseline_top3",
+   "why": "A's first step delivers the SOC 2 and pen test, which the board needs by Oct 14, and it works back from that cutoff. B's Daniel step comes before security documents and is premature, since Daniel enters only after the board.",
+   "cost_usd": 0.003481
+  }
+ ]
+}

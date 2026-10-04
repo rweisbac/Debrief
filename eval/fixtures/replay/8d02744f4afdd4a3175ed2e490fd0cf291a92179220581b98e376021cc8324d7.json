@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "8d02744f4afdd4a3175ed2e490fd0cf291a92179220581b98e376021cc8324d7",
+ "recorded_at": "2026-10-04T02:14:26.979073+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZPrPyU8LbKtgPT2FA",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"a\",\"why\":\"A's first step targets the real risk (privacy consent) but wrongly asserts Ann is the economic buyer and pushes an Ann meeting. B stays faithful, flags the unverified outcome and signer, and sizes the consent note to Doug.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1087,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 8797,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 104,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

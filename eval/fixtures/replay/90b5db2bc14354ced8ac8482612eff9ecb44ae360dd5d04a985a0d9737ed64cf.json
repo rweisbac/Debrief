@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "90b5db2bc14354ced8ac8482612eff9ecb44ae360dd5d04a985a0d9737ed64cf",
+ "recorded_at": "2026-10-04T02:11:23.162685+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPKoa2YRzvNeabNG7f3",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step settles the contract clause via legal, unblocking Omar's residency answer; it also records the missing economic buyer with owners and dates. B is less specific, with no owners or dates beyond Oct 1.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 786,
+   "cache_creation_input_tokens": 5833,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 5833,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 92,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

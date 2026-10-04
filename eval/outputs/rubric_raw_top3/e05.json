@@ -1,0 +1,60 @@
+{
+ "deal_id": "e05",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Get the consent/privacy question out in the open and find out who decides it** - **Action:** Ask Doug who on the privacy team owns the decision on joining viewing logs to subscriber records for opted-out users, and ask for a short call with them. Nia should give them a brief note on the ingestion-time consent filter. Log it in the CRM as a risk. - **Owner:** Ryan leads, with Nia on the technical note. - **Timing:** Email Doug by Oct 2 and aim to speak with privacy before the Oct 7 one-pager. Resolve it before the November planning cycle. - **Why:** Doug said it \"might kill the whole attribution piece,\" and it appears nowhere in the CRM, so it is an unmanaged risk that could end the deal.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "The weakest criterion is r6: it pushes for a privacy call by Oct 7 and a resolution before November, which sets a seller-driven pace on a customer-owned review, so instead send Nia's consent-filter note for Doug to forward and offer a call on the privacy team's timing."
+   },
+   "error": "",
+   "cost_usd": 0.016964
+  },
+  {
+   "rank": 2,
+   "step": "Send Ann's one-pager and use it to get access to her** - **Action:** Write a one-page summary, not a deck, that covers the four-hour job, the failures, the 11-minute dedupe and the alerting, with pilot scope and the consent status noted. Ask Doug for an intro or short meeting with Ann. Update the CRM to name Ann as economic buyer, since that field is empty. - **Owner:** Ryan, with Nia reviewing the technical claims. - **Timing:** Send to Doug by Wednesday, Oct 7, as promised. Request the Ann meeting in the same email, ahead of November planning. - **Why:** Ann owns the data budget and nobody on our side has spoken to her, so Doug is currently our only route to the money.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The step passes all criteria, but its weakest point is that the consent question Doug said could kill attribution is only noted in the one-pager, so adding a short consent-filter brief for Doug to take to the privacy team would address the bigger risk."
+   },
+   "error": "",
+   "cost_usd": 0.019634
+  },
+  {
+   "rank": 3,
+   "step": "Deliver Nia's technical follow-ups and log them in the CRM** - **Action:** Send Luis the dedupe config and the note on late events. Collect Karen's list of 60 segments, split into SQL and spreadsheet-based. Record these as Nia's commitment in the CRM, where the SC commitment field is blank. - **Owner:** Nia. - **Timing:** Config and late-events note by Oct 2. Follow up on Karen's segment list if it hasn't arrived by about Oct 6. - **Why:** Luis's late-event question is the one technical doubt raised, and prompt delivery matters to Doug given his bad experience with a vendor that went silent.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest is r2: the step only fulfils passing commitments and logs them, and it wrongly calls late events the one technical doubt, missing the privacy consent question that could block attribution and the need to reach Ann before November planning; add a dated step for Nia to give Doug a consent-filtering note his privacy team can review, and drop the Oct 6 chaser on Karen's list in favor of offering help."
+   },
+   "error": "",
+   "cost_usd": 0.01503
+  }
+ ]
+}

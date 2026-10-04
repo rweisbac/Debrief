@@ -1,0 +1,60 @@
+{
+ "deal_id": "e10",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Get a confirmed nested-claims date and preview-program access from Product, in writing.** - **Owner:** Ana Petrov, with Derek Shaw escalating to the product manager if there's no answer. - **Timing:** Request today and have it confirmed by Tue Oct 6, so it's in hand before the Oct 9 send. - **Why:** SSO is Fatima's gate, and the only support for \"next quarter\" is Ana's secondhand \"that's what I've heard.\" Derek's \"I'm sure\" about the preview program was also unverified. If the date is soft or falls after the Dec 18 close, we need to know before it goes to the architecture board.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": false,
+    "best_practice_rule": "PB-04",
+    "critique": "The weakest criterion is feasibility, since RC-09 says nested claims have no announced GA date, so a confirmed date by Oct 6 may not exist and preview access is not Apex sales's to grant; fix it by planning for the likely no-date outcome and drafting the board-ready SSO design with a flat-claim workaround, or a stated 'no committed date' answer, that Fatima can forward, which would also make the step buyer-enabling."
+   },
+   "error": "",
+   "cost_usd": 0.012313
+  },
+  {
+   "rank": 2,
+   "step": "**Send the written SSO design and nested-claims date, with a fallback if the date slips.** - **Owner:** Ana sends the design. Derek sends the date in the same email. - **Timing:** By Fri Oct 9, as committed on the call. - **Why:** The board needs this in writing, and it's the only thing Fatima asked for. Today's GA limitation is flat claims only, so the design should include an interim option, such as flattening `net_groups` at the IdP or using the preview. The email should also confirm that the connector is continuous (about 1 minute), not hourly, so the earlier wrong statement doesn't linger.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": false,
+    "best_practice_rule": "PB-04",
+    "critique": "The step assumes a nested-claims date exists to send, but RC-09 says nested claims are in private preview with no announced GA date and the identity team must confirm first, so it should say the date is unconfirmed, make the SC's dated ask to the identity team the deliverable, and lead with the verified flat-claim interim design rather than a date that may not exist or the preview that Derek only said he was 'sure' about."
+   },
+   "error": "",
+   "cost_usd": 0.011131
+  },
+  {
+   "rank": 3,
+   "step": "**Map the decision-makers behind the Nov 3 board and fill the empty CRM fields.** - **Owner:** Derek. - **Timing:** Ask Fatima this week, and book a pre-read with her the week of Oct 19. Update the CRM now. - **Why:** The CRM has no economic buyer, no stakeholder to add, and no business outcome on a $480K deal. Fatima is the only champion, and the board is the real decision point. Ask who sits on the board and who owns the budget. Use the 5-hour to 22-minute pipeline result, which Colin liked, as the business outcome in the CRM and in the board materials.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The weakest criterion is r5 (honest and bounded): no business outcome was stated (CRM value is empty), so labeling the 5-hour to 22-minute pipeline result as the outcome invents one, and the step ignores the actual blocker for the Nov 3 board (the written SSO design and verified nested claims date); fix by asking Fatima for the outcome in her words and anchoring the pre-read on the SSO design and claims answer."
+   },
+   "error": "",
+   "cost_usd": 0.014415
+  }
+ ]
+}

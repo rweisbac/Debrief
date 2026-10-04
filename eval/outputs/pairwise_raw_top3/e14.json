@@ -1,0 +1,29 @@
+{
+ "deal_id": "e14",
+ "opponent": "raw_top3",
+ "debrief_steps": [
+  "Send the encryption whitepaper with a short cover note for the group security office: keys must sit in a major cloud key service, on premises HSMs are not supported, and offer a call with them if useful. (owner Elena Varga, due 2026-10-02). Why: The whitepaper alone doesn't answer the HSM question the security office will actually decide, and a typical rep sends it without that framing.",
+  "Ask Charlotte who signs for this purchase and what she can bring to the group security office, since no economic buyer or outcome in her words was stated. (owner Sean Murphy, due 2026-10-02). Why: Charlotte's enthusiasm is conditional and nobody named who signs; the group security office is absent and easy to leave unaddressed."
+ ],
+ "opponent_steps": [
+  "**Get the group security office engaged and a dated decision path** - **Action:** Send a recap email to Matteo and Charlotte. Ask Matteo to introduce the group security office contact, and ask what their policy needs to approve a cloud key service for guest data (on-prem HSMs aren't supported). Propose a dated next step, such as a call with the security office or a check-in on a set date. Add that contact to the CRM. - **Owner:** Sean Murphy (Elena joins any security-office call). - **Timing:** Send today or tomorrow (Oct 1-2), with a target date for the security answer. - **Why:** Charlotte's \"we can move\" depends on keys, a cloud key service may violate Matteo's policy, and he doesn't control the group security office's timeline. The CRM currently has no dated next step and no security-office stakeholder.",
+  "**Send the encryption whitepaper with the key hierarchy** - **Action:** Send the whitepaper to Matteo and cc Charlotte, framed as material for the group security office. Offer to walk their team through it. - **Owner:** Elena Varga. - **Timing:** Today, Oct 1, as she promised on the call. - **Why:** It's the one thing Matteo said would help his internal review, and missing a same-day commitment would cost trust on the deal's main risk.",
+  "**Deliver the support-access contract wording** - **Action:** Get the exact wording on EU-only support access from the compliance team and send it to Matteo. - **Owner:** Elena Varga, with Sean tracking it. - **Timing:** Request it from compliance now. Deliver by Wednesday, Oct 7 at the latest. - **Why:** Matteo asked for it directly, it feeds the same security review, and delivering it on time shows we are reliable on the data residency questions that matter to them. **Also to fix in the CRM:** The economic buyer and the business outcome are still blank. Sean should cover both in the next conversation with Charlotte, since the close date is Dec 18 and the security review could slip it."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A leads with the whitepaper plus HSM framing for the group security office, the real blocker, and adds the economic buyer ask. B pushes a call and dated step Matteo deferred, and omits nothing but pads with already-promised items.",
+   "cost_usd": 0.009676
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step frames the whitepaper around the real blocker (cloud key service vs on-prem HSM) for the group security office; B also asks about the signer. A leads with generic hygiene and pushes a dated meeting.",
+   "cost_usd": 0.004578
+  }
+ ]
+}

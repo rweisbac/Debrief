@@ -1,0 +1,30 @@
+{
+ "deal_id": "e02",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Send Tamsin the stored procedure write-up asking for a few dynamic procedures, and tell her the date Sofia will report back on the parser run. (owner Sofia Russo, due 2026-09-30). Why: Sofia promised the parser run with no timing; AEs often leave it undated, and the customer never hears a date.",
+  "Send Gregor a short list of the minimum tables and fields needed from the data dictionary, so he can send a partial export instead of gathering it all. (owner Ben Adeyemi, due 2026-09-30). Why: Gregor said it is spread across wikis; a sized request makes it easier to send than a reminder would.",
+  "Ask Tamsin what her manager needs to approve early procurement involvement, and who signs for this purchase, then offer to send it. (owner Ben Adeyemi, due 2026-10-01). Why: No economic buyer is named. Tamsin's manager is a possible path in, easy to miss because it was said in passing."
+ ],
+ "opponent_steps": [
+  "Send a same-day recap that pins down dates, and get a tentative reconnect slot** - **Action:** Send a recap that lists what was covered and the three open items: the data dictionary, Tamsin's procurement ask, and the stored-procedure samples. Put a specific date next to each. Ask Gregor to confirm a target slot in the week of Oct 12, for example \"Tue Oct 13 or Thu Oct 15, 30 minutes\", even though he declined a hold. Update the CRM next step to match, since \"Reconnect week after next\" is not dated. - **Owner:** Ben - **Timing:** Today (Sep 29). Follow up on Oct 6 if the dictionary hasn't arrived. - **Why it matters:** Every commitment on the call was soft (\"sometime next week, maybe\", \"I'd have to ask my manager\", \"I'll ping you\"). A $520K deal with an Dec 18 close date will stall without a named date.",
+  "Identify the economic buyer and decision process, using Tamsin's procurement offer as the opening** - **Action:** Ask Gregor directly who signs off on a purchase of this size and what approval steps follow technical validation (security review, procurement, legal, budget). Ask Tamsin to go ahead with the procurement intro. Capture the stated business outcome, which is currently blank, in the same conversation. Fill in the CRM fields for economic buyer, decision process, and business outcome. - **Owner:** Ben, with Gregor as the route in - **Timing:** Raise it in the recap today, then get answers on a short call or email by Oct 6. Don't wait for the reconnect call. - **Why it matters:** The CRM has no economic buyer, no decision process, and no business outcome, and the only contacts are a champion and an evaluator. Without those, the Dec 18 close date is unsupported.",
+  "Turn the stored-procedure question into a committed, dated deliverable** - **Action:** Send Tamsin a short, specific request for 2\u20133 representative dynamic stored procedures, plus how to share them safely (they're bank data). Get a parser-team slot from Sofia's side and give Tamsin a firm date for results. Record the commitment in the CRM's SC commitment field. - **Owner:** Sofia, with Ben escalating internally if the parser team can't commit - **Timing:** Send the request by Sep 30. Aim to have parse results before the reconnect call, around Oct 12. - **Why it matters:** Lineage is Tamsin's main interest and most of her procedures are dynamic, so this is the biggest technical risk. \"No promises on timing\" leaves it open and gives the customer room to drift."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A is specific, sized to the customer's pace, and catches Tamsin's passing manager/procurement lead and the undated parser promise. B leans on routine recap/CRM, pushes a slot Gregor deferred, and chases with an Oct 6 follow-up.}",
+   "cost_usd": 0.018247
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's steps are specific, owned, dated, and respect Gregor's declined hold (sized dictionary request, no chasing). It catches the passing procurement/manager path and the undated SC promise. A pushes a slot and follow-ups.",
+   "cost_usd": 0.00525
+  }
+ ]
+}

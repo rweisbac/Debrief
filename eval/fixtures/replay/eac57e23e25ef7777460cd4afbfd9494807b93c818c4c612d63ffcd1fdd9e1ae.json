@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "eac57e23e25ef7777460cd4afbfd9494807b93c818c4c612d63ffcd1fdd9e1ae",
+ "recorded_at": "2026-10-04T02:11:36.447940+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLou9ZRdXLf6sUVR9U",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step gives Elise a forwardable provost piece tied to Kevin's quote, respects deferral and offers help. B invents a call and a Dec 18 slip, and pushes for a meeting Elise deferred.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1425,
+   "cache_creation_input_tokens": 2005,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2005,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 95,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

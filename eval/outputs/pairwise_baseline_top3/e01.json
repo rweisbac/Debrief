@@ -1,0 +1,29 @@
+{
+ "deal_id": "e01",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand. (owner Hannah Ortiz, due 2026-09-29). Why: Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+  "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis. (owner Hannah Ortiz, due 2026-10-02). Why: Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat."
+ ],
+ "opponent_steps": [
+  "Devon sends the setup doc to Carlos today, with a short note on the load profile.",
+  "Hannah finds the prior modeling and confirms the cost-per-store figure with pricing and deal desk. She builds the business case for Oct 2 and sends it a day early if possible, so Maya can review it.",
+  "Update the CRM: - Add Hannah's Oct 2 commitment and the due date on Devon's. - Populate the economic buyer field with Priscilla Grant. - Request her email, and confirm the invite has been sent and the time zone."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step targets the CFO meeting Maya is booking (invite, email, approval needs) and its business case ties to Maya's outcome wording. B leads with routine doc and CRM hygiene, and invents a deal desk step.",
+   "cost_usd": 0.016691
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step targets the CFO meeting, the key decision unlock, with owner and date; its business case step adds Maya's outcome wording and the sandbox caveat. A is mostly routine hygiene and CRM updates.",
+   "cost_usd": 0.003695
+  }
+ ]
+}

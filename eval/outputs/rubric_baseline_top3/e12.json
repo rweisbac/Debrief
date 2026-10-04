@@ -1,0 +1,60 @@
+{
+ "deal_id": "e12",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Correct the CRM:** - Change the dated next step to something supportable, such as \"Rosa sends endorsement recording Oct 6; confirm approval path with Neil by [date].\" - Mark Oct 30 signature as best case, contingent on an exception. - Keep the Dec 18 close date unless the board date says otherwise.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "The step is a CRM edit that no customer can use and has no owner or date for the approval-path confirmation (a placeholder date), so it fails buyer-enabling, owned-dated and beyond-hygiene; fix it by having Victor send Neil a forwardable brief for the board technology committee (over 300 thousand, November meeting, exception path) by a stated date."
+   },
+   "error": "",
+   "cost_usd": 0.012471
+  },
+  {
+   "rank": 2,
+   "step": "**Fill the empty CRM fields:** - SC commitment: endorsement recording by Oct 6. - Stakeholder to add: the board technology committee chair or member, and whoever handles procurement or legal. - Update the decision process notes with the >$300K board threshold and the November meeting.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "This is pure CRM hygiene and never addresses the board technology committee gate that blocks the Oct 30 signature; it also adds procurement or legal, which nobody named in the call. Replace it with a dated step such as the AE sending Neil a forwardable board-committee brief, with the stakeholder list limited to what was said."
+   },
+   "error": "",
+   "cost_usd": 0.012093
+  },
+  {
+   "rank": 3,
+   "step": "**Map the approval process with Neil:** the exact exception criteria, who decides, the November meeting date, the submission deadline for materials, and what the committee expects to see.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest are R4 and R3: the step has no owner or date and only collects information for Apex, so name Victor with a date (for example a call with Neil by Oct 6) and offer a forwardable committee-ready brief that Neil can use."
+   },
+   "error": "",
+   "cost_usd": 0.009711
+  }
+ ]
+}

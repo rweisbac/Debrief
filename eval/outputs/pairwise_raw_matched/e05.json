@@ -1,0 +1,28 @@
+{
+ "deal_id": "e05",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it. (owner Nia Oduya, due 2026-10-02). Why: Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+  "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager. (owner Ryan Castellano, due 2026-10-05). Why: CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both."
+ ],
+ "opponent_steps": [
+  "Get the consent/privacy question out in the open and find out who decides it** - **Action:** Ask Doug who on the privacy team owns the decision on joining viewing logs to subscriber records for opted-out users, and ask for a short call with them. Nia should give them a brief note on the ingestion-time consent filter. Log it in the CRM as a risk. - **Owner:** Ryan leads, with Nia on the technical note. - **Timing:** Email Doug by Oct 2 and aim to speak with privacy before the Oct 7 one-pager. Resolve it before the November planning cycle. - **Why:** Doug said it \"might kill the whole attribution piece,\" and it appears nowhere in the CRM, so it is an unmanaged risk that could end the deal.",
+  "Send Ann's one-pager and use it to get access to her** - **Action:** Write a one-page summary, not a deck, that covers the four-hour job, the failures, the 11-minute dedupe and the alerting, with pilot scope and the consent status noted. Ask Doug for an intro or short meeting with Ann. Update the CRM to name Ann as economic buyer, since that field is empty. - **Owner:** Ryan, with Nia reviewing the technical claims. - **Timing:** Send to Doug by Wednesday, Oct 7, as promised. Request the Ann meeting in the same email, ahead of November planning. - **Why:** Ann owns the data budget and nobody on our side has spoken to her, so Doug is currently our only route to the money."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_matched",
+   "top_step_winner": "debrief",
+   "why": "B's Ann access and consent-risk steps are concrete and more actionable; A's first step is sharp, but its second only asks questions. B pushes a privacy call and an Ann intro, slightly beyond the customer's stated pace.",
+   "cost_usd": 0.004913
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "raw_matched",
+   "why": "A's first step targets the real risk (privacy consent) but wrongly asserts Ann is the economic buyer and pushes an Ann meeting. B stays faithful, flags the unverified outcome and signer, and sizes the consent note to Doug.",
+   "cost_usd": 0.004973
+  }
+ ]
+}

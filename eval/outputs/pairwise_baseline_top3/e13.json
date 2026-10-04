@@ -1,0 +1,29 @@
+{
+ "deal_id": "e13",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Henrik to confirm the pass bar in writing, such as 99th percentile under 2 seconds at about 15 thousand events a second, before Mateo runs the dedicated test. (owner Mateo Ruiz, due 2026-10-05). Why: Henrik called the 99th percentile the problem but also said the result decides it; an unstated bar invites a dispute over a passing median.",
+  "Ask Henrik who signs off on this purchase and whether that person can join the October 12 results review. (owner Olivia Grant, due 2026-10-05). Why: No economic buyer is named and TV began September 14. With a champion-led review booked, the gap is easy to overlook."
+ ],
+ "opponent_steps": [
+  "**Olivia:** send the invite today. Confirm the time zone, since \"9 am our time\" is ambiguous and the CRM timestamps are in UTC-5.",
+  "**Mateo:** before running the test, confirm the exact pass criteria with Henrik and Yuki (percentile, threshold, event rate), so the results are judged against an agreed definition. Report median, p95, p99, and max.",
+  "**Mateo:** review Yuki's sample file as soon as it lands and tell the customer whether the format is supported, needs a connector, or needs more information. Aim to do this before Oct 8 so it can be included in the results."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step locks the pass bar that decides the deal, and its second catches the missing economic buyer. B's first step is trivial invite hygiene, and its time-zone worry is minor.",
+   "cost_usd": 0.008124
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step defines the pass bar that decides the customer's call, and its second step catches the missing economic buyer. A's first step is routine invite logistics; its timezone worry is minor.",
+   "cost_usd": 0.003454
+  }
+ ]
+}

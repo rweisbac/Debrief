@@ -1,0 +1,42 @@
+{
+ "deal_id": "e04",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Send Simone a very short CISO brief, a few lines on read-level query logging and masked unblinded columns with expiring role grants, to forward whenever Dr. Okafor has time. (owner Marta Kowal, due 2026-10-01). Why: CISO sign-off is the gate, and she skips long documents. A typical AE would attach the full recap or push for a meeting.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Strong step; the weakest point is that it omits the economic buyer (VP of R and D or procurement, threshold unknown) and the fact that Dr. Okafor's calendar is deferred, so adding an offer to Simone to supply what the CISO review needs by a customer-set date, plus asking who signs commercially, would round it out."
+   },
+   "error": "",
+   "cost_usd": 0.011474
+  },
+  {
+   "rank": 2,
+   "step": "Ask Simone to find out whether procurement and the VP of R and D approve at this deal size, and who signs, so the economic buyer is named before any commercial talk. (owner Marta Kowal, due 2026-10-02). Why: Simone said it in passing and was unsure of the threshold. The CRM economic buyer is blank and easy to leave that way.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is r2: the real blocker is Dr. Okafor's CISO sign-off and her unavailable calendar, not the commercial approver, so fix it by leading with a short audit-trail and unblinded-access brief Simone can forward to her, and treat the economic buyer question as secondary."
+   },
+   "error": "",
+   "cost_usd": 0.012705
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "deal_id": "e05",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it. (owner Nia Oduya, due 2026-10-02). Why: Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+  "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager. (owner Ryan Castellano, due 2026-10-05). Why: CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both."
+ ],
+ "opponent_steps": [
+  "**Add Ann to the CRM** as economic buyer, and ask Doug for a short intro or a 20-minute call. Don't rely only on the one-pager.",
+  "**Put the privacy issue on the table.** Ask Doug who on the privacy team owns it, and offer Nia for a 30-minute session on the ingestion-level consent filter. Consider whether to mention this in the one-pager. Ann will likely need to know it's an open dependency.",
+  "**Keep the one-pager short:** the outcome, the 4 hours vs. 11 minutes comparison (labeled as a sample day), the alerting benefit, the segments and agency view, and the open consent dependency. Present it in terms of Brightline's own words and numbers."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "baseline_top3",
+   "top_step_winner": "baseline_top3",
+   "why": "B's first step targets Ann, the budget decision, and the one-pager flags the consent risk. A's first step is a note to Doug, and its second step wrongly skips Ann's access; B lacks owners/dates.",
+   "cost_usd": 0.017217
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B names owners and dates, surfaces the hidden consent risk with a concrete artifact, and flags that the outcome was prefilled and Ann's signing role was never stated. A assumes Ann is the economic buyer and pushes for a meeting.",
+   "cost_usd": 0.004437
+  }
+ ]
+}

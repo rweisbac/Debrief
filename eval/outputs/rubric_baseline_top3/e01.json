@@ -1,0 +1,60 @@
+{
+ "deal_id": "e01",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Devon sends the setup doc to Carlos today, with a short note on the load profile.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest are r2 and r7: this only closes Devon's in-call commitment (PB-08) for Carlos's runbook and does not unblock the Oct 6 CFO meeting, so pair it with the business case for Priscilla due Friday Oct 2 or prep for the CFO session."
+   },
+   "error": "",
+   "cost_usd": 0.022974
+  },
+  {
+   "rank": 2,
+   "step": "Hannah finds the prior modeling and confirms the cost-per-store figure with pricing and deal desk. She builds the business case for Oct 2 and sends it a day early if possible, so Maya can review it.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The weakest point is that the step covers only the cost-per-store figure and never mentions the overstock reduction Maya also asked for or her stated outcome of store managers seeing on hand including open orders within minutes, so it should name both and tie the case to that outcome for Priscilla."
+   },
+   "error": "",
+   "cost_usd": 0.011868
+  },
+  {
+   "rank": 3,
+   "step": "Update the CRM: - Add Hannah's Oct 2 commitment and the due date on Devon's. - Populate the economic buyer field with Priscilla Grant. - Request her email, and confirm the invite has been sent and the time zone.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest is r7/r3: this is CRM hygiene that serves only Apex, and the invite-confirmation ask nudges Maya on something she said she would handle, so replace it with a CFO-ready business case (cost per store, overstock reduction) owned by Hannah and due Oct 2, offering to help with the invite rather than chasing it."
+   },
+   "error": "",
+   "cost_usd": 0.01318
+  }
+ ]
+}

@@ -54,7 +54,9 @@ def lines_of(text: str) -> list[str]:
 
 def section(text: str, word: str) -> list[str]:
     """Lines of the markdown section whose heading contains word (baseline output)."""
-    lines, grab, heading = [], False, re.compile(r"^\s*(#+|\*\*\d|\d+\.\s*\*\*|\*\*[A-Z])")
+    # A heading is a markdown heading or a line that is bold from start to end. A numbered bold item such as
+    # "1. **Correct the CRM:**" is content, not a heading (bug found in run 2, fixed before rescoring run 1).
+    lines, grab, heading = [], False, re.compile(r"^\s*(#+\s|\*\*[^*]+\*\*:?\s*$)")
     for line in text.splitlines():
         if heading.match(line) and len(line) < 80:
             grab = word in line.lower()

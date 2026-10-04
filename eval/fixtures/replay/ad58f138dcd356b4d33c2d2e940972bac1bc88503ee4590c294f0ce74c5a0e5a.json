@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "ad58f138dcd356b4d33c2d2e940972bac1bc88503ee4590c294f0ce74c5a0e5a",
+ "recorded_at": "2026-10-04T02:11:42.169975+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPMFxYy2hfT1rkbMnAy",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step frames the whitepaper around the real blocker (cloud key service vs on-prem HSM) for the group security office; B also asks about the signer. A leads with generic hygiene and pushes a dated meeting.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1280,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5388,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 94,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

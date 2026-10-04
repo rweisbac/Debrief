@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "936fe7f80100139c7a71ba5bb0c9f2e9c39bba7013126034e9a984bd2abaa662",
+ "recorded_at": "2026-10-04T02:14:25.038212+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZENtuQdue4RhLbeYY",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"a\",\"why\":\"B's Ann access and consent-risk steps are concrete and more actionable; A's first step is sharp, but its second only asks questions. B pushes a privacy call and an Ann intro, slightly beyond the customer's stated pace.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1087,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 8797,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 98,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

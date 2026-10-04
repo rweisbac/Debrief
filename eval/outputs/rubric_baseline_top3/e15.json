@@ -1,0 +1,60 @@
+{
+ "deal_id": "e15",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Book a dated next call** this week for next week, and update the CRM next step from \"Talk next week.\"",
+   "judge": {
+    "r1_grounded": false,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest is r2_binding_constraint: a scheduling and CRM-hygiene step does not touch what blocks the deal (Helen's cost comparison against building in-house, her 3-year and quarterly-in-arrears terms, Zara's custom field list), and it has no owner or actual date. Fix it by booking a specific date with an agenda that covers the build-vs-buy comparison for Helen, with Nora as owner."
+   },
+   "error": "",
+   "cost_usd": 0.010203
+  },
+  {
+   "rank": 2,
+   "step": "**Log Ravi's commitment** in the CRM `sc_commitment` field (currently empty): test custom fields after Zara's list arrives.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "This is a CRM hygiene item that only serves the seller, with no date and no customer-facing output; the binding constraints are Helen's build-vs-buy cost comparison and her contract terms (3-year minimum, quarterly in arrears), so log the commitment with owner Ravi and a due date, then tell Zara when it is done."
+   },
+   "error": "",
+   "cost_usd": 0.005875
+  },
+  {
+   "rank": 3,
+   "step": "**Send the deal desk request now** on the 3-year / quarterly-in-arrears structure, with a target response date. Confirm whether 3-year terms change how the $560K ACV should be treated.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "The weakest criterion is r2: the step handles contract terms internally, but Helen's stated gate is a build-versus-buy cost comparison (U015), so a fix would be to make that comparison the customer-facing step, with a named owner and date, and treat the deal desk request as supporting work."
+   },
+   "error": "",
+   "cost_usd": 0.010667
+  }
+ ]
+}

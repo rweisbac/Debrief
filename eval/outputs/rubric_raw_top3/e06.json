@@ -1,0 +1,60 @@
+{
+ "deal_id": "e06",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Get written EU data-residency confirmation from compliance** - **Action:** Ask Apex compliance to confirm in writing that the tenant is pinned to Frankfurt, backups included, and to supply the contract wording. Send it to Petra for her legal team. - **Owner:** Jonas Weber starts the request with compliance. Claire Dumont owns the delivery to Petra. - **Timing:** Request it by Friday, Oct 2. Have the written answer to Petra before the Oct 5 pilot plan, and in any case before line 3 data flows on or after Oct 9. - **Why it matters:** Legal has stated a hard rule, and Jonas only gave a verbal answer. This could kill the deal, and the pilot would send plant data into the platform.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "The step passes every criterion, but R2 is the weakest: it covers the legal gate yet leaves the CFO spend freeze, which makes the Dec 18 close unlikely, to a separate step, so pair it with one that tests the historian-replacement exception path."
+   },
+   "error": "",
+   "cost_usd": 0.013607
+  },
+  {
+   "rank": 2,
+   "step": "Work the budget freeze: find the economic buyer and test the historian-replacement exception** - **Action:** - Ask Petra for an intro to finance or the CFO, and learn the exception process and decision steps. - Collect the historian license cost, scope and March renewal and notice terms, and map what Apex would replace. - Update the CRM: add the economic buyer (currently blank), record the decision process (currently \"not discussed\"), and move the Dec 18 close date to a realistic post-April date. - **Owner:** Claire Dumont, with Milan for the historian details. - **Timing:** Send the ask to Petra in the recap email by Oct 2. Aim to have the finance conversation and the historian facts before the pilot ends. Fix the CRM this week. - **Why it matters:** The freeze, the unnamed economic buyer and the March renewal mean the Dec 18 close and the $390K forecast are unsupported. The historian renewal is the only identified path to an exception.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The step is mostly seller-side asks and CRM edits, with no forwardable artifact for Petra to bring to finance (such as a one-page historian-replacement and exception brief), and it pushes for a CFO intro and finance conversation when Petra only said she would check with finance herself, so offer that brief and let her set the pace."
+   },
+   "error": "",
+   "cost_usd": 0.016321
+  },
+  {
+   "rank": 3,
+   "step": "Send the pilot plan by Oct 5, with success criteria tied to the business case** - **Action:** - Deliver the plan with measurable criteria: downtime by cause per shift for plant managers, and quality-model hit rate on line 3. - Include data residency, the Milan controller-access dependency (due Oct 9), and the historian functions that would need to be replaced. - **Owner:** Jonas Weber, with Claire reviewing. - **Timing:** Monday, Oct 5, as committed on the call. - **Why it matters:** The pilot is the one agreed next step and keeps momentum through the freeze. Success criteria that cover the replacement case give Petra the evidence she needs for finance.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is R5: the step treats historian replacement as settled when Petra said she wasn't sure and Milan only said it might, and it folds data residency into the plan without saying the EU contract wording still needs written confirmation from Apex compliance; frame the historian as a hypothesis to validate with Milan and finance, and state the compliance confirmation as a separate owned item."
+   },
+   "error": "",
+   "cost_usd": 0.019615
+  }
+ ]
+}

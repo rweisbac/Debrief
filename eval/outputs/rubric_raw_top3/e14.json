@@ -1,0 +1,60 @@
+{
+ "deal_id": "e14",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Get the group security office engaged and a dated decision path** - **Action:** Send a recap email to Matteo and Charlotte. Ask Matteo to introduce the group security office contact, and ask what their policy needs to approve a cloud key service for guest data (on-prem HSMs aren't supported). Propose a dated next step, such as a call with the security office or a check-in on a set date. Add that contact to the CRM. - **Owner:** Sean Murphy (Elena joins any security-office call). - **Timing:** Send today or tomorrow (Oct 1-2), with a target date for the security answer. - **Why:** Charlotte's \"we can move\" depends on keys, a cloud key service may violate Matteo's policy, and he doesn't control the group security office's timeline. The CRM currently has no dated next step and no security-office stakeholder.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "Weakest are r3 and r6: the step mainly asks Matteo for an introduction and pushes for a security-office call and a target date, after he said he doesn't control that timeline, and it gives him nothing forwardable; fix by offering a short brief the group security office can use (key hierarchy, cloud key service requirement, HSM limit) and letting Matteo choose the pace."
+   },
+   "error": "",
+   "cost_usd": 0.014734
+  },
+  {
+   "rank": 2,
+   "step": "**Send the encryption whitepaper with the key hierarchy** - **Action:** Send the whitepaper to Matteo and cc Charlotte, framed as material for the group security office. Offer to walk their team through it. - **Owner:** Elena Varga. - **Timing:** Today, Oct 1, as she promised on the call. - **Why:** It's the one thing Matteo said would help his internal review, and missing a same-day commitment would cost trust on the deal's main risk.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is r7: sending the whitepaper Elena already promised is fulfilling a logged commitment, so to go beyond hygiene add a short cover note for the group security office that states plainly that on-premises HSMs are unsupported and that keys would sit in a cloud key service, so they can rule on the actual policy question."
+   },
+   "error": "",
+   "cost_usd": 0.010986
+  },
+  {
+   "rank": 3,
+   "step": "**Deliver the support-access contract wording** - **Action:** Get the exact wording on EU-only support access from the compliance team and send it to Matteo. - **Owner:** Elena Varga, with Sean tracking it. - **Timing:** Request it from compliance now. Deliver by Wednesday, Oct 7 at the latest. - **Why:** Matteo asked for it directly, it feeds the same security review, and delivering it on time shows we are reliable on the data residency questions that matter to them. **Also to fix in the CRM:** The economic buyer and the business outcome are still blank. Sean should cover both in the next conversation with Charlotte, since the close date is Dec 18 and the security review could slip it.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "The step misses the binding constraint: Matteo's open question is whether group security policy allows a cloud key service in place of his on-prem HSM, so pair the Oct 7 wording with a packet for the group security office (the encryption whitepaper plus a plain statement that on-prem HSMs are unsupported), and treat the CRM economic buyer and outcome fixes as secondary hygiene."
+   },
+   "error": "",
+   "cost_usd": 0.01404
+  }
+ ]
+}

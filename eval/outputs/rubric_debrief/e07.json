@@ -1,0 +1,42 @@
+{
+ "deal_id": "e07",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Monica whether Daniel signs or only handles commercials, and agree what to bring him and when before any pricing talk. (owner Grace Liu, due 2026-10-02). Why: Daniel was named in passing and only after the board. An AE may not check whether he is the signer.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest is R2: the blocker is getting the SOC 2, pen test summary, questionnaire and data flow diagram to Sanjay by Oct 14 for the Oct 22 board, and Daniel only comes in after that, so fix it by folding the signer question into the recap as a light ask and making the dated security packet the main step."
+   },
+   "error": "",
+   "cost_usd": 0.018017
+  },
+  {
+   "rank": 2,
+   "step": "Send Sanjay one list of the documents he named, with owner and send date for each, so the October 14th cutoff is visible. (owner Grace Liu, due 2026-10-02). Why: Missing the October 14th cutoff loses the October 22nd board. A single checklist helps without chasing.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is r7: a status checklist of documents already promised in the call is closer to a recap than new buyer help, so add something Sanjay's review board needs beyond the four items, such as a one-page summary of the key controls from U003 and U005 that he can forward to the board."
+   },
+   "error": "",
+   "cost_usd": 0.010468
+  }
+ ]
+}

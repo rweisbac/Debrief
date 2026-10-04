@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "77c1e95a0fea8b5da963b65b8bc561fa2d4fb317f4e0ea824a9bfa2ce21ad51c",
+ "recorded_at": "2026-10-04T02:11:40.226917+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPM7ezPEs5mwD1bv2L9",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"a\",\"why\":\"A's first step nails the pass bar, but B covers the dedicated test, the unseen message-format sample, and the economic buyer, all grounded in the call. A omits the sample file, which Mateo hasn't validated.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1346,
+   "cache_creation_input_tokens": 2026,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2026,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 93,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

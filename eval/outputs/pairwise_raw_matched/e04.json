@@ -1,0 +1,28 @@
+{
+ "deal_id": "e04",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Send Simone a very short CISO brief, a few lines on read-level query logging and masked unblinded columns with expiring role grants, to forward whenever Dr. Okafor has time. (owner Marta Kowal, due 2026-10-01). Why: CISO sign-off is the gate, and she skips long documents. A typical AE would attach the full recap or push for a meeting.",
+  "Ask Simone to find out whether procurement and the VP of R and D approve at this deal size, and who signs, so the economic buyer is named before any commercial talk. (owner Marta Kowal, due 2026-10-02). Why: Simone said it in passing and was unsure of the threshold. The CRM economic buyer is blank and easy to leave that way."
+ ],
+ "opponent_steps": [
+  "**Get Dr. Okafor engaged, using a one-page brief and a dated slot** - **Action:** Put the audit and unblinded-access answers on one page for her. The page should cover reads logged with user and columns, unblinded columns masked except for the statistics role, role grants with expiry dates, versioned loads, and logged restores. Send it with this afternoon's recap. Ask Simone for Okafor's email, when her audit wraps up, and a 15-minute slot after that, or an async review in the meantime. - **Owner:** Marta, with Theo supplying the technical content. - **Timing:** Brief and ask go out today (Sept 30). Hold the slot request to a specific date within about a week. - **Why:** Simone said she can't move the deal without Okafor, who has no contact info in the CRM and hasn't seen the demo, and the audit and unblinded-access questions are the ones she'll ask first.",
+  "**Map the buying process and secure a dated next step** - **Action:** In the recap, ask Simone to name the procurement contact, the VP of R&D approval threshold for a $450K ACV, and the expected steps and timeline to a signature. Also confirm the business outcome she's buying for, since discovery left it blank. Then update the CRM with the economic buyer, the stakeholder to add, the business outcome, and a dated next step. - **Owner:** Marta. - **Timing:** Ask in the recap today, and get the answers or a short call booked within a week. - **Why:** There is no economic buyer, no commercial path and no dated next step. The Dec 18 close date can't be trusted until the approval path is known."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A fits the call: a short CISO brief for a reader who skips long documents, sent on Simone's terms, plus naming the economic buyer. B pushes a dated slot against Simone's stated calendar constraint and adds hygiene.",
+   "cost_usd": 0.004383
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's brief is short, matching Okafor's habit of skipping long documents, with specific owner and date; it respects her deferred calendar. A pushes for a dated slot and a 15-minute meeting, and its brief is crammed.",
+   "cost_usd": 0.004363
+  }
+ ]
+}

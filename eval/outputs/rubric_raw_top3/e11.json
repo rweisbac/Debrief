@@ -1,0 +1,60 @@
+{
+ "deal_id": "e11",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Pin down the decision path and lock a dated next step** - **Action:** Send a same-day recap email to Elise (cc Kevin) asking for the technology committee's next meeting date, its submission deadline, and what it needs to see. Propose a 30-minute call to map the approval sequence (committee, provost, privacy) and put a specific date on the calendar. - **Owner:** Paula Jensen, with Kevin asked to find the committee calendar. - **Timing:** Email by Oct 1. Call held by about Oct 7. - **Why:** The call ended with no dated next step, and the committee meets only once a semester. If we miss the fall slot, the Dec 18 close date likely slips to next term.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest is R3: the email only asks Elise for dates and gives her nothing to forward to the provost, technology committee or privacy officer, so attach a short forwardable brief (access controls summary for the privacy officer, retention outcome for the provost); it also states 'meets once a semester' and a 'fall slot' as fact when Kevin only said 'I think' and 'I don't know when'."
+   },
+   "error": "",
+   "cost_usd": 0.017486
+  },
+  {
+   "rank": 2,
+   "step": "**Get access to the provost, Dr. Abernathy, through a business case Elise can carry** - **Action:** Ask Elise to define the business outcome, which is blank in the CRM, since discovery only recorded \"retention reporting is manual\". Use Kevin's remark that the first-gen retention cut is \"what the provost always asks for\" as the hook. Build a one-page provost summary, then ask Elise for an intro or to co-present, rather than accepting \"eventually.\" - **Owner:** Paula, with Sam supporting the one-pager. - **Timing:** Business-outcome questions in the step 1 call. Draft one-pager by about Oct 9. Provost meeting requested for the following two weeks. - **Why:** The provost owns the budget and has not been engaged. Elise's enthusiasm (\"I'll champion this\") is not yet a commitment, and she is deferring the one step that tests it.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "The weakest criterion is r6: the step tells Paula to push Elise past her deferral (\"Eventually, sure. She's very busy this term\") and to request a provost meeting within two weeks, which PB-09 forbids; fix it by sending the one-pager as something Elise can forward when the provost has time, and offering to join if she wants, with no meeting deadline."
+   },
+   "error": "",
+   "cost_usd": 0.014122
+  },
+  {
+   "rank": 3,
+   "step": "**Start the privacy and security review, and send the follow-up materials** - **Action:** Send the promised retention dashboard screenshots with a short outcome-focused note. Include access-control documentation (advisor and dean role scoping, plus the data handling and security details a privacy officer would ask for). Ask Elise to introduce the privacy officer. - **Owner:** Sam Okoro, with Paula making the introduction request. - **Timing:** Screenshots and documentation by Oct 1. Privacy officer introduction requested in the same email. - **Why:** Elise said the privacy officer will want to see the access controls, and student data reviews often take weeks. Starting now keeps that review from blocking the committee submission.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": false,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "The step treats a privacy review as a gate on the committee submission, but the call only has Elise saying the privacy officer 'will want to see that' (U009), and 'reviews often take weeks' is unsupported, so the real blockers (Dr. Abernathy access and the unknown committee date) go unaddressed; fix by sending the screenshots and access-control docs as an offer Elise can forward, and adding a brief for Dr. Abernathy plus a request for the committee date."
+   },
+   "error": "",
+   "cost_usd": 0.013288
+  }
+ ]
+}

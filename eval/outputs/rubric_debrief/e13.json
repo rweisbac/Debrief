@@ -1,0 +1,42 @@
+{
+ "deal_id": "e13",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Henrik to confirm the pass bar in writing, such as 99th percentile under 2 seconds at about 15 thousand events a second, before Mateo runs the dedicated test. (owner Mateo Ruiz, due 2026-10-05). Why: Henrik called the 99th percentile the problem but also said the result decides it; an unstated bar invites a dispute over a passing median.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest is R3: the written pass bar mainly protects Apex from a later dispute, so it should be framed as a short acceptance-criteria note Henrik can forward to Yuki and operations, and the owner should be clear that Mateo drafts it for Henrik to confirm."
+   },
+   "error": "",
+   "cost_usd": 0.017676
+  },
+  {
+   "rank": 2,
+   "step": "Ask Henrik who signs off on this purchase and whether that person can join the October 12 results review. (owner Olivia Grant, due 2026-10-05). Why: No economic buyer is named and TV began September 14. With a champion-led review booked, the gap is easy to overlook.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are R2 and R3: Henrik said the dedicated-cluster latency result 'decides it for us', so the step does not address the current blocker, and it is a bare question that gives him nothing forwardable for the signer; fix by pairing the ask with a short note on what the Oct 12 review will decide and what the signer would need to see."
+   },
+   "error": "",
+   "cost_usd": 0.011682
+  }
+ ]
+}

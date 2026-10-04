@@ -1,0 +1,60 @@
+{
+ "deal_id": "e13",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Run the dedicated-cluster latency test and agree the pass criteria first** - **Action:** Rerun the same 15k events/sec test on a dedicated cluster. Before running it, confirm with Henrik that \"under 2 seconds\" means p99 (not median) at peak load. Send the results with a clear pass/fail read. - **Owner:** Mateo Ruiz, with Olivia Grant confirming the criteria with Henrik. - **Timing:** Criteria confirmed by Mon Oct 5. Results to Henrik and Yuki by Thu Oct 8, the date Mateo committed to. - **Why:** Henrik said this \"decides it,\" and the sandbox p99 of 3.8s fails his 2s requirement. Mateo gave no estimate for dedicated, so the result could go either way.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Strong step; the weakest point is R3, since the pass/fail read helps Henrik and Yuki but is not shaped for forwarding to an unnamed economic buyer, so adding a one-line decision summary would fix it."
+   },
+   "error": "",
+   "cost_usd": 0.015244
+  },
+  {
+   "rank": 2,
+   "step": "Get the legacy message sample and confirm the port community system format can be read** - **Action:** Get Yuki's sample file (she promised it today). Mateo reviews it and tells her whether the platform can ingest it, and what any gap would take to close. If the file hasn't arrived, Olivia chases it. - **Owner:** Yuki sends the file. Mateo assesses it. Olivia chases if needed. - **Timing:** File received Fri Oct 2, chased Mon Oct 5 if missing. Assessment done before the Oct 12 review. - **Why:** Mateo has never seen this format, and the berth schedule model depends on those vessel estimates. It's an unvalidated integration risk that could surface after the latency question is settled.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest on R2 and R6: Henrik said latency is the real question and decides it, so the format check does not block the decision, and having Olivia chase Yuki's promised file is the chasing PB-09 rules out; fix by making the Mateo latency test the lead step and replacing the chase with an offer to help Yuki send the sample."
+   },
+   "error": "",
+   "cost_usd": 0.011952
+  },
+  {
+   "rank": 3,
+   "step": "Identify the economic buyer and decision process, and bring them into the Oct 12 review** - **Action:** Send the Oct 12 invite today. Ask Henrik who owns budget and sign-off, what the approval steps are, and whether that person should attend the review. Record the answers in the CRM (economic buyer and stakeholder fields are blank, and decision process is \"Not discussed\"). - **Owner:** Olivia Grant. - **Timing:** Invite sent Fri Oct 2. Ask Henrik this week, before Oct 12. - **Why:** This is a $530K deal targeting a Dec 18 close, and the only contacts are the champion and a technical evaluator. A good test result won't close the deal without the person who signs.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are r2 and r3: Henrik said the dedicated-cluster latency result 'decides it for us', so the economic buyer is not what blocks the next decision, and the step gives Henrik nothing forwardable (for example a short brief on the Oct 8 test and Oct 12 review for whoever signs), so asking questions alone does not help him bring that person in."
+   },
+   "error": "",
+   "cost_usd": 0.01199
+  }
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "f23dcdeb03ac5aa347e11f2655e9ef76519a18c5ccdf61d4fb4ee1eb57a9560a",
+ "recorded_at": "2026-10-04T02:14:30.962405+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZfw3NVmFjokCeYfhQ",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step sends the whitepaper with an honest HSM framing, which unblocks the security office decision and respects Matteo's pace. B's first step pushes for a meeting and dated step the customer didn't offer, and its second step is routine.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1044,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5388,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 100,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

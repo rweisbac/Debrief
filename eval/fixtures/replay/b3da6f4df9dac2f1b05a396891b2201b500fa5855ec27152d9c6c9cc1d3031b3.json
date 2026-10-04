@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "b3da6f4df9dac2f1b05a396891b2201b500fa5855ec27152d9c6c9cc1d3031b3",
+ "recorded_at": "2026-10-04T02:14:26.929025+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZPLtq8zWkr4uNShq6",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's brief is short, matching Okafor's habit of skipping long documents, with specific owner and date; it respects her deferred calendar. A pushes for a dated slot and a 15-minute meeting, and its brief is crammed.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1142,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5543,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 97,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

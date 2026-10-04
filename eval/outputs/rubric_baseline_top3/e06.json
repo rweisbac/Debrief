@@ -1,0 +1,60 @@
+{
+ "deal_id": "e06",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Assign the EU hosting confirmation.** Jonas or Claire should get compliance's written answer, covering backups, subprocessors, and support access, and agree a date with Petra.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is R4: the step says \"Jonas or Claire\" instead of naming one owner and gives no due date (\"agree a date with Petra\"), so name Jonas as owner and set a specific date, such as a written compliance answer by Oct 6, that Petra's legal team can plan around."
+   },
+   "error": "",
+   "cost_usd": 0.012285
+  },
+  {
+   "rank": 2,
+   "step": "**Explore the historian replacement.** Jonas should assess what the historian does and whether we can credibly replace it. Ask Milan for its license cost, renewal terms, and the March renewal date. Don't present this as confirmed until we know.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest are R4 and R3: Jonas is named but there is no due date, and nothing customer-facing is produced for Petra to take to finance, so add a date (e.g. Tuesday Oct 6) and a short historian-replacement comparison she can forward."
+   },
+   "error": "",
+   "cost_usd": 0.010459
+  },
+  {
+   "rank": 3,
+   "step": "**Ask about the decision process.** Ask Petra who approves spend, how the CFO's freeze is lifted, and what the exception process involves. Ask for an introduction to the CFO or finance contact, and a legal contact for the hosting review.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are r3 and r4: the step is a list of questions with no owner, date, or forwardable asset, so fix it by having the AE send Petra a short brief for finance (pilot scope, the historian renewal in March as a possible replacement, and the Frankfurt hosting answer for legal) by a named date, and offer to join the finance conversation rather than asking for a CFO introduction during a freeze."
+   },
+   "error": "",
+   "cost_usd": 0.013123
+  }
+ ]
+}

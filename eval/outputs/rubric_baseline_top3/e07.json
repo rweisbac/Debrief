@@ -1,0 +1,60 @@
+{
+ "deal_id": "e07",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Today:** Andre sends the SOC 2 and pen test summary. Grace sends the recap email below.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is R7: the step only covers commitments already made (documents Sanjay asked for plus a recap), so it adds nothing beyond hygiene; fix it by adding a sized plan for the Oct 14 deadline (data flow diagram by Oct 9, questionnaire tracking) and something specific for Monica to bring to Daniel in finance."
+   },
+   "error": "",
+   "cost_usd": 0.010278
+  },
+  {
+   "rank": 2,
+   "step": "**Assign questionnaire ownership** internally as soon as it arrives, and work back from Oct 14 with a target of Oct 12 or earlier. Pull in the security and legal team early.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest are r4 and r3: the step is internal task assignment with no named owner (it only says 'assign'), so name the AE or SC as owner and have them send Sanjay a dated plan for returning the completed questionnaire, SOC 2, pen test summary and data flow diagram before Oct 14."
+   },
+   "error": "",
+   "cost_usd": 0.01032
+  },
+  {
+   "rank": 3,
+   "step": "**Clarify with Sanjay** what happens on Oct 22 (decision vs. intake), how long review takes after the Oct 14 submission, and the date of the next board if we miss.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest are r4 and r3: the step has no owner or due date and is a seller-side question list rather than something Sanjay or Monica can use, so fix it by having the AE send Sanjay a short email by Oct 2 that confirms the Oct 14 package contents and offers a one-line answer on Oct 22 outcome and fallback board date."
+   },
+   "error": "",
+   "cost_usd": 0.009916
+  }
+ ]
+}

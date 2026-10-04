@@ -1,0 +1,28 @@
+{
+ "deal_id": "e07",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Ask Monica whether Daniel signs or only handles commercials, and agree what to bring him and when before any pricing talk. (owner Grace Liu, due 2026-10-02). Why: Daniel was named in passing and only after the board. An AE may not check whether he is the signer.",
+  "Send Sanjay one list of the documents he named, with owner and send date for each, so the October 14th cutoff is visible. (owner Grace Liu, due 2026-10-02). Why: Missing the October 14th cutoff loses the October 22nd board. A single checklist helps without chasing."
+ ],
+ "opponent_steps": [
+  "Send the SOC 2 report and pen test summary to Sanjay today (Oct 1).** - **Owner:** Andre Silva - **Timing:** Today, under the existing NDA. - **Why it matters:** This is a same-day promise to the security gatekeeper, and a slip on the first deliverable would undermine confidence in the rest of the review.",
+  "Complete the rest of the security package and have it all with Sanjay by Oct 14.** - **Action:** Return Sanjay's questionnaire and send the data flow diagram. - **Owner:** Andre owns both and pulls in apex security and compliance for the questionnaire. Grace tracks progress and confirms with Sanjay that everything is received. - **Timing:** Diagram by Fri Oct 9 (committed). Questionnaire back by about Oct 9 as well, to leave a buffer before the Oct 14 cutoff. - **Why it matters:** If the package is complete by Oct 14, Summit stays on the Oct 22 board agenda. A miss likely pushes the board a cycle and puts the Dec 18 close on a $600K deal at risk."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "B leads with the same-day SOC 2 and pen test send, which unblocks Sanjay's review and the Oct 14 cutoff, and adds the questionnaire. A leads with Daniel's signer status, which comes after the board, and omits Andre's same-day promise.",
+   "cost_usd": 0.008421
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "A targets the Oct 14 security package that gates the Oct 22 board, with grounded owners and dates. B's first step is premature before the board, and its checklist partly duplicates A's package. A invents the questionnaire date slightly.}",
+   "cost_usd": 0.003941
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "deal_id": "e05",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it. (owner Nia Oduya, due 2026-10-02). Why: Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Strong step: it turns Doug's offhand privacy worry into a dated, SC-owned note the privacy team can review; the weakest point is that it should state plainly that whether the join is allowed is the privacy team's call (per U044) and avoid implying Apex can resolve it."
+   },
+   "error": "",
+   "cost_usd": 0.019395
+  },
+  {
+   "rank": 2,
+   "step": "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager. (owner Ryan Castellano, due 2026-10-05). Why: CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-07",
+    "critique": "Weakest is R3: the email only gathers information for Ryan and gives Doug nothing to forward to Ann, so pair the question with a draft outline of the one pager for Doug to react to."
+   },
+   "error": "",
+   "cost_usd": 0.013272
+  }
+ ]
+}

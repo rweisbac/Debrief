@@ -1,0 +1,39 @@
+{
+ "step": "judge",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "77c491be94c642ae198ffc87339be858357278d8281d027bcc48c9b33da71964",
+ "recorded_at": "2026-10-04T02:12:38.694922+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPRMtrRfEbGHGn9oXfq",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"r1_grounded\":true,\"r2_binding_constraint\":false,\"r3_buyer_enabling\":false,\"r4_owned_dated\":true,\"r5_honest_bounded\":true,\"r6_respects_process\":false,\"r7_beyond_hygiene\":false,\"r8_feasible\":true,\"best_practice_rule\":\"PB-01\",\"critique\":\"Weakest is r7: this is a recap, invite and data-request hygiene step, and it chases Tobias on Oct 1 despite his same-day promise; fix by adding something Rachel can take to leadership, such as a draft side-by-side outline for the 'why not expand Lakestream' question, and drop the chase.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1466,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5810,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 223,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

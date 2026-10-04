@@ -1,0 +1,60 @@
+{
+ "deal_id": "e09",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Send the load summary and follow-up email today** (draft below). Kofi sends the summary, and Mia sends the email.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-01",
+    "critique": "The weakest criterion is R2: the real blocker is that Hugo is not the decider and no one has named the operations owner or economic buyer, so a recap and load summary should be reshaped into a forwardable brief for that operations person, with an ask for their name."
+   },
+   "error": "",
+   "cost_usd": 0.01005
+  },
+  {
+   "rank": 2,
+   "step": "**Identify the operations stakeholder.** Ask Hugo for a name or a warm intro. If he can't provide one, ask who requested the evaluation or who owns the meter data load process.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "The weakest criteria are r4 and r3: the step has no owner or date and gives Hugo nothing to forward to operations, so it fails PB-05; fix it by having Mia ask by a set date (for example Thursday) and attach the load summary with a short brief Hugo can pass to operations."
+   },
+   "error": "",
+   "cost_usd": 0.010432
+  },
+  {
+   "rank": 3,
+   "step": "**Confirm the TV criteria.** Pull the agreed TV items from the 9/14 discovery call and check which ones this demo covered. Record the result in the CRM.",
+   "judge": {
+    "r1_grounded": false,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "none",
+    "critique": "The weakest criterion is r2: this is internal CRM bookkeeping that ignores the real blocker, which is that Hugo said he doesn't decide, pointed vaguely to operations, and no economic buyer or next meeting exists; replace it with a customer-forwardable recap of what was validated, plus a short brief Hugo can take to operations, with an owner and a date."
+   },
+   "error": "",
+   "cost_usd": 0.011022
+  }
+ ]
+}

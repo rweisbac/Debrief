@@ -1,0 +1,44 @@
+{
+ "step": "judge",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "a37706fb79fbaa06fb97c210d56957cd5758016f01ad17dd7b0678affe2cc696",
+ "recorded_at": "2026-10-04T02:11:50.515661+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPMDjMorUVW9YpssWfh",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"r1_grounded\":true,\"r2_binding_constraint\":true,\"r3_buyer_enabling\":false,\"r4_owned_dated\":true,\"r5_honest_bounded\":true,\"r6_respects_process\":true,\"r7_beyond_hygiene\":true,\"r8_feasible\":true,\"best_practice_rule\":\"PB-04\",\"critique\":\"The weakest criterion is buyer enabling: the step mainly asks Tamsin for samples, which serves Apex, and it does not give her a forwardable artifact; fix it by sending a one-page brief on what the parser can and cannot resolve for dynamic stored procedures, with the sharing instructions and the dated results commitment, so she can take it to her manager.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1447,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5982,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1328,
+   "output_tokens_details": {
+    "thinking_tokens": 1091
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

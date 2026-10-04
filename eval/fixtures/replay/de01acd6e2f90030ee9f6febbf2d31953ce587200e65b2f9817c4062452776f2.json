@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "de01acd6e2f90030ee9f6febbf2d31953ce587200e65b2f9817c4062452776f2",
+ "recorded_at": "2026-10-04T02:11:32.646015+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLXRCqCqoFU2AopcnR",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step targets the unnamed leadership decider and gives Rachel something to bring; its volumes request is grounded and honest ('about a week'). B invents an Oct 8 date and leads with invite hygiene.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 797,
+   "cache_creation_input_tokens": 2234,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 2234,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 93,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

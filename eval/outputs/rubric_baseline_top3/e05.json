@@ -1,0 +1,60 @@
+{
+ "deal_id": "e05",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Add Ann to the CRM** as economic buyer, and ask Doug for a short intro or a 20-minute call. Don't rely only on the one-pager.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are r4 and r3: there is no named owner or date, and nothing forwardable helps Doug with Ann, so add 'Ryan asks Doug by Oct 2 for a 20-minute slot with Ann before November planning' and pair it with talking points Doug can use."
+   },
+   "error": "",
+   "cost_usd": 0.01647
+  },
+  {
+   "rank": 2,
+   "step": "**Put the privacy issue on the table.** Ask Doug who on the privacy team owns it, and offer Nia for a 30-minute session on the ingestion-level consent filter. Consider whether to mention this in the one-pager. Ann will likely need to know it's an open dependency.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "The weakest criterion is R4: the step has no date and no firm owner (Ryan asks, Nia is only offered, and the one-pager mention is just 'consider'), so fix it by having Ryan ask Doug by a stated date, committing Nia to a dated session or short consent-filter note, and deciding to put the privacy dependency in the Oct 7 one-pager."
+   },
+   "error": "",
+   "cost_usd": 0.013178
+  },
+  {
+   "rank": 3,
+   "step": "**Keep the one-pager short:** the outcome, the 4 hours vs. 11 minutes comparison (labeled as a sample day), the alerting benefit, the segments and agency view, and the open consent dependency. Present it in terms of Brightline's own words and numbers.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "The weakest criterion is r4: the step names no owner or date, so add 'Ryan sends the one-pager to Doug by Wednesday, Oct 7, as agreed in U070' to make it trackable."
+   },
+   "error": "",
+   "cost_usd": 0.012244
+  }
+ ]
+}

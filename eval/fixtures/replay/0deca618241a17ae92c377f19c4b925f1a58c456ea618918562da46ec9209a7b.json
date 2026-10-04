@@ -1,0 +1,39 @@
+{
+ "step": "judge",
+ "prompt_version": "v2+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "0deca618241a17ae92c377f19c4b925f1a58c456ea618918562da46ec9209a7b",
+ "recorded_at": "2026-10-04T02:13:39.284099+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPVqk2J2F46KarX5ZLm",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"r1_grounded\":true,\"r2_binding_constraint\":false,\"r3_buyer_enabling\":false,\"r4_owned_dated\":false,\"r5_honest_bounded\":true,\"r6_respects_process\":true,\"r7_beyond_hygiene\":false,\"r8_feasible\":true,\"best_practice_rule\":\"PB-08\",\"critique\":\"This is a CRM hygiene item that only serves the seller, with no date and no customer-facing output; the binding constraints are Helen's build-vs-buy cost comparison and her contract terms (3-year minimum, quarterly in arrears), so log the commitment with owner Ravi and a due date, then tell Zara when it is done.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1227,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5756,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 227,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

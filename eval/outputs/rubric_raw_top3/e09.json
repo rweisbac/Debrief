@@ -1,0 +1,60 @@
+{
+ "deal_id": "e09",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Get a named operations stakeholder and an introduction through Hugo** - **Action:** Email Hugo to thank him, then ask for the name of the operations owner of meter data and for a short intro or joint call. Offer to send a 2-line blurb he can forward. Also ask who else signs off on a $120K purchase, and get Hugo's phone number. - **Owner:** Mia Torres - **Timing:** Send within 24 hours (by Sept 30). If there's no reply, follow up by phone or email by Oct 2. - **Why:** Hugo said he doesn't decide and doesn't know who does. The CRM has no champion, no economic buyer and no decision process, so the deal has no path to a decision yet.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "The weakest criterion is R6: the Oct 2 phone or email follow-up, the request for Hugo's phone number, and the question about who signs off on $120K all press an IT manager who said he doesn't decide, so drop the chaser and keep the forwardable blurb and an offer to help."
+   },
+   "error": "",
+   "cost_usd": 0.013658
+  },
+  {
+   "rank": 2,
+   "step": "Send the load summary with a dated next step attached** - **Action:** Kofi sends the load summary he promised (the 4-minute partitioned load and the regional daily usage view). Mia adds a proposed date and time for a follow-up session, ideally with the operations contact, so the email also asks for a booked meeting. - **Owner:** Kofi Mensah sends the summary. Mia owns the proposed date and the CRM update. - **Timing:** Same day or next morning, with the follow-up session proposed for within about 7 days (by Oct 6). - **Why:** The call ended with only \"Sure\" and \"Thanks,\" and no dated next step was set. Kofi's summary is the one commitment made, and the dated next step, SC commitment and stakeholder fields in the CRM are all blank.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "The step is a recap plus a meeting request, so it misses the real blocker, which is that Hugo is not the decider and no one has named who is (operations, unknown); fix it by sending a short forwardable note Hugo can pass to operations, tied to the manual meter data load pain, and asking him who in operations should see it."
+   },
+   "error": "",
+   "cost_usd": 0.010834
+  },
+  {
+   "rank": 3,
+   "step": "Re-establish the business outcome and the validation criteria, and re-qualify the deal internally** - **Action:** Mia and Kofi write down what \"success\" means for the evaluation. The CRM only says \"Agreed the TV items\" and lists \"meter data loads are manual\" as a pain, with no stated business outcome. They confirm the outcome and the decision process with the operations contact on the follow-up session. Mia then updates the CRM, flags the single-threaded risk to her manager, and reviews whether the Dec 18 close date is still credible. - **Owner:** Mia Torres leads, with Kofi's input on the validation criteria. - **Timing:** Update the CRM and flag the risk this week. Confirm the outcome and decision process on the follow-up session. - **Why:** The demo showed a load working, but nobody has tied it to an outcome the buyer cares about. Without that, and with only a passive technical contact, the Dec 18 forecast has little behind it.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": false,
+    "best_practice_rule": "PB-07",
+    "critique": "Weakest is r3/r8: the step is almost entirely internal (write criteria, update CRM, flag manager) and relies on a follow-up session with an unnamed operations contact that was never scheduled, so it gives Hugo nothing concrete to bring to operations and no dated customer touchpoint."
+   },
+   "error": "",
+   "cost_usd": 0.01515
+  }
+ ]
+}

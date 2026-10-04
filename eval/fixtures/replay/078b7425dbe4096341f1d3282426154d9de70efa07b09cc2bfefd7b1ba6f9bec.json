@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "078b7425dbe4096341f1d3282426154d9de70efa07b09cc2bfefd7b1ba6f9bec",
+ "recorded_at": "2026-10-04T02:11:32.763071+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLXfqiyQFeRD3mVSNH",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step targets the missing operations decision-maker with a forwardable intro and asks who signs, plus dated next step and re-qualification. A is thin hygiene and its first step is partly sound but omits the signer.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1374,
+   "cache_creation_input_tokens": 1385,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 1385,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 92,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

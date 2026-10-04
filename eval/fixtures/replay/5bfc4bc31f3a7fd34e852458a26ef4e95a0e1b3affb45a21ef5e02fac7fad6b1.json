@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "5bfc4bc31f3a7fd34e852458a26ef4e95a0e1b3affb45a21ef5e02fac7fad6b1",
+ "recorded_at": "2026-10-04T02:11:23.731275+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPKoqejjYB673AsVzWj",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step covers both Apex's hosting answer and the customer's contract clause, and it also covers stakeholders, buyer, pricing and the webhook alerts. A is tight but narrower, with a only two steps and one due date.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1441,
+   "cache_creation_input_tokens": 5833,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 5833,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 97,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

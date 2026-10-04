@@ -1,0 +1,42 @@
+{
+ "deal_id": "e01",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand. (owner Hannah Ortiz, due 2026-09-29). Why: Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-03",
+    "critique": "Weakest are r3 and r7: the step asks Maya for an invite, an email and Priscilla's approval needs, so it mostly serves Apex logistics; fix it by sending Maya a short forwardable brief for Priscilla that answers the likely approval questions on a purchase over 200 thousand, with the ask for her approval criteria alongside it."
+   },
+   "error": "",
+   "cost_usd": 0.02665
+  },
+  {
+   "rank": 2,
+   "step": "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis. (owner Hannah Ortiz, due 2026-10-02). Why: Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "Weakest is r5, which still passes: the step should explicitly limit the cost per store and overstock reduction to the figures modeled with Maya last month and label the 5 minute refresh as sandbox-based, adding no new savings claims."
+   },
+   "error": "",
+   "cost_usd": 0.01064
+  }
+ ]
+}

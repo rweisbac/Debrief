@@ -1,0 +1,30 @@
+{
+ "deal_id": "e11",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Send Elise a short provost-ready summary of the first generation retention cut, in her words, to forward to Dr. Abernathy. (owner Paula Jensen, due 2026-10-01). Why: Elise deferred the provost meeting; a ready-to-forward piece tied to the provost's own ask gives her an easy path in.",
+  "Offer Elise a committee-ready summary and ask what the technology committee needs to review and when it meets. (owner Paula Jensen, due 2026-10-02). Why: Nobody knows when the committee meets and it may miss the close date. Offer help rather than chase.",
+  "Send the promised screenshots with a stated date, and add an access-controls view Elise can show the privacy officer. (owner Sam Okoro, due 2026-10-01). Why: Screenshots were promised in passing with no date; adding the access-controls view gives Elise something for the privacy officer."
+ ],
+ "opponent_steps": [
+  "**Send the follow-up today** with the screenshots. Ask for specific dates for the committee meeting and a provost conversation.",
+  "**Get the committee date.** Ask Kevin or Dr. Martin to check the committee's calendar, and ask what the committee needs to see (security, budget, a business case).",
+  "**Reframe the provost meeting.** Offer a short 20\u201330 minute session built around the first-generation retention view the provost already asks for. Alternatively, ask Dr. Martin to forward a one-page brief."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A gives named owners and dates, ties the first-generation cut to the provost's own ask, and offers help on the committee without chasing. B lacks owners and pushes dates and a provost meeting Elise deferred.",
+   "cost_usd": 0.008231
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B gives named owners, dates, and a forward-ready provost piece tied to Elise's deferral, plus a privacy-officer view. A sends generic follow-up and pushes for dates the customer deferred.",
+   "cost_usd": 0.00361
+  }
+ ]
+}

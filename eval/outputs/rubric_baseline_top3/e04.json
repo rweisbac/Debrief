@@ -1,0 +1,60 @@
+{
+ "deal_id": "e04",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Get a dated next step.** Ask Simone in the recap for a specific date, even if it's only an async CISO review or a 20-minute slot after the audit.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "The weakest criterion is r6: Simone said the CISO's calendar is unavailable until the audit ends, so pressing for a date pushes a deferred meeting; instead, send a short CISO-ready brief on audit reads and unblinded role access that Simone can forward, and offer an async review at the CISO's pace, with the AE as owner and a send date."
+   },
+   "error": "",
+   "cost_usd": 0.010207
+  },
+  {
+   "rank": 2,
+   "step": "**Make the CISO write-up very short.** Send a one-page summary built around her two questions (read-level audit logging, and unblinded-role masking with expiry), written so Simone can forward it. Offer a 15\u201320 minute Q&A when Okafor is available.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-05",
+    "critique": "Weakest is r4: the step names no owner (AE or SC) and no send date, so add something like 'Marta sends the one-pager with the recap on Sep 30 and Theo confirms the audit and expiry wording first'."
+   },
+   "error": "",
+   "cost_usd": 0.008553
+  },
+  {
+   "rank": 3,
+   "step": "**Set a date for the data dictionary.** Suggest a date to Wes so Theo can give a scoping estimate by a named date.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "The weakest criterion is R2: the data dictionary and scoping estimate are not what blocks the deal, since Dr. Okafor's unavailable CISO sign-off is, so the step should be replaced or supplemented with a short, forwardable audit-trail and unblinded-access brief for her, with an owner and a named date."
+   },
+   "error": "",
+   "cost_usd": 0.009999
+  }
+ ]
+}

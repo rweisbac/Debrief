@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "7bf4cca01de00a7b3bdea698f1378a3c0780b3cd5786a655180395b1472b552d",
+ "recorded_at": "2026-10-04T02:14:33.209628+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPZqaigPTshRDByHSRz",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step secures a dated meeting, records Helen as economic buyer, and drives the comparison she demanded. A omits Ravi's custom-field test, the dated meeting and the economic buyer, though its engineering-lead angle is sharp.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1133,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5373,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 103,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

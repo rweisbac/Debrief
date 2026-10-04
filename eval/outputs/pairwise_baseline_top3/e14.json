@@ -1,0 +1,29 @@
+{
+ "deal_id": "e14",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Send the encryption whitepaper with a short cover note for the group security office: keys must sit in a major cloud key service, on premises HSMs are not supported, and offer a call with them if useful. (owner Elena Varga, due 2026-10-02). Why: The whitepaper alone doesn't answer the HSM question the security office will actually decide, and a typical rep sends it without that framing.",
+  "Ask Charlotte who signs for this purchase and what she can bring to the group security office, since no economic buyer or outcome in her words was stated. (owner Sean Murphy, due 2026-10-02). Why: Charlotte's enthusiasm is conditional and nobody named who signs; the group security office is absent and easy to leave unaddressed."
+ ],
+ "opponent_steps": [
+  "**Confirm the whitepaper went out** today, and log both Elena commitments in the CRM.",
+  "**Get a dated next step.** Ask Matteo for a date by which he'll know, or for a short check-in (for example, after Oct 7 once the wording arrives).",
+  "**Offer a session with the group security office,** with Elena on hand for questions on the key hierarchy. Ask Matteo for the right contacts, and add them as stakeholders."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step frames the on-prem HSM limit for the group security office, which is the actual blocker, with owner and date. B leads with hygiene and pushes for a date Matteo said he can't control.",
+   "cost_usd": 0.008498
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step sends the whitepaper framed around the HSM/cloud key constraint the security office will decide, with owner and date. A's first step is routine hygiene, and its check-in nudge pushes the customer's pace.",
+   "cost_usd": 0.00353
+  }
+ ]
+}

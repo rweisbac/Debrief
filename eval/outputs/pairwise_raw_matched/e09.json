@@ -1,0 +1,28 @@
+{
+ "deal_id": "e09",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Email Hugo asking who in operations owns meter data loads, and attach a one-page load summary he can forward to that person. (owner Mia Torres, due 2026-09-30). Why: Hugo said he doesn't decide and doesn't know who does; AEs may just wait for the summary reply.",
+  "Log Kofi's load summary promise with an owner and a send date of 2026-09-30, and tell Hugo when it is sent. (owner Kofi Mensah, due 2026-09-30). Why: No date was given, and passing commitments get dropped; a dated send also lets Hugo forward it."
+ ],
+ "opponent_steps": [
+  "Get a named operations stakeholder and an introduction through Hugo** - **Action:** Email Hugo to thank him, then ask for the name of the operations owner of meter data and for a short intro or joint call. Offer to send a 2-line blurb he can forward. Also ask who else signs off on a $120K purchase, and get Hugo's phone number. - **Owner:** Mia Torres - **Timing:** Send within 24 hours (by Sept 30). If there's no reply, follow up by phone or email by Oct 2. - **Why:** Hugo said he doesn't decide and doesn't know who does. The CRM has no champion, no economic buyer and no decision process, so the deal has no path to a decision yet.",
+  "Send the load summary with a dated next step attached** - **Action:** Kofi sends the load summary he promised (the 4-minute partitioned load and the regional daily usage view). Mia adds a proposed date and time for a follow-up session, ideally with the operations contact, so the email also asks for a booked meeting. - **Owner:** Kofi Mensah sends the summary. Mia owns the proposed date and the CRM update. - **Timing:** Same day or next morning, with the follow-up session proposed for within about 7 days (by Oct 6). - **Why:** The call ended with only \"Sure\" and \"Thanks,\" and no dated next step was set. Kofi's summary is the one commitment made, and the dated next step, SC commitment and stakeholder fields in the CRM are all blank."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "B's first step asks Hugo for the operations owner, an intro and the signer, which unblocks the decision. A's first step is similar but narrower, and its second step is routine hygiene.",
+   "cost_usd": 0.00385
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "A's first step seeks the operations owner, an intro, and who signs, which unblocks the decision. A also asks for a dated next meeting. B is thinner and mostly logging; A's phone ask is minor.",
+   "cost_usd": 0.00393
+  }
+ ]
+}

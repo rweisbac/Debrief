@@ -1,0 +1,29 @@
+{
+ "deal_id": "e12",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Ask Neil what the board technology committee needs, and offer a short summary for the committee tied to daily loss ratio and repricing. (owner Victor Hayes, due 2026-10-02). Why: Neil's end of month signature is conditional on the board, so the recap and order form alone don't help him get approval.",
+  "Log Rosa's mid term endorsements commitment with the October 6th date and confirm to Amira when the recording is sent. (owner Rosa Medina, due 2026-10-06). Why: The commitment was made in passing and the CRM sc_commitment field is empty, so it could slip."
+ ],
+ "opponent_steps": [
+  "**Correct the CRM:** - Change the dated next step to something supportable, such as \"Rosa sends endorsement recording Oct 6; confirm approval path with Neil by [date].\" - Mark Oct 30 signature as best case, contingent on an exception. - Keep the Dec 18 close date unless the board date says otherwise.",
+  "**Fill the empty CRM fields:** - SC commitment: endorsement recording by Oct 6. - Stakeholder to add: the board technology committee chair or member, and whoever handles procurement or legal. - Update the decision process notes with the >$300K board threshold and the November meeting.",
+  "**Map the approval process with Neil:** the exact exception criteria, who decides, the November meeting date, the submission deadline for materials, and what the committee expects to see."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step targets the board approval blocking signature, with owner and date, plus logs Rosa's commitment. B is mostly CRM hygiene with no owners or dates, and its approval mapping comes last.",
+   "cost_usd": 0.003612
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step helps Neil clear the board committee, the real blocker, with named owner and date. A's first step is CRM hygiene and mostly admin; B also logs Rosa's commitment.",
+   "cost_usd": 0.003562
+  }
+ ]
+}

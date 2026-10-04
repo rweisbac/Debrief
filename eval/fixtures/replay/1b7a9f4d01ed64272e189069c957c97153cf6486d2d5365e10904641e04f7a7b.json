@@ -1,0 +1,44 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "1b7a9f4d01ed64272e189069c957c97153cf6486d2d5365e10904641e04f7a7b",
+ "recorded_at": "2026-10-04T02:11:45.872712+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPMFEPxYnML5ef3VqTT",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "thinking",
+    "thinking": "",
+    "signature": "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"
+   },
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"tie\",\"why\":\"Both lead with confirming the latency pass bar before the dedicated test. A also covers the unvalidated legacy message format and the economic buyer; B misses the format risk. A's chasing is mildly pushy.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1346,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5219,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 494,
+   "output_tokens_details": {
+    "thinking_tokens": 402
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "6a39f009ca28759850bac1a649dea2e74a29b6277309f0493d9212d466c9ea94",
+ "recorded_at": "2026-10-04T02:11:25.679910+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPL2hKCBsSHfoeoz3oj",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's steps are tight, owned, dated, and tied to the Frank/Ingrid contradiction and the missing signer. A is broader, sends pricing before a buyer touchpoint, and adds hygiene items; A's first step is also strong.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1441,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5833,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 102,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

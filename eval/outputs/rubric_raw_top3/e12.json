@@ -1,0 +1,60 @@
+{
+ "deal_id": "e12",
+ "source": "raw_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Map the board approval path and get a dated next step that reflects it** - **Action:** Send the recap and order form today, as promised, but frame the order form as a draft for the approval packet. In the recap, ask Neil for four things: the technology committee's November meeting date, the submission deadline, what the exception process requires, and who sits on the committee. Then book a short call this week to build the approval plan, including whether we can support a business case or brief for the committee. - **Owner:** Victor Hayes - **Timing:** Recap today (Oct 1). Approval-path call held by about Oct 6. - **Why:** At $410K the deal is over the $300K threshold, so \"sign by end of month\" depends on an exception Neil himself isn't sure he can get. The real decision-maker is the board, not Neil.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is R3: the committee-ready asset is only offered ('whether we can support a business case'), so the concrete deliverables are a draft order form and four questions to Neil; fix by drafting a one-page committee brief tied to the daily loss ratio outcome now, and by adding Rosa's Oct 6 endorsements recording to the recap."
+   },
+   "error": "",
+   "cost_usd": 0.016175
+  },
+  {
+   "rank": 2,
+   "step": "Deliver the mid-term endorsement demo recording** - **Action:** Build the demo using Mosaic's endorsement scenarios, send the recording to Amira (copying Neil), and confirm she's satisfied. If she has gaps, schedule a follow-up. - **Owner:** Rosa Medina - **Timing:** Recording sent by Tuesday, Oct 6. Confirm Amira's sign-off within a couple of days after. - **Why:** This is Amira's open technical gap and a dated commitment we made on the call. Closing it removes the last technical objection and gives Neil something concrete for the board.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest is r2: the step closes Amira's endorsement gap, but what actually blocks the Oct 30 signature is the board technology committee review for deals over 300 thousand (U013-U016), so pair it with a board-ready brief Neil can use for that committee."
+   },
+   "error": "",
+   "cost_usd": 0.012119
+  },
+  {
+   "rank": 3,
+   "step": "Correct the CRM record and forecast to match what was said** - **Action:** - Replace the \"Signature by Oct 30\" next step with the real sequence: endorsement demo by Oct 6, approval-path confirmation, then committee or exception decision. - Keep the Dec 18 close date unless an exception is confirmed. - Record the decision process, which is currently \"Not discussed\". Note the board technology committee and the >$300K threshold. - Revisit the economic buyer field, since Neil may not be the final approver. - Add the committee members and actuaries as stakeholders once identified. - Log Rosa's Oct 6 commitment in the SC commitment field, which is blank. - Re-edit the business outcome with the call's specifics. It is still the prefilled text from discovery. - **Owner:** Victor Hayes, with Rosa adding her commitment - **Timing:** Today, with a refresh after the approval-path call. - **Why:** The current record overstates close certainty, which distorts the forecast. It also leaves the approval process and the single-threaded Neil/Amira coverage as unrecorded risks.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "Weakest are r3 and r7: this is internal CRM hygiene that gives Neil nothing to take to the board technology committee, so pair it with a customer-facing step such as a short approval-path brief for Neil on the over-$300K threshold, the November meeting and the exception route."
+   },
+   "error": "",
+   "cost_usd": 0.011209
+  }
+ ]
+}

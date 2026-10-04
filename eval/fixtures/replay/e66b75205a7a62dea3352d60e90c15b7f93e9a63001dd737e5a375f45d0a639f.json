@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "e66b75205a7a62dea3352d60e90c15b7f93e9a63001dd737e5a375f45d0a639f",
+ "recorded_at": "2026-10-04T02:11:28.038649+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLC4cjp16e6xb6P2Mo",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step targets Ann, the budget decision, and the one-pager flags the consent risk. A's first step is a note to Doug, and its second step wrongly skips Ann's access; B lacks owners/dates.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 824,
+   "cache_creation_input_tokens": 5604,
+   "cache_read_input_tokens": 3193,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 5604,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 92,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

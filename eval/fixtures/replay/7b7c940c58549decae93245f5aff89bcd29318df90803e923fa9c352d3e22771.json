@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "7b7c940c58549decae93245f5aff89bcd29318df90803e923fa9c352d3e22771",
+ "recorded_at": "2026-10-04T02:11:34.245541+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLdxMxS1qsnozoLGgA",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"a\",\"top_step_winner\":\"a\",\"why\":\"A's first step is Andre's same-day SOC 2/pen test promise, which directly feeds Sanjay's Oct 14 package and Oct 22 board; it also covers questionnaire and recap/economic buyer. B omits the same-day send and has Grace do Andre's work.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1152,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 5405,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 115,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

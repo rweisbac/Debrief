@@ -1,0 +1,29 @@
+{
+ "deal_id": "e04",
+ "opponent": "baseline_top3",
+ "debrief_steps": [
+  "Send Simone a very short CISO brief, a few lines on read-level query logging and masked unblinded columns with expiring role grants, to forward whenever Dr. Okafor has time. (owner Marta Kowal, due 2026-10-01). Why: CISO sign-off is the gate, and she skips long documents. A typical AE would attach the full recap or push for a meeting.",
+  "Ask Simone to find out whether procurement and the VP of R and D approve at this deal size, and who signs, so the economic buyer is named before any commercial talk. (owner Marta Kowal, due 2026-10-02). Why: Simone said it in passing and was unsure of the threshold. The CRM economic buyer is blank and easy to leave that way."
+ ],
+ "opponent_steps": [
+  "**Get a dated next step.** Ask Simone in the recap for a specific date, even if it's only an async CISO review or a 20-minute slot after the audit.",
+  "**Make the CISO write-up very short.** Send a one-page summary built around her two questions (read-level audit logging, and unblinded-role masking with expiry), written so Simone can forward it. Offer a 15\u201320 minute Q&A when Okafor is available.",
+  "**Set a date for the data dictionary.** Suggest a date to Wes so Theo can give a scoping estimate by a named date."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A has named owners and dates, ties to the CISO gate, and also captures the economic buyer mention. B lacks owners and pushes for a dated meeting Simone deferred; its CISO step is similar but secondary.}",
+   "cost_usd": 0.00905
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step is the CISO brief matched to Okafor's two questions, with owner and date. B also names economic-buyer discovery from Simone's passing remark. A lacks owners and pushes for a date Simone deferred.",
+   "cost_usd": 0.003645
+  }
+ ]
+}

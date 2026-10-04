@@ -1,0 +1,60 @@
+{
+ "deal_id": "e02",
+ "source": "baseline_top3",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "**Today:** Send the recap (draft below) and Sofia's stored procedure write-up. Make the write-up very specific: how many procedures, what format, and whether sanitized or redacted samples are acceptable, given this is a bank.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "The weakest criterion is r2: the step sharpens the stored procedure ask but does not address what actually blocks the next decision (no named economic buyer, no dated meeting, and Tamsin's procurement offer is unresolved), so add a short line in the recap inviting the economic buyer's name and offering what procurement would need, with the SC giving a dated answer on the parser."
+   },
+   "error": "",
+   "cost_usd": 0.028915
+  },
+  {
+   "rank": 2,
+   "step": "**Sofia:** Ask the parser team for a realistic turnaround now, so Ben can give Tamsin an honest date. Also prepare a fallback answer on dynamic SQL in case the parser can't handle these procedures.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "Weakest are R4 and R3: the step has an owner but only 'now' with no due date the customer heard, and it stays internal, so add a date (e.g. Sofia confirms parser turnaround by Friday Oct 2) and turn the fallback into a short written note Tamsin can use."
+   },
+   "error": "",
+   "cost_usd": 0.012334
+  },
+  {
+   "rank": 3,
+   "step": "**Pin down dates in writing:** Propose a date for the data dictionary and a tentative reconnect window, and ask for confirmation. Gregor declined a hold, so ask for a time range rather than an invite.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": false,
+    "r5_honest_bounded": true,
+    "r6_respects_process": false,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-02",
+    "critique": "Weakest is r4_owned_dated: the step only proposes dates and names no owner or date of its own, and it presses on timing Gregor deferred (U020-U022) instead of offering something the customer can use, such as a list of what the data dictionary must contain, an offer to help with the procurement or economic buyer path, or the dated SC answer on stored procedures."
+   },
+   "error": "",
+   "cost_usd": 0.013732
+  }
+ ]
+}

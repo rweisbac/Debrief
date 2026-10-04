@@ -1,0 +1,39 @@
+{
+ "step": "pairwise",
+ "prompt_version": "eval-pairwise-v1+shared-v1",
+ "model": "claude-sonnet-5-5",
+ "key": "47a5d2a32235fd1fe4d807d6757b5ec03b28d3d032dad62b257c9e0ae430b355",
+ "recorded_at": "2026-10-04T02:11:30.350858+00:00",
+ "raw": {
+  "model": "claude-sonnet-5-5",
+  "id": "msg_011CfgPLLvSDbtFiWRj7h12x",
+  "type": "message",
+  "role": "assistant",
+  "content": [
+   {
+    "type": "text",
+    "text": "{\"winner\":\"b\",\"top_step_winner\":\"b\",\"why\":\"B's first step sends privacy a concrete consent-filter note, and its second flags that Ann's outcome and signing role are unconfirmed. A asserts Ann is economic buyer, pushes for an Ann meeting and privacy call, and mostly repeats routine follow-ups.\"}"
+   }
+  ],
+  "container": null,
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+   "input_tokens": 1312,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 8797,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 115,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global"
+  },
+  "diagnostics": null
+ }
+}

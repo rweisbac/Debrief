@@ -1,0 +1,42 @@
+{
+ "deal_id": "e10",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask the identity team in writing for a GA date for nested net_groups claims and whether Corvid can join the private preview, to start the SSO design and date due Oct 9. (owner Ana Petrov, due 2026-10-06). Why: Ana relayed hearsay from product, and the release card says no GA date is announced. An AE would likely just wait for her answer.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-04",
+    "critique": "The weakest criterion is r3: this is an internal ask to the identity team that Fatima cannot forward to her architecture board, so pair it with a customer-ready written note for her stating what is confirmed, what has no GA date, and when the date will arrive."
+   },
+   "error": "",
+   "cost_usd": 0.017199
+  },
+  {
+   "rank": 2,
+   "step": "Tell Fatima that next quarter is not confirmed and preview access is unverified, so she doesn't put either in front of the architecture board. (owner Derek Shaw, due 2026-10-05). Why: Both claims were made in the call and the board will read them in writing. Reps rarely retract their own reassurances unprompted.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Weakest is r3: the step only retracts the claims and gives Fatima nothing forwardable for the November 3 board, so pair the correction with a written note she can pass on, stating that nested claims have no announced date, the flat-claim workaround, and when the confirmed date will arrive."
+   },
+   "error": "",
+   "cost_usd": 0.011257
+  }
+ ]
+}

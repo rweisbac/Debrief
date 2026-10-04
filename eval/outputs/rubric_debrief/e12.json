@@ -1,0 +1,42 @@
+{
+ "deal_id": "e12",
+ "source": "debrief",
+ "steps": [
+  {
+   "rank": 1,
+   "step": "Ask Neil what the board technology committee needs, and offer a short summary for the committee tied to daily loss ratio and repricing. (owner Victor Hayes, due 2026-10-02). Why: Neil's end of month signature is conditional on the board, so the recap and order form alone don't help him get approval.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": true,
+    "r3_buyer_enabling": true,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": true,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-09",
+    "critique": "Strong step that supports Neil's board approval process with a forwardable summary tied to daily loss ratio and repricing; the weakest point is that the ask is framed as a question to Neil and the board's actual requirements and November meeting date are unknown, so the AE should confirm the committee's format and deadline before drafting."
+   },
+   "error": "",
+   "cost_usd": 0.010726
+  },
+  {
+   "rank": 2,
+   "step": "Log Rosa's mid term endorsements commitment with the October 6th date and confirm to Amira when the recording is sent. (owner Rosa Medina, due 2026-10-06). Why: The commitment was made in passing and the CRM sc_commitment field is empty, so it could slip.",
+   "judge": {
+    "r1_grounded": true,
+    "r2_binding_constraint": false,
+    "r3_buyer_enabling": false,
+    "r4_owned_dated": true,
+    "r5_honest_bounded": true,
+    "r6_respects_process": true,
+    "r7_beyond_hygiene": false,
+    "r8_feasible": true,
+    "best_practice_rule": "PB-08",
+    "critique": "This is a CRM logging and notification task (PB-08 hygiene) that does not address the binding constraint, the board technology committee approval for a deal over 300 thousand that Neil is unsure he can get before the November meeting; fix it by pairing the endorsements recording with a forwardable brief or approval path Neil can take to the board."
+   },
+   "error": "",
+   "cost_usd": 0.010663
+  }
+ ]
+}

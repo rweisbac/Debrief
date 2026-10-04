@@ -1,0 +1,29 @@
+{
+ "deal_id": "e05",
+ "opponent": "raw_top3",
+ "debrief_steps": [
+  "Send Doug a one-paragraph note on the consent-flag filter at ingestion, written so his privacy team can review it. (owner Nia Oduya, due 2026-10-02). Why: Doug downplayed it as 'could be nothing' but said it might kill attribution; AEs tend to treat casual asides as noise.",
+  "Ask Doug by email what outcome Ann cares about in his words, and whether Ann signs, before the Oct 7 one pager. (owner Ryan Castellano, due 2026-10-05). Why: CRM shows outcome prefilled from discovery, not said on the call, and nobody said Ann signs; easy to assume both."
+ ],
+ "opponent_steps": [
+  "Get the consent/privacy question out in the open and find out who decides it** - **Action:** Ask Doug who on the privacy team owns the decision on joining viewing logs to subscriber records for opted-out users, and ask for a short call with them. Nia should give them a brief note on the ingestion-time consent filter. Log it in the CRM as a risk. - **Owner:** Ryan leads, with Nia on the technical note. - **Timing:** Email Doug by Oct 2 and aim to speak with privacy before the Oct 7 one-pager. Resolve it before the November planning cycle. - **Why:** Doug said it \"might kill the whole attribution piece,\" and it appears nowhere in the CRM, so it is an unmanaged risk that could end the deal.",
+  "Send Ann's one-pager and use it to get access to her** - **Action:** Write a one-page summary, not a deck, that covers the four-hour job, the failures, the 11-minute dedupe and the alerting, with pilot scope and the consent status noted. Ask Doug for an intro or short meeting with Ann. Update the CRM to name Ann as economic buyer, since that field is empty. - **Owner:** Ryan, with Nia reviewing the technical claims. - **Timing:** Send to Doug by Wednesday, Oct 7, as promised. Request the Ann meeting in the same email, ahead of November planning. - **Why:** Ann owns the data budget and nobody on our side has spoken to her, so Doug is currently our only route to the money.",
+  "Deliver Nia's technical follow-ups and log them in the CRM** - **Action:** Send Luis the dedupe config and the note on late events. Collect Karen's list of 60 segments, split into SQL and spreadsheet-based. Record these as Nia's commitment in the CRM, where the SC commitment field is blank. - **Owner:** Nia. - **Timing:** Config and late-events note by Oct 2. Follow up on Karen's segment list if it hasn't arrived by about Oct 6. - **Why:** Luis's late-event question is the one technical doubt raised, and prompt delivery matters to Doug given his bad experience with a vendor that went silent."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_top3",
+   "top_step_winner": "debrief",
+   "why": "B covers the consent risk, Ann access and Nia's logged commitments, with owners and dates. A's first step is sharper, but A omits the Ann path and Nia's commitments; B's push for a privacy call is slightly aggressive.",
+   "cost_usd": 0.018273
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step sends privacy a concrete consent-filter note, and its second flags that Ann's outcome and signing role are unconfirmed. A asserts Ann is economic buyer, pushes for an Ann meeting and privacy call, and mostly repeats routine follow-ups.",
+   "cost_usd": 0.005533
+  }
+ ]
+}

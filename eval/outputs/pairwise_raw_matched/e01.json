@@ -1,0 +1,28 @@
+{
+ "deal_id": "e01",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Ask Maya to add Hannah and Devon to the Oct 6 invite, share Priscilla's email, and say what Priscilla needs to approve a purchase over 200 thousand. (owner Hannah Ortiz, due 2026-09-29). Why: Maya is booking the CFO meeting herself, so the CFO has no CRM email and her approval needs are unknown. Easy to leave to Maya.",
+  "Build the business case so Maya can forward it standalone, leading with store managers seeing on hand including open orders within minutes, and note the sandbox basis. (owner Hannah Ortiz, due 2026-10-02). Why: Typical AE sends the numbers only. Priscilla reads it without Apex present, so it needs Maya's outcome wording and the sandbox caveat."
+ ],
+ "opponent_steps": [
+  "Build and send the CFO business case (cost per store and overstock reduction)** - **Owner:** Hannah, with Devon on the cost-per-store inputs - **Timing:** Start today and send by Friday, Oct 2. Aim for Thursday so Maya can review it. - **Why it matters:** It is the one deliverable Maya needs before she takes this to Priscilla, and the Oct 6 meeting depends on it. - **Check first:** Maya referred to numbers \"we modeled together last month,\" but the CRM shows discovery on Sept 14 and nothing about a joint model. Hannah should find that model now, or rebuild it and confirm the assumptions with Maya, rather than send numbers Maya doesn't recognize.",
+  "Lock in the CFO meeting and learn how the decision gets made** - **Owner:** Hannah - **Timing:** - Today or tomorrow: confirm Maya has sent the Oct 6, 10:00 invite with Devon included, get Priscilla's email, and set her as economic buyer in the CRM (the field is blank). - Before Oct 6: hold a short pre-brief with Maya, ideally right after sending the business case. - **Why it matters:** The CRM says the decision process was \"Not discussed.\" On a $310K deal that Priscilla must sign, we don't know what she will ask for, or whether procurement, legal or security reviews sit between her and a Dec 18 close. - **Pre-brief topics:** what Priscilla cares about, the approval steps and timeline, and any other approvers."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "B leads with the CFO business case Maya needs by Friday and flags the unverified 'modeled together' claim. B also covers the decision process. A leads with invite logistics.",
+   "cost_usd": 0.006803
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "A leads with the business case Maya needs by Friday, flags the unverified 'modeled together' numbers, and covers CFO prep. B's first step is mostly routine invite logistics, though its sandbox caveat is useful.",
+   "cost_usd": 0.004363
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "deal_id": "e14",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Send the encryption whitepaper with a short cover note for the group security office: keys must sit in a major cloud key service, on premises HSMs are not supported, and offer a call with them if useful. (owner Elena Varga, due 2026-10-02). Why: The whitepaper alone doesn't answer the HSM question the security office will actually decide, and a typical rep sends it without that framing.",
+  "Ask Charlotte who signs for this purchase and what she can bring to the group security office, since no economic buyer or outcome in her words was stated. (owner Sean Murphy, due 2026-10-02). Why: Charlotte's enthusiasm is conditional and nobody named who signs; the group security office is absent and easy to leave unaddressed."
+ ],
+ "opponent_steps": [
+  "**Get the group security office engaged and a dated decision path** - **Action:** Send a recap email to Matteo and Charlotte. Ask Matteo to introduce the group security office contact, and ask what their policy needs to approve a cloud key service for guest data (on-prem HSMs aren't supported). Propose a dated next step, such as a call with the security office or a check-in on a set date. Add that contact to the CRM. - **Owner:** Sean Murphy (Elena joins any security-office call). - **Timing:** Send today or tomorrow (Oct 1-2), with a target date for the security answer. - **Why:** Charlotte's \"we can move\" depends on keys, a cloud key service may violate Matteo's policy, and he doesn't control the group security office's timeline. The CRM currently has no dated next step and no security-office stakeholder.",
+  "**Send the encryption whitepaper with the key hierarchy** - **Action:** Send the whitepaper to Matteo and cc Charlotte, framed as material for the group security office. Offer to walk their team through it. - **Owner:** Elena Varga. - **Timing:** Today, Oct 1, as she promised on the call. - **Why:** It's the one thing Matteo said would help his internal review, and missing a same-day commitment would cost trust on the deal's main risk."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "A's first step sends the whitepaper with an honest HSM framing, which unblocks the security office decision and respects Matteo's pace. B's first step pushes for a meeting and dated step the customer didn't offer, and its second step is routine.",
+   "cost_usd": 0.004166
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "debrief",
+   "top_step_winner": "debrief",
+   "why": "B's first step sends the whitepaper with HSM framing for the security office, the real blocker, and its second asks who signs. A's first step pushes for a security-office meeting, which Matteo said he doesn't control, and is mostly hygiene.",
+   "cost_usd": 0.004176
+  }
+ ]
+}

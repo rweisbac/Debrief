@@ -1,0 +1,28 @@
+{
+ "deal_id": "e08",
+ "opponent": "raw_matched",
+ "debrief_steps": [
+  "Ask Rachel who in leadership decides on a second platform, and offer a one-page outline of the Lakestream side-by-side for her to bring to that person. (owner Isaac Morgan, due 2026-10-02). Why: Leadership was mentioned only generically, so the signer is easy to leave unnamed while the focus stays on the cost comparison.",
+  "Send Tobias a short list of what the cost comparison needs (event volumes per hour, required refresh, add-on scope), and tell Rachel it lands about a week after the volumes arrive, before the October 14th review. (owner Lena Fischer, due 2026-10-01). Why: A vague volume request risks a second round, and the CRM logs the commitment without a date. Say 'about a week', not a firm date."
+ ],
+ "opponent_steps": [
+  "Build the all-in cost comparison on Kestrel's workload** - **Action:** Build a side-by-side of Apex vs. Lakestream plus its streaming add-on, using Tobias's hourly event volumes and the 5-minute refresh. Include all-in costs. Ask Rachel and Tobias for their actual Lakestream contract pricing rather than relying on public docs, and flag any assumptions. - **Owner:** Lena Fischer, with Isaac Morgan checking that Tobias's volumes arrive. - **Timing:** Tobias sends volumes Oct 1. Lena finishes about a week later (around Oct 8), which leaves a few days of buffer before the Oct 14 review. - **Why:** Rachel named this as what she needs to justify a second platform, and she wants it before the Oct 20 Lakestream renewal conversation.",
+  "Identify the economic buyer and get them into the process** - **Action:** Ask Rachel who approves a second platform and what they will want to see. Add them to the CRM and invite them to the Oct 14 review, or at least offer a one-page leadership summary. Rachel said leadership will ask \"why not expand what we have,\" so frame the comparison around that question. - **Owner:** Isaac Morgan, working through Rachel. - **Timing:** Ask in the recap email today or tomorrow. Have the name confirmed before Oct 8 so they can be invited to the Oct 14 review. - **Why:** The CRM shows no economic buyer and no stakeholder added, yet the decision process is leadership approval. Rachel would otherwise have to make the case alone, and the deal could stall with the Lakestream renewal on Oct 20."
+ ],
+ "verdicts": [
+  {
+   "order": "debrief_is_a",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "B leads with the cost comparison Rachel needs for leadership before Oct 20, with grounded timing and owners. A leads with the buyer question, which is weaker. B's Oct 8 date is an estimate, but it is labeled as such.",
+   "cost_usd": 0.004451
+  },
+  {
+   "order": "debrief_is_b",
+   "winner": "raw_matched",
+   "top_step_winner": "raw_matched",
+   "why": "A leads with the cost comparison Rachel needs for leadership and the Oct 20 renewal, with owners and timing. B's first step is weaker, and B's second step is routine request hygiene.",
+   "cost_usd": 0.004301
+  }
+ ]
+}
